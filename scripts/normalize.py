@@ -7,7 +7,7 @@ OS_ORDER = ("ios", "ipados", "tvos", "visionos", "audioos", "macos")
 OS_NAMES = {"ios": "iOS", "ipados": "iPadOS", "tvos": "tvOS", "visionos": "visionOS", "audioos": "audioOS", "macos": "macOS"}
 
 def os_key_for(device: str) -> str | None:
-    for prefix, key in (("iPhone", "ios"), ("iPod", "ios"), ("iPad", "ipados"), ("AppleTV", "tvos"), ("RealityDevice", "visionos"), ("AudioAccessory", "audioos"), ("UniversalMac", "macos")):
+    for prefix, key in (("iPhone", "ios"), ("iPod", "ios"), ("iPad", "ipados"), ("AppleTV", "tvos"), ("RealityDevice", "visionos"), ("AudioAccessory", "audioos"), ("UniversalMac", "macos"), ("Mac", "macos")):
         if device.startswith(prefix): return key
     return None
 
@@ -15,6 +15,10 @@ def safe_label(value: str) -> str:
     value = value.strip().lower().replace(" ", "-").replace("_", "-")
     value = re.sub(r"[^a-z0-9.\-]", "-", value)
     return re.sub(r"-+", "-", value).strip("-")
+
+def safe_build(value: str) -> str:
+    """Build identifiers are case-sensitive identifiers, unlike URL labels."""
+    return re.sub(r"[^A-Za-z0-9._-]", "-", value.strip())
 
 def classify(version: str, label: str = "") -> tuple[str, str, bool]:
     text = f"{version} {label}".lower()

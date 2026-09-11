@@ -2,7 +2,7 @@
 from __future__ import annotations
 from collections import defaultdict
 from copy import deepcopy
-from .normalize import OS_NAMES, allowed_ipsw_url, classify, os_key_for, safe_label, version_key
+from .normalize import OS_NAMES, allowed_ipsw_url, classify, os_key_for, safe_build, safe_label, version_key
 from .sources.signing import status
 
 def normalize_candidates(candidates, settings, now):
@@ -16,7 +16,7 @@ def normalize_candidates(candidates, settings, now):
         channel, label, rc = classify(str(row["version"]), str(row.get("label", "")))
         if row.get("channel") == "beta": channel = "beta"
         key = (os_key, channel, str(row["version"]), str(row["build"]), url)
-        item = records.setdefault(key, {"os_key": os_key, "channel": channel, "version": str(row["version"]), "version_label": safe_label(row.get("version_label") or label), "build": safe_label(str(row["build"])), "released_at": row.get("released_at"), "prerelease": channel == "beta", "release_candidate": rc, "sources": {}, "firmwares": {}})
+        item = records.setdefault(key, {"os_key": os_key, "channel": channel, "version": str(row["version"]), "version_label": safe_label(row.get("version_label") or label), "build": safe_build(str(row["build"])), "released_at": row.get("released_at"), "prerelease": channel == "beta", "release_candidate": rc, "sources": {}, "firmwares": {}})
         item["sources"][row.get("source", "unknown")] = {"name": row.get("source", "unknown"), "checked_at": now}
         fw = item["firmwares"].setdefault(url, {"name": row.get("name") or device, "devices": set(), "url": url, "filename": url.rsplit("/", 1)[-1], "signing": {"status": status(row.get("signed")), "checked_at": now, "unsigned_since": now if row.get("signed") is False else None}})
         fw["devices"].add(device)

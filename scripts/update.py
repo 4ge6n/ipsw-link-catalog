@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from scripts.generate_readme import content, replace
-from scripts.normalize import OS_ORDER
+from scripts.normalize import OS_ORDER, safe_build
 from scripts.organize import all_index, index, merge, normalize_candidates
 from scripts.sources import beta, release
 from scripts.validate import validate_api
@@ -16,7 +16,10 @@ def dump(path, value):
 def existing_records(api):
     records=[]
     for fixed in api.glob("*/*/*/*.json"):
-        try: records.append(json.loads(fixed.read_text()))
+        try:
+            record=json.loads(fixed.read_text())
+            record["build"]=safe_build(record["build"])
+            records.append(record)
         except json.JSONDecodeError: pass
     return records
 def generate(records, api, settings, now):
