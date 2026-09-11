@@ -1,0 +1,267 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "7.1.2",
+  "version_label": "7.1.2",
+  "build": "11D257",
+  "released_at": "2014-06-30T18:29:04Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad mini 2 (China)",
+      "devices": [
+        "iPad4,6"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4767.20140627.0AbGI/iPad4,6_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad4,6_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad Air (China)",
+      "devices": [
+        "iPad4,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4797.20140627.bjBDg/iPad4,3_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad4,3_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad Air (Cellular)",
+      "devices": [
+        "iPad4,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4810.20140627.pfA96/iPad4,2_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad4,2_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad Air (WiFi)",
+      "devices": [
+        "iPad4,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4795.20140627.IaHBj/iPad4,1_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad4,1_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad mini 2 (Cellular)",
+      "devices": [
+        "iPad4,5"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4775.20160627.gYS09/iPad4,5_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad4,5_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad mini 2 (WiFi)",
+      "devices": [
+        "iPad4,4"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4793.20140627.Qm45v/iPad4,4_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad4,4_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 4 (Global)",
+      "devices": [
+        "iPad3,6"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4771.20140627.AsBX2/iPad3,6_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad3,6_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 4 (GSM)",
+      "devices": [
+        "iPad3,5"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4803.20140627.nAmS8/iPad3,5_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad3,5_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 4 (WiFi)",
+      "devices": [
+        "iPad3,4"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4781.20140627.kvhCc/iPad3,4_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad3,4_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad mini (Global)",
+      "devices": [
+        "iPad2,7"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4774.20140627.QlN3e/iPad2,7_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad2,7_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad mini (GSM)",
+      "devices": [
+        "iPad2,6"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4789.20140627.wcpeV/iPad2,6_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad2,6_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad mini (WiFi)",
+      "devices": [
+        "iPad2,5"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4783.20140627.jRusU/iPad2,5_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad2,5_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 3 (GSM)",
+      "devices": [
+        "iPad3,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4809.20140627.xuqPL/iPad3,3_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad3,3_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 3 (CDMA)",
+      "devices": [
+        "iPad3,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4782.20140627.CqBnG/iPad3,2_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad3,2_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 3 (WiFi)",
+      "devices": [
+        "iPad3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4805.20140627.zW4AC/iPad3,1_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad3,1_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (Mid 2012)",
+      "devices": [
+        "iPad2,4"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4815.20140627.HSkri/iPad2,4_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad2,4_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (CDMA)",
+      "devices": [
+        "iPad2,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4790.20140627.EDsAA/iPad2,3_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad2,3_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (GSM)",
+      "devices": [
+        "iPad2,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4791.20140627.5r2nx/iPad2,2_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad2,2_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (WiFi)",
+      "devices": [
+        "iPad2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7.1/031-4776.20140627.JjYSr/iPad2,1_7.1.2_11D257_Restore.ipsw",
+      "filename": "iPad2,1_7.1.2_11D257_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

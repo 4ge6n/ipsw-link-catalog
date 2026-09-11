@@ -1,0 +1,72 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "3.1.3",
+  "version_label": "3.1.3",
+  "build": "7E18",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch 3",
+      "devices": [
+        "iPod3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone/061-7473.20100202.4i44t/iPod3,1_3.1.3_7E18_Restore.ipsw",
+      "filename": "iPod3,1_3.1.3_7E18_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 3GS",
+      "devices": [
+        "iPhone2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone/061-7472.20100202.8tugj/iPhone2,1_3.1.3_7E18_Restore.ipsw",
+      "filename": "iPhone2,1_3.1.3_7E18_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 3G",
+      "devices": [
+        "iPhone1,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone/061-7468.20100202.pbnrt/iPhone1,2_3.1.3_7E18_Restore.ipsw",
+      "filename": "iPhone1,2_3.1.3_7E18_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 2G",
+      "devices": [
+        "iPhone1,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone/061-7481.20100202.4orot/iPhone1,1_3.1.3_7E18_Restore.ipsw",
+      "filename": "iPhone1,1_3.1.3_7E18_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

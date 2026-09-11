@@ -1,0 +1,59 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "3.0",
+  "version_label": "3.0",
+  "build": "7A341",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 3GS",
+      "devices": [
+        "iPhone2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone/061-6582.20090617.LlI87/iPhone2,1_3.0_7A341_Restore.ipsw",
+      "filename": "iPhone2,1_3.0_7A341_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 3G",
+      "devices": [
+        "iPhone1,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone/061-6578.20090617.VfgtU/iPhone1,2_3.0_7A341_Restore.ipsw",
+      "filename": "iPhone1,2_3.0_7A341_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 2G",
+      "devices": [
+        "iPhone1,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone/061-6580.20090617.XsP76/iPhone1,1_3.0_7A341_Restore.ipsw",
+      "filename": "iPhone1,1_3.0_7A341_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

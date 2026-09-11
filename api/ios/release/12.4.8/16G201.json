@@ -1,0 +1,73 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "12.4.8",
+  "version_label": "12.4.8",
+  "build": "16G201",
+  "released_at": "2020-07-15T17:05:18Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch 6",
+      "devices": [
+        "iPod7,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerFCS/fullrestores/001-11127/28D2C71E-87E7-433F-8316-9C6BFD7B65E3/iPodtouch_12.4.8_16G201_Restore.ipsw",
+      "filename": "iPodtouch_12.4.8_16G201_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 6",
+      "devices": [
+        "iPhone7,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerFCS/fullrestores/001-11131/71ECCF56-5998-4F84-9386-F91387BC68A5/iPhone_4.7_12.4.8_16G201_Restore.ipsw",
+      "filename": "iPhone_4.7_12.4.8_16G201_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 6+",
+      "devices": [
+        "iPhone7,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerFCS/fullrestores/001-11121/B3D907E5-50C9-4B03-BB89-1120DB6DBCA2/iPhone_5.5_12.4.8_16G201_Restore.ipsw",
+      "filename": "iPhone_5.5_12.4.8_16G201_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 5s (Global)",
+      "devices": [
+        "iPhone6,1",
+        "iPhone6,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerFCS/fullrestores/001-11128/4CC37BBF-683F-4C8D-9DE4-3DDA67960DD7/iPhone_4.0_64bit_12.4.8_16G201_Restore.ipsw",
+      "filename": "iPhone_4.0_64bit_12.4.8_16G201_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

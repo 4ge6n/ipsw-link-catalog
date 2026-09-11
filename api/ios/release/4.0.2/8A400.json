@@ -1,0 +1,85 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "4.0.2",
+  "version_label": "4.0.2",
+  "build": "8A400",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch 3",
+      "devices": [
+        "iPod3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/061-8554.20100811.Bgt54/iPod3,1_4.0.2_8A400_Restore.ipsw",
+      "filename": "iPod3,1_4.0.2_8A400_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPod touch 2G",
+      "devices": [
+        "iPod2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/061-8551.20100811.Xcder/iPod2,1_4.0.2_8A400_Restore.ipsw",
+      "filename": "iPod2,1_4.0.2_8A400_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 4 (GSM)",
+      "devices": [
+        "iPhone3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/061-8807.20100811.3Edre/iPhone3,1_4.0.2_8A400_Restore.ipsw",
+      "filename": "iPhone3,1_4.0.2_8A400_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 3GS",
+      "devices": [
+        "iPhone2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/061-8805.20100811.Dcr4e/iPhone2,1_4.0.2_8A400_Restore.ipsw",
+      "filename": "iPhone2,1_4.0.2_8A400_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 3G",
+      "devices": [
+        "iPhone1,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/061-8802.20100811.XcfpR/iPhone1,2_4.0.2_8A400_Restore.ipsw",
+      "filename": "iPhone1,2_4.0.2_8A400_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

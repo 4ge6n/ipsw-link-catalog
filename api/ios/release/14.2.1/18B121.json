@@ -1,0 +1,72 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "14.2.1",
+  "version_label": "14.2.1",
+  "build": "18B121",
+  "released_at": "2020-11-19T18:24:59Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 12 Pro",
+      "devices": [
+        "iPhone13,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-83356/ED9F1541-E3F2-4074-B3B2-E787DA63D205/iPhone13,3_14.2.1_18B121_Restore.ipsw",
+      "filename": "iPhone13,3_14.2.1_18B121_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 12 Pro Max",
+      "devices": [
+        "iPhone13,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-83359/ED24E536-93A8-456A-98A9-24E3153707C1/iPhone13,4_14.2.1_18B121_Restore.ipsw",
+      "filename": "iPhone13,4_14.2.1_18B121_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 12 mini",
+      "devices": [
+        "iPhone13,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-83357/AD600FA8-8188-4337-B87E-D43F9A6CDA3E/iPhone13,1_14.2.1_18B121_Restore.ipsw",
+      "filename": "iPhone13,1_14.2.1_18B121_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 12",
+      "devices": [
+        "iPhone13,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-83355/E8224FDA-C430-4201-9115-5213EC2278AB/iPhone13,2_14.2.1_18B121_Restore.ipsw",
+      "filename": "iPhone13,2_14.2.1_18B121_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

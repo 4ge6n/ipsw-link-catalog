@@ -1,0 +1,46 @@
+{
+  "os_key": "tvos",
+  "channel": "release",
+  "version": "5.1",
+  "version_label": "5.1",
+  "build": "9B179B",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple TV 3",
+      "devices": [
+        "AppleTV3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/AppleTV/041-2855.20120307.SD8A4/AppleTV3,1_5.0_9B179b_Restore.ipsw",
+      "filename": "AppleTV3,1_5.0_9B179b_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "Apple TV 2G",
+      "devices": [
+        "AppleTV2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/AppleTV/041-1538.20120307.Ve5H3/AppleTV2,1_5.0_9B179b_Restore.ipsw",
+      "filename": "AppleTV2,1_5.0_9B179b_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

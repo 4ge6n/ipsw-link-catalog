@@ -5,7 +5,7 @@ Stable JSON indexes of Apple restore images.
 <!-- AUTO-GENERATED:START -->
 ## Catalog status
 
-Last successful update: `2026-09-11T19:15:16Z`
+Last successful update: `2026-09-11T19:18:27Z`
 
 ### Endpoints
 
@@ -36,7 +36,7 @@ Last successful update: `2026-09-11T19:15:16Z`
 
 #### macOS
 
-- `release`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/release/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/release/all.json) (0 IPSW records)
+- `release`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/release/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/release/all.json) (89 IPSW records)
 - `beta`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/beta/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/beta/all.json) (0 IPSW records)
 
 ### Record fields
@@ -45,4 +45,5 @@ Use `firmwares[].id` to identify a firmware, `devices` to match hardware, and `s
 
 Data is assembled from public firmware metadata. It is not affiliated with Apple; verify compatibility before restoring.
 <!-- AUTO-GENERATED:END -->
+
 

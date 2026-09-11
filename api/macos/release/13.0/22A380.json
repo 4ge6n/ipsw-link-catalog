@@ -1,0 +1,43 @@
+{
+  "os_key": "macos",
+  "channel": "release",
+  "version": "13.0",
+  "version_label": "13.0",
+  "build": "22A380",
+  "released_at": "2022-10-24T17:20:22Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Pro (M1, Late 2020)",
+      "devices": [
+        "Mac13,1",
+        "Mac13,2",
+        "Mac14,2",
+        "Mac14,7",
+        "MacBookAir10,1",
+        "MacBookPro17,1",
+        "MacBookPro18,1",
+        "MacBookPro18,2",
+        "MacBookPro18,3",
+        "MacBookPro18,4",
+        "Macmini9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2022FallFCS/fullrestores/012-92188/2C38BCD1-2BFF-4A10-B358-94E8E28BE805/UniversalMac_13.0_22A380_Restore.ipsw",
+      "filename": "UniversalMac_13.0_22A380_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:18:27Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

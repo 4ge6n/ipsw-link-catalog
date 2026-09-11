@@ -1,0 +1,62 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "16.7.15",
+  "version_label": "16.7.15",
+  "build": "20H380",
+  "released_at": "2026-03-11T22:06:37Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone X (Global)",
+      "devices": [
+        "iPhone10,3",
+        "iPhone10,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/047-95808/6C93B138-CA05-438D-BBFC-7B024409B5E6/iPhone10,3,iPhone10,6_16.7.15_20H380_Restore.ipsw",
+      "filename": "iPhone10,3,iPhone10,6_16.7.15_20H380_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 8 Plus (GSM)",
+      "devices": [
+        "iPhone10,2",
+        "iPhone10,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/047-95676/25C66903-AE81-4C9D-8CEF-EA76B2A1363D/iPhone_5.5_P3_16.7.15_20H380_Restore.ipsw",
+      "filename": "iPhone_5.5_P3_16.7.15_20H380_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 8 (Global)",
+      "devices": [
+        "iPhone10,1",
+        "iPhone10,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/047-95629/98138AB9-5ECA-4934-B194-44657AA1ADEE/iPhone_4.7_P3_16.7.15_20H380_Restore.ipsw",
+      "filename": "iPhone_4.7_P3_16.7.15_20H380_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

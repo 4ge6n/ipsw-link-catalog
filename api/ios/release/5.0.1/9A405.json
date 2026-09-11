@@ -1,0 +1,98 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "5.0.1",
+  "version_label": "5.0.1",
+  "build": "9A405",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch 4",
+      "devices": [
+        "iPod4,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/041-3313.20111109.Azxe3/iPod4,1_5.0.1_9A405_Restore.ipsw",
+      "filename": "iPod4,1_5.0.1_9A405_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPod touch 3",
+      "devices": [
+        "iPod3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/041-3314.20111109.Mbgh6/iPod3,1_5.0.1_9A405_Restore.ipsw",
+      "filename": "iPod3,1_5.0.1_9A405_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 4s",
+      "devices": [
+        "iPhone4,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/041-3305.20111109.Bghy6/iPhone4,1_5.0.1_9A405_Restore.ipsw",
+      "filename": "iPhone4,1_5.0.1_9A405_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 4 (CDMA)",
+      "devices": [
+        "iPhone3,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/041-3304.20111109.Vgtyh/iPhone3,3_5.0.1_9A405_Restore.ipsw",
+      "filename": "iPhone3,3_5.0.1_9A405_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 4 (GSM)",
+      "devices": [
+        "iPhone3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/041-3309.20111109.64rtg/iPhone3,1_5.0.1_9A405_Restore.ipsw",
+      "filename": "iPhone3,1_5.0.1_9A405_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 3GS",
+      "devices": [
+        "iPhone2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/041-3307.20111109.5tGhu/iPhone2,1_5.0.1_9A405_Restore.ipsw",
+      "filename": "iPhone2,1_5.0.1_9A405_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

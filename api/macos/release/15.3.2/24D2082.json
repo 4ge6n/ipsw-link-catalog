@@ -1,0 +1,36 @@
+{
+  "os_key": "macos",
+  "channel": "release",
+  "version": "15.3.2",
+  "version_label": "15.3.2",
+  "build": "24D2082",
+  "released_at": "2025-03-11T18:01:59Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Mac Studio (2025)",
+      "devices": [
+        "Mac15,14",
+        "Mac16,12",
+        "Mac16,13",
+        "Mac16,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/082-04090/64618943-2D74-423D-8493-DE066DF1ADD8/UniversalMac_15.3.2_24D2082_Restore.ipsw",
+      "filename": "UniversalMac_15.3.2_24D2082_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:18:27Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

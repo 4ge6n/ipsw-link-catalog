@@ -1,0 +1,33 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "1.0.1",
+  "version_label": "1.0.1",
+  "build": "1C25",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 2G",
+      "devices": [
+        "iPhone1,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone/061-3614.20070731.Nt6Y7/iPhone1,1_1.0.1_1C25_Restore.ipsw",
+      "filename": "iPhone1,1_1.0.1_1C25_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

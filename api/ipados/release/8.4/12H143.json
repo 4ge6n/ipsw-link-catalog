@@ -1,0 +1,189 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "8.4",
+  "version_label": "8.4",
+  "build": "12H143",
+  "released_at": "2015-06-30T16:10:42Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad 4 (Global)",
+      "devices": [
+        "iPad3,6"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios8.4/ipsw/031-26052-20150630-901399AC-1B91-11E5-8885-0E66BE268FF7/iPad3,6_8.4_12H143_Restore.ipsw",
+      "filename": "iPad3,6_8.4_12H143_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 4 (GSM)",
+      "devices": [
+        "iPad3,5"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios8.4/ipsw/031-25960-20150630-901CB104-1B91-11E5-964B-0D66BE268FF7/iPad3,5_8.4_12H143_Restore.ipsw",
+      "filename": "iPad3,5_8.4_12H143_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 4 (WiFi)",
+      "devices": [
+        "iPad3,4"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios8.4/ipsw/031-25995-20150630-8D63B32C-1B91-11E5-950A-F565BE268FF7/iPad3,4_8.4_12H143_Restore.ipsw",
+      "filename": "iPad3,4_8.4_12H143_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad mini (Global)",
+      "devices": [
+        "iPad2,7"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios8.4/ipsw/031-25928-20150630-B213DEFE-1B91-11E5-A4A0-F066BE268FF7/iPad2,7_8.4_12H143_Restore.ipsw",
+      "filename": "iPad2,7_8.4_12H143_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad mini (GSM)",
+      "devices": [
+        "iPad2,6"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios8.4/ipsw/031-26002-20150630-B0198F36-1B91-11E5-8B4C-BB66BE268FF7/iPad2,6_8.4_12H143_Restore.ipsw",
+      "filename": "iPad2,6_8.4_12H143_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad mini (WiFi)",
+      "devices": [
+        "iPad2,5"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios8.4/ipsw/031-25998-20150630-A3EF3634-1B91-11E5-A8D4-6C66BE268FF7/iPad2,5_8.4_12H143_Restore.ipsw",
+      "filename": "iPad2,5_8.4_12H143_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 3 (GSM)",
+      "devices": [
+        "iPad3,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios8.4/ipsw/031-26031-20150630-7A505700-1B90-11E5-9926-8563BE268FF7/iPad3,3_8.4_12H143_Restore.ipsw",
+      "filename": "iPad3,3_8.4_12H143_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 3 (CDMA)",
+      "devices": [
+        "iPad3,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios8.4/ipsw/031-25924-20150630-7A51BF28-1B90-11E5-93C0-8863BE268FF7/iPad3,2_8.4_12H143_Restore.ipsw",
+      "filename": "iPad3,2_8.4_12H143_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 3 (WiFi)",
+      "devices": [
+        "iPad3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios8.4/ipsw/031-26027-20150630-7A5038A6-1B90-11E5-86F9-8463BE268FF7/iPad3,1_8.4_12H143_Restore.ipsw",
+      "filename": "iPad3,1_8.4_12H143_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (Mid 2012)",
+      "devices": [
+        "iPad2,4"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios8.4/ipsw/031-26042-20150630-7A5397EE-1B90-11E5-9861-A063BE268FF7/iPad2,4_8.4_12H143_Restore.ipsw",
+      "filename": "iPad2,4_8.4_12H143_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (CDMA)",
+      "devices": [
+        "iPad2,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios8.4/ipsw/031-26004-20150630-7A53DB46-1B90-11E5-B2D1-A563BE268FF7/iPad2,3_8.4_12H143_Restore.ipsw",
+      "filename": "iPad2,3_8.4_12H143_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (GSM)",
+      "devices": [
+        "iPad2,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios8.4/ipsw/031-26007-20150630-7A543168-1B90-11E5-A347-A363BE268FF7/iPad2,2_8.4_12H143_Restore.ipsw",
+      "filename": "iPad2,2_8.4_12H143_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (WiFi)",
+      "devices": [
+        "iPad2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios8.4/ipsw/031-25993-20150630-7A55FEF8-1B90-11E5-8730-A263BE268FF7/iPad2,1_8.4_12H143_Restore.ipsw",
+      "filename": "iPad2,1_8.4_12H143_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

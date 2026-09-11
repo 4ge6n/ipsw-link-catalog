@@ -1,0 +1,33 @@
+{
+  "os_key": "tvos",
+  "channel": "release",
+  "version": "18.6",
+  "version_label": "18.6",
+  "build": "22M84",
+  "released_at": "2025-07-29T18:40:51Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple TV 4 (2015)",
+      "devices": [
+        "AppleTV5,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerFCS/fullrestores/082-08349/11D21C13-7DDF-4DA6-AB45-33EDC13BBAD2/AppleTV5,3_18.6_22M84_Restore.ipsw",
+      "filename": "AppleTV5,3_18.6_22M84_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

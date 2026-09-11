@@ -1,0 +1,41 @@
+{
+  "os_key": "macos",
+  "channel": "release",
+  "version": "14.1",
+  "version_label": "14.1",
+  "build": "23B2077",
+  "released_at": "2023-11-03T17:05:44Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Pro (M3 Max, 16-inch, Nov 2023)",
+      "devices": [
+        "Mac15,10",
+        "Mac15,11",
+        "Mac15,3",
+        "Mac15,4",
+        "Mac15,5",
+        "Mac15,6",
+        "Mac15,7",
+        "Mac15,8",
+        "Mac15,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/042-41691/76E2D10A-00AA-4536-97D6-D55885468755/UniversalMac_14.1_23B2077_Restore.ipsw",
+      "filename": "UniversalMac_14.1_23B2077_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:18:27Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

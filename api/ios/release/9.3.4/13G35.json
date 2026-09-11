@@ -1,0 +1,111 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "9.3.4",
+  "version_label": "9.3.4",
+  "build": "13G35",
+  "released_at": "2016-08-04T16:54:59Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch 6",
+      "devices": [
+        "iPod7,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios9.3.4/031-71054-2016008004-5F74CE8E-578A-11E6-8282-3B1FD39E04FA/iPod7,1_9.3.4_13G35_Restore.ipsw",
+      "filename": "iPod7,1_9.3.4_13G35_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 5c (Global)",
+      "devices": [
+        "iPhone5,4"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios9.3.4/031-71476-2016008004-BFE2A9B2-578A-11E6-835D-3024D39E04FA/iPhone5,4_9.3.4_13G35_Restore.ipsw",
+      "filename": "iPhone5,4_9.3.4_13G35_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 5c (GSM)",
+      "devices": [
+        "iPhone5,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios9.3.4/031-70569-2016008004-5F65F8E6-578A-11E6-9885-151FD39E04FA/iPhone5,3_9.3.4_13G35_Restore.ipsw",
+      "filename": "iPhone5,3_9.3.4_13G35_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 5 (Global)",
+      "devices": [
+        "iPhone5,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios9.3.4/031-71268-2016008004-B0C7B2BA-578A-11E6-B432-F022D39E04FA/iPhone5,2_9.3.4_13G35_Restore.ipsw",
+      "filename": "iPhone5,2_9.3.4_13G35_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 5 (GSM)",
+      "devices": [
+        "iPhone5,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios9.3.4/031-70651-2016008004-5F658398-578A-11E6-A90B-191FD39E04FA/iPhone5,1_9.3.4_13G35_Restore.ipsw",
+      "filename": "iPhone5,1_9.3.4_13G35_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPod touch 5",
+      "devices": [
+        "iPod5,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios9.3.4/031-71292-2016008004-B287234C-578A-11E6-B5EE-2C23D39E04FA/iPod5,1_9.3.4_13G35_Restore.ipsw",
+      "filename": "iPod5,1_9.3.4_13G35_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 4s",
+      "devices": [
+        "iPhone4,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios9.3.4/031-71540-2016008004-FC0D04A4-578B-11E6-A8B9-E625D39E04FA/iPhone4,1_9.3.4_13G35_Restore.ipsw",
+      "filename": "iPhone4,1_9.3.4_13G35_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

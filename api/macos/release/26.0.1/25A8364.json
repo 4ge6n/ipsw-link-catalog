@@ -1,0 +1,33 @@
+{
+  "os_key": "macos",
+  "channel": "release",
+  "version": "26.0.1",
+  "version_label": "26.0.1",
+  "build": "25A8364",
+  "released_at": "2025-10-16T00:16:51Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Pro (14-inch, M5)",
+      "devices": [
+        "Mac17,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-49300/3AC98479-C75E-46E8-8AF4-1DDB5EAE564D/UniversalMac_26.0.1_25A8364_Restore.ipsw",
+      "filename": "UniversalMac_26.0.1_25A8364_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:18:27Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

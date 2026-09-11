@@ -1,0 +1,35 @@
+{
+  "os_key": "macos",
+  "channel": "release",
+  "version": "11.3.1",
+  "version_label": "11.3.1",
+  "build": "20E241",
+  "released_at": "2021-05-03T17:22:10Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Pro (M1, Late 2020)",
+      "devices": [
+        "MacBookAir10,1",
+        "MacBookPro17,1",
+        "Macmini9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringFCS/fullrestores/071-32411/2A29A9DC-01C7-4A50-A6C4-9705269F780D/UniversalMac_11.3.1_20E241_Restore.ipsw",
+      "filename": "UniversalMac_11.3.1_20E241_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:18:27Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

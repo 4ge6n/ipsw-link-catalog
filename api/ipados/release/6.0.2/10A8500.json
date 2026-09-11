@@ -1,0 +1,46 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "6.0.2",
+  "version_label": "6.0.2",
+  "build": "10A8500",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad mini (Global)",
+      "devices": [
+        "iPad2,7"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6/041-9154.20121217.Nestg/iPad2,7_6.0.2_10A8500_Restore.ipsw",
+      "filename": "iPad2,7_6.0.2_10A8500_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad mini (GSM)",
+      "devices": [
+        "iPad2,6"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6/041-9158.20121217.d65tr/iPad2,6_6.0.2_10A8500_Restore.ipsw",
+      "filename": "iPad2,6_6.0.2_10A8500_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

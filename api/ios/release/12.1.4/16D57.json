@@ -1,0 +1,80 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "12.1.4",
+  "version_label": "12.1.4",
+  "build": "16D57",
+  "released_at": "2019-02-07T18:36:47Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 7 Plus (Global)",
+      "devices": [
+        "iPhone10,2",
+        "iPhone10,5",
+        "iPhone9,2",
+        "iPhone9,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2019WinterFCS/fullrestores/041-39189/31D95442-292C-11E9-ADB7-2B11412B0A59/iPhone_5.5_P3_12.1.4_16D57_Restore.ipsw",
+      "filename": "iPhone_5.5_P3_12.1.4_16D57_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 7 (Global)",
+      "devices": [
+        "iPhone10,1",
+        "iPhone10,4",
+        "iPhone9,1",
+        "iPhone9,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2019WinterFCS/fullrestores/041-39370/31D8C81A-292C-11E9-80C6-2A11412B0A59/iPhone_4.7_P3_12.1.4_16D57_Restore.ipsw",
+      "filename": "iPhone_4.7_P3_12.1.4_16D57_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 6",
+      "devices": [
+        "iPhone7,2",
+        "iPhone8,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2019WinterFCS/fullrestores/041-39257/32129B6C-292C-11E9-9E72-4511412B0A59/iPhone_4.7_12.1.4_16D57_Restore.ipsw",
+      "filename": "iPhone_4.7_12.1.4_16D57_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 6+",
+      "devices": [
+        "iPhone7,1",
+        "iPhone8,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2019WinterFCS/fullrestores/041-39023/3207E50A-292C-11E9-8B43-4411412B0A59/iPhone_5.5_12.1.4_16D57_Restore.ipsw",
+      "filename": "iPhone_5.5_12.1.4_16D57_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

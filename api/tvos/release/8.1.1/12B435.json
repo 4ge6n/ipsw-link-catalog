@@ -1,0 +1,46 @@
+{
+  "os_key": "tvos",
+  "channel": "release",
+  "version": "8.1.1",
+  "version_label": "8.1.1",
+  "build": "12B435",
+  "released_at": "2014-11-17T17:58:58Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple TV 3 (2013)",
+      "devices": [
+        "AppleTV3,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS8.1.1/031-10067.20141117.3p1i6/AppleTV3,2_7.0.2_12B435_Restore.ipsw",
+      "filename": "AppleTV3,2_7.0.2_12B435_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "Apple TV 3",
+      "devices": [
+        "AppleTV3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS8.1.1/031-10021.20141117.MMEwU/AppleTV3,1_7.0.2_12B435_Restore.ipsw",
+      "filename": "AppleTV3,1_7.0.2_12B435_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

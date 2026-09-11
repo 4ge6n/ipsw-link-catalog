@@ -4,21 +4,21 @@
   "os_key": "tvos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-11T19:15:16Z",
+  "generated_at": "2026-09-11T19:18:27Z",
   "release_count": 144,
   "firmware_count": 189,
   "releases": [
     {
-      "id": "tvos-release-26.6-23l773",
+      "id": "tvos-release-26.6-23L773",
       "version": "26.6",
-      "build": "23l773",
+      "build": "23L773",
       "released_at": "2026-07-27T17:38:00Z",
       "signed_firmware_count": 1,
       "total_firmware_count": 1,
-      "data": "26.6/23l773.json",
+      "data": "26.6/23L773.json",
       "firmwares": [
         {
-          "id": "tvos-release-26.6-23l773-AppleTV5,3",
+          "id": "tvos-release-26.6-23L773-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -30,16 +30,16 @@
       ]
     },
     {
-      "id": "tvos-release-26.5-23l471",
+      "id": "tvos-release-26.5-23L471",
       "version": "26.5",
-      "build": "23l471",
+      "build": "23L471",
       "released_at": "2026-05-11T17:47:21Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.5/23l471.json",
+      "data": "26.5/23L471.json",
       "firmwares": [
         {
-          "id": "tvos-release-26.5-23l471-AppleTV5,3",
+          "id": "tvos-release-26.5-23L471-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -51,16 +51,16 @@
       ]
     },
     {
-      "id": "tvos-release-26.4-23l243",
+      "id": "tvos-release-26.4-23L243",
       "version": "26.4",
-      "build": "23l243",
+      "build": "23L243",
       "released_at": "2026-03-24T17:40:03Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.4/23l243.json",
+      "data": "26.4/23L243.json",
       "firmwares": [
         {
-          "id": "tvos-release-26.4-23l243-AppleTV5,3",
+          "id": "tvos-release-26.4-23L243-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -72,16 +72,16 @@
       ]
     },
     {
-      "id": "tvos-release-26.3-23k620",
+      "id": "tvos-release-26.3-23K620",
       "version": "26.3",
-      "build": "23k620",
+      "build": "23K620",
       "released_at": "2026-02-11T18:34:22Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.3/23k620.json",
+      "data": "26.3/23K620.json",
       "firmwares": [
         {
-          "id": "tvos-release-26.3-23k620-AppleTV5,3",
+          "id": "tvos-release-26.3-23K620-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -93,16 +93,16 @@
       ]
     },
     {
-      "id": "tvos-release-26.2-23k54",
+      "id": "tvos-release-26.2-23K54",
       "version": "26.2",
-      "build": "23k54",
+      "build": "23K54",
       "released_at": "2025-12-22T18:04:17Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.2/23k54.json",
+      "data": "26.2/23K54.json",
       "firmwares": [
         {
-          "id": "tvos-release-26.2-23k54-AppleTV5,3",
+          "id": "tvos-release-26.2-23K54-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -114,16 +114,16 @@
       ]
     },
     {
-      "id": "tvos-release-26.1-23j582",
+      "id": "tvos-release-26.1-23J582",
       "version": "26.1",
-      "build": "23j582",
+      "build": "23J582",
       "released_at": "2025-11-03T21:45:31Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.1/23j582.json",
+      "data": "26.1/23J582.json",
       "firmwares": [
         {
-          "id": "tvos-release-26.1-23j582-AppleTV5,3",
+          "id": "tvos-release-26.1-23J582-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -135,16 +135,16 @@
       ]
     },
     {
-      "id": "tvos-release-26.0.1-23j362",
+      "id": "tvos-release-26.0.1-23J362",
       "version": "26.0.1",
-      "build": "23j362",
+      "build": "23J362",
       "released_at": "2025-09-29T17:43:54Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.0.1/23j362.json",
+      "data": "26.0.1/23J362.json",
       "firmwares": [
         {
-          "id": "tvos-release-26.0.1-23j362-AppleTV5,3",
+          "id": "tvos-release-26.0.1-23J362-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -156,16 +156,16 @@
       ]
     },
     {
-      "id": "tvos-release-26.0-23j353",
+      "id": "tvos-release-26.0-23J353",
       "version": "26.0",
-      "build": "23j353",
+      "build": "23J353",
       "released_at": "2025-09-15T17:06:20Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.0/23j353.json",
+      "data": "26.0/23J353.json",
       "firmwares": [
         {
-          "id": "tvos-release-26.0-23j353-AppleTV5,3",
+          "id": "tvos-release-26.0-23J353-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -177,16 +177,16 @@
       ]
     },
     {
-      "id": "tvos-release-18.6-22m84",
+      "id": "tvos-release-18.6-22M84",
       "version": "18.6",
-      "build": "22m84",
+      "build": "22M84",
       "released_at": "2025-07-29T18:40:51Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.6/22m84.json",
+      "data": "18.6/22M84.json",
       "firmwares": [
         {
-          "id": "tvos-release-18.6-22m84-AppleTV5,3",
+          "id": "tvos-release-18.6-22M84-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -198,16 +198,16 @@
       ]
     },
     {
-      "id": "tvos-release-18.5-22l572",
+      "id": "tvos-release-18.5-22L572",
       "version": "18.5",
-      "build": "22l572",
+      "build": "22L572",
       "released_at": "2025-05-12T17:18:25Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.5/22l572.json",
+      "data": "18.5/22L572.json",
       "firmwares": [
         {
-          "id": "tvos-release-18.5-22l572-AppleTV5,3",
+          "id": "tvos-release-18.5-22L572-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -219,16 +219,16 @@
       ]
     },
     {
-      "id": "tvos-release-18.4.1-22l261",
+      "id": "tvos-release-18.4.1-22L261",
       "version": "18.4.1",
-      "build": "22l261",
+      "build": "22L261",
       "released_at": "2025-04-16T19:26:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.4.1/22l261.json",
+      "data": "18.4.1/22L261.json",
       "firmwares": [
         {
-          "id": "tvos-release-18.4.1-22l261-AppleTV5,3",
+          "id": "tvos-release-18.4.1-22L261-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -240,16 +240,16 @@
       ]
     },
     {
-      "id": "tvos-release-18.4-22l255",
+      "id": "tvos-release-18.4-22L255",
       "version": "18.4",
-      "build": "22l255",
+      "build": "22L255",
       "released_at": "2025-03-31T17:30:14Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.4/22l255.json",
+      "data": "18.4/22L255.json",
       "firmwares": [
         {
-          "id": "tvos-release-18.4-22l255-AppleTV5,3",
+          "id": "tvos-release-18.4-22L255-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -261,16 +261,16 @@
       ]
     },
     {
-      "id": "tvos-release-18.3.1-22k561",
+      "id": "tvos-release-18.3.1-22K561",
       "version": "18.3.1",
-      "build": "22k561",
+      "build": "22K561",
       "released_at": "2025-03-11T17:34:53Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.3.1/22k561.json",
+      "data": "18.3.1/22K561.json",
       "firmwares": [
         {
-          "id": "tvos-release-18.3.1-22k561-AppleTV5,3",
+          "id": "tvos-release-18.3.1-22K561-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -282,16 +282,16 @@
       ]
     },
     {
-      "id": "tvos-release-18.3-22k557",
+      "id": "tvos-release-18.3-22K557",
       "version": "18.3",
-      "build": "22k557",
+      "build": "22K557",
       "released_at": "2025-01-27T18:55:16Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.3/22k557.json",
+      "data": "18.3/22K557.json",
       "firmwares": [
         {
-          "id": "tvos-release-18.3-22k557-AppleTV5,3",
+          "id": "tvos-release-18.3-22K557-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -303,16 +303,16 @@
       ]
     },
     {
-      "id": "tvos-release-18.2.1-22k160",
+      "id": "tvos-release-18.2.1-22K160",
       "version": "18.2.1",
-      "build": "22k160",
+      "build": "22K160",
       "released_at": "2025-01-16T22:22:56Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.2.1/22k160.json",
+      "data": "18.2.1/22K160.json",
       "firmwares": [
         {
-          "id": "tvos-release-18.2.1-22k160-AppleTV5,3",
+          "id": "tvos-release-18.2.1-22K160-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -324,16 +324,16 @@
       ]
     },
     {
-      "id": "tvos-release-18.2-22k155",
+      "id": "tvos-release-18.2-22K155",
       "version": "18.2",
-      "build": "22k155",
+      "build": "22K155",
       "released_at": "2024-12-11T18:47:13Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.2/22k155.json",
+      "data": "18.2/22K155.json",
       "firmwares": [
         {
-          "id": "tvos-release-18.2-22k155-AppleTV5,3",
+          "id": "tvos-release-18.2-22K155-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -345,16 +345,16 @@
       ]
     },
     {
-      "id": "tvos-release-18.1-22j580",
+      "id": "tvos-release-18.1-22J580",
       "version": "18.1",
-      "build": "22j580",
+      "build": "22J580",
       "released_at": "2024-10-28T17:33:14Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.1/22j580.json",
+      "data": "18.1/22J580.json",
       "firmwares": [
         {
-          "id": "tvos-release-18.1-22j580-AppleTV5,3",
+          "id": "tvos-release-18.1-22J580-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -366,16 +366,16 @@
       ]
     },
     {
-      "id": "tvos-release-18.0-22j357",
+      "id": "tvos-release-18.0-22J357",
       "version": "18.0",
-      "build": "22j357",
+      "build": "22J357",
       "released_at": "2024-09-16T17:18:49Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.0/22j357.json",
+      "data": "18.0/22J357.json",
       "firmwares": [
         {
-          "id": "tvos-release-18.0-22j357-AppleTV5,3",
+          "id": "tvos-release-18.0-22J357-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -387,16 +387,16 @@
       ]
     },
     {
-      "id": "tvos-release-17.6.1-21m80",
+      "id": "tvos-release-17.6.1-21M80",
       "version": "17.6.1",
-      "build": "21m80",
+      "build": "21M80",
       "released_at": "2024-08-19T17:59:49Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.6.1/21m80.json",
+      "data": "17.6.1/21M80.json",
       "firmwares": [
         {
-          "id": "tvos-release-17.6.1-21m80-AppleTV5,3",
+          "id": "tvos-release-17.6.1-21M80-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -408,16 +408,16 @@
       ]
     },
     {
-      "id": "tvos-release-17.6-21m71",
+      "id": "tvos-release-17.6-21M71",
       "version": "17.6",
-      "build": "21m71",
+      "build": "21M71",
       "released_at": "2024-07-29T20:41:12Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.6/21m71.json",
+      "data": "17.6/21M71.json",
       "firmwares": [
         {
-          "id": "tvos-release-17.6-21m71-AppleTV5,3",
+          "id": "tvos-release-17.6-21M71-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -429,16 +429,16 @@
       ]
     },
     {
-      "id": "tvos-release-17.5.1-21l580",
+      "id": "tvos-release-17.5.1-21L580",
       "version": "17.5.1",
-      "build": "21l580",
+      "build": "21L580",
       "released_at": "2024-05-21T20:21:58Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.5.1/21l580.json",
+      "data": "17.5.1/21L580.json",
       "firmwares": [
         {
-          "id": "tvos-release-17.5.1-21l580-AppleTV5,3",
+          "id": "tvos-release-17.5.1-21L580-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -450,16 +450,16 @@
       ]
     },
     {
-      "id": "tvos-release-17.5-21l569",
+      "id": "tvos-release-17.5-21L569",
       "version": "17.5",
-      "build": "21l569",
+      "build": "21L569",
       "released_at": "2024-05-13T18:05:37Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.5/21l569.json",
+      "data": "17.5/21L569.json",
       "firmwares": [
         {
-          "id": "tvos-release-17.5-21l569-AppleTV5,3",
+          "id": "tvos-release-17.5-21L569-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -471,16 +471,16 @@
       ]
     },
     {
-      "id": "tvos-release-17.4-21l227",
+      "id": "tvos-release-17.4-21L227",
       "version": "17.4",
-      "build": "21l227",
+      "build": "21L227",
       "released_at": "2024-03-07T19:05:10Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.4/21l227.json",
+      "data": "17.4/21L227.json",
       "firmwares": [
         {
-          "id": "tvos-release-17.4-21l227-AppleTV5,3",
+          "id": "tvos-release-17.4-21L227-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -492,16 +492,16 @@
       ]
     },
     {
-      "id": "tvos-release-17.3-21k646",
+      "id": "tvos-release-17.3-21K646",
       "version": "17.3",
-      "build": "21k646",
+      "build": "21K646",
       "released_at": "2024-01-22T18:58:59Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.3/21k646.json",
+      "data": "17.3/21K646.json",
       "firmwares": [
         {
-          "id": "tvos-release-17.3-21k646-AppleTV5,3",
+          "id": "tvos-release-17.3-21K646-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -513,16 +513,16 @@
       ]
     },
     {
-      "id": "tvos-release-17.2-21k365",
+      "id": "tvos-release-17.2-21K365",
       "version": "17.2",
-      "build": "21k365",
+      "build": "21K365",
       "released_at": "2023-12-11T18:58:34Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.2/21k365.json",
+      "data": "17.2/21K365.json",
       "firmwares": [
         {
-          "id": "tvos-release-17.2-21k365-AppleTV5,3",
+          "id": "tvos-release-17.2-21K365-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -534,16 +534,16 @@
       ]
     },
     {
-      "id": "tvos-release-17.1-21k69",
+      "id": "tvos-release-17.1-21K69",
       "version": "17.1",
-      "build": "21k69",
+      "build": "21K69",
       "released_at": "2023-10-25T17:36:32Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.1/21k69.json",
+      "data": "17.1/21K69.json",
       "firmwares": [
         {
-          "id": "tvos-release-17.1-21k69-AppleTV5,3",
+          "id": "tvos-release-17.1-21K69-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -555,16 +555,16 @@
       ]
     },
     {
-      "id": "tvos-release-17.0-21j354",
+      "id": "tvos-release-17.0-21J354",
       "version": "17.0",
-      "build": "21j354",
+      "build": "21J354",
       "released_at": "2023-09-18T19:08:45Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.0/21j354.json",
+      "data": "17.0/21J354.json",
       "firmwares": [
         {
-          "id": "tvos-release-17.0-21j354-AppleTV5,3",
+          "id": "tvos-release-17.0-21J354-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -576,16 +576,16 @@
       ]
     },
     {
-      "id": "tvos-release-16.6-20m73",
+      "id": "tvos-release-16.6-20M73",
       "version": "16.6",
-      "build": "20m73",
+      "build": "20M73",
       "released_at": "2023-07-24T18:16:41Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.6/20m73.json",
+      "data": "16.6/20M73.json",
       "firmwares": [
         {
-          "id": "tvos-release-16.6-20m73-AppleTV5,3",
+          "id": "tvos-release-16.6-20M73-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -597,16 +597,16 @@
       ]
     },
     {
-      "id": "tvos-release-16.5-20l563",
+      "id": "tvos-release-16.5-20L563",
       "version": "16.5",
-      "build": "20l563",
+      "build": "20L563",
       "released_at": "2023-05-18T18:14:19Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.5/20l563.json",
+      "data": "16.5/20L563.json",
       "firmwares": [
         {
-          "id": "tvos-release-16.5-20l563-AppleTV5,3",
+          "id": "tvos-release-16.5-20L563-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -618,16 +618,16 @@
       ]
     },
     {
-      "id": "tvos-release-16.4.1-20l498",
+      "id": "tvos-release-16.4.1-20L498",
       "version": "16.4.1",
-      "build": "20l498",
+      "build": "20L498",
       "released_at": "2023-04-12T18:41:54Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.4.1/20l498.json",
+      "data": "16.4.1/20L498.json",
       "firmwares": [
         {
-          "id": "tvos-release-16.4.1-20l498-AppleTV5,3",
+          "id": "tvos-release-16.4.1-20L498-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -639,16 +639,16 @@
       ]
     },
     {
-      "id": "tvos-release-16.4-20l497",
+      "id": "tvos-release-16.4-20L497",
       "version": "16.4",
-      "build": "20l497",
+      "build": "20L497",
       "released_at": "2023-03-27T18:24:28Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.4/20l497.json",
+      "data": "16.4/20L497.json",
       "firmwares": [
         {
-          "id": "tvos-release-16.4-20l497-AppleTV5,3",
+          "id": "tvos-release-16.4-20L497-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -660,16 +660,16 @@
       ]
     },
     {
-      "id": "tvos-release-16.3.2-20k672",
+      "id": "tvos-release-16.3.2-20K672",
       "version": "16.3.2",
-      "build": "20k672",
+      "build": "20K672",
       "released_at": "2023-02-13T18:50:38Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.3.2/20k672.json",
+      "data": "16.3.2/20K672.json",
       "firmwares": [
         {
-          "id": "tvos-release-16.3.2-20k672-AppleTV5,3",
+          "id": "tvos-release-16.3.2-20K672-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -681,16 +681,16 @@
       ]
     },
     {
-      "id": "tvos-release-16.3.1-20k661",
+      "id": "tvos-release-16.3.1-20K661",
       "version": "16.3.1",
-      "build": "20k661",
+      "build": "20K661",
       "released_at": "2023-02-06T18:52:55Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.3.1/20k661.json",
+      "data": "16.3.1/20K661.json",
       "firmwares": [
         {
-          "id": "tvos-release-16.3.1-20k661-AppleTV5,3",
+          "id": "tvos-release-16.3.1-20K661-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -702,16 +702,16 @@
       ]
     },
     {
-      "id": "tvos-release-16.3-20k650",
+      "id": "tvos-release-16.3-20K650",
       "version": "16.3",
-      "build": "20k650",
+      "build": "20K650",
       "released_at": "2023-01-24T19:17:24Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.3/20k650.json",
+      "data": "16.3/20K650.json",
       "firmwares": [
         {
-          "id": "tvos-release-16.3-20k650-AppleTV5,3",
+          "id": "tvos-release-16.3-20K650-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -723,16 +723,16 @@
       ]
     },
     {
-      "id": "tvos-release-16.2-20k362",
+      "id": "tvos-release-16.2-20K362",
       "version": "16.2",
-      "build": "20k362",
+      "build": "20K362",
       "released_at": "2022-12-13T18:45:14Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.2/20k362.json",
+      "data": "16.2/20K362.json",
       "firmwares": [
         {
-          "id": "tvos-release-16.2-20k362-AppleTV5,3",
+          "id": "tvos-release-16.2-20K362-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -744,16 +744,16 @@
       ]
     },
     {
-      "id": "tvos-release-16.1-20k71",
+      "id": "tvos-release-16.1-20K71",
       "version": "16.1",
-      "build": "20k71",
+      "build": "20K71",
       "released_at": "2022-10-24T18:25:34Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.1/20k71.json",
+      "data": "16.1/20K71.json",
       "firmwares": [
         {
-          "id": "tvos-release-16.1-20k71-AppleTV5,3",
+          "id": "tvos-release-16.1-20K71-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -765,16 +765,16 @@
       ]
     },
     {
-      "id": "tvos-release-16.0-20j373",
+      "id": "tvos-release-16.0-20J373",
       "version": "16.0",
-      "build": "20j373",
+      "build": "20J373",
       "released_at": "2022-09-12T17:38:25Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.0/20j373.json",
+      "data": "16.0/20J373.json",
       "firmwares": [
         {
-          "id": "tvos-release-16.0-20j373-AppleTV5,3",
+          "id": "tvos-release-16.0-20J373-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -786,16 +786,16 @@
       ]
     },
     {
-      "id": "tvos-release-15.6-19m65",
+      "id": "tvos-release-15.6-19M65",
       "version": "15.6",
-      "build": "19m65",
+      "build": "19M65",
       "released_at": "2022-07-20T16:44:48Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.6/19m65.json",
+      "data": "15.6/19M65.json",
       "firmwares": [
         {
-          "id": "tvos-release-15.6-19m65-AppleTV5,3",
+          "id": "tvos-release-15.6-19M65-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -807,16 +807,16 @@
       ]
     },
     {
-      "id": "tvos-release-15.5.1-19l580",
+      "id": "tvos-release-15.5.1-19L580",
       "version": "15.5.1",
-      "build": "19l580",
+      "build": "19L580",
       "released_at": "2022-05-25T16:43:10Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.5.1/19l580.json",
+      "data": "15.5.1/19L580.json",
       "firmwares": [
         {
-          "id": "tvos-release-15.5.1-19l580-AppleTV5,3",
+          "id": "tvos-release-15.5.1-19L580-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -828,16 +828,16 @@
       ]
     },
     {
-      "id": "tvos-release-15.5-19l570",
+      "id": "tvos-release-15.5-19L570",
       "version": "15.5",
-      "build": "19l570",
+      "build": "19L570",
       "released_at": "2022-05-16T18:23:47Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.5/19l570.json",
+      "data": "15.5/19L570.json",
       "firmwares": [
         {
-          "id": "tvos-release-15.5-19l570-AppleTV5,3",
+          "id": "tvos-release-15.5-19L570-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -849,16 +849,16 @@
       ]
     },
     {
-      "id": "tvos-release-15.4.1-19l452",
+      "id": "tvos-release-15.4.1-19L452",
       "version": "15.4.1",
-      "build": "19l452",
+      "build": "19L452",
       "released_at": "2022-03-31T16:45:52Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.4.1/19l452.json",
+      "data": "15.4.1/19L452.json",
       "firmwares": [
         {
-          "id": "tvos-release-15.4.1-19l452-AppleTV5,3",
+          "id": "tvos-release-15.4.1-19L452-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -870,16 +870,16 @@
       ]
     },
     {
-      "id": "tvos-release-15.4-19l440",
+      "id": "tvos-release-15.4-19L440",
       "version": "15.4",
-      "build": "19l440",
+      "build": "19L440",
       "released_at": "2022-03-14T16:48:28Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.4/19l440.json",
+      "data": "15.4/19L440.json",
       "firmwares": [
         {
-          "id": "tvos-release-15.4-19l440-AppleTV5,3",
+          "id": "tvos-release-15.4-19L440-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -891,16 +891,16 @@
       ]
     },
     {
-      "id": "tvos-release-15.3-19k547",
+      "id": "tvos-release-15.3-19K547",
       "version": "15.3",
-      "build": "19k547",
+      "build": "19K547",
       "released_at": "2022-01-26T18:02:16Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.3/19k547.json",
+      "data": "15.3/19K547.json",
       "firmwares": [
         {
-          "id": "tvos-release-15.3-19k547-AppleTV5,3",
+          "id": "tvos-release-15.3-19K547-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -912,16 +912,16 @@
       ]
     },
     {
-      "id": "tvos-release-15.2-19k53",
+      "id": "tvos-release-15.2-19K53",
       "version": "15.2",
-      "build": "19k53",
+      "build": "19K53",
       "released_at": "2021-12-13T17:46:04Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.2/19k53.json",
+      "data": "15.2/19K53.json",
       "firmwares": [
         {
-          "id": "tvos-release-15.2-19k53-AppleTV5,3",
+          "id": "tvos-release-15.2-19K53-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -933,16 +933,16 @@
       ]
     },
     {
-      "id": "tvos-release-15.1.1-19j581",
+      "id": "tvos-release-15.1.1-19J581",
       "version": "15.1.1",
-      "build": "19j581",
+      "build": "19J581",
       "released_at": "2021-11-01T16:58:18Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.1.1/19j581.json",
+      "data": "15.1.1/19J581.json",
       "firmwares": [
         {
-          "id": "tvos-release-15.1.1-19j581-AppleTV5,3",
+          "id": "tvos-release-15.1.1-19J581-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -954,16 +954,16 @@
       ]
     },
     {
-      "id": "tvos-release-15.1-19j572",
+      "id": "tvos-release-15.1-19J572",
       "version": "15.1",
-      "build": "19j572",
+      "build": "19J572",
       "released_at": "2021-10-25T20:29:01Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.1/19j572.json",
+      "data": "15.1/19J572.json",
       "firmwares": [
         {
-          "id": "tvos-release-15.1-19j572-AppleTV5,3",
+          "id": "tvos-release-15.1-19J572-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -975,16 +975,16 @@
       ]
     },
     {
-      "id": "tvos-release-15-19j346",
+      "id": "tvos-release-15-19J346",
       "version": "15",
-      "build": "19j346",
+      "build": "19J346",
       "released_at": "2021-09-20T18:33:23Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15/19j346.json",
+      "data": "15/19J346.json",
       "firmwares": [
         {
-          "id": "tvos-release-15-19j346-AppleTV5,3",
+          "id": "tvos-release-15-19J346-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -996,16 +996,16 @@
       ]
     },
     {
-      "id": "tvos-release-14.7-18m60",
+      "id": "tvos-release-14.7-18M60",
       "version": "14.7",
-      "build": "18m60",
+      "build": "18M60",
       "released_at": "2021-07-19T17:20:50Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.7/18m60.json",
+      "data": "14.7/18M60.json",
       "firmwares": [
         {
-          "id": "tvos-release-14.7-18m60-AppleTV5,3",
+          "id": "tvos-release-14.7-18M60-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1017,16 +1017,16 @@
       ]
     },
     {
-      "id": "tvos-release-14.6-18l569",
+      "id": "tvos-release-14.6-18L569",
       "version": "14.6",
-      "build": "18l569",
+      "build": "18L569",
       "released_at": "2021-05-24T16:48:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.6/18l569.json",
+      "data": "14.6/18L569.json",
       "firmwares": [
         {
-          "id": "tvos-release-14.6-18l569-AppleTV5,3",
+          "id": "tvos-release-14.6-18L569-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1038,16 +1038,16 @@
       ]
     },
     {
-      "id": "tvos-release-14.5-18l204",
+      "id": "tvos-release-14.5-18L204",
       "version": "14.5",
-      "build": "18l204",
+      "build": "18L204",
       "released_at": "2021-04-26T16:43:19Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.5/18l204.json",
+      "data": "14.5/18L204.json",
       "firmwares": [
         {
-          "id": "tvos-release-14.5-18l204-AppleTV5,3",
+          "id": "tvos-release-14.5-18L204-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1059,16 +1059,16 @@
       ]
     },
     {
-      "id": "tvos-release-14.4-18k802",
+      "id": "tvos-release-14.4-18K802",
       "version": "14.4",
-      "build": "18k802",
+      "build": "18K802",
       "released_at": "2021-01-26T18:06:12Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.4/18k802.json",
+      "data": "14.4/18K802.json",
       "firmwares": [
         {
-          "id": "tvos-release-14.4-18k802-AppleTV5,3",
+          "id": "tvos-release-14.4-18K802-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1080,16 +1080,16 @@
       ]
     },
     {
-      "id": "tvos-release-14.3-18k561",
+      "id": "tvos-release-14.3-18K561",
       "version": "14.3",
-      "build": "18k561",
+      "build": "18K561",
       "released_at": "2020-12-14T17:59:46Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.3/18k561.json",
+      "data": "14.3/18K561.json",
       "firmwares": [
         {
-          "id": "tvos-release-14.3-18k561-AppleTV5,3",
+          "id": "tvos-release-14.3-18K561-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1101,16 +1101,16 @@
       ]
     },
     {
-      "id": "tvos-release-14.2-18k57",
+      "id": "tvos-release-14.2-18K57",
       "version": "14.2",
-      "build": "18k57",
+      "build": "18K57",
       "released_at": "2020-11-05T17:58:29Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.2/18k57.json",
+      "data": "14.2/18K57.json",
       "firmwares": [
         {
-          "id": "tvos-release-14.2-18k57-AppleTV5,3",
+          "id": "tvos-release-14.2-18K57-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1122,16 +1122,16 @@
       ]
     },
     {
-      "id": "tvos-release-14.0.2-18j411",
+      "id": "tvos-release-14.0.2-18J411",
       "version": "14.0.2",
-      "build": "18j411",
+      "build": "18J411",
       "released_at": "2020-10-20T17:15:41Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.0.2/18j411.json",
+      "data": "14.0.2/18J411.json",
       "firmwares": [
         {
-          "id": "tvos-release-14.0.2-18j411-AppleTV5,3",
+          "id": "tvos-release-14.0.2-18J411-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1143,16 +1143,16 @@
       ]
     },
     {
-      "id": "tvos-release-14.0.1-18j400",
+      "id": "tvos-release-14.0.1-18J400",
       "version": "14.0.1",
-      "build": "18j400",
+      "build": "18J400",
       "released_at": "2020-09-24T17:51:25Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.0.1/18j400.json",
+      "data": "14.0.1/18J400.json",
       "firmwares": [
         {
-          "id": "tvos-release-14.0.1-18j400-AppleTV5,3",
+          "id": "tvos-release-14.0.1-18J400-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1164,16 +1164,16 @@
       ]
     },
     {
-      "id": "tvos-release-14.0-18j386",
+      "id": "tvos-release-14.0-18J386",
       "version": "14.0",
-      "build": "18j386",
+      "build": "18J386",
       "released_at": "2020-09-16T19:40:40Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.0/18j386.json",
+      "data": "14.0/18J386.json",
       "firmwares": [
         {
-          "id": "tvos-release-14.0-18j386-AppleTV5,3",
+          "id": "tvos-release-14.0-18J386-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1185,16 +1185,16 @@
       ]
     },
     {
-      "id": "tvos-release-13.5-17l562",
+      "id": "tvos-release-13.5-17L562",
       "version": "13.5",
-      "build": "17l562",
+      "build": "17L562",
       "released_at": "2020-05-20T16:56:52Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "13.5/17l562.json",
+      "data": "13.5/17L562.json",
       "firmwares": [
         {
-          "id": "tvos-release-13.5-17l562-AppleTV5,3",
+          "id": "tvos-release-13.5-17L562-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1206,16 +1206,16 @@
       ]
     },
     {
-      "id": "tvos-release-13.4.8-17m61",
+      "id": "tvos-release-13.4.8-17M61",
       "version": "13.4.8",
-      "build": "17m61",
+      "build": "17M61",
       "released_at": "2020-07-15T17:05:20Z",
       "signed_firmware_count": 1,
       "total_firmware_count": 1,
-      "data": "13.4.8/17m61.json",
+      "data": "13.4.8/17M61.json",
       "firmwares": [
         {
-          "id": "tvos-release-13.4.8-17m61-AppleTV5,3",
+          "id": "tvos-release-13.4.8-17M61-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1227,16 +1227,16 @@
       ]
     },
     {
-      "id": "tvos-release-13.4.6-17l570",
+      "id": "tvos-release-13.4.6-17L570",
       "version": "13.4.6",
-      "build": "17l570",
+      "build": "17L570",
       "released_at": "2020-06-01T17:06:17Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "13.4.6/17l570.json",
+      "data": "13.4.6/17L570.json",
       "firmwares": [
         {
-          "id": "tvos-release-13.4.6-17l570-AppleTV5,3",
+          "id": "tvos-release-13.4.6-17L570-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1248,16 +1248,16 @@
       ]
     },
     {
-      "id": "tvos-release-13.4-17l256",
+      "id": "tvos-release-13.4-17L256",
       "version": "13.4",
-      "build": "17l256",
+      "build": "17L256",
       "released_at": "2020-03-24T16:59:10Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "13.4/17l256.json",
+      "data": "13.4/17L256.json",
       "firmwares": [
         {
-          "id": "tvos-release-13.4-17l256-AppleTV5,3",
+          "id": "tvos-release-13.4-17L256-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1269,16 +1269,16 @@
       ]
     },
     {
-      "id": "tvos-release-13.3.1-17k795",
+      "id": "tvos-release-13.3.1-17K795",
       "version": "13.3.1",
-      "build": "17k795",
+      "build": "17K795",
       "released_at": "2020-01-28T18:02:47Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "13.3.1/17k795.json",
+      "data": "13.3.1/17K795.json",
       "firmwares": [
         {
-          "id": "tvos-release-13.3.1-17k795-AppleTV5,3",
+          "id": "tvos-release-13.3.1-17K795-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1290,16 +1290,16 @@
       ]
     },
     {
-      "id": "tvos-release-13.3-17k449",
+      "id": "tvos-release-13.3-17K449",
       "version": "13.3",
-      "build": "17k449",
+      "build": "17K449",
       "released_at": "2019-12-10T17:56:46Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "13.3/17k449.json",
+      "data": "13.3/17K449.json",
       "firmwares": [
         {
-          "id": "tvos-release-13.3-17k449-AppleTV5,3",
+          "id": "tvos-release-13.3-17K449-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1311,16 +1311,16 @@
       ]
     },
     {
-      "id": "tvos-release-13.2-17k82",
+      "id": "tvos-release-13.2-17K82",
       "version": "13.2",
-      "build": "17k82",
+      "build": "17K82",
       "released_at": "2019-10-28T17:02:17Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "13.2/17k82.json",
+      "data": "13.2/17K82.json",
       "firmwares": [
         {
-          "id": "tvos-release-13.2-17k82-AppleTV5,3",
+          "id": "tvos-release-13.2-17K82-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1332,16 +1332,16 @@
       ]
     },
     {
-      "id": "tvos-release-13.0-17j586",
+      "id": "tvos-release-13.0-17J586",
       "version": "13.0",
-      "build": "17j586",
+      "build": "17J586",
       "released_at": "2019-09-24T17:03:06Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "13.0/17j586.json",
+      "data": "13.0/17J586.json",
       "firmwares": [
         {
-          "id": "tvos-release-13.0-17j586-AppleTV5,3",
+          "id": "tvos-release-13.0-17J586-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1353,16 +1353,16 @@
       ]
     },
     {
-      "id": "tvos-release-12.4.1-16m600",
+      "id": "tvos-release-12.4.1-16M600",
       "version": "12.4.1",
-      "build": "16m600",
+      "build": "16M600",
       "released_at": "2019-08-26T19:48:27Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "12.4.1/16m600.json",
+      "data": "12.4.1/16M600.json",
       "firmwares": [
         {
-          "id": "tvos-release-12.4.1-16m600-AppleTV5,3",
+          "id": "tvos-release-12.4.1-16M600-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1374,16 +1374,16 @@
       ]
     },
     {
-      "id": "tvos-release-12.4-16m568",
+      "id": "tvos-release-12.4-16M568",
       "version": "12.4",
-      "build": "16m568",
+      "build": "16M568",
       "released_at": "2019-07-22T17:12:43Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "12.4/16m568.json",
+      "data": "12.4/16M568.json",
       "firmwares": [
         {
-          "id": "tvos-release-12.4-16m568-AppleTV5,3",
+          "id": "tvos-release-12.4-16M568-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1395,16 +1395,16 @@
       ]
     },
     {
-      "id": "tvos-release-12.3-16m153",
+      "id": "tvos-release-12.3-16M153",
       "version": "12.3",
-      "build": "16m153",
+      "build": "16M153",
       "released_at": "2019-05-13T16:59:47Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "12.3/16m153.json",
+      "data": "12.3/16M153.json",
       "firmwares": [
         {
-          "id": "tvos-release-12.3-16m153-AppleTV5,3",
+          "id": "tvos-release-12.3-16M153-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1416,16 +1416,16 @@
       ]
     },
     {
-      "id": "tvos-release-12.2.1-16l250",
+      "id": "tvos-release-12.2.1-16L250",
       "version": "12.2.1",
-      "build": "16l250",
+      "build": "16L250",
       "released_at": "2019-04-10T23:18:02Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "12.2.1/16l250.json",
+      "data": "12.2.1/16L250.json",
       "firmwares": [
         {
-          "id": "tvos-release-12.2.1-16l250-AppleTV5,3",
+          "id": "tvos-release-12.2.1-16L250-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1437,16 +1437,16 @@
       ]
     },
     {
-      "id": "tvos-release-12.2-16l226",
+      "id": "tvos-release-12.2-16L226",
       "version": "12.2",
-      "build": "16l226",
+      "build": "16L226",
       "released_at": "2019-03-25T19:14:04Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "12.2/16l226.json",
+      "data": "12.2/16L226.json",
       "firmwares": [
         {
-          "id": "tvos-release-12.2-16l226-AppleTV5,3",
+          "id": "tvos-release-12.2-16L226-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1458,16 +1458,16 @@
       ]
     },
     {
-      "id": "tvos-release-12.1.1-16k45",
+      "id": "tvos-release-12.1.1-16K45",
       "version": "12.1.1",
-      "build": "16k45",
+      "build": "16K45",
       "released_at": "2018-12-05T17:59:16Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "12.1.1/16k45.json",
+      "data": "12.1.1/16K45.json",
       "firmwares": [
         {
-          "id": "tvos-release-12.1.1-16k45-AppleTV5,3",
+          "id": "tvos-release-12.1.1-16K45-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1479,16 +1479,16 @@
       ]
     },
     {
-      "id": "tvos-release-12.1-16j602",
+      "id": "tvos-release-12.1-16J602",
       "version": "12.1",
-      "build": "16j602",
+      "build": "16J602",
       "released_at": "2018-10-30T17:09:50Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "12.1/16j602.json",
+      "data": "12.1/16J602.json",
       "firmwares": [
         {
-          "id": "tvos-release-12.1-16j602-AppleTV5,3",
+          "id": "tvos-release-12.1-16J602-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1500,16 +1500,16 @@
       ]
     },
     {
-      "id": "tvos-release-12.0.1-16j380",
+      "id": "tvos-release-12.0.1-16J380",
       "version": "12.0.1",
-      "build": "16j380",
+      "build": "16J380",
       "released_at": "2018-09-24T17:06:59Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "12.0.1/16j380.json",
+      "data": "12.0.1/16J380.json",
       "firmwares": [
         {
-          "id": "tvos-release-12.0.1-16j380-AppleTV5,3",
+          "id": "tvos-release-12.0.1-16J380-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1521,16 +1521,16 @@
       ]
     },
     {
-      "id": "tvos-release-12.0-16j364",
+      "id": "tvos-release-12.0-16J364",
       "version": "12.0",
-      "build": "16j364",
+      "build": "16J364",
       "released_at": "2018-09-17T17:05:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "12.0/16j364.json",
+      "data": "12.0/16J364.json",
       "firmwares": [
         {
-          "id": "tvos-release-12.0-16j364-AppleTV5,3",
+          "id": "tvos-release-12.0-16J364-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1542,16 +1542,16 @@
       ]
     },
     {
-      "id": "tvos-release-11.4.1-15m73",
+      "id": "tvos-release-11.4.1-15M73",
       "version": "11.4.1",
-      "build": "15m73",
+      "build": "15M73",
       "released_at": "2018-07-09T17:07:13Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "11.4.1/15m73.json",
+      "data": "11.4.1/15M73.json",
       "firmwares": [
         {
-          "id": "tvos-release-11.4.1-15m73-AppleTV5,3",
+          "id": "tvos-release-11.4.1-15M73-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1563,16 +1563,16 @@
       ]
     },
     {
-      "id": "tvos-release-11.4-15l577",
+      "id": "tvos-release-11.4-15L577",
       "version": "11.4",
-      "build": "15l577",
+      "build": "15L577",
       "released_at": "2018-05-29T17:03:29Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "11.4/15l577.json",
+      "data": "11.4/15L577.json",
       "firmwares": [
         {
-          "id": "tvos-release-11.4-15l577-AppleTV5,3",
+          "id": "tvos-release-11.4-15L577-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1584,16 +1584,16 @@
       ]
     },
     {
-      "id": "tvos-release-11.3-15l211",
+      "id": "tvos-release-11.3-15L211",
       "version": "11.3",
-      "build": "15l211",
+      "build": "15L211",
       "released_at": "2018-03-29T17:07:24Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "11.3/15l211.json",
+      "data": "11.3/15L211.json",
       "firmwares": [
         {
-          "id": "tvos-release-11.3-15l211-AppleTV5,3",
+          "id": "tvos-release-11.3-15L211-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1605,16 +1605,16 @@
       ]
     },
     {
-      "id": "tvos-release-11.2.6-15k600",
+      "id": "tvos-release-11.2.6-15K600",
       "version": "11.2.6",
-      "build": "15k600",
+      "build": "15K600",
       "released_at": "2018-02-19T21:32:31Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "11.2.6/15k600.json",
+      "data": "11.2.6/15K600.json",
       "firmwares": [
         {
-          "id": "tvos-release-11.2.6-15k600-AppleTV5,3",
+          "id": "tvos-release-11.2.6-15K600-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1626,16 +1626,16 @@
       ]
     },
     {
-      "id": "tvos-release-11.2.5-15k552",
+      "id": "tvos-release-11.2.5-15K552",
       "version": "11.2.5",
-      "build": "15k552",
+      "build": "15K552",
       "released_at": "2018-01-23T18:02:24Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "11.2.5/15k552.json",
+      "data": "11.2.5/15K552.json",
       "firmwares": [
         {
-          "id": "tvos-release-11.2.5-15k552-AppleTV5,3",
+          "id": "tvos-release-11.2.5-15K552-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1647,16 +1647,16 @@
       ]
     },
     {
-      "id": "tvos-release-11.2.1-15k152",
+      "id": "tvos-release-11.2.1-15K152",
       "version": "11.2.1",
-      "build": "15k152",
+      "build": "15K152",
       "released_at": "2017-12-13T18:02:19Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "11.2.1/15k152.json",
+      "data": "11.2.1/15K152.json",
       "firmwares": [
         {
-          "id": "tvos-release-11.2.1-15k152-AppleTV5,3",
+          "id": "tvos-release-11.2.1-15K152-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1668,16 +1668,16 @@
       ]
     },
     {
-      "id": "tvos-release-11.2-15k106",
+      "id": "tvos-release-11.2-15K106",
       "version": "11.2",
-      "build": "15k106",
+      "build": "15K106",
       "released_at": "2017-12-04T18:07:44Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "11.2/15k106.json",
+      "data": "11.2/15K106.json",
       "firmwares": [
         {
-          "id": "tvos-release-11.2-15k106-AppleTV5,3",
+          "id": "tvos-release-11.2-15K106-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1689,16 +1689,16 @@
       ]
     },
     {
-      "id": "tvos-release-11.1-15j582",
+      "id": "tvos-release-11.1-15J582",
       "version": "11.1",
-      "build": "15j582",
+      "build": "15J582",
       "released_at": "2017-10-31T17:38:27Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "11.1/15j582.json",
+      "data": "11.1/15J582.json",
       "firmwares": [
         {
-          "id": "tvos-release-11.1-15j582-AppleTV5,3",
+          "id": "tvos-release-11.1-15J582-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1710,16 +1710,16 @@
       ]
     },
     {
-      "id": "tvos-release-11.0-15j381",
+      "id": "tvos-release-11.0-15J381",
       "version": "11.0",
-      "build": "15j381",
+      "build": "15J381",
       "released_at": "2017-09-19T17:15:16Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "11.0/15j381.json",
+      "data": "11.0/15J381.json",
       "firmwares": [
         {
-          "id": "tvos-release-11.0-15j381-AppleTV5,3",
+          "id": "tvos-release-11.0-15J381-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1731,16 +1731,16 @@
       ]
     },
     {
-      "id": "tvos-release-10.2.2-14w756",
+      "id": "tvos-release-10.2.2-14W756",
       "version": "10.2.2",
-      "build": "14w756",
+      "build": "14W756",
       "released_at": "2017-07-19T17:06:37Z",
       "signed_firmware_count": 1,
       "total_firmware_count": 1,
-      "data": "10.2.2/14w756.json",
+      "data": "10.2.2/14W756.json",
       "firmwares": [
         {
-          "id": "tvos-release-10.2.2-14w756-AppleTV5,3",
+          "id": "tvos-release-10.2.2-14W756-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1752,16 +1752,16 @@
       ]
     },
     {
-      "id": "tvos-release-10.2.1-14w585a",
+      "id": "tvos-release-10.2.1-14W585A",
       "version": "10.2.1",
-      "build": "14w585a",
+      "build": "14W585A",
       "released_at": "2017-05-15T17:13:48Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "10.2.1/14w585a.json",
+      "data": "10.2.1/14W585A.json",
       "firmwares": [
         {
-          "id": "tvos-release-10.2.1-14w585a-AppleTV5,3",
+          "id": "tvos-release-10.2.1-14W585A-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1773,16 +1773,16 @@
       ]
     },
     {
-      "id": "tvos-release-10.2-14w265",
+      "id": "tvos-release-10.2-14W265",
       "version": "10.2",
-      "build": "14w265",
+      "build": "14W265",
       "released_at": "2017-03-27T17:25:28Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "10.2/14w265.json",
+      "data": "10.2/14W265.json",
       "firmwares": [
         {
-          "id": "tvos-release-10.2-14w265-AppleTV5,3",
+          "id": "tvos-release-10.2-14W265-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1794,16 +1794,16 @@
       ]
     },
     {
-      "id": "tvos-release-10.1.1-14u712a",
+      "id": "tvos-release-10.1.1-14U712A",
       "version": "10.1.1",
-      "build": "14u712a",
+      "build": "14U712A",
       "released_at": "2017-01-23T17:58:22Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "10.1.1/14u712a.json",
+      "data": "10.1.1/14U712A.json",
       "firmwares": [
         {
-          "id": "tvos-release-10.1.1-14u712a-AppleTV5,3",
+          "id": "tvos-release-10.1.1-14U712A-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1815,16 +1815,16 @@
       ]
     },
     {
-      "id": "tvos-release-10.1-14u593",
+      "id": "tvos-release-10.1-14U593",
       "version": "10.1",
-      "build": "14u593",
+      "build": "14U593",
       "released_at": "2016-12-12T17:55:27Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "10.1/14u593.json",
+      "data": "10.1/14U593.json",
       "firmwares": [
         {
-          "id": "tvos-release-10.1-14u593-AppleTV5,3",
+          "id": "tvos-release-10.1-14U593-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1836,16 +1836,16 @@
       ]
     },
     {
-      "id": "tvos-release-10.0.1-14u100",
+      "id": "tvos-release-10.0.1-14U100",
       "version": "10.0.1",
-      "build": "14u100",
+      "build": "14U100",
       "released_at": "2016-11-14T17:47:55Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "10.0.1/14u100.json",
+      "data": "10.0.1/14U100.json",
       "firmwares": [
         {
-          "id": "tvos-release-10.0.1-14u100-AppleTV5,3",
+          "id": "tvos-release-10.0.1-14U100-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1857,16 +1857,16 @@
       ]
     },
     {
-      "id": "tvos-release-10.0.1-14u71",
+      "id": "tvos-release-10.0.1-14U71",
       "version": "10.0.1",
-      "build": "14u71",
+      "build": "14U71",
       "released_at": "2016-10-24T17:20:40Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "10.0.1/14u71.json",
+      "data": "10.0.1/14U71.json",
       "firmwares": [
         {
-          "id": "tvos-release-10.0.1-14u71-AppleTV5,3",
+          "id": "tvos-release-10.0.1-14U71-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1878,16 +1878,16 @@
       ]
     },
     {
-      "id": "tvos-release-10.0-14t330",
+      "id": "tvos-release-10.0-14T330",
       "version": "10.0",
-      "build": "14t330",
+      "build": "14T330",
       "released_at": "2016-09-13T16:56:41Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "10.0/14t330.json",
+      "data": "10.0/14T330.json",
       "firmwares": [
         {
-          "id": "tvos-release-10.0-14t330-AppleTV5,3",
+          "id": "tvos-release-10.0-14T330-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1899,16 +1899,16 @@
       ]
     },
     {
-      "id": "tvos-release-9.2.2-13y825",
+      "id": "tvos-release-9.2.2-13Y825",
       "version": "9.2.2",
-      "build": "13y825",
+      "build": "13Y825",
       "released_at": "2016-07-18T17:07:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "9.2.2/13y825.json",
+      "data": "9.2.2/13Y825.json",
       "firmwares": [
         {
-          "id": "tvos-release-9.2.2-13y825-AppleTV5,3",
+          "id": "tvos-release-9.2.2-13Y825-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1920,16 +1920,16 @@
       ]
     },
     {
-      "id": "tvos-release-9.2.1-13y772",
+      "id": "tvos-release-9.2.1-13Y772",
       "version": "9.2.1",
-      "build": "13y772",
+      "build": "13Y772",
       "released_at": "2016-05-16T16:51:42Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "9.2.1/13y772.json",
+      "data": "9.2.1/13Y772.json",
       "firmwares": [
         {
-          "id": "tvos-release-9.2.1-13y772-AppleTV5,3",
+          "id": "tvos-release-9.2.1-13Y772-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1941,16 +1941,16 @@
       ]
     },
     {
-      "id": "tvos-release-9.2-13y234",
+      "id": "tvos-release-9.2-13Y234",
       "version": "9.2",
-      "build": "13y234",
+      "build": "13Y234",
       "released_at": "2016-03-21T19:10:51Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "9.2/13y234.json",
+      "data": "9.2/13Y234.json",
       "firmwares": [
         {
-          "id": "tvos-release-9.2-13y234-AppleTV5,3",
+          "id": "tvos-release-9.2-13Y234-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1962,16 +1962,16 @@
       ]
     },
     {
-      "id": "tvos-release-9.1.1-13u717",
+      "id": "tvos-release-9.1.1-13U717",
       "version": "9.1.1",
-      "build": "13u717",
+      "build": "13U717",
       "released_at": "2016-01-25T18:56:14Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "9.1.1/13u717.json",
+      "data": "9.1.1/13U717.json",
       "firmwares": [
         {
-          "id": "tvos-release-9.1.1-13u717-AppleTV5,3",
+          "id": "tvos-release-9.1.1-13U717-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -1983,16 +1983,16 @@
       ]
     },
     {
-      "id": "tvos-release-9.1-13u85",
+      "id": "tvos-release-9.1-13U85",
       "version": "9.1",
-      "build": "13u85",
+      "build": "13U85",
       "released_at": "2015-12-08T18:19:23Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "9.1/13u85.json",
+      "data": "9.1/13U85.json",
       "firmwares": [
         {
-          "id": "tvos-release-9.1-13u85-AppleTV5,3",
+          "id": "tvos-release-9.1-13U85-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -2004,16 +2004,16 @@
       ]
     },
     {
-      "id": "tvos-release-9.0.1-13t402",
+      "id": "tvos-release-9.0.1-13T402",
       "version": "9.0.1",
-      "build": "13t402",
+      "build": "13T402",
       "released_at": "2015-11-09T18:22:09Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "9.0.1/13t402.json",
+      "data": "9.0.1/13T402.json",
       "firmwares": [
         {
-          "id": "tvos-release-9.0.1-13t402-AppleTV5,3",
+          "id": "tvos-release-9.0.1-13T402-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -2025,16 +2025,16 @@
       ]
     },
     {
-      "id": "tvos-release-9.0-13t396",
+      "id": "tvos-release-9.0-13T396",
       "version": "9.0",
-      "build": "13t396",
+      "build": "13T396",
       "released_at": "2015-10-29T19:59:04Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "9.0/13t396.json",
+      "data": "9.0/13T396.json",
       "firmwares": [
         {
-          "id": "tvos-release-9.0-13t396-AppleTV5,3",
+          "id": "tvos-release-9.0-13T396-AppleTV5,3",
           "name": "Apple TV 4 (2015)",
           "devices": [
             "AppleTV5,3"
@@ -2046,16 +2046,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.4.7-12h1006",
+      "id": "tvos-release-8.4.7-12H1006",
       "version": "8.4.7",
-      "build": "12h1006",
+      "build": "12H1006",
       "released_at": "2022-03-14T16:48:40Z",
       "signed_firmware_count": 2,
       "total_firmware_count": 2,
-      "data": "8.4.7/12h1006.json",
+      "data": "8.4.7/12H1006.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.4.7-12h1006-AppleTV3,2",
+          "id": "tvos-release-8.4.7-12H1006-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2065,7 +2065,7 @@
           "signed": true
         },
         {
-          "id": "tvos-release-8.4.7-12h1006-AppleTV3,1",
+          "id": "tvos-release-8.4.7-12H1006-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2077,16 +2077,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.4.6-12h937",
+      "id": "tvos-release-8.4.6-12H937",
       "version": "8.4.6",
-      "build": "12h937",
+      "build": "12H937",
       "released_at": "2021-09-20T18:33:25Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.4.6/12h937.json",
+      "data": "8.4.6/12H937.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.4.6-12h937-AppleTV3,2",
+          "id": "tvos-release-8.4.6-12H937-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2096,7 +2096,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.4.6-12h937-AppleTV3,1",
+          "id": "tvos-release-8.4.6-12H937-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2108,16 +2108,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.4.6-12h923",
+      "id": "tvos-release-8.4.6-12H923",
       "version": "8.4.6",
-      "build": "12h923",
+      "build": "12H923",
       "released_at": "2021-04-26T16:43:33Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.4.6/12h923.json",
+      "data": "8.4.6/12H923.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.4.6-12h923-AppleTV3,2",
+          "id": "tvos-release-8.4.6-12H923-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2127,7 +2127,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.4.6-12h923-AppleTV3,1",
+          "id": "tvos-release-8.4.6-12H923-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2139,16 +2139,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.4.6-12h914",
+      "id": "tvos-release-8.4.6-12H914",
       "version": "8.4.6",
-      "build": "12h914",
+      "build": "12H914",
       "released_at": "2020-12-14T17:59:56Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.4.6/12h914.json",
+      "data": "8.4.6/12H914.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.4.6-12h914-AppleTV3,2",
+          "id": "tvos-release-8.4.6-12H914-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2158,7 +2158,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.4.6-12h914-AppleTV3,1",
+          "id": "tvos-release-8.4.6-12H914-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2170,16 +2170,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.4.3-12h911",
+      "id": "tvos-release-8.4.3-12H911",
       "version": "8.4.3",
-      "build": "12h911",
+      "build": "12H911",
       "released_at": "2020-11-05T17:58:30Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.4.3/12h911.json",
+      "data": "8.4.3/12H911.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.4.3-12h911-AppleTV3,2",
+          "id": "tvos-release-8.4.3-12H911-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2189,7 +2189,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.4.3-12h911-AppleTV3,1",
+          "id": "tvos-release-8.4.3-12H911-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2201,16 +2201,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.4.3-12h903",
+      "id": "tvos-release-8.4.3-12H903",
       "version": "8.4.3",
-      "build": "12h903",
+      "build": "12H903",
       "released_at": "2020-09-16T19:40:41Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.4.3/12h903.json",
+      "data": "8.4.3/12H903.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.4.3-12h903-AppleTV3,2",
+          "id": "tvos-release-8.4.3-12H903-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2220,7 +2220,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.4.3-12h903-AppleTV3,1",
+          "id": "tvos-release-8.4.3-12H903-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2232,16 +2232,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.4.3-12h885",
+      "id": "tvos-release-8.4.3-12H885",
       "version": "8.4.3",
-      "build": "12h885",
+      "build": "12H885",
       "released_at": "2020-03-24T16:58:11Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.4.3/12h885.json",
+      "data": "8.4.3/12H885.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.4.3-12h885-AppleTV3,2",
+          "id": "tvos-release-8.4.3-12H885-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2251,7 +2251,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.4.3-12h885-AppleTV3,1",
+          "id": "tvos-release-8.4.3-12H885-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2263,16 +2263,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.4.3-12h876",
+      "id": "tvos-release-8.4.3-12H876",
       "version": "8.4.3",
-      "build": "12h876",
+      "build": "12H876",
       "released_at": "2019-09-24T17:03:02Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.4.3/12h876.json",
+      "data": "8.4.3/12H876.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.4.3-12h876-AppleTV3,2",
+          "id": "tvos-release-8.4.3-12H876-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2282,7 +2282,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.4.3-12h876-AppleTV3,1",
+          "id": "tvos-release-8.4.3-12H876-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2294,16 +2294,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.4.2-12h864",
+      "id": "tvos-release-8.4.2-12H864",
       "version": "8.4.2",
-      "build": "12h864",
+      "build": "12H864",
       "released_at": "2019-07-22T17:08:33Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.4.2/12h864.json",
+      "data": "8.4.2/12H864.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.4.2-12h864-AppleTV3,2",
+          "id": "tvos-release-8.4.2-12H864-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2313,7 +2313,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.4.2-12h864-AppleTV3,1",
+          "id": "tvos-release-8.4.2-12H864-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2325,16 +2325,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.4.2-12h847",
+      "id": "tvos-release-8.4.2-12H847",
       "version": "8.4.2",
-      "build": "12h847",
+      "build": "12H847",
       "released_at": "2019-05-13T16:59:44Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.4.2/12h847.json",
+      "data": "8.4.2/12H847.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.4.2-12h847-AppleTV3,2",
+          "id": "tvos-release-8.4.2-12H847-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2344,7 +2344,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.4.2-12h847-AppleTV3,1",
+          "id": "tvos-release-8.4.2-12H847-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2356,16 +2356,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.4.2-12h606",
+      "id": "tvos-release-8.4.2-12H606",
       "version": "8.4.2",
-      "build": "12h606",
+      "build": "12H606",
       "released_at": "2016-12-12T17:55:20Z",
       "signed_firmware_count": 2,
       "total_firmware_count": 2,
-      "data": "8.4.2/12h606.json",
+      "data": "8.4.2/12H606.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.4.2-12h606-AppleTV3,2",
+          "id": "tvos-release-8.4.2-12H606-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2375,7 +2375,7 @@
           "signed": true
         },
         {
-          "id": "tvos-release-8.4.2-12h606-AppleTV3,1",
+          "id": "tvos-release-8.4.2-12H606-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2387,16 +2387,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.4.1-12h523",
+      "id": "tvos-release-8.4.1-12H523",
       "version": "8.4.1",
-      "build": "12h523",
+      "build": "12H523",
       "released_at": "2016-02-25T18:48:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.4.1/12h523.json",
+      "data": "8.4.1/12H523.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.4.1-12h523-AppleTV3,2",
+          "id": "tvos-release-8.4.1-12H523-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2406,7 +2406,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.4.1-12h523-AppleTV3,1",
+          "id": "tvos-release-8.4.1-12H523-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2418,16 +2418,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.3-12f69",
+      "id": "tvos-release-8.3-12F69",
       "version": "8.3",
-      "build": "12f69",
+      "build": "12F69",
       "released_at": "2015-04-08T18:27:42Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.3/12f69.json",
+      "data": "8.3/12F69.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.3-12f69-AppleTV3,2",
+          "id": "tvos-release-8.3-12F69-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2437,7 +2437,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.3-12f69-AppleTV3,1",
+          "id": "tvos-release-8.3-12F69-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2449,16 +2449,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.2-12d508",
+      "id": "tvos-release-8.2-12D508",
       "version": "8.2",
-      "build": "12d508",
+      "build": "12D508",
       "released_at": "2015-03-09T18:56:03Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.2/12d508.json",
+      "data": "8.2/12D508.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.2-12d508-AppleTV3,2",
+          "id": "tvos-release-8.2-12D508-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2468,7 +2468,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.2-12d508-AppleTV3,1",
+          "id": "tvos-release-8.2-12D508-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2480,16 +2480,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.1.3-12b466",
+      "id": "tvos-release-8.1.3-12B466",
       "version": "8.1.3",
-      "build": "12b466",
+      "build": "12B466",
       "released_at": "2015-01-27T18:08:02Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.1.3/12b466.json",
+      "data": "8.1.3/12B466.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.1.3-12b466-AppleTV3,2",
+          "id": "tvos-release-8.1.3-12B466-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2499,7 +2499,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.1.3-12b466-AppleTV3,1",
+          "id": "tvos-release-8.1.3-12B466-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2511,16 +2511,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.1.1-12b435",
+      "id": "tvos-release-8.1.1-12B435",
       "version": "8.1.1",
-      "build": "12b435",
+      "build": "12B435",
       "released_at": "2014-11-17T17:58:58Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.1.1/12b435.json",
+      "data": "8.1.1/12B435.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.1.1-12b435-AppleTV3,2",
+          "id": "tvos-release-8.1.1-12B435-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2530,7 +2530,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.1.1-12b435-AppleTV3,1",
+          "id": "tvos-release-8.1.1-12B435-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2542,16 +2542,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.1-12b410a",
+      "id": "tvos-release-8.1-12B410A",
       "version": "8.1",
-      "build": "12b410a",
+      "build": "12B410A",
       "released_at": "2014-10-20T17:56:02Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.1/12b410a.json",
+      "data": "8.1/12B410A.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.1-12b410a-AppleTV3,2",
+          "id": "tvos-release-8.1-12B410A-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2561,7 +2561,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.1-12b410a-AppleTV3,1",
+          "id": "tvos-release-8.1-12B410A-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2573,16 +2573,16 @@
       ]
     },
     {
-      "id": "tvos-release-8.0-12a365b",
+      "id": "tvos-release-8.0-12A365B",
       "version": "8.0",
-      "build": "12a365b",
+      "build": "12A365B",
       "released_at": "2014-09-17T17:59:02Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "8.0/12a365b.json",
+      "data": "8.0/12A365B.json",
       "firmwares": [
         {
-          "id": "tvos-release-8.0-12a365b-AppleTV3,2",
+          "id": "tvos-release-8.0-12A365B-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2592,7 +2592,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-8.0-12a365b-AppleTV3,1",
+          "id": "tvos-release-8.0-12A365B-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2604,16 +2604,16 @@
       ]
     },
     {
-      "id": "tvos-release-7.1.2-11d258",
+      "id": "tvos-release-7.1.2-11D258",
       "version": "7.1.2",
-      "build": "11d258",
+      "build": "11D258",
       "released_at": "2014-09-17T17:59:02Z",
       "signed_firmware_count": 1,
       "total_firmware_count": 1,
-      "data": "7.1.2/11d258.json",
+      "data": "7.1.2/11D258.json",
       "firmwares": [
         {
-          "id": "tvos-release-7.1.2-11d258-AppleTV2,1",
+          "id": "tvos-release-7.1.2-11D258-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -2625,16 +2625,16 @@
       ]
     },
     {
-      "id": "tvos-release-7.1.2-11d257c",
+      "id": "tvos-release-7.1.2-11D257C",
       "version": "7.1.2",
-      "build": "11d257c",
+      "build": "11D257C",
       "released_at": "2014-06-30T18:28:55Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 3,
-      "data": "7.1.2/11d257c.json",
+      "data": "7.1.2/11D257C.json",
       "firmwares": [
         {
-          "id": "tvos-release-7.1.2-11d257c-AppleTV3,2",
+          "id": "tvos-release-7.1.2-11D257C-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2644,7 +2644,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.1.2-11d257c-AppleTV3,1",
+          "id": "tvos-release-7.1.2-11D257C-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2654,7 +2654,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.1.2-11d257c-AppleTV2,1",
+          "id": "tvos-release-7.1.2-11D257C-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -2666,16 +2666,16 @@
       ]
     },
     {
-      "id": "tvos-release-7.1.1-11d201c",
+      "id": "tvos-release-7.1.1-11D201C",
       "version": "7.1.1",
-      "build": "11d201c",
+      "build": "11D201C",
       "released_at": "2014-04-22T17:46:07Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 3,
-      "data": "7.1.1/11d201c.json",
+      "data": "7.1.1/11D201C.json",
       "firmwares": [
         {
-          "id": "tvos-release-7.1.1-11d201c-AppleTV3,2",
+          "id": "tvos-release-7.1.1-11D201C-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2685,7 +2685,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.1.1-11d201c-AppleTV3,1",
+          "id": "tvos-release-7.1.1-11D201C-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2695,7 +2695,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.1.1-11d201c-AppleTV2,1",
+          "id": "tvos-release-7.1.1-11D201C-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -2707,16 +2707,16 @@
       ]
     },
     {
-      "id": "tvos-release-7.1-11d169b",
+      "id": "tvos-release-7.1-11D169B",
       "version": "7.1",
-      "build": "11d169b",
+      "build": "11D169B",
       "released_at": "2014-03-10T17:57:27Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 3,
-      "data": "7.1/11d169b.json",
+      "data": "7.1/11D169B.json",
       "firmwares": [
         {
-          "id": "tvos-release-7.1-11d169b-AppleTV3,2",
+          "id": "tvos-release-7.1-11D169B-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2726,7 +2726,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.1-11d169b-AppleTV3,1",
+          "id": "tvos-release-7.1-11D169B-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2736,7 +2736,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.1-11d169b-AppleTV2,1",
+          "id": "tvos-release-7.1-11D169B-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -2748,16 +2748,16 @@
       ]
     },
     {
-      "id": "tvos-release-7.0.6-11b651",
+      "id": "tvos-release-7.0.6-11B651",
       "version": "7.0.6",
-      "build": "11b651",
+      "build": "11B651",
       "released_at": "2014-02-21T17:51:05Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 3,
-      "data": "7.0.6/11b651.json",
+      "data": "7.0.6/11B651.json",
       "firmwares": [
         {
-          "id": "tvos-release-7.0.6-11b651-AppleTV3,2",
+          "id": "tvos-release-7.0.6-11B651-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2767,7 +2767,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.0.6-11b651-AppleTV3,1",
+          "id": "tvos-release-7.0.6-11B651-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2777,7 +2777,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.0.6-11b651-AppleTV2,1",
+          "id": "tvos-release-7.0.6-11B651-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -2789,16 +2789,16 @@
       ]
     },
     {
-      "id": "tvos-release-7.0.4-11b554a",
+      "id": "tvos-release-7.0.4-11B554A",
       "version": "7.0.4",
-      "build": "11b554a",
+      "build": "11B554A",
       "released_at": "2013-11-15T02:23:58Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 3,
-      "data": "7.0.4/11b554a.json",
+      "data": "7.0.4/11B554A.json",
       "firmwares": [
         {
-          "id": "tvos-release-7.0.4-11b554a-AppleTV3,2",
+          "id": "tvos-release-7.0.4-11B554A-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2808,7 +2808,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.0.4-11b554a-AppleTV3,1",
+          "id": "tvos-release-7.0.4-11B554A-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2818,7 +2818,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.0.4-11b554a-AppleTV2,1",
+          "id": "tvos-release-7.0.4-11B554A-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -2830,16 +2830,16 @@
       ]
     },
     {
-      "id": "tvos-release-7.0.3-11b511d",
+      "id": "tvos-release-7.0.3-11B511D",
       "version": "7.0.3",
-      "build": "11b511d",
+      "build": "11B511D",
       "released_at": "2013-10-24T20:59:04Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 3,
-      "data": "7.0.3/11b511d.json",
+      "data": "7.0.3/11B511D.json",
       "firmwares": [
         {
-          "id": "tvos-release-7.0.3-11b511d-AppleTV3,2",
+          "id": "tvos-release-7.0.3-11B511D-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2849,7 +2849,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.0.3-11b511d-AppleTV3,1",
+          "id": "tvos-release-7.0.3-11B511D-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2859,7 +2859,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.0.3-11b511d-AppleTV2,1",
+          "id": "tvos-release-7.0.3-11B511D-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -2871,16 +2871,16 @@
       ]
     },
     {
-      "id": "tvos-release-7.0.2-11a502",
+      "id": "tvos-release-7.0.2-11A502",
       "version": "7.0.2",
-      "build": "11a502",
+      "build": "11A502",
       "released_at": "2013-09-24T00:52:03Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 3,
-      "data": "7.0.2/11a502.json",
+      "data": "7.0.2/11A502.json",
       "firmwares": [
         {
-          "id": "tvos-release-7.0.2-11a502-AppleTV3,2",
+          "id": "tvos-release-7.0.2-11A502-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2890,7 +2890,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.0.2-11a502-AppleTV3,1",
+          "id": "tvos-release-7.0.2-11A502-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2900,7 +2900,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.0.2-11a502-AppleTV2,1",
+          "id": "tvos-release-7.0.2-11A502-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -2912,16 +2912,16 @@
       ]
     },
     {
-      "id": "tvos-release-7.0.1-11a470e",
+      "id": "tvos-release-7.0.1-11A470E",
       "version": "7.0.1",
-      "build": "11a470e",
+      "build": "11A470E",
       "released_at": "2013-09-20T19:12:02Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 3,
-      "data": "7.0.1/11a470e.json",
+      "data": "7.0.1/11A470E.json",
       "firmwares": [
         {
-          "id": "tvos-release-7.0.1-11a470e-AppleTV3,2",
+          "id": "tvos-release-7.0.1-11A470E-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2931,7 +2931,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.0.1-11a470e-AppleTV3,1",
+          "id": "tvos-release-7.0.1-11A470E-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2941,7 +2941,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-7.0.1-11a470e-AppleTV2,1",
+          "id": "tvos-release-7.0.1-11A470E-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -2953,16 +2953,16 @@
       ]
     },
     {
-      "id": "tvos-release-6.1.4-10b809",
+      "id": "tvos-release-6.1.4-10B809",
       "version": "6.1.4",
-      "build": "10b809",
+      "build": "10B809",
       "released_at": null,
       "signed_firmware_count": 2,
       "total_firmware_count": 3,
-      "data": "6.1.4/10b809.json",
+      "data": "6.1.4/10B809.json",
       "firmwares": [
         {
-          "id": "tvos-release-6.1.4-10b809-AppleTV3,2",
+          "id": "tvos-release-6.1.4-10B809-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -2972,7 +2972,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-6.1.4-10b809-AppleTV3,1",
+          "id": "tvos-release-6.1.4-10B809-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -2982,7 +2982,7 @@
           "signed": true
         },
         {
-          "id": "tvos-release-6.1.4-10b809-AppleTV2,1",
+          "id": "tvos-release-6.1.4-10B809-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -2994,16 +2994,16 @@
       ]
     },
     {
-      "id": "tvos-release-6.1.3-10b329a",
+      "id": "tvos-release-6.1.3-10B329A",
       "version": "6.1.3",
-      "build": "10b329a",
+      "build": "10B329A",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 3,
-      "data": "6.1.3/10b329a.json",
+      "data": "6.1.3/10B329A.json",
       "firmwares": [
         {
-          "id": "tvos-release-6.1.3-10b329a-AppleTV3,2",
+          "id": "tvos-release-6.1.3-10B329A-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -3013,7 +3013,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-6.1.3-10b329a-AppleTV3,1",
+          "id": "tvos-release-6.1.3-10B329A-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -3023,7 +3023,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-6.1.3-10b329a-AppleTV2,1",
+          "id": "tvos-release-6.1.3-10B329A-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3035,16 +3035,16 @@
       ]
     },
     {
-      "id": "tvos-release-6.1-10b144b",
+      "id": "tvos-release-6.1-10B144B",
       "version": "6.1",
-      "build": "10b144b",
+      "build": "10B144B",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 3,
-      "data": "6.1/10b144b.json",
+      "data": "6.1/10B144B.json",
       "firmwares": [
         {
-          "id": "tvos-release-6.1-10b144b-AppleTV3,2",
+          "id": "tvos-release-6.1-10B144B-AppleTV3,2",
           "name": "Apple TV 3 (2013)",
           "devices": [
             "AppleTV3,2"
@@ -3054,7 +3054,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-6.1-10b144b-AppleTV3,1",
+          "id": "tvos-release-6.1-10B144B-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -3064,7 +3064,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-6.1-10b144b-AppleTV2,1",
+          "id": "tvos-release-6.1-10B144B-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3076,16 +3076,16 @@
       ]
     },
     {
-      "id": "tvos-release-6.0.1-10a831",
+      "id": "tvos-release-6.0.1-10A831",
       "version": "6.0.1",
-      "build": "10a831",
+      "build": "10A831",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "6.0.1/10a831.json",
+      "data": "6.0.1/10A831.json",
       "firmwares": [
         {
-          "id": "tvos-release-6.0.1-10a831-AppleTV3,1",
+          "id": "tvos-release-6.0.1-10A831-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -3095,7 +3095,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-6.0.1-10a831-AppleTV2,1",
+          "id": "tvos-release-6.0.1-10A831-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3107,16 +3107,16 @@
       ]
     },
     {
-      "id": "tvos-release-6.0-10a406e",
+      "id": "tvos-release-6.0-10A406E",
       "version": "6.0",
-      "build": "10a406e",
+      "build": "10A406E",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "6.0/10a406e.json",
+      "data": "6.0/10A406E.json",
       "firmwares": [
         {
-          "id": "tvos-release-6.0-10a406e-AppleTV3,1",
+          "id": "tvos-release-6.0-10A406E-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -3126,7 +3126,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-6.0-10a406e-AppleTV2,1",
+          "id": "tvos-release-6.0-10A406E-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3138,16 +3138,16 @@
       ]
     },
     {
-      "id": "tvos-release-5.1.1-9b830",
+      "id": "tvos-release-5.1.1-9B830",
       "version": "5.1.1",
-      "build": "9b830",
+      "build": "9B830",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "5.1.1/9b830.json",
+      "data": "5.1.1/9B830.json",
       "firmwares": [
         {
-          "id": "tvos-release-5.1.1-9b830-AppleTV3,1",
+          "id": "tvos-release-5.1.1-9B830-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -3157,7 +3157,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-5.1.1-9b830-AppleTV2,1",
+          "id": "tvos-release-5.1.1-9B830-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3169,16 +3169,16 @@
       ]
     },
     {
-      "id": "tvos-release-5.1.1-9b206f",
+      "id": "tvos-release-5.1.1-9B206F",
       "version": "5.1.1",
-      "build": "9b206f",
+      "build": "9B206F",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "5.1.1/9b206f.json",
+      "data": "5.1.1/9B206F.json",
       "firmwares": [
         {
-          "id": "tvos-release-5.1.1-9b206f-AppleTV3,1",
+          "id": "tvos-release-5.1.1-9B206F-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -3188,7 +3188,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-5.1.1-9b206f-AppleTV2,1",
+          "id": "tvos-release-5.1.1-9B206F-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3200,16 +3200,16 @@
       ]
     },
     {
-      "id": "tvos-release-5.1-9b179b",
+      "id": "tvos-release-5.1-9B179B",
       "version": "5.1",
-      "build": "9b179b",
+      "build": "9B179B",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "5.1/9b179b.json",
+      "data": "5.1/9B179B.json",
       "firmwares": [
         {
-          "id": "tvos-release-5.1-9b179b-AppleTV3,1",
+          "id": "tvos-release-5.1-9B179B-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
@@ -3219,7 +3219,7 @@
           "signed": false
         },
         {
-          "id": "tvos-release-5.1-9b179b-AppleTV2,1",
+          "id": "tvos-release-5.1-9B179B-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3231,16 +3231,16 @@
       ]
     },
     {
-      "id": "tvos-release-5.0.1-9a406a",
+      "id": "tvos-release-5.0.1-9A406A",
       "version": "5.0.1",
-      "build": "9a406a",
+      "build": "9A406A",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "5.0.1/9a406a.json",
+      "data": "5.0.1/9A406A.json",
       "firmwares": [
         {
-          "id": "tvos-release-5.0.1-9a406a-AppleTV2,1",
+          "id": "tvos-release-5.0.1-9A406A-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3252,16 +3252,16 @@
       ]
     },
     {
-      "id": "tvos-release-5.0.1-9a405l",
+      "id": "tvos-release-5.0.1-9A405L",
       "version": "5.0.1",
-      "build": "9a405l",
+      "build": "9A405L",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "5.0.1/9a405l.json",
+      "data": "5.0.1/9A405L.json",
       "firmwares": [
         {
-          "id": "tvos-release-5.0.1-9a405l-AppleTV2,1",
+          "id": "tvos-release-5.0.1-9A405L-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3273,16 +3273,16 @@
       ]
     },
     {
-      "id": "tvos-release-5.0-9a336a",
+      "id": "tvos-release-5.0-9A336A",
       "version": "5.0",
-      "build": "9a336a",
+      "build": "9A336A",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "5.0/9a336a.json",
+      "data": "5.0/9A336A.json",
       "firmwares": [
         {
-          "id": "tvos-release-5.0-9a336a-AppleTV2,1",
+          "id": "tvos-release-5.0-9A336A-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3294,16 +3294,16 @@
       ]
     },
     {
-      "id": "tvos-release-5.0-9a335a",
+      "id": "tvos-release-5.0-9A335A",
       "version": "5.0",
-      "build": "9a335a",
+      "build": "9A335A",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "5.0/9a335a.json",
+      "data": "5.0/9A335A.json",
       "firmwares": [
         {
-          "id": "tvos-release-5.0-9a335a-AppleTV2,1",
+          "id": "tvos-release-5.0-9A335A-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3315,16 +3315,16 @@
       ]
     },
     {
-      "id": "tvos-release-5.0-9a334v",
+      "id": "tvos-release-5.0-9A334V",
       "version": "5.0",
-      "build": "9a334v",
+      "build": "9A334V",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "5.0/9a334v.json",
+      "data": "5.0/9A334V.json",
       "firmwares": [
         {
-          "id": "tvos-release-5.0-9a334v-AppleTV2,1",
+          "id": "tvos-release-5.0-9A334V-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3336,16 +3336,16 @@
       ]
     },
     {
-      "id": "tvos-release-4.3-8f455",
+      "id": "tvos-release-4.3-8F455",
       "version": "4.3",
-      "build": "8f455",
+      "build": "8F455",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "4.3/8f455.json",
+      "data": "4.3/8F455.json",
       "firmwares": [
         {
-          "id": "tvos-release-4.3-8f455-AppleTV2,1",
+          "id": "tvos-release-4.3-8F455-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3357,16 +3357,16 @@
       ]
     },
     {
-      "id": "tvos-release-4.3-8f305",
+      "id": "tvos-release-4.3-8F305",
       "version": "4.3",
-      "build": "8f305",
+      "build": "8F305",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "4.3/8f305.json",
+      "data": "4.3/8F305.json",
       "firmwares": [
         {
-          "id": "tvos-release-4.3-8f305-AppleTV2,1",
+          "id": "tvos-release-4.3-8F305-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3378,16 +3378,16 @@
       ]
     },
     {
-      "id": "tvos-release-4.3-8f202",
+      "id": "tvos-release-4.3-8F202",
       "version": "4.3",
-      "build": "8f202",
+      "build": "8F202",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "4.3/8f202.json",
+      "data": "4.3/8F202.json",
       "firmwares": [
         {
-          "id": "tvos-release-4.3-8f202-AppleTV2,1",
+          "id": "tvos-release-4.3-8F202-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3399,16 +3399,16 @@
       ]
     },
     {
-      "id": "tvos-release-4.3-8f191m",
+      "id": "tvos-release-4.3-8F191M",
       "version": "4.3",
-      "build": "8f191m",
+      "build": "8F191M",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "4.3/8f191m.json",
+      "data": "4.3/8F191M.json",
       "firmwares": [
         {
-          "id": "tvos-release-4.3-8f191m-AppleTV2,1",
+          "id": "tvos-release-4.3-8F191M-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3420,16 +3420,16 @@
       ]
     },
     {
-      "id": "tvos-release-4.2.1-8c154",
+      "id": "tvos-release-4.2.1-8C154",
       "version": "4.2.1",
-      "build": "8c154",
+      "build": "8C154",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "4.2.1/8c154.json",
+      "data": "4.2.1/8C154.json",
       "firmwares": [
         {
-          "id": "tvos-release-4.2.1-8c154-AppleTV2,1",
+          "id": "tvos-release-4.2.1-8C154-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3441,16 +3441,16 @@
       ]
     },
     {
-      "id": "tvos-release-4.2-8c150",
+      "id": "tvos-release-4.2-8C150",
       "version": "4.2",
-      "build": "8c150",
+      "build": "8C150",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "4.2/8c150.json",
+      "data": "4.2/8C150.json",
       "firmwares": [
         {
-          "id": "tvos-release-4.2-8c150-AppleTV2,1",
+          "id": "tvos-release-4.2-8C150-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"
@@ -3462,16 +3462,16 @@
       ]
     },
     {
-      "id": "tvos-release-4.1-8m89",
+      "id": "tvos-release-4.1-8M89",
       "version": "4.1",
-      "build": "8m89",
+      "build": "8M89",
       "released_at": null,
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "4.1/8m89.json",
+      "data": "4.1/8M89.json",
       "firmwares": [
         {
-          "id": "tvos-release-4.1-8m89-AppleTV2,1",
+          "id": "tvos-release-4.1-8M89-AppleTV2,1",
           "name": "Apple TV 2G",
           "devices": [
             "AppleTV2,1"

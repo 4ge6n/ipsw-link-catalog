@@ -1,0 +1,33 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "13.4.1",
+  "version_label": "13.4.1",
+  "build": "17E8258",
+  "released_at": "2020-04-23T17:02:55Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone SE (2020)",
+      "devices": [
+        "iPhone12,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SpringFCS/fullrestores/061-95978/54ED926A-AF63-4377-BEC4-F371ADA9D816/iPhone12,8_13.4.1_17E8258_Restore.ipsw",
+      "filename": "iPhone12,8_13.4.1_17E8258_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

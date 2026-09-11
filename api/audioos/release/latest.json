@@ -4,19 +4,19 @@
   "os_key": "audioos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-11T19:15:16Z",
+  "generated_at": "2026-09-11T19:18:27Z",
   "release_count": 1,
   "firmware_count": 2,
   "releases": [
     {
-      "id": "audioos-release-26.6-23l773",
+      "id": "audioos-release-26.6-23L773",
       "version": "26.6",
-      "build": "23l773",
+      "build": "23L773",
       "released_at": "2026-07-27T17:37:58Z",
-      "data": "26.6/23l773.json",
+      "data": "26.6/23L773.json",
       "firmwares": [
         {
-          "id": "audioos-release-26.6-23l773-AudioAccessory5,1",
+          "id": "audioos-release-26.6-23L773-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -26,7 +26,7 @@
           "signed": true
         },
         {
-          "id": "audioos-release-26.6-23l773-AudioAccessory6,1",
+          "id": "audioos-release-26.6-23L773-AudioAccessory6,1",
           "name": "HomePod (2nd generation)",
           "devices": [
             "AudioAccessory6,1"

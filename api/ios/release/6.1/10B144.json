@@ -1,0 +1,59 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "6.1",
+  "version_label": "6.1",
+  "build": "10B144",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 4 (GSM / 2012)",
+      "devices": [
+        "iPhone3,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6.1/091-0692.20130128.R3lr4/iPhone3,2_6.1_10B144_Restore.ipsw",
+      "filename": "iPhone3,2_6.1_10B144_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPod touch 4",
+      "devices": [
+        "iPod4,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6.1/091-0688.20130128.omwy3/iPod4,1_6.1_10B144_Restore.ipsw",
+      "filename": "iPod4,1_6.1_10B144_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 4 (GSM)",
+      "devices": [
+        "iPhone3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6.1/091-0682.20130128.mefc4/iPhone3,1_6.1_10B144_Restore.ipsw",
+      "filename": "iPhone3,1_6.1_10B144_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

@@ -1,0 +1,33 @@
+{
+  "os_key": "tvos",
+  "channel": "release",
+  "version": "11.3",
+  "version_label": "11.3",
+  "build": "15L211",
+  "released_at": "2018-03-29T17:07:24Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple TV 4 (2015)",
+      "devices": [
+        "AppleTV5,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/tvos11.3/091-45726-201803029-8EA84462-2B9E-11E8-936C-EE5C04115E15/AppleTV5,3_11.3_15L211_Restore.ipsw",
+      "filename": "AppleTV5,3_11.3_15L211_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

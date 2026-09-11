@@ -1,0 +1,33 @@
+{
+  "os_key": "tvos",
+  "channel": "release",
+  "version": "12.0.1",
+  "version_label": "12.0.1",
+  "build": "16J380",
+  "released_at": "2018-09-24T17:06:59Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple TV 4 (2015)",
+      "devices": [
+        "AppleTV5,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallFCS/fullrestores/041-08754/B8EF4842-BE83-11E8-9B95-8DAC670A742F/AppleTV5,3_12.0.1_16J380_Restore.ipsw",
+      "filename": "AppleTV5,3_12.0.1_16J380_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

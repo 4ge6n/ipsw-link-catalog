@@ -1,0 +1,33 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "1.1.1",
+  "version_label": "1.1.1",
+  "build": "3A109A",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 2G",
+      "devices": [
+        "iPhone1,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone/061-3883.20070927.In76t/iPhone1,1_1.1.1_3A109a_Restore.ipsw",
+      "filename": "iPhone1,1_1.1.1_3A109a_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

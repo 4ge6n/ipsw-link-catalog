@@ -1,0 +1,35 @@
+{
+  "os_key": "macos",
+  "channel": "release",
+  "version": "11.5",
+  "version_label": "11.5",
+  "build": "20G71",
+  "released_at": "2021-07-21T17:30:10Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Pro (M1, Late 2020)",
+      "devices": [
+        "MacBookAir10,1",
+        "MacBookPro17,1",
+        "Macmini9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringFCS/fullrestores/071-71365/F9BFCEFA-87EB-4B03-A983-6DD23940414B/UniversalMac_11.5_20G71_Restore.ipsw",
+      "filename": "UniversalMac_11.5_20G71_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:18:27Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

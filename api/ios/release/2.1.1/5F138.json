@@ -1,0 +1,33 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "2.1.1",
+  "version_label": "2.1.1",
+  "build": "5F138",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch 2G",
+      "devices": [
+        "iPod2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPod/SBML/osx/bundles/061-5494.20080909.8i9o0/iPod2,1_2.1.1_5F138_Restore.ipsw",
+      "filename": "iPod2,1_2.1.1_5F138_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

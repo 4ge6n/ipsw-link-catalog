@@ -1,0 +1,36 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "15.8.8",
+  "version_label": "15.8.8",
+  "build": "19H422",
+  "released_at": "2026-05-11T17:47:35Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad Air 2 (WiFi)",
+      "devices": [
+        "iPad5,1",
+        "iPad5,2",
+        "iPad5,3",
+        "iPad5,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/122-77369/9704B32E-FACF-4595-93E4-E35EDD25E793/iPad_64bit_TouchID_15.8.8_19H422_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_15.8.8_19H422_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

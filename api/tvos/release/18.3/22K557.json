@@ -1,0 +1,33 @@
+{
+  "os_key": "tvos",
+  "channel": "release",
+  "version": "18.3",
+  "version_label": "18.3",
+  "build": "22K557",
+  "released_at": "2025-01-27T18:55:16Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple TV 4 (2015)",
+      "devices": [
+        "AppleTV5,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/072-04700/BD0D53A2-D1D6-4321-A4CE-19CB8F237D50/AppleTV5,3_18.3_22K557_Restore.ipsw",
+      "filename": "AppleTV5,3_18.3_22K557_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

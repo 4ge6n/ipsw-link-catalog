@@ -1,0 +1,46 @@
+{
+  "os_key": "audioos",
+  "channel": "release",
+  "version": "26.6",
+  "version_label": "26.6",
+  "build": "23L773",
+  "released_at": "2026-07-27T17:37:58Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "HomePod (2nd generation)",
+      "devices": [
+        "AudioAccessory6,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-67230/6F3201AA-E34C-478C-B4B5-5B86B54DA1E0/AudioAccessory6,1_26.6_23L773_Restore.ipsw",
+      "filename": "AudioAccessory6,1_26.6_23L773_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "HomePod mini",
+      "devices": [
+        "AudioAccessory5,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-67259/44F8A245-A169-4917-872D-E57B32140013/AudioAccessory5,1_26.6_23L773_Restore.ipsw",
+      "filename": "AudioAccessory5,1_26.6_23L773_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

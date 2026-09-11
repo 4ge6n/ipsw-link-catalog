@@ -1,0 +1,46 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "26.0",
+  "version_label": "26.0",
+  "build": "23A345",
+  "released_at": "2025-09-18T17:54:35Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 17 Pro Max",
+      "devices": [
+        "iPhone18,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-45687/D1257A3B-15FD-4B7C-918F-24C20E9C8915/iPhone18,2_26.0_23A345_Restore.ipsw",
+      "filename": "iPhone18,2_26.0_23A345_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 17 Pro",
+      "devices": [
+        "iPhone18,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-45797/04671623-D2C1-4851-B2B4-19E96540E7D9/iPhone18,1_26.0_23A345_Restore.ipsw",
+      "filename": "iPhone18,1_26.0_23A345_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

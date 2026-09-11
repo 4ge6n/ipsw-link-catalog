@@ -1,0 +1,53 @@
+{
+  "os_key": "macos",
+  "channel": "release",
+  "version": "13.5",
+  "version_label": "13.5",
+  "build": "22G74",
+  "released_at": "2023-07-24T17:31:31Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Pro (M1, Late 2020)",
+      "devices": [
+        "Mac13,1",
+        "Mac13,2",
+        "Mac14,10",
+        "Mac14,12",
+        "Mac14,13",
+        "Mac14,14",
+        "Mac14,15",
+        "Mac14,2",
+        "Mac14,3",
+        "Mac14,5",
+        "Mac14,6",
+        "Mac14,7",
+        "Mac14,8",
+        "Mac14,9",
+        "MacBookAir10,1",
+        "MacBookPro17,1",
+        "MacBookPro18,1",
+        "MacBookPro18,2",
+        "MacBookPro18,3",
+        "MacBookPro18,4",
+        "Macmini9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2023SummerFCS/fullrestores/032-69606/D3E05CDF-E105-434C-A4A1-4E3DC7668DD0/UniversalMac_13.5_22G74_Restore.ipsw",
+      "filename": "UniversalMac_13.5_22G74_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:18:27Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

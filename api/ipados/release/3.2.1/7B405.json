@@ -1,0 +1,33 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "3.2.1",
+  "version_label": "3.2.1",
+  "build": "7B405",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad 1",
+      "devices": [
+        "iPad1,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPad/061-8282.20100713.vgtgh/iPad1,1_3.2.1_7B405_Restore.ipsw",
+      "filename": "iPad1,1_3.2.1_7B405_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

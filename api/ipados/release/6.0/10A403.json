@@ -1,0 +1,111 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "6.0",
+  "version_label": "6.0",
+  "build": "10A403",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad 3 (GSM)",
+      "devices": [
+        "iPad3,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6/Restore/041-7163.20120919.19UEI/iPad3,3_6.0_10A403_Restore.ipsw",
+      "filename": "iPad3,3_6.0_10A403_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 3 (CDMA)",
+      "devices": [
+        "iPad3,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6/Restore/041-7161.20120919.5CyjO/iPad3,2_6.0_10A403_Restore.ipsw",
+      "filename": "iPad3,2_6.0_10A403_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 3 (WiFi)",
+      "devices": [
+        "iPad3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6/Restore/041-3515.20120919.OYzOG/iPad3,1_6.0_10A403_Restore.ipsw",
+      "filename": "iPad3,1_6.0_10A403_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (Mid 2012)",
+      "devices": [
+        "iPad2,4"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6/Restore/041-2187.20120919.vmGkW/iPad2,4_6.0_10A403_Restore.ipsw",
+      "filename": "iPad2,4_6.0_10A403_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (CDMA)",
+      "devices": [
+        "iPad2,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6/Restore/041-7167.20120919.y2ard/iPad2,3_6.0_10A403_Restore.ipsw",
+      "filename": "iPad2,3_6.0_10A403_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (GSM)",
+      "devices": [
+        "iPad2,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6/Restore/041-7165.20120919.eZTyh/iPad2,2_6.0_10A403_Restore.ipsw",
+      "filename": "iPad2,2_6.0_10A403_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (WiFi)",
+      "devices": [
+        "iPad2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6/Restore/041-0804.20120919.9SgHU/iPad2,1_6.0_10A403_Restore.ipsw",
+      "filename": "iPad2,1_6.0_10A403_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

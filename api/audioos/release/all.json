@@ -4,21 +4,21 @@
   "os_key": "audioos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-11T19:15:16Z",
+  "generated_at": "2026-09-11T19:18:27Z",
   "release_count": 51,
   "firmware_count": 52,
   "releases": [
     {
-      "id": "audioos-release-26.6-23l773",
+      "id": "audioos-release-26.6-23L773",
       "version": "26.6",
-      "build": "23l773",
+      "build": "23L773",
       "released_at": "2026-07-27T17:37:58Z",
       "signed_firmware_count": 2,
       "total_firmware_count": 2,
-      "data": "26.6/23l773.json",
+      "data": "26.6/23L773.json",
       "firmwares": [
         {
-          "id": "audioos-release-26.6-23l773-AudioAccessory6,1",
+          "id": "audioos-release-26.6-23L773-AudioAccessory6,1",
           "name": "HomePod (2nd generation)",
           "devices": [
             "AudioAccessory6,1"
@@ -28,7 +28,7 @@
           "signed": true
         },
         {
-          "id": "audioos-release-26.6-23l773-AudioAccessory5,1",
+          "id": "audioos-release-26.6-23L773-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -40,16 +40,16 @@
       ]
     },
     {
-      "id": "audioos-release-26.5-23l471",
+      "id": "audioos-release-26.5-23L471",
       "version": "26.5",
-      "build": "23l471",
+      "build": "23L471",
       "released_at": "2026-05-11T17:47:57Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.5/23l471.json",
+      "data": "26.5/23L471.json",
       "firmwares": [
         {
-          "id": "audioos-release-26.5-23l471-AudioAccessory5,1",
+          "id": "audioos-release-26.5-23L471-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -61,16 +61,16 @@
       ]
     },
     {
-      "id": "audioos-release-26.4-23l243",
+      "id": "audioos-release-26.4-23L243",
       "version": "26.4",
-      "build": "23l243",
+      "build": "23L243",
       "released_at": "2026-03-24T17:39:40Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.4/23l243.json",
+      "data": "26.4/23L243.json",
       "firmwares": [
         {
-          "id": "audioos-release-26.4-23l243-AudioAccessory5,1",
+          "id": "audioos-release-26.4-23L243-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -82,16 +82,16 @@
       ]
     },
     {
-      "id": "audioos-release-26.3-23k620",
+      "id": "audioos-release-26.3-23K620",
       "version": "26.3",
-      "build": "23k620",
+      "build": "23K620",
       "released_at": "2026-02-11T18:34:21Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.3/23k620.json",
+      "data": "26.3/23K620.json",
       "firmwares": [
         {
-          "id": "audioos-release-26.3-23k620-AudioAccessory5,1",
+          "id": "audioos-release-26.3-23K620-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -103,16 +103,16 @@
       ]
     },
     {
-      "id": "audioos-release-26.2-23k54",
+      "id": "audioos-release-26.2-23K54",
       "version": "26.2",
-      "build": "23k54",
+      "build": "23K54",
       "released_at": "2025-12-22T18:04:17Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.2/23k54.json",
+      "data": "26.2/23K54.json",
       "firmwares": [
         {
-          "id": "audioos-release-26.2-23k54-AudioAccessory5,1",
+          "id": "audioos-release-26.2-23K54-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -124,16 +124,16 @@
       ]
     },
     {
-      "id": "audioos-release-26.1-23j582",
+      "id": "audioos-release-26.1-23J582",
       "version": "26.1",
-      "build": "23j582",
+      "build": "23J582",
       "released_at": "2025-11-03T21:45:32Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.1/23j582.json",
+      "data": "26.1/23J582.json",
       "firmwares": [
         {
-          "id": "audioos-release-26.1-23j582-AudioAccessory5,1",
+          "id": "audioos-release-26.1-23J582-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -145,16 +145,16 @@
       ]
     },
     {
-      "id": "audioos-release-26.0.1-23j362",
+      "id": "audioos-release-26.0.1-23J362",
       "version": "26.0.1",
-      "build": "23j362",
+      "build": "23J362",
       "released_at": "2025-09-29T17:43:57Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.0.1/23j362.json",
+      "data": "26.0.1/23J362.json",
       "firmwares": [
         {
-          "id": "audioos-release-26.0.1-23j362-AudioAccessory5,1",
+          "id": "audioos-release-26.0.1-23J362-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -166,16 +166,16 @@
       ]
     },
     {
-      "id": "audioos-release-26.0-23j353",
+      "id": "audioos-release-26.0-23J353",
       "version": "26.0",
-      "build": "23j353",
+      "build": "23J353",
       "released_at": "2025-09-15T17:06:20Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "26.0/23j353.json",
+      "data": "26.0/23J353.json",
       "firmwares": [
         {
-          "id": "audioos-release-26.0-23j353-AudioAccessory5,1",
+          "id": "audioos-release-26.0-23J353-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -187,16 +187,16 @@
       ]
     },
     {
-      "id": "audioos-release-18.6-22m84",
+      "id": "audioos-release-18.6-22M84",
       "version": "18.6",
-      "build": "22m84",
+      "build": "22M84",
       "released_at": "2025-07-29T18:40:50Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.6/22m84.json",
+      "data": "18.6/22M84.json",
       "firmwares": [
         {
-          "id": "audioos-release-18.6-22m84-AudioAccessory5,1",
+          "id": "audioos-release-18.6-22M84-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -208,16 +208,16 @@
       ]
     },
     {
-      "id": "audioos-release-18.5-22l572",
+      "id": "audioos-release-18.5-22L572",
       "version": "18.5",
-      "build": "22l572",
+      "build": "22L572",
       "released_at": "2025-05-12T17:18:21Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.5/22l572.json",
+      "data": "18.5/22L572.json",
       "firmwares": [
         {
-          "id": "audioos-release-18.5-22l572-AudioAccessory5,1",
+          "id": "audioos-release-18.5-22L572-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -229,16 +229,16 @@
       ]
     },
     {
-      "id": "audioos-release-18.4.1-22l261",
+      "id": "audioos-release-18.4.1-22L261",
       "version": "18.4.1",
-      "build": "22l261",
+      "build": "22L261",
       "released_at": "2025-04-16T19:26:01Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.4.1/22l261.json",
+      "data": "18.4.1/22L261.json",
       "firmwares": [
         {
-          "id": "audioos-release-18.4.1-22l261-AudioAccessory5,1",
+          "id": "audioos-release-18.4.1-22L261-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -250,16 +250,16 @@
       ]
     },
     {
-      "id": "audioos-release-18.4-22l255",
+      "id": "audioos-release-18.4-22L255",
       "version": "18.4",
-      "build": "22l255",
+      "build": "22L255",
       "released_at": "2025-03-31T17:30:12Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.4/22l255.json",
+      "data": "18.4/22L255.json",
       "firmwares": [
         {
-          "id": "audioos-release-18.4-22l255-AudioAccessory5,1",
+          "id": "audioos-release-18.4-22L255-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -271,16 +271,16 @@
       ]
     },
     {
-      "id": "audioos-release-18.3-22k557",
+      "id": "audioos-release-18.3-22K557",
       "version": "18.3",
-      "build": "22k557",
+      "build": "22K557",
       "released_at": "2025-01-27T18:55:14Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.3/22k557.json",
+      "data": "18.3/22K557.json",
       "firmwares": [
         {
-          "id": "audioos-release-18.3-22k557-AudioAccessory5,1",
+          "id": "audioos-release-18.3-22K557-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -292,16 +292,16 @@
       ]
     },
     {
-      "id": "audioos-release-18.2-22k155",
+      "id": "audioos-release-18.2-22K155",
       "version": "18.2",
-      "build": "22k155",
+      "build": "22K155",
       "released_at": "2024-12-11T18:47:10Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.2/22k155.json",
+      "data": "18.2/22K155.json",
       "firmwares": [
         {
-          "id": "audioos-release-18.2-22k155-AudioAccessory5,1",
+          "id": "audioos-release-18.2-22K155-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -313,16 +313,16 @@
       ]
     },
     {
-      "id": "audioos-release-18.1-22j580",
+      "id": "audioos-release-18.1-22J580",
       "version": "18.1",
-      "build": "22j580",
+      "build": "22J580",
       "released_at": "2024-10-28T17:33:15Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.1/22j580.json",
+      "data": "18.1/22J580.json",
       "firmwares": [
         {
-          "id": "audioos-release-18.1-22j580-AudioAccessory5,1",
+          "id": "audioos-release-18.1-22J580-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -334,16 +334,16 @@
       ]
     },
     {
-      "id": "audioos-release-18.0-22j357",
+      "id": "audioos-release-18.0-22J357",
       "version": "18.0",
-      "build": "22j357",
+      "build": "22J357",
       "released_at": "2024-09-16T17:19:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "18.0/22j357.json",
+      "data": "18.0/22J357.json",
       "firmwares": [
         {
-          "id": "audioos-release-18.0-22j357-AudioAccessory5,1",
+          "id": "audioos-release-18.0-22J357-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -355,16 +355,16 @@
       ]
     },
     {
-      "id": "audioos-release-17.6-21m71",
+      "id": "audioos-release-17.6-21M71",
       "version": "17.6",
-      "build": "21m71",
+      "build": "21M71",
       "released_at": "2024-07-29T20:41:08Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.6/21m71.json",
+      "data": "17.6/21M71.json",
       "firmwares": [
         {
-          "id": "audioos-release-17.6-21m71-AudioAccessory5,1",
+          "id": "audioos-release-17.6-21M71-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -376,16 +376,16 @@
       ]
     },
     {
-      "id": "audioos-release-17.5-21l569",
+      "id": "audioos-release-17.5-21L569",
       "version": "17.5",
-      "build": "21l569",
+      "build": "21L569",
       "released_at": "2024-05-13T18:05:38Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.5/21l569.json",
+      "data": "17.5/21L569.json",
       "firmwares": [
         {
-          "id": "audioos-release-17.5-21l569-AudioAccessory5,1",
+          "id": "audioos-release-17.5-21L569-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -397,16 +397,16 @@
       ]
     },
     {
-      "id": "audioos-release-17.4-21l227",
+      "id": "audioos-release-17.4-21L227",
       "version": "17.4",
-      "build": "21l227",
+      "build": "21L227",
       "released_at": "2024-03-07T19:05:10Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.4/21l227.json",
+      "data": "17.4/21L227.json",
       "firmwares": [
         {
-          "id": "audioos-release-17.4-21l227-AudioAccessory5,1",
+          "id": "audioos-release-17.4-21L227-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -418,16 +418,16 @@
       ]
     },
     {
-      "id": "audioos-release-17.3-21k646",
+      "id": "audioos-release-17.3-21K646",
       "version": "17.3",
-      "build": "21k646",
+      "build": "21K646",
       "released_at": "2024-01-22T18:59:01Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.3/21k646.json",
+      "data": "17.3/21K646.json",
       "firmwares": [
         {
-          "id": "audioos-release-17.3-21k646-AudioAccessory5,1",
+          "id": "audioos-release-17.3-21K646-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -439,16 +439,16 @@
       ]
     },
     {
-      "id": "audioos-release-17.2-21k365",
+      "id": "audioos-release-17.2-21K365",
       "version": "17.2",
-      "build": "21k365",
+      "build": "21K365",
       "released_at": "2023-12-11T18:58:34Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.2/21k365.json",
+      "data": "17.2/21K365.json",
       "firmwares": [
         {
-          "id": "audioos-release-17.2-21k365-AudioAccessory5,1",
+          "id": "audioos-release-17.2-21K365-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -460,16 +460,16 @@
       ]
     },
     {
-      "id": "audioos-release-17.1.1-21k82",
+      "id": "audioos-release-17.1.1-21K82",
       "version": "17.1.1",
-      "build": "21k82",
+      "build": "21K82",
       "released_at": "2023-11-08T18:58:23Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.1.1/21k82.json",
+      "data": "17.1.1/21K82.json",
       "firmwares": [
         {
-          "id": "audioos-release-17.1.1-21k82-AudioAccessory5,1",
+          "id": "audioos-release-17.1.1-21K82-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -481,16 +481,16 @@
       ]
     },
     {
-      "id": "audioos-release-17.1-21k69",
+      "id": "audioos-release-17.1-21K69",
       "version": "17.1",
-      "build": "21k69",
+      "build": "21K69",
       "released_at": "2023-10-25T17:36:31Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.1/21k69.json",
+      "data": "17.1/21K69.json",
       "firmwares": [
         {
-          "id": "audioos-release-17.1-21k69-AudioAccessory5,1",
+          "id": "audioos-release-17.1-21K69-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -502,16 +502,16 @@
       ]
     },
     {
-      "id": "audioos-release-17.0-21j354",
+      "id": "audioos-release-17.0-21J354",
       "version": "17.0",
-      "build": "21j354",
+      "build": "21J354",
       "released_at": "2023-09-18T19:08:33Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "17.0/21j354.json",
+      "data": "17.0/21J354.json",
       "firmwares": [
         {
-          "id": "audioos-release-17.0-21j354-AudioAccessory5,1",
+          "id": "audioos-release-17.0-21J354-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -523,16 +523,16 @@
       ]
     },
     {
-      "id": "audioos-release-16.6-20m73",
+      "id": "audioos-release-16.6-20M73",
       "version": "16.6",
-      "build": "20m73",
+      "build": "20M73",
       "released_at": "2023-07-24T18:16:42Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.6/20m73.json",
+      "data": "16.6/20M73.json",
       "firmwares": [
         {
-          "id": "audioos-release-16.6-20m73-AudioAccessory5,1",
+          "id": "audioos-release-16.6-20M73-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -544,16 +544,16 @@
       ]
     },
     {
-      "id": "audioos-release-16.5-20l563",
+      "id": "audioos-release-16.5-20L563",
       "version": "16.5",
-      "build": "20l563",
+      "build": "20L563",
       "released_at": "2023-05-18T18:14:17Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.5/20l563.json",
+      "data": "16.5/20L563.json",
       "firmwares": [
         {
-          "id": "audioos-release-16.5-20l563-AudioAccessory5,1",
+          "id": "audioos-release-16.5-20L563-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -565,16 +565,16 @@
       ]
     },
     {
-      "id": "audioos-release-16.4.1-20l498",
+      "id": "audioos-release-16.4.1-20L498",
       "version": "16.4.1",
-      "build": "20l498",
+      "build": "20L498",
       "released_at": "2023-04-12T18:41:54Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.4.1/20l498.json",
+      "data": "16.4.1/20L498.json",
       "firmwares": [
         {
-          "id": "audioos-release-16.4.1-20l498-AudioAccessory5,1",
+          "id": "audioos-release-16.4.1-20L498-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -586,16 +586,16 @@
       ]
     },
     {
-      "id": "audioos-release-16.4-20l497",
+      "id": "audioos-release-16.4-20L497",
       "version": "16.4",
-      "build": "20l497",
+      "build": "20L497",
       "released_at": "2023-03-27T18:24:31Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.4/20l497.json",
+      "data": "16.4/20L497.json",
       "firmwares": [
         {
-          "id": "audioos-release-16.4-20l497-AudioAccessory5,1",
+          "id": "audioos-release-16.4-20L497-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -607,16 +607,16 @@
       ]
     },
     {
-      "id": "audioos-release-16.3.2-20k672",
+      "id": "audioos-release-16.3.2-20K672",
       "version": "16.3.2",
-      "build": "20k672",
+      "build": "20K672",
       "released_at": "2023-02-13T18:50:35Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.3.2/20k672.json",
+      "data": "16.3.2/20K672.json",
       "firmwares": [
         {
-          "id": "audioos-release-16.3.2-20k672-AudioAccessory5,1",
+          "id": "audioos-release-16.3.2-20K672-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -628,16 +628,16 @@
       ]
     },
     {
-      "id": "audioos-release-16.3.1-20k661",
+      "id": "audioos-release-16.3.1-20K661",
       "version": "16.3.1",
-      "build": "20k661",
+      "build": "20K661",
       "released_at": "2023-02-06T18:52:54Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.3.1/20k661.json",
+      "data": "16.3.1/20K661.json",
       "firmwares": [
         {
-          "id": "audioos-release-16.3.1-20k661-AudioAccessory5,1",
+          "id": "audioos-release-16.3.1-20K661-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -649,16 +649,16 @@
       ]
     },
     {
-      "id": "audioos-release-16.3-20k649",
+      "id": "audioos-release-16.3-20K649",
       "version": "16.3",
-      "build": "20k649",
+      "build": "20K649",
       "released_at": "2023-01-24T19:17:24Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.3/20k649.json",
+      "data": "16.3/20K649.json",
       "firmwares": [
         {
-          "id": "audioos-release-16.3-20k649-AudioAccessory5,1",
+          "id": "audioos-release-16.3-20K649-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -670,16 +670,16 @@
       ]
     },
     {
-      "id": "audioos-release-16.2-20k362",
+      "id": "audioos-release-16.2-20K362",
       "version": "16.2",
-      "build": "20k362",
+      "build": "20K362",
       "released_at": "2022-12-13T18:45:11Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.2/20k362.json",
+      "data": "16.2/20K362.json",
       "firmwares": [
         {
-          "id": "audioos-release-16.2-20k362-AudioAccessory5,1",
+          "id": "audioos-release-16.2-20K362-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -691,16 +691,16 @@
       ]
     },
     {
-      "id": "audioos-release-16.1-20k71",
+      "id": "audioos-release-16.1-20K71",
       "version": "16.1",
-      "build": "20k71",
+      "build": "20K71",
       "released_at": "2022-10-24T18:25:32Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.1/20k71.json",
+      "data": "16.1/20K71.json",
       "firmwares": [
         {
-          "id": "audioos-release-16.1-20k71-AudioAccessory5,1",
+          "id": "audioos-release-16.1-20K71-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -712,16 +712,16 @@
       ]
     },
     {
-      "id": "audioos-release-16.0-20j373",
+      "id": "audioos-release-16.0-20J373",
       "version": "16.0",
-      "build": "20j373",
+      "build": "20J373",
       "released_at": "2022-09-12T17:38:23Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "16.0/20j373.json",
+      "data": "16.0/20J373.json",
       "firmwares": [
         {
-          "id": "audioos-release-16.0-20j373-AudioAccessory5,1",
+          "id": "audioos-release-16.0-20J373-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -733,16 +733,16 @@
       ]
     },
     {
-      "id": "audioos-release-15.6-19m65",
+      "id": "audioos-release-15.6-19M65",
       "version": "15.6",
-      "build": "19m65",
+      "build": "19M65",
       "released_at": "2022-07-20T16:44:45Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.6/19m65.json",
+      "data": "15.6/19M65.json",
       "firmwares": [
         {
-          "id": "audioos-release-15.6-19m65-AudioAccessory5,1",
+          "id": "audioos-release-15.6-19M65-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -754,16 +754,16 @@
       ]
     },
     {
-      "id": "audioos-release-15.5.1-19l580",
+      "id": "audioos-release-15.5.1-19L580",
       "version": "15.5.1",
-      "build": "19l580",
+      "build": "19L580",
       "released_at": "2022-05-25T16:43:10Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.5.1/19l580.json",
+      "data": "15.5.1/19L580.json",
       "firmwares": [
         {
-          "id": "audioos-release-15.5.1-19l580-AudioAccessory5,1",
+          "id": "audioos-release-15.5.1-19L580-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -775,16 +775,16 @@
       ]
     },
     {
-      "id": "audioos-release-15.5-19l570",
+      "id": "audioos-release-15.5-19L570",
       "version": "15.5",
-      "build": "19l570",
+      "build": "19L570",
       "released_at": "2022-05-16T18:23:46Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.5/19l570.json",
+      "data": "15.5/19L570.json",
       "firmwares": [
         {
-          "id": "audioos-release-15.5-19l570-AudioAccessory5,1",
+          "id": "audioos-release-15.5-19L570-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -796,16 +796,16 @@
       ]
     },
     {
-      "id": "audioos-release-15.4.1-19l452",
+      "id": "audioos-release-15.4.1-19L452",
       "version": "15.4.1",
-      "build": "19l452",
+      "build": "19L452",
       "released_at": "2022-03-31T16:45:46Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.4.1/19l452.json",
+      "data": "15.4.1/19L452.json",
       "firmwares": [
         {
-          "id": "audioos-release-15.4.1-19l452-AudioAccessory5,1",
+          "id": "audioos-release-15.4.1-19L452-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -817,16 +817,16 @@
       ]
     },
     {
-      "id": "audioos-release-15.4-19l440",
+      "id": "audioos-release-15.4-19L440",
       "version": "15.4",
-      "build": "19l440",
+      "build": "19L440",
       "released_at": "2022-03-14T16:48:18Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.4/19l440.json",
+      "data": "15.4/19L440.json",
       "firmwares": [
         {
-          "id": "audioos-release-15.4-19l440-AudioAccessory5,1",
+          "id": "audioos-release-15.4-19L440-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -838,16 +838,16 @@
       ]
     },
     {
-      "id": "audioos-release-15.3-19k547",
+      "id": "audioos-release-15.3-19K547",
       "version": "15.3",
-      "build": "19k547",
+      "build": "19K547",
       "released_at": "2022-01-26T18:02:33Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.3/19k547.json",
+      "data": "15.3/19K547.json",
       "firmwares": [
         {
-          "id": "audioos-release-15.3-19k547-AudioAccessory5,1",
+          "id": "audioos-release-15.3-19K547-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -859,16 +859,16 @@
       ]
     },
     {
-      "id": "audioos-release-15.2-19k52",
+      "id": "audioos-release-15.2-19K52",
       "version": "15.2",
-      "build": "19k52",
+      "build": "19K52",
       "released_at": "2021-12-13T17:46:01Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.2/19k52.json",
+      "data": "15.2/19K52.json",
       "firmwares": [
         {
-          "id": "audioos-release-15.2-19k52-AudioAccessory5,1",
+          "id": "audioos-release-15.2-19K52-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -880,16 +880,16 @@
       ]
     },
     {
-      "id": "audioos-release-15.1.1-19j582",
+      "id": "audioos-release-15.1.1-19J582",
       "version": "15.1.1",
-      "build": "19j582",
+      "build": "19J582",
       "released_at": "2021-11-03T17:08:28Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.1.1/19j582.json",
+      "data": "15.1.1/19J582.json",
       "firmwares": [
         {
-          "id": "audioos-release-15.1.1-19j582-AudioAccessory5,1",
+          "id": "audioos-release-15.1.1-19J582-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -901,16 +901,16 @@
       ]
     },
     {
-      "id": "audioos-release-15.1-19j572",
+      "id": "audioos-release-15.1-19J572",
       "version": "15.1",
-      "build": "19j572",
+      "build": "19J572",
       "released_at": "2021-10-25T20:28:56Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15.1/19j572.json",
+      "data": "15.1/19J572.json",
       "firmwares": [
         {
-          "id": "audioos-release-15.1-19j572-AudioAccessory5,1",
+          "id": "audioos-release-15.1-19J572-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -922,16 +922,16 @@
       ]
     },
     {
-      "id": "audioos-release-15-19j346",
+      "id": "audioos-release-15-19J346",
       "version": "15",
-      "build": "19j346",
+      "build": "19J346",
       "released_at": "2021-09-20T18:33:25Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "15/19j346.json",
+      "data": "15/19J346.json",
       "firmwares": [
         {
-          "id": "audioos-release-15-19j346-AudioAccessory5,1",
+          "id": "audioos-release-15-19J346-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -943,16 +943,16 @@
       ]
     },
     {
-      "id": "audioos-release-14.7-18m60",
+      "id": "audioos-release-14.7-18M60",
       "version": "14.7",
-      "build": "18m60",
+      "build": "18M60",
       "released_at": "2021-07-19T17:20:50Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.7/18m60.json",
+      "data": "14.7/18M60.json",
       "firmwares": [
         {
-          "id": "audioos-release-14.7-18m60-AudioAccessory5,1",
+          "id": "audioos-release-14.7-18M60-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -964,16 +964,16 @@
       ]
     },
     {
-      "id": "audioos-release-14.6-18l569",
+      "id": "audioos-release-14.6-18L569",
       "version": "14.6",
-      "build": "18l569",
+      "build": "18L569",
       "released_at": "2021-05-24T16:47:56Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.6/18l569.json",
+      "data": "14.6/18L569.json",
       "firmwares": [
         {
-          "id": "audioos-release-14.6-18l569-AudioAccessory5,1",
+          "id": "audioos-release-14.6-18L569-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -985,16 +985,16 @@
       ]
     },
     {
-      "id": "audioos-release-14.5-18l203",
+      "id": "audioos-release-14.5-18L203",
       "version": "14.5",
-      "build": "18l203",
+      "build": "18L203",
       "released_at": "2021-04-26T16:43:27Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.5/18l203.json",
+      "data": "14.5/18L203.json",
       "firmwares": [
         {
-          "id": "audioos-release-14.5-18l203-AudioAccessory5,1",
+          "id": "audioos-release-14.5-18L203-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -1006,16 +1006,16 @@
       ]
     },
     {
-      "id": "audioos-release-14.4-18k802",
+      "id": "audioos-release-14.4-18K802",
       "version": "14.4",
-      "build": "18k802",
+      "build": "18K802",
       "released_at": "2021-01-26T18:06:13Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.4/18k802.json",
+      "data": "14.4/18K802.json",
       "firmwares": [
         {
-          "id": "audioos-release-14.4-18k802-AudioAccessory5,1",
+          "id": "audioos-release-14.4-18K802-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -1027,16 +1027,16 @@
       ]
     },
     {
-      "id": "audioos-release-14.3-18k563",
+      "id": "audioos-release-14.3-18K563",
       "version": "14.3",
-      "build": "18k563",
+      "build": "18K563",
       "released_at": "2020-12-15T17:59:11Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.3/18k563.json",
+      "data": "14.3/18K563.json",
       "firmwares": [
         {
-          "id": "audioos-release-14.3-18k563-AudioAccessory5,1",
+          "id": "audioos-release-14.3-18K563-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -1048,16 +1048,16 @@
       ]
     },
     {
-      "id": "audioos-release-14.2.1-18k75",
+      "id": "audioos-release-14.2.1-18K75",
       "version": "14.2.1",
-      "build": "18k75",
+      "build": "18K75",
       "released_at": "2020-12-07T17:59:54Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.2.1/18k75.json",
+      "data": "14.2.1/18K75.json",
       "firmwares": [
         {
-          "id": "audioos-release-14.2.1-18k75-AudioAccessory5,1",
+          "id": "audioos-release-14.2.1-18K75-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
@@ -1069,16 +1069,16 @@
       ]
     },
     {
-      "id": "audioos-release-14.2-18k60",
+      "id": "audioos-release-14.2-18K60",
       "version": "14.2",
-      "build": "18k60",
+      "build": "18K60",
       "released_at": "2020-11-05T17:58:35Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "14.2/18k60.json",
+      "data": "14.2/18K60.json",
       "firmwares": [
         {
-          "id": "audioos-release-14.2-18k60-AudioAccessory5,1",
+          "id": "audioos-release-14.2-18K60-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"

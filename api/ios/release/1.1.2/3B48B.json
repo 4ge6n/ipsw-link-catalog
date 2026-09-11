@@ -1,0 +1,46 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "1.1.2",
+  "version_label": "1.1.2",
+  "build": "3B48B",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch 1G",
+      "devices": [
+        "iPod1,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPod/SBML/osx/bundles/061-4036.20071107.9g3DF/iPod1,1_1.1.2_3B48b_Restore.ipsw",
+      "filename": "iPod1,1_1.1.2_3B48b_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 2G",
+      "devices": [
+        "iPhone1,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone/061-4037.20071107.5Bghn/iPhone1,1_1.1.2_3B48b_Restore.ipsw",
+      "filename": "iPhone1,1_1.1.2_3B48b_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

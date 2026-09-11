@@ -1,0 +1,36 @@
+{
+  "os_key": "macos",
+  "channel": "release",
+  "version": "13.4.1",
+  "version_label": "13.4.1",
+  "build": "22F2083",
+  "released_at": "2023-06-21T17:28:54Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Air (15-inch, M2, 2023)",
+      "devices": [
+        "Mac14,13",
+        "Mac14,14",
+        "Mac14,15",
+        "Mac14,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2023SpringFCS/fullrestores/042-01864/A8378F91-BA71-40DF-8F0D-606A16F1836B/UniversalMac_13.4.1_22F2083_Restore.ipsw",
+      "filename": "UniversalMac_13.4.1_22F2083_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:18:27Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

@@ -1,0 +1,33 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "12.1",
+  "version_label": "12.1",
+  "build": "16B93",
+  "released_at": "2018-10-30T17:18:09Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone XR",
+      "devices": [
+        "iPhone11,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallFCS/fullrestores/041-18042/8D970BFC-D7B1-11E8-88B8-8D0E689092C9/iPhone11,8_12.1_16B93_Restore.ipsw",
+      "filename": "iPhone11,8_12.1_16B93_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

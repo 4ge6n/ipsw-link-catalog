@@ -1,0 +1,72 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "4.3.1",
+  "version_label": "4.3.1",
+  "build": "8G4",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad 2 (CDMA)",
+      "devices": [
+        "iPad2,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/041-0544.20110325.Dew3r/iPad2,3_4.3.1_8G4_Restore.ipsw",
+      "filename": "iPad2,3_4.3.1_8G4_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (GSM)",
+      "devices": [
+        "iPad2,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/041-0557.20110325.Jy76y/iPad2,2_4.3.1_8G4_Restore.ipsw",
+      "filename": "iPad2,2_4.3.1_8G4_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 2 (WiFi)",
+      "devices": [
+        "iPad2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/041-0556.20110325.64rfg/iPad2,1_4.3.1_8G4_Restore.ipsw",
+      "filename": "iPad2,1_4.3.1_8G4_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad 1",
+      "devices": [
+        "iPad1,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iPhone4/041-0550.20110325.Zsw6y/iPad1,1_4.3.1_8G4_Restore.ipsw",
+      "filename": "iPad1,1_4.3.1_8G4_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

@@ -4,19 +4,19 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-11T19:15:16Z",
+  "generated_at": "2026-09-11T19:18:27Z",
   "release_count": 11,
   "firmware_count": 62,
   "releases": [
     {
-      "id": "ipados-release-26.6.2-23g90",
+      "id": "ipados-release-26.6.2-23G90",
       "version": "26.6.2",
-      "build": "23g90",
+      "build": "23G90",
       "released_at": "2026-09-08T18:13:34Z",
-      "data": "26.6.2/23g90.json",
+      "data": "26.6.2/23G90.json",
       "firmwares": [
         {
-          "id": "ipados-release-26.6.2-23g90-iPad11,1",
+          "id": "ipados-release-26.6.2-23G90-iPad11,1",
           "name": "iPad mini 5 (WiFi)",
           "devices": [
             "iPad11,1",
@@ -29,7 +29,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad11,6",
+          "id": "ipados-release-26.6.2-23G90-iPad11,6",
           "name": "iPad 8 (WiFi)",
           "devices": [
             "iPad11,6",
@@ -40,7 +40,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad12,1",
+          "id": "ipados-release-26.6.2-23G90-iPad12,1",
           "name": "iPad (WiFi, 9th generation)",
           "devices": [
             "iPad12,1",
@@ -51,7 +51,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad13,1",
+          "id": "ipados-release-26.6.2-23G90-iPad13,1",
           "name": "iPad Air 4 (WiFi)",
           "devices": [
             "iPad13,1",
@@ -62,7 +62,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad13,10",
+          "id": "ipados-release-26.6.2-23G90-iPad13,10",
           "name": "iPad Pro (11-inch, WiFi) (3rd generation)",
           "devices": [
             "iPad13,10",
@@ -79,7 +79,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad13,16",
+          "id": "ipados-release-26.6.2-23G90-iPad13,16",
           "name": "iPad Air 5 (Cellular)",
           "devices": [
             "iPad13,16",
@@ -90,7 +90,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad13,18",
+          "id": "ipados-release-26.6.2-23G90-iPad13,18",
           "name": "iPad (WiFi, 10th generation)",
           "devices": [
             "iPad13,18",
@@ -101,7 +101,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad14,1",
+          "id": "ipados-release-26.6.2-23G90-iPad14,1",
           "name": "iPad mini 6 (WiFi)",
           "devices": [
             "iPad14,1",
@@ -112,7 +112,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad14,10",
+          "id": "ipados-release-26.6.2-23G90-iPad14,10",
           "name": "iPad Air (M2, 13-inch, WiFi)",
           "devices": [
             "iPad14,10",
@@ -125,7 +125,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad14,3",
+          "id": "ipados-release-26.6.2-23G90-iPad14,3",
           "name": "iPad Pro (11-inch, WiFi) (4th generation)",
           "devices": [
             "iPad14,3",
@@ -138,7 +138,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad15,3",
+          "id": "ipados-release-26.6.2-23G90-iPad15,3",
           "name": "iPad Air 11-inch (M3, WiFi)",
           "devices": [
             "iPad15,3",
@@ -151,7 +151,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad15,7",
+          "id": "ipados-release-26.6.2-23G90-iPad15,7",
           "name": "iPad (A16, WiFi)",
           "devices": [
             "iPad15,7"
@@ -161,7 +161,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad15,8",
+          "id": "ipados-release-26.6.2-23G90-iPad15,8",
           "name": "iPad (A16, Cellular)",
           "devices": [
             "iPad15,8"
@@ -171,7 +171,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad16,1",
+          "id": "ipados-release-26.6.2-23G90-iPad16,1",
           "name": "iPad mini (A17 Pro, Cellular)",
           "devices": [
             "iPad16,1",
@@ -182,7 +182,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad16,10",
+          "id": "ipados-release-26.6.2-23G90-iPad16,10",
           "name": "iPad Air 11-inch (M4, Cellular)",
           "devices": [
             "iPad16,10",
@@ -195,7 +195,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad16,3",
+          "id": "ipados-release-26.6.2-23G90-iPad16,3",
           "name": "iPad Pro (M4, 11-inch, Cellular)",
           "devices": [
             "iPad16,3",
@@ -208,7 +208,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad17,1",
+          "id": "ipados-release-26.6.2-23G90-iPad17,1",
           "name": "iPad Pro 13-inch (M5, Cellular)",
           "devices": [
             "iPad17,1",
@@ -221,7 +221,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.2-23g90-iPad8,1",
+          "id": "ipados-release-26.6.2-23G90-iPad8,1",
           "name": "iPad Pro 3 (12.9-inch, WiFi, 1TB Model)",
           "devices": [
             "iPad8,1",
@@ -244,14 +244,14 @@
       ]
     },
     {
-      "id": "ipados-release-26.6.1-23g83",
+      "id": "ipados-release-26.6.1-23G83",
       "version": "26.6.1",
-      "build": "23g83",
+      "build": "23G83",
       "released_at": "2026-08-17T17:49:17Z",
-      "data": "26.6.1/23g83.json",
+      "data": "26.6.1/23G83.json",
       "firmwares": [
         {
-          "id": "ipados-release-26.6.1-23g83-iPad11,1",
+          "id": "ipados-release-26.6.1-23G83-iPad11,1",
           "name": "iPad mini 5 (WiFi)",
           "devices": [
             "iPad11,1",
@@ -264,7 +264,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad11,6",
+          "id": "ipados-release-26.6.1-23G83-iPad11,6",
           "name": "iPad 8 (WiFi)",
           "devices": [
             "iPad11,6",
@@ -275,7 +275,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad12,1",
+          "id": "ipados-release-26.6.1-23G83-iPad12,1",
           "name": "iPad (WiFi, 9th generation)",
           "devices": [
             "iPad12,1",
@@ -286,7 +286,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad13,1",
+          "id": "ipados-release-26.6.1-23G83-iPad13,1",
           "name": "iPad Air 4 (WiFi)",
           "devices": [
             "iPad13,1",
@@ -297,7 +297,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad13,10",
+          "id": "ipados-release-26.6.1-23G83-iPad13,10",
           "name": "iPad Pro (11-inch, WiFi) (3rd generation)",
           "devices": [
             "iPad13,10",
@@ -314,7 +314,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad13,16",
+          "id": "ipados-release-26.6.1-23G83-iPad13,16",
           "name": "iPad Air 5 (Cellular)",
           "devices": [
             "iPad13,16",
@@ -325,7 +325,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad13,18",
+          "id": "ipados-release-26.6.1-23G83-iPad13,18",
           "name": "iPad (WiFi, 10th generation)",
           "devices": [
             "iPad13,18",
@@ -336,7 +336,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad14,1",
+          "id": "ipados-release-26.6.1-23G83-iPad14,1",
           "name": "iPad mini 6 (WiFi)",
           "devices": [
             "iPad14,1",
@@ -347,7 +347,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad14,10",
+          "id": "ipados-release-26.6.1-23G83-iPad14,10",
           "name": "iPad Air (M2, 13-inch, WiFi)",
           "devices": [
             "iPad14,10",
@@ -360,7 +360,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad14,3",
+          "id": "ipados-release-26.6.1-23G83-iPad14,3",
           "name": "iPad Pro (11-inch, WiFi) (4th generation)",
           "devices": [
             "iPad14,3",
@@ -373,7 +373,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad15,3",
+          "id": "ipados-release-26.6.1-23G83-iPad15,3",
           "name": "iPad Air 11-inch (M3, WiFi)",
           "devices": [
             "iPad15,3",
@@ -386,7 +386,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad15,7",
+          "id": "ipados-release-26.6.1-23G83-iPad15,7",
           "name": "iPad (A16, WiFi)",
           "devices": [
             "iPad15,7"
@@ -396,7 +396,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad15,8",
+          "id": "ipados-release-26.6.1-23G83-iPad15,8",
           "name": "iPad (A16, Cellular)",
           "devices": [
             "iPad15,8"
@@ -406,7 +406,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad16,1",
+          "id": "ipados-release-26.6.1-23G83-iPad16,1",
           "name": "iPad mini (A17 Pro, Cellular)",
           "devices": [
             "iPad16,1",
@@ -417,7 +417,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad16,10",
+          "id": "ipados-release-26.6.1-23G83-iPad16,10",
           "name": "iPad Air 11-inch (M4, Cellular)",
           "devices": [
             "iPad16,10",
@@ -430,7 +430,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad16,3",
+          "id": "ipados-release-26.6.1-23G83-iPad16,3",
           "name": "iPad Pro (M4, 11-inch, Cellular)",
           "devices": [
             "iPad16,3",
@@ -443,7 +443,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad17,1",
+          "id": "ipados-release-26.6.1-23G83-iPad17,1",
           "name": "iPad Pro 13-inch (M5, Cellular)",
           "devices": [
             "iPad17,1",
@@ -456,7 +456,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-26.6.1-23g83-iPad8,1",
+          "id": "ipados-release-26.6.1-23G83-iPad8,1",
           "name": "iPad Pro 3 (12.9-inch, WiFi, 1TB Model)",
           "devices": [
             "iPad8,1",
@@ -479,14 +479,14 @@
       ]
     },
     {
-      "id": "ipados-release-18.7.10-22h374",
+      "id": "ipados-release-18.7.10-22H374",
       "version": "18.7.10",
-      "build": "22h374",
+      "build": "22H374",
       "released_at": "2026-08-17T17:49:09Z",
-      "data": "18.7.10/22h374.json",
+      "data": "18.7.10/22H374.json",
       "firmwares": [
         {
-          "id": "ipados-release-18.7.10-22h374-iPad7,11",
+          "id": "ipados-release-18.7.10-22H374-iPad7,11",
           "name": "iPad 7 (Cellular)",
           "devices": [
             "iPad7,11",
@@ -499,14 +499,14 @@
       ]
     },
     {
-      "id": "ipados-release-17.7.11-21h461",
+      "id": "ipados-release-17.7.11-21H461",
       "version": "17.7.11",
-      "build": "21h461",
+      "build": "21H461",
       "released_at": "2026-05-11T17:47:39Z",
-      "data": "17.7.11/21h461.json",
+      "data": "17.7.11/21H461.json",
       "firmwares": [
         {
-          "id": "ipados-release-17.7.11-21h461-iPad7,1",
+          "id": "ipados-release-17.7.11-21H461-iPad7,1",
           "name": "iPad Pro 2 (12.9-inch, Cellular)",
           "devices": [
             "iPad7,1",
@@ -519,7 +519,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-17.7.11-21h461-iPad7,5",
+          "id": "ipados-release-17.7.11-21H461-iPad7,5",
           "name": "iPad 6 (WiFi)",
           "devices": [
             "iPad7,5",
@@ -532,14 +532,14 @@
       ]
     },
     {
-      "id": "ipados-release-16.7.16-20h392",
+      "id": "ipados-release-16.7.16-20H392",
       "version": "16.7.16",
-      "build": "20h392",
+      "build": "20H392",
       "released_at": "2026-05-11T17:47:23Z",
-      "data": "16.7.16/20h392.json",
+      "data": "16.7.16/20H392.json",
       "firmwares": [
         {
-          "id": "ipados-release-16.7.16-20h392-iPad6,11",
+          "id": "ipados-release-16.7.16-20H392-iPad6,11",
           "name": "iPad 5 (WiFi)",
           "devices": [
             "iPad6,11",
@@ -550,7 +550,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-16.7.16-20h392-iPad6,3",
+          "id": "ipados-release-16.7.16-20H392-iPad6,3",
           "name": "iPad Pro 9.7-inch (Cellular)",
           "devices": [
             "iPad6,3",
@@ -561,7 +561,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-16.7.16-20h392-iPad6,7",
+          "id": "ipados-release-16.7.16-20H392-iPad6,7",
           "name": "iPad Pro 12.9-inch (WiFi)",
           "devices": [
             "iPad6,7",
@@ -574,14 +574,14 @@
       ]
     },
     {
-      "id": "ipados-release-15.8.8-19h422",
+      "id": "ipados-release-15.8.8-19H422",
       "version": "15.8.8",
-      "build": "19h422",
+      "build": "19H422",
       "released_at": "2026-05-11T17:47:35Z",
-      "data": "15.8.8/19h422.json",
+      "data": "15.8.8/19H422.json",
       "firmwares": [
         {
-          "id": "ipados-release-15.8.8-19h422-iPad5,1",
+          "id": "ipados-release-15.8.8-19H422-iPad5,1",
           "name": "iPad Air 2 (WiFi)",
           "devices": [
             "iPad5,1",
@@ -596,14 +596,14 @@
       ]
     },
     {
-      "id": "ipados-release-12.5.8-16h88",
+      "id": "ipados-release-12.5.8-16H88",
       "version": "12.5.8",
-      "build": "16h88",
+      "build": "16H88",
       "released_at": "2026-01-26T18:21:53Z",
-      "data": "12.5.8/16h88.json",
+      "data": "12.5.8/16H88.json",
       "firmwares": [
         {
-          "id": "ipados-release-12.5.8-16h88-iPad4,1",
+          "id": "ipados-release-12.5.8-16H88-iPad4,1",
           "name": "iPad mini 2 (WiFi)",
           "devices": [
             "iPad4,1",
@@ -618,7 +618,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-12.5.8-16h88-iPad4,7",
+          "id": "ipados-release-12.5.8-16H88-iPad4,7",
           "name": "iPad mini 3 (WiFi)",
           "devices": [
             "iPad4,7",
@@ -632,14 +632,14 @@
       ]
     },
     {
-      "id": "ipados-release-10.3.4-14g61",
+      "id": "ipados-release-10.3.4-14G61",
       "version": "10.3.4",
-      "build": "14g61",
+      "build": "14G61",
       "released_at": "2019-07-22T17:06:23Z",
-      "data": "10.3.4/14g61.json",
+      "data": "10.3.4/14G61.json",
       "firmwares": [
         {
-          "id": "ipados-release-10.3.4-14g61-iPad3,5",
+          "id": "ipados-release-10.3.4-14G61-iPad3,5",
           "name": "iPad 4 (GSM)",
           "devices": [
             "iPad3,5",
@@ -652,14 +652,14 @@
       ]
     },
     {
-      "id": "ipados-release-9.3.6-13g37",
+      "id": "ipados-release-9.3.6-13G37",
       "version": "9.3.6",
-      "build": "13g37",
+      "build": "13G37",
       "released_at": "2019-07-22T17:13:11Z",
-      "data": "9.3.6/13g37.json",
+      "data": "9.3.6/13G37.json",
       "firmwares": [
         {
-          "id": "ipados-release-9.3.6-13g37-iPad2,3",
+          "id": "ipados-release-9.3.6-13G37-iPad2,3",
           "name": "iPad 2 (CDMA)",
           "devices": [
             "iPad2,3"
@@ -669,7 +669,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-9.3.6-13g37-iPad2,6",
+          "id": "ipados-release-9.3.6-13G37-iPad2,6",
           "name": "iPad mini (GSM)",
           "devices": [
             "iPad2,6"
@@ -679,7 +679,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-9.3.6-13g37-iPad2,7",
+          "id": "ipados-release-9.3.6-13G37-iPad2,7",
           "name": "iPad mini (Global)",
           "devices": [
             "iPad2,7"
@@ -689,7 +689,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-9.3.6-13g37-iPad3,2",
+          "id": "ipados-release-9.3.6-13G37-iPad3,2",
           "name": "iPad 3 (CDMA)",
           "devices": [
             "iPad3,2"
@@ -699,7 +699,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-9.3.6-13g37-iPad3,3",
+          "id": "ipados-release-9.3.6-13G37-iPad3,3",
           "name": "iPad 3 (GSM)",
           "devices": [
             "iPad3,3"
@@ -711,14 +711,14 @@
       ]
     },
     {
-      "id": "ipados-release-9.3.5-13g36",
+      "id": "ipados-release-9.3.5-13G36",
       "version": "9.3.5",
-      "build": "13g36",
+      "build": "13G36",
       "released_at": "2016-08-25T16:58:25Z",
-      "data": "9.3.5/13g36.json",
+      "data": "9.3.5/13G36.json",
       "firmwares": [
         {
-          "id": "ipados-release-9.3.5-13g36-iPad2,1",
+          "id": "ipados-release-9.3.5-13G36-iPad2,1",
           "name": "iPad 2 (WiFi)",
           "devices": [
             "iPad2,1"
@@ -728,7 +728,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-9.3.5-13g36-iPad2,2",
+          "id": "ipados-release-9.3.5-13G36-iPad2,2",
           "name": "iPad 2 (GSM)",
           "devices": [
             "iPad2,2"
@@ -738,7 +738,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-9.3.5-13g36-iPad2,3",
+          "id": "ipados-release-9.3.5-13G36-iPad2,3",
           "name": "iPad 2 (CDMA)",
           "devices": [
             "iPad2,3"
@@ -748,7 +748,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-9.3.5-13g36-iPad2,4",
+          "id": "ipados-release-9.3.5-13G36-iPad2,4",
           "name": "iPad 2 (Mid 2012)",
           "devices": [
             "iPad2,4"
@@ -758,7 +758,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-9.3.5-13g36-iPad2,5",
+          "id": "ipados-release-9.3.5-13G36-iPad2,5",
           "name": "iPad mini (WiFi)",
           "devices": [
             "iPad2,5"
@@ -768,7 +768,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-9.3.5-13g36-iPad2,6",
+          "id": "ipados-release-9.3.5-13G36-iPad2,6",
           "name": "iPad mini (GSM)",
           "devices": [
             "iPad2,6"
@@ -778,7 +778,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-9.3.5-13g36-iPad2,7",
+          "id": "ipados-release-9.3.5-13G36-iPad2,7",
           "name": "iPad mini (Global)",
           "devices": [
             "iPad2,7"
@@ -788,7 +788,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-9.3.5-13g36-iPad3,1",
+          "id": "ipados-release-9.3.5-13G36-iPad3,1",
           "name": "iPad 3 (WiFi)",
           "devices": [
             "iPad3,1"
@@ -798,7 +798,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-9.3.5-13g36-iPad3,2",
+          "id": "ipados-release-9.3.5-13G36-iPad3,2",
           "name": "iPad 3 (CDMA)",
           "devices": [
             "iPad3,2"
@@ -808,7 +808,7 @@
           "signed": true
         },
         {
-          "id": "ipados-release-9.3.5-13g36-iPad3,3",
+          "id": "ipados-release-9.3.5-13G36-iPad3,3",
           "name": "iPad 3 (GSM)",
           "devices": [
             "iPad3,3"
@@ -820,14 +820,14 @@
       ]
     },
     {
-      "id": "ipados-release-5.1.1-9b206",
+      "id": "ipados-release-5.1.1-9B206",
       "version": "5.1.1",
-      "build": "9b206",
+      "build": "9B206",
       "released_at": null,
-      "data": "5.1.1/9b206.json",
+      "data": "5.1.1/9B206.json",
       "firmwares": [
         {
-          "id": "ipados-release-5.1.1-9b206-iPad1,1",
+          "id": "ipados-release-5.1.1-9B206-iPad1,1",
           "name": "iPad 1",
           "devices": [
             "iPad1,1"

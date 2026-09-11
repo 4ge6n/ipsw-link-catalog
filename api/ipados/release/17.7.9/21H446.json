@@ -1,0 +1,50 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "17.7.9",
+  "version_label": "17.7.9",
+  "build": "21H446",
+  "released_at": "2025-07-29T18:40:50Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad 6 (WiFi)",
+      "devices": [
+        "iPad7,5",
+        "iPad7,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-71080/D77D7F9B-897E-4161-B00E-C53BEE978903/iPad_64bit_TouchID_ASTC_17.7.9_21H446_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_ASTC_17.7.9_21H446_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad Pro 2 (12.9-inch, Cellular)",
+      "devices": [
+        "iPad7,1",
+        "iPad7,2",
+        "iPad7,3",
+        "iPad7,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-71150/549626EC-10D4-4939-B35A-B2CA1AFC5F85/iPad_Pro_HFR_17.7.9_21H446_Restore.ipsw",
+      "filename": "iPad_Pro_HFR_17.7.9_21H446_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

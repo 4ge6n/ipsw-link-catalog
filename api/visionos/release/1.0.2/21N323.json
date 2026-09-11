@@ -1,0 +1,33 @@
+{
+  "os_key": "visionos",
+  "channel": "release",
+  "version": "1.0.2",
+  "version_label": "1.0.2",
+  "build": "21N323",
+  "released_at": "2024-01-31T18:17:33Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple Vision Pro",
+      "devices": [
+        "RealityDevice14,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/052-42089/5E57235E-AE60-46DC-8078-F2486FEC66EA/Apple_Vision_Pro_1.0.2_21N323_Restore.ipsw",
+      "filename": "Apple_Vision_Pro_1.0.2_21N323_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

@@ -1,0 +1,62 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "18.3.2",
+  "version_label": "18.3.2",
+  "build": "22D2082",
+  "released_at": "2025-03-11T17:35:26Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad (A16, WiFi)",
+      "devices": [
+        "iPad15,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/072-96356/86348AA0-1D97-4C7A-8625-5DAAEF72CA46/iPad15,7_18.3.2_22D2082_Restore.ipsw",
+      "filename": "iPad15,7_18.3.2_22D2082_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad (A16, Cellular)",
+      "devices": [
+        "iPad15,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/072-96353/489095F4-5FC9-4888-9579-CA7E81797E20/iPad15,8_18.3.2_22D2082_Restore.ipsw",
+      "filename": "iPad15,8_18.3.2_22D2082_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPad Air 11-inch (M3, WiFi)",
+      "devices": [
+        "iPad15,3",
+        "iPad15,4",
+        "iPad15,5",
+        "iPad15,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/072-96352/8329B3F8-472A-47F5-A844-829D0EF54935/iPad15,3,iPad15,4,iPad15,5,iPad15,6_18.3.2_22D2082_Restore.ipsw",
+      "filename": "iPad15,3,iPad15,4,iPad15,5,iPad15,6_18.3.2_22D2082_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

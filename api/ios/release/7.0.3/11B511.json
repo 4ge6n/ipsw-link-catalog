@@ -1,0 +1,163 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "7.0.3",
+  "version_label": "7.0.3",
+  "build": "11B511",
+  "released_at": "2013-10-22T19:46:04Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 5s (GSM)",
+      "devices": [
+        "iPhone6,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7/031-0966.20131022.45gBg/iPhone6,1_7.0.3_11B511_Restore.ipsw",
+      "filename": "iPhone6,1_7.0.3_11B511_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 5c (Global)",
+      "devices": [
+        "iPhone5,4"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7/031-0853.20131022.suup3/iPhone5,4_7.0.3_11B511_Restore.ipsw",
+      "filename": "iPhone5,4_7.0.3_11B511_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 5c (GSM)",
+      "devices": [
+        "iPhone5,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7/031-0943.20131022.Mestt/iPhone5,3_7.0.3_11B511_Restore.ipsw",
+      "filename": "iPhone5,3_7.0.3_11B511_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 5s (Global)",
+      "devices": [
+        "iPhone6,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7/031-0885.20131022.TG555/iPhone6,2_7.0.3_11B511_Restore.ipsw",
+      "filename": "iPhone6,2_7.0.3_11B511_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 5 (Global)",
+      "devices": [
+        "iPhone5,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7/031-0910.20131022.EerKf/iPhone5,2_7.0.3_11B511_Restore.ipsw",
+      "filename": "iPhone5,2_7.0.3_11B511_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 5 (GSM)",
+      "devices": [
+        "iPhone5,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7/031-0855.20131022.astg4/iPhone5,1_7.0.3_11B511_Restore.ipsw",
+      "filename": "iPhone5,1_7.0.3_11B511_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 4 (GSM / 2012)",
+      "devices": [
+        "iPhone3,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7/031-0884.20131022.54554/iPhone3,2_7.0.3_11B511_Restore.ipsw",
+      "filename": "iPhone3,2_7.0.3_11B511_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPod touch 5",
+      "devices": [
+        "iPod5,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7/031-0912.20131022.Seedf/iPod5,1_7.0.3_11B511_Restore.ipsw",
+      "filename": "iPod5,1_7.0.3_11B511_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 4s",
+      "devices": [
+        "iPhone4,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7/031-0948.20131022.Sim1l/iPhone4,1_7.0.3_11B511_Restore.ipsw",
+      "filename": "iPhone4,1_7.0.3_11B511_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 4 (CDMA)",
+      "devices": [
+        "iPhone3,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7/031-1022.20131022.pptgk/iPhone3,3_7.0.3_11B511_Restore.ipsw",
+      "filename": "iPhone3,3_7.0.3_11B511_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone 4 (GSM)",
+      "devices": [
+        "iPhone3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7/031-1038.20131022.Llkit/iPhone3,1_7.0.3_11B511_Restore.ipsw",
+      "filename": "iPhone3,1_7.0.3_11B511_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

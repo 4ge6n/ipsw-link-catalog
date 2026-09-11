@@ -1,0 +1,41 @@
+{
+  "os_key": "macos",
+  "channel": "release",
+  "version": "15.1.1",
+  "version_label": "15.1.1",
+  "build": "24B2091",
+  "released_at": "2024-11-19T18:19:46Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Mac mini (M4, 2024)",
+      "devices": [
+        "Mac16,1",
+        "Mac16,10",
+        "Mac16,11",
+        "Mac16,2",
+        "Mac16,3",
+        "Mac16,5",
+        "Mac16,6",
+        "Mac16,7",
+        "Mac16,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2024FallFCS/fullrestores/072-29960/5EEC3C20-D7CB-4DD1-9CE4-7C177F531A41/UniversalMac_15.1.1_24B2091_Restore.ipsw",
+      "filename": "UniversalMac_15.1.1_24B2091_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:18:27Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

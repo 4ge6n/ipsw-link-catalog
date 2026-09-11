@@ -1,0 +1,36 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "26.0.1",
+  "version_label": "26.0.1",
+  "build": "23A8464",
+  "released_at": "2025-10-15T23:29:17Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad Pro 13-inch (M5, Cellular)",
+      "devices": [
+        "iPad17,1",
+        "iPad17,2",
+        "iPad17,3",
+        "iPad17,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-87481/3E859148-2051-4C98-9F8F-13E0E1ED345D/iPad17,1,iPad17,2,iPad17,3,iPad17,4_26.0.1_23A8464_Restore.ipsw",
+      "filename": "iPad17,1,iPad17,2,iPad17,3,iPad17,4_26.0.1_23A8464_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

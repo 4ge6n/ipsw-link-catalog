@@ -4,19 +4,19 @@
   "os_key": "visionos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-11T19:15:16Z",
+  "generated_at": "2026-09-11T19:18:27Z",
   "release_count": 1,
   "firmware_count": 2,
   "releases": [
     {
-      "id": "visionos-release-26.6.1-23o780",
+      "id": "visionos-release-26.6.1-23O780",
       "version": "26.6.1",
-      "build": "23o780",
+      "build": "23O780",
       "released_at": "2026-08-17T17:53:03Z",
-      "data": "26.6.1/23o780.json",
+      "data": "26.6.1/23O780.json",
       "firmwares": [
         {
-          "id": "visionos-release-26.6.1-23o780-RealityDevice14,1",
+          "id": "visionos-release-26.6.1-23O780-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -26,7 +26,7 @@
           "signed": true
         },
         {
-          "id": "visionos-release-26.6.1-23o780-RealityDevice17,1",
+          "id": "visionos-release-26.6.1-23O780-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"

@@ -1,0 +1,34 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "18.7.3",
+  "version_label": "18.7.3",
+  "build": "22H217",
+  "released_at": "2025-12-22T18:04:17Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad 7 (Cellular)",
+      "devices": [
+        "iPad7,11",
+        "iPad7,12"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-89100/D6D0E720-D9AF-4085-A8DA-F38F34995490/iPad_10.2_18.7.3_22H217_Restore.ipsw",
+      "filename": "iPad_10.2_18.7.3_22H217_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

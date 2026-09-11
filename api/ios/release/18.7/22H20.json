@@ -1,0 +1,48 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "18.7",
+  "version_label": "18.7",
+  "build": "22H20",
+  "released_at": "2025-09-15T17:06:45Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone XR",
+      "devices": [
+        "iPhone11,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/082-75336/4E722733-F152-4104-9E2B-C2CA8C57D6DF/iPhone11,8_18.7_22H20_Restore.ipsw",
+      "filename": "iPhone11,8_18.7_22H20_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    },
+    {
+      "name": "iPhone XS Max",
+      "devices": [
+        "iPhone11,2",
+        "iPhone11,4",
+        "iPhone11,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/082-75719/D271E370-84A4-494D-8547-BDBE20AC1EEA/iPhone11,2,iPhone11,4,iPhone11,6_18.7_22H20_Restore.ipsw",
+      "filename": "iPhone11,2,iPhone11,4,iPhone11,6_18.7_22H20_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

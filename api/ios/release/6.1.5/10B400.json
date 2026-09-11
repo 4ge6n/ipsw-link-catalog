@@ -1,0 +1,33 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "6.1.5",
+  "version_label": "6.1.5",
+  "build": "10B400",
+  "released_at": "2013-11-15T02:23:58Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch 4",
+      "devices": [
+        "iPod4,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6.1/091-3505.20131106.PosTg/iPod4,1_6.1.5_10B400_Restore.ipsw",
+      "filename": "iPod4,1_6.1.5_10B400_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": "2026-09-11T19:18:27Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}

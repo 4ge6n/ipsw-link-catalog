@@ -1,0 +1,53 @@
+{
+  "os_key": "macos",
+  "channel": "release",
+  "version": "14.1.2",
+  "version_label": "14.1.2",
+  "build": "23B92",
+  "released_at": "2023-11-30T18:15:47Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:18:27Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Pro (M1, Late 2020)",
+      "devices": [
+        "Mac13,1",
+        "Mac13,2",
+        "Mac14,10",
+        "Mac14,12",
+        "Mac14,13",
+        "Mac14,14",
+        "Mac14,15",
+        "Mac14,2",
+        "Mac14,3",
+        "Mac14,5",
+        "Mac14,6",
+        "Mac14,7",
+        "Mac14,8",
+        "Mac14,9",
+        "MacBookAir10,1",
+        "MacBookPro17,1",
+        "MacBookPro18,1",
+        "MacBookPro18,2",
+        "MacBookPro18,3",
+        "MacBookPro18,4",
+        "Macmini9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/052-09443/E8752548-0B80-480C-9FB4-67246672C1B5/UniversalMac_14.1.2_23B92_Restore.ipsw",
+      "filename": "UniversalMac_14.1.2_23B92_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:18:27Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:18:27Z",
+  "last_seen_at": "2026-09-11T19:18:27Z"
+}
