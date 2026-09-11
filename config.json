@@ -1,0 +1,9 @@
+{
+  "update_interval_hours": 3,
+  "missing_record_threshold": 0.3,
+  "include_unknown_beta_signing": true,
+  "request_timeout_seconds": 30,
+  "request_retries": 3,
+  "default_branch": "main",
+  "allowed_cdn_hosts": ["updates.cdn-apple.com", "secure-appldnld.apple.com", "appldnld.apple.com"]
+}
