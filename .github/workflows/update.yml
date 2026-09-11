@@ -7,6 +7,8 @@ on:
     paths: ['scripts/**', 'schemas/**', 'tests/**', 'config.json', '.github/workflows/update.yml']
 permissions:
   contents: write
+  pages: write
+  id-token: write
 concurrency:
   group: ipsw-data-update
   cancel-in-progress: false
@@ -28,3 +30,10 @@ jobs:
           git add api site README.md
           git diff --cached --quiet || git commit -m "data: update IPSW catalog ($(date -u +%F))"
           git push
+      - uses: actions/configure-pages@v5
+        if: github.event_name != 'push'
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'push'
+        with: {path: site}
+      - uses: actions/deploy-pages@v4
+        if: github.event_name != 'push'
