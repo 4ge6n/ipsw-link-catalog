@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from scripts.generate_readme import content, replace
+from scripts.generate_site import generate as generate_site
 from scripts.normalize import OS_ORDER, safe_build
 from scripts.organize import all_index, index, merge, normalize_candidates
 from scripts.sources import beta, release
@@ -54,10 +55,12 @@ def main():
     if rejected: print(json.dumps({"ignored_non_ipsw_or_incomplete_candidates": len(rejected)}))
     records=merge(old, observed, now)
     with tempfile.TemporaryDirectory(prefix="ipsw-catalog-") as tmp:
-        stage=Path(tmp)/"api"; indexes=generate(records, stage, settings, now)
+        stage=Path(tmp)/"api"; site_stage=Path(tmp)/"site"; indexes=generate(records, stage, settings, now)
         errors=validate_api(stage, set(settings["allowed_cdn_hosts"]))
         if errors: raise SystemExit("validation failed:\n"+"\n".join(errors))
+        generate_site(stage, site_stage)
         shutil.rmtree(ROOT/"api", ignore_errors=True); shutil.copytree(stage, ROOT/"api")
+        shutil.rmtree(ROOT/"site", ignore_errors=True); shutil.copytree(site_stage, ROOT/"site")
     readme=ROOT/"README.md"; current=readme.read_text() if readme.exists() else "# IPSW Link Catalog\n\nStable JSON indexes of Apple restore images.\n"
     dump_owner=os.getenv("GITHUB_REPOSITORY", "4ge6n/ipsw-link-catalog")
     readme.write_text(replace(current, content(indexes, now, dump_owner, settings["default_branch"])))
