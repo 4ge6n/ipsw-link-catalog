@@ -2,6 +2,8 @@
 
 Stable JSON indexes of Apple restore images.
 
+Update status: [api/status.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/status.json)
+
 <!-- AUTO-GENERATED:START -->
 ## Catalog status
 
@@ -45,5 +47,4 @@ Use `firmwares[].id` to identify a firmware, `devices` to match hardware, and `s
 
 Data is assembled from public firmware metadata. It is not affiliated with Apple; verify compatibility before restoring.
 <!-- AUTO-GENERATED:END -->
-
 
