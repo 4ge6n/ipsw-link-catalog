@@ -5,7 +5,7 @@ Stable JSON indexes of Apple restore-image URLs. IPSW files are never stored in 
 <!-- AUTO-GENERATED:START -->
 ## Catalog status
 
-Last successful update: `2026-09-11T19:21:11Z`
+Last successful update: `2026-09-11T19:22:47Z`
 
 ### Endpoints
 
@@ -45,4 +45,5 @@ Use `firmwares[].id` to identify a firmware, `devices` to match hardware, and `s
 
 Data is assembled from public firmware metadata. It is not affiliated with Apple; verify compatibility before restoring.
 <!-- AUTO-GENERATED:END -->
+
 
