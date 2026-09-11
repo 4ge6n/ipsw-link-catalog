@@ -1,0 +1,53 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "12.4.2",
+  "version_label": "12.4.2",
+  "build": "16g114",
+  "released_at": "2019-09-26T17:04:57Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad mini 3 (WiFi)",
+      "devices": [
+        "iPad4,7",
+        "iPad4,8",
+        "iPad4,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SummerFCS/fullrestores/061-20502/FD3F2C24-DC8C-11E9-9BB8-1D8C66A83945/iPad_64bit_TouchID_12.4.2_16G114_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_12.4.2_16G114_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPad mini 2 (WiFi)",
+      "devices": [
+        "iPad4,1",
+        "iPad4,2",
+        "iPad4,3",
+        "iPad4,4",
+        "iPad4,5",
+        "iPad4,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SummerFCS/fullrestores/061-21488/FD3DD09A-DC8C-11E9-AA09-198C66A83945/iPad_64bit_12.4.2_16G114_Restore.ipsw",
+      "filename": "iPad_64bit_12.4.2_16G114_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

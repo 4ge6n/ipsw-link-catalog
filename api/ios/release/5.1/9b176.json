@@ -1,0 +1,85 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "5.1",
+  "version_label": "5.1",
+  "build": "9b176",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch 4",
+      "devices": [
+        "iPod4,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS5/041-1542.20120307.Jyknq/iPod4,1_5.1_9B176_Restore.ipsw",
+      "filename": "iPod4,1_5.1_9B176_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPod touch 3",
+      "devices": [
+        "iPod3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS5/041-1547.20120307.KerHy/iPod3,1_5.1_9B176_Restore.ipsw",
+      "filename": "iPod3,1_5.1_9B176_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 4 (CDMA)",
+      "devices": [
+        "iPhone3,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS5/041-1529.20120307.looTW/iPhone3,3_5.1_9B176_Restore.ipsw",
+      "filename": "iPhone3,3_5.1_9B176_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 4 (GSM)",
+      "devices": [
+        "iPhone3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS5/041-1537.20120307.EJrm4/iPhone3,1_5.1_9B176_Restore.ipsw",
+      "filename": "iPhone3,1_5.1_9B176_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 3GS",
+      "devices": [
+        "iPhone2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS5/041-1535.20120307.Jer6N/iPhone2,1_5.1_9B176_Restore.ipsw",
+      "filename": "iPhone2,1_5.1_9B176_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

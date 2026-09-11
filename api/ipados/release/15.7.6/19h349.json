@@ -1,0 +1,36 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "15.7.6",
+  "version_label": "15.7.6",
+  "build": "19h349",
+  "released_at": "2023-05-18T18:14:18Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad Air 2 (WiFi)",
+      "devices": [
+        "iPad5,1",
+        "iPad5,2",
+        "iPad5,3",
+        "iPad5,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-73503/87CE2960-9AF4-4D9B-837F-F8407CA53EED/iPad_64bit_TouchID_15.7.6_19H349_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_15.7.6_19H349_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

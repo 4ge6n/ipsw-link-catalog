@@ -1,0 +1,33 @@
+{
+  "os_key": "audioos",
+  "channel": "release",
+  "version": "14.2.1",
+  "version_label": "14.2.1",
+  "build": "18k75",
+  "released_at": "2020-12-07T17:59:54Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "HomePod mini",
+      "devices": [
+        "AudioAccessory5,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-82561/9A9B0278-B1DA-481F-A0CC-5C6982AA1457/AudioAccessory5,1_14.2.1_18K75_Restore.ipsw",
+      "filename": "AudioAccessory5,1_14.2.1_18K75_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

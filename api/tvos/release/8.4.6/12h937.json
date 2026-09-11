@@ -1,0 +1,46 @@
+{
+  "os_key": "tvos",
+  "channel": "release",
+  "version": "8.4.6",
+  "version_label": "8.4.6",
+  "build": "12h937",
+  "released_at": "2021-09-20T18:33:25Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple TV 3 (2013)",
+      "devices": [
+        "AppleTV3,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2021/tvos/071-52935-20210917-450E306C-1332-4DCD-8601-563ED30A918D/AppleTV3,2_8.4.3_12H937_Restore.ipsw",
+      "filename": "AppleTV3,2_8.4.3_12H937_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "Apple TV 3",
+      "devices": [
+        "AppleTV3,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2021/tvos/071-52947-20210917-DBA4DD84-D360-433E-9CD7-AE71BB5FE547/AppleTV3,1_8.4.3_12H937_Restore.ipsw",
+      "filename": "AppleTV3,1_8.4.3_12H937_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

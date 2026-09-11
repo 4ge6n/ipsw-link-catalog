@@ -1,0 +1,137 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "6.1.2",
+  "version_label": "6.1.2",
+  "build": "10b146",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 5 (Global)",
+      "devices": [
+        "iPhone5,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6.1/091-0727.20130215.Prgt5/iPhone5,2_6.1.2_10B146_Restore.ipsw",
+      "filename": "iPhone5,2_6.1.2_10B146_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 5 (GSM)",
+      "devices": [
+        "iPhone5,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6.1/091-0720.20130215.Xerg4/iPhone5,1_6.1.2_10B146_Restore.ipsw",
+      "filename": "iPhone5,1_6.1.2_10B146_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 4 (GSM / 2012)",
+      "devices": [
+        "iPhone3,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6.1/091-0739.20130215.F654R/iPhone3,2_6.1.2_10B146_Restore.ipsw",
+      "filename": "iPhone3,2_6.1.2_10B146_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPod touch 5",
+      "devices": [
+        "iPod5,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6.1/091-0731.20130215.At0tt/iPod5,1_6.1.2_10B146_Restore.ipsw",
+      "filename": "iPod5,1_6.1.2_10B146_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPod touch 4",
+      "devices": [
+        "iPod4,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6.1/091-0732.20130215.Mkmt5/iPod4,1_6.1.2_10B146_Restore.ipsw",
+      "filename": "iPod4,1_6.1.2_10B146_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 4s",
+      "devices": [
+        "iPhone4,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6.1/091-0926.20130215.DaTe4/iPhone4,1_6.1.2_10B146_Restore.ipsw",
+      "filename": "iPhone4,1_6.1.2_10B146_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 4 (CDMA)",
+      "devices": [
+        "iPhone3,3"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6.1/091-0726.20130215.Npal4/iPhone3,3_6.1.2_10B146_Restore.ipsw",
+      "filename": "iPhone3,3_6.1.2_10B146_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 4 (GSM)",
+      "devices": [
+        "iPhone3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6.1/091-0722.20130215.BzrgV/iPhone3,1_6.1.2_10B146_Restore.ipsw",
+      "filename": "iPhone3,1_6.1.2_10B146_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 3GS",
+      "devices": [
+        "iPhone2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS6.1/091-0744.20130215.2E34r/iPhone2,1_6.1.2_10B146_Restore.ipsw",
+      "filename": "iPhone2,1_6.1.2_10B146_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

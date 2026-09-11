@@ -1,0 +1,62 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "16.7.16",
+  "version_label": "16.7.16",
+  "build": "20h392",
+  "released_at": "2026-05-11T17:47:23Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad 5 (WiFi)",
+      "devices": [
+        "iPad6,11",
+        "iPad6,12"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/122-76992/9EE008D2-2E68-4D3D-8FAB-DB1DFA658F99/iPad_64bit_TouchID_ASTC_16.7.16_20H392_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_ASTC_16.7.16_20H392_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro 9.7-inch (Cellular)",
+      "devices": [
+        "iPad6,3",
+        "iPad6,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/122-76793/64DF3BE2-15B0-4C3D-9E4F-9E901916C71D/iPadPro_9.7_16.7.16_20H392_Restore.ipsw",
+      "filename": "iPadPro_9.7_16.7.16_20H392_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro 12.9-inch (WiFi)",
+      "devices": [
+        "iPad6,7",
+        "iPad6,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/122-77150/627F6C0C-E3B9-4601-A438-E7A3C2401848/iPadPro_12.9_16.7.16_20H392_Restore.ipsw",
+      "filename": "iPadPro_12.9_16.7.16_20H392_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

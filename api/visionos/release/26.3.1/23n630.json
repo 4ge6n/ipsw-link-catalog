@@ -1,0 +1,46 @@
+{
+  "os_key": "visionos",
+  "channel": "release",
+  "version": "26.3.1",
+  "version_label": "26.3.1",
+  "build": "23n630",
+  "released_at": "2026-02-26T23:04:32Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple Vision Pro (M5)",
+      "devices": [
+        "RealityDevice17,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-68715/55DDDCEE-2A19-4BA8-A37E-561F4B85D5D9/Apple_Vision_Pro_M5_26.3.1_23N630_Restore.ipsw",
+      "filename": "Apple_Vision_Pro_M5_26.3.1_23N630_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "Apple Vision Pro",
+      "devices": [
+        "RealityDevice14,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-68724/DAAE2583-C9DD-4DE3-BE81-ECDE37182194/Apple_Vision_Pro_26.3.1_23N630_Restore.ipsw",
+      "filename": "Apple_Vision_Pro_26.3.1_23N630_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

@@ -1,0 +1,59 @@
+{
+  "os_key": "tvos",
+  "channel": "release",
+  "version": "7.0.2",
+  "version_label": "7.0.2",
+  "build": "11a502",
+  "released_at": "2013-09-24T00:52:03Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple TV 3 (2013)",
+      "devices": [
+        "AppleTV3,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/AppleTV/031-0457.20130923.8n2FL/AppleTV3,2_6.0_11A502_Restore.ipsw",
+      "filename": "AppleTV3,2_6.0_11A502_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "Apple TV 3",
+      "devices": [
+        "AppleTV3,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/AppleTV/031-0456.20130923.3Wtrk/AppleTV3,1_6.0_11A502_Restore.ipsw",
+      "filename": "AppleTV3,1_6.0_11A502_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "Apple TV 2G",
+      "devices": [
+        "AppleTV2,1"
+      ],
+      "url": "https://secure-appldnld.apple.com/AppleTV/031-0449.20130923.xlzdm/AppleTV2,1_6.0_11A502_Restore.ipsw",
+      "filename": "AppleTV2,1_6.0_11A502_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

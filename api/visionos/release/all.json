@@ -4,8 +4,719 @@
   "os_key": "visionos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-11T19:12:47Z",
-  "release_count": 0,
-  "firmware_count": 0,
-  "releases": []
+  "generated_at": "2026-09-11T19:15:16Z",
+  "release_count": 30,
+  "firmware_count": 38,
+  "releases": [
+    {
+      "id": "visionos-release-26.6.1-23o780",
+      "version": "26.6.1",
+      "build": "23o780",
+      "released_at": "2026-08-17T17:53:03Z",
+      "signed_firmware_count": 2,
+      "total_firmware_count": 2,
+      "data": "26.6.1/23o780.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-26.6.1-23o780-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_26.6.1_23O780_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-73454/790819ED-E7D6-4116-BB29-8BD72ACA3E35/Apple_Vision_Pro_M5_26.6.1_23O780_Restore.ipsw",
+          "signed": true
+        },
+        {
+          "id": "visionos-release-26.6.1-23o780-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.6.1_23O780_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-73755/E919F2D6-D995-4F33-A375-526573DC7565/Apple_Vision_Pro_26.6.1_23O780_Restore.ipsw",
+          "signed": true
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-26.6-23o770",
+      "version": "26.6",
+      "build": "23o770",
+      "released_at": "2026-07-27T18:20:21Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.6/23o770.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-26.6-23o770-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_26.6_23O770_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-58434/0DBA267C-D1F5-467E-B64F-B9B4F6C54DF0/Apple_Vision_Pro_M5_26.6_23O770_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-release-26.6-23o770-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.6_23O770_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-58000/4FE9CA5E-E91C-4CA2-9854-60C062C9C48A/Apple_Vision_Pro_26.6_23O770_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-26.5-23o471",
+      "version": "26.5",
+      "build": "23o471",
+      "released_at": "2026-05-11T17:32:57Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.5/23o471.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-26.5-23o471-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_26.5_23O471_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-35396/8EDEDC5B-6F93-41D1-BACE-F9324BD66DE9/Apple_Vision_Pro_M5_26.5_23O471_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-release-26.5-23o471-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.5_23O471_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-32476/EE0344BF-4A56-452D-885E-0CC80FF39D05/Apple_Vision_Pro_26.5_23O471_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-26.4-23o247",
+      "version": "26.4",
+      "build": "23o247",
+      "released_at": "2026-03-24T18:36:46Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.4/23o247.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-26.4-23o247-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_26.4_23O247_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-09141/39FA53A2-7164-4573-9FB7-0449BA6C5367/Apple_Vision_Pro_M5_26.4_23O247_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-release-26.4-23o247-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.4_23O247_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-03386/4A36E19A-B0EC-408E-98E2-172B4DBD0F46/Apple_Vision_Pro_26.4_23O247_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-26.3.1-23n630",
+      "version": "26.3.1",
+      "build": "23n630",
+      "released_at": "2026-02-26T23:04:32Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.3.1/23n630.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-26.3.1-23n630-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_26.3.1_23N630_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-68715/55DDDCEE-2A19-4BA8-A37E-561F4B85D5D9/Apple_Vision_Pro_M5_26.3.1_23N630_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-release-26.3.1-23n630-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.3.1_23N630_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-68724/DAAE2583-C9DD-4DE3-BE81-ECDE37182194/Apple_Vision_Pro_26.3.1_23N630_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-26.3-23n620",
+      "version": "26.3",
+      "build": "23n620",
+      "released_at": "2026-02-11T19:10:26Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.3/23n620.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-26.3-23n620-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_26.3_23N620_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-39096/E64A6AC2-D7D4-4037-9839-82CDC9A983ED/Apple_Vision_Pro_M5_26.3_23N620_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-release-26.3-23n620-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.3_23N620_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-39791/2FC41F00-0162-4E82-874E-52F6B7670B01/Apple_Vision_Pro_26.3_23N620_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-26.2-23n301",
+      "version": "26.2",
+      "build": "23n301",
+      "released_at": "2025-12-12T18:44:56Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.2/23n301.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-26.2-23n301-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_26.2_23N301_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-46429/B8B9260D-C88F-4D23-91E8-29DF18386092/Apple_Vision_Pro_M5_26.2_23N301_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-release-26.2-23n301-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.2_23N301_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-46444/B3B7D709-0374-486E-B875-9A2464981BF8/Apple_Vision_Pro_26.2_23N301_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-26.1-23n49",
+      "version": "26.1",
+      "build": "23n49",
+      "released_at": "2025-11-03T21:49:10Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.1/23n49.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-26.1-23n49-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.1_23N49_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/089-05075/E4F5EA36-F7AA-4D51-ADAA-A06166500092/Apple_Vision_Pro_26.1_23N49_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-release-26.1-23n49-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.1_23N49_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/089-05092/EEBA3EAB-A913-453E-89E5-2E73C2C70BDB/Apple_Vision_Pro_26.1_23N49_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-26.0.1-23m8340",
+      "version": "26.0.1",
+      "build": "23m8340",
+      "released_at": "2025-10-16T00:21:28Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.0.1/23m8340.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-26.0.1-23m8340-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.0.1_23M8340_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/082-71711/6F97B7F2-DBA7-4419-9E91-46594F90059B/Apple_Vision_Pro_26.0.1_23M8340_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-26.0.1-23m341",
+      "version": "26.0.1",
+      "build": "23m341",
+      "released_at": "2025-09-29T17:28:59Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.0.1/23m341.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-26.0.1-23m341-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.0.1_23M341_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-56502/B5C37518-F8B6-4E0A-86C4-A45E48A08FA5/Apple_Vision_Pro_26.0.1_23M341_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-26.0-23m336",
+      "version": "26.0",
+      "build": "23m336",
+      "released_at": "2025-09-15T17:32:38Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.0/23m336.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-26.0-23m336-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.0_23M336_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/052-71660/BFCC4AD1-7C76-495D-97BF-AD08D81F7FEF/Apple_Vision_Pro_26.0_23M336_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-2.6-22o785",
+      "version": "2.6",
+      "build": "22o785",
+      "released_at": "2025-07-29T17:27:58Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.6/22o785.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-2.6-22o785-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.6_22O785_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025SummerFCS/fullrestores/082-98499/B2DA8E7A-CA3B-438F-AE4C-D3969F47D597/Apple_Vision_Pro_2.6_22O785_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-2.5-22o473",
+      "version": "2.5",
+      "build": "22o473",
+      "released_at": "2025-05-12T17:12:11Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.5/22o473.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-2.5-22o473-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.5_22O473_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-44320/C1A9E952-EA7B-4A30-B0BB-CA19C1014638/Apple_Vision_Pro_2.5_22O473_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-2.4.1-22o251",
+      "version": "2.4.1",
+      "build": "22o251",
+      "released_at": "2025-04-16T17:34:54Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.4.1/22o251.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-2.4.1-22o251-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.4.1_22O251_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-18229/4EB2AB55-A3BA-477D-BA76-7C1ED5358747/Apple_Vision_Pro_2.4.1_22O251_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-2.4-22o238",
+      "version": "2.4",
+      "build": "22o238",
+      "released_at": "2025-03-31T17:33:59Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.4/22o238.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-2.4-22o238-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.4_22O238_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-16302/45F5E536-11CC-40D0-8C51-F2E41C244F46/Apple_Vision_Pro_2.4_22O238_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-2.3.2-22n906",
+      "version": "2.3.2",
+      "build": "22n906",
+      "released_at": "2025-03-11T17:51:30Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.3.2/22n906.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-2.3.2-22n906-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.3.2_22N906_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/082-01652/D988B03F-4F9E-4A5F-824C-E40C111E6776/Apple_Vision_Pro_2.3.2_22N906_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-2.3.1-22n900",
+      "version": "2.3.1",
+      "build": "22n900",
+      "released_at": "2025-02-10T18:17:52Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.3.1/22n900.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-2.3.1-22n900-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.3.1_22N900_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/072-82532/DCC01EA8-12A9-4FA6-9BDF-3113C07BC1A3/Apple_Vision_Pro_2.3.1_22N900_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-2.3-22n896",
+      "version": "2.3",
+      "build": "22n896",
+      "released_at": "2025-01-27T18:27:47Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.3/22n896.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-2.3-22n896-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.3_22N896_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/072-07164/7FF11083-1664-4324-9844-97402A2298BB/Apple_Vision_Pro_2.3_22N896_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-2.2-22n842",
+      "version": "2.2",
+      "build": "22n842",
+      "released_at": "2024-12-11T18:28:44Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.2/22n842.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-2.2-22n842-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.2_22N842_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024FallFCS/fullrestores/072-41816/C53292CF-3E32-4CD5-854B-C36861754155/Apple_Vision_Pro_2.2_22N842_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-2.1.1-22n591",
+      "version": "2.1.1",
+      "build": "22n591",
+      "released_at": "2024-11-19T18:16:32Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.1.1/22n591.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-2.1.1-22n591-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.1.1_22N591_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024FallFCS/fullrestores/072-34230/62C9AA9D-02C3-4386-AB99-85A4D13352C3/Apple_Vision_Pro_2.1.1_22N591_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-2.1-22n581",
+      "version": "2.1",
+      "build": "22n581",
+      "released_at": "2024-10-28T15:27:31Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.1/22n581.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-2.1-22n581-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.1_22N581_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024FallFCS/fullrestores/072-10799/07AE397F-B034-4CB4-BFE9-D5EB7CB794CC/Apple_Vision_Pro_2.1_22N581_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-2.0.1-22n342",
+      "version": "2.0.1",
+      "build": "22n342",
+      "released_at": "2024-10-03T21:27:21Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.0.1/22n342.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-2.0.1-22n342-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.0.1_22N342_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024FallFCS/fullrestores/072-01448/C04437C6-F9D4-4188-9D08-04C30AE32360/Apple_Vision_Pro_2.0.1_22N342_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-2.0-22n320",
+      "version": "2.0",
+      "build": "22n320",
+      "released_at": "2024-09-16T17:28:59Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.0/22n320.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-2.0-22n320-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.0_22N320_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024FallFCS/fullrestores/062-78392/FF14AD56-2171-42AA-9AE4-0F9DAD4944D3/Apple_Vision_Pro_2.0_22N320_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-1.3-21o771",
+      "version": "1.3",
+      "build": "21o771",
+      "released_at": "2024-07-29T20:28:35Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "1.3/21o771.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-1.3-21o771-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_1.3_21O771_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024SummerFCS/fullrestores/052-82515/A579D6D0-D619-48F6-A1B5-A9E91A82807A/Apple_Vision_Pro_1.3_21O771_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-1.2-21o589",
+      "version": "1.2",
+      "build": "21o589",
+      "released_at": "2024-06-10T19:08:21Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "1.2/21o589.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-1.2-21o589-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_1.2_21O589_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024SpringFCS/fullrestores/062-06768/159FD60D-3382-4C17-9A73-994DB12FA55F/Apple_Vision_Pro_1.2_21O589_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-1.1.2-21o231",
+      "version": "1.1.2",
+      "build": "21o231",
+      "released_at": "2024-04-09T17:05:18Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "1.1.2/21o231.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-1.1.2-21o231-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_1.1.2_21O231_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/052-80705/AD73D595-15D5-4594-ABCF-9418F055EA02/Apple_Vision_Pro_1.1.2_21O231_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-1.1.1-21o224",
+      "version": "1.1.1",
+      "build": "21o224",
+      "released_at": "2024-03-21T17:20:31Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "1.1.1/21o224.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-1.1.1-21o224-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_1.1.1_21O224_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/052-74211/07D56E3C-1668-49B6-B780-4CAB9B831F6A/Apple_Vision_Pro_1.1.1_21O224_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-1.1-21o211",
+      "version": "1.1",
+      "build": "21o211",
+      "released_at": "2024-03-07T18:11:04Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "1.1/21o211.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-1.1-21o211-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_1.1_21O211_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/052-63601/2D7183DF-BE7B-4F3B-A57E-A49976203208/Apple_Vision_Pro_1.1_21O211_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-1.0.3-21n333",
+      "version": "1.0.3",
+      "build": "21n333",
+      "released_at": "2024-02-12T18:16:18Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "1.0.3/21n333.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-1.0.3-21n333-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_1.0.3_21N333_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/052-51979/E792C162-7F26-4233-937C-F3A5D1448CF9/Apple_Vision_Pro_1.0.3_21N333_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-release-1.0.2-21n323",
+      "version": "1.0.2",
+      "build": "21n323",
+      "released_at": "2024-01-31T18:17:33Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "1.0.2/21n323.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-1.0.2-21n323-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_1.0.2_21N323_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/052-42089/5E57235E-AE60-46DC-8078-F2486FEC66EA/Apple_Vision_Pro_1.0.2_21N323_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    }
+  ]
 }

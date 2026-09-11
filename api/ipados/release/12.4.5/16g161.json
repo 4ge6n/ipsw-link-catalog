@@ -1,0 +1,53 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "12.4.5",
+  "version_label": "12.4.5",
+  "build": "16g161",
+  "released_at": "2020-01-28T18:02:39Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad mini 3 (WiFi)",
+      "devices": [
+        "iPad4,7",
+        "iPad4,8",
+        "iPad4,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterFCS/fullrestores/061-62175/5CE40058-84CF-4E77-8A30-5A3C9F93E6DE/iPad_64bit_TouchID_12.4.5_16G161_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_12.4.5_16G161_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPad mini 2 (WiFi)",
+      "devices": [
+        "iPad4,1",
+        "iPad4,2",
+        "iPad4,3",
+        "iPad4,4",
+        "iPad4,5",
+        "iPad4,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterFCS/fullrestores/061-62206/7EF847AB-1887-4270-8329-48FF8D3D8D8B/iPad_64bit_12.4.5_16G161_Restore.ipsw",
+      "filename": "iPad_64bit_12.4.5_16G161_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

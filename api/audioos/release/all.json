@@ -4,8 +4,1090 @@
   "os_key": "audioos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-11T19:12:47Z",
-  "release_count": 0,
-  "firmware_count": 0,
-  "releases": []
+  "generated_at": "2026-09-11T19:15:16Z",
+  "release_count": 51,
+  "firmware_count": 52,
+  "releases": [
+    {
+      "id": "audioos-release-26.6-23l773",
+      "version": "26.6",
+      "build": "23l773",
+      "released_at": "2026-07-27T17:37:58Z",
+      "signed_firmware_count": 2,
+      "total_firmware_count": 2,
+      "data": "26.6/23l773.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-26.6-23l773-AudioAccessory6,1",
+          "name": "HomePod (2nd generation)",
+          "devices": [
+            "AudioAccessory6,1"
+          ],
+          "filename": "AudioAccessory6,1_26.6_23L773_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-67230/6F3201AA-E34C-478C-B4B5-5B86B54DA1E0/AudioAccessory6,1_26.6_23L773_Restore.ipsw",
+          "signed": true
+        },
+        {
+          "id": "audioos-release-26.6-23l773-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_26.6_23L773_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-67259/44F8A245-A169-4917-872D-E57B32140013/AudioAccessory5,1_26.6_23L773_Restore.ipsw",
+          "signed": true
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-26.5-23l471",
+      "version": "26.5",
+      "build": "23l471",
+      "released_at": "2026-05-11T17:47:57Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.5/23l471.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-26.5-23l471-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_26.5_23L471_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-40034/C2B2422A-6010-46B6-AF80-6D766EABA8D2/AudioAccessory5,1_26.5_23L471_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-26.4-23l243",
+      "version": "26.4",
+      "build": "23l243",
+      "released_at": "2026-03-24T17:39:40Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.4/23l243.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-26.4-23l243-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_26.4_23L243_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-09868/3CA41570-B9A1-4582-B6B9-D9AE494C36A7/AudioAccessory5,1_26.4_23L243_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-26.3-23k620",
+      "version": "26.3",
+      "build": "23k620",
+      "released_at": "2026-02-11T18:34:21Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.3/23k620.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-26.3-23k620-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_26.3_23K620_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-56710/D3018599-F0D8-48F0-A6A4-C6D63A4853A4/AudioAccessory5,1_26.3_23K620_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-26.2-23k54",
+      "version": "26.2",
+      "build": "23k54",
+      "released_at": "2025-12-22T18:04:17Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.2/23k54.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-26.2-23k54-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_26.2_23K54_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/089-85655/A48FB75F-8F11-4BCD-A46F-7A514188C809/AudioAccessory5,1_26.2_23K54_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-26.1-23j582",
+      "version": "26.1",
+      "build": "23j582",
+      "released_at": "2025-11-03T21:45:32Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.1/23j582.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-26.1-23j582-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_26.1_23J582_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/089-05941/E7446740-0614-4CEF-878F-8CCC3727B919/AudioAccessory5,1_26.1_23J582_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-26.0.1-23j362",
+      "version": "26.0.1",
+      "build": "23j362",
+      "released_at": "2025-09-29T17:43:57Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.0.1/23j362.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-26.0.1-23j362-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_26.0.1_23J362_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025SummerFCS/fullrestores/093-51907/A0EF8114-36A5-49F2-A60C-0D62104D1A26/AudioAccessory5,1_26.0.1_23J362_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-26.0-23j353",
+      "version": "26.0",
+      "build": "23j353",
+      "released_at": "2025-09-15T17:06:20Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.0/23j353.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-26.0-23j353-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_26.0_23J353_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025SummerFCS/fullrestores/093-42650/8C753B8D-3512-4687-BB26-43E3FE22405D/AudioAccessory5,1_26.0_23J353_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-18.6-22m84",
+      "version": "18.6",
+      "build": "22m84",
+      "released_at": "2025-07-29T18:40:50Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.6/22m84.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-18.6-22m84-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_18.6_22M84_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025SummerFCS/fullrestores/082-08354/EF7642CA-525A-46C4-9A0B-1CD098E6779E/AudioAccessory5,1_18.6_22M84_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-18.5-22l572",
+      "version": "18.5",
+      "build": "22l572",
+      "released_at": "2025-05-12T17:18:21Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.5/22l572.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-18.5-22l572-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_18.5_22L572_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-43134/E88DD501-F078-4EA1-8020-1354F9EE048D/AudioAccessory5,1_18.5_22L572_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-18.4.1-22l261",
+      "version": "18.4.1",
+      "build": "22l261",
+      "released_at": "2025-04-16T19:26:01Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.4.1/22l261.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-18.4.1-22l261-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_18.4.1_22L261_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/082-18616/F73DCDBB-F669-4A5F-8B24-D710941CAD61/AudioAccessory5,1_18.4.1_22L261_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-18.4-22l255",
+      "version": "18.4",
+      "build": "22l255",
+      "released_at": "2025-03-31T17:30:12Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.4/22l255.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-18.4-22l255-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_18.4_22L255_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/082-16102/A3496A44-CD42-4AA4-8E3E-7CA1E5BC380D/AudioAccessory5,1_18.4_22L255_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-18.3-22k557",
+      "version": "18.3",
+      "build": "22k557",
+      "released_at": "2025-01-27T18:55:14Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.3/22k557.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-18.3-22k557-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_18.3_22K557_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/072-04693/4324D4B3-3A02-4ED1-B9F1-BB70E19A9BF5/AudioAccessory5,1_18.3_22K557_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-18.2-22k155",
+      "version": "18.2",
+      "build": "22k155",
+      "released_at": "2024-12-11T18:47:10Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.2/22k155.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-18.2-22k155-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_18.2_22K155_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/072-39470/0DC4617F-09DB-47B4-894D-773D5770C890/AudioAccessory5,1_18.2_22K155_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-18.1-22j580",
+      "version": "18.1",
+      "build": "22j580",
+      "released_at": "2024-10-28T17:33:15Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.1/22j580.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-18.1-22j580-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_18.1_22J580_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024FallFCS/fullrestores/072-10554/C99AF01B-446C-4790-89FB-36FB60876039/AudioAccessory5,1_18.1_22J580_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-18.0-22j357",
+      "version": "18.0",
+      "build": "22j357",
+      "released_at": "2024-09-16T17:19:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.0/22j357.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-18.0-22j357-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_18.0_22J357_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024SummerFCS/fullrestores/062-77125/DFC20194-35F4-4608-A1B6-5BDCD5792E0E/AudioAccessory5,1_18.0_22J357_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-17.6-21m71",
+      "version": "17.6",
+      "build": "21m71",
+      "released_at": "2024-07-29T20:41:08Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.6/21m71.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-17.6-21m71-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_17.6_21M71_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024SummerFCS/fullrestores/052-80884/3DBDC834-367D-46A4-A66E-AC8D946A1461/AudioAccessory5,1_17.6_21M71_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-17.5-21l569",
+      "version": "17.5",
+      "build": "21l569",
+      "released_at": "2024-05-13T18:05:38Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.5/21l569.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-17.5-21l569-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_17.5_21L569_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024SpringFCS/fullrestores/052-39004/F0C66661-0C5F-45A9-A2EF-587911668474/AudioAccessory5,1_17.5_21L569_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-17.4-21l227",
+      "version": "17.4",
+      "build": "21l227",
+      "released_at": "2024-03-07T19:05:10Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.4/21l227.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-17.4-21l227-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_17.4_21L227_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/032-53442/00CC3DD6-C14A-4674-BD82-5B4B4B1432C8/AudioAccessory5,1_17.4_21L227_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-17.3-21k646",
+      "version": "17.3",
+      "build": "21k646",
+      "released_at": "2024-01-22T18:59:01Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.3/21k646.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-17.3-21k646-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_17.3_21K646_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/042-76192/3B7E9C25-ED97-4C49-A9AB-B037FCAADBED/AudioAccessory5,1_17.3_21K646_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-17.2-21k365",
+      "version": "17.2",
+      "build": "21k365",
+      "released_at": "2023-12-11T18:58:34Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.2/21k365.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-17.2-21k365-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_17.2_21K365_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/052-15437/4A4CF1EC-570F-40EF-A602-750A30FE2542/AudioAccessory5,1_17.2_21K365_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-17.1.1-21k82",
+      "version": "17.1.1",
+      "build": "21k82",
+      "released_at": "2023-11-08T18:58:23Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.1.1/21k82.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-17.1.1-21k82-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_17.1.1_21K82_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/042-97195/0F1E9418-2D1D-487E-B7EE-14AF40AAD536/AudioAccessory5,1_17.1.1_21K82_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-17.1-21k69",
+      "version": "17.1",
+      "build": "21k69",
+      "released_at": "2023-10-25T17:36:31Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.1/21k69.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-17.1-21k69-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_17.1_21K69_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/042-83639/D11E65D1-5411-4474-85F6-C7D5FE7F0A37/AudioAccessory5,1_17.1_21K69_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-17.0-21j354",
+      "version": "17.0",
+      "build": "21j354",
+      "released_at": "2023-09-18T19:08:33Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.0/21j354.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-17.0-21j354-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_17.0_21J354_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/002-77931/5B34E80D-B1C3-40B4-92F2-9C25339D65EB/AudioAccessory5,1_17.0_21J354_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-16.6-20m73",
+      "version": "16.6",
+      "build": "20m73",
+      "released_at": "2023-07-24T18:16:42Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.6/20m73.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-16.6-20m73-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_16.6_20M73_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023SummerFCS/fullrestores/042-18164/D31B08E6-F017-4225-B93B-CC78F9CA6F9D/AudioAccessory5,1_16.6_20M73_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-16.5-20l563",
+      "version": "16.5",
+      "build": "20l563",
+      "released_at": "2023-05-18T18:14:17Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.5/20l563.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-16.5-20l563-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_16.5_20L563_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023SpringFCS/fullrestores/032-84450/071D7B4F-C30E-4804-9599-CD85DFC01DF4/AudioAccessory5,1_16.5_20L563_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-16.4.1-20l498",
+      "version": "16.4.1",
+      "build": "20l498",
+      "released_at": "2023-04-12T18:41:54Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.4.1/20l498.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-16.4.1-20l498-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_16.4.1_20L498_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-66629/A942E686-6962-4A22-A241-3B4B9D816C8A/AudioAccessory5,1_16.4.1_20L498_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-16.4-20l497",
+      "version": "16.4",
+      "build": "20l497",
+      "released_at": "2023-03-27T18:24:31Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.4/20l497.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-16.4-20l497-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_16.4_20L497_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-65865/EFEAB952-C4A3-45C5-824D-364CA9643753/AudioAccessory5,1_16.4_20L497_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-16.3.2-20k672",
+      "version": "16.3.2",
+      "build": "20k672",
+      "released_at": "2023-02-13T18:50:35Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.3.2/20k672.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-16.3.2-20k672-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_16.3.2_20K672_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-46105/9D46B73D-6391-4948-B522-B29D115F7698/AudioAccessory5,1_16.3.2_20K672_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-16.3.1-20k661",
+      "version": "16.3.1",
+      "build": "20k661",
+      "released_at": "2023-02-06T18:52:54Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.3.1/20k661.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-16.3.1-20k661-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_16.3.1_20K661_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-44445/CBE5853E-541B-4C52-96EC-0E0F678A5235/AudioAccessory5,1_16.3.1_20K661_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-16.3-20k649",
+      "version": "16.3",
+      "build": "20k649",
+      "released_at": "2023-01-24T19:17:24Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.3/20k649.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-16.3-20k649-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_16.3_20K649_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-35433/F659D7B8-CEDE-4D75-9D96-FD1E43E73522/AudioAccessory5,1_16.3_20K649_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-16.2-20k362",
+      "version": "16.2",
+      "build": "20k362",
+      "released_at": "2022-12-13T18:45:11Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.2/20k362.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-16.2-20k362-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_16.2_20K362_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022WinterFCS/fullrestores/012-62434/A53CF85A-903D-479C-A45D-F534C7B45169/AudioAccessory5,1_16.2_20K362_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-16.1-20k71",
+      "version": "16.1",
+      "build": "20k71",
+      "released_at": "2022-10-24T18:25:32Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.1/20k71.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-16.1-20k71-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_16.1_20K71_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FallFCS/fullrestores/012-37026/E1D31033-6AE1-4E40-83A4-03C2ABBD0BA2/AudioAccessory5,1_16.1_20K71_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-16.0-20j373",
+      "version": "16.0",
+      "build": "20j373",
+      "released_at": "2022-09-12T17:38:23Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.0/20j373.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-16.0-20j373-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_16.0_20J373_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FallFCS/fullrestores/071-16069/F4FF19C8-25A4-4F9A-A902-46A31BFCA69F/AudioAccessory5,1_16.0_20J373_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-15.6-19m65",
+      "version": "15.6",
+      "build": "19m65",
+      "released_at": "2022-07-20T16:44:45Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.6/19m65.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-15.6-19m65-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_15.6_19M65_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FCSSummer/fullrestores/012-41803/9750343B-BCA9-4FF7-BD01-B2E75F1D9734/AudioAccessory5,1_15.6_19M65_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-15.5.1-19l580",
+      "version": "15.5.1",
+      "build": "19l580",
+      "released_at": "2022-05-25T16:43:10Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.5.1/19l580.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-15.5.1-19l580-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_15.5.1_19L580_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FCSSpring/fullrestores/012-11878/F6CC6C19-5DC2-4AF5-B58C-39ECEFF4128A/AudioAccessory5,1_15.5.1_19L580_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-15.5-19l570",
+      "version": "15.5",
+      "build": "19l570",
+      "released_at": "2022-05-16T18:23:46Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.5/19l570.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-15.5-19l570-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_15.5_19L570_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FCSSpring/fullrestores/002-53892/4705F59B-47F5-430B-8D2F-1EF9D36AB2CE/AudioAccessory5,1_15.5_19L570_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-15.4.1-19l452",
+      "version": "15.4.1",
+      "build": "19l452",
+      "released_at": "2022-03-31T16:45:46Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.4.1/19l452.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-15.4.1-19l452-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_15.4.1_19L452_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FCSWinter/fullrestores/002-82880/68A76681-76AD-483B-9F10-ED2AFA21013A/AudioAccessory5,1_15.4.1_19L452_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-15.4-19l440",
+      "version": "15.4",
+      "build": "19l440",
+      "released_at": "2022-03-14T16:48:18Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.4/19l440.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-15.4-19l440-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_15.4_19L440_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FCSWinter/fullrestores/071-05891/E1B66580-478B-4517-A128-ED6B87956E60/AudioAccessory5,1_15.4_19L440_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-15.3-19k547",
+      "version": "15.3",
+      "build": "19k547",
+      "released_at": "2022-01-26T18:02:33Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.3/19k547.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-15.3-19k547-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_15.3_19K547_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FCSWinter/fullrestores/002-56675/8589E44F-C93F-410C-B81C-0C2ECF04210E/AudioAccessory5,1_15.3_19K547_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-15.2-19k52",
+      "version": "15.2",
+      "build": "19k52",
+      "released_at": "2021-12-13T17:46:01Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.2/19k52.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-15.2-19k52-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_15.2_19K52_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021FCSWinter/fullrestores/071-93727/F505D53E-EFC6-42B2-BAC6-C3CFBB6BDDAC/AudioAccessory5,1_15.2_19K52_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-15.1.1-19j582",
+      "version": "15.1.1",
+      "build": "19j582",
+      "released_at": "2021-11-03T17:08:28Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.1.1/19j582.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-15.1.1-19j582-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_15.1.1_19J582_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021FCSFall/fullrestores/002-30167/FDF89B7E-DF25-4CA0-AEF9-DB04109390D1/AudioAccessory5,1_15.1.1_19J582_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-15.1-19j572",
+      "version": "15.1",
+      "build": "19j572",
+      "released_at": "2021-10-25T20:28:56Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.1/19j572.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-15.1-19j572-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_15.1_19J572_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021FCSFall/fullrestores/002-21878/7A6E1414-7FD5-4EF6-A7AD-897E23A94274/AudioAccessory5,1_15.1_19J572_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-15-19j346",
+      "version": "15",
+      "build": "19j346",
+      "released_at": "2021-09-20T18:33:25Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15/19j346.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-15-19j346-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_15.0_19J346_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021FallFCS/fullrestores/071-91546/3B39CCC4-235E-4CCE-BC0D-2AF558F04802/AudioAccessory5,1_15.0_19J346_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-14.7-18m60",
+      "version": "14.7",
+      "build": "18m60",
+      "released_at": "2021-07-19T17:20:50Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.7/18m60.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-14.7-18m60-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_14.7_18M60_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021SummerFCS/fullrestores/071-21028/886C037D-DCA1-4638-BB74-378F8C0FA2CA/AudioAccessory5,1_14.7_18M60_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-14.6-18l569",
+      "version": "14.6",
+      "build": "18l569",
+      "released_at": "2021-05-24T16:47:56Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.6/18l569.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-14.6-18l569-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_14.6_18L569_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021SpringFCS/fullrestores/071-43986/005D18F8-CE7D-4C2D-BF9F-4941A5530315/AudioAccessory5,1_14.6_18L569_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-14.5-18l203",
+      "version": "14.5",
+      "build": "18l203",
+      "released_at": "2021-04-26T16:43:27Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.5/18l203.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-14.5-18l203-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_14.5_18L203_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021SpringFCS/fullrestores/061-87481/DD73B5B6-1416-46E0-9601-AEFCE89B8B74/AudioAccessory5,1_14.5_18L203_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-14.4-18k802",
+      "version": "14.4",
+      "build": "18k802",
+      "released_at": "2021-01-26T18:06:13Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.4/18k802.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-14.4-18k802-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_14.4_18K802_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021WinterFCS/fullrestores/001-63500/CFD3C027-B5D9-4F06-91BB-FB29BF2C1807/AudioAccessory5,1_14.4_18K802_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-14.3-18k563",
+      "version": "14.3",
+      "build": "18k563",
+      "released_at": "2020-12-15T17:59:11Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.3/18k563.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-14.3-18k563-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_14.3_18K563_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020WinterFCS/fullrestores/001-88390/AD84FD14-E210-4E26-AFF7-42ABE73D5969/AudioAccessory5,1_14.3_18K563_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-14.2.1-18k75",
+      "version": "14.2.1",
+      "build": "18k75",
+      "released_at": "2020-12-07T17:59:54Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.2.1/18k75.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-14.2.1-18k75-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_14.2.1_18K75_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-82561/9A9B0278-B1DA-481F-A0CC-5C6982AA1457/AudioAccessory5,1_14.2.1_18K75_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "audioos-release-14.2-18k60",
+      "version": "14.2",
+      "build": "18k60",
+      "released_at": "2020-11-05T17:58:35Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.2/18k60.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-14.2-18k60-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_14.2_18K60_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-66898/1D29E896-4E37-42FD-B653-1A167D6FF054/AudioAccessory5,1_14.2_18K60_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    }
+  ]
 }

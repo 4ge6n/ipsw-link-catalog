@@ -4,8 +4,3483 @@
   "os_key": "tvos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-11T19:12:47Z",
-  "release_count": 0,
-  "firmware_count": 0,
-  "releases": []
+  "generated_at": "2026-09-11T19:15:16Z",
+  "release_count": 144,
+  "firmware_count": 189,
+  "releases": [
+    {
+      "id": "tvos-release-26.6-23l773",
+      "version": "26.6",
+      "build": "23l773",
+      "released_at": "2026-07-27T17:38:00Z",
+      "signed_firmware_count": 1,
+      "total_firmware_count": 1,
+      "data": "26.6/23l773.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-26.6-23l773-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_26.6_23L773_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-67287/F525C1FF-B49B-40AB-A5F4-A6F4A4847407/AppleTV5,3_26.6_23L773_Restore.ipsw",
+          "signed": true
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-26.5-23l471",
+      "version": "26.5",
+      "build": "23l471",
+      "released_at": "2026-05-11T17:47:21Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.5/23l471.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-26.5-23l471-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_26.5_23L471_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-64098/A0A4490F-9E0E-4407-BE36-3494FF6B4D95/AppleTV5,3_26.5_23L471_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-26.4-23l243",
+      "version": "26.4",
+      "build": "23l243",
+      "released_at": "2026-03-24T17:40:03Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.4/23l243.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-26.4-23l243-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_26.4_23L243_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-08593/F0601BF7-7C8B-4680-B738-689433313B42/AppleTV5,3_26.4_23L243_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-26.3-23k620",
+      "version": "26.3",
+      "build": "23k620",
+      "released_at": "2026-02-11T18:34:22Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.3/23k620.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-26.3-23k620-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_26.3_23K620_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/089-59495/6689ECF8-1BE4-4250-BECB-5BB9AE719DC0/AppleTV5,3_26.3_23K620_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-26.2-23k54",
+      "version": "26.2",
+      "build": "23k54",
+      "released_at": "2025-12-22T18:04:17Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.2/23k54.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-26.2-23k54-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_26.2_23K54_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/089-85588/F9BECFA2-3616-49DE-B86A-0C493BF15E11/AppleTV5,3_26.2_23K54_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-26.1-23j582",
+      "version": "26.1",
+      "build": "23j582",
+      "released_at": "2025-11-03T21:45:31Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.1/23j582.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-26.1-23j582-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_26.1_23J582_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/089-05798/3E650CCB-3510-4C45-9134-6425034014BA/AppleTV5,3_26.1_23J582_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-26.0.1-23j362",
+      "version": "26.0.1",
+      "build": "23j362",
+      "released_at": "2025-09-29T17:43:54Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.0.1/23j362.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-26.0.1-23j362-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_26.0.1_23J362_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025SummerFCS/fullrestores/093-51988/79B88066-7048-4940-A812-E3A5116B462E/AppleTV5,3_26.0.1_23J362_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-26.0-23j353",
+      "version": "26.0",
+      "build": "23j353",
+      "released_at": "2025-09-15T17:06:20Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.0/23j353.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-26.0-23j353-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_26.0_23J353_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025SummerFCS/fullrestores/093-42599/27732B55-233E-4677-80E6-1DB7EB0384CB/AppleTV5,3_26.0_23J353_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-18.6-22m84",
+      "version": "18.6",
+      "build": "22m84",
+      "released_at": "2025-07-29T18:40:51Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.6/22m84.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-18.6-22m84-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_18.6_22M84_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025SummerFCS/fullrestores/082-08349/11D21C13-7DDF-4DA6-AB45-33EDC13BBAD2/AppleTV5,3_18.6_22M84_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-18.5-22l572",
+      "version": "18.5",
+      "build": "22l572",
+      "released_at": "2025-05-12T17:18:25Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.5/22l572.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-18.5-22l572-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_18.5_22L572_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-42831/5F6949AE-E54D-4071-80B8-D0B49D1A4A01/AppleTV5,3_18.5_22L572_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-18.4.1-22l261",
+      "version": "18.4.1",
+      "build": "22l261",
+      "released_at": "2025-04-16T19:26:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.4.1/22l261.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-18.4.1-22l261-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_18.4.1_22L261_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/082-18823/FD194F3E-447B-4F49-86C5-97ADC5EDCE00/AppleTV5,3_18.4.1_22L261_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-18.4-22l255",
+      "version": "18.4",
+      "build": "22l255",
+      "released_at": "2025-03-31T17:30:14Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.4/22l255.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-18.4-22l255-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_18.4_22L255_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/082-16196/4430AE2A-BAA7-4275-AD36-11E33AE583E6/AppleTV5,3_18.4_22L255_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-18.3.1-22k561",
+      "version": "18.3.1",
+      "build": "22k561",
+      "released_at": "2025-03-11T17:34:53Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.3.1/22k561.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-18.3.1-22k561-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_18.3.1_22K561_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/082-05839/77CD5E7E-6017-4698-AA9B-634651F7A8CE/AppleTV5,3_18.3.1_22K561_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-18.3-22k557",
+      "version": "18.3",
+      "build": "22k557",
+      "released_at": "2025-01-27T18:55:16Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.3/22k557.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-18.3-22k557-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_18.3_22K557_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/072-04700/BD0D53A2-D1D6-4321-A4CE-19CB8F237D50/AppleTV5,3_18.3_22K557_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-18.2.1-22k160",
+      "version": "18.2.1",
+      "build": "22k160",
+      "released_at": "2025-01-16T22:22:56Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.2.1/22k160.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-18.2.1-22k160-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_18.2.1_22K160_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/072-44180/33E6A9DB-1347-49CA-A3ED-4E6C93BE6952/AppleTV5,3_18.2.1_22K160_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-18.2-22k155",
+      "version": "18.2",
+      "build": "22k155",
+      "released_at": "2024-12-11T18:47:13Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.2/22k155.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-18.2-22k155-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_18.2_22K155_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/072-39621/3EFD96FD-B998-4E55-9CF4-32D9E69FBFD9/AppleTV5,3_18.2_22K155_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-18.1-22j580",
+      "version": "18.1",
+      "build": "22j580",
+      "released_at": "2024-10-28T17:33:14Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.1/22j580.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-18.1-22j580-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_18.1_22J580_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024FallFCS/fullrestores/072-10659/6F6AC086-236B-4B67-B915-23E1F53A00D8/AppleTV5,3_18.1_22J580_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-18.0-22j357",
+      "version": "18.0",
+      "build": "22j357",
+      "released_at": "2024-09-16T17:18:49Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "18.0/22j357.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-18.0-22j357-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_18.0_22J357_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024SummerFCS/fullrestores/062-77153/F1ACEA50-629D-4544-8357-305415481405/AppleTV5,3_18.0_22J357_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-17.6.1-21m80",
+      "version": "17.6.1",
+      "build": "21m80",
+      "released_at": "2024-08-19T17:59:49Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.6.1/21m80.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-17.6.1-21m80-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_17.6.1_21M80_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024SummerFCS/fullrestores/062-52542/B6A7E948-76E4-4BD2-8A8C-77C80DADAB3C/AppleTV5,3_17.6.1_21M80_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-17.6-21m71",
+      "version": "17.6",
+      "build": "21m71",
+      "released_at": "2024-07-29T20:41:12Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.6/21m71.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-17.6-21m71-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_17.6_21M71_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024SummerFCS/fullrestores/052-80874/C1704385-4B55-4D46-B8DE-D3A6DA3AE514/AppleTV5,3_17.6_21M71_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-17.5.1-21l580",
+      "version": "17.5.1",
+      "build": "21l580",
+      "released_at": "2024-05-21T20:21:58Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.5.1/21l580.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-17.5.1-21l580-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_17.5.1_21L580_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024SpringFCS/fullrestores/062-04920/3DEF031C-67C0-4F4E-8B8C-E64126DD8B89/AppleTV5,3_17.5.1_21L580_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-17.5-21l569",
+      "version": "17.5",
+      "build": "21l569",
+      "released_at": "2024-05-13T18:05:37Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.5/21l569.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-17.5-21l569-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_17.5_21L569_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024SpringFCS/fullrestores/052-38968/6C134276-8610-495A-98EE-BE3EE7F4ECC8/AppleTV5,3_17.5_21L569_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-17.4-21l227",
+      "version": "17.4",
+      "build": "21l227",
+      "released_at": "2024-03-07T19:05:10Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.4/21l227.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-17.4-21l227-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_17.4_21L227_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/032-53412/3254A4D8-C457-4636-9F99-86650458C35A/AppleTV5,3_17.4_21L227_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-17.3-21k646",
+      "version": "17.3",
+      "build": "21k646",
+      "released_at": "2024-01-22T18:58:59Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.3/21k646.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-17.3-21k646-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_17.3_21K646_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/042-76229/5FCF1690-C794-405A-ADE7-E81921A46028/AppleTV5,3_17.3_21K646_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-17.2-21k365",
+      "version": "17.2",
+      "build": "21k365",
+      "released_at": "2023-12-11T18:58:34Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.2/21k365.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-17.2-21k365-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_17.2_21K365_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/052-15408/9B221821-ED48-43CA-8663-5BB2AAA13B07/AppleTV5,3_17.2_21K365_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-17.1-21k69",
+      "version": "17.1",
+      "build": "21k69",
+      "released_at": "2023-10-25T17:36:32Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.1/21k69.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-17.1-21k69-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_17.1_21K69_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/042-83727/CE095362-ACC4-4A6C-9A8A-B7C91E862864/AppleTV5,3_17.1_21K69_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-17.0-21j354",
+      "version": "17.0",
+      "build": "21j354",
+      "released_at": "2023-09-18T19:08:45Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "17.0/21j354.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-17.0-21j354-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_17.0_21J354_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/002-77883/6A48B51B-36BE-4CF6-8B7C-35667D3F3FC0/AppleTV5,3_17.0_21J354_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-16.6-20m73",
+      "version": "16.6",
+      "build": "20m73",
+      "released_at": "2023-07-24T18:16:41Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.6/20m73.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-16.6-20m73-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_16.6_20M73_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023SummerFCS/fullrestores/042-18272/3CE91CB7-2332-42B7-AEF8-37478A767E90/AppleTV5,3_16.6_20M73_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-16.5-20l563",
+      "version": "16.5",
+      "build": "20l563",
+      "released_at": "2023-05-18T18:14:19Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.5/20l563.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-16.5-20l563-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_16.5_20L563_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023SpringFCS/fullrestores/032-84506/72EEA836-F876-402E-9792-58686D97E8E7/AppleTV5,3_16.5_20L563_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-16.4.1-20l498",
+      "version": "16.4.1",
+      "build": "20l498",
+      "released_at": "2023-04-12T18:41:54Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.4.1/20l498.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-16.4.1-20l498-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_16.4.1_20L498_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-66740/0988E0B5-0ECE-4C81-939E-ECD1A8065337/AppleTV5,3_16.4.1_20L498_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-16.4-20l497",
+      "version": "16.4",
+      "build": "20l497",
+      "released_at": "2023-03-27T18:24:28Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.4/20l497.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-16.4-20l497-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_16.4_20L497_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-65974/4E98239D-91B5-4485-8D1E-ACAF38003F39/AppleTV5,3_16.4_20L497_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-16.3.2-20k672",
+      "version": "16.3.2",
+      "build": "20k672",
+      "released_at": "2023-02-13T18:50:38Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.3.2/20k672.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-16.3.2-20k672-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_16.3.2_20K672_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-45949/5EA291D7-70A8-4648-BD89-A3EC63CA64B6/AppleTV5,3_16.3.2_20K672_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-16.3.1-20k661",
+      "version": "16.3.1",
+      "build": "20k661",
+      "released_at": "2023-02-06T18:52:55Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.3.1/20k661.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-16.3.1-20k661-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_16.3.1_20K661_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-44376/62A9902B-31A5-4C1D-948E-EF6041A1B5E8/AppleTV5,3_16.3.1_20K661_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-16.3-20k650",
+      "version": "16.3",
+      "build": "20k650",
+      "released_at": "2023-01-24T19:17:24Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.3/20k650.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-16.3-20k650-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_16.3_20K650_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-35546/0AA6B88D-D66B-4095-A19B-5831013D46C7/AppleTV5,3_16.3_20K650_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-16.2-20k362",
+      "version": "16.2",
+      "build": "20k362",
+      "released_at": "2022-12-13T18:45:14Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.2/20k362.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-16.2-20k362-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_16.2_20K362_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022WinterFCS/fullrestores/012-62470/AF38755F-FBD2-44D5-A48E-C3E6A66F94BD/AppleTV5,3_16.2_20K362_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-16.1-20k71",
+      "version": "16.1",
+      "build": "20k71",
+      "released_at": "2022-10-24T18:25:34Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.1/20k71.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-16.1-20k71-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_16.1_20K71_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FallFCS/fullrestores/012-37047/221EE266-BE62-456A-9A17-4C89A98A7E97/AppleTV5,3_16.1_20K71_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-16.0-20j373",
+      "version": "16.0",
+      "build": "20j373",
+      "released_at": "2022-09-12T17:38:25Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "16.0/20j373.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-16.0-20j373-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_16.0_20J373_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FallFCS/fullrestores/071-16071/EF103FFF-EB65-4CFF-B560-01556A8BF483/AppleTV5,3_16.0_20J373_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-15.6-19m65",
+      "version": "15.6",
+      "build": "19m65",
+      "released_at": "2022-07-20T16:44:48Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.6/19m65.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-15.6-19m65-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_15.6_19M65_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FCSSummer/fullrestores/012-41832/450CB9F5-376C-4D26-8DC5-70E6011E269F/AppleTV5,3_15.6_19M65_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-15.5.1-19l580",
+      "version": "15.5.1",
+      "build": "19l580",
+      "released_at": "2022-05-25T16:43:10Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.5.1/19l580.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-15.5.1-19l580-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_15.5.1_19L580_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FCSSpring/fullrestores/012-11999/0BC09492-1A41-4E85-B4A3-0C22F025588F/AppleTV5,3_15.5.1_19L580_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-15.5-19l570",
+      "version": "15.5",
+      "build": "19l570",
+      "released_at": "2022-05-16T18:23:47Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.5/19l570.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-15.5-19l570-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_15.5_19L570_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FCSSpring/fullrestores/002-53921/A9E8284A-FB60-40CF-B1D2-A03E9FB502E2/AppleTV5,3_15.5_19L570_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-15.4.1-19l452",
+      "version": "15.4.1",
+      "build": "19l452",
+      "released_at": "2022-03-31T16:45:52Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.4.1/19l452.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-15.4.1-19l452-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_15.4.1_19L452_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FCSWinter/fullrestores/002-82887/6CDA7A9F-0866-417F-A440-E95C8D8A863B/AppleTV5,3_15.4.1_19L452_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-15.4-19l440",
+      "version": "15.4",
+      "build": "19l440",
+      "released_at": "2022-03-14T16:48:28Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.4/19l440.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-15.4-19l440-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_15.4_19L440_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022FCSWinter/fullrestores/071-05901/6C60FB17-938B-4FD6-8E67-1FD2C2F0E3C7/AppleTV5,3_15.4_19L440_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-15.3-19k547",
+      "version": "15.3",
+      "build": "19k547",
+      "released_at": "2022-01-26T18:02:16Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.3/19k547.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-15.3-19k547-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_15.3_19K547_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022WinterFCS/fullrestores/002-56658/4D53FF52-33F9-4078-8BA1-5FF58BECC43E/AppleTV5,3_15.3_19K547_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-15.2-19k53",
+      "version": "15.2",
+      "build": "19k53",
+      "released_at": "2021-12-13T17:46:04Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.2/19k53.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-15.2-19k53-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_15.2_19K53_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021FCSWinter/fullrestores/002-42259/7287E730-2149-4393-BE1A-88EE3D032CF6/AppleTV5,3_15.2_19K53_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-15.1.1-19j581",
+      "version": "15.1.1",
+      "build": "19j581",
+      "released_at": "2021-11-01T16:58:18Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.1.1/19j581.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-15.1.1-19j581-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_15.1.1_19J581_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021FCSFall/fullrestores/002-28303/82304E58-2271-4B41-A4CC-C8A6E38D3CB2/AppleTV5,3_15.1.1_19J581_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-15.1-19j572",
+      "version": "15.1",
+      "build": "19j572",
+      "released_at": "2021-10-25T20:29:01Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15.1/19j572.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-15.1-19j572-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_15.1_19J572_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021FCSFall/fullrestores/071-55663/100F0C91-8B98-419B-B54B-F88610EEBF7B/AppleTV5,3_15.1_19J572_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-15-19j346",
+      "version": "15",
+      "build": "19j346",
+      "released_at": "2021-09-20T18:33:23Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "15/19j346.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-15-19j346-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_15.0_19J346_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021FallFCS/fullrestores/061-79034/80EA56E3-09AF-405F-A35E-E9157F8DBA5D/AppleTV5,3_15.0_19J346_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-14.7-18m60",
+      "version": "14.7",
+      "build": "18m60",
+      "released_at": "2021-07-19T17:20:50Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.7/18m60.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-14.7-18m60-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_14.7_18M60_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021SummerFCS/fullrestores/071-21018/44074CDE-BB78-4AFB-A928-BF05CD304FF6/AppleTV5,3_14.7_18M60_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-14.6-18l569",
+      "version": "14.6",
+      "build": "18l569",
+      "released_at": "2021-05-24T16:48:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.6/18l569.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-14.6-18l569-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_14.6_18L569_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021SpringFCS/fullrestores/071-43992/4374DE93-2C0E-40A0-A67C-BAD58EAB15F8/AppleTV5,3_14.6_18L569_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-14.5-18l204",
+      "version": "14.5",
+      "build": "18l204",
+      "released_at": "2021-04-26T16:43:19Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.5/18l204.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-14.5-18l204-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_14.5_18L204_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021SpringFCS/fullrestores/061-87489/B0FE78F0-FC69-4306-AD8D-A157254B0673/AppleTV5,3_14.5_18L204_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-14.4-18k802",
+      "version": "14.4",
+      "build": "18k802",
+      "released_at": "2021-01-26T18:06:12Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.4/18k802.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-14.4-18k802-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_14.4_18K802_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021WinterFCS/fullrestores/001-63495/FEDB9811-3541-4B63-9A25-F6DFF7CBB645/AppleTV5,3_14.4_18K802_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-14.3-18k561",
+      "version": "14.3",
+      "build": "18k561",
+      "released_at": "2020-12-14T17:59:46Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.3/18k561.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-14.3-18k561-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_14.3_18K561_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020WinterFCS/fullrestores/001-43762/07BBCC09-C919-4301-A2F5-52DB60DBC476/AppleTV5,3_14.3_18K561_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-14.2-18k57",
+      "version": "14.2",
+      "build": "18k57",
+      "released_at": "2020-11-05T17:58:29Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.2/18k57.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-14.2-18k57-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_14.2_18K57_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-19905/DBD18749-514B-48F0-B5A3-EC4DD4E5E7CC/AppleTV5,3_14.2_18K57_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-14.0.2-18j411",
+      "version": "14.0.2",
+      "build": "18j411",
+      "released_at": "2020-10-20T17:15:41Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.0.2/18j411.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-14.0.2-18j411-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_14.0.2_18J411_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020SummerFCS/fullrestores/001-54465/918828DB-5914-48C5-A572-087BECC27F3D/AppleTV5,3_14.0.2_18J411_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-14.0.1-18j400",
+      "version": "14.0.1",
+      "build": "18j400",
+      "released_at": "2020-09-24T17:51:25Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.0.1/18j400.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-14.0.1-18j400-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_14.0.1_18J400_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020SummerFCS/fullrestores/001-52036/B7FC361C-5088-4AAE-86FE-D0C46E938C0A/AppleTV5,3_14.0.1_18J400_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-14.0-18j386",
+      "version": "14.0",
+      "build": "18j386",
+      "released_at": "2020-09-16T19:40:40Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "14.0/18j386.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-14.0-18j386-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_14.0_18J386_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020SummerFCS/fullrestores/041-32406/CEA5A7EB-2514-4EA3-B872-E3AB19716E11/AppleTV5,3_14.0_18J386_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-13.5-17l562",
+      "version": "13.5",
+      "build": "17l562",
+      "released_at": "2020-05-20T16:56:52Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "13.5/17l562.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-13.5-17l562-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_13.4.5_17L562_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020SpringFCS/fullrestores/061-72609/C5665D36-7FEF-415C-9AF4-7BCE5CE56BEA/AppleTV5,3_13.4.5_17L562_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-13.4.8-17m61",
+      "version": "13.4.8",
+      "build": "17m61",
+      "released_at": "2020-07-15T17:05:20Z",
+      "signed_firmware_count": 1,
+      "total_firmware_count": 1,
+      "data": "13.4.8/17m61.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-13.4.8-17m61-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_13.4.8_17M61_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/061-92142/5EB0BEFA-C8BC-4FF4-949A-D37D8776EEF1/AppleTV5,3_13.4.8_17M61_Restore.ipsw",
+          "signed": true
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-13.4.6-17l570",
+      "version": "13.4.6",
+      "build": "17l570",
+      "released_at": "2020-06-01T17:06:17Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "13.4.6/17l570.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-13.4.6-17l570-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_13.4.6_17L570_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020SpringFCS/fullrestores/001-11250/629E2A68-A044-11EA-ABF2-EEE8B8CC84AB/AppleTV5,3_13.4.6_17L570_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-13.4-17l256",
+      "version": "13.4",
+      "build": "17l256",
+      "released_at": "2020-03-24T16:59:10Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "13.4/17l256.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-13.4-17l256-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_13.4_17L256_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020WinterFCS/fullrestores/041-43668/21C6BAA8-64B4-11EA-9EF9-C607EA8B25A1/AppleTV5,3_13.4_17L256_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-13.3.1-17k795",
+      "version": "13.3.1",
+      "build": "17k795",
+      "released_at": "2020-01-28T18:02:47Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "13.3.1/17k795.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-13.3.1-17k795-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_13.3.1_17K795_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020WinterFCS/fullrestores/061-39522/5CDC4844-C561-4A9D-88AC-3A531287CF06/AppleTV5,3_13.3.1_17K795_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-13.3-17k449",
+      "version": "13.3",
+      "build": "17k449",
+      "released_at": "2019-12-10T17:56:46Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "13.3/17k449.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-13.3-17k449-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_13.3_17K449_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019FallFCS/fullrestores/061-15782/7D3368AA-155E-11EA-83EA-D594B72B93E4/AppleTV5,3_13.3_17K449_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-13.2-17k82",
+      "version": "13.2",
+      "build": "17k82",
+      "released_at": "2019-10-28T17:02:17Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "13.2/17k82.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-13.2-17k82-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_13.2_17K82_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019FallFCS/fullrestores/041-76475/C03239C2-F481-11E9-9C28-995F89ADDEE8/AppleTV5,3_13.2_17K82_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-13.0-17j586",
+      "version": "13.0",
+      "build": "17j586",
+      "released_at": "2019-09-24T17:03:06Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "13.0/17j586.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-13.0-17j586-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_13.0_17J586_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019FallFCS/fullrestores/041-27805/6EDF4240-DA1E-11E9-92D8-AA1D28A7D92D/AppleTV5,3_13.0_17J586_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-12.4.1-16m600",
+      "version": "12.4.1",
+      "build": "16m600",
+      "released_at": "2019-08-26T19:48:27Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "12.4.1/16m600.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-12.4.1-16m600-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_12.4.1_16M600_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019SummerFCS/fullrestores/041-91795/ED224D66-C504-11E9-B4E3-B37B60D5CE4B/AppleTV5,3_12.4.1_16M600_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-12.4-16m568",
+      "version": "12.4",
+      "build": "16m568",
+      "released_at": "2019-07-22T17:12:43Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "12.4/16m568.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-12.4-16m568-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_12.4_16M568_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019SummerFCS/fullrestores/041-54964/5CFFBD12-A426-11E9-A555-E7FA185D694F/AppleTV5,3_12.4_16M568_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-12.3-16m153",
+      "version": "12.3",
+      "build": "16m153",
+      "released_at": "2019-05-13T16:59:47Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "12.3/16m153.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-12.3-16m153-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_12.3_16M153_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019SpringFCS/fullrestores/041-07579/A662944A-70F8-11E9-A951-93AB143EC7EC/AppleTV5,3_12.3_16M153_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-12.2.1-16l250",
+      "version": "12.2.1",
+      "build": "16l250",
+      "released_at": "2019-04-10T23:18:02Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "12.2.1/16l250.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-12.2.1-16l250-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_12.2.1_16L250_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019SpringFCS/fullrestores/041-55543/29FABA6A-5A49-11E9-80D0-0FD51B8AACE3/AppleTV5,3_12.2.1_16L250_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-12.2-16l226",
+      "version": "12.2",
+      "build": "16l226",
+      "released_at": "2019-03-25T19:14:04Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "12.2/16l226.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-12.2-16l226-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_12.2_16L226_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019SpringFCS/fullrestores/091-78610/A10D1486-49A0-11E9-8A6D-35861C975B73/AppleTV5,3_12.2_16L226_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-12.1.1-16k45",
+      "version": "12.1.1",
+      "build": "16k45",
+      "released_at": "2018-12-05T17:59:16Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "12.1.1/16k45.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-12.1.1-16k45-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_12.1.1_16K45_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2018FallFCS/fullrestores/041-05201/3EA9A658-F33B-11E8-A686-9226FC884586/AppleTV5,3_12.1.1_16K45_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-12.1-16j602",
+      "version": "12.1",
+      "build": "16j602",
+      "released_at": "2018-10-30T17:09:50Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "12.1/16j602.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-12.1-16j602-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_12.1_16J602_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2018FallFCS/fullrestores/091-90779/F720FB1A-D6DE-11E8-8E6B-8EAF432F9BCF/AppleTV5,3_12.1_16J602_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-12.0.1-16j380",
+      "version": "12.0.1",
+      "build": "16j380",
+      "released_at": "2018-09-24T17:06:59Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "12.0.1/16j380.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-12.0.1-16j380-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_12.0.1_16J380_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2018FallFCS/fullrestores/041-08754/B8EF4842-BE83-11E8-9B95-8DAC670A742F/AppleTV5,3_12.0.1_16J380_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-12.0-16j364",
+      "version": "12.0",
+      "build": "16j364",
+      "released_at": "2018-09-17T17:05:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "12.0/16j364.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-12.0-16j364-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_12.0_16J364_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2018FallFCS/fullrestores/091-62602/ECAE0C62-AC8C-11E8-BEAA-FD5745E6A746/AppleTV5,3_12.0_16J364_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-11.4.1-15m73",
+      "version": "11.4.1",
+      "build": "15m73",
+      "released_at": "2018-07-09T17:07:13Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "11.4.1/15m73.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-11.4.1-15m73-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_11.4.1_15M73_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2018/tvos/091-73040-20180709-39AF81A0-7C1B-11E8-BFD6-5557544C24EB/AppleTV5,3_11.4.1_15M73_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-11.4-15l577",
+      "version": "11.4",
+      "build": "15l577",
+      "released_at": "2018-05-29T17:03:29Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "11.4/15l577.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-11.4-15l577-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_11.4_15L577_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2018/tvos/091-65364-20180529-C5AEAD16-5AB5-11E8-A840-752442FD93D5/AppleTV5,3_11.4_15L577_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-11.3-15l211",
+      "version": "11.3",
+      "build": "15l211",
+      "released_at": "2018-03-29T17:07:24Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "11.3/15l211.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-11.3-15l211-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_11.3_15L211_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos11.3/091-45726-201803029-8EA84462-2B9E-11E8-936C-EE5C04115E15/AppleTV5,3_11.3_15L211_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-11.2.6-15k600",
+      "version": "11.2.6",
+      "build": "15k600",
+      "released_at": "2018-02-19T21:32:31Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "11.2.6/15k600.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-11.2.6-15k600-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_11.2.6_15K600_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos11.2.6/091-70058-20180220-9EE97426-1335-11E8-BC69-D0A6E0A71A1F/AppleTV5,3_11.2.6_15K600_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-11.2.5-15k552",
+      "version": "11.2.5",
+      "build": "15k552",
+      "released_at": "2018-01-23T18:02:24Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "11.2.5/15k552.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-11.2.5-15k552-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_11.2.5_15K552_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos11.2.5/091-39274-20180122-53A42726-FAFE-11E7-AA64-27642C55F105/AppleTV5,3_11.2.5_15K552_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-11.2.1-15k152",
+      "version": "11.2.1",
+      "build": "15k152",
+      "released_at": "2017-12-13T18:02:19Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "11.2.1/15k152.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-11.2.1-15k152-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_11.2.1_15K152_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos11.2.1/091-55968-20171213-A1B14924-DDF0-11E7-8351-65D73E58CDD2/AppleTV5,3_11.2.1_15K152_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-11.2-15k106",
+      "version": "11.2",
+      "build": "15k106",
+      "released_at": "2017-12-04T18:07:44Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "11.2/15k106.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-11.2-15k106-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_11.2_15K106_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos11.2/091-51265-20171204-CE2A0AB0-D4CA-11E7-A3A2-76502EDC3D3E/AppleTV5,3_11.2_15K106_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-11.1-15j582",
+      "version": "11.1",
+      "build": "15j582",
+      "released_at": "2017-10-31T17:38:27Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "11.1/15j582.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-11.1-15j582-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_11.1_15J582_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos11.1/091-19200-20171030-6454C934-B906-11E7-8129-FF5DBDA7E146/AppleTV5,3_11.1_15J582_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-11.0-15j381",
+      "version": "11.0",
+      "build": "15j381",
+      "released_at": "2017-09-19T17:15:16Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "11.0/15j381.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-11.0-15j381-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_11.0_15J381_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos11/091-32536-20170912-5ACCEDF2-9641-11E7-BEDA-F982B54D2808/AppleTV5,3_11.0_15J381_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-10.2.2-14w756",
+      "version": "10.2.2",
+      "build": "14w756",
+      "released_at": "2017-07-19T17:06:37Z",
+      "signed_firmware_count": 1,
+      "total_firmware_count": 1,
+      "data": "10.2.2/14w756.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-10.2.2-14w756-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_10.2.2_14W756_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos10.2.2/091-23452-20170720-5D53229C-6A56-11E7-8577-8B2C4A4DD6D5/AppleTV5,3_10.2.2_14W756_Restore.ipsw",
+          "signed": true
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-10.2.1-14w585a",
+      "version": "10.2.1",
+      "build": "14w585a",
+      "released_at": "2017-05-15T17:13:48Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "10.2.1/14w585a.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-10.2.1-14w585a-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_10.2.1_14W585a_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos10.2.1/031-93360-20170515-3502FD70-3442-11E7-B3DB-E56B2DBC0DB3/AppleTV5,3_10.2.1_14W585a_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-10.2-14w265",
+      "version": "10.2",
+      "build": "14w265",
+      "released_at": "2017-03-27T17:25:28Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "10.2/14w265.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-10.2-14w265-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_10.2_14W265_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos10.2/031-52186-20170320-71EFBAE0-0B37-11E7-804A-A4A7FF9FED6C/AppleTV5,3_10.2_14W265_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-10.1.1-14u712a",
+      "version": "10.1.1",
+      "build": "14u712a",
+      "released_at": "2017-01-23T17:58:22Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "10.1.1/14u712a.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-10.1.1-14u712a-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_10.1.1_14U712a_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos10.1.1/031-86873-20170117-B837ADDC-D950-11E6-B0D8-F31FD55B5B9D/AppleTV5,3_10.1.1_14U712a_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-10.1-14u593",
+      "version": "10.1",
+      "build": "14u593",
+      "released_at": "2016-12-12T17:55:27Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "10.1/14u593.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-10.1-14u593-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_10.1_14U593_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos10.1/031-69370-20161205-23778294-B8C1-11E6-95A5-C74CE47229E1/AppleTV5,3_10.1_14U593_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-10.0.1-14u100",
+      "version": "10.0.1",
+      "build": "14u100",
+      "released_at": "2016-11-14T17:47:55Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "10.0.1/14u100.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-10.0.1-14u100-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_10.0.1_14U100_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos10.0.1/031-91431-20161109-3F9F616A-A770-11E6-BD96-A8C6F9858D7F/AppleTV5,3_10.0.1_14U100_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-10.0.1-14u71",
+      "version": "10.0.1",
+      "build": "14u71",
+      "released_at": "2016-10-24T17:20:40Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "10.0.1/14u71.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-10.0.1-14u71-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_10.0.1_14U71_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos10.0.1/031-59447-20161024-AA217A0A-9483-11E6-A69F-635E80A31755/AppleTV5,3_10.0.1_14U71_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-10.0-14t330",
+      "version": "10.0",
+      "build": "14t330",
+      "released_at": "2016-09-13T16:56:41Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "10.0/14t330.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-10.0-14t330-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_10.0_14T330_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos10.0/031-76856-20160916-B770B2D0-722C-11E6-8D32-1C4033D2D062/AppleTV5,3_10.0_14T330_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-9.2.2-13y825",
+      "version": "9.2.2",
+      "build": "13y825",
+      "released_at": "2016-07-18T17:07:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "9.2.2/13y825.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-9.2.2-13y825-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_9.2.2_13Y825_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvOS9.2.2/031-59012-20160718-EF9FAF26-42FC-11E6-BF52-BED4C1708330/AppleTV5,3_9.2.2_13Y825_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-9.2.1-13y772",
+      "version": "9.2.1",
+      "build": "13y772",
+      "released_at": "2016-05-16T16:51:42Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "9.2.1/13y772.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-9.2.1-13y772-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_9.2.1_13Y772_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos9.2.1/031-46327-20160516-FFB07AF6-13CE-11E6-AE7B-93E0400DF7EB/AppleTV5,3_9.2.1_13Y772_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-9.2-13y234",
+      "version": "9.2",
+      "build": "13y234",
+      "released_at": "2016-03-21T19:10:51Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "9.2/13y234.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-9.2-13y234-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_9.2_13Y234_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvOS9.2/031-35933-20160321-7C5F40E6-E7B5-11E5-92FF-5A5CBD379832/AppleTV5,3_9.2_13Y234_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-9.1.1-13u717",
+      "version": "9.1.1",
+      "build": "13u717",
+      "released_at": "2016-01-25T18:56:14Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "9.1.1/13u717.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-9.1.1-13u717-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_9.1.1_13U717_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos9.1.1/031-49466-20160125-A31FCFA8-C068-11E5-97DF-0E0A1F993B90/AppleTV5,3_9.1.1_13U717_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-9.1-13u85",
+      "version": "9.1",
+      "build": "13u85",
+      "released_at": "2015-12-08T18:19:23Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "9.1/13u85.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-9.1-13u85-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_9.1_13U85_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos9.1/031-32682-20151208-2B49C4A0-9ABD-11E5-8CE9-A56EF5563FD9/AppleTV5,3_9.1_13U85_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-9.0.1-13t402",
+      "version": "9.0.1",
+      "build": "13t402",
+      "released_at": "2015-11-09T18:22:09Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "9.0.1/13t402.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-9.0.1-13t402-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_9.0.1_13T402_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos9.0.1/031-42666-20151109-9980F56E-8367-11E5-986E-6F228B8BECEB/AppleTV5,3_9.0.1_13T402_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-9.0-13t396",
+      "version": "9.0",
+      "build": "13t396",
+      "released_at": "2015-10-29T19:59:04Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "9.0/13t396.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-9.0-13t396-AppleTV5,3",
+          "name": "Apple TV 4 (2015)",
+          "devices": [
+            "AppleTV5,3"
+          ],
+          "filename": "AppleTV5,3_9.0_13T396_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvos9.0/031-24288-20151028-1BE4479A-7DDC-11E5-BDEE-974E5942017F/AppleTV5,3_9.0_13T396_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.4.7-12h1006",
+      "version": "8.4.7",
+      "build": "12h1006",
+      "released_at": "2022-03-14T16:48:40Z",
+      "signed_firmware_count": 2,
+      "total_firmware_count": 2,
+      "data": "8.4.7/12h1006.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.4.7-12h1006-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_8.4.3_12H1006_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022/ios/002-77717-20220309-806B4BF8-FF71-4485-9BB8-3E2D10E3D1D8/AppleTV3,2_8.4.3_12H1006_Restore.ipsw",
+          "signed": true
+        },
+        {
+          "id": "tvos-release-8.4.7-12h1006-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_8.4.3_12H1006_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022/ios/002-77725-20220309-8070E2E2-28B3-463C-96F0-A6FAC4D86F1D/AppleTV3,1_8.4.3_12H1006_Restore.ipsw",
+          "signed": true
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.4.6-12h937",
+      "version": "8.4.6",
+      "build": "12h937",
+      "released_at": "2021-09-20T18:33:25Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.4.6/12h937.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.4.6-12h937-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_8.4.3_12H937_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021/tvos/071-52935-20210917-450E306C-1332-4DCD-8601-563ED30A918D/AppleTV3,2_8.4.3_12H937_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.4.6-12h937-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_8.4.3_12H937_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021/tvos/071-52947-20210917-DBA4DD84-D360-433E-9CD7-AE71BB5FE547/AppleTV3,1_8.4.3_12H937_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.4.6-12h923",
+      "version": "8.4.6",
+      "build": "12h923",
+      "released_at": "2021-04-26T16:43:33Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.4.6/12h923.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.4.6-12h923-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_8.4.3_12H923_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021/ios/001-92170-20210409-DF2D0CCF-9F04-4AD1-852F-574A99C21B5C/AppleTV3,2_8.4.3_12H923_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.4.6-12h923-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_8.4.3_12H923_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2021/ios/001-92157-20210409-83508A08-0FA7-48CA-ADEF-FB36139BC388/AppleTV3,1_8.4.3_12H923_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.4.6-12h914",
+      "version": "8.4.6",
+      "build": "12h914",
+      "released_at": "2020-12-14T17:59:56Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.4.6/12h914.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.4.6-12h914-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_8.4.3_12H914_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020/tvos/001-77041-20201209-B0114EE7-A0DB-4C9B-840B-F7710F961842/AppleTV3,2_8.4.3_12H914_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.4.6-12h914-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_8.4.3_12H914_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020/tvos/001-77039-20201209-ED3EF4C9-51F7-4702-A191-6B65BA02CAD5/AppleTV3,1_8.4.3_12H914_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.4.3-12h911",
+      "version": "8.4.3",
+      "build": "12h911",
+      "released_at": "2020-11-05T17:58:30Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.4.3/12h911.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.4.3-12h911-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_8.4.3_12H911_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020/tvos/001-48396-20201029-4E3C6B94-2514-4DAE-9029-132F699D715C/AppleTV3,2_8.4.3_12H911_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.4.3-12h911-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_8.4.3_12H911_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020/tvos/001-48397-20201029-4D978193-78D9-4322-8F24-98879C48BAF0/AppleTV3,1_8.4.3_12H911_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.4.3-12h903",
+      "version": "8.4.3",
+      "build": "12h903",
+      "released_at": "2020-09-16T19:40:41Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.4.3/12h903.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.4.3-12h903-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_8.4.3_12H903_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020/tvos/061-96675-20200909-B83D405A-CE98-41EF-A8BF-5405721B7BA8/AppleTV3,2_8.4.3_12H903_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.4.3-12h903-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_8.4.3_12H903_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020/tvos/061-96669-20200909-B810074C-884B-4A5E-A12E-568E1B175103/AppleTV3,1_8.4.3_12H903_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.4.3-12h885",
+      "version": "8.4.3",
+      "build": "12h885",
+      "released_at": "2020-03-24T16:58:11Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.4.3/12h885.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.4.3-12h885-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_8.4.3_12H885_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020/ios/061-27784-20200313-6EA1D1F6-A6E5-40CB-8C61-B9680241903C/AppleTV3,2_8.4.3_12H885_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.4.3-12h885-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_8.4.3_12H885_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2020/ios/061-27779-20200313-223AE952-C353-4450-8003-BF58137FE070/AppleTV3,1_8.4.3_12H885_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.4.3-12h876",
+      "version": "8.4.3",
+      "build": "12h876",
+      "released_at": "2019-09-24T17:03:02Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.4.3/12h876.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.4.3-12h876-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_8.4.3_12H876_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019/tvos/061-00127-20190924-FC366B34-EB36-4943-8A0E-0A24E7815D7C/AppleTV3,2_8.4.3_12H876_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.4.3-12h876-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_8.4.3_12H876_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019/tvos/061-00124-44C62A96-A04F-4F25-8BC9-B3FF5293D347/AppleTV3,1_8.4.3_12H876_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.4.2-12h864",
+      "version": "8.4.2",
+      "build": "12h864",
+      "released_at": "2019-07-22T17:08:33Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.4.2/12h864.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.4.2-12h864-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_8.4.2_12H864_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019/tvos/041-76798-20190722-12121477-BA5E-46C8-AE8D-23B4535F6445/AppleTV3,2_8.4.2_12H864_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.4.2-12h864-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_8.4.2_12H864_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019/tvos/041-76803-20190722-5234D381-DB13-4028-86A5-61F1A6BFF42C/AppleTV3,1_8.4.2_12H864_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.4.2-12h847",
+      "version": "8.4.2",
+      "build": "12h847",
+      "released_at": "2019-05-13T16:59:44Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.4.2/12h847.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.4.2-12h847-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_8.4.2_12H847_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019/tvos/041-62816-56ACC183-47FA-4558-956C-7FDB13A60ADA/AppleTV3,2_8.4.2_12H847_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.4.2-12h847-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_8.4.2_12H847_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2019/tvos/041-62819-53ABD3AF-1DA3-454A-9535-FA675F304720/AppleTV3,1_8.4.2_12H847_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.4.2-12h606",
+      "version": "8.4.2",
+      "build": "12h606",
+      "released_at": "2016-12-12T17:55:20Z",
+      "signed_firmware_count": 2,
+      "total_firmware_count": 2,
+      "data": "8.4.2/12h606.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.4.2-12h606-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_8.4.2_12H606_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-84121-20161212-123095D6-B59A-11E6-A84D-CE194F99B54B/AppleTV3,2_8.4.2_12H606_Restore.ipsw",
+          "signed": true
+        },
+        {
+          "id": "tvos-release-8.4.2-12h606-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_8.4.2_12H606_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-84128-20161212-12309AA4-B59A-11E6-AD42-AA1AE37229E1/AppleTV3,1_8.4.2_12H606_Restore.ipsw",
+          "signed": true
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.4.1-12h523",
+      "version": "8.4.1",
+      "build": "12h523",
+      "released_at": "2016-02-25T18:48:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.4.1/12h523.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.4.1-12h523-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_8.4.1_12H523_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-51865-20160222-FB060B6E-D725-11E5-877A-8985919DCAD8/AppleTV3,2_8.4.1_12H523_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.4.1-12h523-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_8.4.1_12H523_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-51855-20160222-F7CF70F2-D725-11E5-8497-6A85919DCAD8/AppleTV3,1_8.4.1_12H523_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.3-12f69",
+      "version": "8.3",
+      "build": "12f69",
+      "released_at": "2015-04-08T18:27:42Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.3/12f69.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.3-12f69-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_7.1_12F69_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/ios8.3/031-14801-20150408-42992F42-D8B7-11E4-9F0A-CE1A90F2D2C2/AppleTV3,2_7.1_12F69_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.3-12f69-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_7.1_12F69_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/ios8.3/031-14765-20150408-4298A52C-D8B7-11E4-83B8-C61A90F2D2C2/AppleTV3,1_7.1_12F69_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.2-12d508",
+      "version": "8.2",
+      "build": "12d508",
+      "released_at": "2015-03-09T18:56:03Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.2/12d508.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.2-12d508-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_7.1_12D508_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/ios8.2/031-06605-20150309-BF438052-C1FF-11E4-984E-B4823780E501/AppleTV3,2_7.1_12D508_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.2-12d508-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_7.1_12D508_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/ios8.2/031-06595-20150309-AEA8E822-C1FF-11E4-B722-13823780E501/AppleTV3,1_7.1_12D508_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.1.3-12b466",
+      "version": "8.1.3",
+      "build": "12b466",
+      "released_at": "2015-01-27T18:08:02Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.1.3/12b466.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.1.3-12b466-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_7.0.2_12B466_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/ios8.1.3/031-12798-20150119-8A3A2684-A005-11E4-ABBD-23565BAA4ECA/AppleTV3,2_7.0.2_12B466_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.1.3-12b466-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_7.0.2_12B466_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/ios8.1.3/031-12766-20150119-8A3917A8-A005-11E4-95D1-21565BAA4ECA/AppleTV3,1_7.0.2_12B466_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.1.1-12b435",
+      "version": "8.1.1",
+      "build": "12b435",
+      "released_at": "2014-11-17T17:58:58Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.1.1/12b435.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.1.1-12b435-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_7.0.2_12B435_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS8.1.1/031-10067.20141117.3p1i6/AppleTV3,2_7.0.2_12B435_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.1.1-12b435-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_7.0.2_12B435_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS8.1.1/031-10021.20141117.MMEwU/AppleTV3,1_7.0.2_12B435_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.1-12b410a",
+      "version": "8.1",
+      "build": "12b410a",
+      "released_at": "2014-10-20T17:56:02Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.1/12b410a.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.1-12b410a-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_7.0.1_12B410a_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS8.1/031-08978.20141014.2VB2l/AppleTV3,2_7.0.1_12B410a_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.1-12b410a-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_7.0.1_12B410a_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS8.1/031-08971.20141014.kdG8W/AppleTV3,1_7.0.1_12B410a_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-8.0-12a365b",
+      "version": "8.0",
+      "build": "12a365b",
+      "released_at": "2014-09-17T17:59:02Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "8.0/12a365b.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-8.0-12a365b-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_7.0_12A365b_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS8/031-05663.20140917.n2Zd6/AppleTV3,2_7.0_12A365b_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-8.0-12a365b-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_7.0_12A365b_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS8/031-05613.20140917.R9AQa/AppleTV3,1_7.0_12A365b_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-7.1.2-11d258",
+      "version": "7.1.2",
+      "build": "11d258",
+      "released_at": "2014-09-17T17:59:02Z",
+      "signed_firmware_count": 1,
+      "total_firmware_count": 1,
+      "data": "7.1.2/11d258.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-7.1.2-11d258-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_6.2.1_11D258_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS8/031-07202.20140917.tF6Fs/AppleTV2,1_6.2.1_11D258_Restore.ipsw",
+          "signed": true
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-7.1.2-11d257c",
+      "version": "7.1.2",
+      "build": "11d257c",
+      "released_at": "2014-06-30T18:28:55Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 3,
+      "data": "7.1.2/11d257c.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-7.1.2-11d257c-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_6.2_11D257c_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7.1/031-04308.20140630.epLLm/AppleTV3,2_6.2_11D257c_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.1.2-11d257c-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_6.2_11D257c_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7.1/031-04312.20140630.bTHzT/AppleTV3,1_6.2_11D257c_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.1.2-11d257c-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_6.2_11D257c_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7.1/031-04317.20140630.2qAFy/AppleTV2,1_6.2_11D257c_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-7.1.1-11d201c",
+      "version": "7.1.1",
+      "build": "11d201c",
+      "released_at": "2014-04-22T17:46:07Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 3,
+      "data": "7.1.1/11d201c.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-7.1.1-11d201c-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_6.1.1_11D201c_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7.1/031-01465.20140422.a3J6p/AppleTV3,2_6.1.1_11D201c_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.1.1-11d201c-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_6.1.1_11D201c_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7.1/031-01429.20140422.xMMUT/AppleTV3,1_6.1.1_11D201c_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.1.1-11d201c-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_6.1.1_11D201c_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7.1/031-01311.20140422.EaugX/AppleTV2,1_6.1.1_11D201c_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-7.1-11d169b",
+      "version": "7.1",
+      "build": "11d169b",
+      "released_at": "2014-03-10T17:57:27Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 3,
+      "data": "7.1/11d169b.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-7.1-11d169b-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_6.1_11D169b_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7.1/031-4699.20140310.7L5wE/AppleTV3,2_6.1_11D169b_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.1-11d169b-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_6.1_11D169b_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7.1/031-4643.20140310.5wEEO/AppleTV3,1_6.1_11D169b_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.1-11d169b-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_6.1_11D169b_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7.1/031-4478.20140310.XDdib/AppleTV2,1_6.1_11D169b_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-7.0.6-11b651",
+      "version": "7.0.6",
+      "build": "11b651",
+      "released_at": "2014-02-21T17:51:05Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 3,
+      "data": "7.0.6/11b651.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-7.0.6-11b651-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_6.0.2_11B651_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7/031-3039.20140221.8j5GW/AppleTV3,2_6.0.2_11B651_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.0.6-11b651-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_6.0.2_11B651_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7/031-3021.20140221.8j5GW/AppleTV3,1_6.0.2_11B651_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.0.6-11b651-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_6.0.2_11B651_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7/031-2955.20140221.8j5GW/AppleTV2,1_6.0.2_11B651_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-7.0.4-11b554a",
+      "version": "7.0.4",
+      "build": "11b554a",
+      "released_at": "2013-11-15T02:23:58Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 3,
+      "data": "7.0.4/11b554a.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-7.0.4-11b554a-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_6.0.2_11B554a_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7/031-1850.20131114.P3wE4/AppleTV3,2_6.0.2_11B554a_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.0.4-11b554a-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_6.0.2_11B554a_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7/031-1834.20131114.P3wE4/AppleTV3,1_6.0.2_11B554a_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.0.4-11b554a-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_6.0.2_11B554a_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS7/031-1765.20131114.P3wE4/AppleTV2,1_6.0.2_11B554a_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-7.0.3-11b511d",
+      "version": "7.0.3",
+      "build": "11b511d",
+      "released_at": "2013-10-24T20:59:04Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 3,
+      "data": "7.0.3/11b511d.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-7.0.3-11b511d-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_6.0.1_11B511d_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/091-8994.20131024.BbedF/AppleTV3,2_6.0.1_11B511d_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.0.3-11b511d-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_6.0.1_11B511d_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/091-8951.20131024.mvt4t/AppleTV3,1_6.0.1_11B511d_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.0.3-11b511d-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_6.0.1_11B511d_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/091-8981.20131024.CoPt5/AppleTV2,1_6.0.1_11B511d_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-7.0.2-11a502",
+      "version": "7.0.2",
+      "build": "11a502",
+      "released_at": "2013-09-24T00:52:03Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 3,
+      "data": "7.0.2/11a502.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-7.0.2-11a502-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_6.0_11A502_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/031-0457.20130923.8n2FL/AppleTV3,2_6.0_11A502_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.0.2-11a502-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_6.0_11A502_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/031-0456.20130923.3Wtrk/AppleTV3,1_6.0_11A502_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.0.2-11a502-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_6.0_11A502_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/031-0449.20130923.xlzdm/AppleTV2,1_6.0_11A502_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-7.0.1-11a470e",
+      "version": "7.0.1",
+      "build": "11a470e",
+      "released_at": "2013-09-20T19:12:02Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 3,
+      "data": "7.0.1/11a470e.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-7.0.1-11a470e-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_6.0_11A470e_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/031-0406.20130919.AZNiA/AppleTV3,2_6.0_11A470e_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.0.1-11a470e-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_6.0_11A470e_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/031-0405.20130919.DgLvd/AppleTV3,1_6.0_11A470e_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-7.0.1-11a470e-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_6.0_11A470e_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/031-0397.20130919.4ovPq/AppleTV2,1_6.0_11A470e_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-6.1.4-10b809",
+      "version": "6.1.4",
+      "build": "10b809",
+      "released_at": null,
+      "signed_firmware_count": 2,
+      "total_firmware_count": 3,
+      "data": "6.1.4/10b809.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-6.1.4-10b809-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_5.3_10B809_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/091-5259.20130618.90Rft/AppleTV3,2_5.3_10B809_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-6.1.4-10b809-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_5.3_10B809_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/091-5257.20130618.Eu5uy/AppleTV3,1_5.3_10B809_Restore.ipsw",
+          "signed": true
+        },
+        {
+          "id": "tvos-release-6.1.4-10b809-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_5.3_10B809_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/091-5256.20130618.MagBg/AppleTV2,1_5.3_10B809_Restore.ipsw",
+          "signed": true
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-6.1.3-10b329a",
+      "version": "6.1.3",
+      "build": "10b329a",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 3,
+      "data": "6.1.3/10b329a.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-6.1.3-10b329a-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_5.2.1_10B329a_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/091-2665.20130319.M1nul/AppleTV3,2_5.2.1_10B329a_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-6.1.3-10b329a-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_5.2.1_10B329a_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/091-2614.20130319.Aro9t/AppleTV3,1_5.2.1_10B329a_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-6.1.3-10b329a-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_5.2.1_10B329a_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/091-2469.20130319.Scop4/AppleTV2,1_5.2.1_10B329a_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-6.1-10b144b",
+      "version": "6.1",
+      "build": "10b144b",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 3,
+      "data": "6.1/10b144b.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-6.1-10b144b-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_5.2_10B144b_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-6472.20130128.dUtpr/AppleTV3,2_5.2_10B144b_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-6.1-10b144b-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_5.2_10B144b_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-5903.20130128.aswe4/AppleTV3,1_5.2_10B144b_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-6.1-10b144b-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_5.2_10B144b_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-6474.20130128.Cnnew/AppleTV2,1_5.2_10B144b_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-6.0.1-10a831",
+      "version": "6.0.1",
+      "build": "10a831",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "6.0.1/10a831.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-6.0.1-10a831-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_5.1.1_10A831_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-7274.20121228.Avt45/AppleTV3,1_5.1.1_10A831_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-6.0.1-10a831-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_5.1.1_10A831_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-7275.20121128.qw234/AppleTV2,1_5.1.1_10A831_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-6.0-10a406e",
+      "version": "6.0",
+      "build": "10a406e",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "6.0/10a406e.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-6.0-10a406e-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_5.1_10A406e_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-4043.20120924.ClUd5/AppleTV3,1_5.1_10A406e_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-6.0-10a406e-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_5.1_10A406e_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-0803.20120924.LOop5/AppleTV2,1_5.1_10A406e_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-5.1.1-9b830",
+      "version": "5.1.1",
+      "build": "9b830",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "5.1.1/9b830.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-5.1.1-9b830-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_5.0.2_9B830_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-4361.20120605.grjot/AppleTV3,1_5.0.2_9B830_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-5.1.1-9b830-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_5.0.2_9B830_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-4362.20120605.t8i4U/AppleTV2,1_5.0.2_9B830_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-5.1.1-9b206f",
+      "version": "5.1.1",
+      "build": "9b206f",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "5.1.1/9b206f.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-5.1.1-9b206f-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_5.0_9B206f_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-4350.20120510.Tvfr4/AppleTV3,1_5.0_9B206f_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-5.1.1-9b206f-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_5.0_9B206f_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-4348.20120510.Axdep/AppleTV2,1_5.0_9B206f_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-5.1-9b179b",
+      "version": "5.1",
+      "build": "9b179b",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "5.1/9b179b.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-5.1-9b179b-AppleTV3,1",
+          "name": "Apple TV 3",
+          "devices": [
+            "AppleTV3,1"
+          ],
+          "filename": "AppleTV3,1_5.0_9B179b_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-2855.20120307.SD8A4/AppleTV3,1_5.0_9B179b_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "tvos-release-5.1-9b179b-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_5.0_9B179b_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-1538.20120307.Ve5H3/AppleTV2,1_5.0_9B179b_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-5.0.1-9a406a",
+      "version": "5.0.1",
+      "build": "9a406a",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "5.0.1/9a406a.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-5.0.1-9a406a-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_4.4.4_9A406a_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-3539.20111215.EQTW8/AppleTV2,1_4.4.4_9A406a_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-5.0.1-9a405l",
+      "version": "5.0.1",
+      "build": "9a405l",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "5.0.1/9a405l.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-5.0.1-9a405l-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_4.4.3_9A405l_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-3117.20111117.Gj79d/AppleTV2,1_4.4.3_9A405l_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-5.0-9a336a",
+      "version": "5.0",
+      "build": "9a336a",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "5.0/9a336a.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-5.0-9a336a-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_4.4.2_9A336a_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-2995.20111024.Tfscw/AppleTV2,1_4.4.2_9A336a_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-5.0-9a335a",
+      "version": "5.0",
+      "build": "9a335a",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "5.0/9a335a.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-5.0-9a335a-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_4.4.1_9A335a_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-2846.20111017.34NPe/AppleTV2,1_4.4.1_9A335a_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-5.0-9a334v",
+      "version": "5.0",
+      "build": "9a334v",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "5.0/9a334v.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-5.0-9a334v-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_4.4_9A334v_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/061-9621.20111012.Vgijx/AppleTV2,1_4.4_9A334v_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-4.3-8f455",
+      "version": "4.3",
+      "build": "8f455",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "4.3/8f455.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-4.3-8f455-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_4.3_8F455_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-0895.20110728.TcF4T/AppleTV2,1_4.3_8F455_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-4.3-8f305",
+      "version": "4.3",
+      "build": "8f305",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "4.3/8f305.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-4.3-8f305-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_4.3_8F305_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-0596.20110511.Zz7mC/AppleTV2,1_4.3_8F305_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-4.3-8f202",
+      "version": "4.3",
+      "build": "8f202",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "4.3/8f202.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-4.3-8f202-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_4.3_8F202_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/041-0574.20110322.Dcfr5/AppleTV2,1_4.3_8F202_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-4.3-8f191m",
+      "version": "4.3",
+      "build": "8f191m",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "4.3/8f191m.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-4.3-8f191m-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_4.3_8F191m_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/061-9584.20110308.Cxdew/AppleTV2,1_4.3_8F191m_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-4.2.1-8c154",
+      "version": "4.2.1",
+      "build": "8c154",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "4.2.1/8c154.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-4.2.1-8c154-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_4.2.1_8C154_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/061-9978.20101214.gmabr/AppleTV2,1_4.2.1_8C154_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-4.2-8c150",
+      "version": "4.2",
+      "build": "8c150",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "4.2/8c150.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-4.2-8c150-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_4.2_8C150_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/061-8747.20101122.Vgtr5/AppleTV2,1_4.2_8C150_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-4.1-8m89",
+      "version": "4.1",
+      "build": "8m89",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "4.1/8m89.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-4.1-8m89-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_4.1_8M89_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/061-8940.20100926.Tvtnz/AppleTV2,1_4.1_8M89_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    }
+  ]
 }

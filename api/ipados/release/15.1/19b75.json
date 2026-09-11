@@ -1,0 +1,33 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "15.1",
+  "version_label": "15.1",
+  "build": "19b75",
+  "released_at": "2021-10-25T20:29:02Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad mini 6 (WiFi)",
+      "devices": [
+        "iPad14,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2021FCSFall/fullrestores/002-24632/1583BD38-83C8-438D-BC62-E223FFD9F49E/iPad_Fall_2021_15.1_19B75_Restore.ipsw",
+      "filename": "iPad_Fall_2021_15.1_19B75_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

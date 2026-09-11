@@ -1,0 +1,35 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "10.1.1",
+  "version_label": "10.1.1",
+  "build": "14b100",
+  "released_at": "2016-10-31T15:30:58Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad 4 (WiFi)",
+      "devices": [
+        "iPad3,4",
+        "iPad3,5",
+        "iPad3,6"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios10.1.1/031-87534-20161031-A4911682-9D42-11E6-89CD-63447FA31755/iPad_32bit_10.1.1_14B100_Restore.ipsw",
+      "filename": "iPad_32bit_10.1.1_14B100_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

@@ -1,0 +1,72 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "17.0.2",
+  "version_label": "17.0.2",
+  "build": "21a350",
+  "released_at": "2023-09-21T18:18:47Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 15 Pro Max",
+      "devices": [
+        "iPhone16,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2023SummerFCS/fullrestores/042-61835/E2BE6855-82FF-4D74-B4F6-BCD316A300B7/iPhone16,2_17.0.2_21A350_Restore.ipsw",
+      "filename": "iPhone16,2_17.0.2_21A350_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 15 Pro",
+      "devices": [
+        "iPhone16,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2023SummerFCS/fullrestores/042-61909/7D652383-D554-4547-B782-A6F161542CF0/iPhone16,1_17.0.2_21A350_Restore.ipsw",
+      "filename": "iPhone16,1_17.0.2_21A350_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 15 Plus",
+      "devices": [
+        "iPhone15,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2023SummerFCS/fullrestores/042-61880/A4BAED53-3B37-42C6-B877-FC80D9EA2A34/iPhone15,5_17.0.2_21A350_Restore.ipsw",
+      "filename": "iPhone15,5_17.0.2_21A350_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 15",
+      "devices": [
+        "iPhone15,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2023SummerFCS/fullrestores/042-61825/4DDFE076-0BCD-4899-BE4B-A739A11BE709/iPhone15,4_17.0.2_21A350_Restore.ipsw",
+      "filename": "iPhone15,4_17.0.2_21A350_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

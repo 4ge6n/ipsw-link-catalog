@@ -1,0 +1,46 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "7.0.5",
+  "version_label": "7.0.5",
+  "build": "11b601",
+  "released_at": "2014-01-29T18:01:03Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 5c (Global)",
+      "devices": [
+        "iPhone5,4"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7/031-2903.20140129.AaQe3/iPhone5,4_7.0.5_11B601_Restore.ipsw",
+      "filename": "iPhone5,4_7.0.5_11B601_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 5s (Global)",
+      "devices": [
+        "iPhone6,2"
+      ],
+      "url": "https://secure-appldnld.apple.com/iOS7/031-2945.20140129.ww3Ed/iPhone6,2_7.0.5_11B601_Restore.ipsw",
+      "filename": "iPhone6,2_7.0.5_11B601_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

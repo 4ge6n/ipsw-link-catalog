@@ -1,0 +1,73 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "12.4.9",
+  "version_label": "12.4.9",
+  "build": "16h5",
+  "released_at": "2020-11-05T17:58:33Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch 6",
+      "devices": [
+        "iPod7,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-73807/0BD75C89-B95D-48FF-9A12-D97779E790BB/iPodtouch_12.4.9_16H5_Restore.ipsw",
+      "filename": "iPodtouch_12.4.9_16H5_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 6",
+      "devices": [
+        "iPhone7,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-73435/24D71947-C37D-4A9F-A958-340EDCA61AC4/iPhone_4.7_12.4.9_16H5_Restore.ipsw",
+      "filename": "iPhone_4.7_12.4.9_16H5_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 6+",
+      "devices": [
+        "iPhone7,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-73787/B75EC5A7-8ACE-48F9-A2ED-8AEE0EAA2A49/iPhone_5.5_12.4.9_16H5_Restore.ipsw",
+      "filename": "iPhone_5.5_12.4.9_16H5_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    },
+    {
+      "name": "iPhone 5s (Global)",
+      "devices": [
+        "iPhone6,1",
+        "iPhone6,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-73613/DB79DB39-6F74-483B-8513-BE3EC69495B4/iPhone_4.0_64bit_12.4.9_16H5_Restore.ipsw",
+      "filename": "iPhone_4.0_64bit_12.4.9_16H5_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}

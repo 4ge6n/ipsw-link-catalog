@@ -1,0 +1,33 @@
+{
+  "os_key": "visionos",
+  "channel": "release",
+  "version": "2.6",
+  "version_label": "2.6",
+  "build": "22o785",
+  "released_at": "2025-07-29T17:27:58Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-11T19:15:16Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple Vision Pro",
+      "devices": [
+        "RealityDevice14,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerFCS/fullrestores/082-98499/B2DA8E7A-CA3B-438F-AE4C-D3969F47D597/Apple_Vision_Pro_2.6_22O785_Restore.ipsw",
+      "filename": "Apple_Vision_Pro_2.6_22O785_Restore.ipsw",
+      "signing": {
+        "status": "unsigned",
+        "checked_at": "2026-09-11T19:15:16Z",
+        "unsigned_since": "2026-09-11T19:15:16Z"
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-11T19:15:16Z",
+  "last_seen_at": "2026-09-11T19:15:16Z"
+}
