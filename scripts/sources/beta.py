@@ -7,7 +7,12 @@ from ..normalize import os_key_for
 
 BASE = "https://ipsw.dev"
 def get_text(url: str, timeout: int) -> str:
-    with urlopen(Request(url, headers={"User-Agent":"ipsw-link-catalog/1.0"}), timeout=timeout) as response: return response.read().decode("utf-8", "replace")
+    request=Request(url, headers={"User-Agent":"ipsw-link-catalog/1.0"}); last_error=None
+    for _ in range(int(os.environ.get("REQUEST_RETRIES", "3"))):
+        try:
+            with urlopen(request, timeout=timeout) as response: return response.read().decode("utf-8", "replace")
+        except Exception as exc: last_error=exc
+    raise last_error
 def latest_builds(timeout: int):
     page=get_text(BASE+"/", timeout)
     pattern=r'href="/build/([A-Za-z0-9]+)".*?<h3[^>]*>([^<]+)</h3>'

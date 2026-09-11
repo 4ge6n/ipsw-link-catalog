@@ -1,13 +1,18 @@
 """Public, unauthenticated firmware source adapter (ipsw.me API)."""
 from __future__ import annotations
-import json
+import json, os
 from urllib.request import Request, urlopen
 from ..normalize import os_key_for
 
 BASE = "https://api.ipsw.me/v4"
 def get_json(url: str, timeout: int) -> object:
     request = Request(url, headers={"User-Agent": "ipsw-link-catalog/1.0"})
-    with urlopen(request, timeout=timeout) as response: return json.load(response)
+    last_error=None
+    for _ in range(int(os.environ.get("REQUEST_RETRIES", "3"))):
+        try:
+            with urlopen(request, timeout=timeout) as response: return json.load(response)
+        except Exception as exc: last_error=exc
+    raise last_error
 
 def fetch(timeout: int) -> list[dict]:
     devices = get_json(f"{BASE}/devices", timeout)
