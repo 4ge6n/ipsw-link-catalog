@@ -43,7 +43,12 @@ def main():
             except Exception as exc: failures.append(str(exc))
         if not candidates: raise SystemExit("all information sources failed or returned no data; catalog preserved")
     observed, rejected=normalize_candidates(candidates, settings, now)
-    if rejected: raise SystemExit(f"rejected {len(rejected)} malformed or non-Apple-CDN candidates")
+    # Public sources may include OTA/asset rows alongside IPSWs. They are
+    # deliberately ignored; a syntactically valid IPSW on an unknown host is a
+    # supply-chain alert and must stop publication.
+    unknown_hosts=sorted({row.get("url", "").split("/")[2] for row in rejected if row.get("url", "").startswith("https://") and row.get("url", "").lower().split("?", 1)[0].endswith(".ipsw")})
+    if unknown_hosts: raise SystemExit("unknown IPSW CDN hosts: " + ", ".join(unknown_hosts))
+    if rejected: print(json.dumps({"ignored_non_ipsw_or_incomplete_candidates": len(rejected)}))
     records=merge(old, observed, now)
     with tempfile.TemporaryDirectory(prefix="ipsw-catalog-") as tmp:
         stage=Path(tmp)/"api"; indexes=generate(records, stage, settings, now)
