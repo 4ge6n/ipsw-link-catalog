@@ -4,9 +4,9 @@
   "os_key": "tvos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-11T19:22:47Z",
-  "release_count": 7,
-  "firmware_count": 10,
+  "generated_at": "2026-09-11T19:34:00Z",
+  "release_count": 3,
+  "firmware_count": 4,
   "releases": [
     {
       "id": "tvos-release-26.6-23L773",
@@ -23,44 +23,6 @@
           ],
           "filename": "AppleTV5,3_26.6_23L773_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-67287/F525C1FF-B49B-40AB-A5F4-A6F4A4847407/AppleTV5,3_26.6_23L773_Restore.ipsw",
-          "signed": true
-        }
-      ]
-    },
-    {
-      "id": "tvos-release-13.4.8-17M61",
-      "version": "13.4.8",
-      "build": "17M61",
-      "released_at": "2020-07-15T17:05:20Z",
-      "data": "13.4.8/17M61.json",
-      "firmwares": [
-        {
-          "id": "tvos-release-13.4.8-17M61-AppleTV5,3",
-          "name": "Apple TV 4 (2015)",
-          "devices": [
-            "AppleTV5,3"
-          ],
-          "filename": "AppleTV5,3_13.4.8_17M61_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/061-92142/5EB0BEFA-C8BC-4FF4-949A-D37D8776EEF1/AppleTV5,3_13.4.8_17M61_Restore.ipsw",
-          "signed": true
-        }
-      ]
-    },
-    {
-      "id": "tvos-release-10.2.2-14W756",
-      "version": "10.2.2",
-      "build": "14W756",
-      "released_at": "2017-07-19T17:06:37Z",
-      "data": "10.2.2/14W756.json",
-      "firmwares": [
-        {
-          "id": "tvos-release-10.2.2-14W756-AppleTV5,3",
-          "name": "Apple TV 4 (2015)",
-          "devices": [
-            "AppleTV5,3"
-          ],
-          "filename": "AppleTV5,3_10.2.2_14W756_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/tvos10.2.2/091-23452-20170720-5D53229C-6A56-11E7-8577-8B2C4A4DD6D5/AppleTV5,3_10.2.2_14W756_Restore.ipsw",
           "signed": true
         }
       ]
@@ -95,35 +57,6 @@
       ]
     },
     {
-      "id": "tvos-release-8.4.2-12H606",
-      "version": "8.4.2",
-      "build": "12H606",
-      "released_at": "2016-12-12T17:55:20Z",
-      "data": "8.4.2/12H606.json",
-      "firmwares": [
-        {
-          "id": "tvos-release-8.4.2-12H606-AppleTV3,1",
-          "name": "Apple TV 3",
-          "devices": [
-            "AppleTV3,1"
-          ],
-          "filename": "AppleTV3,1_8.4.2_12H606_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-84128-20161212-12309AA4-B59A-11E6-AD42-AA1AE37229E1/AppleTV3,1_8.4.2_12H606_Restore.ipsw",
-          "signed": true
-        },
-        {
-          "id": "tvos-release-8.4.2-12H606-AppleTV3,2",
-          "name": "Apple TV 3 (2013)",
-          "devices": [
-            "AppleTV3,2"
-          ],
-          "filename": "AppleTV3,2_8.4.2_12H606_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-84121-20161212-123095D6-B59A-11E6-A84D-CE194F99B54B/AppleTV3,2_8.4.2_12H606_Restore.ipsw",
-          "signed": true
-        }
-      ]
-    },
-    {
       "id": "tvos-release-7.1.2-11D258",
       "version": "7.1.2",
       "build": "11D258",
@@ -138,35 +71,6 @@
           ],
           "filename": "AppleTV2,1_6.2.1_11D258_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS8/031-07202.20140917.tF6Fs/AppleTV2,1_6.2.1_11D258_Restore.ipsw",
-          "signed": true
-        }
-      ]
-    },
-    {
-      "id": "tvos-release-6.1.4-10B809",
-      "version": "6.1.4",
-      "build": "10B809",
-      "released_at": null,
-      "data": "6.1.4/10B809.json",
-      "firmwares": [
-        {
-          "id": "tvos-release-6.1.4-10B809-AppleTV2,1",
-          "name": "Apple TV 2G",
-          "devices": [
-            "AppleTV2,1"
-          ],
-          "filename": "AppleTV2,1_5.3_10B809_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/AppleTV/091-5256.20130618.MagBg/AppleTV2,1_5.3_10B809_Restore.ipsw",
-          "signed": true
-        },
-        {
-          "id": "tvos-release-6.1.4-10B809-AppleTV3,1",
-          "name": "Apple TV 3",
-          "devices": [
-            "AppleTV3,1"
-          ],
-          "filename": "AppleTV3,1_5.3_10B809_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/AppleTV/091-5257.20130618.Eu5uy/AppleTV3,1_5.3_10B809_Restore.ipsw",
           "signed": true
         }
       ]
