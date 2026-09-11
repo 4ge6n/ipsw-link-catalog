@@ -7,7 +7,7 @@ Update status: [api/status.json](https://raw.githubusercontent.com/4ge6n/ipsw-li
 <!-- AUTO-GENERATED:START -->
 ## Catalog status
 
-Last successful update: `2026-09-11T19:18:27Z`
+Last successful update: `2026-09-11T19:21:11Z`
 
 ### Endpoints
 
@@ -47,4 +47,5 @@ Use `firmwares[].id` to identify a firmware, `devices` to match hardware, and `s
 
 Data is assembled from public firmware metadata. It is not affiliated with Apple; verify compatibility before restoring.
 <!-- AUTO-GENERATED:END -->
+
 
