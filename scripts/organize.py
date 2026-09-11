@@ -48,7 +48,18 @@ def merge(existing, observed, now):
 def release_sort(record): return (version_key(record["version"]), record.get("released_at") or "", record["build"])
 def index(records, os_key, channel, now, include_unknown_beta=True):
     relevant=[r for r in records if r["os_key"] == os_key and r["channel"] == channel]
-    if channel == "release": relevant=[r for r in relevant if any(f["signing"]["status"] == "signed" for f in r["firmwares"])]
+    newest_by_device={}
+    if channel == "release":
+        # latest is a per-device view: retain older major versions only when a
+        # device has no newer signed IPSW, rather than showing two builds for
+        # the same device.
+        for record in relevant:
+            rank=release_sort(record)
+            for firmware in record["firmwares"]:
+                if firmware["signing"]["status"] != "signed": continue
+                for device in firmware["devices"]:
+                    if rank > newest_by_device.get(device, ()): newest_by_device[device]=rank
+        relevant=[r for r in relevant if any(f["signing"]["status"] == "signed" for f in r["firmwares"])]
     elif channel == "beta" and not include_unknown_beta: relevant=[r for r in relevant if any(f["signing"]["status"] == "signed" for f in r["firmwares"])]
     if channel == "beta" and relevant:
         highest=max(version_key(r["version"]) for r in relevant); relevant=[r for r in relevant if version_key(r["version"]) == highest]
@@ -59,7 +70,9 @@ def index(records, os_key, channel, now, include_unknown_beta=True):
         fws=[]
         for f in sorted(r["firmwares"], key=lambda f: f["devices"]):
             if channel == "release" and f["signing"]["status"] != "signed": continue
-            fws.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}-{f['devices'][0]}", "name": f["name"], "devices": f["devices"], "filename": f["filename"], "url": f["url"], "signed": f["signing"]["status"] == "signed"})
+            devices=[d for d in f["devices"] if channel != "release" or newest_by_device.get(d) == release_sort(r)]
+            if not devices: continue
+            fws.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}-{devices[0]}", "name": f["name"], "devices": devices, "filename": f["filename"], "url": f["url"], "signed": f["signing"]["status"] == "signed"})
         if fws: releases.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}", "version": r["version"], "build": r["build"], "released_at": r.get("released_at"), "data": f"{r['version_label']}/{r['build']}.json", "firmwares": fws})
     return {"schema_version": 1, "os": OS_NAMES[os_key], "os_key": os_key, "channel": channel, "definition": "all currently signed release IPSWs" if channel == "release" else "current latest beta or release candidate IPSWs", "generated_at": now, "release_count": len(releases), "firmware_count": sum(len(r["firmwares"]) for r in releases), "releases": releases}
 
