@@ -18,7 +18,9 @@ def safe_label(value: str) -> str:
 
 def safe_build(value: str) -> str:
     """Build identifiers are case-sensitive identifiers, unlike URL labels."""
-    return re.sub(r"[^A-Za-z0-9._-]", "-", value.strip())
+    # Apple build IDs use uppercase letters; canonicalizing legacy data prevents
+    # duplicate history when an upstream API changes only its letter casing.
+    return re.sub(r"[^A-Za-z0-9._-]", "-", value.strip()).upper()
 
 def classify(version: str, label: str = "") -> tuple[str, str, bool]:
     text = f"{version} {label}".lower()
