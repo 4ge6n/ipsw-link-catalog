@@ -4,7 +4,7 @@
   "os_key": "tvos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-12T02:07:44Z",
+  "generated_at": "2026-09-12T07:15:28Z",
   "release_count": 3,
   "firmware_count": 4,
   "releases": [
@@ -75,5 +75,6 @@
         }
       ]
     }
-  ]
+  ],
+  "generated_at_tokyo": "2026-09-12T16:15:28+09:00"
 }

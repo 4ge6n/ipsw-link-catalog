@@ -7,7 +7,7 @@ export LC_ALL=C
 
 CATALOG_BASE="${CATALOG_BASE:-https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api}"
 DESTINATION_BASE="${DESTINATION_BASE:-/Volumes/IPSW}"
-CHANNEL="${CHANNEL:-release}" # release or beta
+CHANNEL="${CHANNEL:-release}" # release only; beta has no latest endpoint
 MAX_CONCURRENT="${MAX_CONCURRENT:-4}"
 DRY_RUN="${DRY_RUN:-0}" # 1 = validate and list downloads without saving IPSWs
 MAX_RETRY="${MAX_RETRY:-3}"
@@ -112,7 +112,7 @@ firmware_version() {
   printf '%s\n' "$1" | sed -n 's/^.*_\([0-9][0-9.]*\)_[0-9][0-9]*[A-Za-z][A-Za-z]*[0-9][A-Za-z0-9]*_Restore\.ipsw$/\1/p'
 }
 
-[[ "$CHANNEL" == release || "$CHANNEL" == beta ]] || die "CHANNEL must be release or beta"
+[[ "$CHANNEL" == release ]] || die "CHANNEL must be release; beta intentionally has no latest endpoint"
 [[ "$MAX_CONCURRENT" =~ ^[1-9][0-9]*$ ]] || die "MAX_CONCURRENT must be a positive integer"
 [[ "$MAX_RETRY" =~ ^[1-9][0-9]*$ ]] || die "MAX_RETRY must be a positive integer"
 [[ "$VERIFY_ARCHIVE" == 0 || "$VERIFY_ARCHIVE" == 1 ]] || die "VERIFY_ARCHIVE must be 0 or 1"
@@ -183,7 +183,7 @@ collect_os() {
   mv "$tmp" "$json"
   parse_latest "$json" > "$parsed" || die "invalid catalog JSON for $os"
   while IFS=$'\t' read -r version build name devices filename url signed; do
-    [[ "$signed" == true || "$CHANNEL" == beta ]] || continue
+    [[ "$signed" == true ]] || continue
     [[ "$url" =~ ^https://(updates\.cdn-apple\.com|secure-appldnld\.apple\.com|appldnld\.apple\.com)/.*\.ipsw$ ]] || { log "WARNING: rejected URL for $filename"; continue; }
     case "$os:$filename" in
       ios:iPhone*_Restore.ipsw|ios:iPod*_Restore.ipsw|ipados:iPad*_Restore.ipsw) ;;

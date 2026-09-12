@@ -8,7 +8,7 @@ def validate_api(root: Path, hosts: set[str]) -> list[str]:
     for os_key in OS_ORDER:
         for channel in ("release", "beta"):
             directory=root / os_key / channel
-            for name in ("latest.json", "all.json"):
+            for name in (("latest.json", "all.json") if channel == "release" else ("all.json",)):
                 path=directory/name
                 try: doc=json.loads(path.read_text())
                 except Exception as exc: errors.append(f"{path}: invalid JSON ({exc})"); continue
