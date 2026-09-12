@@ -81,7 +81,7 @@ def generate(api: Path, output: Path):
                     groups.setdefault(major, []).append(release)
                 channel_page=[f"<p>{link('../', '← '+OS_NAMES[os_key])}</p><h1>{OS_NAMES[os_key]} {channel.title()}</h1>{latest_link}<p>Select a major version.</p><ul>"]
                 for major in sorted(groups, key=lambda value: int(value) if value.isdigit() else -1, reverse=True):
-                    releases=sorted(groups[major], key=beta_release_order) if channel == "beta" else groups[major]
+                    releases=sorted(groups[major], key=beta_release_order, reverse=True) if channel == "beta" else groups[major]
                     kind="beta/RC build(s)" if channel == "beta" else "release build(s)"
                     channel_page.append(f"<li>{link(major+'/', major+'.x')} — {len(releases)} {kind}</li>")
                     major_title = f"{OS_NAMES[os_key]} {major}.x beta / RC" if channel == "beta" else f"{OS_NAMES[os_key]} {major}.x Release"
@@ -90,7 +90,7 @@ def generate(api: Path, output: Path):
                     if channel == "beta":
                         by_version={}
                         for release in releases: by_version.setdefault(release["version"], []).append(release)
-                        for version in sorted(by_version, key=lambda value: tuple(int(part) for part in value.split("."))):
+                        for version in sorted(by_version, key=lambda value: tuple(int(part) for part in value.split(".")), reverse=True):
                             builds=by_version[version]
                             major_body.append(f"<li>{link(version+'/', version)} — {len(builds)} beta/RC build(s)</li>")
                             version_body=[f"<p>{link('../', '← '+major+'.x beta / RC')}</p><h1>{OS_NAMES[os_key]} {version} beta / RC</h1><ul>"]
