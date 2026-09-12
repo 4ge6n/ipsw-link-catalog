@@ -43,7 +43,10 @@ def generate(records, api, settings, now, now_tokyo):
                 indexes[(os_key,channel)]=latest
             else:
                 indexes[(os_key,channel)]=all_doc
-    for r in records: dump(api/r["os_key"]/r["channel"]/r["version_label"]/(r["build"]+".json"), r)
+    for r in records:
+        if r["channel"] == "beta" and not r["release_candidate"]:
+            continue
+        dump(api/r["os_key"]/r["channel"]/r["version_label"]/(r["build"]+".json"), r)
     return indexes
 def main():
     parser=argparse.ArgumentParser(); parser.add_argument("--input", type=Path, help="normalized candidate JSON fixture; avoids network")

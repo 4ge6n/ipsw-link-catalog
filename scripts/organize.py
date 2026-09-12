@@ -80,7 +80,12 @@ def all_index(records, os_key, channel, now):
     doc=index(records, os_key, channel, now, True)
     # all.json keeps unsigned history too, so rebuild from every canonical record.
     doc["releases"]=[]
-    for r in sorted((x for x in records if x["os_key"] == os_key and x["channel"] == channel), key=release_sort, reverse=True):
+    source_records=(x for x in records if x["os_key"] == os_key and x["channel"] == channel)
+    # The public beta endpoint is intentionally RC-only.  Ordinary beta seeds
+    # are not retained as a public download index because they coexist and are
+    # often superseded before a reliable direct link is available.
+    if channel == "beta": source_records=(x for x in source_records if x["release_candidate"])
+    for r in sorted(source_records, key=release_sort, reverse=True):
         fws=[{"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}-{f['devices'][0]}", "name": f["name"], "devices": f["devices"], "filename": f["filename"], "url": f["url"], "signed": f["signing"]["status"] == "signed"} for f in r["firmwares"]]
         doc["releases"].append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}", "version": r["version"], "build": r["build"], "released_at": r.get("released_at"), "signed_firmware_count": sum(f["signed"] for f in fws), "total_firmware_count": len(fws), "data": f"{r['version_label']}/{r['build']}.json", "firmwares": fws})
     doc["release_count"], doc["firmware_count"] = len(doc["releases"]), sum(len(x["firmwares"]) for x in doc["releases"])

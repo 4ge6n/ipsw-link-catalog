@@ -1,7 +1,7 @@
 import json
 import unittest
 from scripts.normalize import allowed_ipsw_url, classify
-from scripts.organize import normalize_candidates, merge, index
+from scripts.organize import all_index, normalize_candidates, merge, index
 from scripts.sources.ipswbeta import FILENAME
 
 SETTINGS={"allowed_cdn_hosts":["updates.cdn-apple.com"], "include_unknown_beta_signing":True}
@@ -24,3 +24,11 @@ class CatalogTests(unittest.TestCase):
     def test_ipswbeta_filename_extracts_version_and_build(self):
         found=FILENAME.search("https://updates.cdn-apple.com/path/iPhone18,5_27.0_24A435_Restore.ipsw")
         self.assertEqual(found.groups(), ("27.0", "24A435"))
+    def test_beta_all_index_is_rc_only(self):
+        rows=[
+            {"device":"iPhone12,1","name":"iPhone 11","version":"27.0 beta 1","build":"24A1","url":"https://updates.cdn-apple.com/beta.ipsw","signed":None,"channel":"beta"},
+            {"device":"iPhone12,1","name":"iPhone 11","version":"27.0 RC","build":"24A2","url":"https://updates.cdn-apple.com/rc.ipsw","signed":None,"channel":"beta"},
+        ]
+        observed,_=normalize_candidates(rows, SETTINGS, "2026-09-12T00:00:00Z")
+        document=all_index(merge([], observed, "2026-09-12T00:00:00Z"), "ios", "beta", "2026-09-12T00:00:00Z")
+        self.assertEqual([release["build"] for release in document["releases"]], ["24A2"])

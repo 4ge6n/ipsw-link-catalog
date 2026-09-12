@@ -3,7 +3,9 @@ from __future__ import annotations
 import html
 import json
 import shutil
+from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from .normalize import OS_NAMES, OS_ORDER
 
 STYLE = "body{font-family:system-ui,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#1d1d1f}a{color:#06c}table{border-collapse:collapse;width:100%}th,td{padding:.65rem;border-bottom:1px solid #ddd;text-align:left}code{font-size:.9em}.meta{color:#666}"
@@ -11,6 +13,15 @@ def write(path: Path, title: str, body: str):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(f"<!doctype html><html lang='en'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>{html.escape(title)}</title><style>{STYLE}</style><body>{body}</body></html>\n")
 def link(href: str, text: str) -> str: return f"<a href='{html.escape(href, quote=True)}'>{html.escape(text)}</a>"
+def release_time(value: str | None) -> str:
+    if not value:
+        return "Release time: unknown (the source did not publish a time)"
+    try:
+        released=datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
+    except ValueError:
+        return "Release time: " + html.escape(value)
+    tokyo=released.astimezone(ZoneInfo("Asia/Tokyo"))
+    return f"Released: UTC {released.isoformat().replace('+00:00', 'Z')} · Asia/Tokyo {tokyo.isoformat()}"
 def firmware_table(release: dict) -> str:
     rows=[]
     for fw in release["firmwares"]:
@@ -34,12 +45,12 @@ def generate(api: Path, output: Path):
             channel_page=[f"<p>{link('../', '← '+OS_NAMES[os_key])}</p><h1>{OS_NAMES[os_key]} {channel.title()}</h1>{latest_link}<ul>"]
             for release in document["releases"]:
                 href=f"{release['data'].removesuffix('.json')}/"
-                channel_page.append(f"<li>{link(href, release['version']+' ('+release['build']+')')} — {len(release['firmwares'])} download link(s)</li>")
-                page=f"<p>{link('../../', '← '+channel.title()+' list')}</p><h1>{OS_NAMES[os_key]} {channel.title()} {html.escape(release['version'])} ({html.escape(release['build'])})</h1><p class='meta'>Released: {html.escape(release.get('released_at') or 'unknown')}</p>"+firmware_table(release)
+                channel_page.append(f"<li>{link(href, release['version']+' ('+release['build']+')')} — {len(release['firmwares'])} download link(s)<br><span class='meta'>{release_time(release.get('released_at'))}</span></li>")
+                page=f"<p>{link('../../', '← '+channel.title()+' list')}</p><h1>{OS_NAMES[os_key]} {channel.title()} {html.escape(release['version'])} ({html.escape(release['build'])})</h1><p class='meta'>{release_time(release.get('released_at'))}</p>"+firmware_table(release)
                 write(output/os_key/channel/release["data"].removesuffix(".json")/"index.html", f"{OS_NAMES[os_key]} {release['version']} ({release['build']})", page)
             if channel == "release":
                 latest=json.loads((api/os_key/channel/"latest.json").read_text())
-                latest_body=f"<p>{link('../', '← '+channel.title()+' list')}</p><h1>Latest {OS_NAMES[os_key]} {channel.title()} downloads</h1>"+"".join(f"<h2>{html.escape(r['version'])} ({html.escape(r['build'])})</h2>"+firmware_table(r) for r in latest["releases"])
+                latest_body=f"<p>{link('../', '← '+channel.title()+' list')}</p><h1>Latest {OS_NAMES[os_key]} {channel.title()} downloads</h1>"+"".join(f"<h2>{html.escape(r['version'])} ({html.escape(r['build'])})</h2><p class='meta'>{release_time(r.get('released_at'))}</p>"+firmware_table(r) for r in latest["releases"])
                 write(output/os_key/channel/"latest"/"index.html", f"Latest {OS_NAMES[os_key]} {channel}", latest_body or "<p>No downloads available.</p>")
             write(output/os_key/channel/"index.html", f"{OS_NAMES[os_key]} {channel}", "".join(channel_page)+"</ul>")
     write(output/"index.html", " IPSW download links", "".join(home)+"</ul>")
