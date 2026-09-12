@@ -11,10 +11,10 @@ from .normalize import OS_NAMES, OS_ORDER
 
 ROOT = Path(__file__).parent.parent
 APP_URL = "https://4ge6n.github.io/ipsw-link-catalog"
-STYLE = "body{font-family:system-ui,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#1d1d1f}a{color:#06c}table{border-collapse:collapse;width:100%}th,td{padding:.65rem;border-bottom:1px solid #ddd;text-align:left}code{font-size:.9em}.meta{color:#666}button{font:inherit;padding:.6rem .9rem;border:1px solid #777;border-radius:.5rem;background:#fff;color:#111}"
+STYLE = "body{font-family:system-ui,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#1d1d1f}a{color:#06c}table{border-collapse:collapse;width:100%}th,td{padding:.65rem;border-bottom:1px solid #ddd;text-align:left}code{font-size:.9em}.meta{color:#666}button{font:inherit;padding:.6rem .9rem;border:1px solid #777;border-radius:.5rem;background:#fff;color:#111}.download-queue{margin:1rem 0;padding:1rem;border:1px solid #ddd;border-radius:.6rem}.download-queue label{display:block;margin:.4rem 0}"
 def write(path: Path, title: str, body: str):
     path.parent.mkdir(parents=True, exist_ok=True)
-    head=f"<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><meta name='theme-color' content='#ffffff'><meta name='apple-mobile-web-app-capable' content='yes'><meta name='apple-mobile-web-app-title' content='IPSW Links'><link rel='manifest' href='{APP_URL}/manifest.webmanifest'><link rel='apple-touch-icon' href='{APP_URL}/icon.svg'><title>{html.escape(title)}</title><style>{STYLE}</style><script defer src='{APP_URL}/push-config.js'></script><script defer src='{APP_URL}/push.js'></script>"
+    head=f"<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><meta name='theme-color' content='#ffffff'><meta name='apple-mobile-web-app-capable' content='yes'><meta name='apple-mobile-web-app-title' content='IPSW Links'><link rel='manifest' href='{APP_URL}/manifest.webmanifest'><link rel='apple-touch-icon' href='{APP_URL}/icon.svg'><title>{html.escape(title)}</title><style>{STYLE}</style><script defer src='{APP_URL}/push-config.js'></script><script defer src='{APP_URL}/push.js'></script><script defer src='{APP_URL}/download-queue.js'></script>"
     path.write_text(f"<!doctype html><html lang='en'><head>{head}</head><body>{body}</body></html>\n")
 def link(href: str, text: str) -> str: return f"<a href='{html.escape(href, quote=True)}'>{html.escape(text)}</a>"
 def display_version(release: dict) -> str:
@@ -50,8 +50,10 @@ def firmware_table(release: dict) -> str:
     rows=[]
     for fw in release["firmwares"]:
         devices="<br>".join(html.escape(x) for x in fw["devices"])
-        rows.append(f"<tr><td>{html.escape(fw['name'])}</td><td><code>{devices}</code></td><td>{link(fw['url'], fw['filename'])}</td><td>{'Signed' if fw['signed'] else 'Not signed'}</td></tr>")
-    return "<table><thead><tr><th>Device</th><th>Identifiers</th><th>Apple download</th><th>Status</th></tr></thead><tbody>" + "".join(rows) + "</tbody></table>"
+        queue=f"<label><input class='download-queue-item' type='checkbox' data-url='{html.escape(fw['url'], quote=True)}' data-name='{html.escape(fw['filename'], quote=True)}'> Add to download queue</label>"
+        rows.append(f"<tr><td>{html.escape(fw['name'])}</td><td><code>{devices}</code></td><td>{link(fw['url'], fw['filename'])}{queue}</td><td>{'Signed' if fw['signed'] else 'Not signed'}</td></tr>")
+    controls="<section class='download-queue'><strong>Sequential download queue</strong><p class='meta'>Select files, then open one download at a time. After saving a file in Safari, return here and open the next one.</p><button type='button' data-download-queue-start>Start selected downloads</button> <button type='button' data-download-queue-next>Open next download</button><p class='meta' data-download-queue-status></p></section>"
+    return controls + "<table><thead><tr><th>Device</th><th>Identifiers</th><th>Apple download</th><th>Status</th></tr></thead><tbody>" + "".join(rows) + "</tbody></table>"
 def release_list_item(release: dict, href: str) -> str:
     return f"<li>{link(href, display_version(release)+' ('+release['build']+')')} — {len(release['firmwares'])} download link(s)</li>"
 def generate(api: Path, output: Path):
