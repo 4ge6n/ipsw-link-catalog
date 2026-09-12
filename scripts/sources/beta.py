@@ -4,6 +4,7 @@ from concurrent.futures import ThreadPoolExecutor
 import html, json, os, re
 from urllib.request import Request, urlopen
 from ..normalize import os_key_for
+from . import ipswbeta
 
 BASE = "https://ipsw.dev"
 def get_text(url: str, timeout: int) -> str:
@@ -32,6 +33,21 @@ def fetch(timeout: int) -> list[dict]:
     configured=os.environ.get("BETA_SOURCE_URL")
     if configured:
         with urlopen(configured, timeout=timeout) as response: return json.load(response)
-    jobs=[]
-    for build,label in latest_builds(timeout): jobs.extend((build,label,device,name) for device,name in devices_for_build(build, timeout))
-    with ThreadPoolExecutor(max_workers=12) as pool: return [row for row in pool.map(lambda item: url_for_device(item, timeout), jobs) if row]
+    primary=[]
+    try:
+        jobs=[]
+        for build,label in latest_builds(timeout): jobs.extend((build,label,device,name) for device,name in devices_for_build(build, timeout))
+        with ThreadPoolExecutor(max_workers=12) as pool: primary=[row for row in pool.map(lambda item: url_for_device(item, timeout), jobs) if row]
+    except Exception:
+        # The fallback below remains subject to the same Apple-URL validation.
+        primary=[]
+    supported={"ios", "ipados", "macos", "tvos", "visionos"}
+    covered={os_key_for(row["device"]) for row in primary}
+    missing=supported-covered
+    try:
+        fallback=ipswbeta.fetch(timeout, missing) if missing else []
+    except Exception:
+        fallback=[]
+    if not primary and not fallback:
+        raise RuntimeError("primary and IPSWBeta.dev beta sources returned no candidates")
+    return primary + fallback
