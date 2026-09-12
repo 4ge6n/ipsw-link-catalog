@@ -9,10 +9,13 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 from .normalize import OS_NAMES, OS_ORDER
 
-STYLE = "body{font-family:system-ui,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#1d1d1f}a{color:#06c}table{border-collapse:collapse;width:100%}th,td{padding:.65rem;border-bottom:1px solid #ddd;text-align:left}code{font-size:.9em}.meta{color:#666}"
+ROOT = Path(__file__).parent.parent
+APP_URL = "https://4ge6n.github.io/ipsw-link-catalog"
+STYLE = "body{font-family:system-ui,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#1d1d1f}a{color:#06c}table{border-collapse:collapse;width:100%}th,td{padding:.65rem;border-bottom:1px solid #ddd;text-align:left}code{font-size:.9em}.meta{color:#666}button{font:inherit;padding:.6rem .9rem;border:1px solid #777;border-radius:.5rem;background:#fff;color:#111}"
 def write(path: Path, title: str, body: str):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(f"<!doctype html><html lang='en'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>{html.escape(title)}</title><style>{STYLE}</style><body>{body}</body></html>\n")
+    head=f"<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><meta name='theme-color' content='#ffffff'><meta name='apple-mobile-web-app-capable' content='yes'><meta name='apple-mobile-web-app-title' content='IPSW Links'><link rel='manifest' href='{APP_URL}/manifest.webmanifest'><link rel='apple-touch-icon' href='{APP_URL}/icon.svg'><title>{html.escape(title)}</title><style>{STYLE}</style><script defer src='{APP_URL}/push-config.js'></script><script defer src='{APP_URL}/push.js'></script>"
+    path.write_text(f"<!doctype html><html lang='en'><head>{head}</head><body>{body}</body></html>\n")
 def link(href: str, text: str) -> str: return f"<a href='{html.escape(href, quote=True)}'>{html.escape(text)}</a>"
 def display_version(release: dict) -> str:
     """Turn URL-safe beta labels into the names people expect to see."""
@@ -53,9 +56,10 @@ def release_list_item(release: dict, href: str) -> str:
     return f"<li>{link(href, display_version(release)+' ('+release['build']+')')} — {len(release['firmwares'])} download link(s)</li>"
 def generate(api: Path, output: Path):
     if output.exists(): shutil.rmtree(output)
+    shutil.copytree(ROOT/"assets", output, dirs_exist_ok=True)
     release_meta=json.loads((api/"ios"/"release"/"all.json").read_text())
     updated=f"<p class='meta'>Catalog updated: UTC {html.escape(release_meta['generated_at'])} · Asia/Tokyo {html.escape(release_meta.get('generated_at_tokyo', 'unknown'))}</p>"
-    home=["<h1> IPSW download links</h1><p>Direct Apple CDN links, organized by OS, release channel, version, and build. IPSW files are not hosted here.</p>", updated, "<ul>"]
+    home=["<h1> IPSW download links</h1><p>Direct Apple CDN links, organized by OS, release channel, version, and build. IPSW files are not hosted here.</p>", "<section><h2>Update notifications</h2><p>Add this site to your iPhone Home Screen, open it as an app, then enable notifications.</p><button id='enable-notifications' type='button'>Enable update notifications</button><p id='push-status' class='meta'></p></section>", updated, "<ul>"]
     for os_key in OS_ORDER:
         home.append(f"<li>{link(os_key+'/', OS_NAMES[os_key])}</li>")
         os_page=[f"<p>{link('../', '← All operating systems')}</p><h1>{OS_NAMES[os_key]}</h1><ul>"]

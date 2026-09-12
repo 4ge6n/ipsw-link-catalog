@@ -3,9 +3,18 @@
   "main": "src/index.ts",
   "compatibility_date": "2026-09-12",
   "triggers": { "crons": ["*/5 * * * *"] },
-  "vars": { "GITHUB_REPOSITORY": "4ge6n/ipsw-link-catalog" },
-  "durable_objects": {
-    "bindings": [{ "name": "FEED_STATE", "class_name": "FeedState" }]
+  "vars": {
+    "GITHUB_REPOSITORY": "4ge6n/ipsw-link-catalog",
+    "VAPID_PUBLIC_KEY": "BJYIRbL04SrBYIvumqQ-Cj9WeH8PpTvAg63X3cJt-1cCa4ZUG4NoIqn4ItkCOB9TYf9oAVJs2DVNw7CegjLAW2k"
   },
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["FeedState"] }]
+  "durable_objects": {
+    "bindings": [
+      { "name": "FEED_STATE", "class_name": "FeedState" },
+      { "name": "PUSH_SUBSCRIPTIONS", "class_name": "PushSubscriptions" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["FeedState"] },
+    { "tag": "v2", "new_sqlite_classes": ["PushSubscriptions"] }
+  ]
 }

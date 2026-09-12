@@ -1,0 +1,11 @@
+{
+  "id": "/ipsw-link-catalog/",
+  "name": "IPSW Download Links",
+  "short_name": "IPSW Links",
+  "start_url": "/ipsw-link-catalog/",
+  "scope": "/ipsw-link-catalog/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [{ "src": "/ipsw-link-catalog/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

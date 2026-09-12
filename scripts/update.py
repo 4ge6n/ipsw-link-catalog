@@ -77,6 +77,10 @@ def main():
     unknown_hosts=sorted({urlparse(row.get("url", "")).hostname for row in rejected if row.get("url", "").startswith("https://") and row.get("url", "").lower().split("?", 1)[0].endswith(".ipsw") and urlparse(row["url"]).hostname not in settings["allowed_cdn_hosts"]})
     if unknown_hosts: raise SystemExit("unknown IPSW CDN hosts: " + ", ".join(unknown_hosts))
     if rejected: print(json.dumps({"ignored_non_ipsw_or_incomplete_candidates": len(rejected)}))
+    old_records={(r["os_key"], r["channel"], r["version"], r["build"]) for r in old}
+    old_urls={fw["url"] for record in old for fw in record.get("firmwares", [])}
+    observed_records={(r["os_key"], r["channel"], r["version"], r["build"]) for r in observed}
+    observed_urls={fw["url"] for record in observed for fw in record.get("firmwares", [])}
     records=merge(old, observed, now)
     with tempfile.TemporaryDirectory(prefix="ipsw-catalog-") as tmp:
         stage=Path(tmp)/"api"; site_stage=Path(tmp)/"site"; indexes=generate(records, stage, settings, now, now_tokyo)
@@ -88,5 +92,5 @@ def main():
     readme=ROOT/"README.md"; current=readme.read_text() if readme.exists() else "# IPSW Link Catalog\n\nStable JSON indexes of Apple restore images.\n"
     dump_owner=os.getenv("GITHUB_REPOSITORY", "4ge6n/ipsw-link-catalog")
     readme.write_text(replace(current, content(indexes, now, now_tokyo, dump_owner, settings["default_branch"])))
-    print(json.dumps({"candidates":len(candidates), "records":len(records), "rejected":len(rejected)}))
+    print(json.dumps({"candidates":len(candidates), "records":len(records), "rejected":len(rejected), "new_records":len(observed_records-old_records), "new_firmware_urls":len(observed_urls-old_urls)}))
 if __name__ == "__main__": main()

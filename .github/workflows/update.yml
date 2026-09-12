@@ -26,10 +26,27 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - run: python -m unittest discover -s tests
-      - run: python scripts/update.py
-        if: github.event_name != 'push'
+      - id: catalog
+        run: |
+          output="$(python scripts/update.py)"
+          printf '%s\n' "$output"
+          summary="$(printf '%s\n' "$output" | tail -n 1)"
+          python - "$summary" >> "$GITHUB_OUTPUT" <<'PY'
+          import json
+          import sys
+          print(f"new_firmware_urls={json.loads(sys.argv[1]).get('new_firmware_urls', 0)}")
+          PY
         env:
           BETA_HISTORY: ${{ inputs.full_beta_history == true && '1' || '0' }}
+        if: github.event_name != 'push'
+      - name: Send web push for new links
+        if: github.event_name == 'repository_dispatch' && steps.catalog.outputs.new_firmware_urls != '0'
+        env:
+          PUSH_API_TOKEN: ${{ secrets.PUSH_API_TOKEN }}
+          WEB_PUSH_VAPID_PRIVATE_KEY: ${{ secrets.WEB_PUSH_VAPID_PRIVATE_KEY }}
+        run: |
+          npm ci --prefix push-sender
+          node push-sender/send.mjs
       - name: Commit changed catalog
         if: github.event_name != 'push'
         run: |

@@ -2,9 +2,20 @@ import { DurableObject } from "cloudflare:workers";
 
 interface Env {
   FEED_STATE: DurableObjectNamespace<FeedState>;
+  PUSH_SUBSCRIPTIONS: DurableObjectNamespace<PushSubscriptions>;
   GITHUB_DISPATCH_TOKEN: string;
+  PUSH_API_TOKEN: string;
   GITHUB_REPOSITORY: string;
+  VAPID_PUBLIC_KEY: string;
 }
+
+type PushSubscriptionRecord = {
+  endpoint: string;
+  expirationTime: number | null;
+  keys: { auth: string; p256dh: string };
+};
+
+const SITE_ORIGIN = "https://4ge6n.github.io";
 
 const SOURCES = [
   { name: "Apple Developer Releases RSS", url: "https://developer.apple.com/news/releases/rss/releases.rss", select: (body: string) => body },
@@ -94,12 +105,91 @@ export class FeedState extends DurableObject<Env> {
   }
 }
 
+export class PushSubscriptions extends DurableObject<Env> {
+  async subscribe(subscription: PushSubscriptionRecord): Promise<number> {
+    if (!subscription.endpoint.startsWith("https://") || !subscription.keys?.auth || !subscription.keys?.p256dh) {
+      throw new Error("invalid push subscription");
+    }
+    const subscriptions = (await this.ctx.storage.get<Record<string, PushSubscriptionRecord>>("subscriptions")) ?? {};
+    subscriptions[subscription.endpoint] = subscription;
+    await this.ctx.storage.put("subscriptions", subscriptions);
+    return Object.keys(subscriptions).length;
+  }
+
+  async remove(endpoint: string): Promise<void> {
+    const subscriptions = (await this.ctx.storage.get<Record<string, PushSubscriptionRecord>>("subscriptions")) ?? {};
+    delete subscriptions[endpoint];
+    await this.ctx.storage.put("subscriptions", subscriptions);
+  }
+
+  async list(): Promise<PushSubscriptionRecord[]> {
+    const subscriptions = (await this.ctx.storage.get<Record<string, PushSubscriptionRecord>>("subscriptions")) ?? {};
+    return Object.values(subscriptions);
+  }
+}
+
+function cors(response: Response): Response {
+  const headers = new Headers(response.headers);
+  headers.set("Access-Control-Allow-Origin", SITE_ORIGIN);
+  headers.set("Access-Control-Allow-Methods", "POST, DELETE, OPTIONS");
+  headers.set("Access-Control-Allow-Headers", "Content-Type");
+  headers.set("Vary", "Origin");
+  return new Response(response.body, { status: response.status, headers });
+}
+
+function sameOrigin(request: Request): boolean {
+  return request.headers.get("Origin") === SITE_ORIGIN;
+}
+
+function authorized(request: Request, secret: string): boolean {
+  const token = request.headers.get("Authorization")?.replace(/^Bearer\s+/i, "") ?? "";
+  const encoder = new TextEncoder();
+  const supplied = encoder.encode(token);
+  const expected = encoder.encode(secret);
+  const lengthsMatch = supplied.byteLength === expected.byteLength;
+  return lengthsMatch ? crypto.subtle.timingSafeEqual(supplied, expected) : !crypto.subtle.timingSafeEqual(supplied, supplied);
+}
+
 export default {
   async scheduled(_controller: ScheduledController, env: Env): Promise<void> {
     const result = await env.FEED_STATE.getByName("firmware-feeds").check();
     console.log(JSON.stringify(result));
   },
-  async fetch(_request: Request, env: Env): Promise<Response> {
+  async fetch(request: Request, env: Env): Promise<Response> {
+    const url = new URL(request.url);
+    const subscriptions = env.PUSH_SUBSCRIPTIONS.getByName("catalog-subscribers");
+    if (request.method === "OPTIONS" && url.pathname === "/subscriptions" && sameOrigin(request)) {
+      return cors(new Response(null, { status: 204 }));
+    }
+    if (url.pathname === "/vapid-public-key" && request.method === "GET") {
+      return cors(Response.json({ publicKey: env.VAPID_PUBLIC_KEY }));
+    }
+    if (url.pathname === "/subscriptions" && request.method === "POST") {
+      if (!sameOrigin(request)) return new Response("Forbidden", { status: 403 });
+      try {
+        const count = await subscriptions.subscribe(await request.json<PushSubscriptionRecord>());
+        return cors(Response.json({ subscribed: true, count }, { status: 201 }));
+      } catch {
+        return cors(new Response("Invalid subscription", { status: 400 }));
+      }
+    }
+    if (url.pathname === "/subscriptions" && request.method === "DELETE") {
+      if (!sameOrigin(request)) return new Response("Forbidden", { status: 403 });
+      const { endpoint } = await request.json<{ endpoint?: string }>();
+      if (!endpoint) return cors(new Response("Invalid subscription", { status: 400 }));
+      await subscriptions.remove(endpoint);
+      return cors(new Response(null, { status: 204 }));
+    }
+    if (url.pathname === "/internal/subscriptions") {
+      if (!authorized(request, env.PUSH_API_TOKEN)) return new Response("Unauthorized", { status: 401 });
+      if (request.method === "GET") return Response.json({ subscriptions: await subscriptions.list() });
+      if (request.method === "DELETE") {
+        const { endpoint } = await request.json<{ endpoint?: string }>();
+        if (!endpoint) return new Response("Invalid subscription", { status: 400 });
+        await subscriptions.remove(endpoint);
+        return new Response(null, { status: 204 });
+      }
+    }
     return Response.json(await env.FEED_STATE.getByName("firmware-feeds").status());
   },
 } satisfies ExportedHandler<Env>;
