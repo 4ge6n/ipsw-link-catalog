@@ -87,10 +87,22 @@ def generate(api: Path, output: Path):
                     major_title = f"{OS_NAMES[os_key]} {major}.x beta / RC" if channel == "beta" else f"{OS_NAMES[os_key]} {major}.x Release"
                     major_back = "← Beta major versions" if channel == "beta" else "← Release major versions"
                     major_body=[f"<p>{link('../', major_back)}</p><h1>{major_title}</h1><ul>"]
-                    for release in releases:
-                        href="../"+release["data"].removesuffix(".json")+"/"
-                        major_body.append(release_list_item(release, href))
-                    write(output/os_key/channel/major/"index.html", f"{OS_NAMES[os_key]} {major}.x beta / RC", "".join(major_body)+"</ul>")
+                    if channel == "beta":
+                        by_version={}
+                        for release in releases: by_version.setdefault(release["version"], []).append(release)
+                        for version in sorted(by_version, key=lambda value: tuple(int(part) for part in value.split("."))):
+                            builds=by_version[version]
+                            major_body.append(f"<li>{link(version+'/', version)} — {len(builds)} beta/RC build(s)</li>")
+                            version_body=[f"<p>{link('../', '← '+major+'.x beta / RC')}</p><h1>{OS_NAMES[os_key]} {version} beta / RC</h1><ul>"]
+                            for release in builds:
+                                href="../../"+release["data"].removesuffix(".json")+"/"
+                                version_body.append(release_list_item(release, href))
+                            write(output/os_key/channel/major/version/"index.html", f"{OS_NAMES[os_key]} {version} beta / RC", "".join(version_body)+"</ul>")
+                    else:
+                        for release in releases:
+                            href="../"+release["data"].removesuffix(".json")+"/"
+                            major_body.append(release_list_item(release, href))
+                    write(output/os_key/channel/major/"index.html", f"{OS_NAMES[os_key]} {major}.x {channel.title()}", "".join(major_body)+"</ul>")
             if channel == "release":
                 latest=json.loads((api/os_key/channel/"latest.json").read_text())
                 latest_body=f"<p>{link('../', '← '+channel.title()+' list')}</p><h1>Latest {OS_NAMES[os_key]} {channel.title()} downloads</h1>"+"".join(f"<h2>{html.escape(r['version'])} ({html.escape(r['build'])})</h2><p class='meta'>{release_time(r.get('released_at'))}</p>"+firmware_table(r) for r in latest["releases"])
