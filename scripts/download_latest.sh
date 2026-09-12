@@ -25,21 +25,14 @@ SUCCESSFUL="$WORK_DIR/successful.tsv"
 FAILED="$WORK_DIR/failed.tsv"
 RESULTS_DIR="$WORK_DIR/results"
 
+# This downloader intentionally handles only iPhone and iPad restores.
 ENABLE_IOS="${ENABLE_IOS:-1}"
 ENABLE_IPADOS="${ENABLE_IPADOS:-1}"
-ENABLE_TVOS="${ENABLE_TVOS:-1}"
-ENABLE_VISIONOS="${ENABLE_VISIONOS:-1}"
-ENABLE_AUDIOOS="${ENABLE_AUDIOOS:-1}"
-ENABLE_MACOS="${ENABLE_MACOS:-1}"
 
 destination_for_os() {
   case "$1" in
     ios) printf '%s\n' 'iPhone Software Updates' ;;
     ipados) printf '%s\n' 'iPad Software Updates' ;;
-    tvos) printf '%s\n' 'Apple TV Software Updates' ;;
-    visionos) printf '%s\n' 'Apple Vision Pro Software Updates' ;;
-    audioos) printf '%s\n' 'HomePod Software Updates' ;;
-    macos) printf '%s\n' 'Mac Software Updates' ;;
     *) return 1 ;;
   esac
 }
@@ -170,6 +163,10 @@ collect_os() {
   while IFS=$'\t' read -r version build name devices filename url signed; do
     [[ "$signed" == true || "$CHANNEL" == beta ]] || continue
     [[ "$url" =~ ^https://(updates\.cdn-apple\.com|secure-appldnld\.apple\.com|appldnld\.apple\.com)/.*\.ipsw$ ]] || { log "WARNING: rejected URL for $filename"; continue; }
+    case "$os:$filename" in
+      ios:iPhone*_Restore.ipsw|ipados:iPad*_Restore.ipsw) ;;
+      *) continue ;;
+    esac
     [[ -n "$filename" && -n "$version" && -n "$build" ]] || continue
     printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$os" "$version" "$build" "$name" "$devices" "$filename" "$url" >> "$QUEUE"
   done < <(parse_latest "$json")
@@ -177,10 +174,6 @@ collect_os() {
 
 collect_os ios "$ENABLE_IOS"
 collect_os ipados "$ENABLE_IPADOS"
-collect_os tvos "$ENABLE_TVOS"
-collect_os visionos "$ENABLE_VISIONOS"
-collect_os audioos "$ENABLE_AUDIOOS"
-collect_os macos "$ENABLE_MACOS"
 [[ -s "$QUEUE" ]] || die "No downloadable IPSWs in the selected latest catalogs"
 
 download_one() {
