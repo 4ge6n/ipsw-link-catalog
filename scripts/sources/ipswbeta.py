@@ -8,7 +8,7 @@ IPSW.
 from __future__ import annotations
 
 from concurrent.futures import ThreadPoolExecutor
-import html
+import html, os
 import re
 from urllib.parse import unquote
 from urllib.request import Request, urlopen
@@ -60,13 +60,23 @@ def candidates_for_device(item: tuple[str, str, str], timeout: int) -> list[dict
         preceding=page[:match.start()]
         labels=re.findall(r'<div class="font-bold">\s*([^<]+)', preceding)
         label=html.unescape(labels[-1]).strip() if labels else f"{version} beta"
-        candidates.append({"device": identifier, "name": name, "version": version, "label": label, "build": build, "url": url, "signed": None, "channel": "beta", "source": "ipswbeta.dev"})
+        # The source track is authoritative for historical iPad builds: iOS
+        # existed before iPadOS, so identifier-based classification alone
+        # would incorrectly publish iOS 10–12 iPads under iPadOS.
+        candidates.append({"os_key": os_key, "device": identifier, "name": name, "version": version, "label": label, "build": build, "url": url, "signed": None, "channel": "beta", "source": "ipswbeta.dev"})
     return candidates
 
 def fetch(timeout: int, os_keys: set[str]) -> list[dict]:
+    # Full history is intentionally an opt-in maintenance operation.  Normal
+    # feed-triggered updates only need current tracks: merge() retains every
+    # historical record already published, while avoiding thousands of old
+    # device-page requests on each poll.
+    full_history = os.environ.get("BETA_HISTORY", "0") == "1"
+    current = current_tracks(timeout) if not full_history else {}
     jobs = []
     for os_key in sorted(os_keys):
-        for track in tracks_for_os(os_key, timeout):
+        tracks = tracks_for_os(os_key, timeout) if full_history else ([current[os_key]] if os_key in current else [])
+        for track in tracks:
             try:
                 devices=devices_for_track(os_key, track, timeout)
             except Exception:

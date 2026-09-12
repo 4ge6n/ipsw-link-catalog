@@ -1,6 +1,12 @@
 name: Update IPSW catalog
 on:
   workflow_dispatch:
+    inputs:
+      full_beta_history:
+        description: 'Re-scan every historical IPSWBeta.dev track (slow; normally unnecessary)'
+        required: false
+        default: false
+        type: boolean
   repository_dispatch:
     types: [firmware_release]
   push:
@@ -22,6 +28,8 @@ jobs:
       - run: python -m unittest discover -s tests
       - run: python scripts/update.py
         if: github.event_name != 'push'
+        env:
+          BETA_HISTORY: ${{ inputs.full_beta_history == true && '1' || '0' }}
       - name: Commit changed catalog
         if: github.event_name != 'push'
         run: |

@@ -25,6 +25,10 @@ def existing_records(api):
             # version. Fold those into the numeric canonical version.
             match=re.search(r"[0-9]+(?:\.[0-9]+)*", str(record.get("version", "")))
             if match: record["version"]=match.group(0)
+            # Repair catalogs generated before the source track was retained.
+            # iPadOS began at 13; older iPad beta records are iOS releases.
+            if record.get("os_key") == "ipados" and record.get("channel") == "beta" and match and int(match.group(0).split(".", 1)[0]) < 13:
+                record["os_key"]="ios"
             record["build"]=safe_build(record["build"])
             records.append(record)
         except json.JSONDecodeError: pass

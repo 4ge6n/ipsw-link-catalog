@@ -1,7 +1,9 @@
 import json
 import unittest
+from unittest.mock import patch
 from scripts.normalize import allowed_ipsw_url, classify
 from scripts.organize import all_index, normalize_candidates, merge, index
+from scripts.sources import ipswbeta
 from scripts.sources.ipswbeta import FILENAME, tracks_for_os
 from scripts.sources.beta import url_for_device
 
@@ -51,3 +53,14 @@ class CatalogTests(unittest.TestCase):
         observed,_=normalize_candidates(rows, SETTINGS, "2026-09-12T00:00:00Z")
         document=all_index(merge([], observed, "2026-09-12T00:00:00Z"), "ipados", "beta", "2026-09-12T00:00:00Z")
         self.assertEqual(sum(len(release["firmwares"]) for release in document["releases"]), 1)
+    def test_ipswbeta_normal_updates_only_current_tracks(self):
+        with patch.dict("os.environ", {"BETA_HISTORY": "0"}, clear=False), \
+             patch.object(ipswbeta, "current_tracks", return_value={"ios": "27.x"}), \
+             patch.object(ipswbeta, "tracks_for_os") as history, \
+             patch.object(ipswbeta, "devices_for_track", return_value=[]):
+            self.assertEqual(ipswbeta.fetch(1, {"ios"}), [])
+        history.assert_not_called()
+    def test_historical_ios_ipad_candidate_keeps_ios_track(self):
+        with patch("scripts.sources.ipswbeta.get_text", return_value='<div class="font-bold">10.1 beta</div> data-url="https://updates.cdn-apple.com/iPad3,4_10.1_14B1_Restore.ipsw"'):
+            row=ipswbeta.candidates_for_device(("ios", "10.x", "iPad3,4"), 1)[0]
+        self.assertEqual(row["os_key"], "ios")
