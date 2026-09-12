@@ -21,7 +21,7 @@ def release_time(value: str | None) -> str:
     except ValueError:
         return "Release time: " + html.escape(value)
     tokyo=released.astimezone(ZoneInfo("Asia/Tokyo"))
-    return f"Released: UTC {released.isoformat().replace('+00:00', 'Z')} · Asia/Tokyo {tokyo.isoformat()}"
+    return f"Released (UTC): {released.isoformat().replace('+00:00', 'Z')}<br>Released (Asia/Tokyo): {tokyo.isoformat()}"
 def firmware_table(release: dict) -> str:
     rows=[]
     for fw in release["firmwares"]:
