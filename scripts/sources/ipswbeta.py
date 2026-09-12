@@ -28,6 +28,16 @@ def current_tracks(timeout: int) -> dict[str, str]:
     found = re.findall(r'href="/(ios|ipados|macos|tvos|visionos)/([0-9]+\.x)/"', page)
     return {key: track for key, track in found}
 
+def tracks_for_os(os_key: str, timeout: int) -> list[str]:
+    """Return all public iOS beta eras (10.x onward), current track otherwise."""
+    if os_key == "ios":
+        page = get_text(f"{BASE}/ios/", timeout)
+        found=re.findall(r'href="/ios/([0-9]+\.x)/"', page)
+        # Numeric ordering keeps the request/commit output deterministic.
+        return sorted(set(found), key=lambda track: int(track.split(".", 1)[0]), reverse=True)
+    track=current_tracks(timeout).get(os_key)
+    return [track] if track else []
+
 def devices_for_track(os_key: str, track: str, timeout: int) -> list[str]:
     path = PATHS[os_key]
     page = get_text(f"{BASE}/{path}/{track}/", timeout)
@@ -56,12 +66,15 @@ def candidates_for_device(item: tuple[str, str, str], timeout: int) -> list[dict
     return candidates
 
 def fetch(timeout: int, os_keys: set[str]) -> list[dict]:
-    tracks = current_tracks(timeout)
     jobs = []
     for os_key in sorted(os_keys):
-        track = tracks.get(os_key)
-        if track:
-            jobs.extend((os_key, track, device) for device in devices_for_track(os_key, track, timeout))
+        for track in tracks_for_os(os_key, timeout):
+            try:
+                devices=devices_for_track(os_key, track, timeout)
+            except Exception:
+                # A missing historical track must not hide every other era.
+                continue
+            jobs.extend((os_key, track, device) for device in devices)
     with ThreadPoolExecutor(max_workers=12) as pool:
         rows=pool.map(lambda item: candidates_for_device(item, timeout), jobs)
         return [candidate for device_rows in rows for candidate in device_rows]
