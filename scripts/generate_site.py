@@ -21,7 +21,7 @@ def generate(api: Path, output: Path):
     if output.exists(): shutil.rmtree(output)
     release_meta=json.loads((api/"ios"/"release"/"all.json").read_text())
     updated=f"<p class='meta'>Catalog updated: UTC {html.escape(release_meta['generated_at'])} · Asia/Tokyo {html.escape(release_meta.get('generated_at_tokyo', 'unknown'))}</p>"
-    home=["<h1>Apple IPSW download links</h1><p>Direct Apple CDN links, organized by OS, release channel, version, and build. IPSW files are not hosted here.</p>", updated, "<ul>"]
+    home=["<h1> IPSW download links</h1><p>Direct Apple CDN links, organized by OS, release channel, version, and build. IPSW files are not hosted here.</p>", updated, "<ul>"]
     for os_key in OS_ORDER:
         home.append(f"<li>{link(os_key+'/', OS_NAMES[os_key])}</li>")
         os_page=[f"<p>{link('../', '← All operating systems')}</p><h1>{OS_NAMES[os_key]}</h1><ul>"]
@@ -42,4 +42,4 @@ def generate(api: Path, output: Path):
                 latest_body=f"<p>{link('../', '← '+channel.title()+' list')}</p><h1>Latest {OS_NAMES[os_key]} {channel.title()} downloads</h1>"+"".join(f"<h2>{html.escape(r['version'])} ({html.escape(r['build'])})</h2>"+firmware_table(r) for r in latest["releases"])
                 write(output/os_key/channel/"latest"/"index.html", f"Latest {OS_NAMES[os_key]} {channel}", latest_body or "<p>No downloads available.</p>")
             write(output/os_key/channel/"index.html", f"{OS_NAMES[os_key]} {channel}", "".join(channel_page)+"</ul>")
-    write(output/"index.html", "Apple IPSW download links", "".join(home)+"</ul>")
+    write(output/"index.html", " IPSW download links", "".join(home)+"</ul>")
