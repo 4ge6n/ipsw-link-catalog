@@ -4,6 +4,7 @@ import argparse, json, os, shutil, sys, tempfile
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 from pathlib import Path
+from urllib.parse import urlparse
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from scripts.generate_readme import content, replace
 from scripts.generate_site import generate as generate_site
@@ -65,7 +66,7 @@ def main():
     # Public sources may include OTA/asset rows alongside IPSWs. They are
     # deliberately ignored; a syntactically valid IPSW on an unknown host is a
     # supply-chain alert and must stop publication.
-    unknown_hosts=sorted({row.get("url", "").split("/")[2] for row in rejected if row.get("url", "").startswith("https://") and row.get("url", "").lower().split("?", 1)[0].endswith(".ipsw")})
+    unknown_hosts=sorted({urlparse(row.get("url", "")).hostname for row in rejected if row.get("url", "").startswith("https://") and row.get("url", "").lower().split("?", 1)[0].endswith(".ipsw") and urlparse(row["url"]).hostname not in settings["allowed_cdn_hosts"]})
     if unknown_hosts: raise SystemExit("unknown IPSW CDN hosts: " + ", ".join(unknown_hosts))
     if rejected: print(json.dumps({"ignored_non_ipsw_or_incomplete_candidates": len(rejected)}))
     records=merge(old, observed, now)
