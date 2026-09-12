@@ -13,6 +13,7 @@ DRY_RUN="${DRY_RUN:-0}" # 1 = validate and list downloads without saving IPSWs
 MAX_RETRY="${MAX_RETRY:-3}"
 VERIFY_ALL="${VERIFY_ALL:-1}"
 VERIFY_ARCHIVE="${VERIFY_ARCHIVE:-1}" # validate IPSW ZIP structure and CRCs
+SHOW_PROGRESS="${SHOW_PROGRESS:-0}" # 1 = curl progress bar (best with MAX_CONCURRENT=1)
 # Set to 1 only when old IPSWs in the same device-family and major version
 # should be removed after a verified replacement has been downloaded.
 REMOVE_OLDER="${REMOVE_OLDER:-0}"
@@ -72,7 +73,7 @@ get_remote_size() {
   local url="$1" size
   size=$(curl --fail --silent --show-error --location --head \
     --retry 2 --connect-timeout 20 --max-time 90 "$url" 2>/dev/null \
-    | awk 'BEGIN{IGNORECASE=1} /^content-length:[[:space:]]*[0-9]+/ {v=$2} END {gsub("\\r", "", v); print v}') || return 1
+    | awk '{value=$2; gsub("\\r", "", value); if (tolower($1) == "content-length:" && value ~ /^[0-9]+$/) v=value} END {print v}') || return 1
   [[ "$size" =~ ^[1-9][0-9]*$ ]] || return 1
   printf '%s\n' "$size"
 }
@@ -115,6 +116,7 @@ firmware_version() {
 [[ "$MAX_CONCURRENT" =~ ^[1-9][0-9]*$ ]] || die "MAX_CONCURRENT must be a positive integer"
 [[ "$MAX_RETRY" =~ ^[1-9][0-9]*$ ]] || die "MAX_RETRY must be a positive integer"
 [[ "$VERIFY_ARCHIVE" == 0 || "$VERIFY_ARCHIVE" == 1 ]] || die "VERIFY_ARCHIVE must be 0 or 1"
+[[ "$SHOW_PROGRESS" == 0 || "$SHOW_PROGRESS" == 1 ]] || die "SHOW_PROGRESS must be 0 or 1"
 [[ -d "$DESTINATION_BASE" ]] || die "Destination does not exist: $DESTINATION_BASE"
 command -v curl >/dev/null || die "curl is required"
 command -v osascript >/dev/null || die "osascript is required"
@@ -197,6 +199,19 @@ collect_os ios "$ENABLE_IOS"
 collect_os ipados "$ENABLE_IPADOS"
 [[ -s "$QUEUE" ]] || die "No downloadable IPSWs in the selected latest catalogs"
 
+download_with_curl() {
+  local partial="$1" url="$2"
+  if [[ "$SHOW_PROGRESS" == 1 ]]; then
+    curl --fail --show-error --location --progress-bar --retry 2 --retry-delay 3 --continue-at - \
+      --connect-timeout 30 --speed-limit 1024 --speed-time 120 \
+      --user-agent "ipsw-link-catalog-downloader/1.0" --output "$partial" "$url"
+  else
+    curl --fail --silent --show-error --location --retry 2 --retry-delay 3 --continue-at - \
+      --connect-timeout 30 --speed-limit 1024 --speed-time 120 \
+      --user-agent "ipsw-link-catalog-downloader/1.0" --output "$partial" "$url"
+  fi
+}
+
 download_one() {
   local os="$1" version="$2" build="$3" name="$4" devices="$5" filename="$6" url="$7"
   local folder directory destination partial expected try actual
@@ -228,9 +243,7 @@ download_one() {
   try=1
   while [[ "$try" -le "$MAX_RETRY" ]]; do
     log "TRY $try/$MAX_RETRY: $filename"
-    if curl --fail --show-error --location --retry 2 --retry-delay 3 --continue-at - \
-      --connect-timeout 30 --speed-limit 1024 --speed-time 120 \
-      --user-agent "ipsw-link-catalog-downloader/1.0" --output "$partial" "$url"; then
+    if download_with_curl "$partial" "$url"; then
       if verify_firmware "$partial" "$expected" && mv "$partial" "$destination"; then
         log "DOWNLOAD OK: $filename"
         record_result successful "$os" "$version" "$build" "$devices" "$expected" "$url" "$filename"
