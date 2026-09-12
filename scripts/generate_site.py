@@ -1,6 +1,7 @@
 """Create a human-readable static site from the canonical API documents."""
 from __future__ import annotations
 import html
+import hashlib
 import json
 import re
 import shutil
@@ -11,10 +12,12 @@ from .normalize import OS_NAMES, OS_ORDER
 
 ROOT = Path(__file__).parent.parent
 APP_URL = "https://4ge6n.github.io/ipsw-link-catalog"
+DOWNLOAD_QUEUE_ASSET = "download-queue.js"
+DOWNLOAD_QUEUE_VERSION = hashlib.sha256((ROOT / "assets" / DOWNLOAD_QUEUE_ASSET).read_bytes()).hexdigest()[:12]
 STYLE = "body{font-family:system-ui,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#1d1d1f}a{color:#06c}table{border-collapse:collapse;width:100%}th,td{padding:.65rem;border-bottom:1px solid #ddd;text-align:left}code{font-size:.9em}.meta{color:#666}button{font:inherit;padding:.6rem .9rem;border:1px solid #777;border-radius:.5rem;background:#fff;color:#111}.download-queue{margin:1rem 0;padding:1rem;border:1px solid #ddd;border-radius:.6rem}.download-queue label{display:block;margin:.4rem 0}"
 def write(path: Path, title: str, body: str):
     path.parent.mkdir(parents=True, exist_ok=True)
-    head=f"<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><meta name='theme-color' content='#ffffff'><meta name='apple-mobile-web-app-capable' content='yes'><meta name='apple-mobile-web-app-title' content='IPSW Links'><link rel='manifest' href='{APP_URL}/manifest.webmanifest'><link rel='apple-touch-icon' href='{APP_URL}/icon.svg'><title>{html.escape(title)}</title><style>{STYLE}</style><script defer src='{APP_URL}/push-config.js'></script><script defer src='{APP_URL}/push.js'></script><script defer src='{APP_URL}/download-queue.js'></script>"
+    head=f"<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><meta name='theme-color' content='#ffffff'><meta name='apple-mobile-web-app-capable' content='yes'><meta name='apple-mobile-web-app-title' content='IPSW Links'><link rel='manifest' href='{APP_URL}/manifest.webmanifest'><link rel='apple-touch-icon' href='{APP_URL}/icon.svg'><title>{html.escape(title)}</title><style>{STYLE}</style><script defer src='{APP_URL}/push-config.js'></script><script defer src='{APP_URL}/push.js'></script><script defer src='{APP_URL}/{DOWNLOAD_QUEUE_ASSET}?v={DOWNLOAD_QUEUE_VERSION}'></script>"
     path.write_text(f"<!doctype html><html lang='en'><head>{head}</head><body>{body}</body></html>\n")
 def link(href: str, text: str) -> str: return f"<a href='{html.escape(href, quote=True)}'>{html.escape(text)}</a>"
 def display_version(release: dict) -> str:
