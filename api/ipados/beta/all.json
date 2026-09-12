@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-09-12T11:25:58Z",
+  "generated_at": "2026-09-12T11:37:40Z",
   "release_count": 429,
   "firmware_count": 4857,
   "releases": [
@@ -15043,17 +15043,6 @@
       "firmwares": [
         {
           "id": "ipados-beta-18.7.10-rc-22H373-iPad11,6",
-          "name": "iPad (8th generation) Wi",
-          "devices": [
-            "iPad11,6",
-            "iPad11,7"
-          ],
-          "filename": "iPad_10.2_2020_18.7.10_22H373_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/140-81742/23BD40AE-5AC0-402F-874E-2A2674EC768F/iPad_10.2_2020_18.7.10_22H373_Restore.ipsw",
-          "signed": false
-        },
-        {
-          "id": "ipados-beta-18.7.10-rc-22H373-iPad11,6",
           "name": "iPad (8th generation) Wi-Fi + Cellular",
           "devices": [
             "iPad11,6",
@@ -15061,6 +15050,17 @@
           ],
           "filename": "iPad_10.2_18.7.7_22H333_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-88634/BE48C97C-27CD-4EB1-9645-10E9D6F373FB/iPad_10.2_18.7.7_22H333_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "ipados-beta-18.7.10-rc-22H373-iPad11,6",
+          "name": "iPad (8th generation) Wi",
+          "devices": [
+            "iPad11,6",
+            "iPad11,7"
+          ],
+          "filename": "iPad_10.2_2020_18.7.10_22H373_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/140-81742/23BD40AE-5AC0-402F-874E-2A2674EC768F/iPad_10.2_2020_18.7.10_22H373_Restore.ipsw",
           "signed": false
         }
       ]
@@ -66238,5 +66238,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-12T20:25:58+09:00"
+  "generated_at_tokyo": "2026-09-12T20:37:40+09:00"
 }
