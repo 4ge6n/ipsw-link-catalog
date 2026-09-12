@@ -2,6 +2,8 @@
   const storageKey = "ipsw-download-queue-v2";
   const sections = [...document.querySelectorAll(".download-queue")];
   if (!sections.length) return;
+  // A Home Screen web app runs without browser chrome, so window.open is unreliable there.
+  const standalone = window.navigator.standalone === true || window.matchMedia("(display-mode: standalone)").matches;
   const read = () => {
     try { return JSON.parse(localStorage.getItem(storageKey) || "[]"); }
     catch { return []; }
@@ -9,23 +11,63 @@
   const write = (queue) => {
     try { localStorage.setItem(storageKey, JSON.stringify(queue)); }
     catch { /* private mode: the queue simply does not survive the page */ }
+    render(queue);
   };
   const announce = (message) => sections.forEach((section) => {
     section.querySelector("[data-download-queue-status]").textContent = message;
   });
-  const describe = (queue) => announce(queue.length
-    ? `${queue.length} file(s) queued: ${queue[0].name} is next.`
-    : "No queued downloads.");
+  const openDownload = (entry) => {
+    // Tapping a real link is the gesture Safari accepts in both tabs and standalone apps.
+    const anchor = document.createElement("a");
+    anchor.href = entry.url;
+    anchor.rel = "noopener";
+    if (!standalone) anchor.target = "_blank";
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+  };
+  const remove = (url) => {
+    const queue = read().filter((entry) => entry.url !== url);
+    write(queue);
+    announce(`Removed. ${queue.length} file(s) left in the queue.`);
+  };
   const openNext = () => {
     const queue = read();
     const next = queue.shift();
+    if (!next) { write(queue); announce("No queued downloads."); return; }
     write(queue);
-    if (!next) { describe(queue); return; }
-    // Safari requires each cross-origin download to follow a user gesture.
-    // Opening exactly one Apple CDN URL preserves that rule and avoids pop-up blocking.
-    window.open(next.url, "_blank", "noopener");
+    openDownload(next);
     announce(`Opened ${next.name}. After saving it, open the next download (${queue.length} remaining).`);
   };
+  const render = (queue) => sections.forEach((section) => {
+    const count = section.querySelector("[data-download-queue-count]");
+    const panel = section.querySelector("[data-download-queue-panel]");
+    count.textContent = queue.length ? ` (${queue.length})` : "";
+    panel.textContent = "";
+    if (!queue.length) {
+      panel.appendChild(Object.assign(document.createElement("p"), { className: "meta", textContent: "The queue is empty." }));
+      return;
+    }
+    const list = document.createElement("ol");
+    queue.forEach((entry) => {
+      const item = document.createElement("li");
+      const anchor = document.createElement("a");
+      anchor.href = entry.url;
+      anchor.textContent = entry.name;
+      anchor.rel = "noopener";
+      if (!standalone) anchor.target = "_blank";
+      // Tapping an entry downloads it and takes it out of the queue.
+      anchor.addEventListener("click", () => remove(entry.url));
+      const drop = document.createElement("button");
+      drop.type = "button";
+      drop.className = "queue-remove";
+      drop.textContent = "Remove";
+      drop.addEventListener("click", () => remove(entry.url));
+      item.append(anchor, " ", drop);
+      list.appendChild(item);
+    });
+    panel.appendChild(list);
+  });
   sections.forEach((section) => {
     // Each release has its own table, so scope the checkbox buttons to it.
     const table = section.nextElementSibling;
@@ -56,8 +98,15 @@
       write([]);
       announce("Queue emptied.");
     });
+    const toggle = section.querySelector("[data-download-queue-show]");
+    const panel = section.querySelector("[data-download-queue-panel]");
+    toggle.addEventListener("click", () => {
+      const open = panel.hidden;
+      panel.hidden = !open;
+      toggle.setAttribute("aria-expanded", String(open));
+    });
   });
-  describe(read());
-  // Another tab may have consumed or extended the queue.
-  window.addEventListener("storage", (event) => { if (event.key === storageKey) describe(read()); });
+  render(read());
+  // Another tab, or the Safari copy of this site, may have changed the queue.
+  window.addEventListener("storage", (event) => { if (event.key === storageKey) render(read()); });
 })();
