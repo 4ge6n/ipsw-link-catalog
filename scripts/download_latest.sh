@@ -25,14 +25,15 @@ SUCCESSFUL="$WORK_DIR/successful.tsv"
 FAILED="$WORK_DIR/failed.tsv"
 RESULTS_DIR="$WORK_DIR/results"
 
-# This downloader intentionally handles only iPhone and iPad restores.
+# This downloader intentionally handles only iPhone, iPad, and iPod restores.
 ENABLE_IOS="${ENABLE_IOS:-1}"
 ENABLE_IPADOS="${ENABLE_IPADOS:-1}"
 
-destination_for_os() {
-  case "$1" in
-    ios) printf '%s\n' 'iPhone Software Updates' ;;
-    ipados) printf '%s\n' 'iPad Software Updates' ;;
+destination_for_firmware() {
+  case "$1:$2" in
+    ios:iPhone*_Restore.ipsw) printf '%s\n' 'iPhone Software Updates' ;;
+    ios:iPod*_Restore.ipsw) printf '%s\n' 'iPod Software Updates' ;;
+    ipados:iPad*_Restore.ipsw) printf '%s\n' 'iPad Software Updates' ;;
     *) return 1 ;;
   esac
 }
@@ -164,7 +165,7 @@ collect_os() {
     [[ "$signed" == true || "$CHANNEL" == beta ]] || continue
     [[ "$url" =~ ^https://(updates\.cdn-apple\.com|secure-appldnld\.apple\.com|appldnld\.apple\.com)/.*\.ipsw$ ]] || { log "WARNING: rejected URL for $filename"; continue; }
     case "$os:$filename" in
-      ios:iPhone*_Restore.ipsw|ipados:iPad*_Restore.ipsw) ;;
+      ios:iPhone*_Restore.ipsw|ios:iPod*_Restore.ipsw|ipados:iPad*_Restore.ipsw) ;;
       *) continue ;;
     esac
     [[ -n "$filename" && -n "$version" && -n "$build" ]] || continue
@@ -179,7 +180,7 @@ collect_os ipados "$ENABLE_IPADOS"
 download_one() {
   local os="$1" version="$2" build="$3" name="$4" devices="$5" filename="$6" url="$7"
   local folder directory destination partial expected try actual
-  folder=$(destination_for_os "$os") || return 1
+  folder=$(destination_for_firmware "$os" "$filename") || return 1
   directory="$DESTINATION_BASE/$folder"; destination="$directory/$filename"
   if [[ "$DRY_RUN" == 1 ]]; then
     log "DRY RUN: $os $version ($build) — $filename"
@@ -248,7 +249,7 @@ fi
 if [[ "$REMOVE_OLDER" == 1 && "$DRY_RUN" != 1 && -s "$SUCCESSFUL" ]]; then
   log "REMOVE OLDER START"
   while IFS=$'\t' read -r os version build devices size url filename; do
-    folder=$(destination_for_os "$os" 2>/dev/null || true)
+    folder=$(destination_for_firmware "$os" "$filename" 2>/dev/null || true)
     [[ -n "$folder" ]] || continue
     family=$(firmware_family "$filename")
     major=${version%%.*}
@@ -273,7 +274,7 @@ verify_error=0
 if [[ "$VERIFY_ALL" == 1 && "$DRY_RUN" != 1 ]]; then
   log "VERIFY ALL START"
   while IFS=$'\t' read -r os version build devices size url filename; do
-    folder=$(destination_for_os "$os" 2>/dev/null || true)
+    folder=$(destination_for_firmware "$os" "$filename" 2>/dev/null || true)
     [[ -n "$folder" ]] || continue
     if [[ ! -f "$DESTINATION_BASE/$folder/$filename" ]] || ! verify_file_size "$DESTINATION_BASE/$folder/$filename" "$size"; then
       log "VERIFY ERROR: $filename"
