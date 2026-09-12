@@ -1,0 +1,46 @@
+{
+  "os_key": "visionos",
+  "channel": "beta",
+  "version": "27.0",
+  "version_label": "27.0-beta-5",
+  "build": "24M5348B",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T10:48:41Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple Vision Pro (M5)",
+      "devices": [
+        "RealityDevice17,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/140-86411/364A2CB6-4FFA-4BC1-B2B0-95B1485B212E/Apple_Vision_Pro_M5_27.0_24M5348b_Restore.ipsw",
+      "filename": "Apple_Vision_Pro_M5_27.0_24M5348b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "Apple Vision Pro",
+      "devices": [
+        "RealityDevice14,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/140-82612/1783BDAF-B67F-447D-AE71-C0932FA49DEC/Apple_Vision_Pro_27.0_24M5348b_Restore.ipsw",
+      "filename": "Apple_Vision_Pro_27.0_24M5348b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T10:48:41Z",
+  "last_seen_at": "2026-09-12T10:48:41Z"
+}

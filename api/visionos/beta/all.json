@@ -4,13 +4,261 @@
   "os_key": "visionos",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-09-12T07:43:32Z",
-  "release_count": 1,
-  "firmware_count": 2,
+  "generated_at": "2026-09-12T10:48:41Z",
+  "release_count": 9,
+  "firmware_count": 18,
   "releases": [
     {
+      "id": "visionos-beta-27.0-beta-8-24M5361A",
+      "version": "27.0",
+      "build": "24M5361A",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "27.0-beta-8/24M5361A.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-27.0-beta-8-24M5361A-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_27.0_24M5361a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/b75d249d-16eb-4f04-a3f5-424231217475/Apple_Vision_Pro_M5_27.0_24M5361a_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-beta-27.0-beta-8-24M5361A-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_27.0_24M5361a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/4727e8f4-0072-41b2-a518-e0b51e5dcbc8/Apple_Vision_Pro_27.0_24M5361a_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-27.0-beta-7-24M5359A",
+      "version": "27.0",
+      "build": "24M5359A",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "27.0-beta-7/24M5359A.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-27.0-beta-7-24M5359A-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_27.0_24M5359a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/532a3af7-7540-4275-ac40-f0d67ffb28db/Apple_Vision_Pro_M5_27.0_24M5359a_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-beta-27.0-beta-7-24M5359A-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_27.0_24M5359a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/63fb33f1-1121-4076-a31c-4477a6f53ff4/Apple_Vision_Pro_27.0_24M5359a_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-27.0-beta-6-24M5355A",
+      "version": "27.0",
+      "build": "24M5355A",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "27.0-beta-6/24M5355A.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-27.0-beta-6-24M5355A-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_27.0_24M5355a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/9135c8df-ab75-4f71-8813-62fdbe69f286/Apple_Vision_Pro_M5_27.0_24M5355a_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-beta-27.0-beta-6-24M5355A-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_27.0_24M5355a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/02950fbe-1ba9-460c-8df5-afefe2f6c426/Apple_Vision_Pro_27.0_24M5355a_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-27.0-beta-5-24M5348B",
+      "version": "27.0",
+      "build": "24M5348B",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "27.0-beta-5/24M5348B.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-27.0-beta-5-24M5348B-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_27.0_24M5348b_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/140-86411/364A2CB6-4FFA-4BC1-B2B0-95B1485B212E/Apple_Vision_Pro_M5_27.0_24M5348b_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-beta-27.0-beta-5-24M5348B-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_27.0_24M5348b_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/140-82612/1783BDAF-B67F-447D-AE71-C0932FA49DEC/Apple_Vision_Pro_27.0_24M5348b_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-27.0-beta-4-24M5326G",
+      "version": "27.0",
+      "build": "24M5326G",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "27.0-beta-4/24M5326G.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-27.0-beta-4-24M5326G-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_27.0_24M5326g_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/140-57018/FB167F12-E600-419B-84E8-0BD2D41BF981/Apple_Vision_Pro_M5_27.0_24M5326g_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-beta-27.0-beta-4-24M5326G-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_27.0_24M5326g_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/140-57154/941926BD-B409-4A2F-845B-DA5F57644415/Apple_Vision_Pro_27.0_24M5326g_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-27.0-beta-3-24M5316K",
+      "version": "27.0",
+      "build": "24M5316K",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "27.0-beta-3/24M5316K.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-27.0-beta-3-24M5316K-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_27.0_24M5316k_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/140-35748/70E38D00-8C2B-4C9A-9BF4-EEF994911B16/Apple_Vision_Pro_M5_27.0_24M5316k_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-beta-27.0-beta-3-24M5316K-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_27.0_24M5316k_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/140-35757/77C8BF0F-1E06-4114-9E7D-F25521FC1926/Apple_Vision_Pro_27.0_24M5316k_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-27.0-beta-2-24M5306I",
+      "version": "27.0",
+      "build": "24M5306I",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "27.0-beta-2/24M5306I.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-27.0-beta-2-24M5306I-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_27.0_24M5306i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/140-22266/8BAAA1B2-8DDA-4A18-ABBF-6B98CEF0A54B/Apple_Vision_Pro_M5_27.0_24M5306i_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-beta-27.0-beta-2-24M5306I-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_27.0_24M5306i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/140-22261/D2A23366-EC11-4C0D-A3D7-8E71E5F079AD/Apple_Vision_Pro_27.0_24M5306i_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-27.0-beta-24M5291P",
+      "version": "27.0",
+      "build": "24M5291P",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "27.0-beta/24M5291P.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-27.0-beta-24M5291P-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_27.0_24M5291p_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/122-98925/B67B1526-A1A8-4AE9-9CD2-CDC4CC183052/Apple_Vision_Pro_M5_27.0_24M5291p_Restore.ipsw",
+          "signed": false
+        },
+        {
+          "id": "visionos-beta-27.0-beta-24M5291P-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_27.0_24M5291p_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/122-98905/5945589A-01AA-430A-9DD3-0615D2AE6E75/Apple_Vision_Pro_27.0_24M5291p_Restore.ipsw",
+          "signed": false
+        }
+      ]
+    },
+    {
       "id": "visionos-beta-27.0-rc-24M362",
-      "version": "27.0 RC",
+      "version": "27.0",
       "build": "24M362",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -40,5 +288,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-12T16:43:32+09:00"
+  "generated_at_tokyo": "2026-09-12T19:48:41+09:00"
 }

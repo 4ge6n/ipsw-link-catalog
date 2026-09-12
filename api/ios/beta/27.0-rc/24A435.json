@@ -1,7 +1,7 @@
 {
   "os_key": "ios",
   "channel": "beta",
-  "version": "27.0 RC",
+  "version": "27.0",
   "version_label": "27.0-rc",
   "build": "24A435",
   "released_at": null,
@@ -10,7 +10,11 @@
   "sources": [
     {
       "name": "ipsw.dev",
-      "checked_at": "2026-09-12T02:07:44Z"
+      "checked_at": "2026-09-12T10:48:41Z"
+    },
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T10:48:41Z"
     }
   ],
   "firmwares": [
@@ -395,5 +399,5 @@
     }
   ],
   "first_seen_at": "2026-09-11T19:39:29Z",
-  "last_seen_at": "2026-09-12T02:07:44Z"
+  "last_seen_at": "2026-09-12T10:48:41Z"
 }
