@@ -4,6 +4,31 @@
   if (!sections.length) return;
   // A Home Screen web app runs without browser chrome, so window.open is unreliable there.
   const standalone = window.navigator.standalone === true || window.matchMedia("(display-mode: standalone)").matches;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // iOS has no Vibration API. A switch-style checkbox toggled inside a user
+  // gesture is the one way Safari 17.4+ plays the system haptic; other
+  // browsers get the real thing.
+  const hapticSwitch = (() => {
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    if (!("switch" in input)) return null;
+    input.setAttribute("switch", "");
+    input.className = "haptic-switch";
+    input.id = "ipsw-haptic-switch";
+    input.tabIndex = -1;
+    input.setAttribute("aria-hidden", "true");
+    const label = document.createElement("label");
+    label.className = "haptic-switch";
+    label.htmlFor = input.id;
+    label.setAttribute("aria-hidden", "true");
+    document.body.append(input, label);
+    return label;
+  })();
+  const haptic = (pattern) => {
+    if (reduceMotion) return;
+    if (hapticSwitch) { hapticSwitch.click(); return; }
+    try { navigator.vibrate?.(pattern); } catch { /* unsupported */ }
+  };
   const read = () => {
     try { return JSON.parse(localStorage.getItem(storageKey) || "[]"); }
     catch { return []; }
@@ -26,12 +51,20 @@
     anchor.click();
     anchor.remove();
   };
-  const remove = (url) => {
-    const queue = read().filter((entry) => entry.url !== url);
-    write(queue);
-    announce(`Removed. ${queue.length} file(s) left in the queue.`);
+  const remove = (url, item) => {
+    haptic(10);
+    const drop = () => {
+      const queue = read().filter((entry) => entry.url !== url);
+      write(queue);
+      announce(`Removed. ${queue.length} file(s) left in the queue.`);
+    };
+    if (reduceMotion || !item) { drop(); return; }
+    // Let the row fade out before the list is rebuilt.
+    item.classList.add("is-leaving");
+    setTimeout(drop, 180);
   };
   const openNext = () => {
+    haptic([12, 40, 18]);
     const queue = read();
     const next = queue.shift();
     if (!next) { write(queue); announce("No queued downloads."); return; }
@@ -41,14 +74,15 @@
   };
   const render = (queue) => sections.forEach((section) => {
     const count = section.querySelector("[data-download-queue-count]");
-    const panel = section.querySelector("[data-download-queue-panel]");
+    const body = section.querySelector("[data-download-queue-panel-body]");
     count.textContent = queue.length ? ` (${queue.length})` : "";
-    panel.textContent = "";
+    body.textContent = "";
     if (!queue.length) {
-      panel.appendChild(Object.assign(document.createElement("p"), { className: "meta", textContent: "The queue is empty." }));
+      body.appendChild(Object.assign(document.createElement("p"), { className: "meta", textContent: "The queue is empty." }));
       return;
     }
     const list = document.createElement("ol");
+    list.className = "queue-list";
     queue.forEach((entry) => {
       const item = document.createElement("li");
       const anchor = document.createElement("a");
@@ -57,22 +91,23 @@
       anchor.rel = "noopener";
       if (!standalone) anchor.target = "_blank";
       // Tapping an entry downloads it and takes it out of the queue.
-      anchor.addEventListener("click", () => remove(entry.url));
+      anchor.addEventListener("click", () => remove(entry.url, item));
       const drop = document.createElement("button");
       drop.type = "button";
       drop.className = "queue-remove";
       drop.textContent = "Remove";
-      drop.addEventListener("click", () => remove(entry.url));
+      drop.addEventListener("click", () => remove(entry.url, item));
       item.append(anchor, " ", drop);
       list.appendChild(item);
     });
-    panel.appendChild(list);
+    body.appendChild(list);
   });
   sections.forEach((section) => {
     // Each release has its own table, so scope the checkbox buttons to it.
     const table = section.nextElementSibling;
     const items = () => [...table.querySelectorAll(".download-queue-item")];
     const setAll = (checked, message) => {
+      haptic(8);
       items().forEach((item) => { item.checked = checked; });
       announce(message);
     };
@@ -80,7 +115,7 @@
     section.querySelector("[data-download-queue-clear]").addEventListener("click", () => setAll(false, "Selection cleared."));
     section.querySelector("[data-download-queue-add]").addEventListener("click", () => {
       const selected = items().filter((item) => item.checked);
-      if (!selected.length) { announce("Select at least one Apple download link first."); return; }
+      if (!selected.length) { haptic([20, 60, 20]); announce("Select at least one Apple download link first."); return; }
       const queue = read();
       const known = new Set(queue.map((entry) => entry.url));
       let added = 0;
@@ -95,14 +130,17 @@
     });
     section.querySelector("[data-download-queue-next]").addEventListener("click", openNext);
     section.querySelector("[data-download-queue-reset]").addEventListener("click", () => {
+      haptic([20, 60, 20]);
       write([]);
       announce("Queue emptied.");
     });
     const toggle = section.querySelector("[data-download-queue-show]");
     const panel = section.querySelector("[data-download-queue-panel]");
     toggle.addEventListener("click", () => {
-      const open = panel.hidden;
-      panel.hidden = !open;
+      haptic(8);
+      const open = !panel.classList.contains("is-open");
+      panel.classList.toggle("is-open", open);
+      panel.setAttribute("aria-hidden", String(!open));
       toggle.setAttribute("aria-expanded", String(open));
     });
   });
