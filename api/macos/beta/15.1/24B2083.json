@@ -1,0 +1,41 @@
+{
+  "os_key": "macos",
+  "channel": "beta",
+  "version": "15.1",
+  "version_label": "15.1",
+  "build": "24B2083",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Pro (14",
+      "devices": [
+        "Mac16,1",
+        "Mac16,10",
+        "Mac16,11",
+        "Mac16,2",
+        "Mac16,3",
+        "Mac16,5",
+        "Mac16,6",
+        "Mac16,7",
+        "Mac16,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2024FallFCS/fullrestores/072-12302/3786987A-AD94-4BFB-81B8-56D3841CA81B/UniversalMac_15.1_24B2083_Restore.ipsw",
+      "filename": "UniversalMac_15.1_24B2083_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

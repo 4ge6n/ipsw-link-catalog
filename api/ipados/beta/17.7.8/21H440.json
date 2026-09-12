@@ -1,0 +1,50 @@
+{
+  "os_key": "ipados",
+  "channel": "beta",
+  "version": "17.7.8",
+  "version_label": "17.7.8",
+  "build": "21H440",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad (6th generation) Wi",
+      "devices": [
+        "iPad7,5",
+        "iPad7,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-53165/70E3BE3A-3C25-43A0-A8D9-8271C1AA802B/iPad_64bit_TouchID_ASTC_17.7.8_21H440_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_ASTC_17.7.8_21H440_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (12.9",
+      "devices": [
+        "iPad7,1",
+        "iPad7,2",
+        "iPad7,3",
+        "iPad7,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-53200/4396A0ED-B424-4AA2-81D7-CF8064BEFEAC/iPad_Pro_HFR_17.7.8_21H440_Restore.ipsw",
+      "filename": "iPad_Pro_HFR_17.7.8_21H440_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

@@ -1,0 +1,48 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "18.7.6",
+  "version_label": "18.7.6",
+  "build": "22H320",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone XR",
+      "devices": [
+        "iPhone11,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-83286/54570090-0027-4148-A2D5-09035D9A0553/iPhone11,8_18.7.6_22H320_Restore.ipsw",
+      "filename": "iPhone11,8_18.7.6_22H320_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone XS",
+      "devices": [
+        "iPhone11,2",
+        "iPhone11,4",
+        "iPhone11,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-83292/FC308431-84C0-4001-9A24-09FC77486C76/iPhone11,2,iPhone11,4,iPhone11,6_18.7.6_22H320_Restore.ipsw",
+      "filename": "iPhone11,2,iPhone11,4,iPhone11,6_18.7.6_22H320_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

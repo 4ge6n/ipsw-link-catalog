@@ -1,0 +1,162 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "14.0",
+  "version_label": "14.0-beta-2",
+  "build": "18A5319I",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch (7th generation)",
+      "devices": [
+        "iPod9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-24255/5D0E66DC-8E5C-46BE-9573-091E76F3A115/iPodtouch_7_14.0_18A5319i_Restore.ipsw",
+      "filename": "iPodtouch_7_14.0_18A5319i_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone SE (1st generation)",
+      "devices": [
+        "iPhone8,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-24182/7EEA7756-0C97-4834-8EB8-79A97F373A26/iPhone_4.0_64bit_14.0_18A5319i_Restore.ipsw",
+      "filename": "iPhone_4.0_64bit_14.0_18A5319i_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6s Plus",
+      "devices": [
+        "iPhone8,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-24324/0FEBFF7C-67C1-437B-93AA-BA1F048E0B33/iPhone_5.5_14.0_18A5319i_Restore.ipsw",
+      "filename": "iPhone_5.5_14.0_18A5319i_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6s",
+      "devices": [
+        "iPhone8,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-24195/0BBDF968-D415-4F92-B58B-E604A9FAACE6/iPhone_4.7_14.0_18A5319i_Restore.ipsw",
+      "filename": "iPhone_4.7_14.0_18A5319i_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone SE (2nd generation)",
+      "devices": [
+        "iPhone12,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-24337/97F3D944-0A58-4DB2-9B96-48E288B0ABF5/iPhone12,8_14.0_18A5319i_Restore.ipsw",
+      "filename": "iPhone12,8_14.0_18A5319i_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone XR",
+      "devices": [
+        "iPhone11,8",
+        "iPhone12,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-24189/D6580B18-D868-4D9B-A356-65DB5E941C64/iPhone11,8,iPhone12,1_14.0_18A5319i_Restore.ipsw",
+      "filename": "iPhone11,8,iPhone12,1_14.0_18A5319i_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone XS",
+      "devices": [
+        "iPhone11,2",
+        "iPhone11,4",
+        "iPhone11,6",
+        "iPhone12,3",
+        "iPhone12,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-24391/837F42A0-9C10-4A24-AD29-46CB35AD9315/iPhone11,2,iPhone11,4,iPhone11,6,iPhone12,3,iPhone12,5_14.0_18A5319i_Restore.ipsw",
+      "filename": "iPhone11,2,iPhone11,4,iPhone11,6,iPhone12,3,iPhone12,5_14.0_18A5319i_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone X (CDMA)",
+      "devices": [
+        "iPhone10,3",
+        "iPhone10,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-24357/D9A2A8CB-3044-4DFE-93FC-FDC4AD1126D4/iPhone10,3,iPhone10,6_14.0_18A5319i_Restore.ipsw",
+      "filename": "iPhone10,3,iPhone10,6_14.0_18A5319i_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 Plus (CDMA)",
+      "devices": [
+        "iPhone10,2",
+        "iPhone10,5",
+        "iPhone9,2",
+        "iPhone9,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-24216/60739917-A00D-4040-BD41-8A5DD27C5AB9/iPhone_5.5_P3_14.0_18A5319i_Restore.ipsw",
+      "filename": "iPhone_5.5_P3_14.0_18A5319i_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 (CDMA)",
+      "devices": [
+        "iPhone10,1",
+        "iPhone10,4",
+        "iPhone9,1",
+        "iPhone9,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-24305/77CEBB9B-D49A-4221-95E0-18E9FFF3E500/iPhone_4.7_P3_14.0_18A5319i_Restore.ipsw",
+      "filename": "iPhone_4.7_P3_14.0_18A5319i_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

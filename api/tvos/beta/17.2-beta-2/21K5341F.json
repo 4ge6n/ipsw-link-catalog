@@ -1,0 +1,33 @@
+{
+  "os_key": "tvos",
+  "channel": "beta",
+  "version": "17.2",
+  "version_label": "17.2-beta-2",
+  "build": "21K5341F",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple TV HD (4th generation)",
+      "devices": [
+        "AppleTV5,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2023FallSeed/fullrestores/042-89967/8966B5D1-4A6B-49F6-A4EE-ED2B5640F1F7/AppleTV5,3_17.2_21K5341f_Restore.ipsw",
+      "filename": "AppleTV5,3_17.2_21K5341f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

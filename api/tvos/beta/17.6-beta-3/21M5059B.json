@@ -1,0 +1,33 @@
+{
+  "os_key": "tvos",
+  "channel": "beta",
+  "version": "17.6",
+  "version_label": "17.6-beta-3",
+  "build": "21M5059B",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple TV HD (4th generation)",
+      "devices": [
+        "AppleTV5,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2024SpringSeed/fullrestores/062-28724/7D8DBE89-C53A-41EC-AE5E-43EDEC7EB32B/AppleTV5,3_17.6_21M5059b_Restore.ipsw",
+      "filename": "AppleTV5,3_17.6_21M5059b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

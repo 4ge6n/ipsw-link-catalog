@@ -1,0 +1,53 @@
+{
+  "os_key": "macos",
+  "channel": "beta",
+  "version": "14.0",
+  "version_label": "14.0-beta-2",
+  "build": "23A5276G",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Mac Studio (M1 Max)",
+      "devices": [
+        "Mac13,1",
+        "Mac13,2",
+        "Mac14,10",
+        "Mac14,12",
+        "Mac14,13",
+        "Mac14,14",
+        "Mac14,15",
+        "Mac14,2",
+        "Mac14,3",
+        "Mac14,5",
+        "Mac14,6",
+        "Mac14,7",
+        "Mac14,8",
+        "Mac14,9",
+        "MacBookAir10,1",
+        "MacBookPro17,1",
+        "MacBookPro18,1",
+        "MacBookPro18,2",
+        "MacBookPro18,3",
+        "MacBookPro18,4",
+        "Macmini9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2023SummerSeed/fullrestores/032-95861/67600C59-8516-4A46-B9D7-4007D395CEF5/UniversalMac_14.0_23A5276g_Restore.ipsw",
+      "filename": "UniversalMac_14.0_23A5276g_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

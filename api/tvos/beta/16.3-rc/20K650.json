@@ -1,0 +1,33 @@
+{
+  "os_key": "tvos",
+  "channel": "beta",
+  "version": "16.3",
+  "version_label": "16.3-rc",
+  "build": "20K650",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": true,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple TV HD (4th generation)",
+      "devices": [
+        "AppleTV5,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-35546/0AA6B88D-D66B-4095-A19B-5831013D46C7/AppleTV5,3_16.3_20K650_Restore.ipsw",
+      "filename": "AppleTV5,3_16.3_20K650_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

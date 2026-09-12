@@ -1,0 +1,36 @@
+{
+  "os_key": "ipados",
+  "channel": "beta",
+  "version": "15.8",
+  "version_label": "15.8-rc",
+  "build": "19H370",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": true,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad mini 4 Wi",
+      "devices": [
+        "iPad5,1",
+        "iPad5,2",
+        "iPad5,3",
+        "iPad5,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/042-76437/E826C2CC-D34C-405F-B582-3F877988C052/iPad_64bit_TouchID_15.8_19H370_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_15.8_19H370_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

@@ -1,0 +1,35 @@
+{
+  "os_key": "ipados",
+  "channel": "beta",
+  "version": "10.1",
+  "version_label": "10.1-beta",
+  "build": "14B55C",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad (4th generation) Wi",
+      "devices": [
+        "iPad3,4",
+        "iPad3,5",
+        "iPad3,6"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios10.1seed/031-81782-20160927-6F85D81E-7DB3-11E6-A0D4-703B34D2D062/iPad_32bit_10.1_14B55c_Restore.ipsw",
+      "filename": "iPad_32bit_10.1_14B55c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

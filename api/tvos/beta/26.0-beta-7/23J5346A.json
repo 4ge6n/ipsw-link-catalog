@@ -1,0 +1,33 @@
+{
+  "os_key": "tvos",
+  "channel": "beta",
+  "version": "26.0",
+  "version_label": "26.0-beta-7",
+  "build": "23J5346A",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple TV HD (4th generation)",
+      "devices": [
+        "AppleTV5,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-16776/884F3917-A54E-491F-B5C2-C06670EF8360/AppleTV5,3_26.0_23J5346a_Restore.ipsw",
+      "filename": "AppleTV5,3_26.0_23J5346a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

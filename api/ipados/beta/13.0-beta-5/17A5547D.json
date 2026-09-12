@@ -1,0 +1,132 @@
+{
+  "os_key": "ipados",
+  "channel": "beta",
+  "version": "13.0",
+  "version_label": "13.0-beta-5",
+  "build": "17A5547D",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad Pro 11",
+      "devices": [
+        "iPad8,1",
+        "iPad8,2",
+        "iPad8,3",
+        "iPad8,4",
+        "iPad8,5",
+        "iPad8,6",
+        "iPad8,7",
+        "iPad8,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SummerSeed/fullrestores/041-93572/06C68F44-AEF7-11E9-98CB-A9692E2A7E51/iPad_Fall_2018_13.0_17A5547d_Restore.ipsw",
+      "filename": "iPad_Fall_2018_13.0_17A5547d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (12.9",
+      "devices": [
+        "iPad7,1",
+        "iPad7,2",
+        "iPad7,3",
+        "iPad7,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SummerSeed/fullrestores/041-93595/ED0F5F52-AEF8-11E9-8736-E53C7F8883B5/iPad_Pro_HFR_13.0_17A5547d_Restore.ipsw",
+      "filename": "iPad_Pro_HFR_13.0_17A5547d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (12.9",
+      "devices": [
+        "iPad6,7",
+        "iPad6,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SummerSeed/fullrestores/041-93605/DB7A2FE2-AEF8-11E9-9B40-D0E7A524246B/iPadPro_12.9_13.0_17A5547d_Restore.ipsw",
+      "filename": "iPadPro_12.9_13.0_17A5547d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (9.7",
+      "devices": [
+        "iPad6,3",
+        "iPad6,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SummerSeed/fullrestores/041-93644/AE8C7184-AEF8-11E9-B52B-BF5C925B8B3A/iPadPro_9.7_13.0_17A5547d_Restore.ipsw",
+      "filename": "iPadPro_9.7_13.0_17A5547d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (5th generation) Wi",
+      "devices": [
+        "iPad6,11",
+        "iPad6,12",
+        "iPad7,5",
+        "iPad7,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SummerSeed/fullrestores/041-93668/9BDDA7D2-AEF9-11E9-9E4F-E9C70EB7469F/iPad_64bit_TouchID_ASTC_13.0_17A5547d_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_ASTC_13.0_17A5547d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini 4 Wi",
+      "devices": [
+        "iPad5,1",
+        "iPad5,2",
+        "iPad5,3",
+        "iPad5,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SummerSeed/fullrestores/041-93635/041890CE-AEF9-11E9-881E-83512387C228/iPad_64bit_TouchID_13.0_17A5547d_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_13.0_17A5547d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini (5th generation) Wi",
+      "devices": [
+        "iPad11,1",
+        "iPad11,2",
+        "iPad11,3",
+        "iPad11,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SummerSeed/fullrestores/041-93697/D05E8C80-AEF7-11E9-86E5-99AC5141E93F/iPad_Spring_2019_13.0_17A5547d_Restore.ipsw",
+      "filename": "iPad_Spring_2019_13.0_17A5547d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

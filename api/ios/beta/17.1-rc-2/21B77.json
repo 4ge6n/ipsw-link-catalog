@@ -1,0 +1,72 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "17.1",
+  "version_label": "17.1-rc-2",
+  "build": "21B77",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": true,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 15 Pro Max",
+      "devices": [
+        "iPhone16,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/042-85275/7A6B7163-FDB7-4EF1-8CEA-7A24D058CAB8/iPhone16,2_17.1_21B77_Restore.ipsw",
+      "filename": "iPhone16,2_17.1_21B77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 15 Pro",
+      "devices": [
+        "iPhone16,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/042-84327/26835D17-ADD0-4FDE-A72A-71C48874F4ED/iPhone16,1_17.1_21B77_Restore.ipsw",
+      "filename": "iPhone16,1_17.1_21B77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 15 Plus",
+      "devices": [
+        "iPhone15,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/042-84265/BB6C0AFF-0FCC-4D9F-BC9C-1E2F8EE6D731/iPhone15,5_17.1_21B77_Restore.ipsw",
+      "filename": "iPhone15,5_17.1_21B77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 15",
+      "devices": [
+        "iPhone15,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/042-84518/74BB5DB5-B87A-4B6B-9770-FE04ACA96AFC/iPhone15,4_17.1_21B77_Restore.ipsw",
+      "filename": "iPhone15,4_17.1_21B77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

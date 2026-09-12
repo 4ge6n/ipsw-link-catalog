@@ -1,0 +1,33 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "18.3.1",
+  "version_label": "18.3.1",
+  "build": "22D8075",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 16e",
+      "devices": [
+        "iPhone17,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/072-35515/856AC7E0-C306-4F4D-9430-962B6BBB4A95/iPhone17,5_18.3.1_22D8075_Restore.ipsw",
+      "filename": "iPhone17,5_18.3.1_22D8075_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

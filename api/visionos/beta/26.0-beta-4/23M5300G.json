@@ -1,0 +1,33 @@
+{
+  "os_key": "visionos",
+  "channel": "beta",
+  "version": "26.0",
+  "version_label": "26.0-beta-4",
+  "build": "23M5300G",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple Vision Pro",
+      "devices": [
+        "RealityDevice14,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/082-73704/F11FC150-A22A-4783-A7CA-C663118711A6/Apple_Vision_Pro_26.0_23M5300g_Restore.ipsw",
+      "filename": "Apple_Vision_Pro_26.0_23M5300g_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

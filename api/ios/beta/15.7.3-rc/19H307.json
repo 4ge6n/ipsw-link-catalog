@@ -1,0 +1,100 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "15.7.3",
+  "version_label": "15.7.3-rc",
+  "build": "19H307",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": true,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch (7th generation)",
+      "devices": [
+        "iPod9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-18256/AC2BA9AF-F62E-45D0-8A4C-EEF6482D0694/iPodtouch_7_15.7.3_19H307_Restore.ipsw",
+      "filename": "iPodtouch_7_15.7.3_19H307_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 7 Plus (CDMA)",
+      "devices": [
+        "iPhone9,2",
+        "iPhone9,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-18266/C2A2FBBC-8063-4DD6-8C7F-A5C0556E87FA/iPhone_5.5_P3_15.7.3_19H307_Restore.ipsw",
+      "filename": "iPhone_5.5_P3_15.7.3_19H307_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 7 (CDMA)",
+      "devices": [
+        "iPhone9,1",
+        "iPhone9,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-18243/6FBC302E-B1EA-45CF-8C97-A455FF91EA30/iPhone_4.7_P3_15.7.3_19H307_Restore.ipsw",
+      "filename": "iPhone_4.7_P3_15.7.3_19H307_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone SE (1st generation)",
+      "devices": [
+        "iPhone8,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-18272/BF64CA54-AF49-4D54-9715-621262FA8048/iPhone_4.0_64bit_15.7.3_19H307_Restore.ipsw",
+      "filename": "iPhone_4.0_64bit_15.7.3_19H307_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6s Plus",
+      "devices": [
+        "iPhone8,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-18268/23CE9E56-EA98-4EB0-ABD9-7A41D4E72B7E/iPhone_5.5_15.7.3_19H307_Restore.ipsw",
+      "filename": "iPhone_5.5_15.7.3_19H307_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6s",
+      "devices": [
+        "iPhone8,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-18276/9B728687-DCC9-45BB-B7F8-9D321EB84390/iPhone_4.7_15.7.3_19H307_Restore.ipsw",
+      "filename": "iPhone_4.7_15.7.3_19H307_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

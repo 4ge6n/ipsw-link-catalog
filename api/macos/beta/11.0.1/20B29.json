@@ -1,0 +1,35 @@
+{
+  "os_key": "macos",
+  "channel": "beta",
+  "version": "11.0.1",
+  "version_label": "11.0.1",
+  "build": "20B29",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Air (M1, 2020)",
+      "devices": [
+        "MacBookAir10,1",
+        "MacBookPro17,1",
+        "Macmini9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-79706/93A4C43C-2B45-47AF-84EA-794F8886B85C/UniversalMac_11.0.1_20B29_Restore.ipsw",
+      "filename": "UniversalMac_11.0.1_20B29_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

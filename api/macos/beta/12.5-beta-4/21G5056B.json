@@ -1,0 +1,43 @@
+{
+  "os_key": "macos",
+  "channel": "beta",
+  "version": "12.5",
+  "version_label": "12.5-beta-4",
+  "build": "21G5056B",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Mac Studio (M1 Max)",
+      "devices": [
+        "Mac13,1",
+        "Mac13,2",
+        "Mac14,2",
+        "Mac14,7",
+        "MacBookAir10,1",
+        "MacBookPro17,1",
+        "MacBookPro18,1",
+        "MacBookPro18,2",
+        "MacBookPro18,3",
+        "MacBookPro18,4",
+        "Macmini9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2022FallSeed/fullrestores/012-26441/AE0AC638-2773-49D3-BF84-950B10BF39E9/UniversalMac_12.5_21G5056b_Restore.ipsw",
+      "filename": "UniversalMac_12.5_21G5056b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

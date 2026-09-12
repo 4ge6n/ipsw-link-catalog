@@ -1,0 +1,98 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "18.2",
+  "version_label": "18.2-beta",
+  "build": "22C5109P",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 16 Plus",
+      "devices": [
+        "iPhone17,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2024FallSeed/fullrestores/062-84680/CAC8D520-19DD-4644-83E2-6270E2C50913/iPhone17,4_18.2_22C5109p_Restore.ipsw",
+      "filename": "iPhone17,4_18.2_22C5109p_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 16",
+      "devices": [
+        "iPhone17,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2024FallSeed/fullrestores/062-84653/43C92704-7B1F-42D8-B78C-B26F2C53EAF6/iPhone17,3_18.2_22C5109p_Restore.ipsw",
+      "filename": "iPhone17,3_18.2_22C5109p_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 16 Pro Max",
+      "devices": [
+        "iPhone17,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2024FallSeed/fullrestores/062-84679/52179175-44E1-4DA8-A359-F34CB04C1FF3/iPhone17,2_18.2_22C5109p_Restore.ipsw",
+      "filename": "iPhone17,2_18.2_22C5109p_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 16 Pro",
+      "devices": [
+        "iPhone17,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2024FallSeed/fullrestores/062-84762/9981FB35-24B3-454E-A17B-E62C9C5AFFB4/iPhone17,1_18.2_22C5109p_Restore.ipsw",
+      "filename": "iPhone17,1_18.2_22C5109p_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 15 Pro Max",
+      "devices": [
+        "iPhone16,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2024FallSeed/fullrestores/062-84647/FE45B889-F90F-48B6-A01F-7411AE759E4D/iPhone16,2_18.2_22C5109p_Restore.ipsw",
+      "filename": "iPhone16,2_18.2_22C5109p_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 15 Pro",
+      "devices": [
+        "iPhone16,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2024FallSeed/fullrestores/062-84761/BBF3D9C2-C287-44BB-97B7-DE63A23E7EF6/iPhone16,1_18.2_22C5109p_Restore.ipsw",
+      "filename": "iPhone16,1_18.2_22C5109p_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

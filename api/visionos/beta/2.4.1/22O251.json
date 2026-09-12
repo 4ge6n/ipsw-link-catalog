@@ -1,0 +1,33 @@
+{
+  "os_key": "visionos",
+  "channel": "beta",
+  "version": "2.4.1",
+  "version_label": "2.4.1",
+  "build": "22O251",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple Vision Pro",
+      "devices": [
+        "RealityDevice14,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-18229/4EB2AB55-A3BA-477D-BA76-7C1ED5358747/Apple_Vision_Pro_2.4.1_22O251_Restore.ipsw",
+      "filename": "Apple_Vision_Pro_2.4.1_22O251_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

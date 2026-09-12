@@ -1,0 +1,36 @@
+{
+  "os_key": "ipados",
+  "channel": "beta",
+  "version": "15.8.7",
+  "version_label": "15.8.7",
+  "build": "19H411",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad mini 4 Wi",
+      "devices": [
+        "iPad5,1",
+        "iPad5,2",
+        "iPad5,3",
+        "iPad5,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/047-95401/7BF3495E-8276-466B-AF36-5A422212AF02/iPad_64bit_TouchID_15.8.7_19H411_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_15.8.7_19H411_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

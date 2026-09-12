@@ -1,0 +1,50 @@
+{
+  "os_key": "ipados",
+  "channel": "beta",
+  "version": "17.5.1",
+  "version_label": "17.5.1",
+  "build": "21F90",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad mini (6th generation) Wi",
+      "devices": [
+        "iPad14,1",
+        "iPad14,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2024SpringFCS/fullrestores/062-05190/A8B4D932-68BF-41E7-A1BF-34E35B6F23B3/iPad_Fall_2021_17.5.1_21F90_Restore.ipsw",
+      "filename": "iPad_Fall_2021_17.5.1_21F90_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini (5th generation) Wi",
+      "devices": [
+        "iPad11,1",
+        "iPad11,2",
+        "iPad11,3",
+        "iPad11,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2024SpringFCS/fullrestores/062-05818/D72B80DA-746A-4261-AD1E-C5D7B6DA1E93/iPad_Spring_2019_17.5.1_21F90_Restore.ipsw",
+      "filename": "iPad_Spring_2019_17.5.1_21F90_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

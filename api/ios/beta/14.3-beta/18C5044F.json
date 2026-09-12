@@ -1,0 +1,189 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "14.3",
+  "version_label": "14.3-beta",
+  "build": "18C5044F",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch (7th generation)",
+      "devices": [
+        "iPod9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterSeed/fullrestores/001-80829/86035E7D-DEB0-4C68-9D06-7398260DDDEE/iPodtouch_7_14.3_18C5044f_Restore.ipsw",
+      "filename": "iPodtouch_7_14.3_18C5044f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone SE (1st generation)",
+      "devices": [
+        "iPhone8,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterSeed/fullrestores/001-80667/F27403D4-6901-4712-A2A3-AB727650B1BB/iPhone_4.0_64bit_14.3_18C5044f_Restore.ipsw",
+      "filename": "iPhone_4.0_64bit_14.3_18C5044f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6s Plus",
+      "devices": [
+        "iPhone8,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterSeed/fullrestores/001-80676/6545F5C3-F281-467E-AEB6-2CD60618CD6A/iPhone_5.5_14.3_18C5044f_Restore.ipsw",
+      "filename": "iPhone_5.5_14.3_18C5044f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6s",
+      "devices": [
+        "iPhone8,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterSeed/fullrestores/001-80765/10D65158-4C9A-4827-B795-8C6F3577D247/iPhone_4.7_14.3_18C5044f_Restore.ipsw",
+      "filename": "iPhone_4.7_14.3_18C5044f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 12 Pro Max",
+      "devices": [
+        "iPhone13,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterSeed/fullrestores/001-80710/038DB7AF-4FF2-4565-B07E-18B5399844B9/iPhone13,4_14.3_18C5044f_Restore.ipsw",
+      "filename": "iPhone13,4_14.3_18C5044f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 12",
+      "devices": [
+        "iPhone13,2",
+        "iPhone13,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterSeed/fullrestores/001-80852/59B4F766-CBF0-4302-B4D6-78AE728CC481/iPhone13,2,iPhone13,3_14.3_18C5044f_Restore.ipsw",
+      "filename": "iPhone13,2,iPhone13,3_14.3_18C5044f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone SE (2nd generation)",
+      "devices": [
+        "iPhone12,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterSeed/fullrestores/001-80729/BCCAA37E-44B8-48C5-BED5-2C6B63A925AA/iPhone12,8_14.3_18C5044f_Restore.ipsw",
+      "filename": "iPhone12,8_14.3_18C5044f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone XR",
+      "devices": [
+        "iPhone11,8",
+        "iPhone12,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterSeed/fullrestores/001-80752/7F61216D-C620-4377-8A01-30D815E25136/iPhone11,8,iPhone12,1_14.3_18C5044f_Restore.ipsw",
+      "filename": "iPhone11,8,iPhone12,1_14.3_18C5044f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone XS",
+      "devices": [
+        "iPhone11,2",
+        "iPhone11,4",
+        "iPhone11,6",
+        "iPhone12,3",
+        "iPhone12,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterSeed/fullrestores/001-80853/2D5E5F70-1656-411D-AD60-97049739B7F0/iPhone11,2,iPhone11,4,iPhone11,6,iPhone12,3,iPhone12,5_14.3_18C5044f_Restore.ipsw",
+      "filename": "iPhone11,2,iPhone11,4,iPhone11,6,iPhone12,3,iPhone12,5_14.3_18C5044f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone X (CDMA)",
+      "devices": [
+        "iPhone10,3",
+        "iPhone10,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterSeed/fullrestores/001-80740/A59CF730-34E6-49F5-9333-AE36D376E3A7/iPhone10,3,iPhone10,6_14.3_18C5044f_Restore.ipsw",
+      "filename": "iPhone10,3,iPhone10,6_14.3_18C5044f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 Plus (CDMA)",
+      "devices": [
+        "iPhone10,2",
+        "iPhone10,5",
+        "iPhone9,2",
+        "iPhone9,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterSeed/fullrestores/001-80698/B172DB41-6CEE-4DF0-9D85-FD877F6EA324/iPhone_5.5_P3_14.3_18C5044f_Restore.ipsw",
+      "filename": "iPhone_5.5_P3_14.3_18C5044f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 (CDMA)",
+      "devices": [
+        "iPhone10,1",
+        "iPhone10,4",
+        "iPhone9,1",
+        "iPhone9,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterSeed/fullrestores/001-80785/F9E1367C-33FC-4838-87C3-87E604D8C7B4/iPhone_4.7_P3_14.3_18C5044f_Restore.ipsw",
+      "filename": "iPhone_4.7_P3_14.3_18C5044f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

@@ -1,0 +1,46 @@
+{
+  "os_key": "visionos",
+  "channel": "beta",
+  "version": "26.2",
+  "version_label": "26.2-rc",
+  "build": "23N301",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": true,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple Vision Pro (M5)",
+      "devices": [
+        "RealityDevice17,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-46429/B8B9260D-C88F-4D23-91E8-29DF18386092/Apple_Vision_Pro_M5_26.2_23N301_Restore.ipsw",
+      "filename": "Apple_Vision_Pro_M5_26.2_23N301_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "Apple Vision Pro",
+      "devices": [
+        "RealityDevice14,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-46444/B3B7D709-0374-486E-B875-9A2464981BF8/Apple_Vision_Pro_26.2_23N301_Restore.ipsw",
+      "filename": "Apple_Vision_Pro_26.2_23N301_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

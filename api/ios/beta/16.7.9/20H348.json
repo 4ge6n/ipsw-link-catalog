@@ -1,0 +1,62 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "16.7.9",
+  "version_label": "16.7.9",
+  "build": "20H348",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone X (CDMA)",
+      "devices": [
+        "iPhone10,3",
+        "iPhone10,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2024SpringFCS/fullrestores/052-96730/5ADC5B4D-7B5A-4666-B4F4-2AB21D45EFA8/iPhone10,3,iPhone10,6_16.7.9_20H348_Restore.ipsw",
+      "filename": "iPhone10,3,iPhone10,6_16.7.9_20H348_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 Plus (CDMA)",
+      "devices": [
+        "iPhone10,2",
+        "iPhone10,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2024SpringFCS/fullrestores/052-96718/6424574F-AA88-4EFA-A0B6-45FC98E0CCB0/iPhone_5.5_P3_16.7.9_20H348_Restore.ipsw",
+      "filename": "iPhone_5.5_P3_16.7.9_20H348_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 (CDMA)",
+      "devices": [
+        "iPhone10,1",
+        "iPhone10,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2024SpringFCS/fullrestores/052-96731/68013816-7F3D-4FA8-8DE7-91FBBEA9D688/iPhone_4.7_P3_16.7.9_20H348_Restore.ipsw",
+      "filename": "iPhone_4.7_P3_16.7.9_20H348_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

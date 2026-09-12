@@ -1,0 +1,73 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "12.5",
+  "version_label": "12.5",
+  "build": "16H20",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch (6th generation)",
+      "devices": [
+        "iPod7,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterFCS/fullrestores/001-79586/10E4F47B-5533-49CC-AA7A-71DEA87D7DDD/iPodtouch_12.5_16H20_Restore.ipsw",
+      "filename": "iPodtouch_12.5_16H20_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6",
+      "devices": [
+        "iPhone7,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterFCS/fullrestores/001-79611/05865CEE-133B-4719-9B5C-0897D6FDE36D/iPhone_4.7_12.5_16H20_Restore.ipsw",
+      "filename": "iPhone_4.7_12.5_16H20_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6 Plus",
+      "devices": [
+        "iPhone7,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterFCS/fullrestores/001-79659/5CFBFF44-D78B-40B1-8260-719E7D8C764D/iPhone_5.5_12.5_16H20_Restore.ipsw",
+      "filename": "iPhone_5.5_12.5_16H20_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 5s (GSM)",
+      "devices": [
+        "iPhone6,1",
+        "iPhone6,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterFCS/fullrestores/001-79503/57ABF53D-B497-4462-9A8D-39CF1826D8A5/iPhone_4.0_64bit_12.5_16H20_Restore.ipsw",
+      "filename": "iPhone_4.0_64bit_12.5_16H20_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

@@ -5,30 +5,30 @@ Stable JSON indexes of Apple restore-image URLs. IPSW files are never stored in 
 <!-- AUTO-GENERATED:START -->
 ## Catalog status
 
-Last successful update (UTC): `2026-09-12T10:48:41Z`
-Last successful update (Asia/Tokyo): `2026-09-12T19:48:41+09:00`
+Last successful update (UTC): `2026-09-12T11:20:35Z`
+Last successful update (Asia/Tokyo): `2026-09-12T20:20:35+09:00`
 
 ### Endpoints
 
 #### iOS
 
 - `release`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ios/release/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ios/release/all.json) (55 IPSW records)
-- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ios/beta/all.json) (263 IPSW records; no beta latest endpoint)
+- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ios/beta/all.json) (7979 IPSW records; no beta latest endpoint)
 
 #### iPadOS
 
 - `release`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ipados/release/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ipados/release/all.json) (39 IPSW records)
-- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ipados/beta/all.json) (164 IPSW records; no beta latest endpoint)
+- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ipados/beta/all.json) (5343 IPSW records; no beta latest endpoint)
 
 #### tvOS
 
 - `release`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/tvos/release/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/tvos/release/all.json) (4 IPSW records)
-- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/tvos/beta/all.json) (0 IPSW records; no beta latest endpoint)
+- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/tvos/beta/all.json) (256 IPSW records; no beta latest endpoint)
 
 #### visionOS
 
 - `release`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/visionos/release/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/visionos/release/all.json) (2 IPSW records)
-- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/visionos/beta/all.json) (18 IPSW records; no beta latest endpoint)
+- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/visionos/beta/all.json) (166 IPSW records; no beta latest endpoint)
 
 #### audioOS
 
@@ -38,7 +38,7 @@ Last successful update (Asia/Tokyo): `2026-09-12T19:48:41+09:00`
 #### macOS
 
 - `release`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/release/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/release/all.json) (1 IPSW records)
-- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/beta/all.json) (10 IPSW records; no beta latest endpoint)
+- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/beta/all.json) (273 IPSW records; no beta latest endpoint)
 
 ### Refresh
 

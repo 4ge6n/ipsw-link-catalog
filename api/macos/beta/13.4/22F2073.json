@@ -1,0 +1,36 @@
+{
+  "os_key": "macos",
+  "channel": "beta",
+  "version": "13.4",
+  "version_label": "13.4",
+  "build": "22F2073",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Mac Studio (M2 Max, 2023)",
+      "devices": [
+        "Mac14,13",
+        "Mac14,14",
+        "Mac14,15",
+        "Mac14,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2023SpringFCS/fullrestores/032-84616/FD498BA4-F00E-4CC3-9E21-393DEC4D41B4/UniversalMac_13.4_22F2073_Restore.ipsw",
+      "filename": "UniversalMac_13.4_22F2073_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

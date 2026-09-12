@@ -1,0 +1,34 @@
+{
+  "os_key": "macos",
+  "channel": "beta",
+  "version": "15.2",
+  "version_label": "15.2",
+  "build": "24C2101",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Air (13",
+      "devices": [
+        "Mac16,12",
+        "Mac16,13"
+      ],
+      "url": "https://updates.cdn-apple.com/2024FallFCS/fullrestores/072-41951/5790575D-5E1C-472E-8CC2-86E297A25AFD/UniversalMac_15.2_24C2101_Restore.ipsw",
+      "filename": "UniversalMac_15.2_24C2101_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

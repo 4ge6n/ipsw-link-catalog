@@ -1,0 +1,62 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "11.4",
+  "version_label": "11.4-beta-3",
+  "build": "15F5061E",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone X (CDMA)",
+      "devices": [
+        "iPhone10,3",
+        "iPhone10,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-81979-20180501-D6259B8C-4B15-11E8-A9F3-6490D9D45F13/iPhone10,3,iPhone10,6_11.4_15F5061e_Restore.ipsw",
+      "filename": "iPhone10,3,iPhone10,6_11.4_15F5061e_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 Plus (CDMA)",
+      "devices": [
+        "iPhone10,2",
+        "iPhone10,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-81976-20180501-D622DD52-4B15-11E8-93EA-6390D9D45F13/iPhone_5.5_P3_11.0_11.4_15F5061e_Restore.ipsw",
+      "filename": "iPhone_5.5_P3_11.0_11.4_15F5061e_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 (CDMA)",
+      "devices": [
+        "iPhone10,1",
+        "iPhone10,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-81967-20180501-D62346B6-4B15-11E8-857C-6290D9D45F13/iPhone_4.7_P3_11.0_11.4_15F5061e_Restore.ipsw",
+      "filename": "iPhone_4.7_P3_11.0_11.4_15F5061e_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

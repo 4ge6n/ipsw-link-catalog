@@ -1,0 +1,202 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "14.6",
+  "version_label": "14.6-beta",
+  "build": "18F5046F",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch (7th generation)",
+      "devices": [
+        "iPod9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringSeed/fullrestores/071-29624/CC370CBB-6C5C-4B99-940F-CF7CE0728BD4/iPodtouch_7_14.6_18F5046f_Restore.ipsw",
+      "filename": "iPodtouch_7_14.6_18F5046f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone SE (1st generation)",
+      "devices": [
+        "iPhone8,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringSeed/fullrestores/071-29654/03D1E9B8-8EA5-44B0-925C-E7F28AC71623/iPhone_4.0_64bit_14.6_18F5046f_Restore.ipsw",
+      "filename": "iPhone_4.0_64bit_14.6_18F5046f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6s Plus",
+      "devices": [
+        "iPhone8,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringSeed/fullrestores/071-29639/0754E54C-B105-4DA9-B4AD-347D0F2792D3/iPhone_5.5_14.6_18F5046f_Restore.ipsw",
+      "filename": "iPhone_5.5_14.6_18F5046f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6s",
+      "devices": [
+        "iPhone8,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringSeed/fullrestores/071-29636/FDFA474E-68C5-4D6B-90E1-DAF206BE4D0C/iPhone_4.7_14.6_18F5046f_Restore.ipsw",
+      "filename": "iPhone_4.7_14.6_18F5046f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 12 Pro Max",
+      "devices": [
+        "iPhone13,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringSeed/fullrestores/071-29538/AC0B9612-F789-46AD-B40A-6F7A4C38A661/iPhone13,4_14.6_18F5046f_Restore.ipsw",
+      "filename": "iPhone13,4_14.6_18F5046f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 12",
+      "devices": [
+        "iPhone13,2",
+        "iPhone13,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringSeed/fullrestores/071-29447/C08A3139-28CD-4A3E-AF20-5E0C29172A02/iPhone13,2,iPhone13,3_14.6_18F5046f_Restore.ipsw",
+      "filename": "iPhone13,2,iPhone13,3_14.6_18F5046f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 12 mini",
+      "devices": [
+        "iPhone13,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringSeed/fullrestores/071-29514/DE22136A-2600-4CED-9884-942E3E41DBCA/iPhone13,1_14.6_18F5046f_Restore.ipsw",
+      "filename": "iPhone13,1_14.6_18F5046f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone SE (2nd generation)",
+      "devices": [
+        "iPhone12,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringSeed/fullrestores/071-29472/74718E08-8078-4B11-BDD1-237FC5E81B71/iPhone12,8_14.6_18F5046f_Restore.ipsw",
+      "filename": "iPhone12,8_14.6_18F5046f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone XR",
+      "devices": [
+        "iPhone11,8",
+        "iPhone12,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringSeed/fullrestores/071-29679/5B6E124C-7330-4470-BB5C-7B7A030ACB46/iPhone11,8,iPhone12,1_14.6_18F5046f_Restore.ipsw",
+      "filename": "iPhone11,8,iPhone12,1_14.6_18F5046f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone XS",
+      "devices": [
+        "iPhone11,2",
+        "iPhone11,4",
+        "iPhone11,6",
+        "iPhone12,3",
+        "iPhone12,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringSeed/fullrestores/071-29595/A51CCDCF-F559-44AE-8E00-77F853901F68/iPhone11,2,iPhone11,4,iPhone11,6,iPhone12,3,iPhone12,5_14.6_18F5046f_Restore.ipsw",
+      "filename": "iPhone11,2,iPhone11,4,iPhone11,6,iPhone12,3,iPhone12,5_14.6_18F5046f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone X (CDMA)",
+      "devices": [
+        "iPhone10,3",
+        "iPhone10,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringSeed/fullrestores/071-29490/25592DFC-E4A8-4D82-B9AD-6587FF9BE203/iPhone10,3,iPhone10,6_14.6_18F5046f_Restore.ipsw",
+      "filename": "iPhone10,3,iPhone10,6_14.6_18F5046f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 Plus (CDMA)",
+      "devices": [
+        "iPhone10,2",
+        "iPhone10,5",
+        "iPhone9,2",
+        "iPhone9,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringSeed/fullrestores/071-29445/BC2607D1-558D-4AA6-B6FC-1A7A9647DF55/iPhone_5.5_P3_14.6_18F5046f_Restore.ipsw",
+      "filename": "iPhone_5.5_P3_14.6_18F5046f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 (CDMA)",
+      "devices": [
+        "iPhone10,1",
+        "iPhone10,4",
+        "iPhone9,1",
+        "iPhone9,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SpringSeed/fullrestores/071-29577/4D98A655-9E9E-4D63-A1B3-A254055D6437/iPhone_4.7_P3_14.6_18F5046f_Restore.ipsw",
+      "filename": "iPhone_4.7_P3_14.6_18F5046f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

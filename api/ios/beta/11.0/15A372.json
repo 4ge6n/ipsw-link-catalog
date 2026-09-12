@@ -1,0 +1,34 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "11.0",
+  "version_label": "11.0",
+  "build": "15A372",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone X (CDMA)",
+      "devices": [
+        "iPhone10,3",
+        "iPhone10,6"
+      ],
+      "url": "https://secure-appldnld.apple.com/ios11.0/091-31329-201700919-35AC292C-9027-11E7-8C48-1D35B64D2808/iPhone10,6_11.0_15A372_Restore.ipsw",
+      "filename": "iPhone10,6_11.0_15A372_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

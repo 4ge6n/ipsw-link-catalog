@@ -1,0 +1,76 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "11.4",
+  "version_label": "11.4-beta-3",
+  "build": "15F5061D",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch (6th generation)",
+      "devices": [
+        "iPod7,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-80554-20180430-F3F35E7A-49AC-11E8-A683-7906BCB7686F/iPodtouch_11.4_15F5061d_Restore.ipsw",
+      "filename": "iPodtouch_11.4_15F5061d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6",
+      "devices": [
+        "iPhone7,2",
+        "iPhone8,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-80563-20180430-F3F162D2-49AC-11E8-9B46-7B06BCB7686F/iPhone_4.7_11.4_15F5061d_Restore.ipsw",
+      "filename": "iPhone_4.7_11.4_15F5061d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6 Plus",
+      "devices": [
+        "iPhone7,1",
+        "iPhone8,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-80477-20180430-F3ECE680-49AC-11E8-A50D-7406BCB7686F/iPhone_5.5_11.4_15F5061d_Restore.ipsw",
+      "filename": "iPhone_5.5_11.4_15F5061d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 5s (GSM)",
+      "devices": [
+        "iPhone6,1",
+        "iPhone6,2",
+        "iPhone8,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-80510-20180430-F3F1DA3C-49AC-11E8-863C-7506BCB7686F/iPhone_4.0_64bit_11.4_15F5061d_Restore.ipsw",
+      "filename": "iPhone_4.0_64bit_11.4_15F5061d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

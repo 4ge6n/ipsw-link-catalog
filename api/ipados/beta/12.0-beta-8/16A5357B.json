@@ -1,0 +1,117 @@
+{
+  "os_key": "ipados",
+  "channel": "beta",
+  "version": "12.0",
+  "version_label": "12.0-beta-8",
+  "build": "16A5357B",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad Pro (12.9",
+      "devices": [
+        "iPad7,1",
+        "iPad7,2",
+        "iPad7,3",
+        "iPad7,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallSeed/fullrestores/041-00271/09846066-9FD1-11E8-8261-F4DD96D29224/iPad_Pro_HFR_12.0_16A5357b_Restore.ipsw",
+      "filename": "iPad_Pro_HFR_12.0_16A5357b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (12.9",
+      "devices": [
+        "iPad6,7",
+        "iPad6,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallSeed/fullrestores/041-00451/097BE7BA-9FD1-11E8-A81A-E4D3FBED3BCF/iPadPro_12.9_12.0_16A5357b_Restore.ipsw",
+      "filename": "iPadPro_12.9_12.0_16A5357b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (9.7",
+      "devices": [
+        "iPad6,3",
+        "iPad6,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallSeed/fullrestores/041-00306/09695604-9FD1-11E8-99A6-8EF7A6657A62/iPadPro_9.7_12.0_16A5357b_Restore.ipsw",
+      "filename": "iPadPro_9.7_12.0_16A5357b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini 4 Wi",
+      "devices": [
+        "iPad5,1",
+        "iPad5,2",
+        "iPad5,3",
+        "iPad5,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallSeed/fullrestores/041-00303/09826C20-9FD1-11E8-A9EC-8F4050B295B7/iPad_64bit_TouchID_12.0_16A5357b_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_12.0_16A5357b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini 3 Wi",
+      "devices": [
+        "iPad4,7",
+        "iPad4,8",
+        "iPad4,9",
+        "iPad6,11",
+        "iPad6,12",
+        "iPad7,5",
+        "iPad7,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallSeed/fullrestores/041-00438/09779958-9FD1-11E8-AD2F-C319850261B2/iPad_64bit_TouchID_ASTC_12.0_16A5357b_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_ASTC_12.0_16A5357b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Air Wi",
+      "devices": [
+        "iPad4,1",
+        "iPad4,2",
+        "iPad4,3",
+        "iPad4,4",
+        "iPad4,5",
+        "iPad4,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallSeed/fullrestores/041-00343/097D6BC6-9FD1-11E8-AED3-EED2B122B9FF/iPad_64bit_12.0_16A5357b_Restore.ipsw",
+      "filename": "iPad_64bit_12.0_16A5357b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

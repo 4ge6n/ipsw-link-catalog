@@ -1,0 +1,33 @@
+{
+  "os_key": "macos",
+  "channel": "beta",
+  "version": "26.3.2",
+  "version_label": "26.3.2",
+  "build": "25D2140",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Neo",
+      "devices": [
+        "Mac17,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-94879/40A2B65E-4E49-4EAA-8BEC-62A305007488/UniversalMac_26.3.2_25D2140_Restore.ipsw",
+      "filename": "UniversalMac_26.3.2_25D2140_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

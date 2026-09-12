@@ -1,0 +1,35 @@
+{
+  "os_key": "macos",
+  "channel": "beta",
+  "version": "11.2",
+  "version_label": "11.2-beta-2",
+  "build": "20D5042D",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Air (M1, 2020)",
+      "devices": [
+        "MacBookAir10,1",
+        "MacBookPro17,1",
+        "Macmini9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2020WinterSeed/fullrestores/001-95583/751F08D9-D4A4-4F5D-A7F2-8DCAC77B02B3/UniversalMac_11.2_20D5042d_Restore.ipsw",
+      "filename": "UniversalMac_11.2_20D5042d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

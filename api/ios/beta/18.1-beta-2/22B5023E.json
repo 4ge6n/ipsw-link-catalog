@@ -1,0 +1,46 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "18.1",
+  "version_label": "18.1-beta-2",
+  "build": "22B5023E",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 15 Pro Max",
+      "devices": [
+        "iPhone16,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2024SummerSeed/fullrestores/062-53724/A3A9BBE8-850B-4FFD-B6FA-8004C50795E0/iPhone16,2_18.1_22B5023e_Restore.ipsw",
+      "filename": "iPhone16,2_18.1_22B5023e_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 15 Pro",
+      "devices": [
+        "iPhone16,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2024SummerSeed/fullrestores/062-53697/414B7F50-B6BA-4AC4-BA96-1F3D5136A059/iPhone16,1_18.1_22B5023e_Restore.ipsw",
+      "filename": "iPhone16,1_18.1_22B5023e_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

@@ -1,0 +1,146 @@
+{
+  "os_key": "ipados",
+  "channel": "beta",
+  "version": "13.2",
+  "version_label": "13.2-beta-4",
+  "build": "17B5084A",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad Pro 11",
+      "devices": [
+        "iPad8,1",
+        "iPad8,2",
+        "iPad8,3",
+        "iPad8,4",
+        "iPad8,5",
+        "iPad8,6",
+        "iPad8,7",
+        "iPad8,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2019FallSeed/fullrestores/061-38656/14D51AB8-F431-11E9-B0C8-F5A8B84C0CB5/iPad_Fall_2018_13.2_17B5084a_Restore.ipsw",
+      "filename": "iPad_Fall_2018_13.2_17B5084a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (7th generation) Wi",
+      "devices": [
+        "iPad7,11",
+        "iPad7,12"
+      ],
+      "url": "https://updates.cdn-apple.com/2019FallSeed/fullrestores/061-38691/CE179F86-F432-11E9-9DF9-F99FD2A8608F/iPad_Educational_13.2_17B5084a_Restore.ipsw",
+      "filename": "iPad_Educational_13.2_17B5084a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (12.9",
+      "devices": [
+        "iPad7,1",
+        "iPad7,2",
+        "iPad7,3",
+        "iPad7,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2019FallSeed/fullrestores/061-38639/DBC9E346-F432-11E9-86C8-E29B30737524/iPad_Pro_HFR_13.2_17B5084a_Restore.ipsw",
+      "filename": "iPad_Pro_HFR_13.2_17B5084a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (12.9",
+      "devices": [
+        "iPad6,7",
+        "iPad6,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2019FallSeed/fullrestores/061-38547/993E5CBE-F432-11E9-9C22-C194A46C40BD/iPadPro_12.9_13.2_17B5084a_Restore.ipsw",
+      "filename": "iPadPro_12.9_13.2_17B5084a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (9.7",
+      "devices": [
+        "iPad6,3",
+        "iPad6,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2019FallSeed/fullrestores/061-38582/61B45046-F432-11E9-B4F4-CA15A82F5894/iPadPro_9.7_13.2_17B5084a_Restore.ipsw",
+      "filename": "iPadPro_9.7_13.2_17B5084a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (5th generation) Wi",
+      "devices": [
+        "iPad6,11",
+        "iPad6,12",
+        "iPad7,5",
+        "iPad7,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2019FallSeed/fullrestores/061-38579/1508D466-F431-11E9-8543-E4D6D398F9B6/iPad_64bit_TouchID_ASTC_13.2_17B5084a_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_ASTC_13.2_17B5084a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini 4 Wi",
+      "devices": [
+        "iPad5,1",
+        "iPad5,2",
+        "iPad5,3",
+        "iPad5,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2019FallSeed/fullrestores/061-38708/A6FDB218-F433-11E9-A5B6-B549F01C9C4F/iPad_64bit_TouchID_13.2_17B5084a_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_13.2_17B5084a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini (5th generation) Wi",
+      "devices": [
+        "iPad11,1",
+        "iPad11,2",
+        "iPad11,3",
+        "iPad11,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2019FallSeed/fullrestores/061-38530/E634EE48-F432-11E9-9B31-DA6486F478EA/iPad_Spring_2019_13.2_17B5084a_Restore.ipsw",
+      "filename": "iPad_Spring_2019_13.2_17B5084a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

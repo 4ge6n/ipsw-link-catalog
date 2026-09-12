@@ -1,0 +1,62 @@
+{
+  "os_key": "ipados",
+  "channel": "beta",
+  "version": "16.7.5",
+  "version_label": "16.7.5-rc",
+  "build": "20H307",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": true,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad Pro (12.9",
+      "devices": [
+        "iPad6,7",
+        "iPad6,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/052-34738/26D39C1E-4BF7-4A22-BE79-99DFCE836CEF/iPadPro_12.9_16.7.5_20H307_Restore.ipsw",
+      "filename": "iPadPro_12.9_16.7.5_20H307_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (9.7",
+      "devices": [
+        "iPad6,3",
+        "iPad6,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/052-34736/8D2735AD-07FC-4FB2-847B-0D51EEC50142/iPadPro_9.7_16.7.5_20H307_Restore.ipsw",
+      "filename": "iPadPro_9.7_16.7.5_20H307_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (5th generation) Wi",
+      "devices": [
+        "iPad6,11",
+        "iPad6,12"
+      ],
+      "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/052-34744/5FA1EC4E-9DE4-4142-B051-4818FE96324A/iPad_64bit_TouchID_ASTC_16.7.5_20H307_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_ASTC_16.7.5_20H307_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

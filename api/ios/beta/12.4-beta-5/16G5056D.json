@@ -1,0 +1,174 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "12.4",
+  "version_label": "12.4-beta-5",
+  "build": "16G5056D",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch (7th generation)",
+      "devices": [
+        "iPod9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SpringSeed/fullrestores/041-76343/5B17FEB0-944A-11E9-A0FE-CB13E257CB6B/iPodtouch_7_12.4_16G5056d_Restore.ipsw",
+      "filename": "iPodtouch_7_12.4_16G5056d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPod touch (6th generation)",
+      "devices": [
+        "iPod7,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SpringSeed/fullrestores/041-76338/5B3E4200-944A-11E9-B15B-C913E257CB6B/iPodtouch_12.4_16G5056d_Restore.ipsw",
+      "filename": "iPodtouch_12.4_16G5056d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6",
+      "devices": [
+        "iPhone7,2",
+        "iPhone8,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SpringSeed/fullrestores/041-76193/5B1AC456-944A-11E9-8BD4-CE13E257CB6B/iPhone_4.7_12.4_16G5056d_Restore.ipsw",
+      "filename": "iPhone_4.7_12.4_16G5056d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6 Plus",
+      "devices": [
+        "iPhone7,1",
+        "iPhone8,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SpringSeed/fullrestores/041-76268/5B3E44B2-944A-11E9-AFB4-CD13E257CB6B/iPhone_5.5_12.4_16G5056d_Restore.ipsw",
+      "filename": "iPhone_5.5_12.4_16G5056d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 5s (GSM)",
+      "devices": [
+        "iPhone6,1",
+        "iPhone6,2",
+        "iPhone8,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SpringSeed/fullrestores/041-76187/5B238596-944A-11E9-81A4-CC13E257CB6B/iPhone_4.0_64bit_12.4_16G5056d_Restore.ipsw",
+      "filename": "iPhone_4.0_64bit_12.4_16G5056d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone XR",
+      "devices": [
+        "iPhone11,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SpringSeed/fullrestores/041-76135/5B3E4B2E-944A-11E9-B4A9-CF13E257CB6B/iPhone11,8_12.4_16G5056d_Restore.ipsw",
+      "filename": "iPhone11,8_12.4_16G5056d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone XS Max",
+      "devices": [
+        "iPhone11,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SpringSeed/fullrestores/041-76372/5B17FC3A-944A-11E9-A0FE-B613E257CB6B/iPhone11,6_12.4_16G5056d_Restore.ipsw",
+      "filename": "iPhone11,6_12.4_16G5056d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone XS",
+      "devices": [
+        "iPhone11,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SpringSeed/fullrestores/041-76139/5B0D4010-944A-11E9-901B-B313E257CB6B/iPhone11,2_12.4_16G5056d_Restore.ipsw",
+      "filename": "iPhone11,2_12.4_16G5056d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone X (CDMA)",
+      "devices": [
+        "iPhone10,3",
+        "iPhone10,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SpringSeed/fullrestores/041-76320/5B05CF74-944A-11E9-AAE2-B213E257CB6B/iPhone10,3,iPhone10,6_12.4_16G5056d_Restore.ipsw",
+      "filename": "iPhone10,3,iPhone10,6_12.4_16G5056d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 Plus (CDMA)",
+      "devices": [
+        "iPhone10,2",
+        "iPhone10,5",
+        "iPhone9,2",
+        "iPhone9,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SpringSeed/fullrestores/041-76291/5B006390-944A-11E9-AE13-B013E257CB6B/iPhone_5.5_P3_12.4_16G5056d_Restore.ipsw",
+      "filename": "iPhone_5.5_P3_12.4_16G5056d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 (CDMA)",
+      "devices": [
+        "iPhone10,1",
+        "iPhone10,4",
+        "iPhone9,1",
+        "iPhone9,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2019SpringSeed/fullrestores/041-76335/5AEACB52-944A-11E9-ACC9-AE13E257CB6B/iPhone_4.7_P3_12.4_16G5056d_Restore.ipsw",
+      "filename": "iPhone_4.7_P3_12.4_16G5056d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

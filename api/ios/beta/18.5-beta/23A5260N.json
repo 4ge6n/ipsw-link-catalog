@@ -1,0 +1,33 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "18.5",
+  "version_label": "18.5-beta",
+  "build": "23A5260N",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 14 Pro Max",
+      "devices": [
+        "iPhone15,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-47240/59ADF25D-06A0-4A64-94AB-8D688B0548DA/iPhone15,3_18.5_23A5260n_Restore.ipsw",
+      "filename": "iPhone15,3_18.5_23A5260n_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

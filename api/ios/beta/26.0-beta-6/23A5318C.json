@@ -1,0 +1,334 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "26.0",
+  "version_label": "26.0-beta-6",
+  "build": "23A5318C",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 16e",
+      "devices": [
+        "iPhone17,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14244/EE651086-A653-43A2-9F39-A5DD5E930355/iPhone17,5_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone17,5_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 16 Plus",
+      "devices": [
+        "iPhone17,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14241/62442738-BE44-4E7C-BE46-E510E57414B4/iPhone17,4_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone17,4_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 16",
+      "devices": [
+        "iPhone17,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14412/158BA428-29D0-4232-A5B5-1A8857DCED44/iPhone17,3_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone17,3_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 16 Pro Max",
+      "devices": [
+        "iPhone17,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14200/3B424A60-0C46-4AEE-93F1-793322F8EFC9/iPhone17,2_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone17,2_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 16 Pro",
+      "devices": [
+        "iPhone17,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14201/A144A75D-3926-435A-951F-17C3D01C1EF7/iPhone17,1_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone17,1_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 15 Pro Max",
+      "devices": [
+        "iPhone16,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14251/A21452A8-E426-455E-8A30-7F25CFE123BC/iPhone16,2_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone16,2_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 15 Pro",
+      "devices": [
+        "iPhone16,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14270/598CA3E2-E0BB-49B8-99AE-73B4FE85F202/iPhone16,1_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone16,1_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 15 Plus",
+      "devices": [
+        "iPhone15,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14429/7C9BD29E-607C-42A8-A195-DAC9D92CCB6C/iPhone15,5_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone15,5_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 15",
+      "devices": [
+        "iPhone15,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14267/EEE3333A-0D16-417C-9F48-8C751E0B845D/iPhone15,4_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone15,4_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 14 Pro Max",
+      "devices": [
+        "iPhone15,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14526/1C20E57D-FD77-44BA-8485-55429032D0AB/iPhone15,3_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone15,3_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 14 Pro",
+      "devices": [
+        "iPhone15,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14497/1228CEEF-9102-4D36-88B9-9DC42D23285A/iPhone15,2_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone15,2_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 14 Plus",
+      "devices": [
+        "iPhone14,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14199/9C46516D-8BF3-4E56-BAB0-1FF44D2CE772/iPhone14,8_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone14,8_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 14",
+      "devices": [
+        "iPhone14,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14460/27A20D11-65B9-4DAC-8B26-0EAF0128D07B/iPhone14,7_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone14,7_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone SE (3rd generation)",
+      "devices": [
+        "iPhone14,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14380/7CEB0537-3E8B-4318-9BCA-F7B789F98120/iPhone14,6_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone14,6_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 13",
+      "devices": [
+        "iPhone14,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14502/65A23160-4727-4127-AB33-AB2347ACE78F/iPhone14,5_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone14,5_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 13 mini",
+      "devices": [
+        "iPhone14,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14335/D8637DF9-19A8-41D4-9A4C-D79AFFD3B5BA/iPhone14,4_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone14,4_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 13 Pro Max",
+      "devices": [
+        "iPhone14,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14310/B6CEDB23-848D-45F0-9950-43CDAD7C5D8E/iPhone14,3_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone14,3_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 13 Pro",
+      "devices": [
+        "iPhone14,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14321/B03B3171-8AD0-4294-A41F-33F8BD12ADEF/iPhone14,2_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone14,2_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 12 Pro Max",
+      "devices": [
+        "iPhone13,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14569/82895745-22FF-46BB-9689-434E15812689/iPhone13,4_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone13,4_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 12",
+      "devices": [
+        "iPhone13,2",
+        "iPhone13,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14252/3D32970A-181B-4F9F-8F72-0A5FACAF5B32/iPhone13,2,iPhone13,3_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone13,2,iPhone13,3_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 12 mini",
+      "devices": [
+        "iPhone13,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14278/797026FA-830D-4B69-8017-9FF4E20A9336/iPhone13,1_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone13,1_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone SE (2nd generation)",
+      "devices": [
+        "iPhone12,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14467/0665425D-70EC-4FDC-A78B-38285980DF1A/iPhone12,8_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone12,8_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 11 Pro",
+      "devices": [
+        "iPhone12,3",
+        "iPhone12,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14181/79375552-4A66-4F69-90DD-5B00AA8BD039/iPhone12,3,iPhone12,5_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone12,3,iPhone12,5_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 11",
+      "devices": [
+        "iPhone12,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2025SummerSeed/fullrestores/093-14356/7374FA72-E484-48E7-9042-CB07A55FE117/iPhone12,1_26.0_23A5318c_Restore.ipsw",
+      "filename": "iPhone12,1_26.0_23A5318c_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

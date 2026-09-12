@@ -1,0 +1,48 @@
+{
+  "os_key": "ipados",
+  "channel": "beta",
+  "version": "18.7.7",
+  "version_label": "18.7.7",
+  "build": "22H340",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad (7th generation) Wi",
+      "devices": [
+        "iPad7,11",
+        "iPad7,12"
+      ],
+      "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/122-22384/718DB9BE-5C93-427E-ABA1-7CDADA4099A0/iPad_10.2_18.7.7_22H340_Restore.ipsw",
+      "filename": "iPad_10.2_18.7.7_22H340_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (9th generation) Wi",
+      "devices": [
+        "iPad12,1",
+        "iPad12,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/122-22361/A0BE3759-E2E8-4689-ADA1-48A97919B104/iPad_10.2_2021_18.7.7_22H340_Restore.ipsw",
+      "filename": "iPad_10.2_2021_18.7.7_22H340_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

@@ -1,0 +1,300 @@
+{
+  "os_key": "ipados",
+  "channel": "beta",
+  "version": "26.5",
+  "version_label": "26.5-rc-2",
+  "build": "23F77",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": true,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad Pro 11",
+      "devices": [
+        "iPad8,1",
+        "iPad8,10",
+        "iPad8,11",
+        "iPad8,12",
+        "iPad8,2",
+        "iPad8,3",
+        "iPad8,4",
+        "iPad8,5",
+        "iPad8,6",
+        "iPad8,7",
+        "iPad8,8",
+        "iPad8,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-38979/783ABF88-C9D6-48FA-8A80-F962B49D2F98/iPad_Pro_A12X_A12Z_26.5_23F77_Restore.ipsw",
+      "filename": "iPad_Pro_A12X_A12Z_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro 11",
+      "devices": [
+        "iPad17,1",
+        "iPad17,2",
+        "iPad17,3",
+        "iPad17,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-39566/3DBC2822-E9B6-4D5B-9A74-A3B5E84315DF/iPad17,1,iPad17,2,iPad17,3,iPad17,4_26.5_23F77_Restore.ipsw",
+      "filename": "iPad17,1,iPad17,2,iPad17,3,iPad17,4_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro 11",
+      "devices": [
+        "iPad16,3",
+        "iPad16,4",
+        "iPad16,5",
+        "iPad16,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-64200/E70453A1-F1E6-405E-A39A-267AED87CCC2/iPad_Pro_M4_26.5_23F77_Restore.ipsw",
+      "filename": "iPad_Pro_M4_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Air 13",
+      "devices": [
+        "iPad16,10",
+        "iPad16,11",
+        "iPad16,8",
+        "iPad16,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-37240/1A37ACA0-E7F4-4856-9C36-66D8FDEE0AF2/iPad16,10,iPad16,11,iPad16,8,iPad16,9_26.5_23F77_Restore.ipsw",
+      "filename": "iPad16,10,iPad16,11,iPad16,8,iPad16,9_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini (A17 Pro) Wi",
+      "devices": [
+        "iPad16,1",
+        "iPad16,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-72606/1CDD78CE-0B50-471B-83B4-B1873BF12350/iPad16,1,iPad16,2_26.5_23F77_Restore.ipsw",
+      "filename": "iPad16,1,iPad16,2_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (A16) Wi",
+      "devices": [
+        "iPad15,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-37842/7277C67C-42FA-4B0A-8038-8A6C42C3F571/iPad15,8_26.5_23F77_Restore.ipsw",
+      "filename": "iPad15,8_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (A16) Wi",
+      "devices": [
+        "iPad15,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-36065/9064647F-C48C-4213-B5E6-7AA5E3377A7C/iPad15,7_26.5_23F77_Restore.ipsw",
+      "filename": "iPad15,7_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Air 11",
+      "devices": [
+        "iPad15,3",
+        "iPad15,4",
+        "iPad15,5",
+        "iPad15,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-70574/10C3FA3A-E70C-4A46-82AE-34C2320F8023/iPad15,3,iPad15,4,iPad15,5,iPad15,6_26.5_23F77_Restore.ipsw",
+      "filename": "iPad15,3,iPad15,4,iPad15,5,iPad15,6_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro 11",
+      "devices": [
+        "iPad14,3",
+        "iPad14,4",
+        "iPad14,5",
+        "iPad14,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-42634/42876A5D-EEA3-4011-A77E-950FB0141952/iPad14,3,iPad14,4,iPad14,5,iPad14,6_26.5_23F77_Restore.ipsw",
+      "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Air 13",
+      "devices": [
+        "iPad14,10",
+        "iPad14,11",
+        "iPad14,8",
+        "iPad14,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-41482/76FC3A04-290C-45D4-AD7F-981402AAA151/iPad_Air_M2_26.5_23F77_Restore.ipsw",
+      "filename": "iPad_Air_M2_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini (6th generation) Wi",
+      "devices": [
+        "iPad14,1",
+        "iPad14,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-78353/AF495549-8319-4272-98DC-D278573D19D8/iPad_Fall_2021_26.5_23F77_Restore.ipsw",
+      "filename": "iPad_Fall_2021_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (10th generation) Wi",
+      "devices": [
+        "iPad13,18",
+        "iPad13,19"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-53744/6E5C96D3-CF95-4F95-A1D2-F6014AF257AA/iPad_Fall_2022_26.5_23F77_Restore.ipsw",
+      "filename": "iPad_Fall_2022_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Air (5th generation) Wi",
+      "devices": [
+        "iPad13,16",
+        "iPad13,17"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-79968/251208AE-4712-4B4E-B934-8D4ED1089C0F/iPad_Spring_2022_26.5_23F77_Restore.ipsw",
+      "filename": "iPad_Spring_2022_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro 12.9",
+      "devices": [
+        "iPad13,10",
+        "iPad13,11",
+        "iPad13,4",
+        "iPad13,5",
+        "iPad13,6",
+        "iPad13,7",
+        "iPad13,8",
+        "iPad13,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-38416/A7C40786-608D-448F-9F13-FFC699ACE9DA/iPad_Pro_Spring_2021_26.5_23F77_Restore.ipsw",
+      "filename": "iPad_Pro_Spring_2021_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Air (4th generation) Wi",
+      "devices": [
+        "iPad13,1",
+        "iPad13,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-64199/DF876EF5-2A25-44BB-898A-EA0EED26E4F0/iPad_Fall_2020_26.5_23F77_Restore.ipsw",
+      "filename": "iPad_Fall_2020_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (9th generation) Wi",
+      "devices": [
+        "iPad12,1",
+        "iPad12,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-65944/09CA0A51-66D9-496B-821E-82ECFCA677CA/iPad_10.2_2021_26.5_23F77_Restore.ipsw",
+      "filename": "iPad_10.2_2021_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (8th generation) Wi",
+      "devices": [
+        "iPad11,6",
+        "iPad11,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-72605/DFD5A609-179C-4041-9226-EF794CEDA4C4/iPad_10.2_2020_26.5_23F77_Restore.ipsw",
+      "filename": "iPad_10.2_2020_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini (5th generation) Wi",
+      "devices": [
+        "iPad11,1",
+        "iPad11,2",
+        "iPad11,3",
+        "iPad11,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-40917/77D3914D-F9C3-4EA6-94B5-750E7FF05B13/iPad_Spring_2019_26.5_23F77_Restore.ipsw",
+      "filename": "iPad_Spring_2019_26.5_23F77_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

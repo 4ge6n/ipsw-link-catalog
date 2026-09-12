@@ -1,0 +1,43 @@
+{
+  "os_key": "macos",
+  "channel": "beta",
+  "version": "13.0",
+  "version_label": "13.0-beta-4",
+  "build": "22A5311F",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Mac Studio (M1 Max)",
+      "devices": [
+        "Mac13,1",
+        "Mac13,2",
+        "Mac14,2",
+        "Mac14,7",
+        "MacBookAir10,1",
+        "MacBookPro17,1",
+        "MacBookPro18,1",
+        "MacBookPro18,2",
+        "MacBookPro18,3",
+        "MacBookPro18,4",
+        "Macmini9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2022SummerSeed/fullrestores/012-43316/6CE4D83A-E44C-4DD1-B47F-DE168355662E/UniversalMac_13.0_22A5311f_Restore.ipsw",
+      "filename": "UniversalMac_13.0_22A5311f_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

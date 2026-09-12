@@ -1,0 +1,174 @@
+{
+  "os_key": "ipados",
+  "channel": "beta",
+  "version": "14.0",
+  "version_label": "14.0-beta-7",
+  "build": "18A5369B",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad Pro 12.9",
+      "devices": [
+        "iPad8,11",
+        "iPad8,12"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-44782/7D8552BE-743E-420D-8E72-9F1610CD213F/iPad8,11,iPad8,12_14.0_18A5369b_Restore.ipsw",
+      "filename": "iPad8,11,iPad8,12_14.0_18A5369b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro 11",
+      "devices": [
+        "iPad8,10",
+        "iPad8,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-44840/9E0D9EB6-3DF5-45FF-9323-953E4E8450BC/iPad_Spring_2020_14.0_18A5369b_Restore.ipsw",
+      "filename": "iPad_Spring_2020_14.0_18A5369b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro 11",
+      "devices": [
+        "iPad8,1",
+        "iPad8,2",
+        "iPad8,3",
+        "iPad8,4",
+        "iPad8,5",
+        "iPad8,6",
+        "iPad8,7",
+        "iPad8,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-44752/A62D9A12-6FB1-4D72-8875-1165D2796D07/iPad_Fall_2018_14.0_18A5369b_Restore.ipsw",
+      "filename": "iPad_Fall_2018_14.0_18A5369b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (7th generation) Wi",
+      "devices": [
+        "iPad7,11",
+        "iPad7,12"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-44703/E3CFA495-A257-4183-B724-106281F1FBC7/iPad_Educational_14.0_18A5369b_Restore.ipsw",
+      "filename": "iPad_Educational_14.0_18A5369b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (12.9",
+      "devices": [
+        "iPad7,1",
+        "iPad7,2",
+        "iPad7,3",
+        "iPad7,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-44826/3E694C5C-B290-4FF1-A882-64D314B0D75B/iPad_Pro_HFR_14.0_18A5369b_Restore.ipsw",
+      "filename": "iPad_Pro_HFR_14.0_18A5369b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (12.9",
+      "devices": [
+        "iPad6,7",
+        "iPad6,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-44890/B5E163A8-B13A-4576-868F-2877FB9217EF/iPadPro_12.9_14.0_18A5369b_Restore.ipsw",
+      "filename": "iPadPro_12.9_14.0_18A5369b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (9.7",
+      "devices": [
+        "iPad6,3",
+        "iPad6,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-44666/36DBBB8B-6A3B-46F7-9CEA-C90006091BC2/iPadPro_9.7_14.0_18A5369b_Restore.ipsw",
+      "filename": "iPadPro_9.7_14.0_18A5369b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (5th generation) Wi",
+      "devices": [
+        "iPad6,11",
+        "iPad6,12",
+        "iPad7,5",
+        "iPad7,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-44755/A667F482-B876-4471-8FBB-28A8347D6723/iPad_64bit_TouchID_ASTC_14.0_18A5369b_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_ASTC_14.0_18A5369b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini 4 Wi",
+      "devices": [
+        "iPad5,1",
+        "iPad5,2",
+        "iPad5,3",
+        "iPad5,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-44761/E006CC5A-863E-498D-861C-89EC2DE210AA/iPad_64bit_TouchID_14.0_18A5369b_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_14.0_18A5369b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini (5th generation) Wi",
+      "devices": [
+        "iPad11,1",
+        "iPad11,2",
+        "iPad11,3",
+        "iPad11,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2020SummerSeed/fullrestores/001-44806/492BAB86-6D8A-4073-A6E7-99FCD10751F7/iPad_Spring_2019_14.0_18A5369b_Restore.ipsw",
+      "filename": "iPad_Spring_2019_14.0_18A5369b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

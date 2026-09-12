@@ -1,0 +1,35 @@
+{
+  "os_key": "macos",
+  "channel": "beta",
+  "version": "11.5.1",
+  "version_label": "11.5.1",
+  "build": "20G80",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Air (M1, 2020)",
+      "devices": [
+        "MacBookAir10,1",
+        "MacBookPro17,1",
+        "Macmini9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2021SummerFCS/fullrestores/071-72793/D57C87F1-FFDA-49FD-8747-30B9EE0DB21F/UniversalMac_11.5.1_20G80_Restore.ipsw",
+      "filename": "UniversalMac_11.5.1_20G80_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

@@ -1,0 +1,122 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "11.4.1",
+  "version_label": "11.4.1-beta-2",
+  "build": "15G5063B",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch (6th generation)",
+      "devices": [
+        "iPod7,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-87003-20180611-E62750DE-6A64-11E8-A7F9-422031998DA0/iPodtouch_11.4.1_15G5063b_Restore.ipsw",
+      "filename": "iPodtouch_11.4.1_15G5063b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6",
+      "devices": [
+        "iPhone7,2",
+        "iPhone8,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-87244-20180611-E6353604-6A64-11E8-BF58-502031998DA0/iPhone_4.7_11.4.1_15G5063b_Restore.ipsw",
+      "filename": "iPhone_4.7_11.4.1_15G5063b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6 Plus",
+      "devices": [
+        "iPhone7,1",
+        "iPhone8,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-87186-20180611-E62CA728-6A64-11E8-99DC-4C2031998DA0/iPhone_5.5_11.4.1_15G5063b_Restore.ipsw",
+      "filename": "iPhone_5.5_11.4.1_15G5063b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 5s (GSM)",
+      "devices": [
+        "iPhone6,1",
+        "iPhone6,2",
+        "iPhone8,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-86948-20180611-E622C316-6A64-11E8-857D-412031998DA0/iPhone_4.0_64bit_11.4.1_15G5063b_Restore.ipsw",
+      "filename": "iPhone_4.0_64bit_11.4.1_15G5063b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone X (CDMA)",
+      "devices": [
+        "iPhone10,3",
+        "iPhone10,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-87192-20180611-E631C2A8-6A64-11E8-B7BD-4E2031998DA0/iPhone10,3,iPhone10,6_11.4.1_15G5063b_Restore.ipsw",
+      "filename": "iPhone10,3,iPhone10,6_11.4.1_15G5063b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 Plus (CDMA)",
+      "devices": [
+        "iPhone10,2",
+        "iPhone10,5",
+        "iPhone9,2",
+        "iPhone9,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-86920-20180611-E62551E4-6A64-11E8-9479-3D2031998DA0/iPhone_5.5_P3_11.0_11.4.1_15G5063b_Restore.ipsw",
+      "filename": "iPhone_5.5_P3_11.0_11.4.1_15G5063b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 8 (CDMA)",
+      "devices": [
+        "iPhone10,1",
+        "iPhone10,4",
+        "iPhone9,1",
+        "iPhone9,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2018/iosseed/091-87108-20180611-E6249C7C-6A64-11E8-B862-4B2031998DA0/iPhone_4.7_P3_11.0_11.4.1_15G5063b_Restore.ipsw",
+      "filename": "iPhone_4.7_P3_11.0_11.4.1_15G5063b_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}

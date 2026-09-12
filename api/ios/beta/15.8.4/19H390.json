@@ -1,0 +1,100 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "15.8.4",
+  "version_label": "15.8.4",
+  "build": "19H390",
+  "released_at": null,
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-09-12T11:20:35Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPod touch (7th generation)",
+      "devices": [
+        "iPod9,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/062-47922/ABEEFC7A-CBB4-402D-B8E8-F4DDCFDB2E18/iPodtouch_7_15.8.4_19H390_Restore.ipsw",
+      "filename": "iPodtouch_7_15.8.4_19H390_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 7 Plus (CDMA)",
+      "devices": [
+        "iPhone9,2",
+        "iPhone9,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/062-48481/770AB33F-5F75-44C0-9E23-65E8648D76C6/iPhone_5.5_P3_15.8.4_19H390_Restore.ipsw",
+      "filename": "iPhone_5.5_P3_15.8.4_19H390_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 7 (CDMA)",
+      "devices": [
+        "iPhone9,1",
+        "iPhone9,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/062-47933/0FBD3244-5191-427E-A8F0-37C1E05D3436/iPhone_4.7_P3_15.8.4_19H390_Restore.ipsw",
+      "filename": "iPhone_4.7_P3_15.8.4_19H390_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone SE (1st generation)",
+      "devices": [
+        "iPhone8,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/062-48461/D99373EA-9262-4602-A38A-5928DDA8D724/iPhone_4.0_64bit_15.8.4_19H390_Restore.ipsw",
+      "filename": "iPhone_4.0_64bit_15.8.4_19H390_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6s Plus",
+      "devices": [
+        "iPhone8,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/062-48382/6922D342-864E-4172-B8A2-D6293976E466/iPhone_5.5_15.8.4_19H390_Restore.ipsw",
+      "filename": "iPhone_5.5_15.8.4_19H390_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 6s",
+      "devices": [
+        "iPhone8,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/062-48421/918618B0-E07D-479A-8F54-D61B7A426DCF/iPhone_4.7_15.8.4_19H390_Restore.ipsw",
+      "filename": "iPhone_4.7_15.8.4_19H390_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-12T11:20:35Z",
+  "last_seen_at": "2026-09-12T11:20:35Z"
+}
