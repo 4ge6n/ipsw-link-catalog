@@ -28,7 +28,13 @@ def url_for_device(item, timeout: int):
     except Exception: return None
     match=re.search(r'ipsw-button-down[^>]+href="(https://[^"]+\.ipsw)"', page)
     if not match: return None
-    return {"device":identifier,"name":name,"version":re.sub(r'^(?:iOS|iPadOS|tvOS|visionOS|audioOS|macOS)\s+','',label,flags=re.I),"build":build,"url":html.unescape(match.group(1)),"signed":None,"channel":"beta","source":"ipsw.dev"}
+    # `label` includes the channel text (for example "iOS 27.0 RC").
+    # Keep it as the presentation label, but use a numeric canonical version
+    # so the same Apple URL from IPSWBeta.dev is merged rather than duplicated.
+    release_label=re.sub(r'^(?:iOS|iPadOS|tvOS|visionOS|audioOS|macOS)\s+','',label,flags=re.I)
+    version_match=re.search(r'[0-9]+(?:\.[0-9]+)*', release_label)
+    if not version_match: return None
+    return {"device":identifier,"name":name,"version":version_match.group(0),"label":release_label,"build":build,"url":html.unescape(match.group(1)),"signed":None,"channel":"beta","source":"ipsw.dev"}
 def fetch(timeout: int) -> list[dict]:
     configured=os.environ.get("BETA_SOURCE_URL")
     if configured:

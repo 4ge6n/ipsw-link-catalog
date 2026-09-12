@@ -1,6 +1,6 @@
 """Atomically fetch, merge, generate, and validate the IPSW JSON catalog."""
 from __future__ import annotations
-import argparse, json, os, shutil, sys, tempfile
+import argparse, json, os, re, shutil, sys, tempfile
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 from pathlib import Path
@@ -21,6 +21,10 @@ def existing_records(api):
     for fixed in api.glob("*/*/*/*.json"):
         try:
             record=json.loads(fixed.read_text())
+            # Earlier beta documents used labels such as "27.0 RC" as their
+            # version. Fold those into the numeric canonical version.
+            match=re.search(r"[0-9]+(?:\.[0-9]+)*", str(record.get("version", "")))
+            if match: record["version"]=match.group(0)
             record["build"]=safe_build(record["build"])
             records.append(record)
         except json.JSONDecodeError: pass

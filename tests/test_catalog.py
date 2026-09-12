@@ -3,6 +3,7 @@ import unittest
 from scripts.normalize import allowed_ipsw_url, classify
 from scripts.organize import all_index, normalize_candidates, merge, index
 from scripts.sources.ipswbeta import FILENAME
+from scripts.sources.beta import url_for_device
 
 SETTINGS={"allowed_cdn_hosts":["updates.cdn-apple.com"], "include_unknown_beta_signing":True}
 class CatalogTests(unittest.TestCase):
@@ -32,3 +33,8 @@ class CatalogTests(unittest.TestCase):
         observed,_=normalize_candidates(rows, SETTINGS, "2026-09-12T00:00:00Z")
         document=all_index(merge([], observed, "2026-09-12T00:00:00Z"), "ios", "beta", "2026-09-12T00:00:00Z")
         self.assertEqual({release["build"] for release in document["releases"]}, {"24A1", "24A2"})
+    def test_beta_primary_uses_numeric_version(self):
+        from unittest.mock import patch
+        with patch("scripts.sources.beta.get_text", return_value='ipsw-button-down href="https://updates.cdn-apple.com/a.ipsw"'):
+            row=url_for_device(("24A435", "iOS 27.0 RC", "iPhone18,5", "iPhone"), 1)
+        self.assertEqual((row["version"], row["label"]), ("27.0", "27.0 RC"))
