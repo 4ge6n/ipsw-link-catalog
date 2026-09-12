@@ -29,7 +29,7 @@ def firmware_table(release: dict) -> str:
         rows.append(f"<tr><td>{html.escape(fw['name'])}</td><td><code>{devices}</code></td><td>{link(fw['url'], fw['filename'])}</td><td>{'Signed' if fw['signed'] else 'Not signed'}</td></tr>")
     return "<table><thead><tr><th>Device</th><th>Identifiers</th><th>Apple download</th><th>Status</th></tr></thead><tbody>" + "".join(rows) + "</tbody></table>"
 def release_list_item(release: dict, href: str) -> str:
-    return f"<li>{link(href, release['version']+' ('+release['build']+')')} — {len(release['firmwares'])} download link(s)<br><span class='meta'>{release_time(release.get('released_at'))}</span></li>"
+    return f"<li>{link(href, release['version']+' ('+release['build']+')')} — {len(release['firmwares'])} download link(s)</li>"
 def generate(api: Path, output: Path):
     if output.exists(): shutil.rmtree(output)
     release_meta=json.loads((api/"ios"/"release"/"all.json").read_text())
