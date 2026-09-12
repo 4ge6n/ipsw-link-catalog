@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:20:35Z"
+      "checked_at": "2026-09-12T11:25:58Z"
     }
   ],
   "firmwares": [
@@ -23,7 +23,7 @@
       "filename": "iPodtouch_12.0_16A366_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -37,7 +37,7 @@
       "filename": "iPhone_4.7_12.0_16A366_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -51,7 +51,7 @@
       "filename": "iPhone_5.5_12.0_16A366_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -66,7 +66,7 @@
       "filename": "iPhone_4.0_64bit_12.0_16A366_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -79,7 +79,7 @@
       "filename": "iPhone11,8_12.0_16A366_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -93,7 +93,7 @@
       "filename": "iPhone11,4,iPhone11,6_12.0_16A366_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -106,7 +106,7 @@
       "filename": "iPhone11,2_12.0_16A366_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -120,7 +120,7 @@
       "filename": "iPhone10,3,iPhone10,6_12.0_16A366_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -136,7 +136,7 @@
       "filename": "iPhone_5.5_P3_12.0_16A366_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -152,11 +152,108 @@
       "filename": "iPhone_4.7_P3_12.0_16A366_Restore.ipsw",
       "signing": {
         "status": "unknown",
+        "checked_at": "2026-09-12T11:25:58Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (12.9",
+      "devices": [
+        "iPad7,1",
+        "iPad7,2",
+        "iPad7,3",
+        "iPad7,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallFCS/fullrestores/091-62921/11701D1E-AC8E-11E8-A4EB-C9640A3A3D87/iPad_Pro_HFR_12.0_16A366_Restore.ipsw",
+      "filename": "iPad_Pro_HFR_12.0_16A366_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (12.9",
+      "devices": [
+        "iPad6,7",
+        "iPad6,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallFCS/fullrestores/091-62871/118D5BA4-AC8E-11E8-AFC2-A753C7CC9026/iPadPro_12.9_12.0_16A366_Restore.ipsw",
+      "filename": "iPadPro_12.9_12.0_16A366_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (9.7",
+      "devices": [
+        "iPad6,3",
+        "iPad6,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallFCS/fullrestores/091-63166/11A02C16-AC8E-11E8-8517-DF16F89DBF7B/iPadPro_9.7_12.0_16A366_Restore.ipsw",
+      "filename": "iPadPro_9.7_12.0_16A366_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini 4 Wi",
+      "devices": [
+        "iPad5,1",
+        "iPad5,2",
+        "iPad5,3",
+        "iPad5,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallFCS/fullrestores/091-63139/11A3DDE8-AC8E-11E8-BBBB-EAD81D048BD9/iPad_64bit_TouchID_12.0_16A366_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_12.0_16A366_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini 3 Wi",
+      "devices": [
+        "iPad4,7",
+        "iPad4,8",
+        "iPad4,9",
+        "iPad6,11",
+        "iPad6,12",
+        "iPad7,5",
+        "iPad7,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallFCS/fullrestores/091-77699/118FEE96-AC8E-11E8-B8E7-F6A8415063F8/iPad_64bit_TouchID_ASTC_12.0_16A366_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_ASTC_12.0_16A366_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Air Wi",
+      "devices": [
+        "iPad4,1",
+        "iPad4,2",
+        "iPad4,3",
+        "iPad4,4",
+        "iPad4,5",
+        "iPad4,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2018FallFCS/fullrestores/091-63023/11A39400-AC8E-11E8-A499-81BC17F6848C/iPad_64bit_12.0_16A366_Restore.ipsw",
+      "filename": "iPad_64bit_12.0_16A366_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
         "checked_at": "2026-09-12T11:20:35Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:20:35Z"
+  "last_seen_at": "2026-09-12T11:25:58Z"
 }

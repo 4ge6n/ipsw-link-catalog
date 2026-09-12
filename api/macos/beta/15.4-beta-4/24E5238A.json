@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:20:35Z"
+      "checked_at": "2026-09-12T11:25:58Z"
     }
   ],
   "firmwares": [
@@ -61,7 +61,9 @@
         "MacBookPro18,2",
         "MacBookPro18,3",
         "MacBookPro18,4",
-        "Macmini9,1"
+        "Macmini9,1",
+        "iMac21,1",
+        "iMac21,2"
       ],
       "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/082-08323/FD7D7539-514F-4F2E-AD3B-4D6D0D248706/UniversalMac_15.4_24E5238a_Restore.ipsw",
       "filename": "UniversalMac_15.4_24E5238a_Restore.ipsw",
@@ -73,5 +75,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:20:35Z"
+  "last_seen_at": "2026-09-12T11:25:58Z"
 }

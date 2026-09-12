@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:20:35Z"
+      "checked_at": "2026-09-12T11:25:58Z"
     }
   ],
   "firmwares": [
@@ -61,7 +61,9 @@
         "MacBookPro18,2",
         "MacBookPro18,3",
         "MacBookPro18,4",
-        "Macmini9,1"
+        "Macmini9,1",
+        "iMac21,1",
+        "iMac21,2"
       ],
       "url": "https://updates.cdn-apple.com/2025SummerFCS/fullrestores/093-10809/CFD6DD38-DAF0-40DA-854F-31AAD1294C6F/UniversalMac_15.6.1_24G90_Restore.ipsw",
       "filename": "UniversalMac_15.6.1_24G90_Restore.ipsw",
@@ -73,5 +75,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:20:35Z"
+  "last_seen_at": "2026-09-12T11:25:58Z"
 }

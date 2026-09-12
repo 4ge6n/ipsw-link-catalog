@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:20:35Z"
+      "checked_at": "2026-09-12T11:25:58Z"
     }
   ],
   "firmwares": [
@@ -48,7 +48,9 @@
         "MacBookPro18,2",
         "MacBookPro18,3",
         "MacBookPro18,4",
-        "Macmini9,1"
+        "Macmini9,1",
+        "iMac21,1",
+        "iMac21,2"
       ],
       "url": "https://updates.cdn-apple.com/2024SummerSeed/fullrestores/062-33928/E22622FB-DAFC-4C64-8CC6-B7CAF89477F7/UniversalMac_15.0_24A5289g_Restore.ipsw",
       "filename": "UniversalMac_15.0_24A5289g_Restore.ipsw",
@@ -60,5 +62,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:20:35Z"
+  "last_seen_at": "2026-09-12T11:25:58Z"
 }

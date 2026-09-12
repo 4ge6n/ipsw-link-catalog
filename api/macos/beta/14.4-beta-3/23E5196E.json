@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:20:35Z"
+      "checked_at": "2026-09-12T11:25:58Z"
     }
   ],
   "firmwares": [
@@ -46,7 +46,9 @@
         "MacBookPro18,2",
         "MacBookPro18,3",
         "MacBookPro18,4",
-        "Macmini9,1"
+        "Macmini9,1",
+        "iMac21,1",
+        "iMac21,2"
       ],
       "url": "https://updates.cdn-apple.com/2024WinterSeed/fullrestores/052-51632/C6A7A58A-3CB1-4271-9CED-1D5DAE9078CF/UniversalMac_14.4_23E5196e_Restore.ipsw",
       "filename": "UniversalMac_14.4_23E5196e_Restore.ipsw",
@@ -58,5 +60,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:20:35Z"
+  "last_seen_at": "2026-09-12T11:25:58Z"
 }

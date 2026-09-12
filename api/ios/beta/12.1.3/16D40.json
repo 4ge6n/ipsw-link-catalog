@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:20:35Z"
+      "checked_at": "2026-09-12T11:25:58Z"
     }
   ],
   "firmwares": [
@@ -23,7 +23,7 @@
       "filename": "iPhone11,8_12.1.3_16D40_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -37,7 +37,7 @@
       "filename": "iPhone11,4,iPhone11,6_12.1.3_16D40_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -50,11 +50,31 @@
       "filename": "iPhone11,2_12.1.3_16D40_Restore.ipsw",
       "signing": {
         "status": "unknown",
+        "checked_at": "2026-09-12T11:25:58Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro 11",
+      "devices": [
+        "iPad8,1",
+        "iPad8,2",
+        "iPad8,3",
+        "iPad8,4",
+        "iPad8,5",
+        "iPad8,6",
+        "iPad8,7",
+        "iPad8,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2019WinterFCS/fullrestores/041-31149/BFED73A6-18D0-11E9-ACBA-1FE56784396E/iPad_Fall_2018_12.1.3_16D40_Restore.ipsw",
+      "filename": "iPad_Fall_2018_12.1.3_16D40_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
         "checked_at": "2026-09-12T11:20:35Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:20:35Z"
+  "last_seen_at": "2026-09-12T11:25:58Z"
 }

@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:20:35Z"
+      "checked_at": "2026-09-12T11:25:58Z"
     }
   ],
   "firmwares": [
@@ -19,7 +19,9 @@
       "devices": [
         "MacBookAir10,1",
         "MacBookPro17,1",
-        "Macmini9,1"
+        "Macmini9,1",
+        "iMac21,1",
+        "iMac21,2"
       ],
       "url": "https://updates.cdn-apple.com/2021SummerSeed/fullrestores/002-02558/9EEDAAF0-A559-4212-922E-C2620045A6CE/UniversalMac_12.0_21A5522h_Restore.ipsw",
       "filename": "UniversalMac_12.0_21A5522h_Restore.ipsw",
@@ -31,5 +33,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:20:35Z"
+  "last_seen_at": "2026-09-12T11:25:58Z"
 }

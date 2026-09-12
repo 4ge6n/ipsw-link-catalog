@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:20:35Z"
+      "checked_at": "2026-09-12T11:25:58Z"
     }
   ],
   "firmwares": [
@@ -23,7 +23,7 @@
       "filename": "iPodtouch_12.5.4_16H50_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -36,7 +36,7 @@
       "filename": "iPhone_4.7_12.5.4_16H50_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -49,7 +49,7 @@
       "filename": "iPhone_5.5_12.5.4_16H50_Restore.ipsw",
       "signing": {
         "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
+        "checked_at": "2026-09-12T11:25:58Z",
         "unsigned_since": null
       }
     },
@@ -63,11 +63,44 @@
       "filename": "iPhone_4.0_64bit_12.5.4_16H50_Restore.ipsw",
       "signing": {
         "status": "unknown",
+        "checked_at": "2026-09-12T11:25:58Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini 3 Wi",
+      "devices": [
+        "iPad4,7",
+        "iPad4,8",
+        "iPad4,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2021WinterFCS/fullrestores/071-53989/7544C994-1AC1-4EBB-ACE8-B0A104C10C21/iPad_64bit_TouchID_12.5.4_16H50_Restore.ipsw",
+      "filename": "iPad_64bit_TouchID_12.5.4_16H50_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Air Wi",
+      "devices": [
+        "iPad4,1",
+        "iPad4,2",
+        "iPad4,3",
+        "iPad4,4",
+        "iPad4,5",
+        "iPad4,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2021WinterFCS/fullrestores/071-54123/288AF52D-BBBD-491F-A1E0-DBCCD8D8EB51/iPad_64bit_12.5.4_16H50_Restore.ipsw",
+      "filename": "iPad_64bit_12.5.4_16H50_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
         "checked_at": "2026-09-12T11:20:35Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:20:35Z"
+  "last_seen_at": "2026-09-12T11:25:58Z"
 }

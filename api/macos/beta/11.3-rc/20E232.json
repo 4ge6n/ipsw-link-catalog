@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:20:35Z"
+      "checked_at": "2026-09-12T11:25:58Z"
     }
   ],
   "firmwares": [
@@ -19,7 +19,9 @@
       "devices": [
         "MacBookAir10,1",
         "MacBookPro17,1",
-        "Macmini9,1"
+        "Macmini9,1",
+        "iMac21,1",
+        "iMac21,2"
       ],
       "url": "https://updates.cdn-apple.com/2021SpringFCS/fullrestores/071-29178/0E506A34-BA6B-40DF-AB6C-AAA981AD5953/UniversalMac_11.3_20E232_Restore.ipsw",
       "filename": "UniversalMac_11.3_20E232_Restore.ipsw",
@@ -31,5 +33,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:20:35Z"
+  "last_seen_at": "2026-09-12T11:25:58Z"
 }
