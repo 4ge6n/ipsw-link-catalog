@@ -49,17 +49,22 @@ def generate(api: Path, output: Path):
                 href=f"{release['data'].removesuffix('.json')}/"
                 page=f"<p>{link('../../', '← '+channel.title()+' list')}</p><h1>{OS_NAMES[os_key]} {channel.title()} {html.escape(release['version'])} ({html.escape(release['build'])})</h1><p class='meta'>{release_time(release.get('released_at'))}</p>"+firmware_table(release)
                 write(output/os_key/channel/release["data"].removesuffix(".json")/"index.html", f"{OS_NAMES[os_key]} {release['version']} ({release['build']})", page)
-                if channel == "release": channel_page.append(release_list_item(release, href))
-            if channel == "beta":
+            # Both channels are navigated by OS major version.  Release keeps
+            # its separate Latest view, while beta intentionally has no such
+            # endpoint because several candidates may coexist.
+            if channel in ("release", "beta"):
                 groups={}
                 for release in document["releases"]:
                     major=release["version"].split(".", 1)[0]
                     groups.setdefault(major, []).append(release)
-                channel_page=[f"<p>{link('../', '← '+OS_NAMES[os_key])}</p><h1>{OS_NAMES[os_key]} Beta</h1>{latest_link}<p>Select a major version.</p><ul>"]
+                channel_page=[f"<p>{link('../', '← '+OS_NAMES[os_key])}</p><h1>{OS_NAMES[os_key]} {channel.title()}</h1>{latest_link}<p>Select a major version.</p><ul>"]
                 for major in sorted(groups, key=lambda value: int(value) if value.isdigit() else -1, reverse=True):
                     releases=groups[major]
-                    channel_page.append(f"<li>{link(major+'/', major+'.x')} — {len(releases)} beta/RC build(s)</li>")
-                    major_body=[f"<p>{link('../', '← Beta major versions')}</p><h1>{OS_NAMES[os_key]} {major}.x beta / RC</h1><ul>"]
+                    kind="beta/RC build(s)" if channel == "beta" else "release build(s)"
+                    channel_page.append(f"<li>{link(major+'/', major+'.x')} — {len(releases)} {kind}</li>")
+                    major_title = f"{OS_NAMES[os_key]} {major}.x beta / RC" if channel == "beta" else f"{OS_NAMES[os_key]} {major}.x Release"
+                    major_back = "← Beta major versions" if channel == "beta" else "← Release major versions"
+                    major_body=[f"<p>{link('../', major_back)}</p><h1>{major_title}</h1><ul>"]
                     for release in releases:
                         href="../"+release["data"].removesuffix(".json")+"/"
                         major_body.append(release_list_item(release, href))
