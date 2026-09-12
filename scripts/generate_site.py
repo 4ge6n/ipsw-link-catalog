@@ -28,6 +28,8 @@ def firmware_table(release: dict) -> str:
         devices="<br>".join(html.escape(x) for x in fw["devices"])
         rows.append(f"<tr><td>{html.escape(fw['name'])}</td><td><code>{devices}</code></td><td>{link(fw['url'], fw['filename'])}</td><td>{'Signed' if fw['signed'] else 'Not signed'}</td></tr>")
     return "<table><thead><tr><th>Device</th><th>Identifiers</th><th>Apple download</th><th>Status</th></tr></thead><tbody>" + "".join(rows) + "</tbody></table>"
+def release_list_item(release: dict, href: str) -> str:
+    return f"<li>{link(href, release['version']+' ('+release['build']+')')} — {len(release['firmwares'])} download link(s)<br><span class='meta'>{release_time(release.get('released_at'))}</span></li>"
 def generate(api: Path, output: Path):
     if output.exists(): shutil.rmtree(output)
     release_meta=json.loads((api/"ios"/"release"/"all.json").read_text())
@@ -45,9 +47,23 @@ def generate(api: Path, output: Path):
             channel_page=[f"<p>{link('../', '← '+OS_NAMES[os_key])}</p><h1>{OS_NAMES[os_key]} {channel.title()}</h1>{latest_link}<ul>"]
             for release in document["releases"]:
                 href=f"{release['data'].removesuffix('.json')}/"
-                channel_page.append(f"<li>{link(href, release['version']+' ('+release['build']+')')} — {len(release['firmwares'])} download link(s)<br><span class='meta'>{release_time(release.get('released_at'))}</span></li>")
                 page=f"<p>{link('../../', '← '+channel.title()+' list')}</p><h1>{OS_NAMES[os_key]} {channel.title()} {html.escape(release['version'])} ({html.escape(release['build'])})</h1><p class='meta'>{release_time(release.get('released_at'))}</p>"+firmware_table(release)
                 write(output/os_key/channel/release["data"].removesuffix(".json")/"index.html", f"{OS_NAMES[os_key]} {release['version']} ({release['build']})", page)
+                if channel == "release": channel_page.append(release_list_item(release, href))
+            if channel == "beta":
+                groups={}
+                for release in document["releases"]:
+                    major=release["version"].split(".", 1)[0]
+                    groups.setdefault(major, []).append(release)
+                channel_page=[f"<p>{link('../', '← '+OS_NAMES[os_key])}</p><h1>{OS_NAMES[os_key]} Beta</h1>{latest_link}<p>Select a major version.</p><ul>"]
+                for major in sorted(groups, key=lambda value: int(value) if value.isdigit() else -1, reverse=True):
+                    releases=groups[major]
+                    channel_page.append(f"<li>{link(major+'/', major+'.x')} — {len(releases)} beta/RC build(s)</li>")
+                    major_body=[f"<p>{link('../', '← Beta major versions')}</p><h1>{OS_NAMES[os_key]} {major}.x beta / RC</h1><ul>"]
+                    for release in releases:
+                        href="../"+release["data"].removesuffix(".json")+"/"
+                        major_body.append(release_list_item(release, href))
+                    write(output/os_key/channel/major/"index.html", f"{OS_NAMES[os_key]} {major}.x beta / RC", "".join(major_body)+"</ul>")
             if channel == "release":
                 latest=json.loads((api/os_key/channel/"latest.json").read_text())
                 latest_body=f"<p>{link('../', '← '+channel.title()+' list')}</p><h1>Latest {OS_NAMES[os_key]} {channel.title()} downloads</h1>"+"".join(f"<h2>{html.escape(r['version'])} ({html.escape(r['build'])})</h2><p class='meta'>{release_time(r.get('released_at'))}</p>"+firmware_table(r) for r in latest["releases"])

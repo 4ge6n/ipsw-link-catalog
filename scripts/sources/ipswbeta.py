@@ -34,27 +34,26 @@ def devices_for_track(os_key: str, track: str, timeout: int) -> list[str]:
     pattern = rf'href="/{re.escape(path)}/{re.escape(track)}/([^"/?#]+)"'
     return sorted({unquote(identifier) for identifier in re.findall(pattern, page) if re.fullmatch(r"[A-Za-z]+[0-9]+,[0-9]+", unquote(identifier))})
 
-def candidate_for_device(item: tuple[str, str, str], timeout: int) -> dict | None:
+def candidates_for_device(item: tuple[str, str, str], timeout: int) -> list[dict]:
     os_key, track, identifier = item
     try:
         page = get_text(f"{BASE}/{PATHS[os_key]}/{track}/{identifier}", timeout)
     except Exception:
-        return None
-    match = APPLE_URL.search(page)
-    if not match:
-        return None
-    url = html.unescape(match.group(1))
-    parsed = FILENAME.search(url)
-    if not parsed:
-        return None
-    version, build = parsed.groups()
+        return []
     title = re.search(r"<title>\s*([^<–]+?)\s*[–-]", page, re.S)
     name = html.unescape(title.group(1)).strip() if title else identifier
-    # The first data-url is the page's current RC/beta row.  Its label is
-    # present in the page's Latest field and preserves RC/beta classification.
-    label_match = re.search(r"Latest:.*?font-semibold\">\s*([^<]+)", page, re.S)
-    label = html.unescape(label_match.group(1)).strip() if label_match else f"{version} beta"
-    return {"device": identifier, "name": name, "version": version, "label": label, "build": build, "url": url, "signed": None, "channel": "beta", "source": "ipswbeta.dev"}
+    candidates=[]
+    for match in APPLE_URL.finditer(page):
+        url = html.unescape(match.group(1))
+        parsed = FILENAME.search(url)
+        if not parsed:
+            continue
+        version, build = parsed.groups()
+        preceding=page[:match.start()]
+        labels=re.findall(r'<div class="font-bold">\s*([^<]+)', preceding)
+        label=html.unescape(labels[-1]).strip() if labels else f"{version} beta"
+        candidates.append({"device": identifier, "name": name, "version": version, "label": label, "build": build, "url": url, "signed": None, "channel": "beta", "source": "ipswbeta.dev"})
+    return candidates
 
 def fetch(timeout: int, os_keys: set[str]) -> list[dict]:
     tracks = current_tracks(timeout)
@@ -64,4 +63,5 @@ def fetch(timeout: int, os_keys: set[str]) -> list[dict]:
         if track:
             jobs.extend((os_key, track, device) for device in devices_for_track(os_key, track, timeout))
     with ThreadPoolExecutor(max_workers=12) as pool:
-        return [row for row in pool.map(lambda item: candidate_for_device(item, timeout), jobs) if row]
+        rows=pool.map(lambda item: candidates_for_device(item, timeout), jobs)
+        return [candidate for device_rows in rows for candidate in device_rows]

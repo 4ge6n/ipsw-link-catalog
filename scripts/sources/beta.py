@@ -42,10 +42,10 @@ def fetch(timeout: int) -> list[dict]:
         # The fallback below remains subject to the same Apple-URL validation.
         primary=[]
     supported={"ios", "ipados", "macos", "tvos", "visionos"}
-    covered={os_key_for(row["device"]) for row in primary}
-    missing=supported-covered
     try:
-        fallback=ipswbeta.fetch(timeout, missing) if missing else []
+        # This is a fallback for missing links and also supplements the primary
+        # source with each publicly listed beta build, not only the newest RC.
+        fallback=ipswbeta.fetch(timeout, supported)
     except Exception:
         fallback=[]
     if not primary and not fallback:
