@@ -5,8 +5,8 @@ Stable JSON indexes of Apple restore-image URLs. IPSW files are never stored in 
 <!-- AUTO-GENERATED:START -->
 ## Catalog status
 
-Last successful update (UTC): `2026-09-12T11:46:45Z`
-Last successful update (Asia/Tokyo): `2026-09-12T20:46:45+09:00`
+Last successful update (UTC): `2026-09-12T11:53:06Z`
+Last successful update (Asia/Tokyo): `2026-09-12T20:53:06+09:00`
 
 ### Endpoints
 
