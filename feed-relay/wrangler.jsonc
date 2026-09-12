@@ -1,0 +1,11 @@
+{
+  "name": "ipsw-link-catalog-feed-relay",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-12",
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "vars": { "GITHUB_REPOSITORY": "4ge6n/ipsw-link-catalog" },
+  "durable_objects": {
+    "bindings": [{ "name": "FEED_STATE", "class_name": "FeedState" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["FeedState"] }]
+}

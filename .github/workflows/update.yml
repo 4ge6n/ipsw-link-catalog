@@ -1,9 +1,5 @@
 name: Update IPSW catalog
 on:
-  schedule:
-    # GitHub Actions schedules are best-effort, but this is the smallest
-    # supported polling interval for public firmware sources.
-    - cron: '*/5 * * * *'
   workflow_dispatch:
   repository_dispatch:
     types: [firmware_release]
