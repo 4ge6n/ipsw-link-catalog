@@ -81,8 +81,16 @@ def all_index(records, os_key, channel, now):
     # all.json keeps unsigned history too, so rebuild from every canonical record.
     doc["releases"]=[]
     source_records=(x for x in records if x["os_key"] == os_key and x["channel"] == channel)
+    seen_urls=set()
     for r in sorted(source_records, key=release_sort, reverse=True):
-        fws=[{"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}-{f['devices'][0]}", "name": f["name"], "devices": f["devices"], "filename": f["filename"], "url": f["url"], "signed": f["signing"]["status"] == "signed"} for f in r["firmwares"]]
+        # Multiple public beta indexes sometimes describe one Apple file with
+        # conflicting labels. Publish the direct URL once, in the newest
+        # canonical record, rather than rejecting the complete update.
+        fws=[]
+        for f in r["firmwares"]:
+            if f["url"] in seen_urls: continue
+            seen_urls.add(f["url"])
+            fws.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}-{f['devices'][0]}", "name": f["name"], "devices": f["devices"], "filename": f["filename"], "url": f["url"], "signed": f["signing"]["status"] == "signed"})
         doc["releases"].append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}", "version": r["version"], "build": r["build"], "released_at": r.get("released_at"), "signed_firmware_count": sum(f["signed"] for f in fws), "total_firmware_count": len(fws), "data": f"{r['version_label']}/{r['build']}.json", "firmwares": fws})
     doc["release_count"], doc["firmware_count"] = len(doc["releases"]), sum(len(x["firmwares"]) for x in doc["releases"])
     return doc

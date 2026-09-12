@@ -43,3 +43,11 @@ class CatalogTests(unittest.TestCase):
         page=' '.join(f'href="/ipados/{major}.x/"' for major in (10, 27, 18, 10))
         with patch("scripts.sources.ipswbeta.get_text", return_value=page):
             self.assertEqual(tracks_for_os("ipados", 1), ["27.x", "18.x", "10.x"])
+    def test_beta_all_index_deduplicates_reused_apple_url(self):
+        rows=[
+            {"device":"iPad13,1","name":"iPad","version":"27.0 beta 1","build":"24A1","url":"https://updates.cdn-apple.com/shared.ipsw","signed":None,"channel":"beta"},
+            {"device":"iPad13,1","name":"iPad","version":"27.0 beta 2","build":"24A2","url":"https://updates.cdn-apple.com/shared.ipsw","signed":None,"channel":"beta"},
+        ]
+        observed,_=normalize_candidates(rows, SETTINGS, "2026-09-12T00:00:00Z")
+        document=all_index(merge([], observed, "2026-09-12T00:00:00Z"), "ipados", "beta", "2026-09-12T00:00:00Z")
+        self.assertEqual(sum(len(release["firmwares"]) for release in document["releases"]), 1)
