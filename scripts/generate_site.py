@@ -2,6 +2,7 @@
 from __future__ import annotations
 import html
 import json
+import re
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
@@ -13,6 +14,18 @@ def write(path: Path, title: str, body: str):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(f"<!doctype html><html lang='en'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>{html.escape(title)}</title><style>{STYLE}</style><body>{body}</body></html>\n")
 def link(href: str, text: str) -> str: return f"<a href='{html.escape(href, quote=True)}'>{html.escape(text)}</a>"
+def display_version(release: dict) -> str:
+    """Turn URL-safe beta labels into the names people expect to see."""
+    label=release["data"].rsplit("/", 1)[0]
+    match=re.fullmatch(r"(.+?)-(public-)?beta(?:-(\d+))?", label)
+    if match:
+        number, public, sequence=match.groups()
+        return f"{number} {'Public ' if public else ''}Beta" + (f" {sequence}" if sequence else "")
+    match=re.fullmatch(r"(.+?)-rc(?:-(\d+))?", label)
+    if match:
+        number, sequence=match.groups()
+        return f"{number} RC" + (f" {sequence}" if sequence else "")
+    return release["version"]
 def release_time(value: str | None) -> str:
     if not value:
         return "Release time: unknown (the source did not publish a time)"
@@ -29,7 +42,7 @@ def firmware_table(release: dict) -> str:
         rows.append(f"<tr><td>{html.escape(fw['name'])}</td><td><code>{devices}</code></td><td>{link(fw['url'], fw['filename'])}</td><td>{'Signed' if fw['signed'] else 'Not signed'}</td></tr>")
     return "<table><thead><tr><th>Device</th><th>Identifiers</th><th>Apple download</th><th>Status</th></tr></thead><tbody>" + "".join(rows) + "</tbody></table>"
 def release_list_item(release: dict, href: str) -> str:
-    return f"<li>{link(href, release['version']+' ('+release['build']+')')} — {len(release['firmwares'])} download link(s)</li>"
+    return f"<li>{link(href, display_version(release)+' ('+release['build']+')')} — {len(release['firmwares'])} download link(s)</li>"
 def generate(api: Path, output: Path):
     if output.exists(): shutil.rmtree(output)
     release_meta=json.loads((api/"ios"/"release"/"all.json").read_text())
@@ -47,8 +60,9 @@ def generate(api: Path, output: Path):
             channel_page=[f"<p>{link('../', '← '+OS_NAMES[os_key])}</p><h1>{OS_NAMES[os_key]} {channel.title()}</h1>{latest_link}<ul>"]
             for release in document["releases"]:
                 href=f"{release['data'].removesuffix('.json')}/"
-                page=f"<p>{link('../../', '← '+channel.title()+' list')}</p><h1>{OS_NAMES[os_key]} {channel.title()} {html.escape(release['version'])} ({html.escape(release['build'])})</h1><p class='meta'>{release_time(release.get('released_at'))}</p>"+firmware_table(release)
-                write(output/os_key/channel/release["data"].removesuffix(".json")/"index.html", f"{OS_NAMES[os_key]} {release['version']} ({release['build']})", page)
+                shown_version=display_version(release)
+                page=f"<p>{link('../../', '← '+channel.title()+' list')}</p><h1>{OS_NAMES[os_key]} {channel.title()} {html.escape(shown_version)} ({html.escape(release['build'])})</h1><p class='meta'>{release_time(release.get('released_at'))}</p>"+firmware_table(release)
+                write(output/os_key/channel/release["data"].removesuffix(".json")/"index.html", f"{OS_NAMES[os_key]} {shown_version} ({release['build']})", page)
             # Both channels are navigated by OS major version.  Release keeps
             # its separate Latest view, while beta intentionally has no such
             # endpoint because several candidates may coexist.

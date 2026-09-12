@@ -6,6 +6,7 @@ from scripts.organize import all_index, normalize_candidates, merge, index
 from scripts.sources import ipswbeta
 from scripts.sources.ipswbeta import FILENAME, tracks_for_os
 from scripts.sources.beta import url_for_device
+from scripts.generate_site import display_version
 
 SETTINGS={"allowed_cdn_hosts":["updates.cdn-apple.com"], "include_unknown_beta_signing":True}
 class CatalogTests(unittest.TestCase):
@@ -64,3 +65,6 @@ class CatalogTests(unittest.TestCase):
         with patch("scripts.sources.ipswbeta.get_text", return_value='<div class="font-bold">10.1 beta</div> data-url="https://updates.cdn-apple.com/iPad3,4_10.1_14B1_Restore.ipsw"'):
             row=ipswbeta.candidates_for_device(("ios", "10.x", "iPad3,4"), 1)[0]
         self.assertEqual(row["os_key"], "ios")
+    def test_beta_labels_are_human_readable_on_pages(self):
+        self.assertEqual(display_version({"version":"27.0", "data":"27.0-beta-2/24A.json"}), "27.0 Beta 2")
+        self.assertEqual(display_version({"version":"27.0", "data":"27.0-rc/24A.json"}), "27.0 RC")
