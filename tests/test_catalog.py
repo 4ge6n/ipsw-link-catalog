@@ -6,7 +6,7 @@ from scripts.organize import all_index, normalize_candidates, merge, index
 from scripts.sources import ipswbeta
 from scripts.sources.ipswbeta import FILENAME, tracks_for_os
 from scripts.sources.beta import url_for_device
-from scripts.generate_site import display_version
+from scripts.generate_site import beta_release_order, display_version
 
 SETTINGS={"allowed_cdn_hosts":["updates.cdn-apple.com"], "include_unknown_beta_signing":True}
 class CatalogTests(unittest.TestCase):
@@ -68,3 +68,10 @@ class CatalogTests(unittest.TestCase):
     def test_beta_labels_are_human_readable_on_pages(self):
         self.assertEqual(display_version({"version":"27.0", "data":"27.0-beta-2/24A.json"}), "27.0 Beta 2")
         self.assertEqual(display_version({"version":"27.0", "data":"27.0-rc/24A.json"}), "27.0 RC")
+    def test_beta_pages_follow_release_sequence(self):
+        releases=[
+            {"version":"27.0", "data":"27.0-rc/24A435.json", "build":"24A435"},
+            {"version":"27.0", "data":"27.0-beta-2/24A5370H.json", "build":"24A5370H"},
+            {"version":"27.0", "data":"27.0-beta/24A5355Q.json", "build":"24A5355Q"},
+        ]
+        self.assertEqual([release["data"] for release in sorted(releases, key=beta_release_order)], ["27.0-beta/24A5355Q.json", "27.0-beta-2/24A5370H.json", "27.0-rc/24A435.json"])

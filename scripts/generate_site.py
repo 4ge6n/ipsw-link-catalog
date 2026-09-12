@@ -26,6 +26,14 @@ def display_version(release: dict) -> str:
         number, sequence=match.groups()
         return f"{number} RC" + (f" {sequence}" if sequence else "")
     return release["version"]
+def beta_release_order(release: dict) -> tuple:
+    """Order beta pages by their release sequence, not lexical build ID."""
+    label=release["data"].rsplit("/", 1)[0]
+    beta=re.fullmatch(r".+?-(?:public-)?beta(?:-(\d+))?", label)
+    rc=re.fullmatch(r".+?-rc(?:-(\d+))?", label)
+    phase, sequence=(0, int(beta.group(1) or 1)) if beta else ((1, int(rc.group(1) or 1)) if rc else (2, 0))
+    version=tuple(int(part) for part in release["version"].split("."))
+    return version, phase, sequence, release["build"]
 def release_time(value: str | None) -> str:
     if not value:
         return "Release time: unknown (the source did not publish a time)"
@@ -73,7 +81,7 @@ def generate(api: Path, output: Path):
                     groups.setdefault(major, []).append(release)
                 channel_page=[f"<p>{link('../', '← '+OS_NAMES[os_key])}</p><h1>{OS_NAMES[os_key]} {channel.title()}</h1>{latest_link}<p>Select a major version.</p><ul>"]
                 for major in sorted(groups, key=lambda value: int(value) if value.isdigit() else -1, reverse=True):
-                    releases=groups[major]
+                    releases=sorted(groups[major], key=beta_release_order) if channel == "beta" else groups[major]
                     kind="beta/RC build(s)" if channel == "beta" else "release build(s)"
                     channel_page.append(f"<li>{link(major+'/', major+'.x')} — {len(releases)} {kind}</li>")
                     major_title = f"{OS_NAMES[os_key]} {major}.x beta / RC" if channel == "beta" else f"{OS_NAMES[os_key]} {major}.x Release"
