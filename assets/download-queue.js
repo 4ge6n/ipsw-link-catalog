@@ -27,5 +27,13 @@
     openNext();
   });
   controls.querySelector("[data-download-queue-next]").addEventListener("click", openNext);
+  controls.querySelector("[data-download-queue-select-all]").addEventListener("click", () => {
+    document.querySelectorAll(".download-queue-item").forEach((item) => { item.checked = true; });
+    status.textContent = "All files on this page are selected.";
+  });
+  controls.querySelector("[data-download-queue-clear]").addEventListener("click", () => {
+    document.querySelectorAll(".download-queue-item").forEach((item) => { item.checked = false; });
+    status.textContent = "Selection cleared.";
+  });
   describe(read());
 })();

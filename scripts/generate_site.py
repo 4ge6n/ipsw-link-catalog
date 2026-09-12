@@ -50,10 +50,10 @@ def firmware_table(release: dict) -> str:
     rows=[]
     for fw in release["firmwares"]:
         devices="<br>".join(html.escape(x) for x in fw["devices"])
-        queue=f"<label><input class='download-queue-item' type='checkbox' data-url='{html.escape(fw['url'], quote=True)}' data-name='{html.escape(fw['filename'], quote=True)}'> Add to download queue</label>"
-        rows.append(f"<tr><td>{html.escape(fw['name'])}</td><td><code>{devices}</code></td><td>{link(fw['url'], fw['filename'])}{queue}</td><td>{'Signed' if fw['signed'] else 'Not signed'}</td></tr>")
-    controls="<section class='download-queue'><strong>Sequential download queue</strong><p class='meta'>Select files, then open one download at a time. After saving a file in Safari, return here and open the next one.</p><button type='button' data-download-queue-start>Start selected downloads</button> <button type='button' data-download-queue-next>Open next download</button><p class='meta' data-download-queue-status></p></section>"
-    return controls + "<table><thead><tr><th>Device</th><th>Identifiers</th><th>Apple download</th><th>Status</th></tr></thead><tbody>" + "".join(rows) + "</tbody></table>"
+        queue=f"<input class='download-queue-item' type='checkbox' aria-label='Select {html.escape(fw['filename'], quote=True)}' data-url='{html.escape(fw['url'], quote=True)}' data-name='{html.escape(fw['filename'], quote=True)}'>"
+        rows.append(f"<tr><td>{queue}</td><td>{html.escape(fw['name'])}</td><td><code>{devices}</code></td><td>{link(fw['url'], fw['filename'])}</td><td>{'Signed' if fw['signed'] else 'Not signed'}</td></tr>")
+    controls="<section class='download-queue'><strong>Sequential download queue</strong><p class='meta'>Select files, then open one download at a time. After saving a file in Safari, return here and open the next one.</p><button type='button' data-download-queue-select-all>Select all</button> <button type='button' data-download-queue-clear>Clear selection</button> <button type='button' data-download-queue-start>Start selected downloads</button> <button type='button' data-download-queue-next>Open next download</button><p class='meta' data-download-queue-status></p></section>"
+    return controls + "<table><thead><tr><th>Select</th><th>Device</th><th>Identifiers</th><th>Apple download</th><th>Status</th></tr></thead><tbody>" + "".join(rows) + "</tbody></table>"
 def release_list_item(release: dict, href: str) -> str:
     return f"<li>{link(href, display_version(release)+' ('+release['build']+')')} — {len(release['firmwares'])} download link(s)</li>"
 def generate(api: Path, output: Path):
