@@ -8,8 +8,8 @@ export LC_ALL=C
 CATALOG_BASE="${CATALOG_BASE:-https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api}"
 DESTINATION_BASE="${DESTINATION_BASE:-/Volumes/IPSW}"
 CHANNEL="${CHANNEL:-release}" # release only; beta has no latest endpoint
-MAX_CONCURRENT="${MAX_CONCURRENT:-4}"
-DRY_RUN="${DRY_RUN:-0}" # 1 = validate and list downloads without saving IPSWs
+MAX_CONCURRENT="${MAX_CONCURRENT:-6}"
+DRY_RUN="${DRY_RUN:-0}" # 1 = verify links and list downloads without saving IPSWs
 MAX_RETRY="${MAX_RETRY:-3}"
 VERIFY_ALL="${VERIFY_ALL:-1}"
 VERIFY_ARCHIVE="${VERIFY_ARCHIVE:-1}" # validate IPSW ZIP structure and CRCs
@@ -70,10 +70,32 @@ verify_firmware() {
 # Resolve Content-Length from Apple's CDN just before downloading and retain it
 # in the local manifest for future integrity checks.
 get_remote_size() {
-  local url="$1" size
-  size=$(curl --fail --silent --show-error --location --head \
-    --retry 2 --connect-timeout 20 --max-time 90 "$url" 2>/dev/null \
-    | awk '{value=$2; gsub("\\r", "", value); if (tolower($1) == "content-length:" && value ~ /^[0-9]+$/) v=value} END {print v}') || return 1
+  local url="$1" headers size
+  # Some Apple CDN edges reject HEAD or omit Content-Length.  Try HEAD first
+  # (no response body), then ask for exactly one byte and read Content-Range.
+  headers=$(curl --fail --silent --show-error --location --head \
+    --retry 2 --connect-timeout 20 --max-time 90 "$url" 2>/dev/null) || headers=""
+  size=$(printf '%s\n' "$headers" | awk '
+    { value=$2; gsub("\\r", "", value) }
+    tolower($1) == "content-length:" && value ~ /^[0-9]+$/ { result=value }
+    END { print result }
+  ')
+  if [[ ! "$size" =~ ^[1-9][0-9]*$ ]]; then
+    headers=$(curl --fail --silent --show-error --location --range 0-0 \
+      --dump-header - --output /dev/null --retry 2 --connect-timeout 20 --max-time 90 \
+      "$url" 2>/dev/null) || return 1
+    size=$(printf '%s\n' "$headers" | awk '
+      {
+        line=$0; gsub("\\r", "", line)
+        if (tolower($1) == "content-length:" && $2 ~ /^[1-9][0-9]*$/) result=$2
+        if (tolower($1) == "content-range:") {
+          sub(/^.*\//, "", line)
+          if (line ~ /^[1-9][0-9]*$/) result=line
+        }
+      }
+      END { print result }
+    ')
+  fi
   [[ "$size" =~ ^[1-9][0-9]*$ ]] || return 1
   printf '%s\n' "$size"
 }
@@ -217,17 +239,21 @@ download_one() {
   local folder directory destination partial expected try actual
   folder=$(destination_for_firmware "$os" "$filename") || return 1
   directory="$DESTINATION_BASE/$folder"; destination="$directory/$filename"
+  expected=$(manifest_get_size "$os" "$version" "$build" "$filename")
+  if [[ ! "$expected" =~ ^[1-9][0-9]*$ ]]; then
+    log "Checking remote size: $filename"
+    expected=$(get_remote_size "$url" 2>/dev/null || true)
+  fi
   if [[ "$DRY_RUN" == 1 ]]; then
-    log "DRY RUN: $os $version ($build) — $filename"
-    log "  $url"
+    if [[ "$expected" =~ ^[1-9][0-9]*$ ]]; then
+      log "DRY RUN OK: $os $version ($build) — $filename (${expected} bytes)"
+    else
+      log "DRY RUN FAILED: cannot reach or size $filename"
+      record_result failed "$os" "$version" "$build" "$devices" 0 "$url" "$filename"
+    fi
     return 0
   fi
   mkdir -p "$directory"; partial="$destination.part"
-  expected=$(manifest_get_size "$os" "$version" "$build" "$filename")
-  if [[ ! "$expected" =~ ^[1-9][0-9]*$ ]]; then
-    log "HEAD size: $filename"
-    expected=$(get_remote_size "$url" 2>/dev/null || true)
-  fi
   if [[ ! "$expected" =~ ^[1-9][0-9]*$ ]]; then
     log "FAILED: cannot determine expected size: $filename"
     record_result failed "$os" "$version" "$build" "$devices" 0 "$url" "$filename"
