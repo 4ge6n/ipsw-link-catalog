@@ -12,6 +12,7 @@ MAX_CONCURRENT="${MAX_CONCURRENT:-4}"
 DRY_RUN="${DRY_RUN:-0}" # 1 = validate and list downloads without saving IPSWs
 MAX_RETRY="${MAX_RETRY:-3}"
 VERIFY_ALL="${VERIFY_ALL:-1}"
+VERIFY_ARCHIVE="${VERIFY_ARCHIVE:-1}" # validate IPSW ZIP structure and CRCs
 # Set to 1 only when old IPSWs in the same device-family and major version
 # should be removed after a verified replacement has been downloaded.
 REMOVE_OLDER="${REMOVE_OLDER:-0}"
@@ -23,7 +24,9 @@ LOCK_PID_FILE="$LOCK_DIR/pid"
 MANIFEST="$WORK_DIR/manifest.tsv"
 SUCCESSFUL="$WORK_DIR/successful.tsv"
 FAILED="$WORK_DIR/failed.tsv"
-RESULTS_DIR="$WORK_DIR/results"
+# Per-run directory prevents old success/failure records from contaminating a
+# later invocation, even after an interrupted process.
+RESULTS_DIR="$WORK_DIR/results.$$"
 
 # This downloader intentionally handles only iPhone, iPad, and iPod restores.
 ENABLE_IOS="${ENABLE_IOS:-1}"
@@ -53,6 +56,15 @@ verify_file_size() {
   [[ "$actual" == "$2" ]]
 }
 
+verify_archive() {
+  [[ "$VERIFY_ARCHIVE" == 1 ]] || return 0
+  unzip -tqq "$1" >/dev/null 2>&1
+}
+
+verify_firmware() {
+  verify_file_size "$1" "$2" && verify_archive "$1"
+}
+
 # The catalog deliberately does not need to store a duplicate file-size index.
 # Resolve Content-Length from Apple's CDN just before downloading and retain it
 # in the local manifest for future integrity checks.
@@ -73,7 +85,7 @@ manifest_get_size() {
 
 record_result() {
   local kind="$1" os="$2" version="$3" build="$4" devices="$5" size="$6" url="$7" filename="$8" result
-  result=$(mktemp "$RESULTS_DIR/$kind.XXXXXX.tsv") || return 1
+  result=$(mktemp "$RESULTS_DIR/$kind.XXXXXX") || return 1
   printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$os" "$version" "$build" "$devices" "$size" "$url" "$filename" \
     > "$result"
 }
@@ -102,10 +114,12 @@ firmware_version() {
 [[ "$CHANNEL" == release || "$CHANNEL" == beta ]] || die "CHANNEL must be release or beta"
 [[ "$MAX_CONCURRENT" =~ ^[1-9][0-9]*$ ]] || die "MAX_CONCURRENT must be a positive integer"
 [[ "$MAX_RETRY" =~ ^[1-9][0-9]*$ ]] || die "MAX_RETRY must be a positive integer"
+[[ "$VERIFY_ARCHIVE" == 0 || "$VERIFY_ARCHIVE" == 1 ]] || die "VERIFY_ARCHIVE must be 0 or 1"
 [[ -d "$DESTINATION_BASE" ]] || die "Destination does not exist: $DESTINATION_BASE"
 command -v curl >/dev/null || die "curl is required"
 command -v osascript >/dev/null || die "osascript is required"
 command -v mktemp >/dev/null || die "mktemp is required"
+[[ "$VERIFY_ARCHIVE" == 0 ]] || command -v unzip >/dev/null || die "unzip is required when VERIFY_ARCHIVE=1"
 mkdir -p "$WORK_DIR"
 touch "$LOG"
 if [[ -d "$LOCK_DIR" ]]; then
@@ -124,10 +138,13 @@ cleanup_lock() {
   [[ -f "$LOCK_PID_FILE" ]] || return 0
   [[ "$(cat "$LOCK_PID_FILE" 2>/dev/null || true)" == "$$" ]] && rm -rf "$LOCK_DIR"
 }
+stop_jobs() {
+  for pid in ${RUNNING_PIDS:-}; do kill "$pid" 2>/dev/null || true; done
+}
 trap cleanup_lock EXIT
-trap 'exit 130' INT
-trap 'exit 143' TERM
-trap 'exit 129' HUP
+trap 'stop_jobs; exit 130' INT
+trap 'stop_jobs; exit 143' TERM
+trap 'stop_jobs; exit 129' HUP
 : > "$QUEUE"
 : > "$SUCCESSFUL"
 : > "$FAILED"
@@ -154,13 +171,15 @@ JXA
 }
 
 collect_os() {
-  local os enabled json tmp
-  os="$1"; enabled="$2"; json="$WORK_DIR/$os-$CHANNEL.json"; tmp="$json.tmp"
+  local os enabled json tmp parsed
+  os="$1"; enabled="$2"; json="$WORK_DIR/$os-$CHANNEL.json"; tmp="$json.tmp"; parsed="$json.tsv"
   [[ "$enabled" == 1 ]] || return 0
   log "Checking $os/$CHANNEL latest"
   curl --fail --silent --show-error --location --retry 3 --connect-timeout 20 --max-time 90 \
-    "$CATALOG_BASE/$os/$CHANNEL/latest.json" -o "$tmp" || { rm -f "$tmp"; log "WARNING: catalog unavailable for $os"; return 0; }
+    --user-agent "ipsw-link-catalog-downloader/1.0" \
+    "$CATALOG_BASE/$os/$CHANNEL/latest.json" -o "$tmp" || { rm -f "$tmp"; die "catalog unavailable for $os"; }
   mv "$tmp" "$json"
+  parse_latest "$json" > "$parsed" || die "invalid catalog JSON for $os"
   while IFS=$'\t' read -r version build name devices filename url signed; do
     [[ "$signed" == true || "$CHANNEL" == beta ]] || continue
     [[ "$url" =~ ^https://(updates\.cdn-apple\.com|secure-appldnld\.apple\.com|appldnld\.apple\.com)/.*\.ipsw$ ]] || { log "WARNING: rejected URL for $filename"; continue; }
@@ -168,9 +187,10 @@ collect_os() {
       ios:iPhone*_Restore.ipsw|ios:iPod*_Restore.ipsw|ipados:iPad*_Restore.ipsw) ;;
       *) continue ;;
     esac
-    [[ -n "$filename" && -n "$version" && -n "$build" ]] || continue
+    [[ "$filename" =~ ^[A-Za-z0-9,._+-]+_Restore\.ipsw$ ]] || { log "WARNING: rejected filename: $filename"; continue; }
+    [[ -n "$version" && -n "$build" ]] || continue
     printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$os" "$version" "$build" "$name" "$devices" "$filename" "$url" >> "$QUEUE"
-  done < <(parse_latest "$json")
+  done < "$parsed"
 }
 
 collect_os ios "$ENABLE_IOS"
@@ -198,7 +218,7 @@ download_one() {
     record_result failed "$os" "$version" "$build" "$devices" 0 "$url" "$filename"
     return 0
   fi
-  if [[ -f "$destination" ]] && verify_file_size "$destination" "$expected"; then
+  if [[ -f "$destination" ]] && verify_firmware "$destination" "$expected"; then
     log "SKIP verified existing: $filename"
     return 0
   elif [[ -f "$destination" ]]; then
@@ -208,8 +228,10 @@ download_one() {
   try=1
   while [[ "$try" -le "$MAX_RETRY" ]]; do
     log "TRY $try/$MAX_RETRY: $filename"
-    if curl --fail --show-error --location --retry 2 --retry-delay 3 --continue-at - --output "$partial" "$url"; then
-      if verify_file_size "$partial" "$expected" && mv "$partial" "$destination"; then
+    if curl --fail --show-error --location --retry 2 --retry-delay 3 --continue-at - \
+      --connect-timeout 30 --speed-limit 1024 --speed-time 120 \
+      --user-agent "ipsw-link-catalog-downloader/1.0" --output "$partial" "$url"; then
+      if verify_firmware "$partial" "$expected" && mv "$partial" "$destination"; then
         log "DOWNLOAD OK: $filename"
         record_result successful "$os" "$version" "$build" "$devices" "$expected" "$url" "$filename"
         return 0
@@ -219,6 +241,13 @@ download_one() {
       rm -f "$partial"
     else
       log "CURL ERROR: $filename"
+      # A connection can drop after the complete body was written.  Accept it
+      # only after the same full size and archive validation used on success.
+      if verify_firmware "$partial" "$expected" && mv "$partial" "$destination"; then
+        log "DOWNLOAD OK after interrupted response: $filename"
+        record_result successful "$os" "$version" "$build" "$devices" "$expected" "$url" "$filename"
+        return 0
+      fi
     fi
     try=$((try + 1))
     sleep 3
@@ -228,15 +257,17 @@ download_one() {
   return 0
 }
 
+RUNNING_PIDS=""
 while IFS=$'\t' read -r os version build name devices filename url; do
   # macOS ships Bash 3.2, which does not support `wait -n`.
   while [[ "$(jobs -pr | wc -l | tr -d ' ')" -ge "$MAX_CONCURRENT" ]]; do sleep 1; done
   download_one "$os" "$version" "$build" "$name" "$devices" "$filename" "$url" &
+  RUNNING_PIDS="$RUNNING_PIDS $!"
 done < <(sort -u -t $'\t' -k6,6 "$QUEUE")
 wait
 
-for result in "$RESULTS_DIR"/successful.*.tsv; do [[ -f "$result" ]] && cat "$result" >> "$SUCCESSFUL"; done
-for result in "$RESULTS_DIR"/failed.*.tsv; do [[ -f "$result" ]] && cat "$result" >> "$FAILED"; done
+for result in "$RESULTS_DIR"/successful.*; do [[ -f "$result" ]] && cat "$result" >> "$SUCCESSFUL"; done
+for result in "$RESULTS_DIR"/failed.*; do [[ -f "$result" ]] && cat "$result" >> "$FAILED"; done
 
 if [[ -s "$SUCCESSFUL" ]]; then
   manifest_tmp="$WORK_DIR/manifest.new.$$.tsv"
@@ -276,7 +307,7 @@ if [[ "$VERIFY_ALL" == 1 && "$DRY_RUN" != 1 ]]; then
   while IFS=$'\t' read -r os version build devices size url filename; do
     folder=$(destination_for_firmware "$os" "$filename" 2>/dev/null || true)
     [[ -n "$folder" ]] || continue
-    if [[ ! -f "$DESTINATION_BASE/$folder/$filename" ]] || ! verify_file_size "$DESTINATION_BASE/$folder/$filename" "$size"; then
+    if [[ ! -f "$DESTINATION_BASE/$folder/$filename" ]] || ! verify_firmware "$DESTINATION_BASE/$folder/$filename" "$size"; then
       log "VERIFY ERROR: $filename"
       verify_error=1
     fi
