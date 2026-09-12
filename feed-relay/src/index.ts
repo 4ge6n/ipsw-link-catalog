@@ -7,10 +7,12 @@ interface Env {
 }
 
 const SOURCES = [
+  { name: "Apple Developer Releases RSS", url: "https://developer.apple.com/news/releases/rss/releases.rss", select: (body: string) => body },
   { name: "ipsw.me RSS", url: "https://ipsw.me/timeline.rss", select: (body: string) => body },
   { name: "ipsw.dev beta", url: "https://www.ipsw.dev/", select: (body: string) => [...body.matchAll(/href="\/build\/([A-Za-z0-9]+)".*?<h3[^>]*>([^<]+)/gs)].map((m) => `${m[1]}:${m[2].trim()}`).join("\n") },
   { name: "ipswbeta.dev", url: "https://ipswbeta.dev/", select: (body: string) => [...body.matchAll(/href="\/(ios|ipados|macos|tvos|visionos)\/([0-9]+\.x)\//g)].map((m) => `${m[1]}:${m[2]}`).sort().join("\n") },
 ];
+const FINGERPRINT_SCHEMA = 2;
 
 async function digest(value: string): Promise<string> {
   const bytes = new TextEncoder().encode(value);
@@ -31,8 +33,10 @@ export class FeedState extends DurableObject<Env> {
   async check(): Promise<{ changed: boolean; initial: boolean }> {
     const current = await fingerprint();
     const previous = await this.ctx.storage.get<string>("fingerprint");
-    if (!previous) {
+    const previousSchema = await this.ctx.storage.get<number>("fingerprint_schema");
+    if (!previous || previousSchema !== FINGERPRINT_SCHEMA) {
       await this.ctx.storage.put("fingerprint", current.value);
+      await this.ctx.storage.put("fingerprint_schema", FINGERPRINT_SCHEMA);
       await this.ctx.storage.put("checked_at", new Date().toISOString());
       return { changed: false, initial: true };
     }
