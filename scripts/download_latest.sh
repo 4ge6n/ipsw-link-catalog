@@ -9,6 +9,7 @@ CATALOG_BASE="${CATALOG_BASE:-https://raw.githubusercontent.com/4ge6n/ipsw-link-
 DESTINATION_BASE="${DESTINATION_BASE:-/Volumes/IPSW}"
 CHANNEL="${CHANNEL:-release}" # release or beta
 MAX_CONCURRENT="${MAX_CONCURRENT:-4}"
+DRY_RUN="${DRY_RUN:-0}" # 1 = validate and list downloads without saving IPSWs
 WORK_DIR="$DESTINATION_BASE/.ipsw-catalog-work"
 LOG="$WORK_DIR/download.log"
 QUEUE="$WORK_DIR/queue.tsv"
@@ -21,14 +22,17 @@ ENABLE_VISIONOS="${ENABLE_VISIONOS:-1}"
 ENABLE_AUDIOOS="${ENABLE_AUDIOOS:-1}"
 ENABLE_MACOS="${ENABLE_MACOS:-1}"
 
-declare -A DESTINATIONS=(
-  [ios]="iPhone Software Updates"
-  [ipados]="iPad Software Updates"
-  [tvos]="Apple TV Software Updates"
-  [visionos]="Apple Vision Pro Software Updates"
-  [audioos]="HomePod Software Updates"
-  [macos]="Mac Software Updates"
-)
+destination_for_os() {
+  case "$1" in
+    ios) printf '%s\n' 'iPhone Software Updates' ;;
+    ipados) printf '%s\n' 'iPad Software Updates' ;;
+    tvos) printf '%s\n' 'Apple TV Software Updates' ;;
+    visionos) printf '%s\n' 'Apple Vision Pro Software Updates' ;;
+    audioos) printf '%s\n' 'HomePod Software Updates' ;;
+    macos) printf '%s\n' 'Mac Software Updates' ;;
+    *) return 1 ;;
+  esac
+}
 
 log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG" >&2; }
 die() { log "FATAL: $*"; exit 1; }
@@ -51,15 +55,20 @@ const path=ObjC.unwrap($.NSProcessInfo.processInfo.arguments.lastObject);
 const text=$.NSString.stringWithContentsOfFileEncodingError(path,$.NSUTF8StringEncoding,null);
 if (!text) $.exit(2);
 let doc; try { doc=JSON.parse(ObjC.unwrap(text)); } catch (_) { $.exit(3); }
+function output(line) {
+  const data=$.NSString.stringWithString(line+'\n').dataUsingEncoding($.NSUTF8StringEncoding);
+  $.NSFileHandle.fileHandleWithStandardOutput.writeData(data);
+}
 for (const release of (doc.releases || [])) for (const fw of (release.firmwares || [])) {
   const clean=v=>String(v ?? '').replace(/[\t\r\n]/g,' ');
-  console.log([clean(release.version),clean(release.build),clean(fw.name),clean((fw.devices||[]).join(',')),clean(fw.filename),clean(fw.url),fw.signed?'true':'false'].join('\t'));
+  output([clean(release.version),clean(release.build),clean(fw.name),clean((fw.devices||[]).join(',')),clean(fw.filename),clean(fw.url),fw.signed?'true':'false'].join('\t'));
 }
 JXA
 }
 
 collect_os() {
-  local os="$1" enabled="$2" json="$WORK_DIR/$os-$CHANNEL.json" tmp="$json.tmp"
+  local os enabled json tmp
+  os="$1"; enabled="$2"; json="$WORK_DIR/$os-$CHANNEL.json"; tmp="$json.tmp"
   [[ "$enabled" == 1 ]] || return 0
   log "Checking $os/$CHANNEL latest"
   curl --fail --silent --show-error --location --retry 3 --connect-timeout 20 --max-time 90 \
@@ -83,7 +92,14 @@ collect_os macos "$ENABLE_MACOS"
 
 download_one() {
   local os="$1" version="$2" build="$3" name="$4" devices="$5" filename="$6" url="$7"
-  local directory="$DESTINATION_BASE/${DESTINATIONS[$os]}" destination="$DESTINATION_BASE/${DESTINATIONS[$os]}/$filename" partial
+  local folder directory destination partial
+  folder=$(destination_for_os "$os") || return 1
+  directory="$DESTINATION_BASE/$folder"; destination="$directory/$filename"
+  if [[ "$DRY_RUN" == 1 ]]; then
+    log "DRY RUN: $os $version ($build) — $filename"
+    log "  $url"
+    return 0
+  fi
   mkdir -p "$directory"; partial="$destination.part"
   if [[ -f "$destination" ]]; then log "SKIP existing: $filename"; return; fi
   log "DOWNLOAD: $os $version ($build) — $name [$devices]"
