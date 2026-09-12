@@ -29,14 +29,12 @@ def current_tracks(timeout: int) -> dict[str, str]:
     return {key: track for key, track in found}
 
 def tracks_for_os(os_key: str, timeout: int) -> list[str]:
-    """Return all public iOS beta eras (10.x onward), current track otherwise."""
-    if os_key == "ios":
-        page = get_text(f"{BASE}/ios/", timeout)
-        found=re.findall(r'href="/ios/([0-9]+\.x)/"', page)
-        # Numeric ordering keeps the request/commit output deterministic.
-        return sorted(set(found), key=lambda track: int(track.split(".", 1)[0]), reverse=True)
-    track=current_tracks(timeout).get(os_key)
-    return [track] if track else []
+    """Return every public beta era listed for an OS, newest first."""
+    path=PATHS[os_key]
+    page = get_text(f"{BASE}/{path}/", timeout)
+    found=re.findall(rf'href="/{re.escape(path)}/([0-9]+\.x)/"', page)
+    # Numeric ordering keeps the request/commit output deterministic.
+    return sorted(set(found), key=lambda track: int(track.split(".", 1)[0]), reverse=True)
 
 def devices_for_track(os_key: str, track: str, timeout: int) -> list[str]:
     path = PATHS[os_key]

@@ -38,8 +38,8 @@ class CatalogTests(unittest.TestCase):
         with patch("scripts.sources.beta.get_text", return_value='ipsw-button-down href="https://updates.cdn-apple.com/a.ipsw"'):
             row=url_for_device(("24A435", "iOS 27.0 RC", "iPhone18,5", "iPhone"), 1)
         self.assertEqual((row["version"], row["label"]), ("27.0", "27.0 RC"))
-    def test_ios_beta_tracks_include_historical_versions(self):
+    def test_beta_tracks_include_historical_versions(self):
         from unittest.mock import patch
-        page=' '.join(f'href="/ios/{major}.x/"' for major in (10, 27, 18, 10))
+        page=' '.join(f'href="/ipados/{major}.x/"' for major in (10, 27, 18, 10))
         with patch("scripts.sources.ipswbeta.get_text", return_value=page):
-            self.assertEqual(tracks_for_os("ios", 1), ["27.x", "18.x", "10.x"])
+            self.assertEqual(tracks_for_os("ipados", 1), ["27.x", "18.x", "10.x"])
