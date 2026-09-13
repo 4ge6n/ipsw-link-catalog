@@ -43,7 +43,6 @@
     catch { /* private mode: the queue simply does not survive the page */ }
     render(queue);
   };
-  const downloadAllLabel = "Download all";
   const announce = (message) => sections.forEach((section) => {
     section.querySelector("[data-download-queue-status]").textContent = message;
   });
@@ -70,31 +69,47 @@
     setTimeout(drop, 180);
   };
   let running = null;
-  const runAll = async () => {
+  const batchSize = (section) => {
+    const value = section.querySelector("[data-download-queue-batch]").value;
+    return value === "all" ? Infinity : Number(value);
+  };
+  const runBatch = async (section) => {
     if (running) { running.stop = true; return; }
     const state = { stop: false };
     running = state;
-    const buttons = sections.map((section) => section.querySelector("[data-download-queue-all]"));
+    const buttons = sections.map((s) => s.querySelector("[data-download-queue-all]"));
     buttons.forEach((button) => { button.textContent = "Stop"; });
     haptic([12, 40, 18]);
+    const limit = batchSize(section);
     let started = 0;
-    while (!state.stop) {
+    while (!state.stop && started < limit) {
       const queue = read();
       const next = queue.shift();
       if (!next) break;
       write(queue);
       openDownload(next);
       started += 1;
-      announce(`Downloading ${next.name} — ${queue.length} left. Keep this page open.`);
-      if (!queue.length) break;
+      announce(`Downloading ${next.name} — ${queue.length} still queued. Keep this page open.`);
+      if (!queue.length || started >= limit) break;
       // Browsers throttle bursts of downloads, so leave each one time to start.
       await new Promise((resolve) => setTimeout(resolve, 1500));
     }
-    if (state.stop) announce(`Stopped. ${read().length} file(s) still queued.`);
-    else announce(started ? `Started ${started} download(s). Check your browser's downloads.` : "No queued downloads.");
+    const left = read().length;
+    if (state.stop) announce(`Stopped. ${left} file(s) still queued.`);
+    else if (!started) announce("No queued downloads.");
+    else if (left) announce(`Started ${started} download(s). ${left} left — press Download again once these have finished.`);
+    else announce(`Started ${started} download(s). The queue is empty.`);
     running = null;
-    buttons.forEach((button) => { button.textContent = downloadAllLabel; });
+    refreshLabels();
   };
+  const refreshLabels = () => sections.forEach((section) => {
+    const button = section.querySelector("[data-download-queue-all]");
+    if (running) { button.textContent = "Stop"; return; }
+    const limit = batchSize(section);
+    const left = read().length;
+    const count = Math.min(limit, left || limit);
+    button.textContent = left > count ? `Download next ${count}` : "Download all";
+  });
   const openNext = () => {
     haptic([12, 40, 18]);
     const queue = read();
@@ -105,6 +120,7 @@
     announce(`Opened ${next.name}. After saving it, open the next download (${queue.length} remaining).`);
   };
   const render = (queue) => sections.forEach((section) => {
+    if (!iOS) section.querySelector("[data-download-queue-all]").textContent = running ? "Stop" : (queue.length > batchSize(section) ? `Download next ${batchSize(section)}` : "Download all");
     const count = section.querySelector("[data-download-queue-count]");
     const body = section.querySelector("[data-download-queue-panel-body]");
     count.textContent = queue.length ? ` (${queue.length})` : "";
@@ -164,12 +180,17 @@
     });
     section.querySelector("[data-download-queue-next]").addEventListener("click", openNext);
     const all = section.querySelector("[data-download-queue-all]");
-    all.textContent = downloadAllLabel;
+    const batch = section.querySelector("[data-download-queue-batch]");
     if (iOS) {
       // One tap per file is the only thing iOS reliably allows.
       all.hidden = true;
+      (batch.closest("label") || batch).hidden = true;
     } else {
-      all.addEventListener("click", runAll);
+      all.addEventListener("click", () => runBatch(section));
+      batch.addEventListener("change", () => {
+        sections.forEach((other) => { other.querySelector("[data-download-queue-batch]").value = batch.value; });
+        refreshLabels();
+      });
     }
     section.querySelector("[data-download-queue-reset]").addEventListener("click", () => {
       haptic([20, 60, 20]);
@@ -187,6 +208,7 @@
     });
   });
   render(read());
+  refreshLabels();
   // Another tab, or the Safari copy of this site, may have changed the queue.
   window.addEventListener("storage", (event) => { if (event.key === storageKey) render(read()); });
 })();
