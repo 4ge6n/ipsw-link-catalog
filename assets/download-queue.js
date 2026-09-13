@@ -122,7 +122,78 @@
   };
   // curl runs one URL at a time and resumes a partial file, which is what a
   // browser cannot do: it never learns when a cross-origin download finished.
-  const command = () => "cd ~/Downloads && xargs -n1 curl -fL -OC - < ipsw-queue.txt";
+  const destination = (section) => section.querySelector("[data-download-queue-dest]").value.trim() || "~/Downloads";
+  const parallel = (section) => section.querySelector("[data-download-queue-jobs]").value;
+  const shellQuote = (value) => value.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+  const script = (queue, dest, jobs) => [
+    "#!/bin/bash",
+    "# IPSW download queue exported from the IPSW link catalog.",
+    "# Usage: bash ipsw-queue.sh [destination] [parallel downloads]",
+    `#        defaults: ${dest}, ${jobs} at a time`,
+    "set -u",
+    `dest="\${1:-${shellQuote(dest)}}"`,
+    `jobs="\${2:-${jobs}}"`,
+    '# "~" does not expand inside quotes, so do it here.',
+    'case "$dest" in "~") dest="$HOME";; "~/"*) dest="$HOME/${dest#\\~/}";; esac',
+    'mkdir -p "$dest" || exit 1',
+    'cd "$dest" || exit 1',
+    "urls=(",
+    ...queue.map((entry) => `"${entry.url}"`),
+    ")",
+    "total=${#urls[@]}",
+    'work="$(mktemp -d)"',
+    "trap 'rm -rf \"$work\"' EXIT",
+    "",
+    "human() {",
+    "  awk -v bytes=\"$1\" 'BEGIN{ if (bytes <= 0) { printf \"unknown size\"; exit }",
+    "    split(\"B KiB MiB GiB TiB\", unit, \" \"); i = 1",
+    "    while (bytes >= 1024 && i < 5) { bytes /= 1024; i++ }",
+    "    printf \"%.1f %s\", bytes, unit[i] }'",
+    "}",
+    "",
+    "remote_size() {",
+    "  curl -sIL \"$1\" | awk 'tolower($1) == \"content-length:\" { size = $2 } END { printf \"%d\", size + 0 }'",
+    "}",
+    "",
+    "fetch() {",
+    '  index="$1"; url="$2"; name="${url##*/}"',
+    '  size="$(remote_size "$url")"',
+    `  printf '[%s/%s] %s (%s)\\n' "$index" "$total" "$name" "$(human "$size")"`,
+    '  started=$SECONDS',
+    "  # -C - resumes a partial file and leaves a complete one alone.",
+    '  if [ "$jobs" -le 1 ]; then',
+    '    curl -fL -OC - --retry 3 --retry-delay 5 --progress-bar "$url" || { echo "$name" >> "$work/failed"; return 1; }',
+    "  else",
+    '    curl -fL -OC - --retry 3 --retry-delay 5 -sS "$url" || { echo "$name" >> "$work/failed"; return 1; }',
+    "  fi",
+    '  echo "$name" >> "$work/done"',
+    `  printf '      finished %s in %ss (%s of %s complete)\\n' "$name" "$((SECONDS - started))" "$(wc -l < "$work/done" | tr -d " ")" "$total"`,
+    "}",
+    "",
+    'printf \'Downloading %s file(s) into %s, %s at a time.\\n\' "$total" "$dest" "$jobs"',
+    "index=0",
+    'for url in "${urls[@]}"; do',
+    "  index=$((index + 1))",
+    '  if [ "$jobs" -le 1 ]; then',
+    '    fetch "$index" "$url"',
+    "  else",
+    '    fetch "$index" "$url" &',
+    "    # Keep at most $jobs transfers running at once.",
+    '    while [ "$(jobs -pr | wc -l | tr -d " ")" -ge "$jobs" ]; do sleep 0.5; done',
+    "  fi",
+    "done",
+    "wait",
+    "",
+    'completed=0; [ -f "$work/done" ] && completed="$(wc -l < "$work/done" | tr -d " ")"',
+    'if [ -f "$work/failed" ]; then',
+    `  printf 'Finished %s of %s. Failed:\\n' "$completed" "$total" >&2`,
+    '  sed "s/^/  /" "$work/failed" >&2',
+    `  printf 'Run this script again to retry; finished files are left alone.\\n' >&2`,
+    "  exit 1",
+    "fi",
+    `printf 'Done: %s file(s) in %s\\n' "$completed" "$dest"`,
+  ].join("\n") + "\n";
+  const runCommand = () => "bash ~/Downloads/ipsw-queue.sh";
   const openNext = () => {
     haptic([12, 40, 18]);
     const queue = read();
@@ -205,20 +276,35 @@
         refreshLabels();
       });
     }
+    const dest = section.querySelector("[data-download-queue-dest]");
+    dest.addEventListener("input", () => sections.forEach((other) => {
+      other.querySelector("[data-download-queue-dest]").value = dest.value;
+    }));
+    const jobs = section.querySelector("[data-download-queue-jobs]");
+    jobs.addEventListener("change", () => sections.forEach((other) => {
+      other.querySelector("[data-download-queue-jobs]").value = jobs.value;
+    }));
     section.querySelector("[data-download-queue-export]").addEventListener("click", () => {
       const queue = read();
       if (!queue.length) { announce("The queue is empty."); return; }
       haptic(10);
+      saveText("ipsw-queue.sh", script(queue, destination(section), parallel(section)));
+      announce(`Saved ipsw-queue.sh: ${queue.length} file(s) into ${destination(section)}, ${parallel(section)} at a time. Run: ${runCommand()}`);
+    });
+    section.querySelector("[data-download-queue-list]").addEventListener("click", () => {
+      const queue = read();
+      if (!queue.length) { announce("The queue is empty."); return; }
+      haptic(10);
       saveText("ipsw-queue.txt", queue.map((entry) => entry.url).join("\n") + "\n");
-      announce(`Saved ipsw-queue.txt with ${queue.length} URL(s). Run: ${command()}`);
+      announce(`Saved ipsw-queue.txt with ${queue.length} URL(s), for aria2c or wget.`);
     });
     section.querySelector("[data-download-queue-copy]").addEventListener("click", async () => {
       haptic(10);
       try {
-        await navigator.clipboard.writeText(command());
-        announce(`Command copied. Save the list first, then run it where the files should land.`);
+        await navigator.clipboard.writeText(runCommand());
+        announce("Command copied. Save the script first, then run it.");
       } catch {
-        announce(`Copy this command: ${command()}`);
+        announce(`Copy this command: ${runCommand()}`);
       }
     });
     section.querySelector("[data-download-queue-reset]").addEventListener("click", () => {
