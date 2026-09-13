@@ -4,6 +4,11 @@
   if (!sections.length) return;
   // A Home Screen web app runs without browser chrome, so window.open is unreliable there.
   const standalone = window.navigator.standalone === true || window.matchMedia("(display-mode: standalone)").matches;
+  // iOS confirms every download separately and blocks the ones that follow,
+  // so unattended downloading is only offered where the browser allows it.
+  const iOS = /iPad|iPhone|iPod/.test(navigator.platform)
+    || (navigator.maxTouchPoints > 1 && navigator.platform === "MacIntel")
+    || /iPad|iPhone|iPod/.test(navigator.userAgent);
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   // iOS has no Vibration API. A switch-style checkbox toggled inside a user
   // gesture is the one way Safari 17.4+ plays the system haptic; other
@@ -38,6 +43,7 @@
     catch { /* private mode: the queue simply does not survive the page */ }
     render(queue);
   };
+  const downloadAllLabel = "Download all";
   const announce = (message) => sections.forEach((section) => {
     section.querySelector("[data-download-queue-status]").textContent = message;
   });
@@ -62,6 +68,32 @@
     // Let the row fade out before the list is rebuilt.
     item.classList.add("is-leaving");
     setTimeout(drop, 180);
+  };
+  let running = null;
+  const runAll = async () => {
+    if (running) { running.stop = true; return; }
+    const state = { stop: false };
+    running = state;
+    const buttons = sections.map((section) => section.querySelector("[data-download-queue-all]"));
+    buttons.forEach((button) => { button.textContent = "Stop"; });
+    haptic([12, 40, 18]);
+    let started = 0;
+    while (!state.stop) {
+      const queue = read();
+      const next = queue.shift();
+      if (!next) break;
+      write(queue);
+      openDownload(next);
+      started += 1;
+      announce(`Downloading ${next.name} — ${queue.length} left. Keep this page open.`);
+      if (!queue.length) break;
+      // Browsers throttle bursts of downloads, so leave each one time to start.
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+    }
+    if (state.stop) announce(`Stopped. ${read().length} file(s) still queued.`);
+    else announce(started ? `Started ${started} download(s). Check your browser's downloads.` : "No queued downloads.");
+    running = null;
+    buttons.forEach((button) => { button.textContent = downloadAllLabel; });
   };
   const openNext = () => {
     haptic([12, 40, 18]);
@@ -131,6 +163,14 @@
       setAll(false, `Added ${added} file(s). The queue holds ${queue.length} file(s) and keeps them while you browse other versions or operating systems.`);
     });
     section.querySelector("[data-download-queue-next]").addEventListener("click", openNext);
+    const all = section.querySelector("[data-download-queue-all]");
+    all.textContent = downloadAllLabel;
+    if (iOS) {
+      // One tap per file is the only thing iOS reliably allows.
+      all.hidden = true;
+    } else {
+      all.addEventListener("click", runAll);
+    }
     section.querySelector("[data-download-queue-reset]").addEventListener("click", () => {
       haptic([20, 60, 20]);
       write([]);
