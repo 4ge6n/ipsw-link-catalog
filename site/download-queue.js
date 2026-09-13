@@ -110,6 +110,19 @@
     const count = Math.min(limit, left || limit);
     button.textContent = left > count ? `Download next ${count}` : "Download all";
   });
+  const saveText = (name, body) => {
+    const url = URL.createObjectURL(new Blob([body], { type: "text/plain" }));
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = name;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 10000);
+  };
+  // curl runs one URL at a time and resumes a partial file, which is what a
+  // browser cannot do: it never learns when a cross-origin download finished.
+  const command = () => "cd ~/Downloads && xargs -n1 curl -fL -OC - < ipsw-queue.txt";
   const openNext = () => {
     haptic([12, 40, 18]);
     const queue = read();
@@ -192,6 +205,22 @@
         refreshLabels();
       });
     }
+    section.querySelector("[data-download-queue-export]").addEventListener("click", () => {
+      const queue = read();
+      if (!queue.length) { announce("The queue is empty."); return; }
+      haptic(10);
+      saveText("ipsw-queue.txt", queue.map((entry) => entry.url).join("\n") + "\n");
+      announce(`Saved ipsw-queue.txt with ${queue.length} URL(s). Run: ${command()}`);
+    });
+    section.querySelector("[data-download-queue-copy]").addEventListener("click", async () => {
+      haptic(10);
+      try {
+        await navigator.clipboard.writeText(command());
+        announce(`Command copied. Save the list first, then run it where the files should land.`);
+      } catch {
+        announce(`Copy this command: ${command()}`);
+      }
+    });
     section.querySelector("[data-download-queue-reset]").addEventListener("click", () => {
       haptic([20, 60, 20]);
       write([]);
