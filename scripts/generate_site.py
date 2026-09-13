@@ -66,7 +66,8 @@ def generate(api: Path, output: Path):
     shutil.copytree(ROOT/"assets", output, dirs_exist_ok=True)
     release_meta=json.loads((api/"ios"/"release"/"all.json").read_text())
     updated=f"<p class='meta'>Catalog updated: UTC {html.escape(release_meta['generated_at'])} · Asia/Tokyo {html.escape(release_meta.get('generated_at_tokyo', 'unknown'))}</p>"
-    home=["<h1> IPSW download links</h1><p>Direct Apple CDN links, organized by OS, release channel, version, and build. IPSW files are not hosted here.</p>", "<section><h2>Update notifications</h2><p>Add this site to your iPhone Home Screen, open it as an app, then enable notifications.</p><button id='enable-notifications' type='button'>Enable update notifications</button><p id='push-status' class='meta'></p></section>", updated, "<ul>"]
+    combined=[]
+    home=["<h1> IPSW download links</h1><p>Direct Apple CDN links, organized by OS, release channel, version, and build. IPSW files are not hosted here.</p><p><a href='#latest'>Jump to the latest supported downloads</a> for every operating system.</p>", "<section><h2>Update notifications</h2><p>Add this site to your iPhone Home Screen, open it as an app, then enable notifications.</p><button id='enable-notifications' type='button'>Enable update notifications</button><p id='push-status' class='meta'></p></section>", updated, "<ul>"]
     for os_key in OS_ORDER:
         home.append(f"<li>{link(os_key+'/', OS_NAMES[os_key])}</li>")
         os_page=[f"<p>{link('../', '← All operating systems')}</p><h1>{OS_NAMES[os_key]}</h1><ul>"]
@@ -118,5 +119,9 @@ def generate(api: Path, output: Path):
                 latest=json.loads((api/os_key/channel/"latest.json").read_text())
                 latest_body=f"<p>{link('../', '← '+channel.title()+' list')}</p><h1>Latest {OS_NAMES[os_key]} {channel.title()} downloads</h1>"+queue_controls("page")+"".join(f"<h2>{html.escape(r['version'])} ({html.escape(r['build'])})</h2><p class='meta'>{release_time(r.get('released_at'))}</p>"+firmware_table(r, controls=False) for r in latest["releases"])
                 write(output/os_key/channel/"latest"/"index.html", f"Latest {OS_NAMES[os_key]} {channel}", latest_body or "<p>No downloads available.</p>")
+                if latest["releases"]:
+                    combined.append(f"<h3 id='latest-{os_key}'>{OS_NAMES[os_key]}</h3>"+"".join(f"<h4>{html.escape(r['version'])} ({html.escape(r['build'])})</h4><p class='meta'>{release_time(r.get('released_at'))}</p>"+firmware_table(r, controls=False) for r in latest["releases"]))
             write(output/os_key/channel/"index.html", f"{OS_NAMES[os_key]} {channel}", "".join(channel_page)+"</ul>")
-    write(output/"index.html", " IPSW download links", "".join(home)+"</ul>")
+    # One page with every signed release, so a queue can be built without hopping between operating systems.
+    all_latest="<h2 id='latest'>Latest supported downloads</h2><p class='meta'>Every operating system's currently supported releases. Beta and RC builds are not listed here.</p>"+queue_controls("page")+"".join(combined)
+    write(output/"index.html", " IPSW download links", "".join(home)+"</ul>"+all_latest)
