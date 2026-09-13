@@ -49,14 +49,16 @@ def release_time(value: str | None) -> str:
         return "Release time: " + html.escape(value)
     tokyo=released.astimezone(ZoneInfo("Asia/Tokyo"))
     return f"Released (UTC): {released.isoformat().replace('+00:00', 'Z')}<br>Released (Asia/Tokyo): {tokyo.isoformat()}"
-def firmware_table(release: dict) -> str:
+def queue_controls(scope: str = "table") -> str:
+    """One control set drives every checkbox in its own table, or on the whole page."""
+    return "<section class='download-queue'><strong>Download queue</strong><p class='meta'>Select files and add them to the queue. The queue is shared across every version and operating system on this site, so you can mix iOS and iPadOS files, then open one download at a time. After saving a file in Safari, return here and open the next one.</p><button type='button' data-download-queue-select-all>Select all</button> <button type='button' data-download-queue-clear>Clear selection</button> <button type='button' data-download-queue-add>Add selected to queue</button> <button type='button' data-download-queue-show aria-expanded='false'>Show queue<span data-download-queue-count></span></button> <button type='button' data-download-queue-next>Open next download</button> <button type='button' data-download-queue-reset>Empty queue</button><div class='queue-panel' data-download-queue-panel aria-hidden='true'><div data-download-queue-panel-body></div></div><p class='meta' data-download-queue-status></p></section>".replace("<section class='download-queue'>", f"<section class='download-queue' data-download-queue-scope='{scope}'>")
+def firmware_table(release: dict, controls: bool = True) -> str:
     rows=[]
     for fw in release["firmwares"]:
         devices="<br>".join(html.escape(x) for x in fw["devices"])
         queue=f"<input class='download-queue-item' type='checkbox' aria-label='Select {html.escape(fw['filename'], quote=True)}' data-url='{html.escape(fw['url'], quote=True)}' data-name='{html.escape(fw['filename'], quote=True)}'>"
         rows.append(f"<tr><td>{queue}</td><td>{html.escape(fw['name'])}</td><td><code>{devices}</code></td><td>{link(fw['url'], fw['filename'])}</td><td>{'Signed' if fw['signed'] else 'Not signed'}</td></tr>")
-    controls="<section class='download-queue'><strong>Download queue</strong><p class='meta'>Select files and add them to the queue. The queue is shared across every version and operating system on this site, so you can mix iOS and iPadOS files, then open one download at a time. After saving a file in Safari, return here and open the next one.</p><button type='button' data-download-queue-select-all>Select all</button> <button type='button' data-download-queue-clear>Clear selection</button> <button type='button' data-download-queue-add>Add selected to queue</button> <button type='button' data-download-queue-show aria-expanded='false'>Show queue<span data-download-queue-count></span></button> <button type='button' data-download-queue-next>Open next download</button> <button type='button' data-download-queue-reset>Empty queue</button><div class='queue-panel' data-download-queue-panel aria-hidden='true'><div data-download-queue-panel-body></div></div><p class='meta' data-download-queue-status></p></section>"
-    return controls + "<table><thead><tr><th>Select</th><th>Device</th><th>Identifiers</th><th>Apple download</th><th>Status</th></tr></thead><tbody>" + "".join(rows) + "</tbody></table>"
+    return (queue_controls() if controls else "") + "<table><thead><tr><th>Select</th><th>Device</th><th>Identifiers</th><th>Apple download</th><th>Status</th></tr></thead><tbody>" + "".join(rows) + "</tbody></table>"
 def release_list_item(release: dict, href: str) -> str:
     return f"<li>{link(href, display_version(release)+' ('+release['build']+')')} — {len(release['firmwares'])} download link(s)</li>"
 def generate(api: Path, output: Path):
@@ -114,7 +116,7 @@ def generate(api: Path, output: Path):
                     write(output/os_key/channel/major/"index.html", f"{OS_NAMES[os_key]} {major}.x {channel.title()}", "".join(major_body)+"</ul>")
             if channel == "release":
                 latest=json.loads((api/os_key/channel/"latest.json").read_text())
-                latest_body=f"<p>{link('../', '← '+channel.title()+' list')}</p><h1>Latest {OS_NAMES[os_key]} {channel.title()} downloads</h1>"+"".join(f"<h2>{html.escape(r['version'])} ({html.escape(r['build'])})</h2><p class='meta'>{release_time(r.get('released_at'))}</p>"+firmware_table(r) for r in latest["releases"])
+                latest_body=f"<p>{link('../', '← '+channel.title()+' list')}</p><h1>Latest {OS_NAMES[os_key]} {channel.title()} downloads</h1>"+queue_controls("page")+"".join(f"<h2>{html.escape(r['version'])} ({html.escape(r['build'])})</h2><p class='meta'>{release_time(r.get('released_at'))}</p>"+firmware_table(r, controls=False) for r in latest["releases"])
                 write(output/os_key/channel/"latest"/"index.html", f"Latest {OS_NAMES[os_key]} {channel}", latest_body or "<p>No downloads available.</p>")
             write(output/os_key/channel/"index.html", f"{OS_NAMES[os_key]} {channel}", "".join(channel_page)+"</ul>")
     write(output/"index.html", " IPSW download links", "".join(home)+"</ul>")

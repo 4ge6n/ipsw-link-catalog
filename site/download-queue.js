@@ -103,15 +103,17 @@
     body.appendChild(list);
   });
   sections.forEach((section) => {
-    // Each release has its own table, so scope the checkbox buttons to it.
-    const table = section.nextElementSibling;
-    const items = () => [...table.querySelectorAll(".download-queue-item")];
+    // A release page scopes its buttons to its own table; a page that lists
+    // several releases carries one control set for every table on it.
+    const wholePage = section.dataset.downloadQueueScope === "page";
+    const root = wholePage ? document : section.nextElementSibling;
+    const items = () => [...root.querySelectorAll(".download-queue-item")];
     const setAll = (checked, message) => {
       haptic(8);
       items().forEach((item) => { item.checked = checked; });
       announce(message);
     };
-    section.querySelector("[data-download-queue-select-all]").addEventListener("click", () => setAll(true, "All files in this table are selected."));
+    section.querySelector("[data-download-queue-select-all]").addEventListener("click", () => setAll(true, `All ${items().length} file(s) ${wholePage ? "on this page" : "in this table"} are selected.`));
     section.querySelector("[data-download-queue-clear]").addEventListener("click", () => setAll(false, "Selection cleared."));
     section.querySelector("[data-download-queue-add]").addEventListener("click", () => {
       const selected = items().filter((item) => item.checked);
