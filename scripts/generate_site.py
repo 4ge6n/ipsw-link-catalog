@@ -13,11 +13,16 @@ from .normalize import OS_NAMES, OS_ORDER
 ROOT = Path(__file__).parent.parent
 APP_URL = "https://4ge6n.github.io/ipsw-link-catalog"
 DOWNLOAD_QUEUE_ASSET = "download-queue.js"
-DOWNLOAD_QUEUE_VERSION = hashlib.sha256((ROOT / "assets" / DOWNLOAD_QUEUE_ASSET).read_bytes()).hexdigest()[:12]
-STYLE = "body{font-family:system-ui,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#1d1d1f}a{color:#06c}table{border-collapse:collapse;width:100%}th,td{padding:.65rem;border-bottom:1px solid #ddd;text-align:left}code{font-size:.9em}.meta{color:#666}button{font:inherit;padding:.6rem .9rem;border:1px solid #777;border-radius:.5rem;background:#fff;color:#111}.download-queue{margin:1rem 0;padding:1rem;border:1px solid #ddd;border-radius:.6rem}.download-queue label{display:block;margin:.4rem 0}.download-queue ol{margin:.6rem 0;padding-left:1.4rem}.download-queue li{margin:.35rem 0;word-break:break-all}.download-queue .queue-remove{padding:.15rem .45rem;border-radius:.35rem;font-size:.85em}.queue-panel{display:grid;grid-template-rows:0fr;opacity:0;visibility:hidden;transition:grid-template-rows .28s cubic-bezier(.2,.7,.3,1),opacity .22s ease,visibility .28s}.queue-panel>div{overflow:hidden;min-height:0}.queue-list{max-height:55vh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}.queue-panel.is-open{grid-template-rows:1fr;opacity:1;visibility:visible}.download-queue li{transition:opacity .18s ease,transform .18s ease}.download-queue li.is-leaving{opacity:0;transform:translateX(-.6rem)}.haptic-switch{position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;left:-99px}@media (prefers-reduced-motion:reduce){.queue-panel,.download-queue li{transition:none}}"
+UPDATE_CHECK_ASSET = "update-check.js"
+def asset_version(name: str) -> str:
+    return hashlib.sha256((ROOT / "assets" / name).read_bytes()).hexdigest()[:12]
+DOWNLOAD_QUEUE_VERSION = asset_version(DOWNLOAD_QUEUE_ASSET)
+UPDATE_CHECK_VERSION = asset_version(UPDATE_CHECK_ASSET)
+CATALOG_BUILD = ""
+STYLE = "body{font-family:system-ui,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#1d1d1f}a{color:#06c}table{border-collapse:collapse;width:100%}th,td{padding:.65rem;border-bottom:1px solid #ddd;text-align:left}code{font-size:.9em}.meta{color:#666}button{font:inherit;padding:.6rem .9rem;border:1px solid #777;border-radius:.5rem;background:#fff;color:#111}.download-queue{margin:1rem 0;padding:1rem;border:1px solid #ddd;border-radius:.6rem}.download-queue label{display:block;margin:.4rem 0}.download-queue ol{margin:.6rem 0;padding-left:1.4rem}.download-queue li{margin:.35rem 0;word-break:break-all}.download-queue .queue-remove{padding:.15rem .45rem;border-radius:.35rem;font-size:.85em}.queue-panel{display:grid;grid-template-rows:0fr;opacity:0;visibility:hidden;transition:grid-template-rows .28s cubic-bezier(.2,.7,.3,1),opacity .22s ease,visibility .28s}.queue-panel>div{overflow:hidden;min-height:0}.queue-list{max-height:55vh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}.queue-panel.is-open{grid-template-rows:1fr;opacity:1;visibility:visible}.download-queue li{transition:opacity .18s ease,transform .18s ease}.download-queue li.is-leaving{opacity:0;transform:translateX(-.6rem)}.haptic-switch{position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;left:-99px}.update-bar{margin:2rem 0 0;padding:.7rem .9rem;border:1px solid #ddd;border-radius:.6rem;color:#666;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}.update-bar button{padding:.35rem .7rem;font-size:.9em}.update-bar.is-stale{border-color:#06c;color:#06c;background:#f2f8ff}@media (prefers-reduced-motion:reduce){.queue-panel,.download-queue li{transition:none}}"
 def write(path: Path, title: str, body: str):
     path.parent.mkdir(parents=True, exist_ok=True)
-    head=f"<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><meta name='theme-color' content='#ffffff'><meta name='apple-mobile-web-app-capable' content='yes'><meta name='apple-mobile-web-app-title' content='IPSW Links'><link rel='manifest' href='{APP_URL}/manifest.webmanifest'><link rel='apple-touch-icon' href='{APP_URL}/icon.svg'><title>{html.escape(title)}</title><style>{STYLE}</style><script defer src='{APP_URL}/push-config.js'></script><script defer src='{APP_URL}/push.js'></script><script defer src='{APP_URL}/{DOWNLOAD_QUEUE_ASSET}?v={DOWNLOAD_QUEUE_VERSION}'></script>"
+    head=f"<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><meta name='theme-color' content='#ffffff'><meta name='catalog-build' content='{CATALOG_BUILD}' data-base='{APP_URL}/'><meta name='apple-mobile-web-app-capable' content='yes'><meta name='apple-mobile-web-app-title' content='IPSW Links'><link rel='manifest' href='{APP_URL}/manifest.webmanifest'><link rel='apple-touch-icon' href='{APP_URL}/icon.svg'><title>{html.escape(title)}</title><style>{STYLE}</style><script defer src='{APP_URL}/push-config.js'></script><script defer src='{APP_URL}/push.js'></script><script defer src='{APP_URL}/{DOWNLOAD_QUEUE_ASSET}?v={DOWNLOAD_QUEUE_VERSION}'></script><script defer src='{APP_URL}/{UPDATE_CHECK_ASSET}?v={UPDATE_CHECK_VERSION}'></script>"
     path.write_text(f"<!doctype html><html lang='en'><head>{head}</head><body>{body}</body></html>\n")
 def link(href: str, text: str) -> str: return f"<a href='{html.escape(href, quote=True)}'>{html.escape(text)}</a>"
 def display_version(release: dict) -> str:
@@ -49,21 +54,36 @@ def release_time(value: str | None) -> str:
         return "Release time: " + html.escape(value)
     tokyo=released.astimezone(ZoneInfo("Asia/Tokyo"))
     return f"Released (UTC): {released.isoformat().replace('+00:00', 'Z')}<br>Released (Asia/Tokyo): {tokyo.isoformat()}"
+def device_key(value: str) -> tuple:
+    """Sort iPhone17,2 after iPhone9,1 by comparing digits as numbers."""
+    return tuple((1, int(part), "") if part.isdigit() else (0, 0, part) for part in re.split(r"(\d+)", value) if part)
 def queue_controls(scope: str = "table") -> str:
     """One control set drives every checkbox in its own table, or on the whole page."""
     return "<section class='download-queue'><strong>Download queue</strong><p class='meta'>Select files and add them to the queue. The queue is shared across every version and operating system on this site, so you can mix iOS and iPadOS files, then open one download at a time. After saving a file in Safari, return here and open the next one.</p><button type='button' data-download-queue-select-all>Select all</button> <button type='button' data-download-queue-clear>Clear selection</button> <button type='button' data-download-queue-add>Add selected to queue</button> <button type='button' data-download-queue-show aria-expanded='false'>Show queue<span data-download-queue-count></span></button> <button type='button' data-download-queue-next>Open next download</button> <button type='button' data-download-queue-reset>Empty queue</button><div class='queue-panel' data-download-queue-panel aria-hidden='true'><div data-download-queue-panel-body></div></div><p class='meta' data-download-queue-status></p></section>".replace("<section class='download-queue'>", f"<section class='download-queue' data-download-queue-scope='{scope}'>")
 def firmware_table(release: dict, controls: bool = True) -> str:
     rows=[]
-    for fw in release["firmwares"]:
+    # Newest hardware first, so the device most people want is at the top.
+    for fw in sorted(release["firmwares"], key=lambda f: device_key(f["devices"][0]), reverse=True):
         devices="<br>".join(html.escape(x) for x in fw["devices"])
         queue=f"<input class='download-queue-item' type='checkbox' aria-label='Select {html.escape(fw['filename'], quote=True)}' data-url='{html.escape(fw['url'], quote=True)}' data-name='{html.escape(fw['filename'], quote=True)}'>"
         rows.append(f"<tr><td>{queue}</td><td>{html.escape(fw['name'])}</td><td><code>{devices}</code></td><td>{link(fw['url'], fw['filename'])}</td><td>{'Signed' if fw['signed'] else 'Not signed'}</td></tr>")
     return (queue_controls() if controls else "") + "<table><thead><tr><th>Select</th><th>Device</th><th>Identifiers</th><th>Apple download</th><th>Status</th></tr></thead><tbody>" + "".join(rows) + "</tbody></table>"
 def release_list_item(release: dict, href: str) -> str:
     return f"<li>{link(href, display_version(release)+' ('+release['build']+')')} — {len(release['firmwares'])} download link(s)</li>"
+def catalog_build(api: Path) -> str:
+    """Identify the published data, ignoring the timestamps of each run."""
+    digest=hashlib.sha256()
+    for path in sorted(api.glob("*/*/*.json")):
+        document=json.loads(path.read_text())
+        for key in ("generated_at", "generated_at_tokyo"): document.pop(key, None)
+        digest.update(path.name.encode())
+        digest.update(json.dumps(document, sort_keys=True, separators=(",", ":")).encode())
+    return digest.hexdigest()[:12]
 def generate(api: Path, output: Path):
+    global CATALOG_BUILD
     if output.exists(): shutil.rmtree(output)
     shutil.copytree(ROOT/"assets", output, dirs_exist_ok=True)
+    CATALOG_BUILD=catalog_build(api)
     release_meta=json.loads((api/"ios"/"release"/"all.json").read_text())
     updated=f"<p class='meta'>Catalog updated: UTC {html.escape(release_meta['generated_at'])} · Asia/Tokyo {html.escape(release_meta.get('generated_at_tokyo', 'unknown'))}</p>"
     combined=[]
@@ -125,4 +145,5 @@ def generate(api: Path, output: Path):
     # One page with every signed release, so a queue can be built without hopping between operating systems.
     all_latest=f"<p>{link('../', '← IPSW download links')}</p><h1>Latest supported downloads</h1><p class='meta'>Every operating system's currently supported releases. Beta and RC builds are not listed here.</p>"+queue_controls("page")+"".join(combined)
     write(output/"latest"/"index.html", "Latest supported downloads", all_latest)
+    (output/"version.json").write_text(json.dumps({"build": CATALOG_BUILD, "generated_at": release_meta["generated_at"], "generated_at_tokyo": release_meta.get("generated_at_tokyo")}) + "\n")
     write(output/"index.html", " IPSW download links", "".join(home)+"</ul>")
