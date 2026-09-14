@@ -223,7 +223,6 @@
     "fi",
     `printf 'Done: %s file(s) in %s\\n' "$completed" "$dest"`,
   ].join("\n") + "\n";
-  const runCommand = () => "bash ipsw-queue.sh";
   const openNext = () => {
     haptic([12, 40, 18]);
     const queue = read();
@@ -321,7 +320,7 @@
       const dest = destination(section);
       const saved = await saveFile("ipsw-queue.sh", script(queue, dest, parallel(section)), { description: "Shell script", accept: { "text/x-shellscript": [".sh"] } });
       if (!saved) { announce("Nothing saved."); return; }
-      announce(`Saved ${saved}: ${queue.length} file(s) into ${dest || "the folder you chose"}, ${parallel(section)} at a time. Run it with: bash ${saved}`);
+      announce(`Saved ${saved}. It will fetch ${queue.length} file(s) into ${dest || "the folder you just picked"}, ${parallel(section)} at a time. In Terminal, type "bash " and drag ${saved} onto the window.`);
     });
     section.querySelector("[data-download-queue-list]").addEventListener("click", async () => {
       const queue = read();
@@ -329,15 +328,6 @@
       haptic(10);
       const saved = await saveFile("ipsw-queue.txt", queue.map((entry) => entry.url).join("\n") + "\n", { description: "URL list", accept: { "text/plain": [".txt"] } });
       announce(saved ? `Saved ${saved} with ${queue.length} URL(s), for aria2c or wget.` : "Nothing saved.");
-    });
-    section.querySelector("[data-download-queue-copy]").addEventListener("click", async () => {
-      haptic(10);
-      try {
-        await navigator.clipboard.writeText(runCommand());
-        announce("Command copied. Save the script first, then run it.");
-      } catch {
-        announce(`Copy this command: ${runCommand()}`);
-      }
     });
     section.querySelector("[data-download-queue-reset]").addEventListener("click", () => {
       haptic([20, 60, 20]);
