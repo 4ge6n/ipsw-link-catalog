@@ -110,6 +110,9 @@
     const count = Math.min(limit, left || limit);
     button.textContent = left > count ? `Download next ${count}` : "Download all";
   });
+  // Chrome and Edge can open a real save dialog; Safari drops the file into
+  // its download folder without asking, which needs different instructions.
+  const canChooseFolder = typeof window.showSaveFilePicker === "function";
   // A picker never reveals the chosen path, so let the user place the script
   // with the system dialog and have the script download beside itself.
   const saveFile = async (name, body, type) => {
@@ -313,6 +316,16 @@
     dest.addEventListener("input", () => sections.forEach((other) => {
       other.querySelector("[data-download-queue-dest]").value = dest.value;
     }));
+    const exportButton = section.querySelector("[data-download-queue-export]");
+    const hint = section.querySelector("[data-download-queue-save-hint]");
+    if (canChooseFolder) {
+      exportButton.textContent = "Choose folder and save script…";
+      hint.textContent = "A save dialog opens, and whichever folder you pick there is where the downloads go — an external drive is fine.";
+    } else {
+      hint.textContent = "This browser saves the script straight into its own download folder without asking. In Safari, turn on Settings → General → \u201cAsk for each download\u201d to choose the folder instead, or name the folder below.";
+      // Without a dialog, typing the folder is the only way to redirect it.
+      section.querySelector(".queue-advanced").open = true;
+    }
     const jobs = section.querySelector("[data-download-queue-jobs]");
     jobs.addEventListener("change", () => sections.forEach((other) => {
       other.querySelector("[data-download-queue-jobs]").value = jobs.value;
