@@ -375,9 +375,9 @@
     const hint = section.querySelector("[data-download-queue-save-hint]");
     if (canChooseFolder) {
       exportButton.textContent = "Choose folder and save script…";
-      hint.textContent = "A save dialog opens, and whichever folder you pick there is where the downloads go — an external drive is fine.";
+      hint.textContent = "Save ipsw-queue.sh in the folder where you want the IPSW files. The script downloads alongside itself — an external drive is fine.";
     } else {
-      hint.textContent = "This browser saves the script straight into its own download folder without asking. In Safari, turn on Settings → General → \u201cAsk for each download\u201d to choose the folder instead, or name the folder below.";
+      hint.textContent = "This browser saves ipsw-queue.sh into Downloads. Move that .sh file to the folder where you want IPSWs before running it, or name the folder below to use it instead.";
       // Without a dialog, typing the folder is the only way to redirect it.
       section.querySelector(".queue-advanced").open = true;
     }
