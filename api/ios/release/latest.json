@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-14T19:18:17Z",
+  "generated_at": "2026-09-14T23:51:06Z",
   "release_count": 10,
   "firmware_count": 57,
   "releases": [
@@ -349,7 +349,7 @@
         },
         {
           "id": "ios-release-27.0-24A437-iPhone19,3",
-          "name": "iPhone 18 Pro Max",
+          "name": "iPhone 18 Pro Max (U.S.)",
           "devices": [
             "iPhone19,3"
           ],
@@ -736,5 +736,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T04:18:17+09:00"
+  "generated_at_tokyo": "2026-09-15T08:51:06+09:00"
 }
