@@ -4,30 +4,67 @@
   "version": "26.7",
   "version_label": "26.7",
   "build": "23H24",
-  "released_at": "2026-09-14T17:18:48Z",
+  "released_at": null,
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
-      "name": "ipsw.me",
-      "checked_at": "2026-09-14T17:20:28Z"
+      "name": "apple",
+      "checked_at": "2026-09-14T17:28:04Z"
     }
   ],
   "firmwares": [
     {
+      "name": "iPad (8th generation) Wi",
+      "devices": [
+        "iPad11,6",
+        "iPad11,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/a450ccb6-6fca-445c-bbeb-1fded28367dc/iPad_10.2_2020_26.7_23H24_Restore.ipsw",
+      "filename": "iPad_10.2_2020_26.7_23H24_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-14T17:28:04Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini (5th generation) Wi",
+      "devices": [
+        "iPad11,1",
+        "iPad11,2",
+        "iPad11,3",
+        "iPad11,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/58acc704-97f4-491c-b590-a0006d4b65fe/iPad_Spring_2019_26.7_23H24_Restore.ipsw",
+      "filename": "iPad_Spring_2019_26.7_23H24_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-14T17:28:04Z",
+        "unsigned_since": null
+      }
+    },
+    {
       "name": "iPad Pro 3 (11-inch, WiFi)",
       "devices": [
-        "iPad8,1"
+        "iPad8,1",
+        "iPad8,2",
+        "iPad8,3",
+        "iPad8,4",
+        "iPad8,5",
+        "iPad8,6",
+        "iPad8,7",
+        "iPad8,8"
       ],
       "url": "https://updates.cdn-apple.com/2026FallFCS/d149c4f0-483f-49e6-8f7a-ee360e195b46/iPad_Pro_A12X_A12Z_26.7_23H24_Restore.ipsw",
       "filename": "iPad_Pro_A12X_A12Z_26.7_23H24_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:20:28Z",
+        "checked_at": "2026-09-14T17:28:04Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-14T17:20:28Z",
-  "last_seen_at": "2026-09-14T17:20:28Z"
+  "last_seen_at": "2026-09-14T17:28:04Z"
 }

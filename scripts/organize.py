@@ -18,7 +18,11 @@ def normalize_candidates(candidates, settings, now):
         key = (os_key, channel, str(row["version"]), str(row["build"]), url)
         item = records.setdefault(key, {"os_key": os_key, "channel": channel, "version": str(row["version"]), "version_label": safe_label(row.get("version_label") or label), "build": safe_build(str(row["build"])), "released_at": row.get("released_at"), "prerelease": channel == "beta", "release_candidate": rc, "sources": {}, "firmwares": {}})
         item["sources"][row.get("source", "unknown")] = {"name": row.get("source", "unknown"), "checked_at": now}
+        # Apple's own catalog is authoritative for signing but carries neither
+        # a release date nor a marketing name, so let later sources fill those.
+        if not item.get("released_at") and row.get("released_at"): item["released_at"] = row["released_at"]
         fw = item["firmwares"].setdefault(url, {"name": row.get("name") or device, "devices": set(), "url": url, "filename": url.rsplit("/", 1)[-1], "signing": {"status": status(row.get("signed")), "checked_at": now, "unsigned_since": now if row.get("signed") is False else None}})
+        if fw["name"] == device and row.get("name") and row["name"] != device: fw["name"] = row["name"]
         fw["devices"].add(device)
     result=[]
     for item in records.values():

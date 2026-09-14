@@ -10,7 +10,7 @@ from scripts.generate_readme import content, replace
 from scripts.generate_site import generate as generate_site
 from scripts.normalize import OS_ORDER, safe_build
 from scripts.organize import all_index, index, merge, normalize_candidates
-from scripts.sources import beta, release
+from scripts.sources import apple, beta, release
 from scripts.validate import validate_api
 
 ROOT=Path(__file__).parent.parent
@@ -33,6 +33,28 @@ def existing_records(api):
             records.append(record)
         except json.JSONDecodeError: pass
     return records
+def known_device_names(records) -> dict[str, str]:
+    """Marketing names already in the catalog, so a new build keeps them.
+
+    Apple's own catalog identifies hardware only as iPhone18,5. Reusing the
+    name the device already has avoids asking a third party again.
+    """
+    names={}
+    for record in records:
+        for firmware in record.get("firmwares", []):
+            name=firmware.get("name")
+            devices=firmware.get("devices") or []
+            if not name or name in devices: continue
+            for device in devices: names.setdefault(device, name)
+    return names
+def apply_device_names(records, names) -> None:
+    for record in records:
+        for firmware in record.get("firmwares", []):
+            if firmware.get("name") not in (firmware.get("devices") or []): continue
+            for device in firmware["devices"]:
+                if device in names:
+                    firmware["name"]=names[device]
+                    break
 def generate(records, api, settings, now, now_tokyo):
     indexes={}
     for os_key in OS_ORDER:
@@ -66,11 +88,13 @@ def main():
     elif args.input: candidates=json.loads(args.input.read_text())
     else:
         candidates=[]; failures=[]
-        for source in (release.fetch, beta.fetch):
+        # Apple first: where it and a third party disagree, Apple wins.
+        for source in (apple.fetch, release.fetch, beta.fetch):
             try: candidates.extend(source(settings["request_timeout_seconds"]))
             except Exception as exc: failures.append(str(exc))
         if not candidates: raise SystemExit("all information sources failed or returned no data; catalog preserved")
     observed, rejected=normalize_candidates(candidates, settings, now)
+    apply_device_names(observed, known_device_names(old))
     # Public sources may include OTA/asset rows alongside IPSWs. They are
     # deliberately ignored; a syntactically valid IPSW on an unknown host is a
     # supply-chain alert and must stop publication.

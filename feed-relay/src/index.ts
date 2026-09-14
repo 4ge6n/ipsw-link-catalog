@@ -18,6 +18,22 @@ type PushSubscriptionRecord = {
 const SITE_ORIGIN = "https://4ge6n.github.io";
 
 const SOURCES = [
+  // Apple's own version feed: small, official, and it changes the moment a
+  // build ships, ahead of any third party indexing the restore images.
+  {
+    name: "Apple gdmf product versions",
+    url: "https://gdmf.apple.com/v2/pmv",
+    select: (body: string) => {
+      const parsed = JSON.parse(body) as Record<string, Record<string, { ProductVersion?: string; Build?: string }[]>>;
+      const lines: string[] = [];
+      for (const group of ["PublicAssetSets", "AssetSets"]) {
+        for (const [platform, entries] of Object.entries(parsed[group] ?? {})) {
+          for (const entry of entries ?? []) lines.push(`${group}/${platform}:${entry.ProductVersion}:${entry.Build}`);
+        }
+      }
+      return lines.sort().join("\n");
+    },
+  },
   { name: "Apple Developer Releases RSS", url: "https://developer.apple.com/news/releases/rss/releases.rss", select: (body: string) => body },
   { name: "ipsw.me RSS", url: "https://ipsw.me/timeline.rss", select: (body: string) => body },
   { name: "ipsw.dev beta", url: "https://www.ipsw.dev/", select: (body: string) => [...body.matchAll(/href="\/build\/([A-Za-z0-9]+)".*?<h3[^>]*>([^<]+)/gs)].map((m) => `${m[1]}:${m[2].trim()}`).join("\n") },

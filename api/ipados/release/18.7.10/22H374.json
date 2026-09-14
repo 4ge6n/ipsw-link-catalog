@@ -9,13 +9,17 @@
   "release_candidate": false,
   "sources": [
     {
+      "name": "apple",
+      "checked_at": "2026-09-14T17:28:04Z"
+    },
+    {
       "name": "ipsw.me",
-      "checked_at": "2026-09-14T17:20:28Z"
+      "checked_at": "2026-09-14T17:28:04Z"
     }
   ],
   "firmwares": [
     {
-      "name": "iPad 7 (Cellular)",
+      "name": "iPad 7 (WiFi)",
       "devices": [
         "iPad7,11",
         "iPad7,12"
@@ -24,11 +28,11 @@
       "filename": "iPad_10.2_18.7.10_22H374_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:20:28Z",
+        "checked_at": "2026-09-14T17:28:04Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-11T19:15:16Z",
-  "last_seen_at": "2026-09-14T17:20:28Z"
+  "last_seen_at": "2026-09-14T17:28:04Z"
 }
