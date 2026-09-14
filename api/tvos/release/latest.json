@@ -4,7 +4,7 @@
   "os_key": "tvos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-14T18:42:02Z",
+  "generated_at": "2026-09-14T19:18:17Z",
   "release_count": 3,
   "firmware_count": 4,
   "releases": [
@@ -23,6 +23,7 @@
           ],
           "filename": "AppleTV5,3_26.6_23L773_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-67287/F525C1FF-B49B-40AB-A5F4-A6F4A4847407/AppleTV5,3_26.6_23L773_Restore.ipsw",
+          "sha1": "ac337cd6347a45ae33e5dd0736eff726fe514f7e",
           "signed": true
         }
       ]
@@ -42,6 +43,7 @@
           ],
           "filename": "AppleTV3,1_8.4.3_12H1006_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2022/ios/002-77725-20220309-8070E2E2-28B3-463C-96F0-A6FAC4D86F1D/AppleTV3,1_8.4.3_12H1006_Restore.ipsw",
+          "sha1": null,
           "signed": true
         },
         {
@@ -52,6 +54,7 @@
           ],
           "filename": "AppleTV3,2_8.4.3_12H1006_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2022/ios/002-77717-20220309-806B4BF8-FF71-4485-9BB8-3E2D10E3D1D8/AppleTV3,2_8.4.3_12H1006_Restore.ipsw",
+          "sha1": null,
           "signed": true
         }
       ]
@@ -71,10 +74,11 @@
           ],
           "filename": "AppleTV2,1_6.2.1_11D258_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS8/031-07202.20140917.tF6Fs/AppleTV2,1_6.2.1_11D258_Restore.ipsw",
+          "sha1": null,
           "signed": true
         }
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T03:42:02+09:00"
+  "generated_at_tokyo": "2026-09-15T04:18:17+09:00"
 }

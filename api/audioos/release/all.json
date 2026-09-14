@@ -4,7 +4,7 @@
   "os_key": "audioos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-14T18:42:02Z",
+  "generated_at": "2026-09-14T19:18:17Z",
   "release_count": 52,
   "firmware_count": 53,
   "releases": [
@@ -25,6 +25,7 @@
           ],
           "filename": "AudioAccessory5,1_27.0_24J361_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SFallFCS/a595a3b2-2c42-470a-9417-a705aaafa05c/AudioAccessory5,1_27.0_24J361_Restore.ipsw",
+          "sha1": "39d9f4bf4be948eb134a57c9d5b427bf2b2438c1",
           "signed": true
         }
       ]
@@ -46,6 +47,7 @@
           ],
           "filename": "AudioAccessory5,1_26.6_23L773_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-67259/44F8A245-A169-4917-872D-E57B32140013/AudioAccessory5,1_26.6_23L773_Restore.ipsw",
+          "sha1": null,
           "signed": true
         },
         {
@@ -56,6 +58,7 @@
           ],
           "filename": "AudioAccessory6,1_26.6_23L773_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-67230/6F3201AA-E34C-478C-B4B5-5B86B54DA1E0/AudioAccessory6,1_26.6_23L773_Restore.ipsw",
+          "sha1": "7ef0f800d6b02729666da32194f79f463d901b62",
           "signed": true
         }
       ]
@@ -77,6 +80,7 @@
           ],
           "filename": "AudioAccessory5,1_26.5_23L471_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-40034/C2B2422A-6010-46B6-AF80-6D766EABA8D2/AudioAccessory5,1_26.5_23L471_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -98,6 +102,7 @@
           ],
           "filename": "AudioAccessory5,1_26.4_23L243_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-09868/3CA41570-B9A1-4582-B6B9-D9AE494C36A7/AudioAccessory5,1_26.4_23L243_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -119,6 +124,7 @@
           ],
           "filename": "AudioAccessory5,1_26.3_23K620_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-56710/D3018599-F0D8-48F0-A6A4-C6D63A4853A4/AudioAccessory5,1_26.3_23K620_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -140,6 +146,7 @@
           ],
           "filename": "AudioAccessory5,1_26.2_23K54_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/089-85655/A48FB75F-8F11-4BCD-A46F-7A514188C809/AudioAccessory5,1_26.2_23K54_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -161,6 +168,7 @@
           ],
           "filename": "AudioAccessory5,1_26.1_23J582_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/089-05941/E7446740-0614-4CEF-878F-8CCC3727B919/AudioAccessory5,1_26.1_23J582_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -182,6 +190,7 @@
           ],
           "filename": "AudioAccessory5,1_26.0.1_23J362_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2025SummerFCS/fullrestores/093-51907/A0EF8114-36A5-49F2-A60C-0D62104D1A26/AudioAccessory5,1_26.0.1_23J362_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -203,6 +212,7 @@
           ],
           "filename": "AudioAccessory5,1_26.0_23J353_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2025SummerFCS/fullrestores/093-42650/8C753B8D-3512-4687-BB26-43E3FE22405D/AudioAccessory5,1_26.0_23J353_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -224,6 +234,7 @@
           ],
           "filename": "AudioAccessory5,1_18.6_22M84_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2025SummerFCS/fullrestores/082-08354/EF7642CA-525A-46C4-9A0B-1CD098E6779E/AudioAccessory5,1_18.6_22M84_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -245,6 +256,7 @@
           ],
           "filename": "AudioAccessory5,1_18.5_22L572_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-43134/E88DD501-F078-4EA1-8020-1354F9EE048D/AudioAccessory5,1_18.5_22L572_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -266,6 +278,7 @@
           ],
           "filename": "AudioAccessory5,1_18.4.1_22L261_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/082-18616/F73DCDBB-F669-4A5F-8B24-D710941CAD61/AudioAccessory5,1_18.4.1_22L261_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -287,6 +300,7 @@
           ],
           "filename": "AudioAccessory5,1_18.4_22L255_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/082-16102/A3496A44-CD42-4AA4-8E3E-7CA1E5BC380D/AudioAccessory5,1_18.4_22L255_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -308,6 +322,7 @@
           ],
           "filename": "AudioAccessory5,1_18.3_22K557_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2025WinterFCS/fullrestores/072-04693/4324D4B3-3A02-4ED1-B9F1-BB70E19A9BF5/AudioAccessory5,1_18.3_22K557_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -329,6 +344,7 @@
           ],
           "filename": "AudioAccessory5,1_18.2_22K155_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/072-39470/0DC4617F-09DB-47B4-894D-773D5770C890/AudioAccessory5,1_18.2_22K155_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -350,6 +366,7 @@
           ],
           "filename": "AudioAccessory5,1_18.1_22J580_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2024FallFCS/fullrestores/072-10554/C99AF01B-446C-4790-89FB-36FB60876039/AudioAccessory5,1_18.1_22J580_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -371,6 +388,7 @@
           ],
           "filename": "AudioAccessory5,1_18.0_22J357_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2024SummerFCS/fullrestores/062-77125/DFC20194-35F4-4608-A1B6-5BDCD5792E0E/AudioAccessory5,1_18.0_22J357_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -392,6 +410,7 @@
           ],
           "filename": "AudioAccessory5,1_17.6_21M71_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2024SummerFCS/fullrestores/052-80884/3DBDC834-367D-46A4-A66E-AC8D946A1461/AudioAccessory5,1_17.6_21M71_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -413,6 +432,7 @@
           ],
           "filename": "AudioAccessory5,1_17.5_21L569_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2024SpringFCS/fullrestores/052-39004/F0C66661-0C5F-45A9-A2EF-587911668474/AudioAccessory5,1_17.5_21L569_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -434,6 +454,7 @@
           ],
           "filename": "AudioAccessory5,1_17.4_21L227_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/032-53442/00CC3DD6-C14A-4674-BD82-5B4B4B1432C8/AudioAccessory5,1_17.4_21L227_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -455,6 +476,7 @@
           ],
           "filename": "AudioAccessory5,1_17.3_21K646_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/042-76192/3B7E9C25-ED97-4C49-A9AB-B037FCAADBED/AudioAccessory5,1_17.3_21K646_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -476,6 +498,7 @@
           ],
           "filename": "AudioAccessory5,1_17.2_21K365_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/052-15437/4A4CF1EC-570F-40EF-A602-750A30FE2542/AudioAccessory5,1_17.2_21K365_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -497,6 +520,7 @@
           ],
           "filename": "AudioAccessory5,1_17.1.1_21K82_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/042-97195/0F1E9418-2D1D-487E-B7EE-14AF40AAD536/AudioAccessory5,1_17.1.1_21K82_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -518,6 +542,7 @@
           ],
           "filename": "AudioAccessory5,1_17.1_21K69_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/042-83639/D11E65D1-5411-4474-85F6-C7D5FE7F0A37/AudioAccessory5,1_17.1_21K69_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -539,6 +564,7 @@
           ],
           "filename": "AudioAccessory5,1_17.0_21J354_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2023FallFCS/fullrestores/002-77931/5B34E80D-B1C3-40B4-92F2-9C25339D65EB/AudioAccessory5,1_17.0_21J354_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -560,6 +586,7 @@
           ],
           "filename": "AudioAccessory5,1_16.6_20M73_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2023SummerFCS/fullrestores/042-18164/D31B08E6-F017-4225-B93B-CC78F9CA6F9D/AudioAccessory5,1_16.6_20M73_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -581,6 +608,7 @@
           ],
           "filename": "AudioAccessory5,1_16.5_20L563_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2023SpringFCS/fullrestores/032-84450/071D7B4F-C30E-4804-9599-CD85DFC01DF4/AudioAccessory5,1_16.5_20L563_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -602,6 +630,7 @@
           ],
           "filename": "AudioAccessory5,1_16.4.1_20L498_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-66629/A942E686-6962-4A22-A241-3B4B9D816C8A/AudioAccessory5,1_16.4.1_20L498_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -623,6 +652,7 @@
           ],
           "filename": "AudioAccessory5,1_16.4_20L497_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-65865/EFEAB952-C4A3-45C5-824D-364CA9643753/AudioAccessory5,1_16.4_20L497_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -644,6 +674,7 @@
           ],
           "filename": "AudioAccessory5,1_16.3.2_20K672_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-46105/9D46B73D-6391-4948-B522-B29D115F7698/AudioAccessory5,1_16.3.2_20K672_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -665,6 +696,7 @@
           ],
           "filename": "AudioAccessory5,1_16.3.1_20K661_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-44445/CBE5853E-541B-4C52-96EC-0E0F678A5235/AudioAccessory5,1_16.3.1_20K661_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -686,6 +718,7 @@
           ],
           "filename": "AudioAccessory5,1_16.3_20K649_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-35433/F659D7B8-CEDE-4D75-9D96-FD1E43E73522/AudioAccessory5,1_16.3_20K649_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -707,6 +740,7 @@
           ],
           "filename": "AudioAccessory5,1_16.2_20K362_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2022WinterFCS/fullrestores/012-62434/A53CF85A-903D-479C-A45D-F534C7B45169/AudioAccessory5,1_16.2_20K362_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -728,6 +762,7 @@
           ],
           "filename": "AudioAccessory5,1_16.1_20K71_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2022FallFCS/fullrestores/012-37026/E1D31033-6AE1-4E40-83A4-03C2ABBD0BA2/AudioAccessory5,1_16.1_20K71_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -749,6 +784,7 @@
           ],
           "filename": "AudioAccessory5,1_16.0_20J373_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2022FallFCS/fullrestores/071-16069/F4FF19C8-25A4-4F9A-A902-46A31BFCA69F/AudioAccessory5,1_16.0_20J373_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -770,6 +806,7 @@
           ],
           "filename": "AudioAccessory5,1_15.6_19M65_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2022FCSSummer/fullrestores/012-41803/9750343B-BCA9-4FF7-BD01-B2E75F1D9734/AudioAccessory5,1_15.6_19M65_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -791,6 +828,7 @@
           ],
           "filename": "AudioAccessory5,1_15.5.1_19L580_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2022FCSSpring/fullrestores/012-11878/F6CC6C19-5DC2-4AF5-B58C-39ECEFF4128A/AudioAccessory5,1_15.5.1_19L580_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -812,6 +850,7 @@
           ],
           "filename": "AudioAccessory5,1_15.5_19L570_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2022FCSSpring/fullrestores/002-53892/4705F59B-47F5-430B-8D2F-1EF9D36AB2CE/AudioAccessory5,1_15.5_19L570_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -833,6 +872,7 @@
           ],
           "filename": "AudioAccessory5,1_15.4.1_19L452_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2022FCSWinter/fullrestores/002-82880/68A76681-76AD-483B-9F10-ED2AFA21013A/AudioAccessory5,1_15.4.1_19L452_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -854,6 +894,7 @@
           ],
           "filename": "AudioAccessory5,1_15.4_19L440_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2022FCSWinter/fullrestores/071-05891/E1B66580-478B-4517-A128-ED6B87956E60/AudioAccessory5,1_15.4_19L440_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -875,6 +916,7 @@
           ],
           "filename": "AudioAccessory5,1_15.3_19K547_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2022FCSWinter/fullrestores/002-56675/8589E44F-C93F-410C-B81C-0C2ECF04210E/AudioAccessory5,1_15.3_19K547_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -896,6 +938,7 @@
           ],
           "filename": "AudioAccessory5,1_15.2_19K52_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2021FCSWinter/fullrestores/071-93727/F505D53E-EFC6-42B2-BAC6-C3CFBB6BDDAC/AudioAccessory5,1_15.2_19K52_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -917,6 +960,7 @@
           ],
           "filename": "AudioAccessory5,1_15.1.1_19J582_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2021FCSFall/fullrestores/002-30167/FDF89B7E-DF25-4CA0-AEF9-DB04109390D1/AudioAccessory5,1_15.1.1_19J582_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -938,6 +982,7 @@
           ],
           "filename": "AudioAccessory5,1_15.1_19J572_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2021FCSFall/fullrestores/002-21878/7A6E1414-7FD5-4EF6-A7AD-897E23A94274/AudioAccessory5,1_15.1_19J572_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -959,6 +1004,7 @@
           ],
           "filename": "AudioAccessory5,1_15.0_19J346_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2021FallFCS/fullrestores/071-91546/3B39CCC4-235E-4CCE-BC0D-2AF558F04802/AudioAccessory5,1_15.0_19J346_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -980,6 +1026,7 @@
           ],
           "filename": "AudioAccessory5,1_14.7_18M60_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2021SummerFCS/fullrestores/071-21028/886C037D-DCA1-4638-BB74-378F8C0FA2CA/AudioAccessory5,1_14.7_18M60_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -1001,6 +1048,7 @@
           ],
           "filename": "AudioAccessory5,1_14.6_18L569_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2021SpringFCS/fullrestores/071-43986/005D18F8-CE7D-4C2D-BF9F-4941A5530315/AudioAccessory5,1_14.6_18L569_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -1022,6 +1070,7 @@
           ],
           "filename": "AudioAccessory5,1_14.5_18L203_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2021SpringFCS/fullrestores/061-87481/DD73B5B6-1416-46E0-9601-AEFCE89B8B74/AudioAccessory5,1_14.5_18L203_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -1043,6 +1092,7 @@
           ],
           "filename": "AudioAccessory5,1_14.4_18K802_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2021WinterFCS/fullrestores/001-63500/CFD3C027-B5D9-4F06-91BB-FB29BF2C1807/AudioAccessory5,1_14.4_18K802_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -1064,6 +1114,7 @@
           ],
           "filename": "AudioAccessory5,1_14.3_18K563_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2020WinterFCS/fullrestores/001-88390/AD84FD14-E210-4E26-AFF7-42ABE73D5969/AudioAccessory5,1_14.3_18K563_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -1085,6 +1136,7 @@
           ],
           "filename": "AudioAccessory5,1_14.2.1_18K75_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-82561/9A9B0278-B1DA-481F-A0CC-5C6982AA1457/AudioAccessory5,1_14.2.1_18K75_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
@@ -1106,10 +1158,11 @@
           ],
           "filename": "AudioAccessory5,1_14.2_18K60_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2020FallFCS/fullrestores/001-66898/1D29E896-4E37-42FD-B653-1A167D6FF054/AudioAccessory5,1_14.2_18K60_Restore.ipsw",
+          "sha1": null,
           "signed": false
         }
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T03:42:02+09:00"
+  "generated_at_tokyo": "2026-09-15T04:18:17+09:00"
 }

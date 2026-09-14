@@ -10,11 +10,11 @@
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-09-14T18:42:02Z"
+      "checked_at": "2026-09-14T19:18:17Z"
     },
     {
       "name": "ipsw.me",
-      "checked_at": "2026-09-14T18:42:02Z"
+      "checked_at": "2026-09-14T19:18:17Z"
     }
   ],
   "firmwares": [
@@ -27,9 +27,10 @@
       "filename": "iPhone11,8_18.7.10_22H374_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T18:42:02Z",
+        "checked_at": "2026-09-14T19:18:17Z",
         "unsigned_since": null
-      }
+      },
+      "sha1": "ce1f22f83c685896011e2d68be924947da670613"
     },
     {
       "name": "iPhone XS",
@@ -42,11 +43,12 @@
       "filename": "iPhone11,2,iPhone11,4,iPhone11,6_18.7.10_22H374_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T18:42:02Z",
+        "checked_at": "2026-09-14T19:18:17Z",
         "unsigned_since": null
-      }
+      },
+      "sha1": "24bcca0b12090fcd51fdb568a564b6f92223e812"
     }
   ],
   "first_seen_at": "2026-09-11T19:15:16Z",
-  "last_seen_at": "2026-09-14T18:42:02Z"
+  "last_seen_at": "2026-09-14T19:18:17Z"
 }

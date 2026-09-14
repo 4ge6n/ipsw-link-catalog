@@ -4,7 +4,7 @@
   "os_key": "visionos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-14T18:42:02Z",
+  "generated_at": "2026-09-14T19:18:17Z",
   "release_count": 1,
   "firmware_count": 2,
   "releases": [
@@ -23,6 +23,7 @@
           ],
           "filename": "Apple_Vision_Pro_27.0_24M362_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/15a5b6d9-74ee-4986-a40e-63ee98bcd0ab/Apple_Vision_Pro_27.0_24M362_Restore.ipsw",
+          "sha1": null,
           "signed": true
         },
         {
@@ -33,10 +34,11 @@
           ],
           "filename": "Apple_Vision_Pro_M5_27.0_24M362_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/36f0fa38-2ff6-4ad3-8952-01b0b3a139d7/Apple_Vision_Pro_M5_27.0_24M362_Restore.ipsw",
+          "sha1": null,
           "signed": true
         }
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T03:42:02+09:00"
+  "generated_at_tokyo": "2026-09-15T04:18:17+09:00"
 }
