@@ -145,17 +145,21 @@
   // browser cannot do: it never learns when a cross-origin download finished.
   const destination = (section) => section.querySelector("[data-download-queue-dest]").value.trim();
   const parallel = (section) => section.querySelector("[data-download-queue-jobs]").value;
+  const choice = (section, name) => section.querySelector(`[data-download-queue-${name}]`).value;
   const shellQuote = (value) => value.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
-  const script = (queue, dest, jobs) => [
+  const script = (queue, dest, jobs, existing, prune) => [
     "#!/bin/bash",
     "# IPSW download queue exported from the IPSW link catalog.",
     "# Usage: bash ipsw-queue.sh [destination] [parallel downloads]",
+    "#        EXISTING=skip|redownload PRUNE=keep|delete override the settings below.",
     `#        defaults: ${dest || "the folder holding this script"}, ${jobs} at a time`,
     "set -u",
     '# Files land next to this script unless another folder is given.',
     'here="$(cd "$(dirname "$0")" && pwd)"',
     dest ? `dest="\${1:-${shellQuote(dest)}}"` : 'dest="${1:-$here}"',
     `jobs="\${2:-${jobs}}"`,
+    `existing="\${EXISTING:-${existing}}"   # skip | redownload`,
+    `prune="\${PRUNE:-${prune}}"        # keep | delete`,
     '# "~" does not expand inside quotes, so do it here.',
     'case "$dest" in "~") dest="$HOME";; "~/"*) dest="$HOME/${dest#\\~/}";; esac',
     'mkdir -p "$dest" || exit 1',
@@ -164,6 +168,8 @@
     ...queue.map((entry) => `"${entry.url}"`),
     ")",
     "total=${#urls[@]}",
+    "queued=\"\"",
+    'for url in "${urls[@]}"; do queued="$queued ${url##*/}"; done',
     'work="$(mktemp -d)"',
     "trap 'rm -rf \"$work\"' EXIT",
     'printf 0 > "$work/count"',
@@ -175,6 +181,24 @@
     '  printf "%s" "$count" > "$work/count"',
     '  rmdir "$work/lock"',
     '  printf "%s" "$count"',
+    "}",
+    "",
+    "# iPhone18,5_26.6.2_23G90_Restore.ipsw and its other builds share this key.",
+    "model_key() {",
+    "  printf '%s' \"$1\" | sed -E 's/_[0-9][^_]*_[A-Za-z0-9]+_Restore\\.ipsw$//'",
+    "}",
+    "",
+    "prune_old() {",
+    '  keep="$1"; key="$(model_key "$keep")"',
+    '  [ -n "$key" ] && [ "$key" != "$keep" ] || return 0',
+    "  for other in *.ipsw; do",
+    '    [ -e "$other" ] || continue',
+    '    [ "$other" = "$keep" ] && continue',
+    '    [ "$(model_key "$other")" = "$key" ] || continue',
+    "    # Never touch a file this run is meant to download.",
+    '    case " $queued " in *" $other "*) continue;; esac',
+    `    rm -f "$other" && printf '      removed older build %s\\n' "$other"`,
+    "  done",
     "}",
     "",
     "human() {",
@@ -193,12 +217,14 @@
     '  size="$(remote_size "$url")"',
     `  printf '[%s/%s] %s (%s)\\n' "$index" "$total" "$name" "$(human "$size")"`,
     '  started=$SECONDS',
+    '  if [ "$existing" = "redownload" ] && [ -f "$name" ]; then rm -f "$name"; fi',
     "  # -C - resumes a partial file and leaves a complete one alone.",
     '  if [ "$jobs" -le 1 ]; then',
     '    curl -fL -OC - --retry 3 --retry-delay 5 --progress-bar "$url" || { echo "$name" >> "$work/failed"; return 1; }',
     "  else",
     '    curl -fL -OC - --retry 3 --retry-delay 5 -sS "$url" || { echo "$name" >> "$work/failed"; return 1; }',
     "  fi",
+    '  [ "$prune" = "delete" ] && prune_old "$name"',
     '  done_count="$(record)"',
     `  printf '      finished %s in %ss (%s of %s complete)\\n' "$name" "$((SECONDS - started))" "$done_count" "$total"`,
     "}",
@@ -326,6 +352,19 @@
       // Without a dialog, typing the folder is the only way to redirect it.
       section.querySelector(".queue-advanced").open = true;
     }
+    // The warning only matters once deleting is actually selected.
+    const prune = section.querySelector("[data-download-queue-prune]");
+    const pruneNote = section.querySelector("[data-download-queue-prune-note]");
+    const syncPrune = () => sections.forEach((other) => {
+      other.querySelector("[data-download-queue-prune]").value = prune.value;
+      other.querySelector("[data-download-queue-prune-note]").hidden = prune.value !== "delete";
+    });
+    prune.addEventListener("change", syncPrune);
+    pruneNote.hidden = prune.value !== "delete";
+    const existing = section.querySelector("[data-download-queue-existing]");
+    existing.addEventListener("change", () => sections.forEach((other) => {
+      other.querySelector("[data-download-queue-existing]").value = existing.value;
+    }));
     const jobs = section.querySelector("[data-download-queue-jobs]");
     jobs.addEventListener("change", () => sections.forEach((other) => {
       other.querySelector("[data-download-queue-jobs]").value = jobs.value;
@@ -335,7 +374,7 @@
       if (!queue.length) { announce("The queue is empty."); return; }
       haptic(10);
       const dest = destination(section);
-      const saved = await saveFile("ipsw-queue.sh", script(queue, dest, parallel(section)), { description: "Shell script", accept: { "text/x-shellscript": [".sh"] } });
+      const saved = await saveFile("ipsw-queue.sh", script(queue, dest, parallel(section), choice(section, "existing"), choice(section, "prune")), { description: "Shell script", accept: { "text/x-shellscript": [".sh"] } });
       if (!saved) { announce("Nothing saved."); return; }
       announce(`Saved ${saved}. It will fetch ${queue.length} file(s) into ${dest || "the folder you just picked"}, ${parallel(section)} at a time. In Terminal, type "bash " and drag ${saved} onto the window.`);
     });
