@@ -4,17 +4,17 @@
   "version": "16.7.16",
   "version_label": "16.7.16",
   "build": "20H392",
-  "released_at": "2026-05-11T17:47:23Z",
+  "released_at": "2026-05-11T17:00:00Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-09-14T17:40:25Z"
+      "checked_at": "2026-09-14T18:42:02Z"
     },
     {
       "name": "ipsw.me",
-      "checked_at": "2026-09-14T17:40:25Z"
+      "checked_at": "2026-09-14T18:42:02Z"
     }
   ],
   "firmwares": [
@@ -28,7 +28,7 @@
       "filename": "iPad_64bit_TouchID_ASTC_16.7.16_20H392_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:40:25Z",
+        "checked_at": "2026-09-14T18:42:02Z",
         "unsigned_since": null
       }
     },
@@ -42,7 +42,7 @@
       "filename": "iPadPro_12.9_16.7.16_20H392_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:40:25Z",
+        "checked_at": "2026-09-14T18:42:02Z",
         "unsigned_since": null
       }
     },
@@ -56,11 +56,11 @@
       "filename": "iPadPro_9.7_16.7.16_20H392_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:40:25Z",
+        "checked_at": "2026-09-14T18:42:02Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-11T19:15:16Z",
-  "last_seen_at": "2026-09-14T17:40:25Z"
+  "last_seen_at": "2026-09-14T18:42:02Z"
 }

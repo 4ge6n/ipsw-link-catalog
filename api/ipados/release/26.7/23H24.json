@@ -4,17 +4,17 @@
   "version": "26.7",
   "version_label": "26.7",
   "build": "23H24",
-  "released_at": "2026-09-14T17:18:40Z",
+  "released_at": "2026-09-09T17:00:00Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-09-14T17:40:25Z"
+      "checked_at": "2026-09-14T18:42:02Z"
     },
     {
       "name": "ipsw.me",
-      "checked_at": "2026-09-14T17:40:25Z"
+      "checked_at": "2026-09-14T18:42:02Z"
     }
   ],
   "firmwares": [
@@ -28,7 +28,7 @@
       "filename": "iPad_10.2_2020_26.7_23H24_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:40:25Z",
+        "checked_at": "2026-09-14T18:42:02Z",
         "unsigned_since": null
       }
     },
@@ -44,7 +44,7 @@
       "filename": "iPad_Spring_2019_26.7_23H24_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:40:25Z",
+        "checked_at": "2026-09-14T18:42:02Z",
         "unsigned_since": null
       }
     },
@@ -52,6 +52,8 @@
       "name": "iPad Pro 3 (11-inch, WiFi)",
       "devices": [
         "iPad8,1",
+        "iPad8,10",
+        "iPad8,11",
         "iPad8,12",
         "iPad8,2",
         "iPad8,3",
@@ -59,17 +61,18 @@
         "iPad8,5",
         "iPad8,6",
         "iPad8,7",
-        "iPad8,8"
+        "iPad8,8",
+        "iPad8,9"
       ],
       "url": "https://updates.cdn-apple.com/2026FallFCS/d149c4f0-483f-49e6-8f7a-ee360e195b46/iPad_Pro_A12X_A12Z_26.7_23H24_Restore.ipsw",
       "filename": "iPad_Pro_A12X_A12Z_26.7_23H24_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:40:25Z",
+        "checked_at": "2026-09-14T18:42:02Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-14T17:20:28Z",
-  "last_seen_at": "2026-09-14T17:40:25Z"
+  "last_seen_at": "2026-09-14T18:42:02Z"
 }

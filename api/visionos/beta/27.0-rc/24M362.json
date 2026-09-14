@@ -4,17 +4,17 @@
   "version": "27.0",
   "version_label": "27.0-rc",
   "build": "24M362",
-  "released_at": null,
+  "released_at": "2026-09-14T17:00:00Z",
   "prerelease": true,
   "release_candidate": true,
   "sources": [
     {
       "name": "ipsw.dev",
-      "checked_at": "2026-09-14T17:40:25Z"
+      "checked_at": "2026-09-14T18:42:02Z"
     },
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-14T17:40:25Z"
+      "checked_at": "2026-09-14T18:42:02Z"
     }
   ],
   "firmwares": [
@@ -46,5 +46,5 @@
     }
   ],
   "first_seen_at": "2026-09-11T19:39:29Z",
-  "last_seen_at": "2026-09-14T17:40:25Z"
+  "last_seen_at": "2026-09-14T18:42:02Z"
 }

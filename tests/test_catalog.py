@@ -77,6 +77,7 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual([release["data"] for release in sorted(releases, key=beta_release_order)], ["27.0-beta/24A5355Q.json", "27.0-beta-2/24A5370H.json", "27.0-rc/24A435.json"])
 
 class AppleCatalogTests(unittest.TestCase):
+
     CATALOG = {"iPodSoftwareVersions": {"12": {"FirmwareURL": "https://updates.cdn-apple.com/a.ipsw", "ProductVersion": "1.2", "BuildVersion": "36B10147"}},
                "MobileDeviceSoftwareVersionsByVersion": {"1": {"MobileDeviceSoftwareVersions": {
                    "iPhone18,5": {"23G90": {"Restore": {"FirmwareURL": "https://updates.cdn-apple.com/b.ipsw", "ProductVersion": "26.6.2", "BuildVersion": "23G90"}}},
@@ -92,6 +93,27 @@ class AppleCatalogTests(unittest.TestCase):
         self.assertTrue(all(row["signed"] for row in self.rows()))
     def test_leaves_the_marketing_name_to_another_source(self):
         self.assertIsNone(next(iter(self.rows()))["name"])
+
+class ReleaseDateTests(unittest.TestCase):
+    FEED = """<rss><channel>
+      <item><title>iOS 27.0 (24A437)</title><pubDate>Mon, 14 Sep 2026 10:00:00 PDT</pubDate></item>
+      <item><title>iOS 27.0 RC (24A437)</title><pubDate>Fri, 11 Sep 2026 10:00:00 PDT</pubDate></item>
+      <item><title>iPadOS 26.6.2 (23G90)</title><pubDate>Tue, 08 Sep 2026 10:00:00 PDT</pubDate></item>
+      <item><title>App Store Connect Update</title><pubDate>Tue, 08 Sep 2026 10:00:00 PDT</pubDate></item>
+    </channel></rss>"""
+    def dates(self):
+        class Response:
+            def read(inner): return ReleaseDateTests.FEED.encode()
+            def __enter__(inner): return inner
+            def __exit__(inner, *args): return False
+        with patch.object(apple, "urlopen", return_value=Response()): return apple.release_dates(1)
+    def test_reads_the_announced_time_in_utc(self):
+        self.assertEqual(self.dates()[("27.0", "24A437")], "2026-09-14T17:00:00Z")
+    def test_release_day_wins_over_the_earlier_rc(self):
+        # The RC carries the same build; a release record is dated by release.
+        self.assertNotEqual(self.dates()[("27.0", "24A437")], "2026-09-11T17:00:00Z")
+    def test_ignores_items_that_name_no_build(self):
+        self.assertEqual(len(self.dates()), 2)
 
 class SigningProbeTests(unittest.TestCase):
     MANIFEST = {"BuildIdentities": [{"ApBoardID": "0x04", "ApChipID": "0x8030", "ApSecurityDomain": "0x01",
@@ -115,6 +137,26 @@ class SigningProbeTests(unittest.TestCase):
         self.assertIn("iBSS", body)
         self.assertNotIn("Skipped", body)
         self.assertNotIn("Info", body["iBSS"])
+    def answers(self, *texts):
+        replies=list(texts)
+        class Response:
+            def __init__(self, text): self.text=text
+            def read(self): return self.text.encode()
+            def __enter__(self): return self
+            def __exit__(self, *args): return False
+        with patch.object(tss, "build_manifest", return_value=self.MANIFEST), \
+             patch.object(tss, "urlopen", side_effect=lambda *a, **k: Response(replies.pop(0))):
+            return tss.signing_status("https://updates.cdn-apple.com/b.ipsw", 1)
+    def test_retries_with_the_shorter_nonce_older_silicon_wants(self):
+        # A8-era hardware answers 128 to a 32-byte nonce and a verdict to 20.
+        self.assertIs(self.answers("STATUS=128&MESSAGE=An internal error occurred.", "STATUS=0&MESSAGE=SUCCESS"), True)
+    def test_shorter_nonce_can_also_report_unsigned(self):
+        self.assertIs(self.answers("STATUS=128&MESSAGE=An internal error occurred.", "STATUS=94&MESSAGE=no"), False)
+    def test_gives_up_when_neither_nonce_is_answered(self):
+        self.assertIsNone(self.answers("STATUS=128&MESSAGE=x", "STATUS=8&MESSAGE=y"))
+    def test_nonce_length_follows_the_request(self):
+        self.assertEqual(len(tss._request_body(self.MANIFEST["BuildIdentities"][0], 20)["ApNonce"]), 20)
+        self.assertEqual(len(tss._request_body(self.MANIFEST["BuildIdentities"][0])["ApNonce"]), 32)
     def test_zip64_extra_field_overrides_placeholders(self):
         import struct
         extra = struct.pack("<HH3Q", 0x0001, 24, 9_000_000_000, 8_000_000_000, 5_000_000_000)

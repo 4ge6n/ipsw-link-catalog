@@ -4,17 +4,17 @@
   "version": "18.7.10",
   "version_label": "18.7.10",
   "build": "22H374",
-  "released_at": "2026-08-17T17:49:19Z",
+  "released_at": "2026-08-17T17:00:00Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-09-14T17:40:25Z"
+      "checked_at": "2026-09-14T18:42:02Z"
     },
     {
       "name": "ipsw.me",
-      "checked_at": "2026-09-14T17:40:25Z"
+      "checked_at": "2026-09-14T18:42:02Z"
     }
   ],
   "firmwares": [
@@ -27,7 +27,7 @@
       "filename": "iPhone11,8_18.7.10_22H374_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:40:25Z",
+        "checked_at": "2026-09-14T18:42:02Z",
         "unsigned_since": null
       }
     },
@@ -42,11 +42,11 @@
       "filename": "iPhone11,2,iPhone11,4,iPhone11,6_18.7.10_22H374_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:40:25Z",
+        "checked_at": "2026-09-14T18:42:02Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-11T19:15:16Z",
-  "last_seen_at": "2026-09-14T17:40:25Z"
+  "last_seen_at": "2026-09-14T18:42:02Z"
 }

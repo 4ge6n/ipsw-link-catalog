@@ -4,13 +4,13 @@
   "version": "26.5",
   "version_label": "26.5",
   "build": "23O471",
-  "released_at": "2026-05-11T17:32:57Z",
+  "released_at": "2026-05-04T17:00:00Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "ipsw.me",
-      "checked_at": "2026-09-14T17:40:25Z"
+      "checked_at": "2026-09-14T18:42:02Z"
     }
   ],
   "firmwares": [
@@ -23,8 +23,8 @@
       "filename": "Apple_Vision_Pro_M5_26.5_23O471_Restore.ipsw",
       "signing": {
         "status": "unsigned",
-        "checked_at": "2026-09-14T17:40:25Z",
-        "unsigned_since": "2026-09-14T17:40:25Z"
+        "checked_at": "2026-09-14T18:42:02Z",
+        "unsigned_since": "2026-09-14T18:42:02Z"
       }
     },
     {
@@ -36,11 +36,11 @@
       "filename": "Apple_Vision_Pro_26.5_23O471_Restore.ipsw",
       "signing": {
         "status": "unsigned",
-        "checked_at": "2026-09-14T17:40:25Z",
-        "unsigned_since": "2026-09-14T17:40:25Z"
+        "checked_at": "2026-09-14T18:42:02Z",
+        "unsigned_since": "2026-09-14T18:42:02Z"
       }
     }
   ],
   "first_seen_at": "2026-09-11T19:15:16Z",
-  "last_seen_at": "2026-09-14T17:40:25Z"
+  "last_seen_at": "2026-09-14T18:42:02Z"
 }

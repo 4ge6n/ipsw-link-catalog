@@ -76,7 +76,19 @@ def build_manifest(url: str, timeout: int = 60) -> dict:
     payload = _range(url, start, start + compressed - 1, timeout)
     return plistlib.loads(zlib.decompress(payload, -15) if method == 8 else payload)
 
-def _request_body(identity: dict) -> dict:
+# Recent silicon carries a 32-byte nonce; A8-era hardware wants 20, and asking
+# with the wrong length is answered with an internal error rather than a verdict.
+NONCE_LENGTHS = (32, 20)
+
+def _verdict(status: str | None) -> bool | None:
+    # 0 is a ticket. 69 means the request was short of what recent silicon
+    # needs, which Apple only answers for a build it is still signing; a build
+    # it has stopped signing is refused with 94 before reaching that point.
+    if status in ("0", "69"): return True
+    if status in ("94", "126"): return False
+    return None
+
+def _request_body(identity: dict, nonce_length: int = 32) -> dict:
     body = {
         "@HostPlatformInfo": "mac",
         "@VersionInfo": "libauthinstall-1033.0.2",
@@ -87,7 +99,7 @@ def _request_body(identity: dict) -> dict:
         "ApSecurityDomain": int(identity["ApSecurityDomain"], 16),
         # A throwaway device and nonce: the answer is about the build, not us.
         "ApECID": random.getrandbits(64),
-        "ApNonce": random.randbytes(32),
+        "ApNonce": random.randbytes(nonce_length),
         "ApProductionMode": True,
         "ApSecurityMode": True,
         "SepNonce": random.randbytes(20),
@@ -108,17 +120,14 @@ def signing_status(url: str, timeout: int = 60) -> bool | None:
     manifest = build_manifest(url, timeout)
     identities = manifest.get("BuildIdentities") or []
     if not identities: return None
-    request = Request(TSS_URL, data=plistlib.dumps(_request_body(identities[0])), headers={
-        "Content-Type": 'text/xml; charset="utf-8"',
-        "User-Agent": "InetURL/1.0",
-    })
-    with urlopen(request, timeout=timeout) as response:
-        answer = response.read().decode("utf-8", "replace")
-    fields = dict(part.split("=", 1) for part in answer.split("&") if "=" in part)
-    status = fields.get("STATUS")
-    # 0 is a ticket. 69 means the request itself was short of what recent
-    # silicon needs, which Apple only answers for a build it is still signing;
-    # a build it has stopped signing is refused with 94 before that point.
-    if status in ("0", "69"): return True
-    if status in ("94", "126"): return False
+    for nonce_length in NONCE_LENGTHS:
+        request = Request(TSS_URL, data=plistlib.dumps(_request_body(identities[0], nonce_length)), headers={
+            "Content-Type": 'text/xml; charset="utf-8"',
+            "User-Agent": "InetURL/1.0",
+        })
+        with urlopen(request, timeout=timeout) as response:
+            answer = response.read().decode("utf-8", "replace")
+        fields = dict(part.split("=", 1) for part in answer.split("&") if "=" in part)
+        verdict = _verdict(fields.get("STATUS"))
+        if verdict is not None: return verdict
     return None

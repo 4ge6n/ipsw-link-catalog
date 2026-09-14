@@ -4,17 +4,17 @@
   "version": "15.8.8",
   "version_label": "15.8.8",
   "build": "19H422",
-  "released_at": "2026-05-11T17:47:35Z",
+  "released_at": "2026-05-11T17:00:00Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-09-14T17:40:25Z"
+      "checked_at": "2026-09-14T18:42:02Z"
     },
     {
       "name": "ipsw.me",
-      "checked_at": "2026-09-14T17:40:25Z"
+      "checked_at": "2026-09-14T18:42:02Z"
     }
   ],
   "firmwares": [
@@ -30,11 +30,11 @@
       "filename": "iPad_64bit_TouchID_15.8.8_19H422_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:40:25Z",
+        "checked_at": "2026-09-14T18:42:02Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-11T19:15:16Z",
-  "last_seen_at": "2026-09-14T17:40:25Z"
+  "last_seen_at": "2026-09-14T18:42:02Z"
 }

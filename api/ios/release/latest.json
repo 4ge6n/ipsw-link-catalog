@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-14T17:40:25Z",
+  "generated_at": "2026-09-14T18:42:02Z",
   "release_count": 10,
   "firmware_count": 57,
   "releases": [
@@ -12,7 +12,7 @@
       "id": "ios-release-27.0-24A437",
       "version": "27.0",
       "build": "24A437",
-      "released_at": null,
+      "released_at": "2026-09-14T17:00:00Z",
       "data": "27.0/24A437.json",
       "firmwares": [
         {
@@ -309,7 +309,7 @@
         },
         {
           "id": "ios-release-27.0-24A437-iPhone19,2",
-          "name": "iPhone19,2",
+          "name": "iPhone 18 Pro",
           "devices": [
             "iPhone19,2"
           ],
@@ -319,7 +319,7 @@
         },
         {
           "id": "ios-release-27.0-24A437-iPhone19,3",
-          "name": "iPhone19,3",
+          "name": "iPhone 18 Pro Max",
           "devices": [
             "iPhone19,3"
           ],
@@ -329,7 +329,7 @@
         },
         {
           "id": "ios-release-27.0-24A437-iPhone19,7",
-          "name": "iPhone19,7",
+          "name": "iPhone 18 Pro Max",
           "devices": [
             "iPhone19,7"
           ],
@@ -343,7 +343,7 @@
       "id": "ios-release-18.7.10-22H374",
       "version": "18.7.10",
       "build": "22H374",
-      "released_at": "2026-08-17T17:49:19Z",
+      "released_at": "2026-08-17T17:00:00Z",
       "data": "18.7.10/22H374.json",
       "firmwares": [
         {
@@ -374,7 +374,7 @@
       "id": "ios-release-16.7.16-20H392",
       "version": "16.7.16",
       "build": "20H392",
-      "released_at": "2026-05-11T17:47:42Z",
+      "released_at": "2026-05-11T17:00:00Z",
       "data": "16.7.16/20H392.json",
       "firmwares": [
         {
@@ -416,7 +416,7 @@
       "id": "ios-release-15.8.8-19H422",
       "version": "15.8.8",
       "build": "19H422",
-      "released_at": "2026-05-11T17:47:32Z",
+      "released_at": "2026-05-11T17:00:00Z",
       "data": "15.8.8/19H422.json",
       "firmwares": [
         {
@@ -679,5 +679,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T02:40:25+09:00"
+  "generated_at_tokyo": "2026-09-15T03:42:02+09:00"
 }

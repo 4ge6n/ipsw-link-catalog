@@ -50,10 +50,18 @@ async function digest(value: string): Promise<string> {
 
 async function fingerprint(): Promise<{ value: string; sources: string[] }> {
   const results = await Promise.all(SOURCES.map(async (source) => {
-    const response = await fetch(source.url, { headers: { "User-Agent": "ipsw-link-catalog-feed-relay/1.0" } });
-    if (!response.ok) throw new Error(`${source.name}: HTTP ${response.status}`);
-    return `${source.name}:${await digest(source.select(await response.text()))}`;
+    try {
+      const response = await fetch(source.url, { headers: { "User-Agent": "ipsw-link-catalog-feed-relay/1.0" } });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return `${source.name}:${await digest(source.select(await response.text()))}`;
+    } catch {
+      // One unreachable feed must not stop the others from being checked. The
+      // marker is constant, so being down does not keep changing the
+      // fingerprint; coming back changes it once, which is what we want.
+      return `${source.name}:unavailable`;
+    }
   }));
+  if (results.every((line) => line.endsWith(":unavailable"))) throw new Error("every feed is unavailable");
   return { value: await digest(results.sort().join("\n")), sources: results };
 }
 

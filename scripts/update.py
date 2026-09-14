@@ -34,13 +34,16 @@ def existing_records(api):
             records.append(record)
         except json.JSONDecodeError: pass
     return records
+DEVICE_NAMES=ROOT/"config"/"device-names.json"
 def known_device_names(records) -> dict[str, str]:
-    """Marketing names already in the catalog, so a new build keeps them.
+    """Marketing names this catalog already knows, so a new build keeps them.
 
-    Apple's own catalog identifies hardware only as iPhone18,5. Reusing the
-    name the device already has avoids asking a third party again.
+    Apple identifies hardware only as iPhone18,5 and publishes no mapping to
+    the name people use, so the mapping is kept here. It is seeded from the
+    catalog's own history and learned once from whichever source first names
+    a new device, after which nothing needs to be asked again.
     """
-    names={}
+    names=json.loads(DEVICE_NAMES.read_text()) if DEVICE_NAMES.exists() else {}
     for record in records:
         for firmware in record.get("firmwares", []):
             name=firmware.get("name")
@@ -48,6 +51,20 @@ def known_device_names(records) -> dict[str, str]:
             if not name or name in devices: continue
             for device in devices: names.setdefault(device, name)
     return names
+def learn_device_names(records, names) -> list[str]:
+    """Persist any name a source supplied for a device we had not named."""
+    learned={}
+    for record in records:
+        for firmware in record.get("firmwares", []):
+            name=firmware.get("name")
+            devices=firmware.get("devices") or []
+            if not name or name in devices: continue
+            for device in devices:
+                if device not in names: learned[device]=name
+    if learned:
+        DEVICE_NAMES.parent.mkdir(parents=True, exist_ok=True)
+        DEVICE_NAMES.write_text(json.dumps(dict(sorted({**names, **learned}.items())), ensure_ascii=False, indent=2)+"\n")
+    return sorted(learned)
 def apply_device_names(records, names) -> None:
     for record in records:
         for firmware in record.get("firmwares", []):
@@ -131,7 +148,38 @@ def main():
             except Exception as exc: failures.append(str(exc))
         if not candidates: raise SystemExit("all information sources failed or returned no data; catalog preserved")
     observed, rejected=normalize_candidates(candidates, settings, now)
-    apply_device_names(observed, known_device_names(old))
+    if not args.input and not args.bootstrap_empty:
+        # Apple's restore catalog carries no dates. A third party records when
+        # it noticed a build, which for a fresh release is well after Apple
+        # shipped it, so Apple's own announcement wins wherever it reaches.
+        try: announced=apple.release_dates(settings["request_timeout_seconds"])
+        except Exception: announced={}
+        dated=0
+        for record in observed:
+            stamp=announced.get((record["version"], record["build"]))
+            if stamp and record.get("released_at") != stamp: record["released_at"]=stamp; dated+=1
+        if dated: print(json.dumps({"release_dates_from_apple": dated}))
+    device_names=known_device_names(old)
+    learned=learn_device_names(observed, device_names)
+    device_names.update({device: name for record in observed for firmware in record["firmwares"]
+                         for device in [d for d in firmware["devices"] if d in learned]
+                         for name in [firmware["name"]]})
+    apply_device_names(observed, device_names)
+    unnamed=sorted({device for record in observed for firmware in record["firmwares"]
+                    for device in firmware["devices"] if device not in device_names})
+    if unnamed and not args.input:
+        # Apple names no hardware, so a device nobody has named yet is looked
+        # up once and written down; later runs read it from config.
+        try: catalogue=release.device_names(settings["request_timeout_seconds"])
+        except Exception: catalogue={}
+        found={device: catalogue[device] for device in unnamed if device in catalogue}
+        if found:
+            device_names.update(found)
+            DEVICE_NAMES.write_text(json.dumps(dict(sorted(device_names.items())), ensure_ascii=False, indent=2)+"\n")
+            learned=sorted(set(learned) | set(found))
+            apply_device_names(observed, device_names)
+            unnamed=[device for device in unnamed if device not in found]
+    if learned or unnamed: print(json.dumps({"device_names_learned": learned, "devices_still_unnamed": unnamed}))
     # Public sources may include OTA/asset rows alongside IPSWs. They are
     # deliberately ignored; a syntactically valid IPSW on an unknown host is a
     # supply-chain alert and must stop publication.

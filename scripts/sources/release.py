@@ -14,6 +14,13 @@ def get_json(url: str, timeout: int) -> object:
         except Exception as exc: last_error=exc
     raise last_error
 
+def device_names(timeout: int) -> dict[str, str]:
+    """Identifier to marketing name. Apple publishes no such mapping, so this
+    is consulted only for a device the catalog has never named, and the answer
+    is kept locally afterwards."""
+    return {device["identifier"]: device["name"] for device in get_json(f"{BASE}/devices", timeout)
+            if device.get("identifier") and device.get("name") and device["name"] != device["identifier"]}
+
 def fetch(timeout: int) -> list[dict]:
     devices = get_json(f"{BASE}/devices", timeout)
     candidates: list[dict] = []

@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-14T17:40:25Z",
+  "generated_at": "2026-09-14T18:42:02Z",
   "release_count": 267,
   "firmware_count": 2175,
   "releases": [
@@ -12,14 +12,14 @@
       "id": "ipados-release-27.0-24A437",
       "version": "27.0",
       "build": "24A437",
-      "released_at": "2026-09-14T17:18:34Z",
+      "released_at": "2026-09-14T17:00:00Z",
       "signed_firmware_count": 16,
       "total_firmware_count": 16,
       "data": "27.0/24A437.json",
       "firmwares": [
         {
           "id": "ipados-release-27.0-24A437-iPad16,10",
-          "name": "iPad Air 11-inch (M4, Cellular)",
+          "name": "iPad Air 13-inch (M4, WiFi)",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -32,7 +32,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad17,1",
-          "name": "iPad Pro 13-inch (M5, Cellular)",
+          "name": "iPad Pro 11-inch (M5, Cellular)",
           "devices": [
             "iPad17,1",
             "iPad17,2",
@@ -45,7 +45,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad15,3",
-          "name": "iPad Air 11-inch (M3, WiFi)",
+          "name": "iPad Air 13-inch (M3, WiFi)",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -200,7 +200,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad8,10",
-          "name": "iPad Pro 3 (12.9-inch, WiFi, 1TB Model)",
+          "name": "iPad Pro 4 (11-inch, WiFi)",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -217,7 +217,7 @@
       "id": "ipados-release-26.7-23H24",
       "version": "26.7",
       "build": "23H24",
-      "released_at": "2026-09-14T17:18:40Z",
+      "released_at": "2026-09-09T17:00:00Z",
       "signed_firmware_count": 3,
       "total_firmware_count": 3,
       "data": "26.7/23H24.json",
@@ -251,6 +251,8 @@
           "name": "iPad Pro 3 (11-inch, WiFi)",
           "devices": [
             "iPad8,1",
+            "iPad8,10",
+            "iPad8,11",
             "iPad8,12",
             "iPad8,2",
             "iPad8,3",
@@ -258,7 +260,8 @@
             "iPad8,5",
             "iPad8,6",
             "iPad8,7",
-            "iPad8,8"
+            "iPad8,8",
+            "iPad8,9"
           ],
           "filename": "iPad_Pro_A12X_A12Z_26.7_23H24_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/d149c4f0-483f-49e6-8f7a-ee360e195b46/iPad_Pro_A12X_A12Z_26.7_23H24_Restore.ipsw",
@@ -270,7 +273,7 @@
       "id": "ipados-release-26.6.2-23G90",
       "version": "26.6.2",
       "build": "23G90",
-      "released_at": "2026-09-08T18:13:34Z",
+      "released_at": "2026-09-08T17:00:00Z",
       "signed_firmware_count": 18,
       "total_firmware_count": 18,
       "data": "26.6.2/23G90.json",
@@ -3769,7 +3772,7 @@
       "id": "ipados-release-18.7.10-22H374",
       "version": "18.7.10",
       "build": "22H374",
-      "released_at": "2026-08-17T17:49:09Z",
+      "released_at": "2026-08-17T17:00:00Z",
       "signed_firmware_count": 1,
       "total_firmware_count": 1,
       "data": "18.7.10/22H374.json",
@@ -6866,7 +6869,7 @@
       "id": "ipados-release-17.7.11-21H461",
       "version": "17.7.11",
       "build": "21H461",
-      "released_at": "2026-05-11T17:47:39Z",
+      "released_at": "2026-05-11T17:00:00Z",
       "signed_firmware_count": 2,
       "total_firmware_count": 2,
       "data": "17.7.11/21H461.json",
@@ -10784,7 +10787,7 @@
       "id": "ipados-release-16.7.16-20H392",
       "version": "16.7.16",
       "build": "20H392",
-      "released_at": "2026-05-11T17:47:23Z",
+      "released_at": "2026-05-11T17:00:00Z",
       "signed_firmware_count": 3,
       "total_firmware_count": 3,
       "data": "16.7.16/20H392.json",
@@ -13732,7 +13735,7 @@
       "id": "ipados-release-15.8.8-19H422",
       "version": "15.8.8",
       "build": "19H422",
-      "released_at": "2026-05-11T17:47:35Z",
+      "released_at": "2026-05-11T17:00:00Z",
       "signed_firmware_count": 1,
       "total_firmware_count": 1,
       "data": "15.8.8/19H422.json",
@@ -28981,5 +28984,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T02:40:25+09:00"
+  "generated_at_tokyo": "2026-09-15T03:42:02+09:00"
 }
