@@ -2,6 +2,7 @@
 from __future__ import annotations
 from collections import defaultdict
 from copy import deepcopy
+import re
 from .normalize import OS_NAMES, allowed_ipsw_url, classify, os_key_for, safe_build, safe_label, version_key
 from .sources.signing import status
 
@@ -23,6 +24,8 @@ def normalize_candidates(candidates, settings, now):
         if not item.get("released_at") and row.get("released_at"): item["released_at"] = row["released_at"]
         fw = item["firmwares"].setdefault(url, {"name": row.get("name") or device, "devices": set(), "url": url, "filename": url.rsplit("/", 1)[-1], "signing": {"status": status(row.get("signed")), "checked_at": now, "unsigned_since": now if row.get("signed") is False else None}})
         if fw["name"] == device and row.get("name") and row["name"] != device: fw["name"] = row["name"]
+        sha1=str(row.get("sha1") or "").lower()
+        if re.fullmatch(r"[0-9a-f]{40}", sha1): fw["sha1"] = sha1
         fw["devices"].add(device)
     result=[]
     for item in records.values():
@@ -76,7 +79,7 @@ def index(records, os_key, channel, now, include_unknown_beta=True):
             if channel == "release" and f["signing"]["status"] != "signed": continue
             devices=[d for d in f["devices"] if channel != "release" or newest_by_device.get(d) == release_sort(r)]
             if not devices: continue
-            fws.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}-{devices[0]}", "name": f["name"], "devices": devices, "filename": f["filename"], "url": f["url"], "signed": f["signing"]["status"] == "signed"})
+            fws.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}-{devices[0]}", "name": f["name"], "devices": devices, "filename": f["filename"], "url": f["url"], "sha1": f.get("sha1"), "signed": f["signing"]["status"] == "signed"})
         if fws: releases.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}", "version": r["version"], "build": r["build"], "released_at": r.get("released_at"), "data": f"{r['version_label']}/{r['build']}.json", "firmwares": fws})
     return {"schema_version": 1, "os": OS_NAMES[os_key], "os_key": os_key, "channel": channel, "definition": "all currently signed release IPSWs" if channel == "release" else "current latest beta or release candidate IPSWs", "generated_at": now, "release_count": len(releases), "firmware_count": sum(len(r["firmwares"]) for r in releases), "releases": releases}
 
@@ -94,7 +97,7 @@ def all_index(records, os_key, channel, now):
         for f in r["firmwares"]:
             if f["url"] in seen_urls: continue
             seen_urls.add(f["url"])
-            fws.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}-{f['devices'][0]}", "name": f["name"], "devices": f["devices"], "filename": f["filename"], "url": f["url"], "signed": f["signing"]["status"] == "signed"})
+            fws.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}-{f['devices'][0]}", "name": f["name"], "devices": f["devices"], "filename": f["filename"], "url": f["url"], "sha1": f.get("sha1"), "signed": f["signing"]["status"] == "signed"})
         doc["releases"].append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}", "version": r["version"], "build": r["build"], "released_at": r.get("released_at"), "signed_firmware_count": sum(f["signed"] for f in fws), "total_firmware_count": len(fws), "data": f"{r['version_label']}/{r['build']}.json", "firmwares": fws})
     doc["release_count"], doc["firmware_count"] = len(doc["releases"]), sum(len(x["firmwares"]) for x in doc["releases"])
     return doc

@@ -80,7 +80,7 @@ class AppleCatalogTests(unittest.TestCase):
 
     CATALOG = {"iPodSoftwareVersions": {"12": {"FirmwareURL": "https://updates.cdn-apple.com/a.ipsw", "ProductVersion": "1.2", "BuildVersion": "36B10147"}},
                "MobileDeviceSoftwareVersionsByVersion": {"1": {"MobileDeviceSoftwareVersions": {
-                   "iPhone18,5": {"23G90": {"Restore": {"FirmwareURL": "https://updates.cdn-apple.com/b.ipsw", "ProductVersion": "26.6.2", "BuildVersion": "23G90"}}},
+                   "iPhone18,5": {"23G90": {"Restore": {"FirmwareURL": "https://updates.cdn-apple.com/b.ipsw", "ProductVersion": "26.6.2", "BuildVersion": "23G90", "FirmwareSHA1": "A" * 40}}},
                    "AppleTV5,3": {"23L773": {"Restore": {"FirmwareURL": "https://updates.cdn-apple.com/c.ipsw", "ProductVersion": "26.6", "BuildVersion": "23L773"}}}}}}}
     def rows(self):
         with patch.object(apple, "get_plist", return_value=self.CATALOG): return apple.fetch(1)
@@ -89,6 +89,7 @@ class AppleCatalogTests(unittest.TestCase):
     def test_reads_device_build_and_url(self):
         row = next(r for r in self.rows() if r["device"] == "iPhone18,5")
         self.assertEqual((row["version"], row["build"], row["url"]), ("26.6.2", "23G90", "https://updates.cdn-apple.com/b.ipsw"))
+        self.assertEqual(row["sha1"], "a" * 40)
     def test_listed_builds_count_as_signed(self):
         self.assertTrue(all(row["signed"] for row in self.rows()))
     def test_leaves_the_marketing_name_to_another_source(self):

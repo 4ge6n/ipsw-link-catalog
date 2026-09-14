@@ -132,7 +132,7 @@ def firmware_table(release: dict, controls: bool = True) -> str:
     # Newest hardware first, so the device most people want is at the top.
     for fw in sorted(release["firmwares"], key=lambda f: device_key(f["devices"][0]), reverse=True):
         devices="<br>".join(html.escape(x) for x in fw["devices"])
-        queue=f"<input class='download-queue-item' type='checkbox' aria-label='Select {html.escape(fw['filename'], quote=True)}' data-url='{html.escape(fw['url'], quote=True)}' data-name='{html.escape(fw['filename'], quote=True)}'>"
+        queue=f"<input class='download-queue-item' type='checkbox' aria-label='Select {html.escape(fw['filename'], quote=True)}' data-url='{html.escape(fw['url'], quote=True)}' data-name='{html.escape(fw['filename'], quote=True)}' data-sha1='{html.escape(fw.get('sha1') or '', quote=True)}'>"
         rows.append(f"<tr><td>{queue}</td><td data-label='Device'>{html.escape(fw['name'])}</td><td data-label='Identifiers'><code>{devices}</code></td><td data-label='Apple download'>{link(fw['url'], fw['filename'])}</td><td data-label='Status'>{'Signed' if fw['signed'] else 'Not signed'}</td></tr>")
     return (queue_controls() if controls else "") + "<table><thead><tr><th>Select</th><th>Device</th><th>Identifiers</th><th>Apple download</th><th>Status</th></tr></thead><tbody>" + "".join(rows) + "</tbody></table>"
 def release_list_item(release: dict, href: str) -> str:

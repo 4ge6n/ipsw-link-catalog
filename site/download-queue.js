@@ -188,6 +188,9 @@
     "urls=(",
     ...queue.map((entry) => `"${entry.url}"`),
     ")",
+    "sha1s=(",
+    ...queue.map((entry) => `"${entry.sha1 || ""}"`),
+    ")",
     "total=${#urls[@]}",
     "queued=\"\"",
     'for url in "${urls[@]}"; do queued="$queued ${url##*/}"; done',
@@ -249,7 +252,7 @@
     "}",
     "",
     "fetch() {",
-    '  index="$1"; url="$2"; name="${url##*/}"',
+    '  index="$1"; url="$2"; expected_sha1="$3"; name="${url##*/}"',
     '  size="$(remote_size "$url")"',
     `  printf '[%s/%s] %s (%s)\\n' "$index" "$total" "$name" "$(human "$size")"`,
     '  started=$SECONDS',
@@ -258,6 +261,16 @@
     "  # -C - resumes a partial file and leaves a complete one alone.",
     '  curl -fL -OC - --retry 3 --retry-delay 5 -sS "$url" || { rm -f "$work/progress.$index"; echo "$name" >> "$work/failed"; return 1; }',
     '  rm -f "$work/progress.$index"',
+    '  if [ -n "$expected_sha1" ]; then',
+    '    actual_sha1="$(shasum -a 1 "$name" | awk "{print \\$1}")"',
+    '    if [ "$actual_sha1" != "$expected_sha1" ]; then',
+    `      printf '      SHA-1 MISMATCH for %s (expected %s, got %s)\\n' "$name" "$expected_sha1" "$actual_sha1" >&2`,
+    '      mv -f "$name" "$name.sha1-mismatch"',
+    '      echo "$name (SHA-1 mismatch; saved as $name.sha1-mismatch)" >> "$work/failed"',
+    '      return 1',
+    '    fi',
+    `    printf '      SHA-1 verified: %s\\n' "$expected_sha1"`,
+    '  fi',
     '  [ "$prune" = "delete" ] && prune_old "$name"',
     '  done_count="$(record)"',
     '  percent=$((done_count * 100 / total))',
@@ -272,9 +285,9 @@
     'for url in "${urls[@]}"; do',
     "  index=$((index + 1))",
     '  if [ "$jobs" -le 1 ]; then',
-    '    fetch "$index" "$url"',
+    '    fetch "$index" "$url" "${sha1s[$((index - 1))]}"',
     "  else",
-    '    fetch "$index" "$url" &',
+    '    fetch "$index" "$url" "${sha1s[$((index - 1))]}" &',
     "    # Keep at most $jobs transfers running at once.",
     '    while [ "$(jobs -pr | wc -l | tr -d " ")" -ge "$((jobs + 1))" ]; do sleep 0.5; done',
     "  fi",
@@ -359,7 +372,7 @@
       selected.forEach((item) => {
         if (known.has(item.dataset.url)) return;
         known.add(item.dataset.url);
-        queue.push({ url: item.dataset.url, name: item.dataset.name });
+        queue.push({ url: item.dataset.url, name: item.dataset.name, sha1: item.dataset.sha1 || "" });
         added += 1;
       });
       write(queue);

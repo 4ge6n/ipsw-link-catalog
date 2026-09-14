@@ -96,6 +96,10 @@ def fetch(timeout: int) -> list[dict]:
             "version": str(version),
             "build": str(build),
             "url": url,
+            # FirmwareSHA1 is supplied by Apple's restore catalog for most
+            # current public restore images. Keep it with the Apple CDN URL so
+            # downloaded files can be verified without trusting a mirror.
+            "sha1": str(entry.get("FirmwareSHA1", "")).lower(),
             "released_at": None,
             # Apple only lists what it will currently restore.
             "signed": True,
