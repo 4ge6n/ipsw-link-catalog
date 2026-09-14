@@ -35,7 +35,7 @@ p{margin:.5rem 0}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 code{font:.92em/1.4 ui-monospace,SFMono-Regular,Menlo,monospace}
-.meta{color:var(--muted);font-size:.9rem}time[data-local-time]{color:var(--text);font-variant-numeric:tabular-nums}.when-ago{color:var(--muted)}.when-ago::before{content:'· '}
+.meta{color:var(--muted);font-size:.9rem}time[data-local-time]{color:var(--text);font-variant-numeric:tabular-nums}.when-ago,.when-utc{color:var(--muted)}.when-ago::before,.when-utc::before{content:' · '}
 ul{list-style:none;padding:0;margin:.8rem 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
 ul li{border-top:1px solid var(--line)}
 ul li:first-child{border-top:0}
@@ -110,7 +110,9 @@ def stamp(moment: datetime) -> str:
     """Readable in Tokyo time, rewritten to the reader's own zone by script."""
     tokyo=moment.astimezone(ZoneInfo("Asia/Tokyo"))
     iso=moment.isoformat().replace("+00:00", "Z")
-    return f"<time datetime='{iso}' data-local-time>{tokyo.strftime('%b %-d, %Y %H:%M')} JST</time>"
+    # UTC is the same for every reader, so it is rendered once and left alone.
+    return (f"<time datetime='{iso}' data-local-time>{tokyo.strftime('%b %-d, %Y %H:%M')} JST</time>"
+            f"<span class='when-utc' data-utc-time>{moment.strftime('%b %-d, %Y %H:%M')} UTC</span>")
 def release_time(value: str | None) -> str:
     if not value:
         return "Release time: unknown (the source did not publish a time)"
