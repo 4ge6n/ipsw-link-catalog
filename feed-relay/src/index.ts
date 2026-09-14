@@ -105,7 +105,15 @@ export class FeedState extends DurableObject<Env> {
       },
       body: JSON.stringify({ event_type: "firmware_release", client_payload: { sources: current.sources, retry_attempt: attempt } }),
     });
-    if (!response.ok) throw new Error(`GitHub repository_dispatch: HTTP ${response.status}`);
+    if (!response.ok) {
+      // A rejected dispatch used to throw here, which left checked_at unwritten
+      // and made a broken token look like a relay that had stopped running.
+      // Record it, keep the pending fingerprint, and try again next tick.
+      await this.ctx.storage.put("last_dispatch_error", `${new Date().toISOString()} HTTP ${response.status}`);
+      await this.ctx.storage.put("checked_at", new Date().toISOString());
+      return { changed: sourceChanged, initial: false, retry_attempt: attempt };
+    }
+    await this.ctx.storage.delete("last_dispatch_error");
     await this.ctx.storage.delete("pending_fingerprint");
     const nextAttempt = attempt + 1;
     if (nextAttempt < RETRY_DELAYS_MS.length) {
@@ -125,6 +133,9 @@ export class FeedState extends DurableObject<Env> {
       checked_at: await this.ctx.storage.get("checked_at"),
       next_retry_at: await this.ctx.storage.get("next_retry_at"),
       retry_attempt: await this.ctx.storage.get("retry_attempt"),
+      // Present only when GitHub last refused the dispatch, which is the one
+      // failure that cannot be seen from outside the Worker otherwise.
+      last_dispatch_error: await this.ctx.storage.get("last_dispatch_error"),
     };
   }
 }
