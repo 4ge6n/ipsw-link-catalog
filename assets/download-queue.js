@@ -236,6 +236,9 @@
     if (!iOS) section.querySelector("[data-download-queue-all]").textContent = running ? "Stop" : (queue.length > batchSize(section) ? `Download next ${batchSize(section)}` : "Download all");
     const count = section.querySelector("[data-download-queue-count]");
     const body = section.querySelector("[data-download-queue-panel-body]");
+    // Rebuilding the list would otherwise jump it back to the first entry.
+    const scrolled = body.querySelector(".queue-list");
+    const offset = scrolled ? scrolled.scrollTop : 0;
     count.textContent = queue.length ? ` (${queue.length})` : "";
     body.textContent = "";
     if (!queue.length) {
@@ -262,6 +265,7 @@
       list.appendChild(item);
     });
     body.appendChild(list);
+    list.scrollTop = offset;
   });
   sections.forEach((section) => {
     // A release page scopes its buttons to its own table; a page that lists
