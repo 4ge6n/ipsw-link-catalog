@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-09-14T17:28:04Z"
+      "checked_at": "2026-09-14T17:37:40Z"
     }
   ],
   "firmwares": [
@@ -24,7 +24,7 @@
       "filename": "iPad_10.2_2020_26.7_23H24_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:28:04Z",
+        "checked_at": "2026-09-14T17:37:40Z",
         "unsigned_since": null
       }
     },
@@ -40,7 +40,7 @@
       "filename": "iPad_Spring_2019_26.7_23H24_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:28:04Z",
+        "checked_at": "2026-09-14T17:37:40Z",
         "unsigned_since": null
       }
     },
@@ -48,6 +48,7 @@
       "name": "iPad Pro 3 (11-inch, WiFi)",
       "devices": [
         "iPad8,1",
+        "iPad8,12",
         "iPad8,2",
         "iPad8,3",
         "iPad8,4",
@@ -60,11 +61,11 @@
       "filename": "iPad_Pro_A12X_A12Z_26.7_23H24_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:28:04Z",
+        "checked_at": "2026-09-14T17:37:40Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-14T17:20:28Z",
-  "last_seen_at": "2026-09-14T17:28:04Z"
+  "last_seen_at": "2026-09-14T17:37:40Z"
 }

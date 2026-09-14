@@ -4,7 +4,7 @@
   "os_key": "macos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-14T17:28:04Z",
+  "generated_at": "2026-09-14T17:37:40Z",
   "release_count": 90,
   "firmware_count": 90,
   "releases": [
@@ -12,26 +12,38 @@
       "id": "macos-release-27.0-26A428",
       "version": "27.0",
       "build": "26A428",
-      "released_at": "2026-09-14T17:18:12Z",
+      "released_at": "2026-09-14T17:18:47Z",
       "signed_firmware_count": 1,
       "total_firmware_count": 1,
       "data": "27.0/26A428.json",
       "firmwares": [
         {
-          "id": "macos-release-27.0-26A428-Mac14,3",
-          "name": "MacBook Pro (M1 Pro, 16-inch, 2021)",
+          "id": "macos-release-27.0-26A428-Mac13,1",
+          "name": "MacBook Air (M1, Late 2020)",
           "devices": [
+            "Mac13,1",
+            "Mac13,2",
+            "Mac14,12",
+            "Mac14,14",
             "Mac14,3",
             "Mac14,6",
+            "Mac14,7",
+            "Mac14,8",
             "Mac15,10",
             "Mac15,4",
             "Mac15,5",
             "Mac15,7",
+            "Mac15,8",
             "Mac16,10",
             "Mac16,11",
+            "Mac16,12",
+            "Mac16,9",
+            "Mac17,2",
             "Mac17,5",
             "Mac17,7",
+            "MacBookAir10,1",
             "MacBookPro18,1",
+            "MacBookPro18,3",
             "MacBookPro18,4"
           ],
           "filename": "UniversalMac_27.0_26A428_Restore.ipsw",
@@ -3825,5 +3837,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T02:28:04+09:00"
+  "generated_at_tokyo": "2026-09-15T02:37:40+09:00"
 }

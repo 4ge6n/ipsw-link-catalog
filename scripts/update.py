@@ -1,6 +1,7 @@
 """Atomically fetch, merge, generate, and validate the IPSW JSON catalog."""
 from __future__ import annotations
 import argparse, json, os, re, shutil, sys, tempfile
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 from pathlib import Path
@@ -8,9 +9,9 @@ from urllib.parse import urlparse
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from scripts.generate_readme import content, replace
 from scripts.generate_site import generate as generate_site
-from scripts.normalize import OS_ORDER, safe_build
+from scripts.normalize import OS_ORDER, safe_build, version_key
 from scripts.organize import all_index, index, merge, normalize_candidates
-from scripts.sources import apple, beta, release
+from scripts.sources import apple, beta, release, tss
 from scripts.validate import validate_api
 
 ROOT=Path(__file__).parent.parent
@@ -55,6 +56,42 @@ def apply_device_names(records, names) -> None:
                 if device in names:
                     firmware["name"]=names[device]
                     break
+def verify_signing(records, apple_urls, settings, now, limit=12):
+    """Confirm with Apple whether builds it no longer lists are still signed.
+
+    Apple's catalog only names the build it currently restores for each
+    device, so anything else it says nothing about. Signing is a property of
+    the build, so one answer settles every file in it.
+    """
+    pending={}
+    for record in records:
+        # A Mac restores through a different personalization flow, and the
+        # mobile-shaped request is refused for every build including ones
+        # Apple shipped today, so its signing is left to the catalog.
+        if record["channel"] != "release" or record["os_key"] == "macos": continue
+        stale=[f for f in record["firmwares"]
+               if f["signing"]["status"] == "signed" and f["url"] not in apple_urls]
+        if stale: pending[(record["os_key"], record["version"], record["build"])]=(record, stale)
+    newest=sorted(pending, key=lambda key: version_key(key[1]), reverse=True)[:limit]
+    def probe(key):
+        record, stale = pending[key]
+        for firmware in stale:
+            try: verdict=tss.signing_status(firmware["url"], settings["request_timeout_seconds"])
+            except Exception: continue
+            if verdict is not None: return key, verdict
+        return key, None
+    checked=0
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for key, verdict in pool.map(probe, newest):
+            if verdict is None: continue
+            checked += 1
+            record, stale = pending[key]
+            for firmware in stale:
+                firmware["signing"]["status"]="signed" if verdict else "unsigned"
+                firmware["signing"]["checked_at"]=now
+                if not verdict and not firmware["signing"].get("unsigned_since"):
+                    firmware["signing"]["unsigned_since"]=now
+    return {"builds_probed": len(newest), "builds_answered": checked}
 def generate(records, api, settings, now, now_tokyo):
     indexes={}
     for os_key in OS_ORDER:
@@ -106,6 +143,9 @@ def main():
     observed_records={(r["os_key"], r["channel"], r["version"], r["build"]) for r in observed}
     observed_urls={fw["url"] for record in observed for fw in record.get("firmwares", [])}
     records=merge(old, observed, now)
+    if not args.input and not args.bootstrap_empty:
+        apple_urls={row["url"] for row in candidates if row.get("source") == "apple"}
+        print(json.dumps(verify_signing(records, apple_urls, settings, now)))
     with tempfile.TemporaryDirectory(prefix="ipsw-catalog-") as tmp:
         stage=Path(tmp)/"api"; site_stage=Path(tmp)/"site"; indexes=generate(records, stage, settings, now, now_tokyo)
         errors=validate_api(stage, set(settings["allowed_cdn_hosts"]))

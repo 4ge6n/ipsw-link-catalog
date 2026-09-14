@@ -4,9 +4,9 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-14T17:28:04Z",
-  "release_count": 11,
-  "firmware_count": 40,
+  "generated_at": "2026-09-14T17:37:40Z",
+  "release_count": 10,
+  "firmware_count": 39,
   "releases": [
     {
       "id": "ipados-release-27.0-24A437",
@@ -56,7 +56,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad13,16",
-          "name": "iPad Air (5th generation) Wi",
+          "name": "iPad Air 5 (WiFi)",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -415,26 +415,6 @@
       ]
     },
     {
-      "id": "ipados-release-10.3.4-14G61",
-      "version": "10.3.4",
-      "build": "14G61",
-      "released_at": "2019-07-22T17:06:23Z",
-      "data": "10.3.4/14G61.json",
-      "firmwares": [
-        {
-          "id": "ipados-release-10.3.4-14G61-iPad3,5",
-          "name": "iPad 4 (GSM)",
-          "devices": [
-            "iPad3,5",
-            "iPad3,6"
-          ],
-          "filename": "iPad_32bit_10.3.4_14G61_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2019/ios/091-25014-20190722-0C1B95A6-992C-11E9-A2EE-E1C9A77C2E40/iPad_32bit_10.3.4_14G61_Restore.ipsw",
-          "signed": true
-        }
-      ]
-    },
-    {
       "id": "ipados-release-9.3.6-13G37",
       "version": "9.3.6",
       "build": "13G37",
@@ -572,5 +552,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T02:28:04+09:00"
+  "generated_at_tokyo": "2026-09-15T02:37:40+09:00"
 }

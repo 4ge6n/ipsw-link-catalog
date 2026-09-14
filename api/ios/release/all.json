@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-14T17:28:04Z",
+  "generated_at": "2026-09-14T17:37:40Z",
   "release_count": 316,
   "firmware_count": 2999,
   "releases": [
@@ -29032,7 +29032,7 @@
       "version": "10.3.4",
       "build": "14G61",
       "released_at": "2019-07-22T17:14:06Z",
-      "signed_firmware_count": 1,
+      "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "10.3.4/14G61.json",
       "firmwares": [
@@ -29045,7 +29045,7 @@
           ],
           "filename": "iPhone_4.0_32bit_10.3.4_14G61_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2019/ios/091-25277-20190722-0C1B94DE-992C-11E9-A2EE-E2C9A77C2E40/iPhone_4.0_32bit_10.3.4_14G61_Restore.ipsw",
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -29054,7 +29054,7 @@
       "version": "9.3.6",
       "build": "13G37",
       "released_at": "2019-07-22T17:04:57Z",
-      "signed_firmware_count": 1,
+      "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "9.3.6/13G37.json",
       "firmwares": [
@@ -29066,7 +29066,7 @@
           ],
           "filename": "iPhone4,1_9.3.6_13G37_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2019/ios/041-80043-20190722-6C65AD27-69D8-499C-BC15-DE7AC74DE2BD/iPhone4,1_9.3.6_13G37_Restore.ipsw",
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -34595,5 +34595,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T02:28:04+09:00"
+  "generated_at_tokyo": "2026-09-15T02:37:40+09:00"
 }

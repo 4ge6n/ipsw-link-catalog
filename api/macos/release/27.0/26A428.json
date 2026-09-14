@@ -4,41 +4,53 @@
   "version": "27.0",
   "version_label": "27.0",
   "build": "26A428",
-  "released_at": "2026-09-14T17:18:12Z",
+  "released_at": "2026-09-14T17:18:47Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "ipsw.me",
-      "checked_at": "2026-09-14T17:28:04Z"
+      "checked_at": "2026-09-14T17:37:40Z"
     }
   ],
   "firmwares": [
     {
-      "name": "MacBook Pro (M1 Pro, 16-inch, 2021)",
+      "name": "MacBook Air (M1, Late 2020)",
       "devices": [
+        "Mac13,1",
+        "Mac13,2",
+        "Mac14,12",
+        "Mac14,14",
         "Mac14,3",
         "Mac14,6",
+        "Mac14,7",
+        "Mac14,8",
         "Mac15,10",
         "Mac15,4",
         "Mac15,5",
         "Mac15,7",
+        "Mac15,8",
         "Mac16,10",
         "Mac16,11",
+        "Mac16,12",
+        "Mac16,9",
+        "Mac17,2",
         "Mac17,5",
         "Mac17,7",
+        "MacBookAir10,1",
         "MacBookPro18,1",
+        "MacBookPro18,3",
         "MacBookPro18,4"
       ],
       "url": "https://updates.cdn-apple.com/2026FallFCS/afcfc88e-bbe6-44bf-a5da-07c56eebc06c/UniversalMac_27.0_26A428_Restore.ipsw",
       "filename": "UniversalMac_27.0_26A428_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:28:04Z",
+        "checked_at": "2026-09-14T17:37:40Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-14T17:20:28Z",
-  "last_seen_at": "2026-09-14T17:28:04Z"
+  "last_seen_at": "2026-09-14T17:37:40Z"
 }

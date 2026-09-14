@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-14T17:28:04Z",
+  "generated_at": "2026-09-14T17:37:40Z",
   "release_count": 267,
   "firmware_count": 2175,
   "releases": [
@@ -150,7 +150,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad13,16",
-          "name": "iPad Air (5th generation) Wi",
+          "name": "iPad Air 5 (WiFi)",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -251,6 +251,7 @@
           "name": "iPad Pro 3 (11-inch, WiFi)",
           "devices": [
             "iPad8,1",
+            "iPad8,12",
             "iPad8,2",
             "iPad8,3",
             "iPad8,4",
@@ -22735,7 +22736,7 @@
       "version": "10.3.4",
       "build": "14G61",
       "released_at": "2019-07-22T17:06:23Z",
-      "signed_firmware_count": 1,
+      "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "10.3.4/14G61.json",
       "firmwares": [
@@ -22748,7 +22749,7 @@
           ],
           "filename": "iPad_32bit_10.3.4_14G61_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2019/ios/091-25014-20190722-0C1B95A6-992C-11E9-A2EE-E1C9A77C2E40/iPad_32bit_10.3.4_14G61_Restore.ipsw",
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -28980,5 +28981,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T02:28:04+09:00"
+  "generated_at_tokyo": "2026-09-15T02:37:40+09:00"
 }
