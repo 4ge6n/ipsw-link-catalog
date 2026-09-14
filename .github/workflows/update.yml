@@ -21,7 +21,7 @@ on:
   repository_dispatch:
     types: [firmware_release]
   push:
-    paths: ['scripts/**', 'schemas/**', 'tests/**', 'config.json', '.github/workflows/update.yml']
+    paths: ['assets/**', 'scripts/**', 'schemas/**', 'site/**', 'tests/**', 'config.json', '.github/workflows/update.yml']
 permissions:
   contents: write
   pages: write
@@ -82,9 +82,9 @@ jobs:
           fi
       # On the schedule most runs find nothing, so only redeploy real changes.
       - uses: actions/configure-pages@v5
-        if: steps.commit.outputs.changed == 'true'
+        if: github.event_name == 'push' || steps.commit.outputs.changed == 'true'
       - uses: actions/upload-pages-artifact@v3
-        if: steps.commit.outputs.changed == 'true'
+        if: github.event_name == 'push' || steps.commit.outputs.changed == 'true'
         with: {path: site}
       - uses: actions/deploy-pages@v4
-        if: steps.commit.outputs.changed == 'true'
+        if: github.event_name == 'push' || steps.commit.outputs.changed == 'true'
