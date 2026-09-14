@@ -147,6 +147,27 @@
   const parallel = (section) => section.querySelector("[data-download-queue-jobs]").value;
   const choice = (section, name) => section.querySelector(`[data-download-queue-${name}]`).value;
   const shellQuote = (value) => value.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+  const updateCommands = () => sections.forEach((section) => {
+    const dest = destination(section);
+    section.querySelector("[data-download-queue-command]").textContent = `bash ~/Downloads/ipsw-queue.sh${dest ? ` "${shellQuote(dest)}"` : ""}`;
+  });
+  const copyCommand = async (section) => {
+    const command = section.querySelector("[data-download-queue-command]").textContent;
+    try {
+      await navigator.clipboard.writeText(command);
+    } catch {
+      const input = document.createElement("textarea");
+      input.value = command;
+      input.setAttribute("readonly", "");
+      input.style.position = "fixed";
+      input.style.opacity = "0";
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand("copy");
+      input.remove();
+    }
+    announce("Terminal command copied.");
+  };
   const script = (queue, dest, jobs, existing, prune) => [
     "#!/bin/bash",
     "# IPSW download queue exported from the IPSW link catalog.",
@@ -339,9 +360,17 @@
       });
     }
     const dest = section.querySelector("[data-download-queue-dest]");
-    dest.addEventListener("input", () => sections.forEach((other) => {
-      other.querySelector("[data-download-queue-dest]").value = dest.value;
-    }));
+    const command = section.querySelector("[data-download-queue-command]");
+    const copyButton = document.createElement("button");
+    copyButton.type = "button";
+    copyButton.className = "queue-copy-command";
+    copyButton.textContent = "Copy";
+    copyButton.addEventListener("click", () => copyCommand(section));
+    command.parentElement.append(" ", copyButton);
+    dest.addEventListener("input", () => {
+      sections.forEach((other) => { other.querySelector("[data-download-queue-dest]").value = dest.value; });
+      updateCommands();
+    });
     const exportButton = section.querySelector("[data-download-queue-export]");
     const hint = section.querySelector("[data-download-queue-save-hint]");
     if (canChooseFolder) {
@@ -400,6 +429,7 @@
       toggle.setAttribute("aria-expanded", String(open));
     });
   });
+  updateCommands();
   render(read());
   refreshLabels();
   // Another tab, or the Safari copy of this site, may have changed the queue.
