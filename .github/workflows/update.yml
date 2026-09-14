@@ -14,8 +14,10 @@ on:
         type: boolean
   # The Cloudflare relay dispatches within minutes of a feed change; this
   # schedule is the fallback for when the relay itself is not running.
+  # GitHub drops scheduled runs under load and the top of the hour is the
+  # busiest slot, so these sit off the common minutes.
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '7,22,37,52 * * * *'
   repository_dispatch:
     types: [firmware_release]
   push:
