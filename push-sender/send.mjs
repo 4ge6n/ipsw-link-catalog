@@ -18,9 +18,13 @@ const internal = async (path, init = {}) => {
 
 webpush.setVapidDetails("https://github.com/4ge6n", publicKey, privateKey);
 const { subscriptions } = await (await internal("/internal/subscriptions")).json();
+// A test run proves the delivery path without waiting for Apple to ship.
+const test = process.env.TEST_PUSH === "1";
 const payload = JSON.stringify({
-  title: "IPSW Link Catalog updated",
-  body: "New Apple IPSW download links are available.",
+  title: test ? "IPSW Link Catalog test" : "IPSW Link Catalog updated",
+  body: test
+    ? "Notifications are working. You will get one like this when new links appear."
+    : "New Apple IPSW download links are available.",
   url: "https://4ge6n.github.io/ipsw-link-catalog/"
 });
 
