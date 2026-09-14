@@ -14,10 +14,12 @@ ROOT = Path(__file__).parent.parent
 APP_URL = "https://4ge6n.github.io/ipsw-link-catalog"
 DOWNLOAD_QUEUE_ASSET = "download-queue.js"
 UPDATE_CHECK_ASSET = "update-check.js"
+LOCAL_TIME_ASSET = "local-time.js"
 def asset_version(name: str) -> str:
     return hashlib.sha256((ROOT / "assets" / name).read_bytes()).hexdigest()[:12]
 DOWNLOAD_QUEUE_VERSION = asset_version(DOWNLOAD_QUEUE_ASSET)
 UPDATE_CHECK_VERSION = asset_version(UPDATE_CHECK_ASSET)
+LOCAL_TIME_VERSION = asset_version(LOCAL_TIME_ASSET)
 CATALOG_BUILD = ""
 STYLE = """
 :root{color-scheme:light dark;--bg:#f5f5f7;--surface:#fff;--text:#1d1d1f;--muted:#6e6e73;--line:#d9d9de;--accent:#0071e3;--accent-text:#fff;--accent-soft:#eaf3ff;--radius:14px}
@@ -33,7 +35,7 @@ p{margin:.5rem 0}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 code{font:.92em/1.4 ui-monospace,SFMono-Regular,Menlo,monospace}
-.meta{color:var(--muted);font-size:.9rem}
+.meta{color:var(--muted);font-size:.9rem}time[data-local-time]{color:var(--text);font-variant-numeric:tabular-nums}.when-ago{color:var(--muted)}.when-ago::before{content:'· '}
 ul{list-style:none;padding:0;margin:.8rem 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
 ul li{border-top:1px solid var(--line)}
 ul li:first-child{border-top:0}
@@ -81,7 +83,7 @@ td:first-child{width:44px;text-align:center}
 """
 def write(path: Path, title: str, body: str):
     path.parent.mkdir(parents=True, exist_ok=True)
-    head=f"<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><meta name='theme-color' content='#ffffff'><meta name='catalog-build' content='{CATALOG_BUILD}' data-base='{APP_URL}/'><meta name='apple-mobile-web-app-capable' content='yes'><meta name='apple-mobile-web-app-title' content='IPSW Links'><link rel='manifest' href='{APP_URL}/manifest.webmanifest'><link rel='apple-touch-icon' href='{APP_URL}/icon.svg'><title>{html.escape(title)}</title><style>{STYLE}</style><script defer src='{APP_URL}/push-config.js'></script><script defer src='{APP_URL}/push.js'></script><script defer src='{APP_URL}/{DOWNLOAD_QUEUE_ASSET}?v={DOWNLOAD_QUEUE_VERSION}'></script><script defer src='{APP_URL}/{UPDATE_CHECK_ASSET}?v={UPDATE_CHECK_VERSION}'></script>"
+    head=f"<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><meta name='theme-color' content='#ffffff'><meta name='catalog-build' content='{CATALOG_BUILD}' data-base='{APP_URL}/'><meta name='apple-mobile-web-app-capable' content='yes'><meta name='apple-mobile-web-app-title' content='IPSW Links'><link rel='manifest' href='{APP_URL}/manifest.webmanifest'><link rel='apple-touch-icon' href='{APP_URL}/icon.svg'><title>{html.escape(title)}</title><style>{STYLE}</style><script defer src='{APP_URL}/push-config.js'></script><script defer src='{APP_URL}/push.js'></script><script defer src='{APP_URL}/{DOWNLOAD_QUEUE_ASSET}?v={DOWNLOAD_QUEUE_VERSION}'></script><script defer src='{APP_URL}/{UPDATE_CHECK_ASSET}?v={UPDATE_CHECK_VERSION}'></script><script defer src='{APP_URL}/{LOCAL_TIME_ASSET}?v={LOCAL_TIME_VERSION}'></script>"
     path.write_text(f"<!doctype html><html lang='en'><head>{head}</head><body>{body}</body></html>\n")
 def link(href: str, text: str) -> str: return f"<a href='{html.escape(href, quote=True)}'>{html.escape(text)}</a>"
 def display_version(release: dict) -> str:
@@ -104,6 +106,11 @@ def beta_release_order(release: dict) -> tuple:
     phase, sequence=(0, int(beta.group(1) or 1)) if beta else ((1, int(rc.group(1) or 1)) if rc else (2, 0))
     version=tuple(int(part) for part in release["version"].split("."))
     return version, phase, sequence, release["build"]
+def stamp(moment: datetime) -> str:
+    """Readable in Tokyo time, rewritten to the reader's own zone by script."""
+    tokyo=moment.astimezone(ZoneInfo("Asia/Tokyo"))
+    iso=moment.isoformat().replace("+00:00", "Z")
+    return f"<time datetime='{iso}' data-local-time>{tokyo.strftime('%b %-d, %Y %H:%M')} JST</time>"
 def release_time(value: str | None) -> str:
     if not value:
         return "Release time: unknown (the source did not publish a time)"
@@ -111,8 +118,7 @@ def release_time(value: str | None) -> str:
         released=datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
     except ValueError:
         return "Release time: " + html.escape(value)
-    tokyo=released.astimezone(ZoneInfo("Asia/Tokyo"))
-    return f"Released (UTC): {released.isoformat().replace('+00:00', 'Z')}<br>Released (Asia/Tokyo): {tokyo.isoformat()}"
+    return "Released " + stamp(released)
 def device_key(value: str) -> tuple:
     """Sort iPhone17,2 after iPhone9,1 by comparing digits as numbers."""
     return tuple((1, int(part), "") if part.isdigit() else (0, 0, part) for part in re.split(r"(\d+)", value) if part)
@@ -144,7 +150,8 @@ def generate(api: Path, output: Path):
     shutil.copytree(ROOT/"assets", output, dirs_exist_ok=True)
     CATALOG_BUILD=catalog_build(api)
     release_meta=json.loads((api/"ios"/"release"/"all.json").read_text())
-    updated=f"<p class='meta'>Catalog updated: UTC {html.escape(release_meta['generated_at'])} · Asia/Tokyo {html.escape(release_meta.get('generated_at_tokyo', 'unknown'))}</p>"
+    generated=datetime.fromisoformat(release_meta["generated_at"].replace("Z", "+00:00")).astimezone(timezone.utc)
+    updated=f"<p class='meta'>Catalog updated {stamp(generated)}</p>"
     combined=[]
     home=["<h1> IPSW download links</h1><p>Direct Apple CDN links, organized by OS, release channel, version, and build. IPSW files are not hosted here.</p>", "<section><h2>Update notifications</h2><p>Add this site to your iPhone Home Screen, open it as an app, then enable notifications.</p><button id='enable-notifications' type='button'>Enable update notifications</button><p id='push-status' class='meta'></p></section>", updated, "<p>{}</p>".format(link("latest/", "Latest supported downloads")+" — every operating system's supported releases on one page."), "<h2>Browse by operating system</h2>", "<ul>"]
     for os_key in OS_ORDER:
