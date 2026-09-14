@@ -4,10 +4,42 @@
   "os_key": "macos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-12T14:33:59Z",
-  "release_count": 89,
-  "firmware_count": 89,
+  "generated_at": "2026-09-14T17:20:28Z",
+  "release_count": 90,
+  "firmware_count": 90,
   "releases": [
+    {
+      "id": "macos-release-27.0-26A428",
+      "version": "27.0",
+      "build": "26A428",
+      "released_at": "2026-09-14T17:18:12Z",
+      "signed_firmware_count": 1,
+      "total_firmware_count": 1,
+      "data": "27.0/26A428.json",
+      "firmwares": [
+        {
+          "id": "macos-release-27.0-26A428-Mac14,3",
+          "name": "MacBook Pro (M1 Pro, 16-inch, 2021)",
+          "devices": [
+            "Mac14,3",
+            "Mac14,6",
+            "Mac15,10",
+            "Mac15,4",
+            "Mac15,5",
+            "Mac15,7",
+            "Mac16,10",
+            "Mac16,11",
+            "Mac17,5",
+            "Mac17,7",
+            "MacBookPro18,1",
+            "MacBookPro18,4"
+          ],
+          "filename": "UniversalMac_27.0_26A428_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/afcfc88e-bbe6-44bf-a5da-07c56eebc06c/UniversalMac_27.0_26A428_Restore.ipsw",
+          "signed": true
+        }
+      ]
+    },
     {
       "id": "macos-release-26.6.2-25G83",
       "version": "26.6.2",
@@ -3793,5 +3825,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-12T23:33:59+09:00"
+  "generated_at_tokyo": "2026-09-15T02:20:28+09:00"
 }

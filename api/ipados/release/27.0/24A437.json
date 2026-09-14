@@ -1,0 +1,59 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "27.0",
+  "version_label": "27.0",
+  "build": "24A437",
+  "released_at": "2026-09-14T17:18:34Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-14T17:20:28Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad Air 13-inch (M4, Cellular)",
+      "devices": [
+        "iPad16,11"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/3c8cd189-a82f-4ecc-892d-0c382417d4b6/iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.0_24A437_Restore.ipsw",
+      "filename": "iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.0_24A437_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-14T17:20:28Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro (M4, 11-inch, WiFi)",
+      "devices": [
+        "iPad16,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/459900f0-887c-4dee-a819-3395e7bf67b5/iPad_Pro_M4_27.0_24A437_Restore.ipsw",
+      "filename": "iPad_Pro_M4_27.0_24A437_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-14T17:20:28Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro 4 (12.9-inch, WiFi)",
+      "devices": [
+        "iPad8,11"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/146f9210-abbe-4ca7-98bc-7c92932ee940/iPad_Pro_A12X_A12Z_27.0_24A437_Restore.ipsw",
+      "filename": "iPad_Pro_A12X_A12Z_27.0_24A437_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-14T17:20:28Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-14T17:20:28Z",
+  "last_seen_at": "2026-09-14T17:20:28Z"
+}

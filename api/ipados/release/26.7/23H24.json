@@ -1,0 +1,33 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "26.7",
+  "version_label": "26.7",
+  "build": "23H24",
+  "released_at": "2026-09-14T17:18:48Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-14T17:20:28Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad Pro 3 (11-inch, WiFi)",
+      "devices": [
+        "iPad8,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/d149c4f0-483f-49e6-8f7a-ee360e195b46/iPad_Pro_A12X_A12Z_26.7_23H24_Restore.ipsw",
+      "filename": "iPad_Pro_A12X_A12Z_26.7_23H24_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-14T17:20:28Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-14T17:20:28Z",
+  "last_seen_at": "2026-09-14T17:20:28Z"
+}

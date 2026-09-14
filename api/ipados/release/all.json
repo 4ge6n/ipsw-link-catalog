@@ -4,10 +4,72 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-12T14:33:59Z",
-  "release_count": 265,
-  "firmware_count": 2156,
+  "generated_at": "2026-09-14T17:20:28Z",
+  "release_count": 267,
+  "firmware_count": 2160,
   "releases": [
+    {
+      "id": "ipados-release-27.0-24A437",
+      "version": "27.0",
+      "build": "24A437",
+      "released_at": "2026-09-14T17:18:34Z",
+      "signed_firmware_count": 3,
+      "total_firmware_count": 3,
+      "data": "27.0/24A437.json",
+      "firmwares": [
+        {
+          "id": "ipados-release-27.0-24A437-iPad16,11",
+          "name": "iPad Air 13-inch (M4, Cellular)",
+          "devices": [
+            "iPad16,11"
+          ],
+          "filename": "iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.0_24A437_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/3c8cd189-a82f-4ecc-892d-0c382417d4b6/iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.0_24A437_Restore.ipsw",
+          "signed": true
+        },
+        {
+          "id": "ipados-release-27.0-24A437-iPad16,3",
+          "name": "iPad Pro (M4, 11-inch, WiFi)",
+          "devices": [
+            "iPad16,3"
+          ],
+          "filename": "iPad_Pro_M4_27.0_24A437_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/459900f0-887c-4dee-a819-3395e7bf67b5/iPad_Pro_M4_27.0_24A437_Restore.ipsw",
+          "signed": true
+        },
+        {
+          "id": "ipados-release-27.0-24A437-iPad8,11",
+          "name": "iPad Pro 4 (12.9-inch, WiFi)",
+          "devices": [
+            "iPad8,11"
+          ],
+          "filename": "iPad_Pro_A12X_A12Z_27.0_24A437_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/146f9210-abbe-4ca7-98bc-7c92932ee940/iPad_Pro_A12X_A12Z_27.0_24A437_Restore.ipsw",
+          "signed": true
+        }
+      ]
+    },
+    {
+      "id": "ipados-release-26.7-23H24",
+      "version": "26.7",
+      "build": "23H24",
+      "released_at": "2026-09-14T17:18:48Z",
+      "signed_firmware_count": 1,
+      "total_firmware_count": 1,
+      "data": "26.7/23H24.json",
+      "firmwares": [
+        {
+          "id": "ipados-release-26.7-23H24-iPad8,1",
+          "name": "iPad Pro 3 (11-inch, WiFi)",
+          "devices": [
+            "iPad8,1"
+          ],
+          "filename": "iPad_Pro_A12X_A12Z_26.7_23H24_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/d149c4f0-483f-49e6-8f7a-ee360e195b46/iPad_Pro_A12X_A12Z_26.7_23H24_Restore.ipsw",
+          "signed": true
+        }
+      ]
+    },
     {
       "id": "ipados-release-26.6.2-23G90",
       "version": "26.6.2",
@@ -28723,5 +28785,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-12T23:33:59+09:00"
+  "generated_at_tokyo": "2026-09-15T02:20:28+09:00"
 }

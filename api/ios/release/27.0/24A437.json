@@ -1,0 +1,59 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "27.0",
+  "version_label": "27.0",
+  "build": "24A437",
+  "released_at": "2026-09-14T17:18:43Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-14T17:20:28Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone 17",
+      "devices": [
+        "iPhone18,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/b18c9502-c21d-4555-9bf7-21f3a238e6d7/iPhone18,3_27.0_24A437_Restore.ipsw",
+      "filename": "iPhone18,3_27.0_24A437_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-14T17:20:28Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 16",
+      "devices": [
+        "iPhone17,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/5130b3f9-3b4e-469a-b60e-93f6b310cdd9/iPhone17,3_27.0_24A437_Restore.ipsw",
+      "filename": "iPhone17,3_27.0_24A437_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-14T17:20:28Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 14 Pro",
+      "devices": [
+        "iPhone15,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/2d4e0804-d9ba-4b64-914b-da8ab712fdfb/iPhone15,2_27.0_24A437_Restore.ipsw",
+      "filename": "iPhone15,2_27.0_24A437_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-09-14T17:20:28Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-09-14T17:20:28Z",
+  "last_seen_at": "2026-09-14T17:20:28Z"
+}

@@ -4,10 +4,40 @@
   "os_key": "macos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-12T14:33:59Z",
-  "release_count": 1,
-  "firmware_count": 1,
+  "generated_at": "2026-09-14T17:20:28Z",
+  "release_count": 2,
+  "firmware_count": 2,
   "releases": [
+    {
+      "id": "macos-release-27.0-26A428",
+      "version": "27.0",
+      "build": "26A428",
+      "released_at": "2026-09-14T17:18:12Z",
+      "data": "27.0/26A428.json",
+      "firmwares": [
+        {
+          "id": "macos-release-27.0-26A428-Mac14,3",
+          "name": "MacBook Pro (M1 Pro, 16-inch, 2021)",
+          "devices": [
+            "Mac14,3",
+            "Mac14,6",
+            "Mac15,10",
+            "Mac15,4",
+            "Mac15,5",
+            "Mac15,7",
+            "Mac16,10",
+            "Mac16,11",
+            "Mac17,5",
+            "Mac17,7",
+            "MacBookPro18,1",
+            "MacBookPro18,4"
+          ],
+          "filename": "UniversalMac_27.0_26A428_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/afcfc88e-bbe6-44bf-a5da-07c56eebc06c/UniversalMac_27.0_26A428_Restore.ipsw",
+          "signed": true
+        }
+      ]
+    },
     {
       "id": "macos-release-26.6.2-25G83",
       "version": "26.6.2",
@@ -27,27 +57,19 @@
             "Mac14,14",
             "Mac14,15",
             "Mac14,2",
-            "Mac14,3",
             "Mac14,5",
-            "Mac14,6",
             "Mac14,7",
             "Mac14,8",
             "Mac14,9",
-            "Mac15,10",
             "Mac15,11",
             "Mac15,12",
             "Mac15,13",
             "Mac15,14",
             "Mac15,3",
-            "Mac15,4",
-            "Mac15,5",
             "Mac15,6",
-            "Mac15,7",
             "Mac15,8",
             "Mac15,9",
             "Mac16,1",
-            "Mac16,10",
-            "Mac16,11",
             "Mac16,12",
             "Mac16,13",
             "Mac16,2",
@@ -60,17 +82,13 @@
             "Mac17,2",
             "Mac17,3",
             "Mac17,4",
-            "Mac17,5",
             "Mac17,6",
-            "Mac17,7",
             "Mac17,8",
             "Mac17,9",
             "MacBookAir10,1",
             "MacBookPro17,1",
-            "MacBookPro18,1",
             "MacBookPro18,2",
             "MacBookPro18,3",
-            "MacBookPro18,4",
             "Macmini9,1"
           ],
           "filename": "UniversalMac_26.6.2_25G83_Restore.ipsw",
@@ -80,5 +98,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-12T23:33:59+09:00"
+  "generated_at_tokyo": "2026-09-15T02:20:28+09:00"
 }
