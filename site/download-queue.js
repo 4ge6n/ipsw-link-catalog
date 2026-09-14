@@ -110,6 +110,24 @@
     const count = Math.min(limit, left || limit);
     button.textContent = left > count ? `Download next ${count}` : "Download all";
   });
+  // A picker never reveals the chosen path, so let the user place the script
+  // with the system dialog and have the script download beside itself.
+  const saveFile = async (name, body, type) => {
+    if (window.showSaveFilePicker) {
+      try {
+        const handle = await window.showSaveFilePicker({ suggestedName: name, types: [type] });
+        const writable = await handle.createWritable();
+        await writable.write(body);
+        await writable.close();
+        return handle.name;
+      } catch (error) {
+        if (error && error.name === "AbortError") return null;
+        // Anything else (an unsupported context, a denied prompt) falls back.
+      }
+    }
+    saveText(name, body);
+    return name;
+  };
   const saveText = (name, body) => {
     const url = URL.createObjectURL(new Blob([body], { type: "text/plain" }));
     const anchor = document.createElement("a");
@@ -122,16 +140,18 @@
   };
   // curl runs one URL at a time and resumes a partial file, which is what a
   // browser cannot do: it never learns when a cross-origin download finished.
-  const destination = (section) => section.querySelector("[data-download-queue-dest]").value.trim() || "~/Downloads";
+  const destination = (section) => section.querySelector("[data-download-queue-dest]").value.trim();
   const parallel = (section) => section.querySelector("[data-download-queue-jobs]").value;
   const shellQuote = (value) => value.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
   const script = (queue, dest, jobs) => [
     "#!/bin/bash",
     "# IPSW download queue exported from the IPSW link catalog.",
     "# Usage: bash ipsw-queue.sh [destination] [parallel downloads]",
-    `#        defaults: ${dest}, ${jobs} at a time`,
+    `#        defaults: ${dest || "the folder holding this script"}, ${jobs} at a time`,
     "set -u",
-    `dest="\${1:-${shellQuote(dest)}}"`,
+    '# Files land next to this script unless another folder is given.',
+    'here="$(cd "$(dirname "$0")" && pwd)"',
+    dest ? `dest="\${1:-${shellQuote(dest)}}"` : 'dest="${1:-$here}"',
     `jobs="\${2:-${jobs}}"`,
     '# "~" does not expand inside quotes, so do it here.',
     'case "$dest" in "~") dest="$HOME";; "~/"*) dest="$HOME/${dest#\\~/}";; esac',
@@ -143,6 +163,16 @@
     "total=${#urls[@]}",
     'work="$(mktemp -d)"',
     "trap 'rm -rf \"$work\"' EXIT",
+    'printf 0 > "$work/count"',
+    "",
+    "# Parallel jobs would otherwise read the same count and report it twice.",
+    "record() {",
+    '  while ! mkdir "$work/lock" 2>/dev/null; do sleep 0.05; done',
+    '  count=$(($(cat "$work/count") + 1))',
+    '  printf "%s" "$count" > "$work/count"',
+    '  rmdir "$work/lock"',
+    '  printf "%s" "$count"',
+    "}",
     "",
     "human() {",
     "  awk -v bytes=\"$1\" 'BEGIN{ if (bytes <= 0) { printf \"unknown size\"; exit }",
@@ -166,8 +196,8 @@
     "  else",
     '    curl -fL -OC - --retry 3 --retry-delay 5 -sS "$url" || { echo "$name" >> "$work/failed"; return 1; }',
     "  fi",
-    '  echo "$name" >> "$work/done"',
-    `  printf '      finished %s in %ss (%s of %s complete)\\n' "$name" "$((SECONDS - started))" "$(wc -l < "$work/done" | tr -d " ")" "$total"`,
+    '  done_count="$(record)"',
+    `  printf '      finished %s in %ss (%s of %s complete)\\n' "$name" "$((SECONDS - started))" "$done_count" "$total"`,
     "}",
     "",
     'printf \'Downloading %s file(s) into %s, %s at a time.\\n\' "$total" "$dest" "$jobs"',
@@ -184,7 +214,7 @@
     "done",
     "wait",
     "",
-    'completed=0; [ -f "$work/done" ] && completed="$(wc -l < "$work/done" | tr -d " ")"',
+    'completed="$(cat "$work/count")"',
     'if [ -f "$work/failed" ]; then',
     `  printf 'Finished %s of %s. Failed:\\n' "$completed" "$total" >&2`,
     '  sed "s/^/  /" "$work/failed" >&2',
@@ -193,7 +223,7 @@
     "fi",
     `printf 'Done: %s file(s) in %s\\n' "$completed" "$dest"`,
   ].join("\n") + "\n";
-  const runCommand = () => "bash ~/Downloads/ipsw-queue.sh";
+  const runCommand = () => "bash ipsw-queue.sh";
   const openNext = () => {
     haptic([12, 40, 18]);
     const queue = read();
@@ -284,19 +314,21 @@
     jobs.addEventListener("change", () => sections.forEach((other) => {
       other.querySelector("[data-download-queue-jobs]").value = jobs.value;
     }));
-    section.querySelector("[data-download-queue-export]").addEventListener("click", () => {
+    section.querySelector("[data-download-queue-export]").addEventListener("click", async () => {
       const queue = read();
       if (!queue.length) { announce("The queue is empty."); return; }
       haptic(10);
-      saveText("ipsw-queue.sh", script(queue, destination(section), parallel(section)));
-      announce(`Saved ipsw-queue.sh: ${queue.length} file(s) into ${destination(section)}, ${parallel(section)} at a time. Run: ${runCommand()}`);
+      const dest = destination(section);
+      const saved = await saveFile("ipsw-queue.sh", script(queue, dest, parallel(section)), { description: "Shell script", accept: { "text/x-shellscript": [".sh"] } });
+      if (!saved) { announce("Nothing saved."); return; }
+      announce(`Saved ${saved}: ${queue.length} file(s) into ${dest || "the folder you chose"}, ${parallel(section)} at a time. Run it with: bash ${saved}`);
     });
-    section.querySelector("[data-download-queue-list]").addEventListener("click", () => {
+    section.querySelector("[data-download-queue-list]").addEventListener("click", async () => {
       const queue = read();
       if (!queue.length) { announce("The queue is empty."); return; }
       haptic(10);
-      saveText("ipsw-queue.txt", queue.map((entry) => entry.url).join("\n") + "\n");
-      announce(`Saved ipsw-queue.txt with ${queue.length} URL(s), for aria2c or wget.`);
+      const saved = await saveFile("ipsw-queue.txt", queue.map((entry) => entry.url).join("\n") + "\n", { description: "URL list", accept: { "text/plain": [".txt"] } });
+      announce(saved ? `Saved ${saved} with ${queue.length} URL(s), for aria2c or wget.` : "Nothing saved.");
     });
     section.querySelector("[data-download-queue-copy]").addEventListener("click", async () => {
       haptic(10);
