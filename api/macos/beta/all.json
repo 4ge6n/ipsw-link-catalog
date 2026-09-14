@@ -4,7 +4,7 @@
   "os_key": "macos",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-09-14T17:37:40Z",
+  "generated_at": "2026-09-14T17:40:25Z",
   "release_count": 273,
   "firmware_count": 273,
   "releases": [
@@ -689,7 +689,7 @@
       "firmwares": [
         {
           "id": "macos-beta-27.0-rc-26A428-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "name": "MacBook Pro (14-inch, M5 Pro)",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -13176,5 +13176,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T02:37:40+09:00"
+  "generated_at_tokyo": "2026-09-15T02:40:25+09:00"
 }

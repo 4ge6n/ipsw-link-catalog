@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-14T17:37:40Z",
+  "generated_at": "2026-09-14T17:40:25Z",
   "release_count": 10,
   "firmware_count": 39,
   "releases": [
@@ -17,7 +17,7 @@
       "firmwares": [
         {
           "id": "ipados-release-27.0-24A437-iPad12,1",
-          "name": "iPad (9th generation) Wi",
+          "name": "iPad (WiFi, 9th generation)",
           "devices": [
             "iPad12,1",
             "iPad12,2"
@@ -28,7 +28,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad13,1",
-          "name": "iPad Air (4th generation) Wi",
+          "name": "iPad Air 4 (WiFi)",
           "devices": [
             "iPad13,1",
             "iPad13,2"
@@ -39,7 +39,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad13,10",
-          "name": "iPad Pro 12.9",
+          "name": "iPad Pro (11-inch, WiFi) (3rd generation)",
           "devices": [
             "iPad13,10",
             "iPad13,11",
@@ -67,7 +67,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad13,18",
-          "name": "iPad (10th generation) Wi",
+          "name": "iPad (WiFi, 10th generation)",
           "devices": [
             "iPad13,18",
             "iPad13,19"
@@ -78,7 +78,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad14,1",
-          "name": "iPad mini (6th generation) Wi",
+          "name": "iPad mini 6 (WiFi)",
           "devices": [
             "iPad14,1",
             "iPad14,2"
@@ -89,7 +89,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad14,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air (M2, 11-inch, WiFi)",
           "devices": [
             "iPad14,10",
             "iPad14,11",
@@ -102,7 +102,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad14,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro (11-inch, WiFi) (4th generation)",
           "devices": [
             "iPad14,3",
             "iPad14,4",
@@ -115,7 +115,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad15,3",
-          "name": "iPad Air 11",
+          "name": "iPad Air 11-inch (M3, WiFi)",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -128,7 +128,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad15,7",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16, WiFi)",
           "devices": [
             "iPad15,7"
           ],
@@ -159,7 +159,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad16,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 11-inch (M4, Cellular)",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -185,7 +185,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad17,1",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 13-inch (M5, Cellular)",
           "devices": [
             "iPad17,1",
             "iPad17,2",
@@ -198,7 +198,7 @@
         },
         {
           "id": "ipados-release-27.0-24A437-iPad8,10",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 3 (12.9-inch, WiFi, 1TB Model)",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -215,12 +215,12 @@
       "id": "ipados-release-26.7-23H24",
       "version": "26.7",
       "build": "23H24",
-      "released_at": null,
+      "released_at": "2026-09-14T17:18:40Z",
       "data": "26.7/23H24.json",
       "firmwares": [
         {
           "id": "ipados-release-26.7-23H24-iPad11,1",
-          "name": "iPad mini (5th generation) Wi",
+          "name": "iPad mini 5 (WiFi)",
           "devices": [
             "iPad11,1",
             "iPad11,2",
@@ -233,7 +233,7 @@
         },
         {
           "id": "ipados-release-26.7-23H24-iPad11,6",
-          "name": "iPad (8th generation) Wi",
+          "name": "iPad 8 (WiFi)",
           "devices": [
             "iPad11,6",
             "iPad11,7"
@@ -552,5 +552,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T02:37:40+09:00"
+  "generated_at_tokyo": "2026-09-15T02:40:25+09:00"
 }

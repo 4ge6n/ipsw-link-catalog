@@ -10,16 +10,16 @@
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-09-14T17:37:40Z"
+      "checked_at": "2026-09-14T17:40:25Z"
     },
     {
       "name": "ipsw.me",
-      "checked_at": "2026-09-14T17:37:40Z"
+      "checked_at": "2026-09-14T17:40:25Z"
     }
   ],
   "firmwares": [
     {
-      "name": "iPad Air 13",
+      "name": "iPad Air 11-inch (M4, Cellular)",
       "devices": [
         "iPad16,10",
         "iPad16,11",
@@ -30,12 +30,12 @@
       "filename": "iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
     {
-      "name": "iPad Pro 11",
+      "name": "iPad Pro 13-inch (M5, Cellular)",
       "devices": [
         "iPad17,1",
         "iPad17,2",
@@ -46,12 +46,12 @@
       "filename": "iPad17,1,iPad17,2,iPad17,3,iPad17,4_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
     {
-      "name": "iPad Air 11",
+      "name": "iPad Air 11-inch (M3, WiFi)",
       "devices": [
         "iPad15,3",
         "iPad15,4",
@@ -62,7 +62,7 @@
       "filename": "iPad15,3,iPad15,4,iPad15,5,iPad15,6_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
@@ -75,12 +75,12 @@
       "filename": "iPad15,8_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
     {
-      "name": "iPad (A16) Wi",
+      "name": "iPad (A16, WiFi)",
       "devices": [
         "iPad15,7"
       ],
@@ -88,7 +88,7 @@
       "filename": "iPad15,7_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
@@ -104,7 +104,7 @@
       "filename": "iPad_Pro_M4_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
@@ -118,12 +118,12 @@
       "filename": "iPad16,1,iPad16,2_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
     {
-      "name": "iPad Air 13",
+      "name": "iPad Air (M2, 11-inch, WiFi)",
       "devices": [
         "iPad14,10",
         "iPad14,11",
@@ -134,12 +134,12 @@
       "filename": "iPad_Air_M2_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
     {
-      "name": "iPad Pro 11",
+      "name": "iPad Pro (11-inch, WiFi) (4th generation)",
       "devices": [
         "iPad14,3",
         "iPad14,4",
@@ -150,12 +150,12 @@
       "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
     {
-      "name": "iPad mini (6th generation) Wi",
+      "name": "iPad mini 6 (WiFi)",
       "devices": [
         "iPad14,1",
         "iPad14,2"
@@ -164,12 +164,12 @@
       "filename": "iPad_Fall_2021_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
     {
-      "name": "iPad (10th generation) Wi",
+      "name": "iPad (WiFi, 10th generation)",
       "devices": [
         "iPad13,18",
         "iPad13,19"
@@ -178,7 +178,7 @@
       "filename": "iPad_Fall_2022_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
@@ -192,12 +192,12 @@
       "filename": "iPad_Spring_2022_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
     {
-      "name": "iPad Pro 12.9",
+      "name": "iPad Pro (11-inch, WiFi) (3rd generation)",
       "devices": [
         "iPad13,10",
         "iPad13,11",
@@ -212,12 +212,12 @@
       "filename": "iPad_Pro_Spring_2021_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
     {
-      "name": "iPad Air (4th generation) Wi",
+      "name": "iPad Air 4 (WiFi)",
       "devices": [
         "iPad13,1",
         "iPad13,2"
@@ -226,12 +226,12 @@
       "filename": "iPad_Fall_2020_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
     {
-      "name": "iPad (9th generation) Wi",
+      "name": "iPad (WiFi, 9th generation)",
       "devices": [
         "iPad12,1",
         "iPad12,2"
@@ -240,12 +240,12 @@
       "filename": "iPad_10.2_2021_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
     {
-      "name": "iPad Pro 11",
+      "name": "iPad Pro 3 (12.9-inch, WiFi, 1TB Model)",
       "devices": [
         "iPad8,10",
         "iPad8,11",
@@ -256,11 +256,11 @@
       "filename": "iPad_Pro_A12X_A12Z_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-14T17:20:28Z",
-  "last_seen_at": "2026-09-14T17:37:40Z"
+  "last_seen_at": "2026-09-14T17:40:25Z"
 }

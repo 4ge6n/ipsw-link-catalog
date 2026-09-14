@@ -9,13 +9,17 @@
   "release_candidate": true,
   "sources": [
     {
+      "name": "ipsw.dev",
+      "checked_at": "2026-09-14T17:40:25Z"
+    },
+    {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-14T17:37:40Z"
+      "checked_at": "2026-09-14T17:40:25Z"
     }
   ],
   "firmwares": [
     {
-      "name": "Mac Studio (M1 Max)",
+      "name": "MacBook Pro (14-inch, M5 Pro)",
       "devices": [
         "Mac13,1",
         "Mac13,2",
@@ -83,5 +87,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T10:48:41Z",
-  "last_seen_at": "2026-09-14T17:37:40Z"
+  "last_seen_at": "2026-09-14T17:40:25Z"
 }

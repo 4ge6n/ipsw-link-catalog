@@ -4,18 +4,22 @@
   "version": "26.7",
   "version_label": "26.7",
   "build": "23H24",
-  "released_at": null,
+  "released_at": "2026-09-14T17:18:40Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-09-14T17:37:40Z"
+      "checked_at": "2026-09-14T17:40:25Z"
+    },
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-09-14T17:40:25Z"
     }
   ],
   "firmwares": [
     {
-      "name": "iPad (8th generation) Wi",
+      "name": "iPad 8 (WiFi)",
       "devices": [
         "iPad11,6",
         "iPad11,7"
@@ -24,12 +28,12 @@
       "filename": "iPad_10.2_2020_26.7_23H24_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
     {
-      "name": "iPad mini (5th generation) Wi",
+      "name": "iPad mini 5 (WiFi)",
       "devices": [
         "iPad11,1",
         "iPad11,2",
@@ -40,7 +44,7 @@
       "filename": "iPad_Spring_2019_26.7_23H24_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     },
@@ -61,11 +65,11 @@
       "filename": "iPad_Pro_A12X_A12Z_26.7_23H24_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-14T17:20:28Z",
-  "last_seen_at": "2026-09-14T17:37:40Z"
+  "last_seen_at": "2026-09-14T17:40:25Z"
 }

@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-14T17:37:40Z",
+  "generated_at": "2026-09-14T17:40:25Z",
   "release_count": 316,
   "firmware_count": 2999,
   "releases": [
@@ -310,7 +310,7 @@
         },
         {
           "id": "ios-release-27.0-24A437-iPhone12,8",
-          "name": "iPhone SE (2nd generation)",
+          "name": "iPhone SE (2020)",
           "devices": [
             "iPhone12,8"
           ],
@@ -34595,5 +34595,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T02:37:40+09:00"
+  "generated_at_tokyo": "2026-09-15T02:40:25+09:00"
 }

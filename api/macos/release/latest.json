@@ -4,7 +4,7 @@
   "os_key": "macos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-14T17:37:40Z",
+  "generated_at": "2026-09-14T17:40:25Z",
   "release_count": 2,
   "firmware_count": 2,
   "releases": [
@@ -24,6 +24,7 @@
             "Mac14,12",
             "Mac14,14",
             "Mac14,3",
+            "Mac14,5",
             "Mac14,6",
             "Mac14,7",
             "Mac14,8",
@@ -35,6 +36,7 @@
             "Mac16,10",
             "Mac16,11",
             "Mac16,12",
+            "Mac16,2",
             "Mac16,9",
             "Mac17,2",
             "Mac17,5",
@@ -65,7 +67,6 @@
             "Mac14,13",
             "Mac14,15",
             "Mac14,2",
-            "Mac14,5",
             "Mac14,9",
             "Mac15,11",
             "Mac15,12",
@@ -76,7 +77,6 @@
             "Mac15,9",
             "Mac16,1",
             "Mac16,13",
-            "Mac16,2",
             "Mac16,3",
             "Mac16,5",
             "Mac16,6",
@@ -98,5 +98,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T02:37:40+09:00"
+  "generated_at_tokyo": "2026-09-15T02:40:25+09:00"
 }

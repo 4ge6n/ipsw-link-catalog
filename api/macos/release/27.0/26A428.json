@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipsw.me",
-      "checked_at": "2026-09-14T17:37:40Z"
+      "checked_at": "2026-09-14T17:40:25Z"
     }
   ],
   "firmwares": [
@@ -22,6 +22,7 @@
         "Mac14,12",
         "Mac14,14",
         "Mac14,3",
+        "Mac14,5",
         "Mac14,6",
         "Mac14,7",
         "Mac14,8",
@@ -33,6 +34,7 @@
         "Mac16,10",
         "Mac16,11",
         "Mac16,12",
+        "Mac16,2",
         "Mac16,9",
         "Mac17,2",
         "Mac17,5",
@@ -46,11 +48,11 @@
       "filename": "UniversalMac_27.0_26A428_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-14T17:37:40Z",
+        "checked_at": "2026-09-14T17:40:25Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-14T17:20:28Z",
-  "last_seen_at": "2026-09-14T17:37:40Z"
+  "last_seen_at": "2026-09-14T17:40:25Z"
 }
