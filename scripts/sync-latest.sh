@@ -199,13 +199,29 @@ record() {
   rmdir "$work/lock"; printf '%s' "$count"
 }
 
-monitor &
-monitor_pid=$!
+# Without a terminal — a scheduled run, or Automator — the redrawn block would
+# just be a thousand lines of log, so only the scrolling messages are kept.
+monitor_pid=""
+if [ -t 2 ]; then
+  monitor &
+  monitor_pid=$!
+fi
 index=0
 for pair in "$@"; do
   os_key="${pair%%=*}"; dest="${pair#*=}"
   [ "$os_key" != "$pair" ] || die "expected os=path, got '$pair'"
   case "$dest" in "~") dest="$HOME";; "~/"*) dest="$HOME/${dest#\~/}";; esac
+  # An unmounted drive would otherwise be recreated as an empty folder on the
+  # boot disk, and a scheduled run would quietly fill it with hundreds of
+  # gigabytes meant for the external one.
+  case "$dest" in
+    /Volumes/*)
+      volume="/Volumes/$(printf '%s' "${dest#/Volumes/}" | cut -d/ -f1)"
+      [ -d "$volume" ] || die "$volume is not mounted; refusing to create it on the boot disk"
+      mount | grep -q " on $volume " || [ "$volume" = "/Volumes/Macintosh HD" ] \
+        || die "$volume exists but is not a mounted volume; refusing to write to it"
+      ;;
+  esac
   mkdir -p "$dest" || die "cannot create $dest"
   say "$os_key -> $dest"
   listing="$work/$os_key.tsv"
@@ -253,7 +269,7 @@ PY
 done
 
 touch "$work/monitor.stop"
-wait "$monitor_pid" 2>/dev/null
+[ -n "$monitor_pid" ] && wait "$monitor_pid" 2>/dev/null
 draw_lock; clear_block; draw_unlock
 if [ -f "$work/failed" ]; then
   printf 'Sync incomplete:\n' >&2
