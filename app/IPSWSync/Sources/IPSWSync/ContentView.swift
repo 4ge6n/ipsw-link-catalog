@@ -88,6 +88,7 @@ struct ContentView: View {
 private struct FolderRow: View {
     let platform: Platform
     @Bindable var settings: Settings
+    @State private var problem: String?
 
     var body: some View {
         LabeledContent(platform.title) {
@@ -96,8 +97,12 @@ private struct FolderRow: View {
                     .foregroundStyle(settings.folder(for: platform) == nil ? .secondary : .primary)
                     .lineLimit(1).truncationMode(.head)
                 Spacer()
+                Button("New…") { create() }
                 Button("Choose…") { choose() }
             }
+        }
+        if let problem {
+            Text(problem).font(.caption).foregroundStyle(.orange)
         }
     }
 
@@ -109,7 +114,29 @@ private struct FolderRow: View {
         panel.prompt = "Use This Folder"
         panel.message = "Where \(platform.title) restore images should be kept"
         if panel.runModal() == .OK, let url = panel.url {
+            problem = nil
             settings.setFolder(url, for: platform)
+        }
+    }
+
+    /// A save panel rather than an open one, because only that offers a name to
+    /// fill in — and the name worth offering is the one Finder restores from,
+    /// so a drive laid out by hand matches what a link would point at anyway.
+    private func create() {
+        let panel = NSSavePanel()
+        panel.canCreateDirectories = true
+        panel.nameFieldStringValue = StandardLocation.folderName(for: platform)
+        panel.nameFieldLabel = "Folder:"
+        panel.prompt = "Create"
+        panel.message = "Create a folder for \(platform.title) restore images"
+        panel.directoryURL = settings.folder(for: platform)?.deletingLastPathComponent()
+        guard panel.runModal() == .OK, let url = panel.url else { return }
+        do {
+            try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
+            problem = nil
+            settings.setFolder(url, for: platform)
+        } catch {
+            problem = error.localizedDescription
         }
     }
 }

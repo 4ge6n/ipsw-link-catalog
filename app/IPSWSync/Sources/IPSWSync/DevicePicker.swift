@@ -44,7 +44,7 @@ struct DevicePicker: View {
     private var every: [Firmware] { Platform.allCases.flatMap { controller.knownDevices[$0] ?? [] } }
 
     private func matching(_ platform: Platform) -> [Firmware] {
-        let all = controller.knownDevices[platform] ?? []
+        let all = (controller.knownDevices[platform] ?? []).sorted(by: Firmware.newestFirst)
         guard !search.isEmpty else { return all }
         return all.filter {
             $0.name.localizedCaseInsensitiveContains(search)

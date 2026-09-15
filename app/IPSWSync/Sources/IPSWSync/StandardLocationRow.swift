@@ -8,6 +8,9 @@ struct StandardLocationRow: View {
     @State private var state: StandardLocation.State = .missing
     @State private var problem: String?
     @State private var confirmingMove = false
+    /// Where the link should point. Normally the folder chosen above, but
+    /// "Link to…" picks one without disturbing that setting.
+    @State private var target: URL?
 
     var body: some View {
         LabeledContent(platform.title) {
@@ -24,7 +27,7 @@ struct StandardLocationRow: View {
             Button("Move and Link") { moveThenLink() }
             Button("Cancel", role: .cancel) {}
         } message: {
-            Text("The files in \(StandardLocation.folderName(for: platform)) will be moved into the folder you chose, then Finder will be pointed at it.")
+            Text("The files in \(StandardLocation.folderName(for: platform)) will be moved into \(destination?.path(percentEncoded: false) ?? "the folder you chose"), then Finder will be pointed at it.")
         }
         if let problem {
             Text(problem).font(.caption).foregroundStyle(.orange)
@@ -32,13 +35,14 @@ struct StandardLocationRow: View {
     }
 
     private var chosen: URL? { settings.folder(for: platform) }
+    private var destination: URL? { target ?? chosen }
 
     private var description: String {
         switch state {
         case .missing, .emptyFolder: "Not linked"
         case .folder(let count): "Holds \(count) file(s) of its own"
-        case .linked(let destination):
-            destination == chosen ? "Linked to your folder" : "Linked to \(destination.path(percentEncoded: false))"
+        case .linked(let where_):
+            where_ == chosen ? "Linked to your folder" : "Linked to \(where_.path(percentEncoded: false))"
         case .somethingElse(let why): why
         }
     }
@@ -48,17 +52,39 @@ struct StandardLocationRow: View {
         case .linked:
             Button("Unlink") { run { try StandardLocation.unlink(platform) } }
         case .folder:
-            Button("Move and Link…") { confirmingMove = true }.disabled(chosen == nil)
+            Button("Move and Link…") { target = chosen; confirmingMove = true }.disabled(chosen == nil)
+            Button("Link to…") { linkElsewhere() }
         case .missing, .emptyFolder:
-            Button("Link") { run { try StandardLocation.link(platform, to: chosen!) } }
+            Button("Link") { target = chosen; run { try StandardLocation.link(platform, to: chosen!) } }
                 .disabled(chosen == nil)
+            Button("Link to…") { linkElsewhere() }
         case .somethingElse:
             EmptyView()
         }
     }
 
+    /// Point Finder somewhere of its own. The folder the app syncs into is the
+    /// usual answer, but it is not the only one worth linking to.
+    private func linkElsewhere() {
+        let panel = NSOpenPanel()
+        panel.canChooseDirectories = true
+        panel.canChooseFiles = false
+        panel.canCreateDirectories = true
+        panel.prompt = "Link Here"
+        panel.message = "Where Finder should look for \(platform.title) restore images"
+        panel.directoryURL = chosen
+        guard panel.runModal() == .OK, let url = panel.url else { return }
+        target = url
+        if case .folder = state {
+            confirmingMove = true
+        } else {
+            run { try StandardLocation.link(platform, to: url) }
+        }
+    }
+
     private func moveThenLink() {
-        run { try StandardLocation.moveContentsThenLink(platform, to: chosen!) }
+        guard let destination else { return }
+        run { try StandardLocation.moveContentsThenLink(platform, to: destination) }
     }
 
     private func run(_ work: () throws -> Void) {

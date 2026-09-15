@@ -41,7 +41,7 @@ struct BuildPicker: View {
             Picker("", selection: $platform) {
                 ForEach(Platform.allCases) { Text($0.title).tag($0) }
             }
-            .pickerStyle(.segmented).labelsHidden().frame(maxWidth: 200)
+            .pickerStyle(.segmented).labelsHidden().frame(maxWidth: 260)
             Picker("", selection: $channel) {
                 ForEach(Channel.allCases) { Text($0.title).tag($0) }
             }
@@ -85,6 +85,7 @@ struct BuildPicker: View {
                 || firmware.name.localizedCaseInsensitiveContains(search)
                 || firmware.devices.contains { $0.localizedCaseInsensitiveContains(search) })
         }
+        .sorted(by: Firmware.newestFirst)
     }
 
     private var deviceList: some View {
@@ -139,6 +140,8 @@ struct BuildPicker: View {
 
     private var footer: some View {
         HStack {
+            Button("Close") { dismiss() }
+                .keyboardShortcut(.cancelAction)
             Toggle("Signed only", isOn: $signedOnly)
             Button("Select All") { chosenDevices.formUnion(shown.map(\.id)) }
                 .disabled(shown.isEmpty)

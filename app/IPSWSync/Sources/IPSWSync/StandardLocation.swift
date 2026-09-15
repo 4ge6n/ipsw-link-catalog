@@ -14,7 +14,11 @@ enum StandardLocation {
     /// Finder's name for each platform's folder, which is the whole point of
     /// linking: it looks here and nowhere else.
     static func folderName(for platform: Platform) -> String {
-        platform == .ios ? "iPhone Software Updates" : "iPad Software Updates"
+        switch platform {
+        case .ios: "iPhone Software Updates"
+        case .ipados: "iPad Software Updates"
+        case .ipod: "iPod Software Updates"
+        }
     }
 
     static func url(for platform: Platform, inside home: URL = .init(filePath: NSHomeDirectory())) -> URL {
