@@ -23,9 +23,10 @@ struct IPSWSyncApp: App {
                     controller.scheduleNext(catchUpIfMissed: true)
                     // Left running for weeks, the app would otherwise only look
                     // for its own updates after a sync.
-                    if Settings.shared.autoUpdate {
+                    if Settings.shared.shouldCheckForUpdateAtLaunch() {
                         Task { await controller.updater.check(installAutomatically: true) }
                     }
+                    Settings.shared.hasLaunchedBefore = true
                 }
         }
         // The content's ideal size is not the window's opening size, and

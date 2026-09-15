@@ -22,6 +22,8 @@ final class Settings {
     var minute: Int { didSet { write(minute, "minute") } }
     var lastRun: Date? { didSet { write(lastRun, "lastRun") } }
     var autoUpdate: Bool { didSet { write(autoUpdate, "autoUpdate") } }
+    var hasLaunchedBefore: Bool { didSet { write(hasLaunchedBefore, "hasLaunchedBefore") } }
+    var lastUpdateCheck: Date? { didSet { write(lastUpdateCheck, "lastUpdateCheck") } }
     var showInDock: Bool { didSet { write(showInDock, "showInDock"); applyPresentation() } }
     var showInMenuBar: Bool { didSet { write(showInMenuBar, "showInMenuBar") } }
 
@@ -52,6 +54,8 @@ final class Settings {
         minute = defaults.object(forKey: "minute") as? Int ?? 0
         lastRun = defaults.object(forKey: "lastRun") as? Date
         autoUpdate = defaults.object(forKey: "autoUpdate") as? Bool ?? true
+        hasLaunchedBefore = defaults.bool(forKey: "hasLaunchedBefore")
+        lastUpdateCheck = defaults.object(forKey: "lastUpdateCheck") as? Date
         showInDock = defaults.object(forKey: "showInDock") as? Bool ?? true
         showInMenuBar = defaults.object(forKey: "showInMenuBar") as? Bool ?? true
         folderBookmarks = defaults.dictionary(forKey: "folders") as? [String: Data] ?? [:]
@@ -84,6 +88,16 @@ final class Settings {
         guard let url else { folderBookmarks[platform.rawValue] = nil; return }
         folderBookmarks[platform.rawValue] = try? url.bookmarkData(
             options: .withSecurityScope, includingResourceValuesForKeys: nil, relativeTo: nil)
+    }
+
+    /// A copy installed a moment ago is not behind, and a launch is the worst
+    /// time to add a request that can hang. Later launches check, but not more
+    /// than a few times a day.
+    func shouldCheckForUpdateAtLaunch(now: Date = .now) -> Bool {
+        guard autoUpdate else { return false }
+        guard hasLaunchedBefore else { return false }
+        guard let lastUpdateCheck else { return true }
+        return now.timeIntervalSince(lastUpdateCheck) > 6 * 60 * 60
     }
 
     /// When the next daily run is due, counting from a reference point.

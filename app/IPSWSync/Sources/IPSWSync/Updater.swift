@@ -45,10 +45,12 @@ final class Updater {
         do {
             var request = URLRequest(url: manifest)
             request.cachePolicy = .reloadIgnoringLocalCacheData
+            request.timeoutInterval = 20
             let (data, response) = try await URLSession.shared.data(for: request)
             guard (response as? HTTPURLResponse)?.statusCode == 200 else { throw UpdateError.noManifest }
             let appcast = try JSONDecoder().decode(Appcast.self, from: data)
             lastChecked = .now
+            Settings.shared.lastUpdateCheck = lastChecked
             guard appcast.build > currentBuild else { state = .idle; return }
             state = .available(appcast.version)
             if installAutomatically { await install(appcast) }
