@@ -47,7 +47,7 @@ struct ContentView: View {
                     Toggle("Show in the menu bar", isOn: $settings.showInMenuBar)
                     if settings.isHidden {
                         Label(
-                            "The app will run with nothing on screen. Open IPSW Sync again from Finder to bring this window back.",
+                            "The app will run with nothing on screen. Opening IPSW Sync again from Finder brings this window back and turns both switches on.",
                             systemImage: "eye.slash"
                         )
                         .font(.caption).foregroundStyle(.secondary)

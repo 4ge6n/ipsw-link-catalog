@@ -8,16 +8,16 @@ struct IPSWSyncApp: App {
     @State private var controller = SyncController()
     @Bindable private var settings = Settings.shared
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var delegate
-
-    private func goSilent() {
-        settings.goSilent()
-        NSApp.windows.forEach { $0.close() }
-    }
+    @Environment(\.openWindow) private var openWindow
 
     var body: some Scene {
         Window("IPSW Sync", id: "main") {
             ContentView()
                 .environment(controller)
+                // Closing the window lets SwiftUI put it away, and the delegate
+                // has no way to ask for it back. Handing the action over while
+                // the window is up leaves one that still works once it is gone.
+                .onAppear { delegate.showMainWindow = { openWindow(id: "main") } }
                 .task {
                     // Each of these can wait on something outside the app — the
                     // notification service, the network — so none of them is
@@ -43,9 +43,6 @@ struct IPSWSyncApp: App {
             CommandGroup(after: .appInfo) {
                 Button("Sync Now") { Task { await controller.run() } }
                     .keyboardShortcut("r")
-                Button("Go Silent") { goSilent() }
-                    .keyboardShortcut("h", modifiers: [.command, .shift])
-                    .disabled(settings.isHidden)
             }
         }
 
@@ -80,7 +77,7 @@ private struct MenuBarContent: View {
             Text("Next \(next.formatted(date: .abbreviated, time: .shortened))")
         }
         Divider()
-        Button("Go Silent") { Settings.shared.goSilent(); NSApp.windows.forEach { $0.close() } }
+        Toggle("Show in the menu bar", isOn: $settings.showInMenuBar)
         Button("Settings…") { openWindow(id: "main"); NSApp.activate(ignoringOtherApps: true) }
         Toggle("Open at Login", isOn: Binding(
             get: { SMAppService.mainApp.status == .enabled },
@@ -106,28 +103,44 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let sync = NSMenuItem(title: "Sync Now", action: #selector(syncNow), keyEquivalent: "")
         sync.target = self
         menu.addItem(sync)
-        if !Settings.shared.isHidden {
-            let silent = NSMenuItem(title: "Go Silent", action: #selector(goSilentFromDock), keyEquivalent: "")
-            silent.target = self
-            menu.addItem(silent)
-        }
+        // The Dock icon is here to be seen, so this switch is always on; turning
+        // it off takes the icon away and nothing else.
+        let dock = NSMenuItem(title: "Show in the Dock", action: #selector(hideDockIcon), keyEquivalent: "")
+        dock.target = self
+        dock.state = .on
+        menu.addItem(dock)
         return menu
     }
 
     @objc private func syncNow() { NotificationCenter.default.post(name: .ipswSyncNow, object: nil) }
 
-    @objc private func goSilentFromDock() {
-        Settings.shared.goSilent()
-        NSApp.windows.forEach { $0.close() }
-    }
+    @objc private func hideDockIcon() { Settings.shared.showInDock = false }
+
+    /// Set while the window is up, so it can be asked for again after it closes.
+    var showMainWindow: (() -> Void)?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        Settings.shared.applyPresentation()
+        // SwiftUI puts its own object between the app and this one, and it keeps
+        // the reopen event to itself — applicationShouldHandleReopen is never
+        // called here, which is what left an invisible copy with no way back.
+        // Asking for the event directly is what actually arrives.
+        NSAppleEventManager.shared().setEventHandler(
+            self, andSelector: #selector(handleReopen(_:with:)),
+            forEventClass: AEEventClass(kCoreEventClass), andEventID: AEEventID(kAEReopenApplication))
         sizeFirstWindow()
-        // Started hidden — at login, say — so it should not put a window up.
-        if Settings.shared.isHidden, !wasOpenedByHand {
+        if Settings.shared.isHidden, wasOpenedByHand {
+            // Launched from the Finder with nothing on screen: that is someone
+            // asking for it back.
+            Settings.shared.comeBack()
+        } else if Settings.shared.isHidden {
+            // Started hidden at login, so it should not put a window up.
             DispatchQueue.main.async { NSApp.windows.forEach { $0.close() } }
         }
+        Settings.shared.applyPresentation()
+    }
+
+    @objc private func handleReopen(_ event: NSAppleEventDescriptor, with reply: NSAppleEventDescriptor) {
+        showSettings()
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
@@ -163,12 +176,15 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func showSettings() {
-        NSApp.setActivationPolicy(.regular)
+        // Both switches go back on, so the policy this asks for is .regular and
+        // the window it puts up is not taken away again a moment later.
+        Settings.shared.comeBack()
+        Settings.shared.applyPresentation()
         NSApp.activate(ignoringOtherApps: true)
         if let window = NSApp.windows.first(where: { $0.canBecomeMain }) {
             window.makeKeyAndOrderFront(nil)
+        } else {
+            showMainWindow?()
         }
-        // Put the Dock icon back the way the setting asks once the window is up.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { Settings.shared.applyPresentation() }
     }
 }

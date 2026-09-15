@@ -31,10 +31,11 @@ final class Settings {
     /// from Finder is what brings the window back.
     var isHidden: Bool { !showInDock && !showInMenuBar }
 
-    /// Drop out of sight in one step, rather than turning off two switches.
-    func goSilent() {
-        showInMenuBar = false
-        showInDock = false
+    /// Opening the app again is a request to be seen, so both switches go back
+    /// on together. Turning either one off is how it leaves again.
+    func comeBack() {
+        showInDock = true
+        showInMenuBar = true
     }
 
     func applyPresentation() {
