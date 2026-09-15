@@ -49,7 +49,14 @@ struct IPSWSyncApp: App {
             }
         }
 
-        MenuBarExtra("IPSW Sync", systemImage: "arrow.down.circle", isInserted: $settings.showInMenuBar) {
+        // SwiftUI reports the status item's own visibility back through this
+        // binding, and after Go Silent it reports `true` — putting the item
+        // straight back and overwriting the setting. Each write-back re-entered
+        // the scene update that caused it, which on some Macs never settled and
+        // spun the main thread until the app was killed. What the menu bar shows
+        // is already the app's own decision, so the report is read, not obeyed.
+        MenuBarExtra("IPSW Sync", systemImage: "arrow.down.circle",
+                     isInserted: Binding(get: { settings.showInMenuBar }, set: { _ in })) {
             MenuBarContent().environment(controller)
         }
     }
