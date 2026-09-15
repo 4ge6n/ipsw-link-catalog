@@ -13,6 +13,8 @@ jobs:
     runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
+        # The build number is the commit count, which a shallow clone reports as 1.
+        with: {fetch-depth: 0}
       - name: Stamp the version
         id: stamp
         run: |
