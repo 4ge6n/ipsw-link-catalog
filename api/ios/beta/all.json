@@ -4,9 +4,9 @@
   "os_key": "ios",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-09-14T23:51:06Z",
+  "generated_at": "2026-09-15T13:57:58Z",
   "release_count": 540,
-  "firmware_count": 8494,
+  "firmware_count": 8497,
   "releases": [
     {
       "id": "ios-beta-27.0-24A437",
@@ -14,9 +14,42 @@
       "build": "24A437",
       "released_at": "2026-09-14T17:00:00Z",
       "signed_firmware_count": 0,
-      "total_firmware_count": 29,
+      "total_firmware_count": 32,
       "data": "27.0/24A437.json",
       "firmwares": [
+        {
+          "id": "ios-beta-27.0-24A437-iPhone19,7",
+          "name": "iPhone 18 Pro Max (Global)",
+          "devices": [
+            "iPhone19,7"
+          ],
+          "filename": "iPhone19,7_27.0_24A437_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/e99ae395-544d-46ee-9dbd-402c7760755e/iPhone19,7_27.0_24A437_Restore.ipsw",
+          "sha1": null,
+          "signed": false
+        },
+        {
+          "id": "ios-beta-27.0-24A437-iPhone19,3",
+          "name": "iPhone 18 Pro Max (US)",
+          "devices": [
+            "iPhone19,3"
+          ],
+          "filename": "iPhone19,3_27.0_24A437_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/5e8a15d7-273e-4a74-9d4c-c4737574f722/iPhone19,3_27.0_24A437_Restore.ipsw",
+          "sha1": null,
+          "signed": false
+        },
+        {
+          "id": "ios-beta-27.0-24A437-iPhone19,2",
+          "name": "iPhone 18 Pro",
+          "devices": [
+            "iPhone19,2"
+          ],
+          "filename": "iPhone19,2_27.0_24A437_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/0f4c05a9-05f9-472c-a2ec-d7046fe0872b/iPhone19,2_27.0_24A437_Restore.ipsw",
+          "sha1": null,
+          "signed": false
+        },
         {
           "id": "ios-beta-27.0-24A437-iPhone18,5",
           "name": "iPhone 17e",
@@ -104704,5 +104737,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T08:51:06+09:00"
+  "generated_at_tokyo": "2026-09-15T22:57:58+09:00"
 }
