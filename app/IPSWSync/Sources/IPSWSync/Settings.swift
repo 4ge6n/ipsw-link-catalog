@@ -1,3 +1,4 @@
+import AppKit
 import Foundation
 import SwiftUI
 
@@ -21,6 +22,16 @@ final class Settings {
     var minute: Int { didSet { write(minute, "minute") } }
     var lastRun: Date? { didSet { write(lastRun, "lastRun") } }
     var autoUpdate: Bool { didSet { write(autoUpdate, "autoUpdate") } }
+    var showInDock: Bool { didSet { write(showInDock, "showInDock"); applyPresentation() } }
+    var showInMenuBar: Bool { didSet { write(showInMenuBar, "showInMenuBar") } }
+
+    /// With neither shown the app is invisible while it runs; opening it again
+    /// from Finder is what brings the window back.
+    var isHidden: Bool { !showInDock && !showInMenuBar }
+
+    func applyPresentation() {
+        NSApp?.setActivationPolicy(showInDock ? .regular : .accessory)
+    }
 
     private var folderBookmarks: [String: Data] { didSet { write(folderBookmarks, "folders") } }
 
@@ -37,6 +48,8 @@ final class Settings {
         minute = defaults.object(forKey: "minute") as? Int ?? 0
         lastRun = defaults.object(forKey: "lastRun") as? Date
         autoUpdate = defaults.object(forKey: "autoUpdate") as? Bool ?? true
+        showInDock = defaults.object(forKey: "showInDock") as? Bool ?? true
+        showInMenuBar = defaults.object(forKey: "showInMenuBar") as? Bool ?? true
         folderBookmarks = defaults.dictionary(forKey: "folders") as? [String: Data] ?? [:]
     }
 

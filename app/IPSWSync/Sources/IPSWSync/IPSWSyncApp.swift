@@ -5,6 +5,7 @@ import UserNotifications
 @main
 struct IPSWSyncApp: App {
     @State private var controller = SyncController()
+    @Bindable private var settings = Settings.shared
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var delegate
 
     var body: some Scene {
@@ -26,7 +27,7 @@ struct IPSWSyncApp: App {
             }
         }
 
-        MenuBarExtra("IPSW Sync", systemImage: "arrow.down.circle") {
+        MenuBarExtra("IPSW Sync", systemImage: "arrow.down.circle", isInserted: $settings.showInMenuBar) {
             MenuBarContent().environment(controller)
         }
     }
@@ -64,8 +65,37 @@ private struct MenuBarContent: View {
 }
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        Settings.shared.applyPresentation()
+        // Started hidden — at login, say — so it should not put a window up.
+        if Settings.shared.isHidden, !wasOpenedByHand {
+            DispatchQueue.main.async { NSApp.windows.forEach { $0.close() } }
+        }
+    }
+
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        // Closing the window leaves the schedule running in the menu bar.
+        // Closing the window leaves the schedule running behind it.
         false
+    }
+
+    /// Opening the app again is how an invisible copy is brought back.
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows: Bool) -> Bool {
+        showSettings()
+        return true
+    }
+
+    private var wasOpenedByHand: Bool {
+        // A login item is launched by the service, not from the Finder.
+        !(ProcessInfo.processInfo.environment["XPC_SERVICE_NAME"]?.contains("application") ?? false)
+    }
+
+    func showSettings() {
+        NSApp.setActivationPolicy(.regular)
+        NSApp.activate(ignoringOtherApps: true)
+        if let window = NSApp.windows.first(where: { $0.canBecomeMain }) {
+            window.makeKeyAndOrderFront(nil)
+        }
+        // Put the Dock icon back the way the setting asks once the window is up.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { Settings.shared.applyPresentation() }
     }
 }

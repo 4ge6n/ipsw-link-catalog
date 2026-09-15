@@ -21,6 +21,17 @@ struct ContentView: View {
                 Section("Transfers") {
                     ConcurrencyRow(settings: settings)
                 }
+                Section("Appearance") {
+                    Toggle("Show in the Dock", isOn: $settings.showInDock)
+                    Toggle("Show in the menu bar", isOn: $settings.showInMenuBar)
+                    if settings.isHidden {
+                        Label(
+                            "The app will run with nothing on screen. Open IPSW Sync again from Finder to bring this window back.",
+                            systemImage: "eye.slash"
+                        )
+                        .font(.caption).foregroundStyle(.secondary)
+                    }
+                }
                 Section("Updates") {
                     UpdateRow()
                 }

@@ -46,9 +46,16 @@ final class SyncController {
             do {
                 knownDevices[platform] = try await engine.wantedFirmwares(platform, devices: [])
             } catch {
+                // Starting hidden closes the window, which cancels this; that is
+                // not something to report as a failure.
+                guard !isCancellation(error) else { return }
                 note(.warning, "Could not read the \(platform.title) catalog: \(error.localizedDescription)")
             }
         }
+    }
+
+    private func isCancellation(_ error: Error) -> Bool {
+        error is CancellationError || (error as? URLError)?.code == .cancelled
     }
 
     func scheduleNext(catchUpIfMissed: Bool = false) {
