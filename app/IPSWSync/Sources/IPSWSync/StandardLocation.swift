@@ -35,7 +35,7 @@ enum StandardLocation {
         guard manager.fileExists(atPath: path.path(percentEncoded: false), isDirectory: &directory) else {
             return .missing
         }
-        guard directory.boolValue else { return .somethingElse("A file is in the way.") }
+        guard directory.boolValue else { return .somethingElse(String(localized: "A file is in the way.")) }
         let contents = (try? manager.contentsOfDirectory(atPath: path.path(percentEncoded: false)))?
             .filter { $0 != ".DS_Store" } ?? []
         return contents.isEmpty ? .emptyFolder : .folder(count: contents.count)
@@ -110,11 +110,12 @@ enum LinkError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .folderNotEmpty(let count):
-            "The standard folder already holds \(count) item(s); move them first."
+            String(format: String(localized: "The standard folder already holds %lld item(s); move them first."), count)
         case .inTheWay(let why): why
         case .wouldOverwrite(let names):
-            "\(names.count) file(s) are already in the destination, so nothing was moved: \(names.prefix(3).joined(separator: ", "))"
-        case .notLinked: "The standard folder is not a link."
+            String(format: String(localized: "%1$lld file(s) are already in the destination, so nothing was moved: %2$@"),
+                   names.count, names.prefix(3).joined(separator: ", "))
+        case .notLinked: String(localized: "The standard folder is not a link.")
         }
     }
 }

@@ -112,7 +112,9 @@ enum Channel: String, CaseIterable, Identifiable, Codable {
     case release, beta
 
     var id: String { rawValue }
-    var title: String { self == .release ? "Release" : "Beta and RC" }
+    var title: String {
+        self == .release ? String(localized: "Release") : String(localized: "Beta and RC")
+    }
 }
 
 struct CatalogClient {
@@ -155,10 +157,40 @@ enum SyncError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .catalogUnavailable(let platform): "Could not read the \(platform.title) catalog."
-        case .volumeNotMounted(let volume): "\(volume) is not mounted."
-        case .checksumMismatch(let name): "\(name) does not match Apple's checksum."
-        case .http(let code, let name): "\(name) failed with HTTP \(code)."
+        case .catalogUnavailable(let platform):
+            String(format: String(localized: "Could not read the %@ catalog."), platform.title)
+        case .volumeNotMounted(let volume):
+            String(format: String(localized: "%@ is not mounted."), volume)
+        case .checksumMismatch(let name):
+            String(format: String(localized: "%@ does not match Apple's checksum."), name)
+        case .http(let code, let name):
+            String(format: String(localized: "%1$@ failed with HTTP %2$lld."), name, code)
+        }
+    }
+}
+
+/// The language the app draws itself in. macOS decides for itself unless it is
+/// told otherwise, which is what the other two do.
+enum Language: String, CaseIterable, Identifiable, Codable {
+    case system, english, japanese
+
+    var id: String { rawValue }
+
+    /// What to write into AppleLanguages; nothing, for the system's own choice.
+    var code: String? {
+        switch self {
+        case .system: nil
+        case .english: "en"
+        case .japanese: "ja"
+        }
+    }
+
+    /// Each in its own language, so the one being looked for reads as itself.
+    var title: String {
+        switch self {
+        case .system: String(localized: "System")
+        case .english: "English"
+        case .japanese: "日本語"
         }
     }
 }

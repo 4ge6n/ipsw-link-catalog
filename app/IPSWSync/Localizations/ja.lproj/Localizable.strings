@@ -1,0 +1,148 @@
+/* 日本語 — キーは英語の文言そのもの。 */
+
+/* ウインドウ・設定 */
+"Folders" = "フォルダ";
+"Finder's restore folder" = "Finder の復元フォルダ";
+"Finder looks in ~/Library/iTunes for restore images. Linking it to your folder lets a restore use what is on the drive without copying it there." = "Finder は復元イメージを ~/Library/iTunes から探します。そこをあなたのフォルダへリンクすると、コピーせずにドライブ上のものをそのまま復元に使えます。";
+"Devices" = "デバイス";
+"Included" = "対象";
+"Delete the build each new one replaces" = "新しいビルドに置き換わった古いビルドを削除";
+"Transfers" = "転送";
+"Download at once" = "同時ダウンロード数";
+"One transfer has the whole connection to itself." = "1 件だけなら回線を専有します。";
+"One-off downloads" = "個別ダウンロード";
+"Any build" = "任意のビルド";
+"Pick a version and devices, including older or beta builds" = "バージョンとデバイスを選べます。古いビルドやベータも含みます";
+"Browse…" = "参照…";
+"Appearance" = "表示";
+"Language" = "言語";
+"System" = "システムに従う";
+"Reopen Now" = "今すぐ開き直す";
+"The new language appears when IPSW Sync is opened again." = "新しい言語は IPSW Sync を開き直すと反映されます。";
+"Show in the Dock" = "Dock に表示";
+"Show in the menu bar" = "メニューバーに表示";
+"The app will run with nothing on screen. Opening IPSW Sync again from Finder brings this window back and turns both switches on." = "画面に何も出さずに動作します。Finder から IPSW Sync を開き直すと、このウインドウが戻り、両方のスイッチが入ります。";
+"Updates" = "アップデート";
+"Keep IPSW Sync up to date" = "IPSW Sync を自動で最新に保つ";
+"Version" = "バージョン";
+"Check Now" = "今すぐ確認";
+"Checking…" = "確認中…";
+"%@ available" = "%@ が利用できます";
+"Schedule" = "スケジュール";
+"Run every day" = "毎日実行";
+"At" = "時刻";
+"A Mac that is asleep at that time runs it on waking instead." = "その時刻にスリープしていた場合は、復帰時に実行します。";
+"Next run" = "次回";
+
+/* フォルダの行 */
+"Not chosen" = "未選択";
+"New…" = "新規…";
+"Choose…" = "選択…";
+"Use This Folder" = "このフォルダを使う";
+"Where %@ restore images should be kept" = "%@ の復元イメージを置く場所";
+"Folder:" = "フォルダ名:";
+"Create" = "作成";
+"Create a folder for %@ restore images" = "%@ の復元イメージ用フォルダを作成";
+
+/* 復元フォルダのリンク */
+"Not linked" = "未リンク";
+"Holds %lld file(s) of its own" = "独自に %lld 件のファイルがあります";
+"Linked to your folder" = "あなたのフォルダにリンク済み";
+"Linked to %@" = "%@ にリンク済み";
+"A file is in the way." = "ファイルが邪魔をしています。";
+"Link" = "リンク";
+"Link to…" = "リンク先を選択…";
+"Link Here" = "ここにリンク";
+"Where Finder should look for %@ restore images" = "Finder が %@ の復元イメージを探す場所";
+"Unlink" = "リンク解除";
+"Move and Link…" = "移動してリンク…";
+"Move and Link" = "移動してリンク";
+"Move what is already there?" = "すでにあるものを移動しますか？";
+"The files in %1$@ will be moved into %2$@, then Finder will be pointed at it." = "%1$@ の中のファイルを %2$@ へ移動し、そのうえで Finder をそこへ向けます。";
+"the folder you chose" = "選択したフォルダ";
+"Cancel" = "キャンセル";
+"The standard folder already holds %lld item(s); move them first." = "標準フォルダにすでに %lld 件あります。先に移動してください。";
+"%1$lld file(s) are already in the destination, so nothing was moved: %2$@" = "移動先にすでに %1$lld 件あるため、何も移動しませんでした: %2$@";
+"The standard folder is not a link." = "標準フォルダはリンクではありません。";
+
+/* デバイス選択 */
+"Select All" = "すべて選択";
+"Every Device" = "すべてのデバイス";
+"Every device in the latest release" = "最新リリースの全デバイス";
+"Every device will be kept up to date." = "すべてのデバイスを最新に保ちます。";
+"Done" = "完了";
+
+/* ビルド選択 */
+"Release" = "リリース";
+"Beta and RC" = "ベータ・RC";
+"Could not load" = "読み込めませんでした";
+"Nothing here" = "何もありません";
+"Choose a build" = "ビルドを選択";
+"Its devices appear here." = "そのデバイスがここに出ます。";
+"Search devices" = "デバイスを検索";
+"%lld file(s)" = "%lld 件";
+"signed" = "署名中";
+"not signed" = "署名なし";
+"Close" = "閉じる";
+"Signed only" = "署名中のみ";
+"None" = "選択解除";
+"Download…" = "ダウンロード…";
+"Download Here" = "ここにダウンロード";
+"Where to put %lld file(s)" = "%lld 件の保存先";
+
+/* 進行状況 */
+"Syncing" = "同期中";
+"Syncing…" = "同期中…";
+"Stop" = "停止";
+"Sync" = "同期";
+"Sync Now" = "今すぐ同期";
+"Last run %@" = "前回 %@";
+"Not run yet" = "未実行";
+"Next %@" = "次回 %@";
+"Settings…" = "設定…";
+"Open at Login" = "ログイン時に開く";
+"Quit" = "終了";
+"waiting" = "待機中";
+"checking what is already here" = "既存を確認中";
+"checking" = "確認中";
+"verifying checksum" = "チェックサムを検証中";
+"already had it" = "取得済み";
+"have" = "取得済";
+"done" = "完了";
+"failed" = "失敗";
+
+/* ログ */
+"Sync started." = "同期を開始しました。";
+"Catching up on a run that was missed." = "実行し損ねた分を実行します。";
+"No folder chosen for %@; skipped." = "%@ のフォルダが未選択のため、省略しました。";
+"No signed builds match the selected devices." = "選択したデバイスに一致する署名中のビルドがありません。";
+"Downloading %1$lld file(s) into %2$@" = "%2$@ へ %1$lld 件をダウンロードします";
+"Already have %@" = "%@ は取得済みです";
+"Refetching %@: the copy on disk did not match" = "%@ を再取得します: ディスク上のものが一致しませんでした";
+"Checksum did not match; fetching %@ whole" = "チェックサムが一致しないため、%@ を最初から取得します";
+"Downloaded %@" = "%@ をダウンロードしました";
+"Downloaded %@, SHA-1 verified" = "%@ をダウンロードしました（SHA-1 検証済み）";
+"Removed older build %@" = "古いビルド %@ を削除しました";
+"Could not remove %1$@: %2$@" = "%1$@ を削除できませんでした: %2$@";
+"Everything was already up to date." = "すべて最新でした。";
+"Downloaded %lld file(s)." = "%lld 件をダウンロードしました。";
+"Finished with %1$lld failure(s); %2$lld downloaded." = "%1$lld 件の失敗で終了しました。%2$lld 件をダウンロードしました。";
+"Finished." = "完了しました。";
+"Finished with %lld failure(s)." = "%lld 件の失敗で終了しました。";
+"Could not read the %1$@ catalog: %2$@" = "%1$@ のカタログを読めませんでした: %2$@";
+
+/* エラー */
+"Could not read the %@ catalog." = "%@ のカタログを読めませんでした。";
+"%@ is not mounted." = "%@ はマウントされていません。";
+"%@ does not match Apple's checksum." = "%@ が Apple のチェックサムと一致しません。";
+"%1$@ failed with HTTP %2$lld." = "%1$@ が HTTP %2$lld で失敗しました。";
+"Could not read the update manifest." = "アップデート情報を読めませんでした。";
+"The update could not be downloaded." = "アップデートをダウンロードできませんでした。";
+"The update did not match its checksum and was discarded." = "アップデートがチェックサムと一致しないため破棄しました。";
+"The update could not be unpacked." = "アップデートを展開できませんでした。";
+"The update announced build %1$lld but contains build %2$lld; it was not installed." = "アップデートはビルド %1$lld と示していますが中身はビルド %2$lld でした。インストールしていません。";
+
+/* 数量を伴うもの */
+"%lld selected" = "%lld 件を選択中";
+"%1$lld device(s), about %2$@ to hold." = "%1$lld 台、およそ %2$@ 必要です。";
+"%lld transfers share the connection; more is not always faster." = "%lld 件が回線を分け合います。多いほど速いとは限りません。";

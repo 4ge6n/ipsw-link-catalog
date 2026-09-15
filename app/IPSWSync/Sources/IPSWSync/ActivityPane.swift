@@ -50,11 +50,11 @@ struct ActivityPane: View {
                 } else {
                     Text(Settings.shared.lastRun.map {
                         narrow ? $0.formatted(date: .omitted, time: .shortened)
-                               : "Last run \($0.formatted(date: .abbreviated, time: .shortened))"
-                    } ?? "Not run yet")
+                               : String(format: String(localized: "Last run %@"), $0.formatted(date: .abbreviated, time: .shortened))
+                    } ?? String(localized: "Not run yet"))
                         .foregroundStyle(.secondary).lineLimit(1).truncationMode(.tail)
                     Spacer(minLength: 8)
-                    Button(narrow ? "Sync" : "Sync Now") { Task { await controller.run() } }
+                    Button(narrow ? String(localized: "Sync") : String(localized: "Sync Now")) { Task { await controller.run() } }
                         .keyboardShortcut(.defaultAction)
                         .controlSize(narrow ? .small : .regular)
                 }
@@ -120,20 +120,20 @@ private struct TransferRow: View {
     private var shortDetail: String {
         switch transfer.state {
         case .downloading: "\(Int(transfer.fraction * 100))%"
-        case .verifying: "checking"
+        case .verifying: String(localized: "checking")
         case .checking: "…"
-        case .done(let had): had ? "have" : "done"
-        case .failed: "failed"
+        case .done(let had): had ? String(localized: "have") : String(localized: "done")
+        case .failed: String(localized: "failed")
         case .waiting: ""
         }
     }
 
     private var detail: String {
         switch transfer.state {
-        case .waiting: "waiting"
-        case .checking: "checking what is already here"
-        case .verifying: "verifying checksum"
-        case .done(let had): had ? "already had it" : "done"
+        case .waiting: String(localized: "waiting")
+        case .checking: String(localized: "checking what is already here")
+        case .verifying: String(localized: "verifying checksum")
+        case .done(let had): had ? String(localized: "already had it") : String(localized: "done")
         case .failed(let why): why
         case .downloading:
             "\(format(transfer.received)) / \(format(transfer.total))"

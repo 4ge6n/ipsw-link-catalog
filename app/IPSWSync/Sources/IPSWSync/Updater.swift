@@ -150,12 +150,13 @@ enum UpdateError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .noManifest: "Could not read the update manifest."
-        case .downloadFailed: "The update could not be downloaded."
-        case .checksumMismatch: "The update did not match its checksum and was discarded."
-        case .unpackFailed: "The update could not be unpacked."
+        case .noManifest: String(localized: "Could not read the update manifest.")
+        case .downloadFailed: String(localized: "The update could not be downloaded.")
+        case .checksumMismatch: String(localized: "The update did not match its checksum and was discarded.")
+        case .unpackFailed: String(localized: "The update could not be unpacked.")
         case .mismatchedBuild(let expected, let found):
-            "The update announced build \(expected) but contains build \(found); it was not installed."
+            String(format: String(localized: "The update announced build %1$lld but contains build %2$lld; it was not installed."),
+                   expected, found)
         }
     }
 }

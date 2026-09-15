@@ -70,7 +70,7 @@ actor SyncEngine {
         try checkVolume(folder)
         let wanted = try await wantedFirmwares(platform, devices: devices)
         guard !wanted.isEmpty else {
-            await log(LogEntry(kind: .warning, message: "No signed builds match the selected devices."))
+            await log(LogEntry(kind: .warning, message: String(localized: "No signed builds match the selected devices.")))
             return
         }
         // The actor only coordinates; the transfers themselves are nonisolated

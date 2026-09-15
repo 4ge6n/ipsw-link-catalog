@@ -30,8 +30,9 @@ struct DevicePicker: View {
             Divider()
             HStack {
                 Text(settings.selectedDevices.isEmpty
-                     ? "Every device will be kept up to date."
-                     : "\(settings.selectedDevices.count) device(s), about \(estimate) to hold.")
+                     ? String(localized: "Every device will be kept up to date.")
+                     : String(format: String(localized: "%1$lld device(s), about %2$@ to hold."),
+                              settings.selectedDevices.count, estimate))
                     .font(.caption).foregroundStyle(.secondary)
                 Spacer()
                 Button("Done") { dismiss() }.keyboardShortcut(.defaultAction)

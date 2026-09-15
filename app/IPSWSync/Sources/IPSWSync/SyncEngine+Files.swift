@@ -17,7 +17,7 @@ extension SyncEngine {
         if await isIntact(destination, sha1: firmware.sha1) {
             transfer.state = .done(alreadyHad: true)
             await report(transfer)
-            await log(LogEntry(kind: .info, message: "Already have \(firmware.filename)"))
+            await log(LogEntry(kind: .info, message: String(format: String(localized: "Already have %@"), firmware.filename)))
             return
         }
         do {
@@ -26,7 +26,7 @@ extension SyncEngine {
             // not partial, so resuming would only append to the damage.
             if let size = fileSize(destination), expected > 0, size >= expected {
                 try? FileManager.default.removeItem(at: destination)
-                await log(LogEntry(kind: .warning, message: "Refetching \(firmware.filename): the copy on disk did not match"))
+                await log(LogEntry(kind: .warning, message: String(format: String(localized: "Refetching %@: the copy on disk did not match"), firmware.filename)))
             }
             transfer.total = expected
             for attempt in 1...2 {
@@ -46,7 +46,7 @@ extension SyncEngine {
                 if attempt == 1 {
                     // A resumed transfer can inherit damage from what was there.
                     try? FileManager.default.removeItem(at: destination)
-                    await log(LogEntry(kind: .warning, message: "Checksum did not match; fetching \(firmware.filename) whole"))
+                    await log(LogEntry(kind: .warning, message: String(format: String(localized: "Checksum did not match; fetching %@ whole"), firmware.filename)))
                     continue
                 }
                 let quarantine = destination.appendingPathExtension("sha1-mismatch")
@@ -56,7 +56,7 @@ extension SyncEngine {
             }
             transfer.state = .done(alreadyHad: false)
             await report(transfer)
-            await log(LogEntry(kind: .good, message: "Downloaded \(firmware.filename)\(firmware.sha1 == nil ? "" : ", SHA-1 verified")"))
+            await log(LogEntry(kind: .good, message: String(format: String(localized: firmware.sha1 == nil ? "Downloaded %@" : "Downloaded %@, SHA-1 verified"), firmware.filename)))
         } catch {
             transfer.state = .failed(error.localizedDescription)
             await report(transfer)
@@ -154,9 +154,9 @@ extension SyncEngine {
             do {
                 try FileManager.default.removeItem(at: file)
                 VerifiedStore.shared.forget(file)
-                await log(LogEntry(kind: .info, message: "Removed older build \(name)"))
+                await log(LogEntry(kind: .info, message: String(format: String(localized: "Removed older build %@"), name)))
             } catch {
-                await log(LogEntry(kind: .warning, message: "Could not remove \(name): \(error.localizedDescription)"))
+                await log(LogEntry(kind: .warning, message: String(format: String(localized: "Could not remove %1$@: %2$@"), name, error.localizedDescription)))
             }
         }
     }

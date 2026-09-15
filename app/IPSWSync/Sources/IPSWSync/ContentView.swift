@@ -1,3 +1,4 @@
+import AppKit
 import SwiftUI
 import UniformTypeIdentifiers
 
@@ -43,6 +44,7 @@ struct ContentView: View {
                     }
                 }
                 Section("Appearance") {
+                    LanguageRow(settings: settings)
                     Toggle("Show in the Dock", isOn: $settings.showInDock)
                     Toggle("Show in the menu bar", isOn: $settings.showInMenuBar)
                     if settings.isHidden {
@@ -85,6 +87,39 @@ struct ContentView: View {
     }
 }
 
+/// Which language the app draws itself in. AppKit reads that once at launch,
+/// so a change offers to start the app again rather than pretending to apply.
+private struct LanguageRow: View {
+    @Bindable var settings: Settings
+
+    var body: some View {
+        LabeledContent("Language") {
+            HStack {
+                Picker("", selection: $settings.language) {
+                    ForEach(Language.allCases) { Text($0.title).tag($0) }
+                }
+                .labelsHidden().fixedSize()
+                Spacer()
+                if !settings.languageIsCurrent {
+                    Button("Reopen Now") { reopen() }
+                }
+            }
+        }
+        if !settings.languageIsCurrent {
+            Text("The new language appears when IPSW Sync is opened again.")
+                .font(.caption).foregroundStyle(.secondary)
+        }
+    }
+
+    private func reopen() {
+        let configuration = NSWorkspace.OpenConfiguration()
+        configuration.createsNewApplicationInstance = true
+        NSWorkspace.shared.openApplication(at: Bundle.main.bundleURL, configuration: configuration) { _, _ in
+            DispatchQueue.main.async { NSApp.terminate(nil) }
+        }
+    }
+}
+
 private struct FolderRow: View {
     let platform: Platform
     @Bindable var settings: Settings
@@ -93,7 +128,7 @@ private struct FolderRow: View {
     var body: some View {
         LabeledContent(platform.title) {
             HStack {
-                Text(settings.folder(for: platform)?.path(percentEncoded: false) ?? "Not chosen")
+                Text(settings.folder(for: platform)?.path(percentEncoded: false) ?? String(localized: "Not chosen"))
                     .foregroundStyle(settings.folder(for: platform) == nil ? .secondary : .primary)
                     .lineLimit(1).truncationMode(.head)
                 Spacer()
@@ -111,8 +146,8 @@ private struct FolderRow: View {
         panel.canChooseDirectories = true
         panel.canChooseFiles = false
         panel.canCreateDirectories = true
-        panel.prompt = "Use This Folder"
-        panel.message = "Where \(platform.title) restore images should be kept"
+        panel.prompt = String(localized: "Use This Folder")
+        panel.message = String(format: String(localized: "Where %@ restore images should be kept"), platform.title)
         if panel.runModal() == .OK, let url = panel.url {
             problem = nil
             settings.setFolder(url, for: platform)
@@ -126,9 +161,9 @@ private struct FolderRow: View {
         let panel = NSSavePanel()
         panel.canCreateDirectories = true
         panel.nameFieldStringValue = StandardLocation.folderName(for: platform)
-        panel.nameFieldLabel = "Folder:"
-        panel.prompt = "Create"
-        panel.message = "Create a folder for \(platform.title) restore images"
+        panel.nameFieldLabel = String(localized: "Folder:")
+        panel.prompt = String(localized: "Create")
+        panel.message = String(format: String(localized: "Create a folder for %@ restore images"), platform.title)
         panel.directoryURL = settings.folder(for: platform)?.deletingLastPathComponent()
         guard panel.runModal() == .OK, let url = panel.url else { return }
         do {
@@ -150,8 +185,8 @@ private struct DeviceSummary: View {
         LabeledContent("Included") {
             HStack {
                 Text(settings.selectedDevices.isEmpty
-                     ? "Every device in the latest release"
-                     : "\(settings.selectedDevices.count) selected")
+                     ? String(localized: "Every device in the latest release")
+                     : String(format: String(localized: "%lld selected"), settings.selectedDevices.count))
                 Spacer()
                 Button("Choose…") { showingDevices = true }
                     .disabled(controller.knownDevices.isEmpty)
@@ -188,8 +223,8 @@ private struct UpdateRow: View {
     private var status: String {
         switch controller.updater.state {
         case .idle: "\(controller.updater.currentVersion) — up to date"
-        case .checking: "Checking…"
-        case .available(let version): "\(version) available"
+        case .checking: String(localized: "Checking…")
+        case .available(let version): String(format: String(localized: "%@ available"), version)
         case .downloading(let fraction): "Downloading \(Int(fraction * 100))%"
         case .installed(let version): "Updated to \(version); restarting"
         case .failed(let why): why
@@ -211,8 +246,9 @@ private struct ConcurrencyRow: View {
             }
         }
         Text(settings.maxConcurrent == 1
-             ? "One transfer has the whole connection to itself."
-             : "\(settings.maxConcurrent) transfers share the connection; more is not always faster.")
+             ? String(localized: "One transfer has the whole connection to itself.")
+             : String(format: String(localized: "%lld transfers share the connection; more is not always faster."),
+                      settings.maxConcurrent))
             .font(.caption).foregroundStyle(.secondary)
     }
 }

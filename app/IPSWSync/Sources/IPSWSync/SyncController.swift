@@ -54,7 +54,7 @@ final class SyncController {
                 // Starting hidden closes the window, which cancels this; that is
                 // not something to report as a failure.
                 guard !isCancellation(error) else { return }
-                note(.warning, "Could not read the \(platform.title) catalog: \(error.localizedDescription)")
+                note(.warning, String(format: String(localized: "Could not read the %1$@ catalog: %2$@"), platform.title, error.localizedDescription))
             }
         }
     }
@@ -68,7 +68,7 @@ final class SyncController {
         nextRun = settings.nextRun()
         guard let nextRun else { return }
         if catchUpIfMissed, settings.missedRun() {
-            note(.info, "Catching up on a run that was missed.")
+            note(.info, String(localized: "Catching up on a run that was missed."))
             Task { await run() }
         }
         let fires = Timer(fire: nextRun, interval: 0, repeats: false) { [weak self] _ in
@@ -85,12 +85,12 @@ final class SyncController {
         guard !running else { return }
         running = true
         transfers = []
-        note(.info, "Sync started.")
+        note(.info, String(localized: "Sync started."))
         var attempted = 0
         var unreachable = 0
         for platform in Platform.allCases {
             guard let folder = settings.folder(for: platform) else {
-                note(.warning, "No folder chosen for \(platform.title); skipped.")
+                note(.warning, String(format: String(localized: "No folder chosen for %@; skipped."), platform.title))
                 continue
             }
             attempted += 1
@@ -138,7 +138,7 @@ final class SyncController {
             running = false
             return
         }
-        note(.info, "Downloading \(firmwares.count) file(s) into \(folder.path(percentEncoded: false))")
+        note(.info, String(format: String(localized: "Downloading %1$lld file(s) into %2$@"), firmwares.count, folder.path(percentEncoded: false)))
         let scoped = folder.startAccessingSecurityScopedResource()
         await engine.fetchChosen(
             firmwares, into: folder, concurrently: settings.maxConcurrent,
@@ -149,7 +149,9 @@ final class SyncController {
         running = false
         let failures = transfers.filter { if case .failed = $0.state { return true } else { return false } }
         note(failures.isEmpty ? .good : .bad,
-             failures.isEmpty ? "Finished." : "Finished with \(failures.count) failure(s).")
+             failures.isEmpty
+             ? String(localized: "Finished.")
+             : String(format: String(localized: "Finished with %lld failure(s)."), failures.count))
     }
 
     /// Every build the catalog knows, for the picker.
@@ -158,8 +160,12 @@ final class SyncController {
     }
 
     private func summary(fetched: Int, failed: Int) -> String {
-        if failed > 0 { return "Finished with \(failed) failure(s); \(fetched) downloaded." }
-        return fetched == 0 ? "Everything was already up to date." : "Downloaded \(fetched) file(s)."
+        if failed > 0 {
+            return String(format: String(localized: "Finished with %1$lld failure(s); %2$lld downloaded."), failed, fetched)
+        }
+        return fetched == 0
+            ? String(localized: "Everything was already up to date.")
+            : String(format: String(localized: "Downloaded %lld file(s)."), fetched)
     }
 
     private func update(_ transfer: Transfer) {

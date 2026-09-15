@@ -60,7 +60,7 @@ struct BuildPicker: View {
                     if let date = release.releasedAt {
                         Text(date.formatted(date: .abbreviated, time: .omitted))
                     }
-                    Text("\(release.firmwares.count) file(s)")
+                    Text(String(format: String(localized: "%lld file(s)"), release.firmwares.count))
                     if release.firmwares.contains(where: \.signed) {
                         Text("signed").foregroundStyle(.green)
                     }
@@ -178,8 +178,8 @@ struct BuildPicker: View {
         panel.canChooseDirectories = true
         panel.canChooseFiles = false
         panel.canCreateDirectories = true
-        panel.prompt = "Download Here"
-        panel.message = "Where to put \(picked.count) file(s)"
+        panel.prompt = String(localized: "Download Here")
+        panel.message = String(format: String(localized: "Where to put %lld file(s)"), picked.count)
         panel.directoryURL = Settings.shared.folder(for: platform)
         guard panel.runModal() == .OK, let folder = panel.url else { return }
         dismiss()

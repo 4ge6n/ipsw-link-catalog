@@ -20,6 +20,10 @@ rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 cp "$binary" "$APP/Contents/MacOS/IPSWSync"
 
+# The strings live in the main bundle rather than as a SwiftPM resource,
+# because Text("…") looks them up in Bundle.main and nowhere else.
+cp -R Localizations/*.lproj "$APP/Contents/Resources/"
+
 # The icon is drawn rather than checked in, so it stays editable as code.
 icons="$(mktemp -d)/IPSWSync.iconset"
 mkdir -p "$icons"
@@ -39,6 +43,8 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
 <plist version="1.0">
 <dict>
   <key>CFBundleName</key><string>IPSW Sync</string>
+  <key>CFBundleDevelopmentRegion</key><string>en</string>
+  <key>CFBundleLocalizations</key><array><string>en</string><string>ja</string></array>
   <key>CFBundleDisplayName</key><string>IPSW Sync</string>
   <key>CFBundleExecutable</key><string>IPSWSync</string>
   <key>CFBundleIconFile</key><string>IPSWSync</string>

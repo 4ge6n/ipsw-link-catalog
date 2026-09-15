@@ -69,12 +69,13 @@ private struct MenuBarContent: View {
             Text("Syncing…")
             Button("Stop") { controller.cancel() }
         } else {
-            Text(settings.lastRun.map { "Last run \($0.formatted(date: .abbreviated, time: .shortened))" }
-                 ?? "Not run yet")
+            Text(settings.lastRun.map {
+                String(format: String(localized: "Last run %@"), $0.formatted(date: .abbreviated, time: .shortened))
+            } ?? String(localized: "Not run yet"))
             Button("Sync Now") { Task { await controller.run() } }
         }
         if let next = controller.nextRun {
-            Text("Next \(next.formatted(date: .abbreviated, time: .shortened))")
+            Text(String(format: String(localized: "Next %@"), next.formatted(date: .abbreviated, time: .shortened)))
         }
         Divider()
         Toggle("Show in the menu bar", isOn: $settings.showInMenuBar)
@@ -100,12 +101,12 @@ extension Notification.Name {
 final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDockMenu(_ sender: NSApplication) -> NSMenu? {
         let menu = NSMenu()
-        let sync = NSMenuItem(title: "Sync Now", action: #selector(syncNow), keyEquivalent: "")
+        let sync = NSMenuItem(title: String(localized: "Sync Now"), action: #selector(syncNow), keyEquivalent: "")
         sync.target = self
         menu.addItem(sync)
         // The Dock icon is here to be seen, so this switch is always on; turning
         // it off takes the icon away and nothing else.
-        let dock = NSMenuItem(title: "Show in the Dock", action: #selector(hideDockIcon), keyEquivalent: "")
+        let dock = NSMenuItem(title: String(localized: "Show in the Dock"), action: #selector(hideDockIcon), keyEquivalent: "")
         dock.target = self
         dock.state = .on
         menu.addItem(dock)

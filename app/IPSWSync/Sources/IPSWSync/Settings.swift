@@ -24,6 +24,7 @@ final class Settings {
     var autoUpdate: Bool { didSet { write(autoUpdate, "autoUpdate") } }
     var hasLaunchedBefore: Bool { didSet { write(hasLaunchedBefore, "hasLaunchedBefore") } }
     var lastUpdateCheck: Date? { didSet { write(lastUpdateCheck, "lastUpdateCheck") } }
+    var language: Language { didSet { write(language.rawValue, "language"); applyLanguage() } }
     var showInDock: Bool { didSet { write(showInDock, "showInDock"); applyPresentation() } }
     var showInMenuBar: Bool { didSet { write(showInMenuBar, "showInMenuBar") } }
 
@@ -36,6 +37,27 @@ final class Settings {
     func comeBack() {
         showInDock = true
         showInMenuBar = true
+    }
+
+    /// AppKit reads the language it draws menus and panels in once, at launch,
+    /// so this is written for the next one rather than applied to this.
+    func applyLanguage() {
+        if let code = language.code {
+            defaults.set([code], forKey: "AppleLanguages")
+        } else {
+            defaults.removeObject(forKey: "AppleLanguages")
+        }
+    }
+
+    /// Whether the app is already drawing in the language that is set.
+    var languageIsCurrent: Bool {
+        guard let wanted = language.code else {
+            // Read this app's own domain: the global one names a language on
+            // nearly every Mac, and that is not the app having been told.
+            let mine = Bundle.main.bundleIdentifier.flatMap { defaults.persistentDomain(forName: $0) }
+            return mine?["AppleLanguages"] == nil
+        }
+        return Bundle.main.preferredLocalizations.first?.hasPrefix(wanted) ?? false
     }
 
     func applyPresentation() {
@@ -63,6 +85,7 @@ final class Settings {
         autoUpdate = defaults.object(forKey: "autoUpdate") as? Bool ?? true
         hasLaunchedBefore = defaults.bool(forKey: "hasLaunchedBefore")
         lastUpdateCheck = defaults.object(forKey: "lastUpdateCheck") as? Date
+        language = Language(rawValue: defaults.string(forKey: "language") ?? "") ?? .system
         showInDock = defaults.object(forKey: "showInDock") as? Bool ?? true
         showInMenuBar = defaults.object(forKey: "showInMenuBar") as? Bool ?? true
         folderBookmarks = defaults.dictionary(forKey: "folders") as? [String: Data] ?? [:]

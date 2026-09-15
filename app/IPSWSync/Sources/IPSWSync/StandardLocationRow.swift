@@ -27,7 +27,9 @@ struct StandardLocationRow: View {
             Button("Move and Link") { moveThenLink() }
             Button("Cancel", role: .cancel) {}
         } message: {
-            Text("The files in \(StandardLocation.folderName(for: platform)) will be moved into \(destination?.path(percentEncoded: false) ?? "the folder you chose"), then Finder will be pointed at it.")
+            Text(String(format: String(localized: "The files in %1$@ will be moved into %2$@, then Finder will be pointed at it."),
+                        StandardLocation.folderName(for: platform),
+                        destination?.path(percentEncoded: false) ?? String(localized: "the folder you chose")))
         }
         if let problem {
             Text(problem).font(.caption).foregroundStyle(.orange)
@@ -39,10 +41,13 @@ struct StandardLocationRow: View {
 
     private var description: String {
         switch state {
-        case .missing, .emptyFolder: "Not linked"
-        case .folder(let count): "Holds \(count) file(s) of its own"
+        case .missing, .emptyFolder: String(localized: "Not linked")
+        case .folder(let count):
+            String(format: String(localized: "Holds %lld file(s) of its own"), count)
         case .linked(let where_):
-            where_ == chosen ? "Linked to your folder" : "Linked to \(where_.path(percentEncoded: false))"
+            where_ == chosen
+            ? String(localized: "Linked to your folder")
+            : String(format: String(localized: "Linked to %@"), where_.path(percentEncoded: false))
         case .somethingElse(let why): why
         }
     }
@@ -70,8 +75,8 @@ struct StandardLocationRow: View {
         panel.canChooseDirectories = true
         panel.canChooseFiles = false
         panel.canCreateDirectories = true
-        panel.prompt = "Link Here"
-        panel.message = "Where Finder should look for \(platform.title) restore images"
+        panel.prompt = String(localized: "Link Here")
+        panel.message = String(format: String(localized: "Where Finder should look for %@ restore images"), platform.title)
         panel.directoryURL = chosen
         guard panel.runModal() == .OK, let url = panel.url else { return }
         target = url
