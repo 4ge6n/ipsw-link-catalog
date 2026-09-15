@@ -18,6 +18,11 @@ struct IPSWSyncApp: App {
                     _ = try? await UNUserNotificationCenter.current()
                         .requestAuthorization(options: [.alert])
                     controller.scheduleNext(catchUpIfMissed: true)
+                    // Left running for weeks, the app would otherwise only look
+                    // for its own updates after a sync.
+                    if Settings.shared.autoUpdate {
+                        await controller.updater.check(installAutomatically: true)
+                    }
                 }
         }
         .commands {

@@ -62,6 +62,12 @@ final class Updater {
         do {
             let archive = try await download(appcast)
             let replacement = try unpack(archive)
+            // A manifest whose build does not match what it points at would have
+            // the app replace itself with the same version on every launch.
+            let arriving = buildNumber(of: replacement)
+            guard arriving == appcast.build else {
+                throw UpdateError.mismatchedBuild(expected: appcast.build, found: arriving)
+            }
             try swapInPlace(replacement)
             state = .installed(appcast.version)
         } catch {
@@ -85,6 +91,14 @@ final class Updater {
         let file = URL.temporaryDirectory.appending(path: "IPSWSync-\(appcast.build).zip")
         try data.write(to: file, options: .atomic)
         return file
+    }
+
+    private func buildNumber(of app: URL) -> Int {
+        let plist = app.appending(path: "Contents/Info.plist")
+        guard let data = try? Data(contentsOf: plist),
+              let info = try? PropertyListSerialization.propertyList(from: data, format: nil) as? [String: Any],
+              let version = info["CFBundleVersion"] as? String else { return 0 }
+        return Int(version) ?? 0
     }
 
     private func unpack(_ archive: URL) throws -> URL {
@@ -130,6 +144,7 @@ final class Updater {
 
 enum UpdateError: LocalizedError {
     case noManifest, downloadFailed, checksumMismatch, unpackFailed
+    case mismatchedBuild(expected: Int, found: Int)
 
     var errorDescription: String? {
         switch self {
@@ -137,6 +152,8 @@ enum UpdateError: LocalizedError {
         case .downloadFailed: "The update could not be downloaded."
         case .checksumMismatch: "The update did not match its checksum and was discarded."
         case .unpackFailed: "The update could not be unpacked."
+        case .mismatchedBuild(let expected, let found):
+            "The update announced build \(expected) but contains build \(found); it was not installed."
         }
     }
 }
