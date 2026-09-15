@@ -22,9 +22,22 @@ extension SyncEngine {
         }
         do {
             let expected = try await contentLength(firmware.url)
+            let onDisk = fileSize(destination)
+            // Apple publishes no checksum for some older images, and without one
+            // the length is the only thing there is to go on. Treating that as a
+            // failed check threw the file away and fetched it again on every run,
+            // which could never learn anything the run before had not.
+            if firmware.sha1 == nil, let size = onDisk, expected > 0, size == expected {
+                transfer.total = expected
+                transfer.received = size
+                transfer.state = .done(alreadyHad: true)
+                await report(transfer)
+                await log(LogEntry(kind: .info, message: String(format: String(localized: "Already have %@"), firmware.filename)))
+                return
+            }
             // A file that is already the full length but hashes wrong is damaged,
             // not partial, so resuming would only append to the damage.
-            if let size = fileSize(destination), expected > 0, size >= expected {
+            if let size = onDisk, expected > 0, size >= expected {
                 try? FileManager.default.removeItem(at: destination)
                 await log(LogEntry(kind: .warning, message: String(format: String(localized: "Refetching %@: the copy on disk did not match"), firmware.filename)))
             }
