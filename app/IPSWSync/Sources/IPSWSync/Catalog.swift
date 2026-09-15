@@ -51,7 +51,9 @@ enum Platform: String, CaseIterable, Identifiable, Codable {
 }
 
 struct CatalogClient {
-    var base = URL(string: "https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api")!
+    /// Overridable so the interface can be exercised against a local catalog.
+    var base = ProcessInfo.processInfo.environment["IPSW_CATALOG_BASE"].flatMap(URL.init(string:))
+        ?? URL(string: "https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api")!
     var session: URLSession = .shared
 
     func latest(_ platform: Platform) async throws -> Catalog {

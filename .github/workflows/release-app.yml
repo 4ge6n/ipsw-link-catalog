@@ -1,0 +1,57 @@
+name: Release IPSW Sync
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to publish, e.g. 1.1'
+        required: true
+        type: string
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stamp the version
+        id: stamp
+        run: |
+          echo "build=$(git rev-list --count HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Build
+        run: VERSION="${{ inputs.version }}" BUILD="${{ steps.stamp.outputs.build }}" bash app/IPSWSync/build-app.sh
+      - name: Package
+        id: package
+        run: |
+          cd app/IPSWSync
+          # ditto keeps the bundle's symlinks and permissions, which zip does not.
+          ditto -c -k --keepParent IPSWSync.app IPSWSync.zip
+          echo "sha256=$(shasum -a 256 IPSWSync.zip | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="app-v${{ inputs.version }}"
+          gh release create "$tag" app/IPSWSync/IPSWSync.zip \
+            --title "IPSW Sync ${{ inputs.version }}" \
+            --notes "Build ${{ steps.stamp.outputs.build }}" || \
+          gh release upload "$tag" app/IPSWSync/IPSWSync.zip --clobber
+      - name: Point the updater at it
+        run: |
+          python3 - <<PY
+          import json, pathlib
+          manifest = {
+              "version": "${{ inputs.version }}",
+              "build": int("${{ steps.stamp.outputs.build }}"),
+              "url": "https://github.com/${{ github.repository }}/releases/download/app-v${{ inputs.version }}/IPSWSync.zip",
+              "sha256": "${{ steps.package.outputs.sha256 }}",
+              "notes": "Build ${{ steps.stamp.outputs.build }}",
+          }
+          pathlib.Path("app/appcast.json").write_text(json.dumps(manifest, indent=2) + "\n")
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add app/appcast.json
+          git diff --cached --quiet || {
+            git commit -m "app: publish IPSW Sync ${{ inputs.version }}"
+            git push
+          }

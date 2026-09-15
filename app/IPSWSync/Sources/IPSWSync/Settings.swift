@@ -20,6 +20,7 @@ final class Settings {
     var hour: Int { didSet { write(hour, "hour") } }
     var minute: Int { didSet { write(minute, "minute") } }
     var lastRun: Date? { didSet { write(lastRun, "lastRun") } }
+    var autoUpdate: Bool { didSet { write(autoUpdate, "autoUpdate") } }
 
     private var folderBookmarks: [String: Data] { didSet { write(folderBookmarks, "folders") } }
 
@@ -35,11 +36,17 @@ final class Settings {
         hour = defaults.object(forKey: "hour") as? Int ?? 4
         minute = defaults.object(forKey: "minute") as? Int ?? 0
         lastRun = defaults.object(forKey: "lastRun") as? Date
+        autoUpdate = defaults.object(forKey: "autoUpdate") as? Bool ?? true
         folderBookmarks = defaults.dictionary(forKey: "folders") as? [String: Data] ?? [:]
     }
 
     /// Folders are kept as security-scoped bookmarks so access survives a relaunch.
+    /// A path in the environment overrides one, for running without the interface.
     func folder(for platform: Platform) -> URL? {
+        let variable = platform == .ios ? "IPSW_FOLDER_IOS" : "IPSW_FOLDER_IPADOS"
+        if let path = ProcessInfo.processInfo.environment[variable], !path.isEmpty {
+            return URL(filePath: path)
+        }
         guard let data = folderBookmarks[platform.rawValue] else { return nil }
         var stale = false
         guard let url = try? URL(resolvingBookmarkData: data, options: .withSecurityScope,

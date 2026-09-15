@@ -14,7 +14,20 @@ final class SyncController {
     private(set) var knownDevices: [Platform: [Firmware]] = [:]
     private(set) var nextRun: Date?
 
+    /// Where the whole run stands, for the bar above the per-file list.
+    var overall: (done: Int, total: Int, fraction: Double, received: Int64, expected: Int64) {
+        let done = transfers.filter { if case .done = $0.state { return true } else { return false } }.count
+        let expected = transfers.reduce(Int64(0)) { $0 + max($1.total, $1.received) }
+        let received = transfers.reduce(Int64(0)) { partial, transfer in
+            if case .done = transfer.state { return partial + max(transfer.total, transfer.received) }
+            return partial + transfer.received
+        }
+        let fraction = expected > 0 ? Double(received) / Double(expected) : 0
+        return (done, transfers.count, min(1, fraction), received, expected)
+    }
+
     private let engine = SyncEngine()
+    let updater = Updater()
     private let settings = Settings.shared
     private var timer: Timer?
 
@@ -78,6 +91,8 @@ final class SyncController {
         }
         settings.lastRun = .now
         running = false
+        // The app updates itself on the same daily rhythm as the catalog.
+        if settings.autoUpdate { await updater.check(installAutomatically: true) }
         let failures = transfers.filter { if case .failed = $0.state { return true } else { return false } }
         let fetched = transfers.filter { if case .done(let had) = $0.state { return !had } else { return false } }
         note(failures.isEmpty ? .good : .bad, summary(fetched: fetched.count, failed: failures.count))

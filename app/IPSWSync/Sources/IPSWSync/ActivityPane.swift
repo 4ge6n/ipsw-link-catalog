@@ -1,64 +1,127 @@
 import SwiftUI
 
-/// What the current run is doing, and what the last one said.
+/// What the current run is doing, and what the last one said. Below a certain
+/// width the row stacks and the per-file lines drop their detail, so the bar and
+/// the percentage survive at any size the window is dragged to.
 struct ActivityPane: View {
     @Environment(SyncController.self) private var controller
+    @State private var width: CGFloat = 700
+
+    private var narrow: Bool { width < 470 }
+
+    private var shortCaption: String {
+        let state = controller.overall
+        return "\(state.done)/\(state.total)  ·  \(Int(state.fraction * 100))%"
+    }
+
+    private var progressCaption: String {
+        let state = controller.overall
+        let files = "\(state.done) of \(state.total) file(s)"
+        guard state.expected > 0 else { return files }
+        return files + "  ·  \(state.received.formatted(.byteCount(style: .file)))"
+            + " of \(state.expected.formatted(.byteCount(style: .file)))"
+            + "  ·  \(Int(state.fraction * 100))%"
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack {
                 if controller.running {
-                    ProgressView().controlSize(.small)
-                    Text("Syncing…").foregroundStyle(.secondary)
-                    Spacer()
+                    VStack(alignment: .leading, spacing: 4) {
+                        ViewThatFits(in: .horizontal) {
+                            HStack(spacing: 8) {
+                                Text("Syncing").fontWeight(.medium)
+                                Text(progressCaption).foregroundStyle(.secondary).monospacedDigit()
+                            }
+                            // Too narrow for the whole caption: keep the counts.
+                            HStack(spacing: 8) {
+                                Text("Syncing").fontWeight(.medium)
+                                Text(shortCaption).foregroundStyle(.secondary).monospacedDigit()
+                            }
+                            Text(shortCaption).foregroundStyle(.secondary).monospacedDigit()
+                        }
+                        .font(.callout)
+                        .lineLimit(1)
+                        ProgressView(value: controller.overall.fraction)
+                    }
+                    Spacer(minLength: 8)
                     Button("Stop") { controller.cancel() }
+                        .controlSize(narrow ? .small : .regular)
                 } else {
                     Text(Settings.shared.lastRun.map {
-                        "Last run \($0.formatted(date: .abbreviated, time: .shortened))"
-                    } ?? "Not run yet").foregroundStyle(.secondary)
-                    Spacer()
-                    Button("Sync Now") { Task { await controller.run() } }
+                        narrow ? $0.formatted(date: .omitted, time: .shortened)
+                               : "Last run \($0.formatted(date: .abbreviated, time: .shortened))"
+                    } ?? "Not run yet")
+                        .foregroundStyle(.secondary).lineLimit(1).truncationMode(.tail)
+                    Spacer(minLength: 8)
+                    Button(narrow ? "Sync" : "Sync Now") { Task { await controller.run() } }
                         .keyboardShortcut(.defaultAction)
+                        .controlSize(narrow ? .small : .regular)
                 }
             }
-            .padding(12)
-            Divider()
-            List {
-                ForEach(controller.transfers.filter { $0.state != .waiting }) { transfer in
-                    TransferRow(transfer: transfer)
-                }
-                ForEach(controller.log.suffix(40).reversed()) { entry in
-                    HStack(alignment: .firstTextBaseline, spacing: 8) {
-                        Image(systemName: entry.kind.symbol).foregroundStyle(entry.kind.tint)
-                            .font(.caption)
-                        Text(entry.message).font(.callout)
-                        Spacer()
-                        Text(entry.at.formatted(date: .omitted, time: .standard))
-                            .font(.caption2).foregroundStyle(.tertiary).monospacedDigit()
+            .padding(narrow ? 10 : 12)
+            // An empty list is just a black slab; the strip stays the height of
+            // its own row until a run has something to show in it.
+            if !controller.transfers.isEmpty || !controller.log.isEmpty {
+                Divider()
+                List {
+                    ForEach(controller.transfers.filter { $0.state != .waiting }) { transfer in
+                        TransferRow(transfer: transfer, narrow: narrow)
+                    }
+                    ForEach(controller.log.suffix(40).reversed()) { entry in
+                        HStack(alignment: .firstTextBaseline, spacing: 8) {
+                            Image(systemName: entry.kind.symbol).foregroundStyle(entry.kind.tint)
+                                .font(.caption)
+                            Text(entry.message).font(.callout)
+                            Spacer()
+                            Text(entry.at.formatted(date: .omitted, time: .standard))
+                                .font(.caption2).foregroundStyle(.tertiary).monospacedDigit()
+                        }
                     }
                 }
+                .listStyle(.inset)
+                .frame(minHeight: 120, idealHeight: 240)
             }
-            .listStyle(.inset)
         }
-        .frame(minHeight: 220)
+        .background(
+            GeometryReader { proxy in
+                Color.clear.onAppear { width = proxy.size.width }
+                    .onChange(of: proxy.size.width) { _, new in width = new }
+            }
+        )
     }
 }
 
 private struct TransferRow: View {
     let transfer: Transfer
+    var narrow = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            HStack {
-                Text(transfer.device).fontWeight(.medium)
-                Spacer()
-                Text(detail).font(.caption).foregroundStyle(.secondary).monospacedDigit()
+            HStack(spacing: 8) {
+                Text(transfer.device).fontWeight(.medium).lineLimit(1).truncationMode(.tail)
+                Spacer(minLength: 4)
+                Text(narrow ? shortDetail : detail)
+                    .font(.caption).foregroundStyle(.secondary).monospacedDigit()
+                    .lineLimit(1)
             }
             if case .downloading = transfer.state {
                 ProgressView(value: transfer.fraction)
             }
         }
         .padding(.vertical, 2)
+    }
+
+    /// Enough to follow the transfer when the window is only a few hundred points wide.
+    private var shortDetail: String {
+        switch transfer.state {
+        case .downloading: "\(Int(transfer.fraction * 100))%"
+        case .verifying: "checking"
+        case .checking: "…"
+        case .done(let had): had ? "have" : "done"
+        case .failed: "failed"
+        case .waiting: ""
+        }
     }
 
     private var detail: String {
@@ -71,8 +134,16 @@ private struct TransferRow: View {
         case .downloading:
             "\(format(transfer.received)) / \(format(transfer.total))"
             + "  ·  \(format(Int64(transfer.bytesPerSecond)))/s"
-            + (transfer.eta.map { "  ·  \(Duration.seconds($0).formatted(.units(allowed: [.hours, .minutes, .seconds], width: .narrow))) left" } ?? "")
+            + (transfer.eta.map { "  ·  \(Self.remaining($0)) left" } ?? "")
         }
+    }
+
+    /// The rest of the interface is in English, so the time is too rather than
+    /// following whatever locale the Mac is set to.
+    static func remaining(_ seconds: TimeInterval) -> String {
+        Duration.seconds(seconds).formatted(
+            .units(allowed: [.hours, .minutes, .seconds], width: .narrow)
+                .locale(Locale(identifier: "en_US")))
     }
 
     private func format(_ bytes: Int64) -> String {

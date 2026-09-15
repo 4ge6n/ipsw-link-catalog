@@ -21,6 +21,9 @@ struct ContentView: View {
                 Section("Transfers") {
                     ConcurrencyRow(settings: settings)
                 }
+                Section("Updates") {
+                    UpdateRow()
+                }
                 Section("Schedule") {
                     Toggle("Run every day", isOn: $settings.scheduleEnabled)
                     if settings.scheduleEnabled {
@@ -34,10 +37,13 @@ struct ContentView: View {
                 }
             }
             .formStyle(.grouped)
+            .frame(maxHeight: .infinity)
             Divider()
             ActivityPane()
         }
-        .frame(minWidth: 620, minHeight: 560)
+        // Small enough to park in a corner, with the layout adapting rather
+        // than the settings being cut off.
+        .frame(minWidth: 320, idealWidth: 700, minHeight: 260, idealHeight: 760)
         .task { await controller.loadDevices() }
         .onChange(of: settings.scheduleEnabled) { controller.scheduleNext() }
         .onChange(of: settings.hour) { controller.scheduleNext() }
@@ -90,6 +96,43 @@ private struct DeviceSummary: View {
                 Button("Choose…") { showingDevices = true }
                     .disabled(controller.knownDevices.isEmpty)
             }
+        }
+    }
+}
+
+private struct UpdateRow: View {
+    @Environment(SyncController.self) private var controller
+    @Bindable private var settings = Settings.shared
+
+    var body: some View {
+        Toggle("Keep IPSW Sync up to date", isOn: $settings.autoUpdate)
+        LabeledContent("Version") {
+            HStack {
+                Text(status).foregroundStyle(.secondary)
+                Spacer()
+                Button("Check Now") {
+                    Task { await controller.updater.check(installAutomatically: true) }
+                }
+                .disabled(busy)
+            }
+        }
+    }
+
+    private var busy: Bool {
+        switch controller.updater.state {
+        case .checking, .downloading: true
+        default: false
+        }
+    }
+
+    private var status: String {
+        switch controller.updater.state {
+        case .idle: "\(controller.updater.currentVersion) — up to date"
+        case .checking: "Checking…"
+        case .available(let version): "\(version) available"
+        case .downloading(let fraction): "Downloading \(Int(fraction * 100))%"
+        case .installed(let version): "Updated to \(version); restarting"
+        case .failed(let why): why
         }
     }
 }
