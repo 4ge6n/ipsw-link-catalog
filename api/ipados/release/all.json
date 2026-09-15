@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-15T13:57:58Z",
+  "generated_at": "2026-09-15T21:31:38Z",
   "release_count": 267,
   "firmware_count": 2175,
   "releases": [
@@ -548,7 +548,7 @@
       "version": "26.6.1",
       "build": "23G83",
       "released_at": "2026-08-17T17:49:17Z",
-      "signed_firmware_count": 18,
+      "signed_firmware_count": 0,
       "total_firmware_count": 18,
       "data": "26.6.1/23G83.json",
       "firmwares": [
@@ -564,7 +564,7 @@
           "filename": "iPad16,10,iPad16,11,iPad16,8,iPad16,9_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-73628/38FCA642-846E-401B-A5C4-EE152B7160D8/iPad16,10,iPad16,11,iPad16,8,iPad16,9_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad17,1",
@@ -578,7 +578,7 @@
           "filename": "iPad17,1,iPad17,2,iPad17,3,iPad17,4_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-74867/2D974F07-513F-4C4A-8B2D-816B22D03A24/iPad17,1,iPad17,2,iPad17,3,iPad17,4_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad15,7",
@@ -589,7 +589,7 @@
           "filename": "iPad15,7_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-73569/4627D405-B284-43D6-AA1E-FF775D807C89/iPad15,7_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad15,8",
@@ -600,7 +600,7 @@
           "filename": "iPad15,8_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-74807/6A684439-316B-4A63-A23C-DBCF5CB61B1E/iPad15,8_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad15,3",
@@ -614,7 +614,7 @@
           "filename": "iPad15,3,iPad15,4,iPad15,5,iPad15,6_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-93813/53D9BF7A-EC71-4F4B-B97A-ED3F8922CBEF/iPad15,3,iPad15,4,iPad15,5,iPad15,6_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad16,1",
@@ -626,7 +626,7 @@
           "filename": "iPad16,1,iPad16,2_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-93812/387AE60F-41A6-4EBD-A1BC-E3AF66434C9C/iPad16,1,iPad16,2_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad14,10",
@@ -640,7 +640,7 @@
           "filename": "iPad_Air_M2_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-73761/F9B387D6-40D9-4825-9DCF-D55246E12504/iPad_Air_M2_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad16,3",
@@ -654,7 +654,7 @@
           "filename": "iPad_Pro_M4_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-74906/D199C9EE-0CA2-4BAC-B39D-EAAE6F711136/iPad_Pro_M4_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad14,3",
@@ -668,7 +668,7 @@
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-73741/DEA3B895-8142-4CBF-A58A-B6887BD89321/iPad14,3,iPad14,4,iPad14,5,iPad14,6_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad13,18",
@@ -680,7 +680,7 @@
           "filename": "iPad_Fall_2022_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-93810/A21DCB6A-C1F9-4D44-9BCB-5D6ADD726B7C/iPad_Fall_2022_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad13,16",
@@ -692,7 +692,7 @@
           "filename": "iPad_Spring_2022_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-93796/BE36DC45-143C-4DF7-829A-9B3E416BDEE5/iPad_Spring_2022_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad14,1",
@@ -704,7 +704,7 @@
           "filename": "iPad_Fall_2021_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-75021/AE5BAEC3-34E4-4B21-A767-703DECDAFC10/iPad_Fall_2021_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad12,1",
@@ -716,7 +716,7 @@
           "filename": "iPad_10.2_2021_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-93815/5BDB32B5-B2BA-49F2-940C-160AA8309B4E/iPad_10.2_2021_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad13,10",
@@ -734,7 +734,7 @@
           "filename": "iPad_Pro_Spring_2021_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-75204/C48AA332-B37D-4E66-8B29-C73631AE635F/iPad_Pro_Spring_2021_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad11,6",
@@ -746,7 +746,7 @@
           "filename": "iPad_10.2_2020_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-74001/3F9DE325-4215-4191-BEC9-521DD3EE50DD/iPad_10.2_2020_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad13,1",
@@ -758,7 +758,7 @@
           "filename": "iPad_Fall_2020_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-73972/2C52784B-059F-41B4-B2E4-DC7A2CADCCD4/iPad_Fall_2020_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad11,1",
@@ -772,7 +772,7 @@
           "filename": "iPad_Spring_2019_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-75126/51E6CF98-E76E-45CC-A0BF-978D0D210406/iPad_Spring_2019_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.6.1-23G83-iPad8,1",
@@ -794,7 +794,7 @@
           "filename": "iPad_Pro_A12X_A12Z_26.6.1_23G83_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-73931/2F26D9F2-1A72-459C-83EF-D40E48E2C9DC/iPad_Pro_A12X_A12Z_26.6.1_23G83_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -24508,7 +24508,7 @@
       "version": "9.3.6",
       "build": "13G37",
       "released_at": "2019-07-22T17:13:11Z",
-      "signed_firmware_count": 5,
+      "signed_firmware_count": 0,
       "total_firmware_count": 5,
       "data": "9.3.6/13G37.json",
       "firmwares": [
@@ -24521,7 +24521,7 @@
           "filename": "iPad2,7_9.3.6_13G37_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2019/ios/041-80041-20190722-673B8756-0A63-4BB6-9855-ACE2381695AF/iPad2,7_9.3.6_13G37_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-9.3.6-13G37-iPad2,6",
@@ -24532,7 +24532,7 @@
           "filename": "iPad2,6_9.3.6_13G37_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2019/ios/041-80040-20190722-B1E89CC8-5209-40C3-AEE9-63C29D38BDEB/iPad2,6_9.3.6_13G37_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-9.3.6-13G37-iPad3,3",
@@ -24543,7 +24543,7 @@
           "filename": "iPad3,3_9.3.6_13G37_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2019/ios/041-80044-20190722-6C65AD27-69D8-499C-BC15-DE7AC74DE2BD/iPad3,3_9.3.6_13G37_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-9.3.6-13G37-iPad3,2",
@@ -24554,7 +24554,7 @@
           "filename": "iPad3,2_9.3.6_13G37_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2019/ios/041-80039-20190722-E632D5D2-2F3C-498F-B83F-7067D9D90B33/iPad3,2_9.3.6_13G37_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-9.3.6-13G37-iPad2,3",
@@ -24565,7 +24565,7 @@
           "filename": "iPad2,3_9.3.6_13G37_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2019/ios/041-80042-20190722-68F07B91-8EA1-4A3B-A930-35314A006ECB/iPad2,3_9.3.6_13G37_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -31159,5 +31159,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-15T22:57:58+09:00"
+  "generated_at_tokyo": "2026-09-16T06:31:38+09:00"
 }
