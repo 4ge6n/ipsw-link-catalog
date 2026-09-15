@@ -13,15 +13,18 @@ struct IPSWSyncApp: App {
             ContentView()
                 .environment(controller)
                 .task {
-                    // Ask once, so the daily result can be reported without the
-                    // window being open.
-                    _ = try? await UNUserNotificationCenter.current()
-                        .requestAuthorization(options: [.alert])
+                    // Each of these can wait on something outside the app — the
+                    // notification service, the network — so none of them is
+                    // allowed to hold up the ones after it.
+                    Task.detached {
+                        _ = try? await UNUserNotificationCenter.current()
+                            .requestAuthorization(options: [.alert])
+                    }
                     controller.scheduleNext(catchUpIfMissed: true)
                     // Left running for weeks, the app would otherwise only look
                     // for its own updates after a sync.
                     if Settings.shared.autoUpdate {
-                        await controller.updater.check(installAutomatically: true)
+                        Task { await controller.updater.check(installAutomatically: true) }
                     }
                 }
         }

@@ -85,8 +85,12 @@ struct ActivityPane: View {
         }
         .background(
             GeometryReader { proxy in
-                Color.clear.onAppear { width = proxy.size.width }
-                    .onChange(of: proxy.size.width) { _, new in width = new }
+                // Writing state from inside layout can feed back into layout, so
+                // the measurement is handed over after the pass has finished.
+                Color.clear.task(id: proxy.size.width) {
+                    let measured = proxy.size.width
+                    if abs(measured - width) > 1 { width = measured }
+                }
             }
         )
     }

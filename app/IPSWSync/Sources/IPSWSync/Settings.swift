@@ -33,7 +33,11 @@ final class Settings {
         NSApp?.setActivationPolicy(showInDock ? .regular : .accessory)
     }
 
-    private var folderBookmarks: [String: Data] { didSet { write(folderBookmarks, "folders") } }
+    private var folderBookmarks: [String: Data] { didSet { write(folderBookmarks, "folders"); resolved = [:] } }
+    /// Resolving a bookmark asks the system to find the volume it names, which
+    /// on a Mac that has never seen that drive takes seconds. Views read this
+    /// on every redraw, so it is resolved once and remembered.
+    private var resolved: [String: URL?] = [:]
 
     private let defaults = UserDefaults.standard
     private func write<T>(_ value: T?, _ key: String) { defaults.set(value, forKey: key) }
@@ -60,14 +64,23 @@ final class Settings {
         if let path = ProcessInfo.processInfo.environment[variable], !path.isEmpty {
             return URL(filePath: path)
         }
+        if let known = resolved[platform.rawValue] { return known }
         guard let data = folderBookmarks[platform.rawValue] else { return nil }
         var stale = false
-        guard let url = try? URL(resolvingBookmarkData: data, options: .withSecurityScope,
-                                 relativeTo: nil, bookmarkDataIsStale: &stale) else { return nil }
+        // withoutMounting: a bookmark naming a drive that is not attached must
+        // come back empty rather than send the system looking for it.
+        let url = try? URL(resolvingBookmarkData: data, options: [.withSecurityScope, .withoutMounting],
+                           relativeTo: nil, bookmarkDataIsStale: &stale)
+        resolved[platform.rawValue] = url
         return url
     }
 
+    /// Changes whenever a folder is chosen, so a view can watch for it without
+    /// resolving a bookmark to compare.
+    private(set) var folderMark = 0
+
     func setFolder(_ url: URL?, for platform: Platform) {
+        defer { folderMark += 1 }
         guard let url else { folderBookmarks[platform.rawValue] = nil; return }
         folderBookmarks[platform.rawValue] = try? url.bookmarkData(
             options: .withSecurityScope, includingResourceValuesForKeys: nil, relativeTo: nil)

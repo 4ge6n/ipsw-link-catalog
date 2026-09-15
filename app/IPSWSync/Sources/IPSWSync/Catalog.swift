@@ -78,6 +78,8 @@ struct CatalogClient {
         var request = URLRequest(url: url)
         // The catalog is rewritten in place, so a cached copy hides new builds.
         request.cachePolicy = .reloadIgnoringLocalCacheData
+        // A stalled network must not leave the interface waiting indefinitely.
+        request.timeoutInterval = 30
         let (data, response) = try await session.data(for: request)
         guard let http = response as? HTTPURLResponse, http.statusCode == 200 else {
             throw SyncError.catalogUnavailable(platform)

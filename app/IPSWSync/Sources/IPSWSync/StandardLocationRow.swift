@@ -19,7 +19,7 @@ struct StandardLocationRow: View {
             }
         }
         .task { refresh() }
-        .onChange(of: settings.folder(for: platform)) { refresh() }
+        .onChange(of: settings.folderMark) { refresh() }
         .alert("Move what is already there?", isPresented: $confirmingMove) {
             Button("Move and Link") { moveThenLink() }
             Button("Cancel", role: .cancel) {}
