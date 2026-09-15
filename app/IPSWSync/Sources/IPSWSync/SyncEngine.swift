@@ -100,6 +100,41 @@ actor SyncEngine {
         }
     }
 
+    func everyBuild(_ platform: Platform, channel: Channel) async throws -> [Release] {
+        try await catalog.everyBuild(platform, channel: channel).releases
+    }
+
+    /// Fetch exactly what was asked for, leaving everything else alone.
+    func fetchChosen(
+        _ firmwares: [Firmware],
+        into folder: URL,
+        concurrently limit: Int,
+        report: @escaping @Sendable @MainActor (Transfer) -> Void,
+        log: @escaping @Sendable @MainActor (LogEntry) -> Void
+    ) async {
+        cancelled = false
+        do { try checkVolume(folder) } catch {
+            await log(LogEntry(kind: .bad, message: error.localizedDescription))
+            return
+        }
+        var pending = firmwares[...]
+        await withTaskGroup(of: Void.self) { group in
+            var running = 0
+            while !cancelled, let firmware = pending.first {
+                pending = pending.dropFirst()
+                group.addTask { [self] in
+                    await fetch(firmware, into: folder, report: report, log: log)
+                }
+                running += 1
+                if running >= max(1, limit) {
+                    await group.next()
+                    running -= 1
+                }
+            }
+            await group.waitForAll()
+        }
+    }
+
     func wantedFirmwares(_ platform: Platform, devices: Set<String>) async throws -> [Firmware] {
         let document = try await catalog.latest(platform)
         return document.releases.flatMap(\.firmwares).filter { firmware in
@@ -109,7 +144,7 @@ actor SyncEngine {
 
     /// An unmounted drive would otherwise be recreated as an empty folder on the
     /// boot disk and quietly filled with what belongs on the external one.
-    private func checkVolume(_ folder: URL) throws {
+    func checkVolume(_ folder: URL) throws {
         let parts = folder.path(percentEncoded: false).split(separator: "/", omittingEmptySubsequences: true)
         guard parts.first == "Volumes", parts.count > 1 else { return }
         let volume = URL(filePath: "/Volumes/\(parts[1])")

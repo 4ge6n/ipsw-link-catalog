@@ -5,6 +5,7 @@ struct ContentView: View {
     @Bindable var settings = Settings.shared
     @Environment(SyncController.self) private var controller
     @State private var showingDevices = false
+    @State private var showingBuilds = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -20,6 +21,16 @@ struct ContentView: View {
                 }
                 Section("Transfers") {
                     ConcurrencyRow(settings: settings)
+                }
+                Section("One-off downloads") {
+                    LabeledContent("Any build") {
+                        HStack {
+                            Text("Pick a version and devices, including older or beta builds")
+                                .foregroundStyle(.secondary).lineLimit(2)
+                            Spacer()
+                            Button("Browse…") { showingBuilds = true }
+                        }
+                    }
                 }
                 Section("Appearance") {
                     Toggle("Show in the Dock", isOn: $settings.showInDock)
@@ -54,12 +65,13 @@ struct ContentView: View {
         }
         // Small enough to park in a corner, with the layout adapting rather
         // than the settings being cut off.
-        .frame(minWidth: 320, idealWidth: 700, minHeight: 260, idealHeight: 760)
+        .frame(minWidth: 320, minHeight: 260)
         .task { await controller.loadDevices() }
         .onChange(of: settings.scheduleEnabled) { controller.scheduleNext() }
         .onChange(of: settings.hour) { controller.scheduleNext() }
         .onChange(of: settings.minute) { controller.scheduleNext() }
         .sheet(isPresented: $showingDevices) { DevicePicker() }
+        .sheet(isPresented: $showingBuilds) { BuildPicker().environment(controller) }
     }
 }
 

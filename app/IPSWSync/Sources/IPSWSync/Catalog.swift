@@ -50,6 +50,14 @@ enum Platform: String, CaseIterable, Identifiable, Codable {
     var title: String { self == .ios ? "iOS" : "iPadOS" }
 }
 
+/// Release images, or the beta and release-candidate ones.
+enum Channel: String, CaseIterable, Identifiable, Codable {
+    case release, beta
+
+    var id: String { rawValue }
+    var title: String { self == .release ? "Release" : "Beta and RC" }
+}
+
 struct CatalogClient {
     /// Overridable so the interface can be exercised against a local catalog.
     var base = ProcessInfo.processInfo.environment["IPSW_CATALOG_BASE"].flatMap(URL.init(string:))
@@ -57,7 +65,16 @@ struct CatalogClient {
     var session: URLSession = .shared
 
     func latest(_ platform: Platform) async throws -> Catalog {
-        let url = base.appending(path: "\(platform.rawValue)/release/latest.json")
+        try await document(at: "\(platform.rawValue)/release/latest.json", platform)
+    }
+
+    /// Every build the catalog knows for a platform, for picking one by hand.
+    func everyBuild(_ platform: Platform, channel: Channel) async throws -> Catalog {
+        try await document(at: "\(platform.rawValue)/\(channel.rawValue)/all.json", platform)
+    }
+
+    private func document(at path: String, _ platform: Platform) async throws -> Catalog {
+        let url = base.appending(path: path)
         var request = URLRequest(url: url)
         // The catalog is rewritten in place, so a cached copy hides new builds.
         request.cachePolicy = .reloadIgnoringLocalCacheData

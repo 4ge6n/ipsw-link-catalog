@@ -25,6 +25,10 @@ struct IPSWSyncApp: App {
                     }
                 }
         }
+        // The content's ideal size is not the window's opening size, and
+        // without this it opened too short for its own settings.
+        .defaultSize(width: 720, height: 780)
+        .windowResizability(.contentMinSize)
         .commands {
             CommandGroup(after: .appInfo) {
                 Button("Sync Now") { Task { await controller.run() } }
@@ -72,6 +76,7 @@ private struct MenuBarContent: View {
 final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         Settings.shared.applyPresentation()
+        sizeFirstWindow()
         // Started hidden — at login, say — so it should not put a window up.
         if Settings.shared.isHidden, !wasOpenedByHand {
             DispatchQueue.main.async { NSApp.windows.forEach { $0.close() } }
@@ -81,6 +86,22 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         // Closing the window leaves the schedule running behind it.
         false
+    }
+
+    /// SwiftUI's defaultSize does not reach this window, which otherwise opens
+    /// too short for its own settings. Only the first launch is sized; after
+    /// that the window is wherever it was left.
+    private func sizeFirstWindow() {
+        guard UserDefaults.standard.object(forKey: "NSWindow Frame main") == nil else { return }
+        DispatchQueue.main.async {
+            guard let window = NSApp.windows.first(where: { $0.canBecomeMain }) else { return }
+            var frame = window.frame
+            let wanted = CGSize(width: 720, height: 780)
+            let visible = window.screen?.visibleFrame ?? .zero
+            frame.size = CGSize(width: wanted.width, height: min(wanted.height, visible.height))
+            frame.origin.y = max(visible.minY, frame.maxY - frame.height)
+            window.setFrame(frame, display: true)
+        }
     }
 
     /// Opening the app again is how an invisible copy is brought back.

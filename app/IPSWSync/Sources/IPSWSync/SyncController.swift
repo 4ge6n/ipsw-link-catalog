@@ -108,6 +108,31 @@ final class SyncController {
 
     func cancel() { Task { await engine.cancel() } }
 
+    /// Fetch builds the person picked by hand. Nothing is pruned: a build asked
+    /// for on purpose must not take another one away.
+    func download(_ firmwares: [Firmware], into folder: URL) async {
+        guard !running else { return }
+        running = true
+        transfers = []
+        note(.info, "Downloading \(firmwares.count) file(s) into \(folder.path(percentEncoded: false))")
+        let scoped = folder.startAccessingSecurityScopedResource()
+        await engine.fetchChosen(
+            firmwares, into: folder, concurrently: settings.maxConcurrent,
+            report: { [weak self] transfer in self?.update(transfer) },
+            log: { [weak self] entry in self?.log.append(entry) }
+        )
+        if scoped { folder.stopAccessingSecurityScopedResource() }
+        running = false
+        let failures = transfers.filter { if case .failed = $0.state { return true } else { return false } }
+        note(failures.isEmpty ? .good : .bad,
+             failures.isEmpty ? "Finished." : "Finished with \(failures.count) failure(s).")
+    }
+
+    /// Every build the catalog knows, for the picker.
+    func everyBuild(_ platform: Platform, channel: Channel) async throws -> [Release] {
+        try await engine.everyBuild(platform, channel: channel)
+    }
+
     private func summary(fetched: Int, failed: Int) -> String {
         if failed > 0 { return "Finished with \(failed) failure(s); \(fetched) downloaded." }
         return fetched == 0 ? "Everything was already up to date." : "Downloaded \(fetched) file(s)."
