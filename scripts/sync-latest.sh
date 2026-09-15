@@ -132,7 +132,9 @@ monitor() {
 }
 
 checksum() { shasum -a 1 "$1" | awk '{print $1}'; }
-stamp() { stat -f '%z %m' "$1" 2>/dev/null || stat -c '%s %Y' "$1" 2>/dev/null; }
+# Sub-second precision: a file replaced within the same second must not
+# pass for the one that was verified.
+stamp() { stat -f '%z %Fm' "$1" 2>/dev/null || stat -c '%s %.9Y' "$1" 2>/dev/null; }
 
 # Hashing every file on every run would read hundreds of gigabytes a day, so a
 # file whose size and modification time still match what was verified before is
