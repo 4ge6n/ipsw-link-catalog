@@ -86,29 +86,41 @@ final class SyncController {
         running = true
         transfers = []
         note(.info, "Sync started.")
+        var attempted = 0
+        var unreachable = 0
         for platform in Platform.allCases {
             guard let folder = settings.folder(for: platform) else {
                 note(.warning, "No folder chosen for \(platform.title); skipped.")
                 continue
             }
+            attempted += 1
             let scoped = folder.startAccessingSecurityScopedResource()
             defer { if scoped { folder.stopAccessingSecurityScopedResource() } }
-            await engine.sync(
-                platform: platform, into: folder,
-                devices: settings.selectedDevices, prune: settings.prune,
-                concurrently: settings.maxConcurrent,
-                report: { [weak self] transfer in self?.update(transfer) },
-                log: { [weak self] entry in self?.log.append(entry) }
-            )
+            do {
+                try await engine.sync(
+                    platform: platform, into: folder,
+                    devices: settings.selectedDevices, prune: settings.prune,
+                    concurrently: settings.maxConcurrent,
+                    report: { [weak self] transfer in self?.update(transfer) },
+                    log: { [weak self] entry in self?.log.append(entry) }
+                )
+            } catch {
+                unreachable += 1
+                note(.bad, error.localizedDescription)
+            }
         }
-        settings.lastRun = .now
+        // A run that reached nothing is not a run. Leaving the mark alone keeps
+        // it counted as missed, so plugging the drive in earns a catch-up rather
+        // than a wait until tomorrow.
+        if attempted == 0 || unreachable < attempted { settings.lastRun = .now }
         running = false
         // The app updates itself on the same daily rhythm as the catalog.
         if settings.autoUpdate { await updater.check(installAutomatically: true) }
         let failures = transfers.filter { if case .failed = $0.state { return true } else { return false } }
         let fetched = transfers.filter { if case .done(let had) = $0.state { return !had } else { return false } }
-        note(failures.isEmpty ? .good : .bad, summary(fetched: fetched.count, failed: failures.count))
-        notify(fetched: fetched.count, failed: failures.count)
+        let failed = failures.count + unreachable
+        note(failed == 0 ? .good : .bad, summary(fetched: fetched.count, failed: failed))
+        notify(fetched: fetched.count, failed: failed)
     }
 
     func cancel() { Task { await engine.cancel() } }
@@ -119,6 +131,13 @@ final class SyncController {
         guard !running else { return }
         running = true
         transfers = []
+        // Asked before anything is announced, so a missing drive reads as the
+        // refusal it is rather than as a download that started.
+        do { try await engine.checkVolume(folder) } catch {
+            note(.bad, error.localizedDescription)
+            running = false
+            return
+        }
         note(.info, "Downloading \(firmwares.count) file(s) into \(folder.path(percentEncoded: false))")
         let scoped = folder.startAccessingSecurityScopedResource()
         await engine.fetchChosen(

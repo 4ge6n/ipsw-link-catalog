@@ -64,39 +64,35 @@ actor SyncEngine {
         concurrently limit: Int,
         report: @escaping @Sendable @MainActor (Transfer) -> Void,
         log: @escaping @Sendable @MainActor (LogEntry) -> Void
-    ) async {
+    ) async throws {
         cancelled = false
         await log(LogEntry(kind: .info, message: "\(platform.title) → \(folder.path(percentEncoded: false))"))
-        do {
-            try checkVolume(folder)
-            let wanted = try await wantedFirmwares(platform, devices: devices)
-            guard !wanted.isEmpty else {
-                await log(LogEntry(kind: .warning, message: "No signed builds match the selected devices."))
-                return
-            }
-            // The actor only coordinates; the transfers themselves are nonisolated
-            // so the chosen number of them genuinely run at once.
-            var pending = wanted[...]
-            await withTaskGroup(of: Void.self) { group in
-                var running = 0
-                while !cancelled, let firmware = pending.first {
-                    pending = pending.dropFirst()
-                    group.addTask { [self] in
-                        await fetch(firmware, into: folder, report: report, log: log)
-                    }
-                    running += 1
-                    if running >= max(1, limit) {
-                        await group.next()
-                        running -= 1
-                    }
+        try checkVolume(folder)
+        let wanted = try await wantedFirmwares(platform, devices: devices)
+        guard !wanted.isEmpty else {
+            await log(LogEntry(kind: .warning, message: "No signed builds match the selected devices."))
+            return
+        }
+        // The actor only coordinates; the transfers themselves are nonisolated
+        // so the chosen number of them genuinely run at once.
+        var pending = wanted[...]
+        await withTaskGroup(of: Void.self) { group in
+            var running = 0
+            while !cancelled, let firmware = pending.first {
+                pending = pending.dropFirst()
+                group.addTask { [self] in
+                    await fetch(firmware, into: folder, report: report, log: log)
                 }
-                await group.waitForAll()
+                running += 1
+                if running >= max(1, limit) {
+                    await group.next()
+                    running -= 1
+                }
             }
-            if prune, !cancelled {
-                await removeReplacedBuilds(in: folder, keeping: wanted, log: log)
-            }
-        } catch {
-            await log(LogEntry(kind: .bad, message: error.localizedDescription))
+            await group.waitForAll()
+        }
+        if prune, !cancelled {
+            await removeReplacedBuilds(in: folder, keeping: wanted, log: log)
         }
     }
 
@@ -147,10 +143,18 @@ actor SyncEngine {
     func checkVolume(_ folder: URL) throws {
         let parts = folder.path(percentEncoded: false).split(separator: "/", omittingEmptySubsequences: true)
         guard parts.first == "Volumes", parts.count > 1 else { return }
-        let volume = URL(filePath: "/Volumes/\(parts[1])")
+        let volume = "/Volumes/\(parts[1])"
         let mounted = FileManager.default.mountedVolumeURLs(includingResourceValuesForKeys: nil) ?? []
-        guard mounted.contains(where: { $0.standardizedFileURL == volume.standardizedFileURL }) else {
-            throw SyncError.volumeNotMounted(volume.path(percentEncoded: false))
+        // These come back as directories, so they carry a trailing slash that the
+        // path being checked does not. Comparing the two as they arrive called
+        // every drive unmounted, mounted or not.
+        guard mounted.contains(where: { trimmed($0.standardizedFileURL) == volume }) else {
+            throw SyncError.volumeNotMounted(volume)
         }
+    }
+
+    private func trimmed(_ url: URL) -> String {
+        let path = url.path(percentEncoded: false)
+        return path.count > 1 && path.hasSuffix("/") ? String(path.dropLast()) : path
     }
 }
