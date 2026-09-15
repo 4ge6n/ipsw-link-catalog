@@ -1,3 +1,4 @@
+import AppKit
 import ServiceManagement
 import SwiftUI
 import UserNotifications
@@ -7,6 +8,11 @@ struct IPSWSyncApp: App {
     @State private var controller = SyncController()
     @Bindable private var settings = Settings.shared
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var delegate
+
+    private func goSilent() {
+        settings.goSilent()
+        NSApp.windows.forEach { $0.close() }
+    }
 
     var body: some Scene {
         Window("IPSW Sync", id: "main") {
@@ -37,6 +43,9 @@ struct IPSWSyncApp: App {
             CommandGroup(after: .appInfo) {
                 Button("Sync Now") { Task { await controller.run() } }
                     .keyboardShortcut("r")
+                Button("Go Silent") { goSilent() }
+                    .keyboardShortcut("h", modifiers: [.command, .shift])
+                    .disabled(settings.isHidden)
             }
         }
 
@@ -64,6 +73,7 @@ private struct MenuBarContent: View {
             Text("Next \(next.formatted(date: .abbreviated, time: .shortened))")
         }
         Divider()
+        Button("Go Silent") { Settings.shared.goSilent(); NSApp.windows.forEach { $0.close() } }
         Button("Settings…") { openWindow(id: "main"); NSApp.activate(ignoringOtherApps: true) }
         Toggle("Open at Login", isOn: Binding(
             get: { SMAppService.mainApp.status == .enabled },
@@ -77,7 +87,33 @@ private struct MenuBarContent: View {
     }
 }
 
+/// The Dock icon's menu, so a sync or a retreat into silence is one click away
+/// without the window.
+extension Notification.Name {
+    static let ipswSyncNow = Notification.Name("ipswSyncNow")
+}
+
 final class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationDockMenu(_ sender: NSApplication) -> NSMenu? {
+        let menu = NSMenu()
+        let sync = NSMenuItem(title: "Sync Now", action: #selector(syncNow), keyEquivalent: "")
+        sync.target = self
+        menu.addItem(sync)
+        if !Settings.shared.isHidden {
+            let silent = NSMenuItem(title: "Go Silent", action: #selector(goSilentFromDock), keyEquivalent: "")
+            silent.target = self
+            menu.addItem(silent)
+        }
+        return menu
+    }
+
+    @objc private func syncNow() { NotificationCenter.default.post(name: .ipswSyncNow, object: nil) }
+
+    @objc private func goSilentFromDock() {
+        Settings.shared.goSilent()
+        NSApp.windows.forEach { $0.close() }
+    }
+
     func applicationDidFinishLaunching(_ notification: Notification) {
         Settings.shared.applyPresentation()
         sizeFirstWindow()

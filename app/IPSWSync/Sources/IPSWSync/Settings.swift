@@ -31,6 +31,12 @@ final class Settings {
     /// from Finder is what brings the window back.
     var isHidden: Bool { !showInDock && !showInMenuBar }
 
+    /// Drop out of sight in one step, rather than turning off two switches.
+    func goSilent() {
+        showInMenuBar = false
+        showInDock = false
+    }
+
     func applyPresentation() {
         NSApp?.setActivationPolicy(showInDock ? .regular : .accessory)
     }

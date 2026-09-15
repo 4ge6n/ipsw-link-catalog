@@ -38,6 +38,11 @@ final class SyncController {
             // A Mac asleep at the appointed time gets its run on waking.
             Task { @MainActor in self?.scheduleNext(catchUpIfMissed: true) }
         }
+        NotificationCenter.default.addObserver(
+            forName: .ipswSyncNow, object: nil, queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in await self?.run() }
+        }
     }
 
     /// Load the device list so the interface can offer it.
