@@ -8,7 +8,14 @@ final class Settings {
 
     var selectedDevices: Set<String> { didSet { write(Array(selectedDevices).sorted(), "devices") } }
     var prune: Bool { didSet { write(prune, "prune") } }
-    var maxConcurrent: Int { didSet { write(maxConcurrent, "maxConcurrent") } }
+    /// Typed by hand, so it is held to something a connection can actually do.
+    var maxConcurrent: Int {
+        didSet {
+            let held = min(max(maxConcurrent, 1), 16)
+            if held != maxConcurrent { maxConcurrent = held; return }
+            write(maxConcurrent, "maxConcurrent")
+        }
+    }
     var scheduleEnabled: Bool { didSet { write(scheduleEnabled, "scheduleEnabled") } }
     var hour: Int { didSet { write(hour, "hour") } }
     var minute: Int { didSet { write(minute, "minute") } }
@@ -23,7 +30,7 @@ final class Settings {
         let defaults = UserDefaults.standard
         selectedDevices = Set(defaults.stringArray(forKey: "devices") ?? [])
         prune = defaults.object(forKey: "prune") as? Bool ?? true
-        maxConcurrent = defaults.object(forKey: "maxConcurrent") as? Int ?? 2
+        maxConcurrent = min(max(defaults.object(forKey: "maxConcurrent") as? Int ?? 3, 1), 16)
         scheduleEnabled = defaults.bool(forKey: "scheduleEnabled")
         hour = defaults.object(forKey: "hour") as? Int ?? 4
         minute = defaults.object(forKey: "minute") as? Int ?? 0

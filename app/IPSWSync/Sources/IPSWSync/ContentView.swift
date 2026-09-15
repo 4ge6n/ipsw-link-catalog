@@ -19,15 +19,7 @@ struct ContentView: View {
                     Toggle("Delete the build each new one replaces", isOn: $settings.prune)
                 }
                 Section("Transfers") {
-                    Picker("Download at once", selection: $settings.maxConcurrent) {
-                        ForEach([1, 2, 3, 4, 6], id: \.self) { count in
-                            Text(count == 1 ? "One at a time" : "\(count)").tag(count)
-                        }
-                    }
-                    Text(settings.maxConcurrent == 1
-                         ? "One transfer has the whole connection to itself."
-                         : "\(settings.maxConcurrent) transfers share the connection; more is not always faster.")
-                        .font(.caption).foregroundStyle(.secondary)
+                    ConcurrencyRow(settings: settings)
                 }
                 Section("Schedule") {
                     Toggle("Run every day", isOn: $settings.scheduleEnabled)
@@ -99,6 +91,26 @@ private struct DeviceSummary: View {
                     .disabled(controller.knownDevices.isEmpty)
             }
         }
+    }
+}
+
+private struct ConcurrencyRow: View {
+    @Bindable var settings: Settings
+
+    var body: some View {
+        LabeledContent("Download at once") {
+            HStack(spacing: 6) {
+                TextField("", value: $settings.maxConcurrent, format: .number)
+                    .multilineTextAlignment(.trailing)
+                    .frame(width: 52)
+                    .textFieldStyle(.roundedBorder)
+                Stepper("", value: $settings.maxConcurrent, in: 1...16).labelsHidden()
+            }
+        }
+        Text(settings.maxConcurrent == 1
+             ? "One transfer has the whole connection to itself."
+             : "\(settings.maxConcurrent) transfers share the connection; more is not always faster.")
+            .font(.caption).foregroundStyle(.secondary)
     }
 }
 
