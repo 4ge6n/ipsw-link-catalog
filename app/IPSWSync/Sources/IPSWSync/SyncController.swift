@@ -28,6 +28,9 @@ final class SyncController {
 
     private let engine = SyncEngine()
     let updater = Updater()
+    /// Apple's own page, watched so a build is known when it is posted rather
+    /// than when the catalog next catches up.
+    let portal = PortalWatch()
     private let settings = Settings.shared
     private var timer: Timer?
 
@@ -44,6 +47,10 @@ final class SyncController {
             Task { @MainActor in await self?.run() }
         }
     }
+
+    /// Begin watching Apple's page. Kept apart from init so the watch starts
+    /// when the interface is up and a notification has somewhere to land.
+    func beginWatching() { portal.begin(with: self) }
 
     /// Load the device list so the interface can offer it.
     func loadDevices() async {
@@ -88,6 +95,9 @@ final class SyncController {
         note(.info, String(localized: "Sync started."))
         var attempted = 0
         var unreachable = 0
+        // Asked once for the whole run rather than once per platform, since it
+        // is one page covering all of them.
+        let fromPortal = settings.portalFeedsSync ? await portal.look(announce: false) : []
         for platform in Platform.allCases {
             guard let folder = settings.folder(for: platform) else {
                 note(.warning, String(format: String(localized: "No folder chosen for %@; skipped."), platform.title))
@@ -99,7 +109,9 @@ final class SyncController {
             do {
                 try await engine.sync(
                     platform: platform, into: folder,
-                    devices: settings.selectedDevices, prune: settings.prune,
+                    devices: settings.selectedDevices,
+                    alongside: portalFirmwares(fromPortal, for: platform),
+                    prune: settings.prune,
                     concurrently: settings.maxConcurrent,
                     report: { [weak self] transfer in self?.update(transfer) },
                     log: { [weak self] entry in self?.log.append(entry) }
@@ -129,6 +141,62 @@ final class SyncController {
     /// what the catalog already knows.
     func portalDownloads() async throws -> [PortalCatalog.Entry] {
         try await DeveloperPortal.shared.downloads(resolvingWith: engine)
+    }
+
+    /// What of the portal's offering belongs in one platform's folder, with the
+    /// pre-release builds left out unless they were asked for.
+    private func portalFirmwares(_ entries: [PortalCatalog.Entry], for platform: Platform) -> [Firmware] {
+        entries
+            .filter { settings.portalIncludesBetas || !$0.isBeta }
+            .flatMap { $0.firmwares(for: platform) }
+    }
+
+    /// Every build Apple is offering this account, as the picker wants them.
+    func portalReleases(_ platform: Platform) async -> [Release] {
+        await portal.look(announce: false)
+            .filter { $0.platform.catalogKey == platform.catalogKey }
+            .compactMap { entry -> Release? in
+                let firmwares = entry.firmwares(for: platform)
+                guard !firmwares.isEmpty else { return nil }
+                return Release(id: entry.id, version: entry.title, build: entry.build,
+                               releasedAt: entry.released, firmwares: firmwares)
+            }
+    }
+
+    /// The watch found something. Say so in the log, and fetch it if that is
+    /// what was asked for — a build posted at noon is on the drive by one.
+    func noteFromPortal(_ fresh: [PortalCatalog.Entry]) {
+        for entry in fresh {
+            note(.good, String(format: String(localized: "Apple is now offering %1$@ (%2$@)."), entry.title, entry.build))
+        }
+        guard settings.portalFeedsSync, !running else { return }
+        Task { await fetchFromPortal(fresh) }
+    }
+
+    /// Fetch what just appeared, into each platform's own folder. Nothing is
+    /// pruned: this is an arrival, not a run.
+    private func fetchFromPortal(_ fresh: [PortalCatalog.Entry]) async {
+        guard !running else { return }
+        running = true
+        transfers = []
+        defer { running = false }
+        for platform in Platform.allCases {
+            let wanted = portalFirmwares(fresh, for: platform).filter { firmware in
+                settings.selectedDevices.isEmpty
+                || !settings.selectedDevices.isDisjoint(with: firmware.devices)
+            }
+            guard !wanted.isEmpty, let folder = settings.folder(for: platform) else { continue }
+            do { try await engine.checkVolume(folder) } catch {
+                note(.warning, error.localizedDescription)
+                continue
+            }
+            let scoped = folder.startAccessingSecurityScopedResource()
+            await engine.fetchChosen(
+                wanted, into: folder, concurrently: settings.maxConcurrent,
+                report: { [weak self] transfer in self?.update(transfer) },
+                log: { [weak self] entry in self?.log.append(entry) })
+            if scoped { folder.stopAccessingSecurityScopedResource() }
+        }
     }
 
     /// Read what is on the drive against Apple's own checksums. The daily run

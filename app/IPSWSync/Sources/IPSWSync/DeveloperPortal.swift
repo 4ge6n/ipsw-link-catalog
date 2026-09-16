@@ -105,13 +105,11 @@ final class DeveloperPortal {
         lastResponse = saved
         // Apple names some images after the model and gives their identifiers
         // nowhere on the page. What each covered before is what it covers now.
-        var index: [String: [String]] = [:]
+        var index = DeviceIndex()
         for platform in Platform.allCases {
-            for (key, devices) in (try? await engine.deviceIndex(platform)) ?? [:] {
-                index[key, default: []].append(contentsOf: devices)
-            }
+            if let known = try? await engine.deviceIndex(platform) { index.formUnion(known) }
         }
-        let entries = PortalCatalog.parse(page, identifiers: index.mapValues { Array(Set($0)).sorted() })
+        let entries = PortalCatalog.parse(page, identifiers: index)
         guard !entries.isEmpty else { throw PortalError.nothingRecognised }
         return entries
     }

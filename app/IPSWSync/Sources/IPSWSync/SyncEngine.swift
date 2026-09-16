@@ -65,6 +65,8 @@ actor SyncEngine {
         platform: Platform,
         into folder: URL,
         devices: Set<String>,
+        /// Builds from Apple's own page, which the catalog may not carry yet.
+        alongside extra: [Firmware] = [],
         prune: Bool,
         concurrently limit: Int,
         report: @escaping @Sendable @MainActor (Transfer) -> Void,
@@ -73,7 +75,14 @@ actor SyncEngine {
         cancelled = false
         await log(LogEntry(kind: .info, message: "\(platform.title) → \(folder.path(percentEncoded: false))"))
         try checkVolume(folder)
-        let wanted = try await wantedFirmwares(platform, devices: devices)
+        var wanted = try await wantedFirmwares(platform, devices: devices)
+        // The same image can be in both; the catalog's copy carries a checksum,
+        // so that is the one kept.
+        let known = Set(wanted.map(\.filename))
+        wanted += extra.filter { firmware in
+            !known.contains(firmware.filename)
+            && (devices.isEmpty || !devices.isDisjoint(with: firmware.devices))
+        }
         guard !wanted.isEmpty else {
             await log(LogEntry(kind: .warning, message: String(localized: "No signed builds match the selected devices.")))
             return
@@ -103,15 +112,17 @@ actor SyncEngine {
 
     /// What each model-named image has covered before, for reading a page that
     /// names images after models and gives their identifiers nowhere.
-    func deviceIndex(_ platform: Platform) async throws -> [String: [String]] {
-        var index: [String: Set<String>] = [:]
+    func deviceIndex(_ platform: Platform) async throws -> DeviceIndex {
+        var index = DeviceIndex()
         for channel in Channel.allCases {
             guard let releases = try? await catalog.everyBuild(platform, channel: channel).releases else { continue }
-            for firmware in releases.flatMap(\.firmwares) {
-                index[firmware.modelKey, default: []].formUnion(firmware.devices)
+            for release in releases {
+                for firmware in release.firmwares {
+                    index.add(firmware, at: release.releasedAt)
+                }
             }
         }
-        return index.mapValues { $0.sorted() }
+        return index
     }
 
     func everyBuild(_ platform: Platform, channel: Channel) async throws -> [Release] {
@@ -174,5 +185,37 @@ actor SyncEngine {
     private func trimmed(_ url: URL) -> String {
         let path = url.path(percentEncoded: false)
         return path.count > 1 && path.hasSuffix("/") ? String(path.dropLast()) : path
+    }
+}
+
+/// What the catalog knows about which devices an image covers, for filling in
+/// what Apple's downloads page leaves out.
+///
+/// Not a union across every build: a model-named image drops devices as they
+/// stop being supported — iPad_Pro_A12X_A12Z covered four iPads by iPadOS 27
+/// and twelve before that — so unioning would offer a build to a device it
+/// cannot restore. The newest build that used a name is what that name means.
+struct DeviceIndex: Sendable {
+    /// The same image in the catalog, which settles it exactly.
+    private var byFilename: [String: [String]] = [:]
+    /// Failing that, what the name covered in the newest build that used it.
+    private var byModel: [String: (devices: [String], at: Date)] = [:]
+
+    mutating func add(_ firmware: Firmware, at moment: Date?) {
+        guard !firmware.devices.isEmpty else { return }
+        byFilename[firmware.filename] = firmware.devices
+        let when = moment ?? .distantPast
+        if let held = byModel[firmware.modelKey], held.at >= when { return }
+        byModel[firmware.modelKey] = (firmware.devices, when)
+    }
+
+    /// Take the newer of two, name by name, rather than merging their devices.
+    mutating func formUnion(_ other: DeviceIndex) {
+        byFilename.merge(other.byFilename) { _, new in new }
+        byModel.merge(other.byModel) { mine, theirs in mine.at >= theirs.at ? mine : theirs }
+    }
+
+    func devices(for filename: String) -> [String] {
+        byFilename[filename] ?? byModel[PortalCatalog.modelKey(of: filename)]?.devices ?? []
     }
 }

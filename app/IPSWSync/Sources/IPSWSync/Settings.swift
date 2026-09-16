@@ -28,6 +28,26 @@ final class Settings {
     var language: Language { didSet { write(language.rawValue, "language"); applyLanguage() } }
     var showInDock: Bool { didSet { write(showInDock, "showInDock"); applyPresentation() } }
     var showInMenuBar: Bool { didSet { write(showInMenuBar, "showInMenuBar") } }
+    /// Watch Apple's own downloads page and say when something appears there.
+    var portalWatch: Bool { didSet { write(portalWatch, "portalWatch") } }
+    /// How often to look, in minutes. Apple posts a build a few times a month,
+    /// so this is about being told within the hour rather than within seconds.
+    var portalMinutes: Int {
+        didSet {
+            let held = min(max(portalMinutes, 5), 24 * 60)
+            if held != portalMinutes { portalMinutes = held; return }
+            write(portalMinutes, "portalMinutes")
+        }
+    }
+    /// Whether what the page offers is fetched by the daily run as well.
+    var portalFeedsSync: Bool { didSet { write(portalFeedsSync, "portalFeedsSync") } }
+    /// Betas and release candidates are most of what the page has that the
+    /// catalog does not, but they are not what everyone is there for.
+    var portalIncludesBetas: Bool { didSet { write(portalIncludesBetas, "portalIncludesBetas") } }
+    /// Builds already announced, so being told is something that happens once.
+    var seenPortalBuilds: Set<String> {
+        didSet { write(Array(seenPortalBuilds).sorted(), "seenPortalBuilds") }
+    }
 
     /// With neither shown the app is invisible while it runs; opening it again
     /// from Finder is what brings the window back.
@@ -90,6 +110,11 @@ final class Settings {
         language = Language(rawValue: defaults.string(forKey: "language") ?? "") ?? .system
         showInDock = defaults.object(forKey: "showInDock") as? Bool ?? true
         showInMenuBar = defaults.object(forKey: "showInMenuBar") as? Bool ?? true
+        portalWatch = defaults.object(forKey: "portalWatch") as? Bool ?? true
+        portalMinutes = min(max(defaults.object(forKey: "portalMinutes") as? Int ?? 30, 5), 24 * 60)
+        portalFeedsSync = defaults.object(forKey: "portalFeedsSync") as? Bool ?? true
+        portalIncludesBetas = defaults.object(forKey: "portalIncludesBetas") as? Bool ?? true
+        seenPortalBuilds = Set(defaults.stringArray(forKey: "seenPortalBuilds") ?? [])
         folderBookmarks = defaults.dictionary(forKey: "folders") as? [String: Data] ?? [:]
     }
 

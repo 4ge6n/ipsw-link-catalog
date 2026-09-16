@@ -19,13 +19,34 @@ enum PortalCatalog {
         let firmwares: [Firmware]
 
         var isBeta: Bool { prerelease != nil }
+
+        /// A build is one release of one platform, whatever else Apple calls it.
+        var id: String { "\(platform.rawValue)-\(version)-\(build)" }
+
+        /// "iOS 27.2 beta 3", as Apple heads the row.
+        var title: String {
+            [platform.title, version, prerelease].compactMap { $0 }.joined(separator: " ")
+        }
+
+        /// The same shape the catalog hands back, so a picker that can show one
+        /// can show the other without knowing where it came from.
+        var release: Release {
+            Release(id: id, version: version, build: build, releasedAt: released, firmwares: firmwares)
+        }
+
+        /// What of this belongs in a given platform's folder. Apple heads the
+        /// row iOS and puts the iPod touch images under it, as the catalog does.
+        func firmwares(for wanted: Platform) -> [Firmware] {
+            guard platform.catalogKey == wanted.catalogKey else { return [] }
+            return firmwares.filter(wanted.covers)
+        }
     }
 
-    /// `identifiers` maps a filename's model key to the devices it covers, for
-    /// the images Apple names after the model rather than the identifier. The
-    /// key outlives a version, so a build posted an hour ago is resolved from
-    /// what the catalog already knew about the one before it.
-    static func parse(_ page: String, identifiers: [String: [String]] = [:]) -> [Entry] {
+    /// `identifiers` says which devices an image covers, for the ones Apple
+    /// names after the model rather than the identifier. A name outlives a
+    /// version, so a build posted an hour ago is resolved from what the catalog
+    /// already knew about the one before it.
+    static func parse(_ page: String, identifiers: DeviceIndex = DeviceIndex()) -> [Entry] {
         rows(in: page).compactMap { entry(from: $0, identifiers: identifiers) }
     }
 
@@ -51,7 +72,7 @@ enum PortalCatalog {
     /// "iOS 27.2 beta", "iPadOS 27.0", "macOS 27.1 RC".
     private static let heading = expression(#"^([A-Za-z ]+?)\s+([0-9][0-9.]*)(?:\s+(beta.*|RC|Release Candidate.*))?$"#)
 
-    private static func entry(from row: String, identifiers: [String: [String]]) -> Entry? {
+    private static func entry(from row: String, identifiers: DeviceIndex) -> Entry? {
         guard let title = capture(row, #"<h3>(.*?)</h3>"#).map(text(of:)),
               let named = heading.firstMatch(in: title, range: NSRange(title.startIndex..., in: title)),
               let osRange = Range(named.range(at: 1), in: title),
@@ -71,7 +92,7 @@ enum PortalCatalog {
     /// which is the only place they appear at all.
     private static let image = expression(#"<a href="(https://[^"]+\.ipsw)"[^>]*>(.*?)</a>"#)
 
-    private static func images(in row: String, build: String, identifiers: [String: [String]]) -> [Firmware] {
+    private static func images(in row: String, build: String, identifiers: DeviceIndex) -> [Firmware] {
         var found: [Firmware] = []
         for match in image.matches(in: row, range: NSRange(row.startIndex..., in: row)) {
             guard let linkRange = Range(match.range(at: 1), in: row),
@@ -84,7 +105,7 @@ enum PortalCatalog {
             // page. The name without its version is the same as it was for the
             // build before, so what that one covered is what this one covers.
             let named = self.identifiers(in: filename)
-            let devices = named.isEmpty ? (identifiers[modelKey(of: filename)] ?? []) : named
+            let devices = named.isEmpty ? identifiers.devices(for: filename) : named
             found.append(Firmware(id: "\(devices.first ?? filename)-\(build)", name: text(of: String(row[labelRange])),
                                   devices: devices, filename: filename, url: url,
                                   // Apple publishes no checksum on this page.

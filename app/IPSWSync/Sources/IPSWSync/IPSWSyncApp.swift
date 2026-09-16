@@ -27,6 +27,9 @@ struct IPSWSyncApp: App {
                             .requestAuthorization(options: [.alert])
                     }
                     controller.scheduleNext(catchUpIfMissed: true)
+                    // Apple's page, watched from here on, so a build posted
+                    // this afternoon is announced this afternoon.
+                    controller.beginWatching()
                     // Left running for weeks, the app would otherwise only look
                     // for its own updates after a sync.
                     if Settings.shared.shouldCheckForUpdateAtLaunch() {

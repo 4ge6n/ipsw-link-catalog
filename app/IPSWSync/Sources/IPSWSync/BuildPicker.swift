@@ -7,7 +7,19 @@ struct BuildPicker: View {
     @Environment(SyncController.self) private var controller
     @Environment(\.dismiss) private var dismiss
 
+    /// Where the list comes from. The catalog is every build ever published;
+    /// Apple's page is what it is offering this account right now, which is the
+    /// only place a build posted an hour ago can be found.
+    private enum Source: String, CaseIterable, Identifiable {
+        case catalog, portal
+        var id: String { rawValue }
+        var title: String {
+            self == .catalog ? String(localized: "Catalog") : String(localized: "Apple Developer")
+        }
+    }
+
     @State private var platform: Platform = .ios
+    @State private var source: Source = .catalog
     @State private var channel: Channel = .release
     @State private var releases: [Release] = []
     @State private var loading = false
@@ -34,7 +46,7 @@ struct BuildPicker: View {
         .task(id: reloadKey) { await load() }
     }
 
-    private var reloadKey: String { "\(platform.rawValue)-\(channel.rawValue)" }
+    private var reloadKey: String { "\(platform.rawValue)-\(source.rawValue)-\(channel.rawValue)" }
 
     private var header: some View {
         HStack {
@@ -42,10 +54,16 @@ struct BuildPicker: View {
                 ForEach(Platform.allCases) { Text($0.title).tag($0) }
             }
             .pickerStyle(.segmented).labelsHidden().frame(maxWidth: 260)
-            Picker("", selection: $channel) {
-                ForEach(Channel.allCases) { Text($0.title).tag($0) }
+            Picker("", selection: $source) {
+                ForEach(Source.allCases) { Text($0.title).tag($0) }
             }
-            .pickerStyle(.segmented).labelsHidden().frame(maxWidth: 220)
+            .pickerStyle(.segmented).labelsHidden().frame(maxWidth: 240)
+            if source == .catalog {
+                Picker("", selection: $channel) {
+                    ForEach(Channel.allCases) { Text($0.title).tag($0) }
+                }
+                .pickerStyle(.segmented).labelsHidden().frame(maxWidth: 220)
+            }
             Spacer()
             if loading { ProgressView().controlSize(.small) }
         }
@@ -174,7 +192,15 @@ struct BuildPicker: View {
         failure = nil
         defer { loading = false }
         do {
-            releases = try await controller.everyBuild(platform, channel: channel)
+            switch source {
+            case .catalog:
+                releases = try await controller.everyBuild(platform, channel: channel)
+            case .portal:
+                guard DeveloperPortal.shared.signedIn else { throw PortalError.signedOut }
+                releases = await controller.portalReleases(platform)
+                // The page answered, but not with anything for this platform.
+                if releases.isEmpty, let said = controller.portal.failure { failure = said }
+            }
             selectedRelease = releases.first?.id
             chosenDevices = []
         } catch {
