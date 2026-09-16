@@ -101,6 +101,19 @@ actor SyncEngine {
         }
     }
 
+    /// What each model-named image has covered before, for reading a page that
+    /// names images after models and gives their identifiers nowhere.
+    func deviceIndex(_ platform: Platform) async throws -> [String: [String]] {
+        var index: [String: Set<String>] = [:]
+        for channel in Channel.allCases {
+            guard let releases = try? await catalog.everyBuild(platform, channel: channel).releases else { continue }
+            for firmware in releases.flatMap(\.firmwares) {
+                index[firmware.modelKey, default: []].formUnion(firmware.devices)
+            }
+        }
+        return index.mapValues { $0.sorted() }
+    }
+
     func everyBuild(_ platform: Platform, channel: Channel) async throws -> [Release] {
         try await catalog.everyBuild(platform, channel: channel).releases
     }

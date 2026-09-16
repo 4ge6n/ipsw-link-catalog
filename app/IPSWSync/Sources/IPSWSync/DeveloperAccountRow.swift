@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Signing in to Apple, and what that is for.
 struct DeveloperAccountRow: View {
+    @Environment(SyncController.self) private var controller
     @Bindable private var portal = DeveloperPortal.shared
     @State private var found: [PortalCatalog.Entry] = []
     @State private var problem: String?
@@ -44,7 +45,7 @@ struct DeveloperAccountRow: View {
     private func look() {
         Task {
             problem = nil
-            do { found = try await portal.downloads() }
+            do { found = try await controller.portalDownloads() }
             catch { found = []; problem = error.localizedDescription }
         }
     }

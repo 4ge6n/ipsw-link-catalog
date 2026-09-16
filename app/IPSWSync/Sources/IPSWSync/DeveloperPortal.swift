@@ -83,7 +83,7 @@ final class DeveloperPortal {
     }
 
     /// What Apple is offering this account, read from Apple's own page.
-    func downloads() async throws -> [PortalCatalog.Entry] {
+    func downloads(resolvingWith engine: SyncEngine) async throws -> [PortalCatalog.Entry] {
         busy = true
         defer { busy = false }
         let session = URLSession(configuration: await sessionConfiguration())
@@ -103,7 +103,15 @@ final class DeveloperPortal {
         let saved = URL.temporaryDirectory.appending(path: "ipsw-portal-page.html")
         try? data.write(to: saved)
         lastResponse = saved
-        let entries = PortalCatalog.parse(page)
+        // Apple names some images after the model and gives their identifiers
+        // nowhere on the page. What each covered before is what it covers now.
+        var index: [String: [String]] = [:]
+        for platform in Platform.allCases {
+            for (key, devices) in (try? await engine.deviceIndex(platform)) ?? [:] {
+                index[key, default: []].append(contentsOf: devices)
+            }
+        }
+        let entries = PortalCatalog.parse(page, identifiers: index.mapValues { Array(Set($0)).sorted() })
         guard !entries.isEmpty else { throw PortalError.nothingRecognised }
         return entries
     }

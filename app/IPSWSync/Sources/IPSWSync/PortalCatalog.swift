@@ -21,8 +21,12 @@ enum PortalCatalog {
         var isBeta: Bool { prerelease != nil }
     }
 
-    static func parse(_ page: String) -> [Entry] {
-        rows(in: page).compactMap(entry(from:))
+    /// `identifiers` maps a filename's model key to the devices it covers, for
+    /// the images Apple names after the model rather than the identifier. The
+    /// key outlives a version, so a build posted an hour ago is resolved from
+    /// what the catalog already knew about the one before it.
+    static func parse(_ page: String, identifiers: [String: [String]] = [:]) -> [Entry] {
+        rows(in: page).compactMap { entry(from: $0, identifiers: identifiers) }
     }
 
     /// Each release begins with a comment naming it. The markup after that
@@ -47,7 +51,7 @@ enum PortalCatalog {
     /// "iOS 27.2 beta", "iPadOS 27.0", "macOS 27.1 RC".
     private static let heading = expression(#"^([A-Za-z ]+?)\s+([0-9][0-9.]*)(?:\s+(beta.*|RC|Release Candidate.*))?$"#)
 
-    private static func entry(from row: String) -> Entry? {
+    private static func entry(from row: String, identifiers: [String: [String]]) -> Entry? {
         guard let title = capture(row, #"<h3>(.*?)</h3>"#).map(text(of:)),
               let named = heading.firstMatch(in: title, range: NSRange(title.startIndex..., in: title)),
               let osRange = Range(named.range(at: 1), in: title),
@@ -57,7 +61,7 @@ enum PortalCatalog {
         else { return nil }
         let prerelease = Range(named.range(at: 3), in: title).map { String(title[$0]) }
         let released = capture(row, #"<li><span>Released</span>(.*?)</li>"#).map(text(of:)).flatMap(date(from:))
-        let firmwares = images(in: row, build: build)
+        let firmwares = images(in: row, build: build, identifiers: identifiers)
         guard !firmwares.isEmpty else { return nil }
         return Entry(platform: platform, version: String(title[versionRange]), build: build,
                      prerelease: prerelease, released: released, firmwares: firmwares)
@@ -67,7 +71,7 @@ enum PortalCatalog {
     /// which is the only place they appear at all.
     private static let image = expression(#"<a href="(https://[^"]+\.ipsw)"[^>]*>(.*?)</a>"#)
 
-    private static func images(in row: String, build: String) -> [Firmware] {
+    private static func images(in row: String, build: String, identifiers: [String: [String]]) -> [Firmware] {
         var found: [Firmware] = []
         for match in image.matches(in: row, range: NSRange(row.startIndex..., in: row)) {
             guard let linkRange = Range(match.range(at: 1), in: row),
@@ -77,16 +81,24 @@ enum PortalCatalog {
             let filename = url.lastPathComponent
             // Some images are named for the model rather than the identifier —
             // iPad_Pro_M4_… — and Apple gives the identifier nowhere on the
-            // page. They are kept, named as Apple names them, and can be
-            // fetched by hand; a run that matches on identifiers will pass them
-            // over, which is better than pretending they do not exist.
-            let devices = identifiers(in: filename)
+            // page. The name without its version is the same as it was for the
+            // build before, so what that one covered is what this one covers.
+            let named = self.identifiers(in: filename)
+            let devices = named.isEmpty ? (identifiers[modelKey(of: filename)] ?? []) : named
             found.append(Firmware(id: "\(devices.first ?? filename)-\(build)", name: text(of: String(row[labelRange])),
                                   devices: devices, filename: filename, url: url,
                                   // Apple publishes no checksum on this page.
                                   sha1: nil, signed: true))
         }
         return found
+    }
+
+    /// iPad_Pro_M4_27.2_24B5084k_Restore.ipsw and the same image for every
+    /// other version share iPad_Pro_M4.
+    static func modelKey(of filename: String) -> String {
+        guard let expression = try? NSRegularExpression(pattern: #"_[0-9][^_]*_[A-Za-z0-9]+_Restore\.ipsw$"#) else { return filename }
+        let whole = NSRange(filename.startIndex..., in: filename)
+        return expression.stringByReplacingMatches(in: filename, range: whole, withTemplate: "")
     }
 
     /// iPhone19,2,iPhone19,3,iPhone19,7_27.2_24B5084k_Restore.ipsw

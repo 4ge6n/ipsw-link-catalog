@@ -125,6 +125,12 @@ final class SyncController {
 
     func cancel() { Task { await engine.cancel() } }
 
+    /// What Apple is offering this account, with the identifiers filled in from
+    /// what the catalog already knows.
+    func portalDownloads() async throws -> [PortalCatalog.Entry] {
+        try await DeveloperPortal.shared.downloads(resolvingWith: engine)
+    }
+
     /// Read what is on the drive against Apple's own checksums. The daily run
     /// trusts the record of having checked; this does not.
     func verify() async {
