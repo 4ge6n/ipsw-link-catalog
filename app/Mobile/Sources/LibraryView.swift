@@ -23,6 +23,26 @@ struct LibraryView: View {
                                     free.formatted(.byteCount(style: .file))))
                     }
                 }
+
+                // Somewhere for a transfer to say what happened to it. Without
+                // this the app had opinions it never expressed.
+                if !model.log.isEmpty {
+                    Section("Activity") {
+                        ForEach(model.log.reversed().prefix(40)) { entry in
+                            HStack(alignment: .firstTextBaseline, spacing: 8) {
+                                Image(systemName: symbol(entry.kind))
+                                    .foregroundStyle(colour(entry.kind))
+                                    .font(.caption)
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(entry.message).font(.caption)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                    Text(entry.at.formatted(date: .omitted, time: .standard))
+                                        .font(.caption2).foregroundStyle(.secondary)
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .navigationTitle("Saved")
             .overlay {
@@ -36,6 +56,24 @@ struct LibraryView: View {
             .refreshable { model.refreshSaved() }
         }
         .onAppear { model.refreshSaved() }
+    }
+
+    private func symbol(_ kind: LogEntry.Kind) -> String {
+        switch kind {
+        case .info: "info.circle"
+        case .good: "checkmark.circle"
+        case .warning: "exclamationmark.triangle"
+        case .bad: "xmark.octagon"
+        }
+    }
+
+    private func colour(_ kind: LogEntry.Kind) -> Color {
+        switch kind {
+        case .info: .secondary
+        case .good: .green
+        case .warning: .orange
+        case .bad: .red
+        }
     }
 
     private func delete(_ offsets: IndexSet) {

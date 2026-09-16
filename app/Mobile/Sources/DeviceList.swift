@@ -64,10 +64,18 @@ private struct FirmwareRow: View {
                 controls
             }
 
-            if let transfer = model.transfer(for: firmware), model.isRunning(firmware) {
-                ProgressView(value: transfer.fraction)
-                Text(detail(transfer))
-                    .font(.caption).foregroundStyle(.secondary).monospacedDigit()
+            if let transfer = model.transfer(for: firmware) {
+                if model.isRunning(firmware) {
+                    ProgressView(value: transfer.fraction)
+                    Text(detail(transfer))
+                        .font(.caption).foregroundStyle(.secondary).monospacedDigit()
+                } else if case .failed(let why) = transfer.state {
+                    // Said out loud rather than leaving the button to go quietly
+                    // back to how it looked before anything was pressed.
+                    Label(why, systemImage: "exclamationmark.triangle")
+                        .font(.caption).foregroundStyle(.orange)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             }
         }
         .padding(.vertical, 6)
@@ -106,7 +114,7 @@ private struct FirmwareRow: View {
 
     @ViewBuilder private var action: some View {
         if model.isRunning(firmware) {
-            Button("Stop", systemImage: "stop.fill") { model.cancel() }
+            Button("Stop", systemImage: "stop.fill") { model.cancel(firmware) }
                 .buttonStyle(.glass)
         } else if model.alreadySaved(firmware) {
             Label("Saved", systemImage: "checkmark.circle.fill")

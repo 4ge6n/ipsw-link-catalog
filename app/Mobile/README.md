@@ -36,7 +36,19 @@ A transfer writes into `.incoming` beside it and is only moved into view once it
 is whole, so a half-finished image is never mistaken for a saved one — and is
 still there to carry on from.
 
+## Transfers
+
+A background URLSession, so a transfer carries on when the app is put away and
+finishes even if iOS closes the app in the meantime; the system then starts the
+app again to hand it over. What arrives is checked against Apple's SHA-1 before
+it is called saved.
+
+**This cannot be tested in the Simulator.** The background session's connection
+to `nsurlsessiond` is refused there — `failed to create a background
+NSURLSessionDownloadTask, as remote session is unavailable` — and every transfer
+ends immediately as an unknown error. Run it on a device to see it work.
+
 ## What it does not do
 
-Downloads stop when the app is put into the background; iOS ends them. There is
-no daily schedule, and nothing is deleted to make room.
+There is no daily schedule, and nothing is deleted to make room. A transfer is
+refused before it starts if the image will not fit.
