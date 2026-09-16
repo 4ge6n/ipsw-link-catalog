@@ -164,3 +164,15 @@
 "Save" = "保存";
 "Show in Finder" = "Finder に表示";
 "Forget" = "選択を解除";
+"%1$lld of %2$lld file(s)" = "%2$lld 件中 %1$lld 件";
+"No daily run" = "毎日の実行はオフ";
+"More" = "その他";
+
+/* 通知 */
+"Notifications" = "通知";
+"Tell me about new builds" = "新しいビルドを知らせる";
+"A notification arrives within minutes of Apple publishing, rather than when the app is next opened." = "Apple が公開してから数分以内に通知が届きます。次にアプリを開いたとき、ではありません。";
+"Platforms" = "プラットフォーム";
+"Betas arrive far more often than releases do." = "ベータはリリースよりはるかに頻繁に出ます。";
+"Notifications are turned off for IPSW Browser in Settings." = "「設定」で IPSW Browser の通知がオフになっています。";
+"The notification service answered %lld." = "通知サービスが %lld を返しました。";

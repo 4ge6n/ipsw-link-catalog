@@ -11,6 +11,7 @@ struct IPSWBrowserApp: App {
             RootView()
                 .environment(model)
                 .task {
+                    Notifications.shared.start()
                     model.listen()
                     model.refreshSaved()
                     await model.load()
@@ -27,6 +28,16 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
                      completionHandler: @escaping () -> Void) {
         BackgroundDownloads.shared.whenWokenFinished = completionHandler
     }
+
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Task { @MainActor in Notifications.shared.accept(deviceToken) }
+    }
+
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        Task { @MainActor in Notifications.shared.reject(error) }
+    }
 }
 
 private struct RootView: View {
@@ -40,6 +51,9 @@ private struct RootView: View {
             }
             Tab("Saved", systemImage: "internaldrive") {
                 LibraryView()
+            }
+            Tab("Notifications", systemImage: "bell") {
+                NotificationsView()
             }
         }
         // The bar steps out of the way while a long list of builds is read.

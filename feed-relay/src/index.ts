@@ -3,6 +3,7 @@ import { DurableObject } from "cloudflare:workers";
 interface Env {
   FEED_STATE: DurableObjectNamespace<FeedState>;
   PUSH_SUBSCRIPTIONS: DurableObjectNamespace<PushSubscriptions>;
+  DEVICE_TOKENS: DurableObjectNamespace<DeviceTokens>;
   GITHUB_DISPATCH_TOKEN: string;
   PUSH_API_TOKEN: string;
   GITHUB_REPOSITORY: string;
@@ -163,6 +164,48 @@ export class PushSubscriptions extends DurableObject<Env> {
   }
 }
 
+/// What one phone asked to hear about. The token is what APNs is addressed
+/// with; the rest is what it wants said.
+interface DeviceTokenRecord {
+  token: string;
+  /// Development builds and App Store builds are different APNs hosts.
+  sandbox: boolean;
+  /// Empty means every platform.
+  platforms: string[];
+  betas: boolean;
+  bundle: string;
+  updated?: number;
+}
+
+export class DeviceTokens extends DurableObject<Env> {
+  async register(record: DeviceTokenRecord): Promise<number> {
+    if (!/^[0-9a-f]{64,200}$/i.test(record.token ?? "")) throw new Error("invalid device token");
+    if (!record.bundle) throw new Error("invalid device token");
+    const tokens = (await this.ctx.storage.get<Record<string, DeviceTokenRecord>>("tokens")) ?? {};
+    tokens[record.token] = {
+      token: record.token,
+      sandbox: Boolean(record.sandbox),
+      platforms: Array.isArray(record.platforms) ? record.platforms.slice(0, 8) : [],
+      betas: Boolean(record.betas),
+      bundle: record.bundle,
+      updated: Date.now(),
+    };
+    await this.ctx.storage.put("tokens", tokens);
+    return Object.keys(tokens).length;
+  }
+
+  async remove(token: string): Promise<void> {
+    const tokens = (await this.ctx.storage.get<Record<string, DeviceTokenRecord>>("tokens")) ?? {};
+    delete tokens[token];
+    await this.ctx.storage.put("tokens", tokens);
+  }
+
+  async list(): Promise<DeviceTokenRecord[]> {
+    const tokens = (await this.ctx.storage.get<Record<string, DeviceTokenRecord>>("tokens")) ?? {};
+    return Object.values(tokens);
+  }
+}
+
 function cors(response: Response): Response {
   const headers = new Headers(response.headers);
   headers.set("Access-Control-Allow-Origin", SITE_ORIGIN);
@@ -198,6 +241,33 @@ export default {
     }
     if (url.pathname === "/vapid-public-key" && request.method === "GET") {
       return cors(Response.json({ publicKey: env.VAPID_PUBLIC_KEY }));
+    }
+    const devices = env.DEVICE_TOKENS.getByName("apns-devices");
+    // An app has no Origin to check. A token is only useful to whoever holds
+    // the APNs key, so registering one gives nothing away.
+    if (url.pathname === "/device-tokens" && request.method === "POST") {
+      try {
+        const count = await devices.register(await request.json<DeviceTokenRecord>());
+        return Response.json({ registered: true, count }, { status: 201 });
+      } catch {
+        return new Response("Invalid device token", { status: 400 });
+      }
+    }
+    if (url.pathname === "/device-tokens" && request.method === "DELETE") {
+      const { token } = await request.json<{ token?: string }>();
+      if (!token) return new Response("Invalid device token", { status: 400 });
+      await devices.remove(token);
+      return new Response(null, { status: 204 });
+    }
+    if (url.pathname === "/internal/device-tokens") {
+      if (!authorized(request, env.PUSH_API_TOKEN)) return new Response("Unauthorized", { status: 401 });
+      if (request.method === "GET") return Response.json({ devices: await devices.list() });
+      if (request.method === "DELETE") {
+        const { token } = await request.json<{ token?: string }>();
+        if (!token) return new Response("Invalid device token", { status: 400 });
+        await devices.remove(token);
+        return new Response(null, { status: 204 });
+      }
     }
     if (url.pathname === "/subscriptions" && request.method === "POST") {
       if (!sameOrigin(request)) return new Response("Forbidden", { status: 403 });

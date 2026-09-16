@@ -204,5 +204,8 @@ def main():
     readme=ROOT/"README.md"; current=readme.read_text() if readme.exists() else "# IPSW Link Catalog\n\nStable JSON indexes of Apple restore images.\n"
     dump_owner=os.getenv("GITHUB_REPOSITORY", "4ge6n/ipsw-link-catalog")
     readme.write_text(replace(current, content(indexes, now, now_tokyo, dump_owner, settings["default_branch"])))
-    print(json.dumps({"candidates":len(candidates), "records":len(records), "rejected":len(rejected), "new_records":len(observed_records-old_records), "new_firmware_urls":len(observed_urls-old_urls)}))
+    # Named rather than counted, so a notification can say what turned up
+    # instead of that something did. Capped: a first run sees everything.
+    new_builds=[{"os":os_key, "channel":channel, "version":version, "build":build} for os_key, channel, version, build in sorted(observed_records-old_records)][:12]
+    print(json.dumps({"candidates":len(candidates), "records":len(records), "rejected":len(rejected), "new_records":len(observed_records-old_records), "new_firmware_urls":len(observed_urls-old_urls), "new_builds":new_builds}))
 if __name__ == "__main__": main()

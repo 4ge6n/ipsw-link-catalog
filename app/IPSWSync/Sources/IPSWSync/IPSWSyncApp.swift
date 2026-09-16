@@ -56,39 +56,134 @@ struct IPSWSyncApp: App {
                      isInserted: Binding(get: { settings.showInMenuBar }, set: { _ in })) {
             MenuBarContent().environment(controller)
         }
+        // A panel rather than a list of menu items, so a run can show how far
+        // along it is instead of only saying that it is going.
+        .menuBarExtraStyle(.window)
     }
 }
 
+/// What is in the menu bar: how the run is going, the one thing worth doing
+/// about it, and the settings that used to sit in the same list as everything
+/// else tucked behind a menu of their own.
 private struct MenuBarContent: View {
     @Environment(SyncController.self) private var controller
     @Environment(\.openWindow) private var openWindow
     @Bindable private var settings = Settings.shared
 
     var body: some View {
-        if controller.running {
-            Text("Syncing…")
-            Button("Stop") { controller.cancel() }
-        } else {
-            Text(settings.lastRun.map {
-                String(format: String(localized: "Last run %@"), $0.formatted(date: .abbreviated, time: .shortened))
-            } ?? String(localized: "Not run yet"))
-            Button("Sync Now") { Task { await controller.run() } }
+        VStack(alignment: .leading, spacing: 10) {
+            header
+            if controller.running { progress }
+            Divider()
+            schedule
+            Divider()
+            actions
         }
-        if let next = controller.nextRun {
-            Text(String(format: String(localized: "Next %@"), next.formatted(date: .abbreviated, time: .shortened)))
-        }
-        Divider()
-        Toggle("Show in the menu bar", isOn: $settings.showInMenuBar)
-        Button("Settings…") { openWindow(id: "main"); NSApp.activate(ignoringOtherApps: true) }
-        Toggle("Open at Login", isOn: Binding(
-            get: { SMAppService.mainApp.status == .enabled },
-            set: { wanted in
-                // A daily run needs the app to be there when the day comes.
-                try? wanted ? SMAppService.mainApp.register() : SMAppService.mainApp.unregister()
+        .padding(12)
+        .frame(width: 280)
+    }
+
+    private var header: some View {
+        HStack {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(controller.running ? String(localized: "Syncing") : String(localized: "IPSW Sync"))
+                    .font(.headline)
+                Text(status)
+                    .font(.caption).foregroundStyle(.secondary)
             }
-        ))
-        Divider()
-        Button("Quit") { NSApp.terminate(nil) }
+            Spacer(minLength: 8)
+            if controller.running {
+                Button("Stop") { controller.cancel() }
+                    .buttonStyle(.glass)
+                    .controlSize(.small)
+            } else {
+                Button("Sync Now") { Task { await controller.run() } }
+                    .buttonStyle(.glassProminent)
+                    .controlSize(.small)
+            }
+        }
+    }
+
+    private var status: String {
+        guard controller.running else {
+            return settings.lastRun.map {
+                String(format: String(localized: "Last run %@"), $0.formatted(date: .abbreviated, time: .shortened))
+            } ?? String(localized: "Not run yet")
+        }
+        let state = controller.overall
+        return String(format: String(localized: "%1$lld of %2$lld file(s)"), state.done, state.total)
+    }
+
+    /// Enough to see it moving without opening the window.
+    @ViewBuilder private var progress: some View {
+        let state = controller.overall
+        VStack(alignment: .leading, spacing: 4) {
+            ProgressView(value: state.fraction)
+            HStack {
+                Text(current).lineLimit(1).truncationMode(.middle)
+                Spacer(minLength: 8)
+                Text(volume).monospacedDigit()
+            }
+            .font(.caption2).foregroundStyle(.secondary)
+        }
+    }
+
+    /// The file being fetched right now, of however many are running at once.
+    private var current: String {
+        controller.transfers.first { if case .downloading = $0.state { return true } else { return false } }?
+            .device ?? ""
+    }
+
+    private var volume: String {
+        let state = controller.overall
+        guard state.expected > 0 else { return "\(Int(state.fraction * 100))%" }
+        return "\(state.received.formatted(.byteCount(style: .file)))"
+            + " / \(state.expected.formatted(.byteCount(style: .file)))"
+    }
+
+    @ViewBuilder private var schedule: some View {
+        if let next = controller.nextRun {
+            Label(String(format: String(localized: "Next %@"),
+                         next.formatted(date: .abbreviated, time: .shortened)),
+                  systemImage: "clock")
+                .font(.caption).foregroundStyle(.secondary)
+        } else {
+            Label("No daily run", systemImage: "clock.badge.xmark")
+                .font(.caption).foregroundStyle(.secondary)
+        }
+    }
+
+    private var actions: some View {
+        HStack {
+            Button("Settings…") {
+                openWindow(id: "main")
+                NSApp.activate(ignoringOtherApps: true)
+            }
+            .buttonStyle(.glass)
+            .controlSize(.small)
+            Spacer()
+            // The switches belong to the app rather than to this moment, so they
+            // are behind a menu instead of in the way of what is.
+            Menu {
+                Toggle("Show in the menu bar", isOn: $settings.showInMenuBar)
+                Toggle("Open at Login", isOn: Binding(
+                    get: { SMAppService.mainApp.status == .enabled },
+                    set: { wanted in
+                        // A daily run needs the app to be there when the day comes.
+                        try? wanted ? SMAppService.mainApp.register() : SMAppService.mainApp.unregister()
+                    }
+                ))
+                Divider()
+                Button("Quit") { NSApp.terminate(nil) }
+            } label: {
+                Label("More", systemImage: "ellipsis")
+                    .labelStyle(.iconOnly)
+            }
+            .menuStyle(.button)
+            .buttonStyle(.glass)
+            .controlSize(.small)
+            .fixedSize()
+        }
     }
 }
 

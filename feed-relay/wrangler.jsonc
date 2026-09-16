@@ -10,11 +10,13 @@
   "durable_objects": {
     "bindings": [
       { "name": "FEED_STATE", "class_name": "FeedState" },
-      { "name": "PUSH_SUBSCRIPTIONS", "class_name": "PushSubscriptions" }
+      { "name": "PUSH_SUBSCRIPTIONS", "class_name": "PushSubscriptions" },
+      { "name": "DEVICE_TOKENS", "class_name": "DeviceTokens" }
     ]
   },
   "migrations": [
     { "tag": "v1", "new_sqlite_classes": ["FeedState"] },
-    { "tag": "v2", "new_sqlite_classes": ["PushSubscriptions"] }
+    { "tag": "v2", "new_sqlite_classes": ["PushSubscriptions"] },
+    { "tag": "v3", "new_sqlite_classes": ["DeviceTokens"] }
   ]
 }

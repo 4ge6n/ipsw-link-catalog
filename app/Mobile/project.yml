@@ -63,6 +63,12 @@ targets:
         outputFiles:
           - $(SRCROOT)/Assets.xcassets/AppIcon.appiconset/AppIcon.png
         basedOnDependencyAnalysis: false
+    entitlements:
+      path: IPSWBrowser.entitlements
+      properties:
+        # Xcode swaps this for production when the build is signed for the
+        # store; development is what a build installed from here needs.
+        aps-environment: development
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.github.4ge6n.ipsw-link-catalog.IPSWBrowser
@@ -71,4 +77,5 @@ targets:
         TARGETED_DEVICE_FAMILY: "1,2"
         SWIFT_VERSION: "5.0"
         CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: FC3DBA48QG
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon

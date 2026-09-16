@@ -45,16 +45,25 @@ jobs:
           python - "$summary" >> "$GITHUB_OUTPUT" <<'PY'
           import json
           import sys
-          print(f"new_firmware_urls={json.loads(sys.argv[1]).get('new_firmware_urls', 0)}")
+          summary = json.loads(sys.argv[1])
+          print(f"new_firmware_urls={summary.get('new_firmware_urls', 0)}")
+          # One line, so it survives being a step output.
+          print("new_builds=" + json.dumps(summary.get("new_builds", []), separators=(",", ":")))
           PY
         env:
           BETA_HISTORY: ${{ inputs.full_beta_history == true && '1' || '0' }}
         if: github.event_name != 'push'
-      - name: Send web push for new links
+      - name: Send notifications for new links
         if: github.event_name != 'push' && (steps.catalog.outputs.new_firmware_urls != '0' || inputs.test_push)
         env:
           PUSH_API_TOKEN: ${{ secrets.PUSH_API_TOKEN }}
           WEB_PUSH_VAPID_PRIVATE_KEY: ${{ secrets.WEB_PUSH_VAPID_PRIVATE_KEY }}
+          # Absent until an APNs key is added; the sender then skips the phones
+          # and still delivers to the browsers.
+          APNS_KEY: ${{ secrets.APNS_KEY }}
+          APNS_KEY_ID: ${{ secrets.APNS_KEY_ID }}
+          APNS_TEAM_ID: ${{ secrets.APNS_TEAM_ID }}
+          NEW_BUILDS: ${{ steps.catalog.outputs.new_builds }}
           TEST_PUSH: ${{ inputs.test_push && '1' || '' }}
         run: |
           npm ci --prefix push-sender
