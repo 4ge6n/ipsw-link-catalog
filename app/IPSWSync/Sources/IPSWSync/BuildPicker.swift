@@ -62,7 +62,9 @@ struct BuildPicker: View {
                     }
                     Text(String(format: String(localized: "%lld file(s)"), release.firmwares.count))
                     if release.firmwares.contains(where: \.signed) {
-                        Text("signed").foregroundStyle(.green)
+                        Text("signed")
+                            .padding(.horizontal, 6).padding(.vertical, 1)
+                            .glassEffect(.regular.tint(.green.opacity(0.35)), in: .capsule)
                     }
                 }
                 .font(.caption).foregroundStyle(.secondary)
@@ -115,8 +117,8 @@ struct BuildPicker: View {
                                     Text(firmware.name)
                                     if !firmware.signed {
                                         Text("not signed").font(.caption2)
-                                            .padding(.horizontal, 5).padding(.vertical, 1)
-                                            .background(.quaternary, in: Capsule())
+                                            .padding(.horizontal, 6).padding(.vertical, 2)
+                                            .glassEffect(.regular, in: .capsule)
                                     }
                                 }
                                 Text(firmware.devices.joined(separator: ", "))
@@ -139,22 +141,32 @@ struct BuildPicker: View {
     }
 
     private var footer: some View {
-        HStack {
-            Button("Close") { dismiss() }
-                .keyboardShortcut(.cancelAction)
-            Toggle("Signed only", isOn: $signedOnly)
-            Button("Select All") { chosenDevices.formUnion(shown.map(\.id)) }
-                .disabled(shown.isEmpty)
-            Button("None") { chosenDevices.removeAll() }
-                .disabled(chosenDevices.isEmpty)
-            Spacer()
-            Text(chosenDevices.isEmpty ? "" : "\(chosenDevices.count) selected")
-                .font(.caption).foregroundStyle(.secondary)
-            Button("Download…") { download() }
-                .keyboardShortcut(.defaultAction)
-                .disabled(chosenDevices.isEmpty || controller.running)
+        // One container, so the row of controls reads as a single pane rather
+        // than as several sheets of glass sitting beside each other.
+        GlassEffectContainer(spacing: 8) {
+            HStack {
+                Button("Close") { dismiss() }
+                    .buttonStyle(.glass)
+                    .keyboardShortcut(.cancelAction)
+                Toggle("Signed only", isOn: $signedOnly)
+                Button("Select All") { chosenDevices.formUnion(shown.map(\.id)) }
+                    .buttonStyle(.glass)
+                    .disabled(shown.isEmpty)
+                Button("None") { chosenDevices.removeAll() }
+                    .buttonStyle(.glass)
+                    .disabled(chosenDevices.isEmpty)
+                Spacer()
+                Text(chosenDevices.isEmpty
+                     ? ""
+                     : String(format: String(localized: "%lld selected"), chosenDevices.count))
+                    .font(.caption).foregroundStyle(.secondary)
+                Button("Download…") { download() }
+                    .buttonStyle(.glassProminent)
+                    .keyboardShortcut(.defaultAction)
+                    .disabled(chosenDevices.isEmpty || controller.running)
+            }
+            .padding(12)
         }
-        .padding(12)
     }
 
     private func load() async {

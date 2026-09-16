@@ -46,6 +46,7 @@ struct ActivityPane: View {
                     }
                     Spacer(minLength: 8)
                     Button("Stop") { controller.cancel() }
+                        .buttonStyle(.glass)
                         .controlSize(narrow ? .small : .regular)
                 } else {
                     Text(Settings.shared.lastRun.map {
@@ -55,6 +56,7 @@ struct ActivityPane: View {
                         .foregroundStyle(.secondary).lineLimit(1).truncationMode(.tail)
                     Spacer(minLength: 8)
                     Button(narrow ? String(localized: "Sync") : String(localized: "Sync Now")) { Task { await controller.run() } }
+                        .buttonStyle(.glassProminent)
                         .keyboardShortcut(.defaultAction)
                         .controlSize(narrow ? .small : .regular)
                 }

@@ -13,8 +13,13 @@ APP="${1:-$PWD/IPSWSync.app}"
 BUILD="${BUILD:-$(git rev-list --count HEAD 2>/dev/null || echo 1)}"
 VERSION="${VERSION:-1.0}"
 
-swift build -c "$CONFIGURATION" --disable-sandbox
-binary="$(swift build -c "$CONFIGURATION" --show-bin-path)/IPSWSync"
+# Somewhere other than the source drive, when that one is full or slow.
+SCRATCH="${SCRATCH:-}"
+scratch_args=()
+[ -n "$SCRATCH" ] && scratch_args=(--scratch-path "$SCRATCH")
+
+swift build -c "$CONFIGURATION" --disable-sandbox "${scratch_args[@]}"
+binary="$(swift build -c "$CONFIGURATION" "${scratch_args[@]}" --show-bin-path)/IPSWSync"
 
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
@@ -52,7 +57,7 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
   <key>CFBundlePackageType</key><string>APPL</string>
   <key>CFBundleShortVersionString</key><string>__VERSION__</string>
   <key>CFBundleVersion</key><string>__BUILD__</string>
-  <key>LSMinimumSystemVersion</key><string>14.0</string>
+  <key>LSMinimumSystemVersion</key><string>26.0</string>
   <key>NSHumanReadableCopyright</key><string>IPSW link catalog</string>
 </dict>
 </plist>
