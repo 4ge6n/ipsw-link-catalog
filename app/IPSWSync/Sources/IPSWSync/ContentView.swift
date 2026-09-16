@@ -128,17 +128,37 @@ private struct FolderRow: View {
     var body: some View {
         LabeledContent(platform.title) {
             HStack {
-                Text(settings.folder(for: platform)?.path(percentEncoded: false) ?? String(localized: "Not chosen"))
-                    .foregroundStyle(settings.folder(for: platform) == nil ? .secondary : .primary)
-                    .lineLimit(1).truncationMode(.head)
-                Spacer()
-                Button("New…") { create() }
-                Button("Choose…") { choose() }
+                // One pop-up naming the folder, rather than a truncated path and
+                // a row of buttons beside it — which is how the system offers a
+                // place to put something everywhere else.
+                Menu {
+                    Button("Choose…") { choose() }
+                    Button("New…") { create() }
+                    if let folder = settings.folder(for: platform) {
+                        Divider()
+                        Button("Show in Finder") {
+                            NSWorkspace.shared.activateFileViewerSelecting([folder])
+                        }
+                        Button("Forget") { settings.setFolder(nil, for: platform) }
+                    }
+                } label: {
+                    Label(name, systemImage: settings.folder(for: platform) == nil ? "folder.badge.questionmark" : "folder")
+                }
+                .menuStyle(.button)
+                .fixedSize()
+                .help(settings.folder(for: platform)?.path(percentEncoded: false) ?? "")
+                Spacer(minLength: 0)
             }
         }
         if let problem {
             Text(problem).font(.caption).foregroundStyle(.orange)
         }
+    }
+
+    /// The folder's own name is what identifies it; the path it sits at is long,
+    /// and is a thing to point at rather than to read.
+    private var name: String {
+        settings.folder(for: platform)?.lastPathComponent ?? String(localized: "Not chosen")
     }
 
     private func choose() {

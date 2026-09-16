@@ -1,9 +1,10 @@
 import SwiftUI
 
-/// The devices one build covers, and what can be done with each image.
+/// The devices one build covers. A row is a device first and a download second,
+/// so the name leads and the action is the small capsule Apple puts at the
+/// trailing edge rather than a bar across the row.
 struct DeviceList: View {
     let release: Release
-    @Environment(BrowserModel.self) private var model
     @State private var search = ""
     @State private var signedOnly = false
 
@@ -45,88 +46,90 @@ struct DeviceList: View {
 private struct FirmwareRow: View {
     let firmware: Firmware
     @Environment(BrowserModel.self) private var model
-    @Environment(\.horizontalSizeClass) private var width
-
-    private var wide: Bool { width == .regular }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            // Side by side where the window is wide enough for it — an iPad
-            // leaves a whole column empty otherwise — and stacked where it is not.
-            if wide {
-                HStack(spacing: 16) {
-                    naming
-                    Spacer(minLength: 16)
-                    controls
+        VStack(alignment: .leading, spacing: 6) {
+            HStack(spacing: 12) {
+                Image(systemName: symbol)
+                    .font(.title3)
+                    .foregroundStyle(.secondary)
+                    .frame(width: 26)
+
+                VStack(alignment: .leading, spacing: 1) {
+                    Text(firmware.name)
+                        .font(.body)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text(subtitle)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
                 }
-            } else {
-                naming
-                controls
+
+                Spacer(minLength: 12)
+                action
             }
 
             if let transfer = model.transfer(for: firmware) {
                 if model.isRunning(firmware) {
                     ProgressView(value: transfer.fraction)
+                        .progressViewStyle(.linear)
                     Text(detail(transfer))
-                        .font(.caption).foregroundStyle(.secondary).monospacedDigit()
+                        .font(.caption2).foregroundStyle(.secondary).monospacedDigit()
                 } else if case .failed(let why) = transfer.state {
-                    // Said out loud rather than leaving the button to go quietly
-                    // back to how it looked before anything was pressed.
-                    Label(why, systemImage: "exclamationmark.triangle")
+                    Text(why)
                         .font(.caption).foregroundStyle(.orange)
                         .fixedSize(horizontal: false, vertical: true)
                 }
             }
         }
-        .padding(.vertical, 6)
-    }
-
-    private var naming: some View {
-        HStack(alignment: .firstTextBaseline, spacing: 8) {
-            VStack(alignment: .leading, spacing: 2) {
-                Text(firmware.name).font(.headline).fixedSize(horizontal: false, vertical: true)
-                Text(firmware.devices.joined(separator: ", "))
-                    .font(.caption).foregroundStyle(.secondary)
+        .padding(.vertical, 4)
+        // The link is worth having and not worth a button on every row.
+        .swipeActions(edge: .leading, allowsFullSwipe: false) {
+            ShareLink(item: firmware.url) {
+                Label("Share Link", systemImage: "square.and.arrow.up")
             }
-            if !firmware.signed {
-                Text("not signed")
-                    .font(.caption2)
-                    .padding(.horizontal, 7).padding(.vertical, 2)
-                    .glassEffect(.regular, in: .capsule)
+            .tint(.accentColor)
+        }
+        .contextMenu {
+            ShareLink(item: firmware.url) {
+                Label("Share Link", systemImage: "square.and.arrow.up")
             }
         }
     }
 
-    /// One container, so the controls beside each other read as a single pane of
-    /// glass rather than several.
-    private var controls: some View {
-        GlassEffectContainer(spacing: 10) {
-            HStack(spacing: 10) {
-                action
-                ShareLink(item: firmware.url) {
-                    Label("Share Link", systemImage: "square.and.arrow.up")
-                        .labelStyle(.iconOnly)
-                }
-                .buttonStyle(.glass)
-            }
-        }
+    private var symbol: String {
+        let identifier = firmware.devices.first ?? ""
+        if identifier.hasPrefix("iPad") { return "ipad" }
+        if identifier.hasPrefix("iPod") { return "ipodtouch" }
+        return "iphone"
     }
 
+    private var subtitle: String {
+        let devices = firmware.devices.joined(separator: ", ")
+        return firmware.signed ? devices : devices + " · " + String(localized: "not signed")
+    }
+
+    /// Small and at the trailing edge, the way a download is offered everywhere
+    /// else on the system.
     @ViewBuilder private var action: some View {
         if model.isRunning(firmware) {
             Button("Stop", systemImage: "stop.fill") { model.cancel(firmware) }
-                .buttonStyle(.glass)
+                .labelStyle(.iconOnly)
+                .buttonStyle(.bordered)
+                .buttonBorderShape(.capsule)
+                .controlSize(.small)
         } else if model.alreadySaved(firmware) {
-            Label("Saved", systemImage: "checkmark.circle.fill")
-                .font(.subheadline)
-                .padding(.horizontal, 12).padding(.vertical, 7)
-                .glassEffect(.regular.tint(.green.opacity(0.3)), in: .capsule)
+            Image(systemName: "checkmark.circle.fill")
+                .foregroundStyle(.green)
+                .accessibilityLabel(Text("Saved"))
         } else {
-            Button("Save to Files", systemImage: "arrow.down.circle") {
-                Task { await model.download(firmware) }
-            }
-            .buttonStyle(.glassProminent)
-            .disabled(model.isBusy)
+            // Tinted text on a quiet capsule rather than a solid block of
+            // colour: there is one of these on every row, and the App Store
+            // does not shout on every row either.
+            Button("Save") { Task { await model.download(firmware) } }
+                .buttonStyle(.bordered)
+                .buttonBorderShape(.capsule)
+                .controlSize(.small)
+                .font(.footnote.weight(.semibold))
         }
     }
 

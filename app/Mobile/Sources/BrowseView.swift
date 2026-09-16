@@ -14,6 +14,7 @@ struct BrowseView: View {
             List(shown, selection: $selected) { release in
                 ReleaseRow(release: release).tag(release.id)
             }
+            .listStyle(.sidebar)
             .navigationTitle("Catalog")
             .searchable(text: $search, prompt: Text("Version or build"))
             .overlay {
@@ -63,26 +64,35 @@ private struct ReleaseRow: View {
     let release: Release
 
     var body: some View {
-        HStack(spacing: 12) {
-            VStack(alignment: .leading, spacing: 3) {
-                Text("\(release.version) (\(release.build))")
-                    .font(.headline)
-                HStack(spacing: 8) {
-                    if let date = release.releasedAt {
-                        Text(date.formatted(date: .abbreviated, time: .omitted))
+        HStack(spacing: 10) {
+            VStack(alignment: .leading, spacing: 2) {
+                HStack(spacing: 6) {
+                    Text(release.version)
+                        .font(.body)
+                    // A seal rather than a coloured pill: it is a state, not a
+                    // label, and the list is long enough without one on each row.
+                    if release.firmwares.contains(where: \.signed) {
+                        Image(systemName: "checkmark.seal.fill")
+                            .font(.caption)
+                            .foregroundStyle(.green)
+                            .accessibilityLabel(Text("signed"))
                     }
-                    Text(String(format: String(localized: "%lld file(s)"), release.firmwares.count))
                 }
-                .font(.caption).foregroundStyle(.secondary)
+                Text(subtitle)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
             }
-            Spacer()
-            if release.firmwares.contains(where: \.signed) {
-                Text("signed")
-                    .font(.caption2).fontWeight(.medium)
-                    .padding(.horizontal, 8).padding(.vertical, 3)
-                    .glassEffect(.regular.tint(.green.opacity(0.35)), in: .capsule)
-            }
+            Spacer(minLength: 8)
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, 2)
+    }
+
+    private var subtitle: String {
+        var parts = [release.build]
+        if let date = release.releasedAt {
+            parts.append(date.formatted(date: .abbreviated, time: .omitted))
+        }
+        parts.append(String(format: String(localized: "%lld file(s)"), release.firmwares.count))
+        return parts.joined(separator: "  ·  ")
     }
 }

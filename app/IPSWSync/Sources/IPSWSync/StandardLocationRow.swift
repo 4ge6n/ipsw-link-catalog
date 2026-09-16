@@ -15,10 +15,10 @@ struct StandardLocationRow: View {
     var body: some View {
         LabeledContent(platform.title) {
             HStack(spacing: 8) {
-                Text(description).foregroundStyle(.secondary)
-                    .lineLimit(1).truncationMode(.head)
-                Spacer(minLength: 4)
                 action
+                // Left of the value column, so the three rows line up rather
+                // than each sitting wherever its own text ends.
+                Spacer(minLength: 0)
             }
         }
         .task { refresh() }
@@ -47,24 +47,48 @@ struct StandardLocationRow: View {
         case .linked(let where_):
             where_ == chosen
             ? String(localized: "Linked to your folder")
-            : String(format: String(localized: "Linked to %@"), where_.path(percentEncoded: false))
+            : String(format: String(localized: "Linked to %@"), where_.lastPathComponent)
         case .somethingElse(let why): why
         }
     }
 
+    /// One pop-up rather than a pair of buttons on each of three rows. What can
+    /// be done depends on what is there, so the menu says, and the row stays a
+    /// row about where Finder is pointed.
     @ViewBuilder private var action: some View {
         switch state {
-        case .linked:
-            Button("Unlink") { run { try StandardLocation.unlink(platform) } }
-        case .folder:
-            Button("Move and Link…") { target = chosen; confirmingMove = true }.disabled(chosen == nil)
-            Button("Link to…") { linkElsewhere() }
-        case .missing, .emptyFolder:
-            Button("Link") { target = chosen; run { try StandardLocation.link(platform, to: chosen!) } }
-                .disabled(chosen == nil)
-            Button("Link to…") { linkElsewhere() }
         case .somethingElse:
             EmptyView()
+        default:
+            Menu {
+                switch state {
+                case .linked:
+                    Button("Unlink") { run { try StandardLocation.unlink(platform) } }
+                    Divider()
+                    Button("Link to…") { linkElsewhere() }
+                case .folder:
+                    Button("Move and Link…") { target = chosen; confirmingMove = true }
+                        .disabled(chosen == nil)
+                    Button("Link to…") { linkElsewhere() }
+                default:
+                    Button("Link") { target = chosen; run { try StandardLocation.link(platform, to: chosen!) } }
+                        .disabled(chosen == nil)
+                    Button("Link to…") { linkElsewhere() }
+                }
+            } label: {
+                Label(description, systemImage: symbol)
+            }
+            .menuStyle(.button)
+            .fixedSize()
+        }
+    }
+
+    private var symbol: String {
+        switch state {
+        case .linked: "link"
+        case .folder: "folder.fill"
+        case .somethingElse: "exclamationmark.triangle"
+        default: "link.badge.plus"
         }
     }
 
