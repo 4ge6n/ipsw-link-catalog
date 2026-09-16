@@ -4,7 +4,6 @@ options:
   deploymentTarget:
     iOS: "26.0"
   createIntermediateGroups: true
-  generateEmptyDirectories: true
 
 targets:
   IPSWBrowser:
@@ -18,25 +17,58 @@ targets:
       - path: ../IPSWSync/Sources/IPSWSync/SyncEngine+Files.swift
       - path: ../IPSWSync/Sources/IPSWSync/VerifiedStore.swift
       - path: Sources
+      - path: Assets.xcassets
+      # The same wording the Mac app is read in.
       - path: ../IPSWSync/Localizations/en.lproj
         buildPhase: resources
       - path: ../IPSWSync/Localizations/ja.lproj
         buildPhase: resources
+    info:
+      path: Info.plist
+      properties:
+        # Written out rather than generated, because the generated one takes the
+        # name on the Home Screen from the product name and shows IPSWBrowser.
+        CFBundleName: IPSW Browser
+        CFBundleDisplayName: IPSW Browser
+        CFBundleDevelopmentRegion: en
+        CFBundleLocalizations: [en, ja]
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: true
+        UISupportedInterfaceOrientations~iphone:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        # Saved images land in the app's Documents folder, which the Files app
+        # then shows as a place of its own.
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+    preBuildScripts:
+      # The icon is drawn rather than checked in, the same as the Mac app's, so
+      # it stays editable as code. Drawn once; it is not redrawn on every build.
+      - name: Draw the app icon
+        script: |
+          icon="$SRCROOT/Assets.xcassets/AppIcon.appiconset/AppIcon.png"
+          # The script draws with AppKit, so it is built for the Mac rather than
+          # for the SDK this target is being compiled against.
+          [ -f "$icon" ] || env -u SDKROOT -u PLATFORM_NAME \
+            -u IPHONEOS_DEPLOYMENT_TARGET -u MACOSX_DEPLOYMENT_TARGET \
+            xcrun --sdk macosx swift "$SRCROOT/../IPSWSync/icon/DrawIcon.swift" \
+            "$SRCROOT/Assets.xcassets/AppIcon.appiconset" ios
+        outputFiles:
+          - $(SRCROOT)/Assets.xcassets/AppIcon.appiconset/AppIcon.png
+        basedOnDependencyAnalysis: false
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.github.4ge6n.ipsw-link-catalog.IPSWBrowser
         MARKETING_VERSION: "1.0"
         CURRENT_PROJECT_VERSION: "1"
-        INFOPLIST_KEY_CFBundleDisplayName: IPSW Browser
-        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
-        INFOPLIST_KEY_UILaunchScreen_Generation: YES
-        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
-        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
-        # Downloaded images land in the app's Documents folder, which the Files
-        # app shows as a place of its own.
-        INFOPLIST_KEY_UIFileSharingEnabled: YES
-        INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace: YES
         TARGETED_DEVICE_FAMILY: "1,2"
         SWIFT_VERSION: "5.0"
         CODE_SIGN_STYLE: Automatic
-        GENERATE_INFOPLIST_FILE: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon

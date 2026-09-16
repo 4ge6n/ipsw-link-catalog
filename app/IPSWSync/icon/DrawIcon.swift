@@ -1,7 +1,11 @@
-// Draws the app icon at every size macOS asks for.
-// Run with: swift DrawIcon.swift <output directory>
+// Draws the app icon at every size macOS asks for, and the single square iOS
+// asks for. iOS rounds and shadows the icon itself, so that one is drawn to the
+// edges with none of the plate macOS wants around it.
+// Run with: swift DrawIcon.swift <output directory> [ios]
 import AppKit
 import CoreGraphics
+import ImageIO
+import UniformTypeIdentifiers
 import Foundation
 
 let outputDirectory = URL(filePath: CommandLine.arguments.count > 1 ? CommandLine.arguments[1] : ".")
@@ -13,7 +17,7 @@ func squirclePath(in rect: CGRect) -> CGPath {
     return CGPath(roundedRect: rect, cornerWidth: radius, cornerHeight: radius, transform: nil)
 }
 
-func draw(size: CGFloat) -> CGImage {
+func draw(size: CGFloat, fullBleed: Bool = false) -> CGImage {
     let side = Int(size)
     let space = CGColorSpace(name: CGColorSpace.sRGB)!
     let context = CGContext(data: nil, width: side, height: side, bitsPerComponent: 8,
@@ -22,13 +26,17 @@ func draw(size: CGFloat) -> CGImage {
     context.setShouldAntialias(true)
     context.interpolationQuality = .high
 
-    // The art sits in the 824/1024 box Apple leaves for macOS icons.
-    let inset = size * 0.1
+    // The art sits in the 824/1024 box Apple leaves for macOS icons; on iOS the
+    // system supplies the shape, so it runs to the edges instead.
+    let inset = fullBleed ? 0 : size * 0.1
     let plate = CGRect(x: inset, y: inset, width: size - inset * 2, height: size - inset * 2)
-    let shape = squirclePath(in: plate)
 
     context.saveGState()
-    context.addPath(shape)
+    if fullBleed {
+        context.addRect(plate)
+    } else {
+        context.addPath(squirclePath(in: plate))
+    }
     context.clip()
     let gradient = CGGradient(colorsSpace: space, colors: [
         CGColor(srgbRed: 0.24, green: 0.53, blue: 0.99, alpha: 1),
@@ -47,10 +55,13 @@ func draw(size: CGFloat) -> CGImage {
         endCenter: CGPoint(x: plate.midX, y: plate.maxY), endRadius: plate.width * 0.85,
         options: [])
     // The thin bright edge macOS icons carry where the light catches the rim.
-    context.setLineWidth(size * 0.006)
-    context.setStrokeColor(CGColor(srgbRed: 1, green: 1, blue: 1, alpha: 0.28))
-    context.addPath(squirclePath(in: plate.insetBy(dx: size * 0.003, dy: size * 0.003)))
-    context.strokePath()
+    // There is no rim to catch it on iOS.
+    if !fullBleed {
+        context.setLineWidth(size * 0.006)
+        context.setStrokeColor(CGColor(srgbRed: 1, green: 1, blue: 1, alpha: 0.28))
+        context.addPath(squirclePath(in: plate.insetBy(dx: size * 0.003, dy: size * 0.003)))
+        context.strokePath()
+    }
     context.restoreGState()
 
     // The glyph: an arrow coming down into a tray.
@@ -93,8 +104,19 @@ func draw(size: CGFloat) -> CGImage {
     return context.makeImage()!
 }
 
-let sizes = [16, 32, 64, 128, 256, 512, 1024]
 try? FileManager.default.createDirectory(at: outputDirectory, withIntermediateDirectories: true)
+
+if CommandLine.arguments.count > 2, CommandLine.arguments[2] == "ios" {
+    let image = draw(size: 1024, fullBleed: true)
+    let url = outputDirectory.appending(path: "AppIcon.png")
+    let destination = CGImageDestinationCreateWithURL(url as CFURL, "public.png" as CFString, 1, nil)!
+    CGImageDestinationAddImage(destination, image, nil)
+    CGImageDestinationFinalize(destination)
+    print("Wrote \(url.path)")
+    exit(0)
+}
+
+let sizes = [16, 32, 64, 128, 256, 512, 1024]
 for size in sizes {
     let image = draw(size: CGFloat(size))
     let url = outputDirectory.appending(path: "icon_\(size).png")

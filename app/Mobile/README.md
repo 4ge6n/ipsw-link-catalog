@@ -19,7 +19,15 @@ open IPSWBrowser.xcodeproj
 Signing is left to you: pick your team under Signing & Capabilities the first
 time, and Xcode fills in the rest. Nothing here is tied to a particular account.
 
-`project.yml` is the source of truth. Edit that, not the generated project.
+`project.yml` is the source of truth. Edit that, not the generated project. The
+icon is drawn by the Mac app's own `DrawIcon.swift` on the first build, so
+neither it nor the generated project and Info.plist are checked in.
+
+## On iPad
+
+The catalog is a split view: builds on the left, the devices of the one that is
+chosen on the right. A phone collapses that to the same list pushing a screen,
+which is what a split view does on its own at that width.
 
 ## Where saved images go
 

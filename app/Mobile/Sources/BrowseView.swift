@@ -1,25 +1,20 @@
 import SwiftUI
 
-/// Every build the catalog knows, down to the image for one device.
+/// Every build the catalog knows, down to the image for one device. Two columns
+/// where there is room for them, and the same list pushing a screen where there
+/// is not — which is what a split view collapses to on a phone.
 struct BrowseView: View {
     @Environment(BrowserModel.self) private var model
     @State private var search = ""
+    @State private var selected: Release.ID?
 
     var body: some View {
         @Bindable var model = model
-        NavigationStack {
-            List {
-                ForEach(shown) { release in
-                    NavigationLink(value: release) {
-                        ReleaseRow(release: release)
-                    }
-                }
+        NavigationSplitView {
+            List(shown, selection: $selected) { release in
+                ReleaseRow(release: release).tag(release.id)
             }
-            .listStyle(.plain)
             .navigationTitle("Catalog")
-            .navigationDestination(for: Release.self) { release in
-                DeviceList(release: release)
-            }
             .searchable(text: $search, prompt: Text("Version or build"))
             .overlay {
                 if let failure = model.failure {
@@ -45,6 +40,13 @@ struct BrowseView: View {
                 }
             }
             .refreshable { await model.load() }
+        } detail: {
+            if let release = model.releases.first(where: { $0.id == selected }) {
+                DeviceList(release: release)
+            } else {
+                ContentUnavailableView("Choose a build", systemImage: "square.stack.3d.up",
+                                       description: Text("Its devices appear here."))
+            }
         }
     }
 

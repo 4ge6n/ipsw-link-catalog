@@ -45,35 +45,23 @@ struct DeviceList: View {
 private struct FirmwareRow: View {
     let firmware: Firmware
     @Environment(BrowserModel.self) private var model
+    @Environment(\.horizontalSizeClass) private var width
+
+    private var wide: Bool { width == .regular }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            HStack(alignment: .firstTextBaseline, spacing: 8) {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(firmware.name).font(.headline)
-                    Text(firmware.devices.joined(separator: ", "))
-                        .font(.caption).foregroundStyle(.secondary)
+            // Side by side where the window is wide enough for it — an iPad
+            // leaves a whole column empty otherwise — and stacked where it is not.
+            if wide {
+                HStack(spacing: 16) {
+                    naming
+                    Spacer(minLength: 16)
+                    controls
                 }
-                Spacer(minLength: 8)
-                if !firmware.signed {
-                    Text("not signed")
-                        .font(.caption2)
-                        .padding(.horizontal, 7).padding(.vertical, 2)
-                        .glassEffect(.regular, in: .capsule)
-                }
-            }
-
-            // One container, so the controls beside each other read as a single
-            // pane of glass rather than several.
-            GlassEffectContainer(spacing: 10) {
-                HStack(spacing: 10) {
-                    action
-                    ShareLink(item: firmware.url) {
-                        Label("Share Link", systemImage: "square.and.arrow.up")
-                            .labelStyle(.iconOnly)
-                    }
-                    .buttonStyle(.glass)
-                }
+            } else {
+                naming
+                controls
             }
 
             if let transfer = model.transfer(for: firmware), model.isRunning(firmware) {
@@ -83,6 +71,37 @@ private struct FirmwareRow: View {
             }
         }
         .padding(.vertical, 6)
+    }
+
+    private var naming: some View {
+        HStack(alignment: .firstTextBaseline, spacing: 8) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(firmware.name).font(.headline).fixedSize(horizontal: false, vertical: true)
+                Text(firmware.devices.joined(separator: ", "))
+                    .font(.caption).foregroundStyle(.secondary)
+            }
+            if !firmware.signed {
+                Text("not signed")
+                    .font(.caption2)
+                    .padding(.horizontal, 7).padding(.vertical, 2)
+                    .glassEffect(.regular, in: .capsule)
+            }
+        }
+    }
+
+    /// One container, so the controls beside each other read as a single pane of
+    /// glass rather than several.
+    private var controls: some View {
+        GlassEffectContainer(spacing: 10) {
+            HStack(spacing: 10) {
+                action
+                ShareLink(item: firmware.url) {
+                    Label("Share Link", systemImage: "square.and.arrow.up")
+                        .labelStyle(.iconOnly)
+                }
+                .buttonStyle(.glass)
+            }
+        }
     }
 
     @ViewBuilder private var action: some View {
