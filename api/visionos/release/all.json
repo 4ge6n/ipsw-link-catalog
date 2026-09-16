@@ -4,7 +4,7 @@
   "os_key": "visionos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-15T21:31:38Z",
+  "generated_at": "2026-09-16T20:15:52Z",
   "release_count": 31,
   "firmware_count": 40,
   "releases": [
@@ -111,7 +111,7 @@
       "id": "visionos-release-26.5-23O471",
       "version": "26.5",
       "build": "23O471",
-      "released_at": "2026-05-04T17:00:00Z",
+      "released_at": "2026-05-11T17:32:57Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.5/23O471.json",
@@ -790,5 +790,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-16T06:31:38+09:00"
+  "generated_at_tokyo": "2026-09-17T05:15:52+09:00"
 }
