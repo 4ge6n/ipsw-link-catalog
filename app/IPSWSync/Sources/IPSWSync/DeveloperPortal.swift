@@ -17,9 +17,9 @@ final class DeveloperPortal {
 
     /// Where the sign-in lands once Apple is satisfied.
     private static let landing = URL(string: "https://developer.apple.com/download/os/")!
-    /// The private endpoint the page itself reads. Undocumented, and Apple may
-    /// change it without saying so; a failure here is not a failure of the app.
-    private static let listing = URL(string: "https://developer.apple.com/services-account/QH65B2/downloadws/listDownloads.action")!
+    /// The page itself. It is rendered on the server, so what comes back is
+    /// what Apple shows rather than a feed behind it.
+    private static let listing = landing
     /// Apple sets this once a session exists.
     private static let sessionCookie = "myacinfo"
 
@@ -82,24 +82,30 @@ final class DeveloperPortal {
         window = nil
     }
 
-    /// What Apple is offering this account, as Apple's own page reads it.
-    func downloads() async throws -> [PortalDownload] {
+    /// What Apple is offering this account, read from Apple's own page.
+    func downloads() async throws -> [PortalCatalog.Entry] {
         busy = true
         defer { busy = false }
         let session = URLSession(configuration: await sessionConfiguration())
         var request = URLRequest(url: Self.listing)
-        request.httpMethod = "POST"
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        request.setValue("https://developer.apple.com/download/os/", forHTTPHeaderField: "Referer")
-        request.httpBody = Data()
+        request.setValue("text/html", forHTTPHeaderField: "Accept")
         request.timeoutInterval = 30
-        let (data, _) = try await session.data(for: request)
-        // Kept before it is read, so a shape that is not what was expected can
-        // be looked at rather than guessed at twice.
-        let saved = URL.temporaryDirectory.appending(path: "ipsw-portal-listing.json")
+        let (data, response) = try await session.data(for: request)
+        // Signed out, Apple answers the sign-in page rather than an error.
+        if let http = response as? HTTPURLResponse,
+           http.url?.host()?.contains("idmsa.apple.com") == true {
+            signedIn = false
+            throw PortalError.signedOut
+        }
+        guard let page = String(data: data, encoding: .utf8) else { throw PortalError.unreadable }
+        // Kept before it is read, so a page that is not what was expected can be
+        // looked at rather than guessed at twice.
+        let saved = URL.temporaryDirectory.appending(path: "ipsw-portal-page.html")
         try? data.write(to: saved)
         lastResponse = saved
-        return try PortalDownload.parse(data)
+        let entries = PortalCatalog.parse(page)
+        guard !entries.isEmpty else { throw PortalError.nothingRecognised }
+        return entries
     }
 
     /// A session carrying the cookies the web view was given.

@@ -3,7 +3,7 @@ import SwiftUI
 /// Signing in to Apple, and what that is for.
 struct DeveloperAccountRow: View {
     @Bindable private var portal = DeveloperPortal.shared
-    @State private var found: [PortalDownload] = []
+    @State private var found: [PortalCatalog.Entry] = []
     @State private var problem: String?
 
     var body: some View {
@@ -24,7 +24,9 @@ struct DeveloperAccountRow: View {
         .task { await portal.refreshSignedIn() }
 
         if portal.signedIn, !found.isEmpty {
-            Text(String(format: String(localized: "Apple is offering %lld restore image(s) to this account."), found.count))
+            Text(String(format: String(localized: "%1$lld build(s) and %2$lld restore image(s), %3$lld of them pre-release."),
+                        found.count, found.reduce(0) { $0 + $1.firmwares.count },
+                        found.filter(\.isBeta).count))
                 .font(.caption).foregroundStyle(.secondary)
         }
         if let problem {

@@ -235,3 +235,5 @@
 "Your Apple Developer account, if you sign in" = "Apple Developer アカウント（サインインした場合）";
 "Signing in is optional and happens on Apple's own page, shown in a window. This app never sees your password. What it keeps afterwards is the session cookie Apple sets — the same one Safari would hold — used only to read Apple's downloads page and to fetch from it." = "サインインは任意で、ウインドウに表示される Apple 自身のページで行われます。このアプリがパスワードを見ることはありません。保持するのは Apple が設定するセッション Cookie だけで、Safari が持つものと同じです。用途は Apple のダウンロードページの読み取りと、そこからの取得に限られます。";
 "Nothing, to anyone but Apple. There is no account of ours, no identifier, and no analytics or telemetry of any kind in this app." = "Apple 以外には何も送りません。当方のアカウントも識別子もなく、解析・計測の類は一切入っていません。";
+"%1$lld build(s) and %2$lld restore image(s), %3$lld of them pre-release." = "%1$lld 個のビルド、%2$lld 件の復元イメージ（うち %3$lld 個がプレリリース）。";
+"Apple asked for a sign-in. The session has expired." = "Apple がサインインを求めています。セッションが期限切れです。";
