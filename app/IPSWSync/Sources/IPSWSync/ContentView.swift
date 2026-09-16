@@ -27,6 +27,14 @@ struct ContentView: View {
                     Text("Finder looks in ~/Library/iTunes for restore images. Linking it to your folder lets a restore use what is on the drive without copying it there.")
                         .font(.caption).foregroundStyle(.secondary)
                 }
+                Section {
+                    DeveloperAccountRow()
+                } header: {
+                    Text("Apple Developer")
+                } footer: {
+                    Text("Signing in reads Apple's downloads page directly, which carries builds before any catalog can. You sign in on Apple's own page — this app never sees your password, only the session Apple hands back.")
+                        .font(.caption).foregroundStyle(.secondary)
+                }
                 Section("Devices") {
                     DeviceSummary(showingDevices: $showingDevices)
                     Toggle("Delete the build each new one replaces", isOn: $settings.prune)

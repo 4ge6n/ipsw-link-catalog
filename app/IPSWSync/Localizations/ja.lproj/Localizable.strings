@@ -220,3 +220,18 @@
 "Checked %1$lld: %2$lld matched, %3$lld did not, %4$lld had nothing to check against." = "%1$lld 件を照合: 一致 %2$lld 件、不一致 %3$lld 件、照合対象なし %4$lld 件。";
 "This app fetches large files from Apple and writes to a drive you choose. Here is everything it does with the network and with your disk." = "このアプリは Apple から大きなファイルを取得し、あなたが選んだドライブに書き込みます。ネットワークとディスクに対して行うことのすべてを以下に示します。";
 "Done" = "完了";
+
+/* Apple Developer */
+"Apple Developer" = "Apple Developer";
+"Sign in to Apple Developer" = "Apple Developer にサインイン";
+"Sign In…" = "サインイン…";
+"Sign Out" = "サインアウト";
+"Signed in" = "サインイン済み";
+"Show the Reply" = "応答を表示";
+"Signing in reads Apple's downloads page directly, which carries builds before any catalog can. You sign in on Apple's own page — this app never sees your password, only the session Apple hands back." = "サインインすると Apple のダウンロードページを直接読みます。どのカタログよりも早くビルドが載ります。サインインは Apple 自身のページで行われ、このアプリがパスワードを見ることはありません。受け取るのは Apple が発行するセッションだけです。";
+"Apple is offering %lld restore image(s) to this account." = "このアカウントに %lld 件の復元イメージが提供されています。";
+"Apple's downloads page did not answer with anything readable." = "Apple のダウンロードページから読み取れる応答がありませんでした。";
+"Apple answered, but not in a shape this app recognises. The reply was kept so it can be looked at." = "Apple から応答はありましたが、このアプリが解釈できる形ではありませんでした。応答は保存してあります。";
+"Your Apple Developer account, if you sign in" = "Apple Developer アカウント（サインインした場合）";
+"Signing in is optional and happens on Apple's own page, shown in a window. This app never sees your password. What it keeps afterwards is the session cookie Apple sets — the same one Safari would hold — used only to read Apple's downloads page and to fetch from it." = "サインインは任意で、ウインドウに表示される Apple 自身のページで行われます。このアプリがパスワードを見ることはありません。保持するのは Apple が設定するセッション Cookie だけで、Safari が持つものと同じです。用途は Apple のダウンロードページの読み取りと、そこからの取得に限られます。";
+"Nothing, to anyone but Apple. There is no account of ours, no identifier, and no analytics or telemetry of any kind in this app." = "Apple 以外には何も送りません。当方のアカウントも識別子もなく、解析・計測の類は一切入っていません。";
