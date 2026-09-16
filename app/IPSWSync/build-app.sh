@@ -18,8 +18,10 @@ SCRATCH="${SCRATCH:-}"
 scratch_args=()
 [ -n "$SCRATCH" ] && scratch_args=(--scratch-path "$SCRATCH")
 
-swift build -c "$CONFIGURATION" --disable-sandbox "${scratch_args[@]}"
-binary="$(swift build -c "$CONFIGURATION" "${scratch_args[@]}" --show-bin-path)/IPSWSync"
+# An empty array is an unbound variable to the bash the runner has, so it is
+# expanded only when it holds something.
+swift build -c "$CONFIGURATION" --disable-sandbox ${scratch_args[@]+"${scratch_args[@]}"}
+binary="$(swift build -c "$CONFIGURATION" ${scratch_args[@]+"${scratch_args[@]}"} --show-bin-path)/IPSWSync"
 
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
