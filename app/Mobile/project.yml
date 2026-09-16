@@ -16,6 +16,7 @@ targets:
       - path: ../IPSWSync/Sources/IPSWSync/SyncEngine.swift
       - path: ../IPSWSync/Sources/IPSWSync/SyncEngine+Files.swift
       - path: ../IPSWSync/Sources/IPSWSync/VerifiedStore.swift
+      - path: ../IPSWSync/Sources/IPSWSync/Transparency.swift
       - path: Sources
       - path: Assets.xcassets
       # The same wording the Mac app is read in.

@@ -7,6 +7,7 @@ struct ContentView: View {
     @Environment(SyncController.self) private var controller
     @State private var showingDevices = false
     @State private var showingBuilds = false
+    @State private var showingTransparency = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -55,8 +56,25 @@ struct ContentView: View {
                         .font(.caption).foregroundStyle(.secondary)
                     }
                 }
-                Section("Updates") {
+                Section {
+                    LabeledContent("Everything on the drive") {
+                        HStack {
+                            Button("Check Now") { Task { await controller.verify() } }
+                                .disabled(controller.running)
+                            Spacer(minLength: 0)
+                        }
+                    }
+                } header: {
+                    Text("Checksums")
+                } footer: {
+                    Text("A run trusts what it checked before, so it need not read every byte each night. This reads them.")
+                        .font(.caption).foregroundStyle(.secondary)
+                }
+                Section {
+                    Button("About this app") { showingTransparency = true }
                     UpdateRow()
+                } header: {
+                    Text("Updates")
                 }
                 Section("Schedule") {
                     Toggle("Run every day", isOn: $settings.scheduleEnabled)
@@ -84,6 +102,14 @@ struct ContentView: View {
         .onChange(of: settings.minute) { controller.scheduleNext() }
         .sheet(isPresented: $showingDevices) { DevicePicker() }
         .sheet(isPresented: $showingBuilds) { BuildPicker().environment(controller) }
+        .sheet(isPresented: $showingTransparency) { TransparencyPanel() }
+        // Said before it fetches anything, rather than when someone asks.
+        .sheet(isPresented: Binding(
+            get: { !settings.sawDisclosure },
+            set: { _ in }
+        )) {
+            TransparencyPanel(firstRun: true)
+        }
     }
 }
 

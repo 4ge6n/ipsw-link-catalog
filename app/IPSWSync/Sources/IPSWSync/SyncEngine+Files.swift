@@ -142,6 +142,61 @@ extension SyncEngine {
     /// Hashing hundreds of gigabytes on every run is not affordable, so a file
     /// whose size and modification date still match what was verified before is
     /// taken on trust; anything else is hashed.
+    /// Read every image in a folder against Apple's own SHA-1 — not the record
+    /// of having done so, but the bytes. A daily run trusts that record so it
+    /// need not read a terabyte every night; this is for when you want to know
+    /// rather than to be told.
+    func verify(_ platform: Platform, in folder: URL,
+                report: @escaping @Sendable @MainActor (Transfer) -> Void,
+                log: @escaping @Sendable @MainActor (LogEntry) -> Void) async throws {
+        resetCancellation()
+        try checkVolume(folder)
+        let known = try await everyBuild(platform, channel: .release)
+            + everyBuild(platform, channel: .beta)
+        var sums: [String: String] = [:]
+        for release in known {
+            for firmware in release.firmwares where firmware.sha1 != nil {
+                sums[firmware.filename] = firmware.sha1
+            }
+        }
+        let names = ((try? FileManager.default.contentsOfDirectory(atPath: folder.path(percentEncoded: false))) ?? [])
+            .filter { $0.hasSuffix(".ipsw") }.sorted()
+        guard !names.isEmpty else {
+            await log(LogEntry(kind: .info, message: String(format: String(localized: "Nothing to check in %@"), folder.lastPathComponent)))
+            return
+        }
+        var good = 0, bad = 0, unknown = 0
+        for name in names {
+            if isCancelled { break }
+            let file = folder.appending(path: name)
+            var transfer = Transfer(id: name, name: name, device: name)
+            transfer.state = .verifying
+            await report(transfer)
+            guard let sha1 = sums[name] else {
+                unknown += 1
+                transfer.state = .done(alreadyHad: true)
+                await report(transfer)
+                await log(LogEntry(kind: .warning, message: String(format: String(localized: "%@ — Apple publishes no checksum for this one"), name)))
+                continue
+            }
+            // Read the bytes rather than the note saying they were read.
+            VerifiedStore.shared.forget(file)
+            if await isIntact(file, sha1: sha1) {
+                good += 1
+                transfer.state = .done(alreadyHad: true)
+                await report(transfer)
+            } else {
+                bad += 1
+                transfer.state = .failed(String(localized: "does not match"))
+                await report(transfer)
+                await log(LogEntry(kind: .bad, message: String(format: String(localized: "%@ does not match Apple's checksum."), name)))
+            }
+        }
+        await log(LogEntry(kind: bad == 0 ? .good : .bad,
+                           message: String(format: String(localized: "Checked %1$lld: %2$lld matched, %3$lld did not, %4$lld had nothing to check against."),
+                                           names.count, good, bad, unknown)))
+    }
+
     nonisolated func isIntact(_ url: URL, sha1: String?) async -> Bool {
         guard let sha1, FileManager.default.fileExists(atPath: url.path(percentEncoded: false)) else { return false }
         if VerifiedStore.shared.matches(url, sha1: sha1) { return true }

@@ -58,6 +58,8 @@ actor SyncEngine {
     /// Readable from the transfer itself, which runs outside the actor.
     var isCancelled: Bool { cancelled }
 
+    func resetCancellation() { cancelled = false }
+
     /// Bring one folder in step with the newest signed builds for a platform.
     func sync(
         platform: Platform,

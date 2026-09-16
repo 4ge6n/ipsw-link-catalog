@@ -125,6 +125,29 @@ final class SyncController {
 
     func cancel() { Task { await engine.cancel() } }
 
+    /// Read what is on the drive against Apple's own checksums. The daily run
+    /// trusts the record of having checked; this does not.
+    func verify() async {
+        guard !running else { return }
+        running = true
+        transfers = []
+        note(.info, String(localized: "Checking what is already here against Apple's checksums."))
+        for platform in Platform.allCases {
+            guard let folder = settings.folder(for: platform) else { continue }
+            let scoped = folder.startAccessingSecurityScopedResource()
+            defer { if scoped { folder.stopAccessingSecurityScopedResource() } }
+            do {
+                try await engine.verify(
+                    platform, in: folder,
+                    report: { [weak self] transfer in self?.update(transfer) },
+                    log: { [weak self] entry in self?.log.append(entry) })
+            } catch {
+                note(.bad, error.localizedDescription)
+            }
+        }
+        running = false
+    }
+
     /// Fetch builds the person picked by hand. Nothing is pruned: a build asked
     /// for on purpose must not take another one away.
     func download(_ firmwares: [Firmware], into folder: URL) async {

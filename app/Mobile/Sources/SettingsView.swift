@@ -1,14 +1,19 @@
 import SwiftUI
 
-/// What the phone should be woken for.
-struct NotificationsView: View {
+/// Everything about the app rather than about the catalog: what it tells you,
+/// what it is holding, and what it does.
+struct SettingsView: View {
+    @Environment(BrowserModel.self) private var model
     @Bindable private var notifications = Notifications.shared
+    @State private var showingTransparency = false
 
     var body: some View {
         NavigationStack {
             Form {
                 Section {
                     Toggle("Tell me about new builds", isOn: $notifications.on)
+                } header: {
+                    Text("Notifications")
                 } footer: {
                     Text("A notification arrives within minutes of Apple publishing, rather than when the app is next opened.")
                 }
@@ -32,9 +37,35 @@ struct NotificationsView: View {
                             .font(.callout).foregroundStyle(.orange)
                     }
                 }
+
+                Section {
+                    LabeledContent("Saved images", value: "\(model.saved.count)")
+                    if let free = Library.freeSpace {
+                        LabeledContent("Free space", value: free.formatted(.byteCount(style: .file)))
+                    }
+                    LabeledContent("Held", value: held.formatted(.byteCount(style: .file)))
+                } header: {
+                    Text("Storage")
+                }
+
+                Section {
+                    Button("About this app") { showingTransparency = true }
+                    LabeledContent("Version", value: version)
+                } footer: {
+                    Text("What this app connects to, sends and writes — the same note it showed when it was first opened.")
+                }
             }
-            .navigationTitle("Notifications")
+            .navigationTitle("Settings")
+            .sheet(isPresented: $showingTransparency) { TransparencyView() }
         }
+    }
+
+    private var held: Int64 { model.saved.reduce(0) { $0 + $1.size } }
+
+    private var version: String {
+        let short = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "?"
+        let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "?"
+        return "\(short) (\(build))"
     }
 
     /// Nothing chosen means everything, which is what a person who has just

@@ -52,12 +52,19 @@ private struct RootView: View {
             Tab("Saved", systemImage: "internaldrive") {
                 LibraryView()
             }
-            Tab("Notifications", systemImage: "bell") {
-                NotificationsView()
+            Tab("Settings", systemImage: "gearshape") {
+                SettingsView()
             }
         }
         // The bar steps out of the way while a long list of builds is read.
         .tabBarMinimizeBehavior(.onScrollDown)
+        // Said before anything is fetched, rather than when someone asks.
+        .sheet(isPresented: Binding(
+            get: { !UserDefaults.standard.bool(forKey: "sawDisclosure") },
+            set: { _ in }
+        )) {
+            TransparencyView(firstRun: true)
+        }
         .alert("Not enough room", isPresented: Binding(
             get: { model.noRoom != nil },
             set: { if !$0 { model.noRoom = nil } }

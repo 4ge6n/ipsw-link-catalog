@@ -176,3 +176,47 @@
 "Betas arrive far more often than releases do." = "ベータはリリースよりはるかに頻繁に出ます。";
 "Notifications are turned off for IPSW Browser in Settings." = "「設定」で IPSW Browser の通知がオフになっています。";
 "The notification service answered %lld." = "通知サービスが %lld を返しました。";
+
+/* 透明性 */
+"Before you start" = "はじめる前に";
+"This app fetches large files from Apple and can be told to notify you. Here is everything it does with the network and with this phone." = "このアプリは Apple から大きなファイルを取得し、通知を送ることもできます。ネットワークとこの端末に対して行うことのすべてを以下に示します。";
+"Continue" = "続ける";
+"About this app" = "このアプリについて";
+"What it connects to" = "接続先";
+"The catalog at %1$@, and Apple's own servers for the images themselves (%2$@)." = "%1$@ のカタログと、イメージ本体は Apple のサーバー（%2$@）。";
+"The catalog at %1$@, Apple's own servers for the images themselves (%2$@), and GitHub to see whether a newer copy of this app exists." = "%1$@ のカタログ、イメージ本体は Apple のサーバー（%2$@）、そしてこのアプリの新しい版があるか確認するため GitHub。";
+"What it sends about you" = "あなたについて送るもの";
+"Nothing. There is no account, no identifier, and no analytics or telemetry of any kind in this app. It asks for files and nothing else." = "ありません。アカウントも識別子もなく、解析・計測の類は一切入っていません。ファイルを要求する以外のことはしません。";
+"What it writes" = "書き込むもの";
+"Restore images into the folders you choose, and beside them a small file recording which ones have already been checked against Apple's SHA-1, so a daily run need not read every byte again." = "あなたが選んだフォルダへ復元イメージを、そしてその隣に、Apple の SHA-1 で照合済みのものを記録した小さなファイルを。毎日の実行で全バイトを読み直さずに済ませるためです。";
+"What it changes outside its own folders" = "自分のフォルダの外で変えるもの";
+"Only if you ask: the folder Finder restores from, in ~/Library/iTunes, can be replaced with a link to yours. Nothing else on the disk is touched." = "あなたが指示したときだけ。~/Library/iTunes にある Finder の復元フォルダを、あなたのフォルダへのリンクに置き換えます。ディスク上のそれ以外には触れません。";
+"What it deletes" = "削除するもの";
+"Only a build that a newer one has replaced, and only while that switch is on. A build you fetched by hand is never pruned." = "新しいビルドに置き換わった古いビルドだけ、しかもそのスイッチが入っている間だけです。手動で取得したビルドは決して削除しません。";
+"What it sends, and only if you turn notifications on" = "送るもの（通知をオンにした場合のみ）";
+"This phone's notification address from Apple, which platforms you chose, and whether you want betas — to %@ and nowhere else. Turn notifications off and it is deleted." = "Apple から得たこの端末の通知アドレス、選んだプラットフォーム、ベータを希望するか。宛先は %@ のみです。通知をオフにすると削除されます。";
+"What it never sends" = "決して送らないもの";
+"There is no account, no advertising identifier, and no analytics or telemetry of any kind in this app. What you look at is not reported anywhere." = "アカウントも広告識別子もなく、解析・計測の類は一切入っていません。何を見たかはどこにも報告されません。";
+"Images you save go in this app's own folder, which the Files app shows. Deleting the app deletes them. Nothing is written anywhere else on the phone." = "保存したイメージはこのアプリ自身のフォルダに入り、「ファイル」App から見えます。アプリを削除すれば一緒に消えます。端末の他の場所には何も書きません。";
+"What it checks" = "検証するもの";
+"Every image is read back against Apple's SHA-1 before it is called saved. One that does not match is discarded rather than kept." = "すべてのイメージは「保存済み」とする前に Apple の SHA-1 で読み直して照合します。一致しないものは保持せず破棄します。";
+
+/* 設定 */
+"Settings" = "設定";
+"Storage" = "保存容量";
+"Saved images" = "保存済みイメージ";
+"Free space" = "空き容量";
+"Held" = "使用量";
+"What this app connects to, sends and writes — the same note it showed when it was first opened." = "このアプリの接続先・送信内容・書き込み先。初回起動時に表示したものと同じです。";
+
+/* ハッシュ照合 */
+"Checksums" = "チェックサム";
+"Everything on the drive" = "ドライブ上のすべて";
+"A run trusts what it checked before, so it need not read every byte each night. This reads them." = "毎日の実行は以前照合した結果を信用するため、毎晩全バイトを読み直しません。これは読み直します。";
+"Checking what is already here against Apple's checksums." = "既存のファイルを Apple のチェックサムと照合しています。";
+"Nothing to check in %@" = "%@ に照合するものがありません";
+"%@ — Apple publishes no checksum for this one" = "%@ — これには Apple のチェックサムがありません";
+"does not match" = "一致しません";
+"Checked %1$lld: %2$lld matched, %3$lld did not, %4$lld had nothing to check against." = "%1$lld 件を照合: 一致 %2$lld 件、不一致 %3$lld 件、照合対象なし %4$lld 件。";
+"This app fetches large files from Apple and writes to a drive you choose. Here is everything it does with the network and with your disk." = "このアプリは Apple から大きなファイルを取得し、あなたが選んだドライブに書き込みます。ネットワークとディスクに対して行うことのすべてを以下に示します。";
+"Done" = "完了";

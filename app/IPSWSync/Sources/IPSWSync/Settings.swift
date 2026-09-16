@@ -23,6 +23,7 @@ final class Settings {
     var lastRun: Date? { didSet { write(lastRun, "lastRun") } }
     var autoUpdate: Bool { didSet { write(autoUpdate, "autoUpdate") } }
     var hasLaunchedBefore: Bool { didSet { write(hasLaunchedBefore, "hasLaunchedBefore") } }
+    var sawDisclosure: Bool { didSet { write(sawDisclosure, "sawDisclosure") } }
     var lastUpdateCheck: Date? { didSet { write(lastUpdateCheck, "lastUpdateCheck") } }
     var language: Language { didSet { write(language.rawValue, "language"); applyLanguage() } }
     var showInDock: Bool { didSet { write(showInDock, "showInDock"); applyPresentation() } }
@@ -84,6 +85,7 @@ final class Settings {
         lastRun = defaults.object(forKey: "lastRun") as? Date
         autoUpdate = defaults.object(forKey: "autoUpdate") as? Bool ?? true
         hasLaunchedBefore = defaults.bool(forKey: "hasLaunchedBefore")
+        sawDisclosure = defaults.bool(forKey: "sawDisclosure")
         lastUpdateCheck = defaults.object(forKey: "lastUpdateCheck") as? Date
         language = Language(rawValue: defaults.string(forKey: "language") ?? "") ?? .system
         showInDock = defaults.object(forKey: "showInDock") as? Bool ?? true
