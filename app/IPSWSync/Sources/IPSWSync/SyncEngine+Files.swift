@@ -70,6 +70,10 @@ extension SyncEngine {
             transfer.state = .done(alreadyHad: false)
             await report(transfer)
             await log(LogEntry(kind: .good, message: String(format: String(localized: firmware.sha1 == nil ? "Downloaded %@" : "Downloaded %@, SHA-1 verified"), firmware.filename)))
+        } catch is CancellationError {
+            transfer.state = .waiting
+            await report(transfer)
+            await log(LogEntry(kind: .warning, message: String(format: String(localized: "Stopped %@; what arrived is kept to carry on from"), firmware.filename)))
         } catch {
             transfer.state = .failed(error.localizedDescription)
             await report(transfer)
@@ -107,6 +111,13 @@ extension SyncEngine {
                 if Date.now.timeIntervalSince(lastReport) > 0.2 {
                     lastReport = .now
                     progress(written)
+                }
+                // Asked once a megabyte rather than once a byte. Stop had been
+                // read only between files, so it did nothing at all to the one
+                // transfer a person was actually watching.
+                if await isCancelled {
+                    progress(written)
+                    throw CancellationError()
                 }
             }
         }

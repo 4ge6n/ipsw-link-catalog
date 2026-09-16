@@ -146,3 +146,14 @@
 "%lld selected" = "%lld 件を選択中";
 "%1$lld device(s), about %2$@ to hold." = "%1$lld 台、およそ %2$@ 必要です。";
 "%lld transfers share the connection; more is not always faster." = "%lld 件が回線を分け合います。多いほど速いとは限りません。";
+"Stopped %@; what arrived is kept to carry on from" = "%@ を停止しました。受信済みの分は次回の再開に使います";
+
+/* iOS / iPadOS 版 */
+"Catalog" = "カタログ";
+"Saved" = "保存済み";
+"Version or build" = "バージョンまたはビルド";
+"Save to Files" = "ファイルに保存";
+"Share Link" = "リンクを共有";
+"Nothing saved yet" = "まだ何も保存されていません";
+"Images you save appear here, and in the Files app under IPSW Browser." = "保存したイメージはここと、「ファイル」App の IPSW Browser に現れます。";
+"%@ free on this device" = "この端末の空き容量 %@";
