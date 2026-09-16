@@ -237,3 +237,21 @@
 "Nothing, to anyone but Apple. There is no account of ours, no identifier, and no analytics or telemetry of any kind in this app." = "Apple 以外には何も送りません。当方のアカウントも識別子もなく、解析・計測の類は一切入っていません。";
 "%1$lld build(s) and %2$lld restore image(s), %3$lld of them pre-release." = "%1$lld 個のビルド、%2$lld 件の復元イメージ（うち %3$lld 個がプレリリース）。";
 "Apple asked for a sign-in. The session has expired." = "Apple がサインインを求めています。セッションが期限切れです。";
+
+/* Watching Apple's downloads page */
+"Tell me when Apple posts a build" = "Apple がビルドを公開したら知らせる";
+"Look every" = "確認する間隔";
+"5 minutes" = "5 分";
+"15 minutes" = "15 分";
+"30 minutes" = "30 分";
+"Hour" = "1 時間";
+"6 hours" = "6 時間";
+"Include beta and RC builds" = "ベータ・RC も対象にする";
+"Download what appears" = "公開されたら自動でダウンロード";
+"Newest: %1$@ (%2$@)" = "最新: %1$@（%2$@）";
+"Looked %@" = "最終確認 %@";
+"%lld new build(s) on Apple Developer" = "Apple Developer に %lld 件の新しいビルド";
+"Build %1$@ — %2$lld restore image(s)." = "ビルド %1$@ — 復元イメージ %2$lld 件。";
+"Apple is now offering %1$@ (%2$@)." = "Apple が %1$@（%2$@）の配布を開始しました。";
+"Catalog" = "カタログ";
+"Apple Developer" = "Apple Developer";
