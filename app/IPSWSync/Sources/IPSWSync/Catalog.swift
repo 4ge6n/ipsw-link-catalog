@@ -10,6 +10,12 @@ struct Firmware: Codable, Identifiable, Hashable {
     let sha1: String?
     let signed: Bool
 
+    /// The same image, with a checksum that was found somewhere else.
+    func checked(against sha1: String) -> Firmware {
+        Firmware(id: id, name: name, devices: devices, filename: filename, url: url,
+                 sha1: sha1, signed: signed)
+    }
+
     /// iPhone18,5_27.0_24A437_Restore.ipsw and its other builds share this.
     var modelKey: String { Firmware.modelKey(of: filename) }
 

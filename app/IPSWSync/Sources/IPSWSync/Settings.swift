@@ -44,6 +44,8 @@ final class Settings {
     /// Betas and release candidates are most of what the page has that the
     /// catalog does not, but they are not what everyone is there for.
     var portalIncludesBetas: Bool { didSet { write(portalIncludesBetas, "portalIncludesBetas") } }
+    /// Whether to ask ipsw.me for the checksums Apple stops publishing.
+    var useChecksumFallback: Bool { didSet { write(useChecksumFallback, "useChecksumFallback") } }
     /// Builds already announced, so being told is something that happens once.
     var seenPortalBuilds: Set<String> {
         didSet { write(Array(seenPortalBuilds).sorted(), "seenPortalBuilds") }
@@ -114,6 +116,7 @@ final class Settings {
         portalMinutes = min(max(defaults.object(forKey: "portalMinutes") as? Int ?? 5, 1), 24 * 60)
         portalFeedsSync = defaults.object(forKey: "portalFeedsSync") as? Bool ?? true
         portalIncludesBetas = defaults.object(forKey: "portalIncludesBetas") as? Bool ?? true
+        useChecksumFallback = defaults.object(forKey: "useChecksumFallback") as? Bool ?? true
         seenPortalBuilds = Set(defaults.stringArray(forKey: "seenPortalBuilds") ?? [])
         folderBookmarks = defaults.dictionary(forKey: "folders") as? [String: Data] ?? [:]
     }

@@ -25,6 +25,8 @@ enum Transparency {
     /// Apple's own, read directly so a new build is known as it ships. Neither
     /// needs an account; neither is told anything about you.
     static let appleHosts = ["itunes.apple.com", "developer.apple.com"]
+    /// The one thing here that is not Apple's, asked for one thing only.
+    static let checksumHost = "api.ipsw.me"
 
     static var mac: [Point] {
         [
@@ -35,9 +37,12 @@ enum Transparency {
             Point(symbol: "person.badge.key",
                   title: String(localized: "Your Apple Developer account, if you sign in"),
                   detail: String(localized: "Signing in is optional, and everything except beta builds works without it. It happens on Apple's own page, shown in a window, and this app never sees your password. What it keeps afterwards is the session cookie Apple sets — the same one Safari would hold — used only to read Apple's downloads page and to fetch from it.")),
+            Point(symbol: "number",
+                  title: String(format: String(localized: "%@, for checksums Apple stops publishing"), checksumHost),
+                  detail: String(localized: "Apple publishes a checksum for a build only while it is still signing it; after that the download page still has the image but no checksum for it. This asks ipsw.me, by version number and nothing else — no identifier, no account, nothing about which devices you keep. Its answers match Apple's own wherever both have one. It can be turned off, and then those images are checked by size alone.")),
             Point(symbol: "hand.raised",
                   title: String(localized: "What it sends about you"),
-                  detail: String(localized: "Nothing, to anyone but Apple. There is no account of ours, no identifier, and no analytics or telemetry of any kind in this app.")),
+                  detail: String(format: String(localized: "Nothing, to anyone. Apple is told nothing but what any download tells it; %@ is told a version number. There is no account of ours, no identifier, and no analytics or telemetry of any kind in this app."), checksumHost)),
             Point(symbol: "internaldrive",
                   title: String(localized: "What it writes"),
                   detail: String(localized: "Restore images into the folders you choose, and beside them a small file recording which ones have already been checked against Apple's SHA-1, so a daily run need not read every byte again.")),

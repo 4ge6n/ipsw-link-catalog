@@ -26,6 +26,7 @@ struct DeveloperAccountRow: View {
         }
         Toggle("Include beta and RC builds", isOn: $settings.portalIncludesBetas)
         Toggle("Download what appears", isOn: $settings.portalFeedsSync)
+        Toggle("Fill in missing checksums from ipsw.me", isOn: $settings.useChecksumFallback)
 
         // The account, which only the beta builds need. Everything else here
         // works without one.

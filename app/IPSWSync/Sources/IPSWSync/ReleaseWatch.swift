@@ -26,6 +26,7 @@ final class ReleaseWatch {
     private let settings = Settings.shared
     private let feed = AppleFeed()
     private let apple = AppleRestoreCatalog()
+    private let elsewhere = IPSWMeCatalog()
     private weak var controller: SyncController?
     private var timer: Timer?
     /// Built once from the catalog and kept, so the page's model-named images
@@ -110,7 +111,7 @@ final class ReleaseWatch {
         }
         failure = trouble.isEmpty ? nil : trouble.first
         lastLooked = .now
-        builds = found.values.sorted { ($0.at ?? .distantPast) > ($1.at ?? .distantPast) }
+        builds = await checked(found.values.sorted { ($0.at ?? .distantPast) > ($1.at ?? .distantPast) })
 
         let fresh = newcomers(in: builds)
         // Everything is new the first time. Announcing all of it would be forty
@@ -124,6 +125,28 @@ final class ReleaseWatch {
             controller.arrived(fresh)
         }
         return builds
+    }
+
+    /// Fill in the checksums Apple has stopped publishing. A build Apple is
+    /// still signing already carries one, and a beta will never have one, so
+    /// this asks about neither.
+    private func checked(_ builds: [Build]) async -> [Build] {
+        guard settings.useChecksumFallback else { return builds }
+        var result: [Build] = []
+        for var build in builds {
+            guard !build.isBeta, build.firmwares.contains(where: { $0.sha1 == nil }) else {
+                result.append(build)
+                continue
+            }
+            let known = await elsewhere.checksums(for: build.version)
+            guard !known.isEmpty else { result.append(build); continue }
+            build.firmwares = build.firmwares.map { firmware in
+                guard firmware.sha1 == nil, let sha1 = known[firmware.filename] else { return firmware }
+                return firmware.checked(against: sha1)
+            }
+            result.append(build)
+        }
+        return result
     }
 
     /// Apple's restore catalog names a build and its devices but not which
