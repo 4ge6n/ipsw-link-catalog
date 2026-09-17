@@ -49,22 +49,27 @@ struct BuildPicker: View {
     private var reloadKey: String { "\(platform.rawValue)-\(source.rawValue)-\(channel.rawValue)" }
 
     private var header: some View {
-        HStack {
-            Picker("", selection: $platform) {
+        HStack(spacing: 10) {
+            // A pop-up rather than a row of segments: seven platforms across a
+            // segmented control left each one a few letters wide and the labels
+            // running into each other. Two choices stay segmented, which is
+            // what a segmented control is for.
+            Picker("Platform", selection: $platform) {
                 ForEach(Platform.allCases) { Text($0.title).tag($0) }
             }
-            .pickerStyle(.segmented).labelsHidden().frame(maxWidth: 260)
+            .labelsHidden()
+            .fixedSize()
             Picker("", selection: $source) {
                 ForEach(Source.allCases) { Text($0.title).tag($0) }
             }
-            .pickerStyle(.segmented).labelsHidden().frame(maxWidth: 240)
+            .pickerStyle(.segmented).labelsHidden().fixedSize()
             if source == .catalog {
                 Picker("", selection: $channel) {
                     ForEach(Channel.allCases) { Text($0.title).tag($0) }
                 }
-                .pickerStyle(.segmented).labelsHidden().frame(maxWidth: 220)
+                .pickerStyle(.segmented).labelsHidden().fixedSize()
             }
-            Spacer()
+            Spacer(minLength: 8)
             if loading { ProgressView().controlSize(.small) }
         }
         .padding(12)
