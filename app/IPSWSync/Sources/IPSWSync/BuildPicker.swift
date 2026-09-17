@@ -210,6 +210,7 @@ struct BuildPicker: View {
             switch source {
             case .catalog:
                 releases = try await controller.everyBuild(platform, channel: channel)
+                    .sorted(by: Release.newestFirst)
             case .live:
                 releases = await controller.liveReleases(platform)
                 // Something answered, but not with anything for this platform.

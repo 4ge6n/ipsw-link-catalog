@@ -124,6 +124,29 @@ struct Release: Codable, Identifiable, Hashable {
         // the one before beta 2, so the number it has is the number shown.
         return text == "beta" ? "beta 1" : text
     }
+
+    /// Where this build sits in its version: the shipped one, then the release
+    /// candidate, then the betas by number.
+    ///
+    /// The build number cannot do this. Within 27.0 the betas run 24A5355Q up
+    /// to 24A5430A and the release is 24A437 — a smaller number than any of
+    /// them — so ordering by build puts what shipped underneath the betas it
+    /// replaced. Apple's own label is what knows the order.
+    var stage: (rank: Int, number: Int) {
+        guard let prerelease else { return (2, 0) }
+        let words = prerelease.split(separator: " ")
+        let number = Int(words.last ?? "") ?? 1
+        return (words.first?.caseInsensitiveCompare("RC") == .orderedSame ? 1 : 0, number)
+    }
+
+    /// Newest first: what shipped, then the RC, then the betas counting down,
+    /// and a build revised under the same number after the revision of it.
+    static func newestFirst(_ one: Release, _ other: Release) -> Bool {
+        let left = one.stage, right = other.stage
+        if left.rank != right.rank { return left.rank > right.rank }
+        if left.number != right.number { return left.number > right.number }
+        return one.build.localizedStandardCompare(other.build) == .orderedDescending
+    }
 }
 
 struct Catalog: Codable {

@@ -120,3 +120,34 @@ struct PrereleaseTests {
         #expect(release("26.0", "26.0-beta", "23A5260U").prerelease == "beta 1")
     }
 }
+
+struct ReleaseOrderTests {
+    private func release(_ version: String, _ label: String?, _ build: String) -> Release {
+        Release(id: build, version: version, versionLabel: label, build: build,
+                releasedAt: nil, firmwares: [])
+    }
+
+    /// The build number cannot order these: 27.0's betas run up to 24A5430A
+    /// and the build that shipped is 24A437, a smaller number than any of
+    /// them. Ordering by build put what shipped underneath the betas.
+    @Test func whatShippedComesFirst() {
+        let order = [release("27.0", "27.0-beta-8", "24A5430A"),
+                     release("27.0", "27.0-rc", "24A435"),
+                     release("27.0", "27.0-beta", "24A5355Q"),
+                     release("27.0", "27.0", "24A437"),
+                     release("27.0", "27.0-beta-2", "24A5370H")]
+            .sorted(by: Release.newestFirst)
+            .map(\.build)
+        #expect(order == ["24A437", "24A435", "24A5430A", "24A5370H", "24A5355Q"])
+    }
+
+    /// Two builds of beta 1 stay together, the later one above.
+    @Test func aRevisionSitsAboveWhatItRevised() {
+        let order = [release("26.0", "26.0-beta", "23A5260N"),
+                     release("26.0", "26.0-beta-2", "23A5276F"),
+                     release("26.0", "26.0-beta", "23A5260U")]
+            .sorted(by: Release.newestFirst)
+            .map(\.build)
+        #expect(order == ["23A5276F", "23A5260U", "23A5260N"])
+    }
+}

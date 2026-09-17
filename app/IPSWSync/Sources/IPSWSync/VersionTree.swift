@@ -32,7 +32,7 @@ enum VersionTree {
         }
         return byMajor.map { number, versions in
             Major(number: number, versions: versions.map { name, builds in
-                Version(name: name, builds: builds.sorted(by: newestFirst))
+                Version(name: name, builds: builds.sorted(by: Release.newestFirst))
             }
             .sorted { $1.name.localizedStandardCompare($0.name) == .orderedAscending })
         }
@@ -44,12 +44,4 @@ enum VersionTree {
         Int(version.split(separator: ".").first ?? "")
     }
 
-    /// The day it was posted where that is known, and the build otherwise —
-    /// most builds carry no date at all, and the build number runs forward.
-    private static func newestFirst(_ one: Release, _ other: Release) -> Bool {
-        if let mine = one.releasedAt, let theirs = other.releasedAt, mine != theirs {
-            return mine > theirs
-        }
-        return one.build.localizedStandardCompare(other.build) == .orderedDescending
-    }
 }
