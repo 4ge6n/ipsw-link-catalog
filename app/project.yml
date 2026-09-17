@@ -76,7 +76,7 @@ targets:
       # straight into this target rather than copied or wrapped in a module.
       - path: IPSWSync/Sources/IPSWSync/Catalog.swift
       - path: IPSWSync/Sources/IPSWSync/VersionTree.swift
-      - path: IPSWSync/Sources/IPSWSync/AppleFeed.swift
+      - path: IPSWSync/Sources/IPSWSync/Supersession.swift
       - path: IPSWSync/Sources/IPSWSync/SyncEngine.swift
       - path: IPSWSync/Sources/IPSWSync/SyncEngine+Files.swift
       - path: IPSWSync/Sources/IPSWSync/VerifiedStore.swift

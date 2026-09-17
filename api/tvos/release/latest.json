@@ -4,13 +4,14 @@
   "os_key": "tvos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-16T20:15:52Z",
+  "generated_at": "2026-09-17T09:43:51Z",
   "release_count": 3,
   "firmware_count": 4,
   "releases": [
     {
       "id": "tvos-release-26.6-23L773",
       "version": "26.6",
+      "version_label": "26.6",
       "build": "23L773",
       "released_at": "2026-07-27T17:00:00Z",
       "data": "26.6/23L773.json",
@@ -31,6 +32,7 @@
     {
       "id": "tvos-release-8.4.7-12H1006",
       "version": "8.4.7",
+      "version_label": "8.4.7",
       "build": "12H1006",
       "released_at": "2022-03-14T16:48:40Z",
       "data": "8.4.7/12H1006.json",
@@ -62,6 +64,7 @@
     {
       "id": "tvos-release-7.1.2-11D258",
       "version": "7.1.2",
+      "version_label": "7.1.2",
       "build": "11D258",
       "released_at": "2014-09-17T17:59:02Z",
       "data": "7.1.2/11D258.json",
@@ -80,5 +83,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-17T05:15:52+09:00"
+  "generated_at_tokyo": "2026-09-17T18:43:51+09:00"
 }

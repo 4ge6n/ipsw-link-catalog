@@ -4,13 +4,14 @@
   "os_key": "ipados",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-09-16T20:15:52Z",
+  "generated_at": "2026-09-17T09:43:51Z",
   "release_count": 431,
   "firmware_count": 4889,
   "releases": [
     {
       "id": "ipados-beta-27.2-beta-24B5084K",
       "version": "27.2",
+      "version_label": "27.2-beta",
       "build": "24B5084K",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -232,6 +233,7 @@
     {
       "id": "ipados-beta-27.0-24A437",
       "version": "27.0",
+      "version_label": "27.0",
       "build": "24A437",
       "released_at": "2026-09-14T17:00:00Z",
       "signed_firmware_count": 0,
@@ -453,6 +455,7 @@
     {
       "id": "ipados-beta-27.0-beta-8-24A5430A",
       "version": "27.0",
+      "version_label": "27.0-beta-8",
       "build": "24A5430A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -674,6 +677,7 @@
     {
       "id": "ipados-beta-27.0-beta-7-24A5424A",
       "version": "27.0",
+      "version_label": "27.0-beta-7",
       "build": "24A5424A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -895,6 +899,7 @@
     {
       "id": "ipados-beta-27.0-beta-6-24A5418B",
       "version": "27.0",
+      "version_label": "27.0-beta-6",
       "build": "24A5418B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1116,6 +1121,7 @@
     {
       "id": "ipados-beta-27.0-beta-5-24A5408D",
       "version": "27.0",
+      "version_label": "27.0-beta-5",
       "build": "24A5408D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1337,6 +1343,7 @@
     {
       "id": "ipados-beta-27.0-beta-4-24A5390F",
       "version": "27.0",
+      "version_label": "27.0-beta-4",
       "build": "24A5390F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1558,6 +1565,7 @@
     {
       "id": "ipados-beta-27.0-beta-3-24A5380L",
       "version": "27.0",
+      "version_label": "27.0-beta-3",
       "build": "24A5380L",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1779,6 +1787,7 @@
     {
       "id": "ipados-beta-27.0-beta-3-24A5380H",
       "version": "27.0",
+      "version_label": "27.0-beta-3",
       "build": "24A5380H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2000,6 +2009,7 @@
     {
       "id": "ipados-beta-27.0-beta-2-24A5370H",
       "version": "27.0",
+      "version_label": "27.0-beta-2",
       "build": "24A5370H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2221,6 +2231,7 @@
     {
       "id": "ipados-beta-27.0-beta-24A5355Q",
       "version": "27.0",
+      "version_label": "27.0-beta",
       "build": "24A5355Q",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2442,6 +2453,7 @@
     {
       "id": "ipados-beta-27.0-rc-24A435",
       "version": "27.0",
+      "version_label": "27.0-rc",
       "build": "24A435",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2663,6 +2675,7 @@
     {
       "id": "ipados-beta-26.7-rc-23H24",
       "version": "26.7",
+      "version_label": "26.7-rc",
       "build": "23H24",
       "released_at": "2026-09-09T17:00:00Z",
       "signed_firmware_count": 0,
@@ -2722,6 +2735,7 @@
     {
       "id": "ipados-beta-26.6.2-23G90",
       "version": "26.6.2",
+      "version_label": "26.6.2",
       "build": "23G90",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2977,6 +2991,7 @@
     {
       "id": "ipados-beta-26.6.1-23G83",
       "version": "26.6.1",
+      "version_label": "26.6.1",
       "build": "23G83",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3232,6 +3247,7 @@
     {
       "id": "ipados-beta-26.6.1-rc-23G82",
       "version": "26.6.1",
+      "version_label": "26.6.1-rc",
       "build": "23G82",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3487,6 +3503,7 @@
     {
       "id": "ipados-beta-26.6-rc-23G71",
       "version": "26.6",
+      "version_label": "26.6-rc",
       "build": "23G71",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3742,6 +3759,7 @@
     {
       "id": "ipados-beta-26.6-beta-5-23G5065A",
       "version": "26.6",
+      "version_label": "26.6-beta-5",
       "build": "23G5065A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3997,6 +4015,7 @@
     {
       "id": "ipados-beta-26.6-beta-4-23G5057C",
       "version": "26.6",
+      "version_label": "26.6-beta-4",
       "build": "23G5057C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4252,6 +4271,7 @@
     {
       "id": "ipados-beta-26.6-beta-3-23G5052D",
       "version": "26.6",
+      "version_label": "26.6-beta-3",
       "build": "23G5052D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4507,6 +4527,7 @@
     {
       "id": "ipados-beta-26.6-beta-2-23G5043D",
       "version": "26.6",
+      "version_label": "26.6-beta-2",
       "build": "23G5043D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4762,6 +4783,7 @@
     {
       "id": "ipados-beta-26.6-beta-23G5028E",
       "version": "26.6",
+      "version_label": "26.6-beta",
       "build": "23G5028E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5017,6 +5039,7 @@
     {
       "id": "ipados-beta-26.5.2-23F84",
       "version": "26.5.2",
+      "version_label": "26.5.2",
       "build": "23F84",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5272,6 +5295,7 @@
     {
       "id": "ipados-beta-26.5-rc-2-23F77",
       "version": "26.5",
+      "version_label": "26.5-rc-2",
       "build": "23F77",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5527,6 +5551,7 @@
     {
       "id": "ipados-beta-26.5-rc-23F75",
       "version": "26.5",
+      "version_label": "26.5-rc",
       "build": "23F75",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5782,6 +5807,7 @@
     {
       "id": "ipados-beta-26.5-beta-4-23F5069B",
       "version": "26.5",
+      "version_label": "26.5-beta-4",
       "build": "23F5069B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6037,6 +6063,7 @@
     {
       "id": "ipados-beta-26.5-beta-3-23F5059E",
       "version": "26.5",
+      "version_label": "26.5-beta-3",
       "build": "23F5059E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6292,6 +6319,7 @@
     {
       "id": "ipados-beta-26.5-beta-2-23F5054H",
       "version": "26.5",
+      "version_label": "26.5-beta-2",
       "build": "23F5054H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6547,6 +6575,7 @@
     {
       "id": "ipados-beta-26.5-beta-2-23F5054D",
       "version": "26.5",
+      "version_label": "26.5-beta-2",
       "build": "23F5054D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6802,6 +6831,7 @@
     {
       "id": "ipados-beta-26.5-beta-23F5043K",
       "version": "26.5",
+      "version_label": "26.5-beta",
       "build": "23F5043K",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7057,6 +7087,7 @@
     {
       "id": "ipados-beta-26.5-beta-23F5043G",
       "version": "26.5",
+      "version_label": "26.5-beta",
       "build": "23F5043G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7312,6 +7343,7 @@
     {
       "id": "ipados-beta-26.4.2-23E261",
       "version": "26.4.2",
+      "version_label": "26.4.2",
       "build": "23E261",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7567,6 +7599,7 @@
     {
       "id": "ipados-beta-26.4.1-23E254",
       "version": "26.4.1",
+      "version_label": "26.4.1",
       "build": "23E254",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7822,6 +7855,7 @@
     {
       "id": "ipados-beta-26.4-beta-4-23E5234A",
       "version": "26.4",
+      "version_label": "26.4-beta-4",
       "build": "23E5234A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8077,6 +8111,7 @@
     {
       "id": "ipados-beta-26.4-beta-3-23E5223K",
       "version": "26.4",
+      "version_label": "26.4-beta-3",
       "build": "23E5223K",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8318,6 +8353,7 @@
     {
       "id": "ipados-beta-26.4-beta-3-23E5223F",
       "version": "26.4",
+      "version_label": "26.4-beta-3",
       "build": "23E5223F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8559,6 +8595,7 @@
     {
       "id": "ipados-beta-26.4-beta-2-23E5218E",
       "version": "26.4",
+      "version_label": "26.4-beta-2",
       "build": "23E5218E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8800,6 +8837,7 @@
     {
       "id": "ipados-beta-26.4-beta-23E5207Q",
       "version": "26.4",
+      "version_label": "26.4-beta",
       "build": "23E5207Q",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9041,6 +9079,7 @@
     {
       "id": "ipados-beta-26.4-23E246",
       "version": "26.4",
+      "version_label": "26.4",
       "build": "23E246",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9296,6 +9335,7 @@
     {
       "id": "ipados-beta-26.4-rc-23E244",
       "version": "26.4",
+      "version_label": "26.4-rc",
       "build": "23E244",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9551,6 +9591,7 @@
     {
       "id": "ipados-beta-26.3.1-23D8133",
       "version": "26.3.1",
+      "version_label": "26.3.1",
       "build": "23D8133",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9806,6 +9847,7 @@
     {
       "id": "ipados-beta-26.3-beta-3-23D5114D",
       "version": "26.3",
+      "version_label": "26.3-beta-3",
       "build": "23D5114D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10047,6 +10089,7 @@
     {
       "id": "ipados-beta-26.3-beta-2-23D5103D",
       "version": "26.3",
+      "version_label": "26.3-beta-2",
       "build": "23D5103D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10288,6 +10331,7 @@
     {
       "id": "ipados-beta-26.3-beta-23D5089E",
       "version": "26.3",
+      "version_label": "26.3-beta",
       "build": "23D5089E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10529,6 +10573,7 @@
     {
       "id": "ipados-beta-26.3-23D127",
       "version": "26.3",
+      "version_label": "26.3",
       "build": "23D127",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10770,6 +10815,7 @@
     {
       "id": "ipados-beta-26.3-rc-23D125",
       "version": "26.3",
+      "version_label": "26.3-rc",
       "build": "23D125",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11011,6 +11057,7 @@
     {
       "id": "ipados-beta-26.2.1-23C71",
       "version": "26.2.1",
+      "version_label": "26.2.1",
       "build": "23C71",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11252,6 +11299,7 @@
     {
       "id": "ipados-beta-26.2-23C55",
       "version": "26.2",
+      "version_label": "26.2",
       "build": "23C55",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11493,6 +11541,7 @@
     {
       "id": "ipados-beta-26.2-rc-23C52",
       "version": "26.2",
+      "version_label": "26.2-rc",
       "build": "23C52",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11734,6 +11783,7 @@
     {
       "id": "ipados-beta-26.2-beta-3-23C5044B",
       "version": "26.2",
+      "version_label": "26.2-beta-3",
       "build": "23C5044B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11975,6 +12025,7 @@
     {
       "id": "ipados-beta-26.2-beta-2-23C5033H",
       "version": "26.2",
+      "version_label": "26.2-beta-2",
       "build": "23C5033H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12216,6 +12267,7 @@
     {
       "id": "ipados-beta-26.2-beta-23C5027F",
       "version": "26.2",
+      "version_label": "26.2-beta",
       "build": "23C5027F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12457,6 +12509,7 @@
     {
       "id": "ipados-beta-26.1-23B85",
       "version": "26.1",
+      "version_label": "26.1",
       "build": "23B85",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12698,6 +12751,7 @@
     {
       "id": "ipados-beta-26.1-rc-23B82",
       "version": "26.1",
+      "version_label": "26.1-rc",
       "build": "23B82",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12939,6 +12993,7 @@
     {
       "id": "ipados-beta-26.1-beta-4-23B5073A",
       "version": "26.1",
+      "version_label": "26.1-beta-4",
       "build": "23B5073A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13166,6 +13221,7 @@
     {
       "id": "ipados-beta-26.1-beta-3-23B5064E",
       "version": "26.1",
+      "version_label": "26.1-beta-3",
       "build": "23B5064E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13393,6 +13449,7 @@
     {
       "id": "ipados-beta-26.1-beta-2-23B5059E",
       "version": "26.1",
+      "version_label": "26.1-beta-2",
       "build": "23B5059E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13620,6 +13677,7 @@
     {
       "id": "ipados-beta-26.1-beta-23B5044L",
       "version": "26.1",
+      "version_label": "26.1-beta",
       "build": "23B5044L",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13847,6 +13905,7 @@
     {
       "id": "ipados-beta-26.0.1-23A8464",
       "version": "26.0.1",
+      "version_label": "26.0.1",
       "build": "23A8464",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13872,6 +13931,7 @@
     {
       "id": "ipados-beta-26.0.1-23A355",
       "version": "26.0.1",
+      "version_label": "26.0.1",
       "build": "23A355",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -14099,6 +14159,7 @@
     {
       "id": "ipados-beta-26.0-beta-9-23A5336A",
       "version": "26.0",
+      "version_label": "26.0-beta-9",
       "build": "23A5336A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -14326,6 +14387,7 @@
     {
       "id": "ipados-beta-26.0-beta-8-23A5330A",
       "version": "26.0",
+      "version_label": "26.0-beta-8",
       "build": "23A5330A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -14553,6 +14615,7 @@
     {
       "id": "ipados-beta-26.0-beta-7-23A5326A",
       "version": "26.0",
+      "version_label": "26.0-beta-7",
       "build": "23A5326A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -14780,6 +14843,7 @@
     {
       "id": "ipados-beta-26.0-beta-6-23A5318C",
       "version": "26.0",
+      "version_label": "26.0-beta-6",
       "build": "23A5318C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -15007,6 +15071,7 @@
     {
       "id": "ipados-beta-26.0-beta-5-23A5308G",
       "version": "26.0",
+      "version_label": "26.0-beta-5",
       "build": "23A5308G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -15234,6 +15299,7 @@
     {
       "id": "ipados-beta-26.0-beta-4-23A5297I",
       "version": "26.0",
+      "version_label": "26.0-beta-4",
       "build": "23A5297I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -15461,6 +15527,7 @@
     {
       "id": "ipados-beta-26.0-beta-3-23A5287G",
       "version": "26.0",
+      "version_label": "26.0-beta-3",
       "build": "23A5287G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -15688,6 +15755,7 @@
     {
       "id": "ipados-beta-26.0-beta-2-23A5276F",
       "version": "26.0",
+      "version_label": "26.0-beta-2",
       "build": "23A5276F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -15915,6 +15983,7 @@
     {
       "id": "ipados-beta-26.0-beta-23A5260N",
       "version": "26.0",
+      "version_label": "26.0-beta",
       "build": "23A5260N",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16142,6 +16211,7 @@
     {
       "id": "ipados-beta-26.0-23A341",
       "version": "26.0",
+      "version_label": "26.0",
       "build": "23A341",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16369,6 +16439,7 @@
     {
       "id": "ipados-beta-26.0-rc-23A340",
       "version": "26.0",
+      "version_label": "26.0-rc",
       "build": "23A340",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16596,6 +16667,7 @@
     {
       "id": "ipados-beta-18.7.10-22H374",
       "version": "18.7.10",
+      "version_label": "18.7.10",
       "build": "22H374",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16619,6 +16691,7 @@
     {
       "id": "ipados-beta-18.7.10-rc-22H373",
       "version": "18.7.10",
+      "version_label": "18.7.10-rc",
       "build": "22H373",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16654,6 +16727,7 @@
     {
       "id": "ipados-beta-18.7.9-rc-22H355",
       "version": "18.7.9",
+      "version_label": "18.7.9-rc",
       "build": "22H355",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16689,6 +16763,7 @@
     {
       "id": "ipados-beta-18.7.8-22H352",
       "version": "18.7.8",
+      "version_label": "18.7.8",
       "build": "22H352",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16724,6 +16799,7 @@
     {
       "id": "ipados-beta-18.7.7-22H340",
       "version": "18.7.7",
+      "version_label": "18.7.7",
       "build": "22H340",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16759,6 +16835,7 @@
     {
       "id": "ipados-beta-18.7.7-rc-22H333",
       "version": "18.7.7",
+      "version_label": "18.7.7-rc",
       "build": "22H333",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16769,6 +16846,7 @@
     {
       "id": "ipados-beta-18.7.5-rc-22H311",
       "version": "18.7.5",
+      "version_label": "18.7.5-rc",
       "build": "22H311",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16792,6 +16870,7 @@
     {
       "id": "ipados-beta-18.7.4-22H218",
       "version": "18.7.4",
+      "version_label": "18.7.4",
       "build": "22H218",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16827,6 +16906,7 @@
     {
       "id": "ipados-beta-18.7.3-rc-22H217",
       "version": "18.7.3",
+      "version_label": "18.7.3-rc",
       "build": "22H217",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16850,6 +16930,7 @@
     {
       "id": "ipados-beta-18.7.2-rc-22H123",
       "version": "18.7.2",
+      "version_label": "18.7.2-rc",
       "build": "22H123",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16873,6 +16954,7 @@
     {
       "id": "ipados-beta-18.7.1-22H31",
       "version": "18.7.1",
+      "version_label": "18.7.1",
       "build": "22H31",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16896,6 +16978,7 @@
     {
       "id": "ipados-beta-18.7-rc-22H20",
       "version": "18.7",
+      "version_label": "18.7-rc",
       "build": "22H20",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -16919,6 +17002,7 @@
     {
       "id": "ipados-beta-18.6.2-22G100",
       "version": "18.6.2",
+      "version_label": "18.6.2",
       "build": "22G100",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -17158,6 +17242,7 @@
     {
       "id": "ipados-beta-18.6.1-22G90",
       "version": "18.6.1",
+      "version_label": "18.6.1",
       "build": "22G90",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -17397,6 +17482,7 @@
     {
       "id": "ipados-beta-18.6-22G86",
       "version": "18.6",
+      "version_label": "18.6",
       "build": "22G86",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -17636,6 +17722,7 @@
     {
       "id": "ipados-beta-18.6-rc-22G84",
       "version": "18.6",
+      "version_label": "18.6-rc",
       "build": "22G84",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -17875,6 +17962,7 @@
     {
       "id": "ipados-beta-18.6-beta-3-22G5073B",
       "version": "18.6",
+      "version_label": "18.6-beta-3",
       "build": "22G5073B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -18114,6 +18202,7 @@
     {
       "id": "ipados-beta-18.6-beta-2-22G5064D",
       "version": "18.6",
+      "version_label": "18.6-beta-2",
       "build": "22G5064D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -18353,6 +18442,7 @@
     {
       "id": "ipados-beta-18.6-beta-22G5054D",
       "version": "18.6",
+      "version_label": "18.6-beta",
       "build": "22G5054D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -18592,6 +18682,7 @@
     {
       "id": "ipados-beta-18.5-22F76",
       "version": "18.5",
+      "version_label": "18.5",
       "build": "22F76",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -18831,6 +18922,7 @@
     {
       "id": "ipados-beta-18.5-rc-22F75",
       "version": "18.5",
+      "version_label": "18.5-rc",
       "build": "22F75",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -19070,6 +19162,7 @@
     {
       "id": "ipados-beta-18.5-beta-4-22F5068A",
       "version": "18.5",
+      "version_label": "18.5-beta-4",
       "build": "22F5068A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -19309,6 +19402,7 @@
     {
       "id": "ipados-beta-18.5-beta-3-22F5053J",
       "version": "18.5",
+      "version_label": "18.5-beta-3",
       "build": "22F5053J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -19548,6 +19642,7 @@
     {
       "id": "ipados-beta-18.5-beta-2-22F5053F",
       "version": "18.5",
+      "version_label": "18.5-beta-2",
       "build": "22F5053F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -19787,6 +19882,7 @@
     {
       "id": "ipados-beta-18.5-beta-22F5042G",
       "version": "18.5",
+      "version_label": "18.5-beta",
       "build": "22F5042G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -20026,6 +20122,7 @@
     {
       "id": "ipados-beta-18.4-beta-4-22E5232A",
       "version": "18.4",
+      "version_label": "18.4-beta-4",
       "build": "22E5232A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -20229,6 +20326,7 @@
     {
       "id": "ipados-beta-18.4-beta-3-22E5222F",
       "version": "18.4",
+      "version_label": "18.4-beta-3",
       "build": "22E5222F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -20432,6 +20530,7 @@
     {
       "id": "ipados-beta-18.4-beta-2-22E5216H",
       "version": "18.4",
+      "version_label": "18.4-beta-2",
       "build": "22E5216H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -20635,6 +20734,7 @@
     {
       "id": "ipados-beta-18.4-beta-22E5200S",
       "version": "18.4",
+      "version_label": "18.4-beta",
       "build": "22E5200S",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -20838,6 +20938,7 @@
     {
       "id": "ipados-beta-18.4-rc-2-22E240",
       "version": "18.4",
+      "version_label": "18.4-rc-2",
       "build": "22E240",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -21077,6 +21178,7 @@
     {
       "id": "ipados-beta-18.4-rc-22E239",
       "version": "18.4",
+      "version_label": "18.4-rc",
       "build": "22E239",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -21280,6 +21382,7 @@
     {
       "id": "ipados-beta-18.3.2-22D82",
       "version": "18.3.2",
+      "version_label": "18.3.2",
       "build": "22D82",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -21483,6 +21586,7 @@
     {
       "id": "ipados-beta-18.3.1-22D72",
       "version": "18.3.1",
+      "version_label": "18.3.1",
       "build": "22D72",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -21686,6 +21790,7 @@
     {
       "id": "ipados-beta-18.3-22D63",
       "version": "18.3",
+      "version_label": "18.3",
       "build": "22D63",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -21889,6 +21994,7 @@
     {
       "id": "ipados-beta-18.3-rc-22D60",
       "version": "18.3",
+      "version_label": "18.3-rc",
       "build": "22D60",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -22092,6 +22198,7 @@
     {
       "id": "ipados-beta-18.3-beta-3-22D5055B",
       "version": "18.3",
+      "version_label": "18.3-beta-3",
       "build": "22D5055B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -22295,6 +22402,7 @@
     {
       "id": "ipados-beta-18.3-beta-2-22D5040D",
       "version": "18.3",
+      "version_label": "18.3-beta-2",
       "build": "22D5040D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -22498,6 +22606,7 @@
     {
       "id": "ipados-beta-18.3-beta-22D5034E",
       "version": "18.3",
+      "version_label": "18.3-beta",
       "build": "22D5034E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -22701,6 +22810,7 @@
     {
       "id": "ipados-beta-18.2.1-22C161",
       "version": "18.2.1",
+      "version_label": "18.2.1",
       "build": "22C161",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -22904,6 +23014,7 @@
     {
       "id": "ipados-beta-18.2-beta-4-22C5142A",
       "version": "18.2",
+      "version_label": "18.2-beta-4",
       "build": "22C5142A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -23107,6 +23218,7 @@
     {
       "id": "ipados-beta-18.2-beta-3-22C5131E",
       "version": "18.2",
+      "version_label": "18.2-beta-3",
       "build": "22C5131E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -23310,6 +23422,7 @@
     {
       "id": "ipados-beta-18.2-beta-2-22C5125E",
       "version": "18.2",
+      "version_label": "18.2-beta-2",
       "build": "22C5125E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -23513,6 +23626,7 @@
     {
       "id": "ipados-beta-18.2-beta-22C5109P",
       "version": "18.2",
+      "version_label": "18.2-beta",
       "build": "22C5109P",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -23576,6 +23690,7 @@
     {
       "id": "ipados-beta-18.2-22C152",
       "version": "18.2",
+      "version_label": "18.2",
       "build": "22C152",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -23779,6 +23894,7 @@
     {
       "id": "ipados-beta-18.2-rc-2-22C151",
       "version": "18.2",
+      "version_label": "18.2-rc-2",
       "build": "22C151",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -23982,6 +24098,7 @@
     {
       "id": "ipados-beta-18.2-rc-22C150",
       "version": "18.2",
+      "version_label": "18.2-rc",
       "build": "22C150",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -24175,6 +24292,7 @@
     {
       "id": "ipados-beta-18.1-22B83",
       "version": "18.1",
+      "version_label": "18.1",
       "build": "22B83",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -24378,6 +24496,7 @@
     {
       "id": "ipados-beta-18.1-rc-22B82",
       "version": "18.1",
+      "version_label": "18.1-rc",
       "build": "22B82",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -24581,6 +24700,7 @@
     {
       "id": "ipados-beta-18.1-beta-7-22B5075A",
       "version": "18.1",
+      "version_label": "18.1-beta-7",
       "build": "22B5075A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -24772,6 +24892,7 @@
     {
       "id": "ipados-beta-18.1-beta-6-22B5069A",
       "version": "18.1",
+      "version_label": "18.1-beta-6",
       "build": "22B5069A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -24963,6 +25084,7 @@
     {
       "id": "ipados-beta-18.1-beta-5-22B5054E",
       "version": "18.1",
+      "version_label": "18.1-beta-5",
       "build": "22B5054E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -25154,6 +25276,7 @@
     {
       "id": "ipados-beta-18.1-beta-4-22B5045G",
       "version": "18.1",
+      "version_label": "18.1-beta-4",
       "build": "22B5045G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -25345,6 +25468,7 @@
     {
       "id": "ipados-beta-18.1-beta-3-22B5034E",
       "version": "18.1",
+      "version_label": "18.1-beta-3",
       "build": "22B5034E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -25428,6 +25552,7 @@
     {
       "id": "ipados-beta-18.1-beta-2-22B5023E",
       "version": "18.1",
+      "version_label": "18.1-beta-2",
       "build": "22B5023E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -25511,6 +25636,7 @@
     {
       "id": "ipados-beta-18.1-beta-22B5007P",
       "version": "18.1",
+      "version_label": "18.1-beta",
       "build": "22B5007P",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -25594,6 +25720,7 @@
     {
       "id": "ipados-beta-18.0-beta-8-22A5350A",
       "version": "18.0",
+      "version_label": "18.0-beta-8",
       "build": "22A5350A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -25785,6 +25912,7 @@
     {
       "id": "ipados-beta-18.0-beta-7-22A5346A",
       "version": "18.0",
+      "version_label": "18.0-beta-7",
       "build": "22A5346A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -25976,6 +26104,7 @@
     {
       "id": "ipados-beta-18.0-beta-6-22A5338B",
       "version": "18.0",
+      "version_label": "18.0-beta-6",
       "build": "22A5338B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -26167,6 +26296,7 @@
     {
       "id": "ipados-beta-18.0-beta-5-22A5326F",
       "version": "18.0",
+      "version_label": "18.0-beta-5",
       "build": "22A5326F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -26358,6 +26488,7 @@
     {
       "id": "ipados-beta-18.0-beta-4-22A5316K",
       "version": "18.0",
+      "version_label": "18.0-beta-4",
       "build": "22A5316K",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -26549,6 +26680,7 @@
     {
       "id": "ipados-beta-18.0-beta-4-22A5316J",
       "version": "18.0",
+      "version_label": "18.0-beta-4",
       "build": "22A5316J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -26740,6 +26872,7 @@
     {
       "id": "ipados-beta-18.0-beta-3-22A5307I",
       "version": "18.0",
+      "version_label": "18.0-beta-3",
       "build": "22A5307I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -26931,6 +27064,7 @@
     {
       "id": "ipados-beta-18.0-beta-3-22A5307F",
       "version": "18.0",
+      "version_label": "18.0-beta-3",
       "build": "22A5307F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -27112,6 +27246,7 @@
     {
       "id": "ipados-beta-18.0-beta-2-22A5297F",
       "version": "18.0",
+      "version_label": "18.0-beta-2",
       "build": "22A5297F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -27303,6 +27438,7 @@
     {
       "id": "ipados-beta-18.0-beta-22A5282M",
       "version": "18.0",
+      "version_label": "18.0-beta",
       "build": "22A5282M",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -27494,6 +27630,7 @@
     {
       "id": "ipados-beta-18.0-rc-22A3354",
       "version": "18.0",
+      "version_label": "18.0-rc",
       "build": "22A3354",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -27685,6 +27822,7 @@
     {
       "id": "ipados-beta-17.7.11-21H461",
       "version": "17.7.11",
+      "version_label": "17.7.11",
       "build": "21H461",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -27722,6 +27860,7 @@
     {
       "id": "ipados-beta-17.7.10-21H450",
       "version": "17.7.10",
+      "version_label": "17.7.10",
       "build": "21H450",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -27759,6 +27898,7 @@
     {
       "id": "ipados-beta-17.7.9-rc-21H446",
       "version": "17.7.9",
+      "version_label": "17.7.9-rc",
       "build": "21H446",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -27796,6 +27936,7 @@
     {
       "id": "ipados-beta-17.7.8-21H440",
       "version": "17.7.8",
+      "version_label": "17.7.8",
       "build": "21H440",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -27833,6 +27974,7 @@
     {
       "id": "ipados-beta-17.7.7-rc-21H433",
       "version": "17.7.7",
+      "version_label": "17.7.7-rc",
       "build": "21H433",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -27870,6 +28012,7 @@
     {
       "id": "ipados-beta-17.7.6-rc-21H423",
       "version": "17.7.6",
+      "version_label": "17.7.6-rc",
       "build": "21H423",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -27907,6 +28050,7 @@
     {
       "id": "ipados-beta-17.7.5-21H420",
       "version": "17.7.5",
+      "version_label": "17.7.5",
       "build": "21H420",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -27944,6 +28088,7 @@
     {
       "id": "ipados-beta-17.7.4-rc-21H414",
       "version": "17.7.4",
+      "version_label": "17.7.4-rc",
       "build": "21H414",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -27981,6 +28126,7 @@
     {
       "id": "ipados-beta-17.7.3-rc-21H312",
       "version": "17.7.3",
+      "version_label": "17.7.3-rc",
       "build": "21H312",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -28018,6 +28164,7 @@
     {
       "id": "ipados-beta-17.7.2-21H221",
       "version": "17.7.2",
+      "version_label": "17.7.2",
       "build": "21H221",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -28055,6 +28202,7 @@
     {
       "id": "ipados-beta-17.7.1-rc-21H216",
       "version": "17.7.1",
+      "version_label": "17.7.1-rc",
       "build": "21H216",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -28092,6 +28240,7 @@
     {
       "id": "ipados-beta-17.7-rc-21H16",
       "version": "17.7",
+      "version_label": "17.7-rc",
       "build": "21H16",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -28309,6 +28458,7 @@
     {
       "id": "ipados-beta-17.6.1-21G93",
       "version": "17.6.1",
+      "version_label": "17.6.1",
       "build": "21G93",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -28526,6 +28676,7 @@
     {
       "id": "ipados-beta-17.6.1-21G101",
       "version": "17.6.1",
+      "version_label": "17.6.1",
       "build": "21G101",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -28743,6 +28894,7 @@
     {
       "id": "ipados-beta-17.6-21G80",
       "version": "17.6",
+      "version_label": "17.6",
       "build": "21G80",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -28960,6 +29112,7 @@
     {
       "id": "ipados-beta-17.6-rc-21G79",
       "version": "17.6",
+      "version_label": "17.6-rc",
       "build": "21G79",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -29177,6 +29330,7 @@
     {
       "id": "ipados-beta-17.6-beta-4-21G5075A",
       "version": "17.6",
+      "version_label": "17.6-beta-4",
       "build": "21G5075A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -29394,6 +29548,7 @@
     {
       "id": "ipados-beta-17.6-beta-3-21G5066D",
       "version": "17.6",
+      "version_label": "17.6-beta-3",
       "build": "21G5066D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -29611,6 +29766,7 @@
     {
       "id": "ipados-beta-17.6-beta-2-21G5061C",
       "version": "17.6",
+      "version_label": "17.6-beta-2",
       "build": "21G5061C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -29828,6 +29984,7 @@
     {
       "id": "ipados-beta-17.6-beta-21G5052E",
       "version": "17.6",
+      "version_label": "17.6-beta",
       "build": "21G5052E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30045,6 +30202,7 @@
     {
       "id": "ipados-beta-17.5.1-21F90",
       "version": "17.5.1",
+      "version_label": "17.5.1",
       "build": "21F90",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30082,6 +30240,7 @@
     {
       "id": "ipados-beta-17.5-21F79",
       "version": "17.5",
+      "version_label": "17.5",
       "build": "21F79",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30271,6 +30430,7 @@
     {
       "id": "ipados-beta-17.5-beta-4-21F5073B",
       "version": "17.5",
+      "version_label": "17.5-beta-4",
       "build": "21F5073B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30460,6 +30620,7 @@
     {
       "id": "ipados-beta-17.5-beta-3-21F5063F",
       "version": "17.5",
+      "version_label": "17.5-beta-3",
       "build": "21F5063F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30649,6 +30810,7 @@
     {
       "id": "ipados-beta-17.5-beta-2-21F5058E",
       "version": "17.5",
+      "version_label": "17.5-beta-2",
       "build": "21F5058E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30838,6 +31000,7 @@
     {
       "id": "ipados-beta-17.5-beta-21F5048F",
       "version": "17.5",
+      "version_label": "17.5-beta",
       "build": "21F5048F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -31027,6 +31190,7 @@
     {
       "id": "ipados-beta-17.4.1-21E237",
       "version": "17.4.1",
+      "version_label": "17.4.1",
       "build": "21E237",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -31216,6 +31380,7 @@
     {
       "id": "ipados-beta-17.4.1-21E236",
       "version": "17.4.1",
+      "version_label": "17.4.1",
       "build": "21E236",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -31405,6 +31570,7 @@
     {
       "id": "ipados-beta-17.4-beta-4-21E5209B",
       "version": "17.4",
+      "version_label": "17.4-beta-4",
       "build": "21E5209B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -31594,6 +31760,7 @@
     {
       "id": "ipados-beta-17.4-beta-3-21E5200D",
       "version": "17.4",
+      "version_label": "17.4-beta-3",
       "build": "21E5200D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -31783,6 +31950,7 @@
     {
       "id": "ipados-beta-17.4-beta-2-21E5195E",
       "version": "17.4",
+      "version_label": "17.4-beta-2",
       "build": "21E5195E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -31972,6 +32140,7 @@
     {
       "id": "ipados-beta-17.4-beta-21E5184I",
       "version": "17.4",
+      "version_label": "17.4-beta",
       "build": "21E5184I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -32161,6 +32330,7 @@
     {
       "id": "ipados-beta-17.4-21E219",
       "version": "17.4",
+      "version_label": "17.4",
       "build": "21E219",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -32350,6 +32520,7 @@
     {
       "id": "ipados-beta-17.4-rc-21E217",
       "version": "17.4",
+      "version_label": "17.4-rc",
       "build": "21E217",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -32539,6 +32710,7 @@
     {
       "id": "ipados-beta-17.3.1-21D61",
       "version": "17.3.1",
+      "version_label": "17.3.1",
       "build": "21D61",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -32728,6 +32900,7 @@
     {
       "id": "ipados-beta-17.3-beta-3-21D5044A",
       "version": "17.3",
+      "version_label": "17.3-beta-3",
       "build": "21D5044A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -32917,6 +33090,7 @@
     {
       "id": "ipados-beta-17.3-beta-2-21D5036C",
       "version": "17.3",
+      "version_label": "17.3-beta-2",
       "build": "21D5036C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -33106,6 +33280,7 @@
     {
       "id": "ipados-beta-17.3-beta-21D5026F",
       "version": "17.3",
+      "version_label": "17.3-beta",
       "build": "21D5026F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -33295,6 +33470,7 @@
     {
       "id": "ipados-beta-17.3-rc-21D50",
       "version": "17.3",
+      "version_label": "17.3-rc",
       "build": "21D50",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -33484,6 +33660,7 @@
     {
       "id": "ipados-beta-17.2-rc-21C62",
       "version": "17.2",
+      "version_label": "17.2-rc",
       "build": "21C62",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -33673,6 +33850,7 @@
     {
       "id": "ipados-beta-17.2-beta-4-21C5054B",
       "version": "17.2",
+      "version_label": "17.2-beta-4",
       "build": "21C5054B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -33862,6 +34040,7 @@
     {
       "id": "ipados-beta-17.2-beta-3-21C5046C",
       "version": "17.2",
+      "version_label": "17.2-beta-3",
       "build": "21C5046C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -34051,6 +34230,7 @@
     {
       "id": "ipados-beta-17.2-beta-2-21C5040G",
       "version": "17.2",
+      "version_label": "17.2-beta-2",
       "build": "21C5040G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -34240,6 +34420,7 @@
     {
       "id": "ipados-beta-17.2-beta-21C5029G",
       "version": "17.2",
+      "version_label": "17.2-beta",
       "build": "21C5029G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -34429,6 +34610,7 @@
     {
       "id": "ipados-beta-17.1.2-21B101",
       "version": "17.1.2",
+      "version_label": "17.1.2",
       "build": "21B101",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -34618,6 +34800,7 @@
     {
       "id": "ipados-beta-17.1.1-21B91",
       "version": "17.1.1",
+      "version_label": "17.1.1",
       "build": "21B91",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -34807,6 +34990,7 @@
     {
       "id": "ipados-beta-17.1-rc-21B74",
       "version": "17.1",
+      "version_label": "17.1-rc",
       "build": "21B74",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -34996,6 +35180,7 @@
     {
       "id": "ipados-beta-17.1-beta-3-21B5066A",
       "version": "17.1",
+      "version_label": "17.1-beta-3",
       "build": "21B5066A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -35185,6 +35370,7 @@
     {
       "id": "ipados-beta-17.1-beta-2-21B5056E",
       "version": "17.1",
+      "version_label": "17.1-beta-2",
       "build": "21B5056E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -35374,6 +35560,7 @@
     {
       "id": "ipados-beta-17.1-beta-21B5045H",
       "version": "17.1",
+      "version_label": "17.1-beta",
       "build": "21B5045H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -35563,6 +35750,7 @@
     {
       "id": "ipados-beta-17.0.3-21A360",
       "version": "17.0.3",
+      "version_label": "17.0.3",
       "build": "21A360",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -35752,6 +35940,7 @@
     {
       "id": "ipados-beta-17.0.2-21A351",
       "version": "17.0.2",
+      "version_label": "17.0.2",
       "build": "21A351",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -35941,6 +36130,7 @@
     {
       "id": "ipados-beta-17.0.1-21A340",
       "version": "17.0.1",
+      "version_label": "17.0.1",
       "build": "21A340",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -36130,6 +36320,7 @@
     {
       "id": "ipados-beta-17.0-beta-8-21A5326A",
       "version": "17.0",
+      "version_label": "17.0-beta-8",
       "build": "21A5326A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -36319,6 +36510,7 @@
     {
       "id": "ipados-beta-17.0-beta-7-21A5319A",
       "version": "17.0",
+      "version_label": "17.0-beta-7",
       "build": "21A5319A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -36508,6 +36700,7 @@
     {
       "id": "ipados-beta-17.0-beta-6-21A5312C",
       "version": "17.0",
+      "version_label": "17.0-beta-6",
       "build": "21A5312C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -36697,6 +36890,7 @@
     {
       "id": "ipados-beta-17.0-beta-5-21A5303D",
       "version": "17.0",
+      "version_label": "17.0-beta-5",
       "build": "21A5303D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -36886,6 +37080,7 @@
     {
       "id": "ipados-beta-17.0-beta-4-21A5291J",
       "version": "17.0",
+      "version_label": "17.0-beta-4",
       "build": "21A5291J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -37075,6 +37270,7 @@
     {
       "id": "ipados-beta-17.0-beta-4-21A5291H",
       "version": "17.0",
+      "version_label": "17.0-beta-4",
       "build": "21A5291H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -37264,6 +37460,7 @@
     {
       "id": "ipados-beta-17.0-beta-3-21A5277J",
       "version": "17.0",
+      "version_label": "17.0-beta-3",
       "build": "21A5277J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -37453,6 +37650,7 @@
     {
       "id": "ipados-beta-17.0-beta-3-21A5277H",
       "version": "17.0",
+      "version_label": "17.0-beta-3",
       "build": "21A5277H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -37642,6 +37840,7 @@
     {
       "id": "ipados-beta-17.0-beta-2-21A5268H",
       "version": "17.0",
+      "version_label": "17.0-beta-2",
       "build": "21A5268H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -37831,6 +38030,7 @@
     {
       "id": "ipados-beta-17.0-rc-21A329",
       "version": "17.0",
+      "version_label": "17.0-rc",
       "build": "21A329",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38020,6 +38220,7 @@
     {
       "id": "ipados-beta-16.7.16-20H392",
       "version": "16.7.16",
+      "version_label": "16.7.16",
       "build": "20H392",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38067,6 +38268,7 @@
     {
       "id": "ipados-beta-16.7.15-20H380",
       "version": "16.7.15",
+      "version_label": "16.7.15",
       "build": "20H380",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38114,6 +38316,7 @@
     {
       "id": "ipados-beta-16.7.14-20H370",
       "version": "16.7.14",
+      "version_label": "16.7.14",
       "build": "20H370",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38161,6 +38364,7 @@
     {
       "id": "ipados-beta-16.7.13-20H365",
       "version": "16.7.13",
+      "version_label": "16.7.13",
       "build": "20H365",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38208,6 +38412,7 @@
     {
       "id": "ipados-beta-16.7.12-rc-20H364",
       "version": "16.7.12",
+      "version_label": "16.7.12-rc",
       "build": "20H364",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38255,6 +38460,7 @@
     {
       "id": "ipados-beta-16.7.11-20H360",
       "version": "16.7.11",
+      "version_label": "16.7.11",
       "build": "20H360",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38302,6 +38508,7 @@
     {
       "id": "ipados-beta-16.7.10-20H350",
       "version": "16.7.10",
+      "version_label": "16.7.10",
       "build": "20H350",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38349,6 +38556,7 @@
     {
       "id": "ipados-beta-16.7.9-rc-20H348",
       "version": "16.7.9",
+      "version_label": "16.7.9-rc",
       "build": "20H348",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38396,6 +38604,7 @@
     {
       "id": "ipados-beta-16.7.8-rc-20H343",
       "version": "16.7.8",
+      "version_label": "16.7.8-rc",
       "build": "20H343",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38443,6 +38652,7 @@
     {
       "id": "ipados-beta-16.7.7-20H330",
       "version": "16.7.7",
+      "version_label": "16.7.7",
       "build": "20H330",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38490,6 +38700,7 @@
     {
       "id": "ipados-beta-16.7.6-rc-20H320",
       "version": "16.7.6",
+      "version_label": "16.7.6-rc",
       "build": "20H320",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38537,6 +38748,7 @@
     {
       "id": "ipados-beta-16.7.5-rc-20H307",
       "version": "16.7.5",
+      "version_label": "16.7.5-rc",
       "build": "20H307",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38584,6 +38796,7 @@
     {
       "id": "ipados-beta-16.7.4-20H240",
       "version": "16.7.4",
+      "version_label": "16.7.4",
       "build": "20H240",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38631,6 +38844,7 @@
     {
       "id": "ipados-beta-16.7.3-rc-20H232",
       "version": "16.7.3",
+      "version_label": "16.7.3-rc",
       "build": "20H232",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38678,6 +38892,7 @@
     {
       "id": "ipados-beta-16.7.2-rc-20H115",
       "version": "16.7.2",
+      "version_label": "16.7.2-rc",
       "build": "20H115",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38727,6 +38942,7 @@
     {
       "id": "ipados-beta-16.7-rc-20H18",
       "version": "16.7",
+      "version_label": "16.7-rc",
       "build": "20H18",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38776,6 +38992,7 @@
     {
       "id": "ipados-beta-16.6.1-20G81",
       "version": "16.6.1",
+      "version_label": "16.6.1",
       "build": "20G81",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -38991,6 +39208,7 @@
     {
       "id": "ipados-beta-16.6-rc-20G75",
       "version": "16.6",
+      "version_label": "16.6-rc",
       "build": "20G75",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -39206,6 +39424,7 @@
     {
       "id": "ipados-beta-16.6-beta-5-20G5070A",
       "version": "16.6",
+      "version_label": "16.6-beta-5",
       "build": "20G5070A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -39421,6 +39640,7 @@
     {
       "id": "ipados-beta-16.6-beta-4-20G5058D",
       "version": "16.6",
+      "version_label": "16.6-beta-4",
       "build": "20G5058D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -39636,6 +39856,7 @@
     {
       "id": "ipados-beta-16.6-beta-3-20G5047D",
       "version": "16.6",
+      "version_label": "16.6-beta-3",
       "build": "20G5047D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -39851,6 +40072,7 @@
     {
       "id": "ipados-beta-16.6-beta-2-20G5037D",
       "version": "16.6",
+      "version_label": "16.6-beta-2",
       "build": "20G5037D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -40066,6 +40288,7 @@
     {
       "id": "ipados-beta-16.6-beta-20G5026E",
       "version": "16.6",
+      "version_label": "16.6-beta",
       "build": "20G5026E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -40281,6 +40504,7 @@
     {
       "id": "ipados-beta-16.5.1-20F75",
       "version": "16.5.1",
+      "version_label": "16.5.1",
       "build": "20F75",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -40496,6 +40720,7 @@
     {
       "id": "ipados-beta-16.5-rc-2-20F66",
       "version": "16.5",
+      "version_label": "16.5-rc-2",
       "build": "20F66",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -40711,6 +40936,7 @@
     {
       "id": "ipados-beta-16.5-rc-20F65",
       "version": "16.5",
+      "version_label": "16.5-rc",
       "build": "20F65",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -40926,6 +41152,7 @@
     {
       "id": "ipados-beta-16.5-beta-4-20F5059A",
       "version": "16.5",
+      "version_label": "16.5-beta-4",
       "build": "20F5059A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -41141,6 +41368,7 @@
     {
       "id": "ipados-beta-16.5-beta-3-20F5050F",
       "version": "16.5",
+      "version_label": "16.5-beta-3",
       "build": "20F5050F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -41356,6 +41584,7 @@
     {
       "id": "ipados-beta-16.5-beta-2-20F5039E",
       "version": "16.5",
+      "version_label": "16.5-beta-2",
       "build": "20F5039E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -41571,6 +41800,7 @@
     {
       "id": "ipados-beta-16.5-beta-20F5028E",
       "version": "16.5",
+      "version_label": "16.5-beta",
       "build": "20F5028E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -41786,6 +42016,7 @@
     {
       "id": "ipados-beta-16.4.1-20E252",
       "version": "16.4.1",
+      "version_label": "16.4.1",
       "build": "20E252",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -42001,6 +42232,7 @@
     {
       "id": "ipados-beta-16.4-beta-4-20E5239B",
       "version": "16.4",
+      "version_label": "16.4-beta-4",
       "build": "20E5239B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -42216,6 +42448,7 @@
     {
       "id": "ipados-beta-16.4-beta-3-20E5229E",
       "version": "16.4",
+      "version_label": "16.4-beta-3",
       "build": "20E5229E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -42431,6 +42664,7 @@
     {
       "id": "ipados-beta-16.4-beta-2-20E5223E",
       "version": "16.4",
+      "version_label": "16.4-beta-2",
       "build": "20E5223E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -42646,6 +42880,7 @@
     {
       "id": "ipados-beta-16.4-beta-20E5212F",
       "version": "16.4",
+      "version_label": "16.4-beta",
       "build": "20E5212F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -42861,6 +43096,7 @@
     {
       "id": "ipados-beta-16.4-rc-20E246",
       "version": "16.4",
+      "version_label": "16.4-rc",
       "build": "20E246",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -43076,6 +43312,7 @@
     {
       "id": "ipados-beta-16.3.1-20D67",
       "version": "16.3.1",
+      "version_label": "16.3.1",
       "build": "20D67",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -43291,6 +43528,7 @@
     {
       "id": "ipados-beta-16.3-beta-2-20D5035I",
       "version": "16.3",
+      "version_label": "16.3-beta-2",
       "build": "20D5035I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -43506,6 +43744,7 @@
     {
       "id": "ipados-beta-16.3-beta-20D5024E",
       "version": "16.3",
+      "version_label": "16.3-beta",
       "build": "20D5024E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -43721,6 +43960,7 @@
     {
       "id": "ipados-beta-16.3-rc-20D47",
       "version": "16.3",
+      "version_label": "16.3-rc",
       "build": "20D47",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -43936,6 +44176,7 @@
     {
       "id": "ipados-beta-16.2-rc-20C65",
       "version": "16.2",
+      "version_label": "16.2-rc",
       "build": "20C65",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -44151,6 +44392,7 @@
     {
       "id": "ipados-beta-16.2-beta-4-20C5058D",
       "version": "16.2",
+      "version_label": "16.2-beta-4",
       "build": "20C5058D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -44366,6 +44608,7 @@
     {
       "id": "ipados-beta-16.2-beta-3-20C5049E",
       "version": "16.2",
+      "version_label": "16.2-beta-3",
       "build": "20C5049E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -44581,6 +44824,7 @@
     {
       "id": "ipados-beta-16.2-beta-2-20C5043E",
       "version": "16.2",
+      "version_label": "16.2-beta-2",
       "build": "20C5043E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -44796,6 +45040,7 @@
     {
       "id": "ipados-beta-16.2-beta-20C5032E",
       "version": "16.2",
+      "version_label": "16.2-beta",
       "build": "20C5032E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -45011,6 +45256,7 @@
     {
       "id": "ipados-beta-16.1-20B82",
       "version": "16.1",
+      "version_label": "16.1",
       "build": "20B82",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -45226,6 +45472,7 @@
     {
       "id": "ipados-beta-16.1-rc-20B79",
       "version": "16.1",
+      "version_label": "16.1-rc",
       "build": "20B79",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -45415,6 +45662,7 @@
     {
       "id": "ipados-beta-16.1-beta-6-20B5072B",
       "version": "16.1",
+      "version_label": "16.1-beta-6",
       "build": "20B5072B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -45604,6 +45852,7 @@
     {
       "id": "ipados-beta-16.1-beta-5-20B5064C",
       "version": "16.1",
+      "version_label": "16.1-beta-5",
       "build": "20B5064C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -45793,6 +46042,7 @@
     {
       "id": "ipados-beta-16.1-beta-4-20B5056E",
       "version": "16.1",
+      "version_label": "16.1-beta-4",
       "build": "20B5056E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -45982,6 +46232,7 @@
     {
       "id": "ipados-beta-16.1-beta-3-20B5050F",
       "version": "16.1",
+      "version_label": "16.1-beta-3",
       "build": "20B5050F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -46171,6 +46422,7 @@
     {
       "id": "ipados-beta-16.1-beta-2-20B5045D",
       "version": "16.1",
+      "version_label": "16.1-beta-2",
       "build": "20B5045D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -46360,6 +46612,7 @@
     {
       "id": "ipados-beta-16.1-beta-20B5027F",
       "version": "16.1",
+      "version_label": "16.1-beta",
       "build": "20B5027F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -46549,6 +46802,7 @@
     {
       "id": "ipados-beta-16.0-beta-6-20A5349B",
       "version": "16.0",
+      "version_label": "16.0-beta-6",
       "build": "20A5349B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -46738,6 +46992,7 @@
     {
       "id": "ipados-beta-16.0-beta-5-20A5339D",
       "version": "16.0",
+      "version_label": "16.0-beta-5",
       "build": "20A5339D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -46927,6 +47182,7 @@
     {
       "id": "ipados-beta-16.0-beta-4-20A5328H",
       "version": "16.0",
+      "version_label": "16.0-beta-4",
       "build": "20A5328H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47116,6 +47372,7 @@
     {
       "id": "ipados-beta-16.0-beta-3-20A5312J",
       "version": "16.0",
+      "version_label": "16.0-beta-3",
       "build": "20A5312J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47305,6 +47562,7 @@
     {
       "id": "ipados-beta-16.0-beta-3-20A5312G",
       "version": "16.0",
+      "version_label": "16.0-beta-3",
       "build": "20A5312G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47494,6 +47752,7 @@
     {
       "id": "ipados-beta-16.0-beta-2-20A5303I",
       "version": "16.0",
+      "version_label": "16.0-beta-2",
       "build": "20A5303I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47671,6 +47930,7 @@
     {
       "id": "ipados-beta-15.8.8-19H422",
       "version": "15.8.8",
+      "version_label": "15.8.8",
       "build": "19H422",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47696,6 +47956,7 @@
     {
       "id": "ipados-beta-15.8.7-19H411",
       "version": "15.8.7",
+      "version_label": "15.8.7",
       "build": "19H411",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47721,6 +47982,7 @@
     {
       "id": "ipados-beta-15.8.6-19H402",
       "version": "15.8.6",
+      "version_label": "15.8.6",
       "build": "19H402",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47746,6 +48008,7 @@
     {
       "id": "ipados-beta-15.8.5-rc-19H394",
       "version": "15.8.5",
+      "version_label": "15.8.5-rc",
       "build": "19H394",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47771,6 +48034,7 @@
     {
       "id": "ipados-beta-15.8.4-19H390",
       "version": "15.8.4",
+      "version_label": "15.8.4",
       "build": "19H390",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47796,6 +48060,7 @@
     {
       "id": "ipados-beta-15.8.3-rc-19H386",
       "version": "15.8.3",
+      "version_label": "15.8.3-rc",
       "build": "19H386",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47821,6 +48086,7 @@
     {
       "id": "ipados-beta-15.8.2-rc-19H384",
       "version": "15.8.2",
+      "version_label": "15.8.2-rc",
       "build": "19H384",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47846,6 +48112,7 @@
     {
       "id": "ipados-beta-15.8.1-rc-19H380",
       "version": "15.8.1",
+      "version_label": "15.8.1-rc",
       "build": "19H380",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47871,6 +48138,7 @@
     {
       "id": "ipados-beta-15.8-rc-19H370",
       "version": "15.8",
+      "version_label": "15.8-rc",
       "build": "19H370",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47896,6 +48164,7 @@
     {
       "id": "ipados-beta-15.7.9-19H365",
       "version": "15.7.9",
+      "version_label": "15.7.9",
       "build": "19H365",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47921,6 +48190,7 @@
     {
       "id": "ipados-beta-15.7.8-rc-19H364",
       "version": "15.7.8",
+      "version_label": "15.7.8-rc",
       "build": "19H364",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47946,6 +48216,7 @@
     {
       "id": "ipados-beta-15.7.7-19H357",
       "version": "15.7.7",
+      "version_label": "15.7.7",
       "build": "19H357",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47971,6 +48242,7 @@
     {
       "id": "ipados-beta-15.7.6-rc-19H349",
       "version": "15.7.6",
+      "version_label": "15.7.6-rc",
       "build": "19H349",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -47996,6 +48268,7 @@
     {
       "id": "ipados-beta-15.7.5-19H332",
       "version": "15.7.5",
+      "version_label": "15.7.5",
       "build": "19H332",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -48021,6 +48294,7 @@
     {
       "id": "ipados-beta-15.7.4-rc-19H321",
       "version": "15.7.4",
+      "version_label": "15.7.4-rc",
       "build": "19H321",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -48046,6 +48320,7 @@
     {
       "id": "ipados-beta-15.7.3-rc-19H307",
       "version": "15.7.3",
+      "version_label": "15.7.3-rc",
       "build": "19H307",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -48071,6 +48346,7 @@
     {
       "id": "ipados-beta-15.7.2-rc-19H218",
       "version": "15.7.2",
+      "version_label": "15.7.2-rc",
       "build": "19H218",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -48096,6 +48372,7 @@
     {
       "id": "ipados-beta-15.7.1-rc-19H115",
       "version": "15.7.1",
+      "version_label": "15.7.1-rc",
       "build": "19H115",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -48299,6 +48576,7 @@
     {
       "id": "ipados-beta-15.7-rc-19H12",
       "version": "15.7",
+      "version_label": "15.7-rc",
       "build": "19H12",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -48502,6 +48780,7 @@
     {
       "id": "ipados-beta-15.6.1-19G82",
       "version": "15.6.1",
+      "version_label": "15.6.1",
       "build": "19G82",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -48705,6 +48984,7 @@
     {
       "id": "ipados-beta-15.6-rc-2-19G71",
       "version": "15.6",
+      "version_label": "15.6-rc-2",
       "build": "19G71",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -48898,6 +49178,7 @@
     {
       "id": "ipados-beta-15.6-rc-19G69",
       "version": "15.6",
+      "version_label": "15.6-rc",
       "build": "19G69",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -49091,6 +49372,7 @@
     {
       "id": "ipados-beta-15.6-beta-5-19G5063A",
       "version": "15.6",
+      "version_label": "15.6-beta-5",
       "build": "19G5063A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -49294,6 +49576,7 @@
     {
       "id": "ipados-beta-15.6-beta-4-19G5056C",
       "version": "15.6",
+      "version_label": "15.6-beta-4",
       "build": "19G5056C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -49497,6 +49780,7 @@
     {
       "id": "ipados-beta-15.6-beta-3-19G5046D",
       "version": "15.6",
+      "version_label": "15.6-beta-3",
       "build": "19G5046D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -49700,6 +49984,7 @@
     {
       "id": "ipados-beta-15.6-beta-2-19G5037D",
       "version": "15.6",
+      "version_label": "15.6-beta-2",
       "build": "19G5037D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -49893,6 +50178,7 @@
     {
       "id": "ipados-beta-15.6-beta-19G5027E",
       "version": "15.6",
+      "version_label": "15.6-beta",
       "build": "19G5027E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -50096,6 +50382,7 @@
     {
       "id": "ipados-beta-15.5-rc-19F77",
       "version": "15.5",
+      "version_label": "15.5-rc",
       "build": "19F77",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -50299,6 +50586,7 @@
     {
       "id": "ipados-beta-15.5-beta-4-19F5070B",
       "version": "15.5",
+      "version_label": "15.5-beta-4",
       "build": "19F5070B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -50502,6 +50790,7 @@
     {
       "id": "ipados-beta-15.5-beta-3-19F5062G",
       "version": "15.5",
+      "version_label": "15.5-beta-3",
       "build": "19F5062G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -50695,6 +50984,7 @@
     {
       "id": "ipados-beta-15.5-beta-2-19F5057E",
       "version": "15.5",
+      "version_label": "15.5-beta-2",
       "build": "19F5057E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -50888,6 +51178,7 @@
     {
       "id": "ipados-beta-15.5-beta-19F5047E",
       "version": "15.5",
+      "version_label": "15.5-beta",
       "build": "19F5047E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -51091,6 +51382,7 @@
     {
       "id": "ipados-beta-15.4.1-19E258",
       "version": "15.4.1",
+      "version_label": "15.4.1",
       "build": "19E258",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -51294,6 +51586,7 @@
     {
       "id": "ipados-beta-15.4-beta-5-19E5241A",
       "version": "15.4",
+      "version_label": "15.4-beta-5",
       "build": "19E5241A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -51475,6 +51768,7 @@
     {
       "id": "ipados-beta-15.4-beta-4-19E5235A",
       "version": "15.4",
+      "version_label": "15.4-beta-4",
       "build": "19E5235A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -51656,6 +51950,7 @@
     {
       "id": "ipados-beta-15.4-beta-3-19E5225G",
       "version": "15.4",
+      "version_label": "15.4-beta-3",
       "build": "19E5225G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -51847,6 +52142,7 @@
     {
       "id": "ipados-beta-15.4-beta-2-19E5219E",
       "version": "15.4",
+      "version_label": "15.4-beta-2",
       "build": "19E5219E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -52010,6 +52306,7 @@
     {
       "id": "ipados-beta-15.4-beta-19E5209H",
       "version": "15.4",
+      "version_label": "15.4-beta",
       "build": "19E5209H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -52191,6 +52488,7 @@
     {
       "id": "ipados-beta-15.4-rc-19E241",
       "version": "15.4",
+      "version_label": "15.4-rc",
       "build": "19E241",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -52384,6 +52682,7 @@
     {
       "id": "ipados-beta-15.3.1-19D52",
       "version": "15.3.1",
+      "version_label": "15.3.1",
       "build": "19D52",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -52565,6 +52864,7 @@
     {
       "id": "ipados-beta-15.3-beta-2-19D5040E",
       "version": "15.3",
+      "version_label": "15.3-beta-2",
       "build": "19D5040E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -52746,6 +53046,7 @@
     {
       "id": "ipados-beta-15.3-beta-19D5026G",
       "version": "15.3",
+      "version_label": "15.3-beta",
       "build": "19D5026G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -52937,6 +53238,7 @@
     {
       "id": "ipados-beta-15.3-19D50",
       "version": "15.3",
+      "version_label": "15.3",
       "build": "19D50",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -53128,6 +53430,7 @@
     {
       "id": "ipados-beta-15.3-rc-19D49",
       "version": "15.3",
+      "version_label": "15.3-rc",
       "build": "19D49",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -53309,6 +53612,7 @@
     {
       "id": "ipados-beta-15.2.1-19C63",
       "version": "15.2.1",
+      "version_label": "15.2.1",
       "build": "19C63",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -53490,6 +53794,7 @@
     {
       "id": "ipados-beta-15.2-rc-19C56",
       "version": "15.2",
+      "version_label": "15.2-rc",
       "build": "19C56",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -53671,6 +53976,7 @@
     {
       "id": "ipados-beta-15.2-beta-4-19C5050B",
       "version": "15.2",
+      "version_label": "15.2-beta-4",
       "build": "19C5050B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -53862,6 +54168,7 @@
     {
       "id": "ipados-beta-15.2-beta-3-19C5044B",
       "version": "15.2",
+      "version_label": "15.2-beta-3",
       "build": "19C5044B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -54043,6 +54350,7 @@
     {
       "id": "ipados-beta-15.2-beta-2-19C5036E",
       "version": "15.2",
+      "version_label": "15.2-beta-2",
       "build": "19C5036E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -54234,6 +54542,7 @@
     {
       "id": "ipados-beta-15.2-beta-19C5026I",
       "version": "15.2",
+      "version_label": "15.2-beta",
       "build": "19C5026I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -54415,6 +54724,7 @@
     {
       "id": "ipados-beta-15.1-rc-19B74",
       "version": "15.1",
+      "version_label": "15.1-rc",
       "build": "19B74",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -54606,6 +54916,7 @@
     {
       "id": "ipados-beta-15.1-beta-4-19B5068A",
       "version": "15.1",
+      "version_label": "15.1-beta-4",
       "build": "19B5068A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -54797,6 +55108,7 @@
     {
       "id": "ipados-beta-15.1-beta-3-19B5060D",
       "version": "15.1",
+      "version_label": "15.1-beta-3",
       "build": "19B5060D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -54978,6 +55290,7 @@
     {
       "id": "ipados-beta-15.1-beta-2-19B5052F",
       "version": "15.1",
+      "version_label": "15.1-beta-2",
       "build": "19B5052F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -55169,6 +55482,7 @@
     {
       "id": "ipados-beta-15.1-beta-19B5042H",
       "version": "15.1",
+      "version_label": "15.1-beta",
       "build": "19B5042H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -55350,6 +55664,7 @@
     {
       "id": "ipados-beta-15.0.2-19A404",
       "version": "15.0.2",
+      "version_label": "15.0.2",
       "build": "19A404",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -55531,6 +55846,7 @@
     {
       "id": "ipados-beta-15.0.1-19A348",
       "version": "15.0.1",
+      "version_label": "15.0.1",
       "build": "19A348",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -55712,6 +56028,7 @@
     {
       "id": "ipados-beta-15.0-beta-8-19A5340A",
       "version": "15.0",
+      "version_label": "15.0-beta-8",
       "build": "19A5340A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -55869,6 +56186,7 @@
     {
       "id": "ipados-beta-15.0-beta-7-19A5337A",
       "version": "15.0",
+      "version_label": "15.0-beta-7",
       "build": "19A5337A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -56026,6 +56344,7 @@
     {
       "id": "ipados-beta-15.0-beta-6-19A5325F",
       "version": "15.0",
+      "version_label": "15.0-beta-6",
       "build": "19A5325F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -56183,6 +56502,7 @@
     {
       "id": "ipados-beta-15.0-beta-5-19A5318F",
       "version": "15.0",
+      "version_label": "15.0-beta-5",
       "build": "19A5318F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -56350,6 +56670,7 @@
     {
       "id": "ipados-beta-15.0-beta-4-19A5307G",
       "version": "15.0",
+      "version_label": "15.0-beta-4",
       "build": "19A5307G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -56517,6 +56838,7 @@
     {
       "id": "ipados-beta-15.0-beta-3-19A5297E",
       "version": "15.0",
+      "version_label": "15.0-beta-3",
       "build": "19A5297E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -56684,6 +57006,7 @@
     {
       "id": "ipados-beta-15.0-beta-2-19A5281J",
       "version": "15.0",
+      "version_label": "15.0-beta-2",
       "build": "19A5281J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -56841,6 +57164,7 @@
     {
       "id": "ipados-beta-15.0-beta-2-19A5281H",
       "version": "15.0",
+      "version_label": "15.0-beta-2",
       "build": "19A5281H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -57008,6 +57332,7 @@
     {
       "id": "ipados-beta-15.0-19A346",
       "version": "15.0",
+      "version_label": "15.0",
       "build": "19A346",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -57199,6 +57524,7 @@
     {
       "id": "ipados-beta-15.0-rc-19A344",
       "version": "15.0",
+      "version_label": "15.0-rc",
       "build": "19A344",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -57356,6 +57682,7 @@
     {
       "id": "ipados-beta-14.8-18H17",
       "version": "14.8",
+      "version_label": "14.8",
       "build": "18H17",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -57523,6 +57850,7 @@
     {
       "id": "ipados-beta-14.7.1-18G82",
       "version": "14.7.1",
+      "version_label": "14.7.1",
       "build": "18G82",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -57690,6 +58018,7 @@
     {
       "id": "ipados-beta-14.7-18G70",
       "version": "14.7",
+      "version_label": "14.7",
       "build": "18G70",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -57725,6 +58054,7 @@
     {
       "id": "ipados-beta-14.7-18G69",
       "version": "14.7",
+      "version_label": "14.7",
       "build": "18G69",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -57892,6 +58222,7 @@
     {
       "id": "ipados-beta-14.7-rc-18G68",
       "version": "14.7",
+      "version_label": "14.7-rc",
       "build": "18G68",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -58059,6 +58390,7 @@
     {
       "id": "ipados-beta-14.7-beta-5-18G5063A",
       "version": "14.7",
+      "version_label": "14.7-beta-5",
       "build": "18G5063A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -58226,6 +58558,7 @@
     {
       "id": "ipados-beta-14.7-beta-4-18G5052D",
       "version": "14.7",
+      "version_label": "14.7-beta-4",
       "build": "18G5052D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -58393,6 +58726,7 @@
     {
       "id": "ipados-beta-14.7-beta-3-18G5042C",
       "version": "14.7",
+      "version_label": "14.7-beta-3",
       "build": "18G5042C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -58560,6 +58894,7 @@
     {
       "id": "ipados-beta-14.7-beta-2-18G5033E",
       "version": "14.7",
+      "version_label": "14.7-beta-2",
       "build": "18G5033E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -58727,6 +59062,7 @@
     {
       "id": "ipados-beta-14.7-beta-18G5023C",
       "version": "14.7",
+      "version_label": "14.7-beta",
       "build": "18G5023C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -58894,6 +59230,7 @@
     {
       "id": "ipados-beta-14.6-rc-2-18F72",
       "version": "14.6",
+      "version_label": "14.6-rc-2",
       "build": "18F72",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -59061,6 +59398,7 @@
     {
       "id": "ipados-beta-14.6-rc-18F71",
       "version": "14.6",
+      "version_label": "14.6-rc",
       "build": "18F71",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -59210,6 +59548,7 @@
     {
       "id": "ipados-beta-14.6-beta-3-18F5065A",
       "version": "14.6",
+      "version_label": "14.6-beta-3",
       "build": "18F5065A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -59359,6 +59698,7 @@
     {
       "id": "ipados-beta-14.6-beta-2-18F5055B",
       "version": "14.6",
+      "version_label": "14.6-beta-2",
       "build": "18F5055B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -59508,6 +59848,7 @@
     {
       "id": "ipados-beta-14.6-beta-18F5046F",
       "version": "14.6",
+      "version_label": "14.6-beta",
       "build": "18F5046F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -59657,6 +59998,7 @@
     {
       "id": "ipados-beta-14.6-beta-18F5046E",
       "version": "14.6",
+      "version_label": "14.6-beta",
       "build": "18F5046E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -59806,6 +60148,7 @@
     {
       "id": "ipados-beta-14.5.1-18E212",
       "version": "14.5.1",
+      "version_label": "14.5.1",
       "build": "18E212",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -59983,6 +60326,7 @@
     {
       "id": "ipados-beta-14.5-beta-8-18E5199A",
       "version": "14.5",
+      "version_label": "14.5-beta-8",
       "build": "18E5199A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -60132,6 +60476,7 @@
     {
       "id": "ipados-beta-14.5-beta-7-18E5198A",
       "version": "14.5",
+      "version_label": "14.5-beta-7",
       "build": "18E5198A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -60281,6 +60626,7 @@
     {
       "id": "ipados-beta-14.5-beta-6-18E5194A",
       "version": "14.5",
+      "version_label": "14.5-beta-6",
       "build": "18E5194A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -60430,6 +60776,7 @@
     {
       "id": "ipados-beta-14.5-beta-5-18E5186A",
       "version": "14.5",
+      "version_label": "14.5-beta-5",
       "build": "18E5186A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -60579,6 +60926,7 @@
     {
       "id": "ipados-beta-14.5-beta-4-18E5178A",
       "version": "14.5",
+      "version_label": "14.5-beta-4",
       "build": "18E5178A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -60728,6 +61076,7 @@
     {
       "id": "ipados-beta-14.5-beta-3-18E5164H",
       "version": "14.5",
+      "version_label": "14.5-beta-3",
       "build": "18E5164H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -60877,6 +61226,7 @@
     {
       "id": "ipados-beta-14.5-beta-2-18E5154F",
       "version": "14.5",
+      "version_label": "14.5-beta-2",
       "build": "18E5154F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -61026,6 +61376,7 @@
     {
       "id": "ipados-beta-14.5-beta-18E5140K",
       "version": "14.5",
+      "version_label": "14.5-beta",
       "build": "18E5140K",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -61175,6 +61526,7 @@
     {
       "id": "ipados-beta-14.5-beta-18E5140J",
       "version": "14.5",
+      "version_label": "14.5-beta",
       "build": "18E5140J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -61324,6 +61676,7 @@
     {
       "id": "ipados-beta-14.5-rc-18E199",
       "version": "14.5",
+      "version_label": "14.5-rc",
       "build": "18E199",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -61473,6 +61826,7 @@
     {
       "id": "ipados-beta-14.4.2-18D70",
       "version": "14.4.2",
+      "version_label": "14.4.2",
       "build": "18D70",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -61622,6 +61976,7 @@
     {
       "id": "ipados-beta-14.4.1-18D61",
       "version": "14.4.1",
+      "version_label": "14.4.1",
       "build": "18D61",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -61771,6 +62126,7 @@
     {
       "id": "ipados-beta-14.4-rc-18D52",
       "version": "14.4",
+      "version_label": "14.4-rc",
       "build": "18D52",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -61920,6 +62276,7 @@
     {
       "id": "ipados-beta-14.4-beta-2-18D5043D",
       "version": "14.4",
+      "version_label": "14.4-beta-2",
       "build": "18D5043D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -62069,6 +62426,7 @@
     {
       "id": "ipados-beta-14.4-beta-18D5030E",
       "version": "14.4",
+      "version_label": "14.4-beta",
       "build": "18D5030E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -62218,6 +62576,7 @@
     {
       "id": "ipados-beta-14.3-rc-2-18C66",
       "version": "14.3",
+      "version_label": "14.3-rc-2",
       "build": "18C66",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -62367,6 +62726,7 @@
     {
       "id": "ipados-beta-14.3-rc-18C65",
       "version": "14.3",
+      "version_label": "14.3-rc",
       "build": "18C65",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -62492,6 +62852,7 @@
     {
       "id": "ipados-beta-14.3-beta-3-18C5061A",
       "version": "14.3",
+      "version_label": "14.3-beta-3",
       "build": "18C5061A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -62617,6 +62978,7 @@
     {
       "id": "ipados-beta-14.3-beta-2-18C5054C",
       "version": "14.3",
+      "version_label": "14.3-beta-2",
       "build": "18C5054C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -62742,6 +63104,7 @@
     {
       "id": "ipados-beta-14.3-beta-18C5044F",
       "version": "14.3",
+      "version_label": "14.3-beta",
       "build": "18C5044F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -62867,6 +63230,7 @@
     {
       "id": "ipados-beta-14.2-18B92",
       "version": "14.2",
+      "version_label": "14.2",
       "build": "18B92",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -63016,6 +63380,7 @@
     {
       "id": "ipados-beta-14.2-rc-18B91",
       "version": "14.2",
+      "version_label": "14.2-rc",
       "build": "18B91",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -63141,6 +63506,7 @@
     {
       "id": "ipados-beta-14.2-beta-4-18B5083A",
       "version": "14.2",
+      "version_label": "14.2-beta-4",
       "build": "18B5083A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -63266,6 +63632,7 @@
     {
       "id": "ipados-beta-14.2-beta-3-18B5072F",
       "version": "14.2",
+      "version_label": "14.2-beta-3",
       "build": "18B5072F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -63391,6 +63758,7 @@
     {
       "id": "ipados-beta-14.2-beta-2-18B5061E",
       "version": "14.2",
+      "version_label": "14.2-beta-2",
       "build": "18B5061E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -63516,6 +63884,7 @@
     {
       "id": "ipados-beta-14.2-beta-18B5052I",
       "version": "14.2",
+      "version_label": "14.2-beta",
       "build": "18B5052I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -63539,6 +63908,7 @@
     {
       "id": "ipados-beta-14.2-beta-18B5052H",
       "version": "14.2",
+      "version_label": "14.2-beta",
       "build": "18B5052H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -63654,6 +64024,7 @@
     {
       "id": "ipados-beta-14.1-18A8395",
       "version": "14.1",
+      "version_label": "14.1",
       "build": "18A8395",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -63823,6 +64194,7 @@
     {
       "id": "ipados-beta-14.0.1-18A393",
       "version": "14.0.1",
+      "version_label": "14.0.1",
       "build": "18A393",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -63992,6 +64364,7 @@
     {
       "id": "ipados-beta-14.0-beta-8-18A5373A",
       "version": "14.0",
+      "version_label": "14.0-beta-8",
       "build": "18A5373A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -64137,6 +64510,7 @@
     {
       "id": "ipados-beta-14.0-beta-7-18A5369B",
       "version": "14.0",
+      "version_label": "14.0-beta-7",
       "build": "18A5369B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -64282,6 +64656,7 @@
     {
       "id": "ipados-beta-14.0-beta-6-18A5357E",
       "version": "14.0",
+      "version_label": "14.0-beta-6",
       "build": "18A5357E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -64427,6 +64802,7 @@
     {
       "id": "ipados-beta-14.0-beta-5-18A5351D",
       "version": "14.0",
+      "version_label": "14.0-beta-5",
       "build": "18A5351D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -64572,6 +64948,7 @@
     {
       "id": "ipados-beta-14.0-beta-4-18A5342E",
       "version": "14.0",
+      "version_label": "14.0-beta-4",
       "build": "18A5342E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -64717,6 +65094,7 @@
     {
       "id": "ipados-beta-14.0-beta-3-18A5332F",
       "version": "14.0",
+      "version_label": "14.0-beta-3",
       "build": "18A5332F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -64862,6 +65240,7 @@
     {
       "id": "ipados-beta-14.0-beta-2-18A5319I",
       "version": "14.0",
+      "version_label": "14.0-beta-2",
       "build": "18A5319I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -65007,6 +65386,7 @@
     {
       "id": "ipados-beta-14.0-18A373",
       "version": "14.0",
+      "version_label": "14.0",
       "build": "18A373",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -65176,6 +65556,7 @@
     {
       "id": "ipados-beta-13.7-17H35",
       "version": "13.7",
+      "version_label": "13.7",
       "build": "17H35",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -65321,6 +65702,7 @@
     {
       "id": "ipados-beta-13.7-beta-17H33",
       "version": "13.7",
+      "version_label": "13.7-beta",
       "build": "17H33",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -65466,6 +65848,7 @@
     {
       "id": "ipados-beta-13.6.1-17G80",
       "version": "13.6.1",
+      "version_label": "13.6.1",
       "build": "17G80",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -65611,6 +65994,7 @@
     {
       "id": "ipados-beta-13.6-17G68",
       "version": "13.6",
+      "version_label": "13.6",
       "build": "17G68",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -65756,6 +66140,7 @@
     {
       "id": "ipados-beta-13.6-beta-3-17G5059C",
       "version": "13.6",
+      "version_label": "13.6-beta-3",
       "build": "17G5059C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -65901,6 +66286,7 @@
     {
       "id": "ipados-beta-13.6-beta-2-17G5045C",
       "version": "13.6",
+      "version_label": "13.6-beta-2",
       "build": "17G5045C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -66046,6 +66432,7 @@
     {
       "id": "ipados-beta-13.5.5-beta-17G5035D",
       "version": "13.5.5",
+      "version_label": "13.5.5-beta",
       "build": "17G5035D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -66191,6 +66578,7 @@
     {
       "id": "ipados-beta-13.5.1-17F80",
       "version": "13.5.1",
+      "version_label": "13.5.1",
       "build": "17F80",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -66336,6 +66724,7 @@
     {
       "id": "ipados-beta-13.5-17F75",
       "version": "13.5",
+      "version_label": "13.5",
       "build": "17F75",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -66481,6 +66870,7 @@
     {
       "id": "ipados-beta-13.5-beta-4-17F5054H",
       "version": "13.5",
+      "version_label": "13.5-beta-4",
       "build": "17F5054H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -66626,6 +67016,7 @@
     {
       "id": "ipados-beta-13.4.5-beta-2-17F5044D",
       "version": "13.4.5",
+      "version_label": "13.4.5-beta-2",
       "build": "17F5044D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -66771,6 +67162,7 @@
     {
       "id": "ipados-beta-13.4.5-beta-17F5034C",
       "version": "13.4.5",
+      "version_label": "13.4.5-beta",
       "build": "17F5034C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -66916,6 +67308,7 @@
     {
       "id": "ipados-beta-13.4.1-17E262",
       "version": "13.4.1",
+      "version_label": "13.4.1",
       "build": "17E262",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -67061,6 +67454,7 @@
     {
       "id": "ipados-beta-13.4-beta-5-17E5255A",
       "version": "13.4",
+      "version_label": "13.4-beta-5",
       "build": "17E5255A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -67182,6 +67576,7 @@
     {
       "id": "ipados-beta-13.4-beta-4-17E5249A",
       "version": "13.4",
+      "version_label": "13.4-beta-4",
       "build": "17E5249A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -67303,6 +67698,7 @@
     {
       "id": "ipados-beta-13.4-beta-3-17E5241D",
       "version": "13.4",
+      "version_label": "13.4-beta-3",
       "build": "17E5241D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -67424,6 +67820,7 @@
     {
       "id": "ipados-beta-13.4-beta-2-17E5233G",
       "version": "13.4",
+      "version_label": "13.4-beta-2",
       "build": "17E5233G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -67545,6 +67942,7 @@
     {
       "id": "ipados-beta-13.4-beta-17E5223H",
       "version": "13.4",
+      "version_label": "13.4-beta",
       "build": "17E5223H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -67666,6 +68064,7 @@
     {
       "id": "ipados-beta-13.4-beta-6-17E255",
       "version": "13.4",
+      "version_label": "13.4-beta-6",
       "build": "17E255",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -67811,6 +68210,7 @@
     {
       "id": "ipados-beta-13.3.1-beta-3-17D5050A",
       "version": "13.3.1",
+      "version_label": "13.3.1-beta-3",
       "build": "17D5050A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -67932,6 +68332,7 @@
     {
       "id": "ipados-beta-13.3.1-beta-2-17D5044A",
       "version": "13.3.1",
+      "version_label": "13.3.1-beta-2",
       "build": "17D5044A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -68053,6 +68454,7 @@
     {
       "id": "ipados-beta-13.3.1-beta-17D5026C",
       "version": "13.3.1",
+      "version_label": "13.3.1-beta",
       "build": "17D5026C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -68174,6 +68576,7 @@
     {
       "id": "ipados-beta-13.3.1-17D50",
       "version": "13.3.1",
+      "version_label": "13.3.1",
       "build": "17D50",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -68295,6 +68698,7 @@
     {
       "id": "ipados-beta-13.3-17C54",
       "version": "13.3",
+      "version_label": "13.3",
       "build": "17C54",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -68416,6 +68820,7 @@
     {
       "id": "ipados-beta-13.3-beta-4-17C5053A",
       "version": "13.3",
+      "version_label": "13.3-beta-4",
       "build": "17C5053A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -68537,6 +68942,7 @@
     {
       "id": "ipados-beta-13.3-beta-3-17C5046A",
       "version": "13.3",
+      "version_label": "13.3-beta-3",
       "build": "17C5046A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -68658,6 +69064,7 @@
     {
       "id": "ipados-beta-13.3-beta-2-17C5038A",
       "version": "13.3",
+      "version_label": "13.3-beta-2",
       "build": "17C5038A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -68779,6 +69186,7 @@
     {
       "id": "ipados-beta-13.3-beta-17C5032D",
       "version": "13.3",
+      "version_label": "13.3-beta",
       "build": "17C5032D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -68900,6 +69308,7 @@
     {
       "id": "ipados-beta-13.2.3-17B111",
       "version": "13.2.3",
+      "version_label": "13.2.3",
       "build": "17B111",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -69021,6 +69430,7 @@
     {
       "id": "ipados-beta-13.2.2-17B102",
       "version": "13.2.2",
+      "version_label": "13.2.2",
       "build": "17B102",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -69142,6 +69552,7 @@
     {
       "id": "ipados-beta-13.2-17B84",
       "version": "13.2",
+      "version_label": "13.2",
       "build": "17B84",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -69263,6 +69674,7 @@
     {
       "id": "ipados-beta-13.2-beta-4-17B5084A",
       "version": "13.2",
+      "version_label": "13.2-beta-4",
       "build": "17B5084A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -69384,6 +69796,7 @@
     {
       "id": "ipados-beta-13.2-beta-3-17B5077A",
       "version": "13.2",
+      "version_label": "13.2-beta-3",
       "build": "17B5077A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -69505,6 +69918,7 @@
     {
       "id": "ipados-beta-13.2-beta-2-17B5068E",
       "version": "13.2",
+      "version_label": "13.2-beta-2",
       "build": "17B5068E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -69626,6 +70040,7 @@
     {
       "id": "ipados-beta-13.2-beta-17B5059G",
       "version": "13.2",
+      "version_label": "13.2-beta",
       "build": "17B5059G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -69747,6 +70162,7 @@
     {
       "id": "ipados-beta-13.1.3-17A878",
       "version": "13.1.3",
+      "version_label": "13.1.3",
       "build": "17A878",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -69868,6 +70284,7 @@
     {
       "id": "ipados-beta-13.1.2-17A860",
       "version": "13.1.2",
+      "version_label": "13.1.2",
       "build": "17A860",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -69989,6 +70406,7 @@
     {
       "id": "ipados-beta-13.1.1-17A854",
       "version": "13.1.1",
+      "version_label": "13.1.1",
       "build": "17A854",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -70110,6 +70528,7 @@
     {
       "id": "ipados-beta-13.1-17A844",
       "version": "13.1",
+      "version_label": "13.1",
       "build": "17A844",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -70231,6 +70650,7 @@
     {
       "id": "ipados-beta-13.1-beta-4-17A5844A",
       "version": "13.1",
+      "version_label": "13.1-beta-4",
       "build": "17A5844A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -70340,6 +70760,7 @@
     {
       "id": "ipados-beta-13.1-beta-3-17A5837A",
       "version": "13.1",
+      "version_label": "13.1-beta-3",
       "build": "17A5837A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -70449,6 +70870,7 @@
     {
       "id": "ipados-beta-13.1-beta-2-17A5831C",
       "version": "13.1",
+      "version_label": "13.1-beta-2",
       "build": "17A5831C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -70558,6 +70980,7 @@
     {
       "id": "ipados-beta-13.1-beta-17A5821E",
       "version": "13.1",
+      "version_label": "13.1-beta",
       "build": "17A5821E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -70667,6 +71090,7 @@
     {
       "id": "ipados-beta-13.0-beta-8-17A5572A",
       "version": "13.0",
+      "version_label": "13.0-beta-8",
       "build": "17A5572A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -70776,6 +71200,7 @@
     {
       "id": "ipados-beta-13.0-beta-7-17A5565B",
       "version": "13.0",
+      "version_label": "13.0-beta-7",
       "build": "17A5565B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -70885,6 +71310,7 @@
     {
       "id": "ipados-beta-13.0-beta-6-17A5556D",
       "version": "13.0",
+      "version_label": "13.0-beta-6",
       "build": "17A5556D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -70994,6 +71420,7 @@
     {
       "id": "ipados-beta-13.0-beta-5-17A5547D",
       "version": "13.0",
+      "version_label": "13.0-beta-5",
       "build": "17A5547D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -71103,6 +71530,7 @@
     {
       "id": "ipados-beta-13.0-beta-4-17A5534F",
       "version": "13.0",
+      "version_label": "13.0-beta-4",
       "build": "17A5534F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -71212,6 +71640,7 @@
     {
       "id": "ipados-beta-13.0-beta-3-17A5522G",
       "version": "13.0",
+      "version_label": "13.0-beta-3",
       "build": "17A5522G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -71321,6 +71750,7 @@
     {
       "id": "ipados-beta-13.0-beta-3-17A5522F",
       "version": "13.0",
+      "version_label": "13.0-beta-3",
       "build": "17A5522F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -71430,6 +71860,7 @@
     {
       "id": "ipados-beta-13.0-beta-2-17A5508M",
       "version": "13.0",
+      "version_label": "13.0-beta-2",
       "build": "17A5508M",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -71537,5 +71968,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-17T05:15:52+09:00"
+  "generated_at_tokyo": "2026-09-17T18:43:51+09:00"
 }

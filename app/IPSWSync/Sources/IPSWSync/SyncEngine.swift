@@ -106,7 +106,10 @@ actor SyncEngine {
             await group.waitForAll()
         }
         if prune, !cancelled {
-            await removeReplacedBuilds(in: folder, keeping: wanted, log: log)
+            // What each image on the drive is for, so a build is replaced by
+            // devices rather than by the name Apple happened to give the file.
+            let index = (try? await deviceIndex(platform)) ?? DeviceIndex()
+            await removeReplacedBuilds(in: folder, keeping: wanted, using: index, log: log)
         }
     }
 

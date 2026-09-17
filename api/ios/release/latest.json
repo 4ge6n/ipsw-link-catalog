@@ -4,13 +4,14 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-16T20:15:52Z",
+  "generated_at": "2026-09-17T09:43:51Z",
   "release_count": 9,
   "firmware_count": 55,
   "releases": [
     {
       "id": "ios-release-27.0-24A437",
       "version": "27.0",
+      "version_label": "27.0",
       "build": "24A437",
       "released_at": "2026-09-14T17:00:00Z",
       "data": "27.0/24A437.json",
@@ -374,6 +375,7 @@
     {
       "id": "ios-release-18.7.10-22H374",
       "version": "18.7.10",
+      "version_label": "18.7.10",
       "build": "22H374",
       "released_at": "2026-08-17T17:00:00Z",
       "data": "18.7.10/22H374.json",
@@ -407,6 +409,7 @@
     {
       "id": "ios-release-16.7.16-20H392",
       "version": "16.7.16",
+      "version_label": "16.7.16",
       "build": "20H392",
       "released_at": "2026-05-11T17:00:00Z",
       "data": "16.7.16/20H392.json",
@@ -452,6 +455,7 @@
     {
       "id": "ios-release-15.8.8-19H422",
       "version": "15.8.8",
+      "version_label": "15.8.8",
       "build": "19H422",
       "released_at": "2026-05-11T17:00:00Z",
       "data": "15.8.8/19H422.json",
@@ -529,6 +533,7 @@
     {
       "id": "ios-release-12.5.8-16H88",
       "version": "12.5.8",
+      "version_label": "12.5.8",
       "build": "16H88",
       "released_at": "2026-01-26T18:21:54Z",
       "data": "12.5.8/16H88.json",
@@ -583,6 +588,7 @@
     {
       "id": "ios-release-7.1.2-11D257",
       "version": "7.1.2",
+      "version_label": "7.1.2",
       "build": "11D257",
       "released_at": "2014-06-30T18:29:09Z",
       "data": "7.1.2/11D257.json",
@@ -625,6 +631,7 @@
     {
       "id": "ios-release-6.1.6-10B500",
       "version": "6.1.6",
+      "version_label": "6.1.6",
       "build": "10B500",
       "released_at": "2014-02-21T17:51:30Z",
       "data": "6.1.6/10B500.json",
@@ -656,6 +663,7 @@
     {
       "id": "ios-release-5.1.1-9B206",
       "version": "5.1.1",
+      "version_label": "5.1.1",
       "build": "9B206",
       "released_at": null,
       "data": "5.1.1/9B206.json",
@@ -676,6 +684,7 @@
     {
       "id": "ios-release-4.2.1-8C148",
       "version": "4.2.1",
+      "version_label": "4.2.1",
       "build": "8C148",
       "released_at": null,
       "data": "4.2.1/8C148.json",
@@ -705,5 +714,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-17T05:15:52+09:00"
+  "generated_at_tokyo": "2026-09-17T18:43:51+09:00"
 }

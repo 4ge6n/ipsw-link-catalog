@@ -19,6 +19,11 @@ jobs:
         id: stamp
         run: |
           echo "build=$(git rev-list --count HEAD)" >> "$GITHUB_OUTPUT"
+      # Apple repackages its images without warning — one image per device at
+      # 27.0, one between three at 27.2 — and what survives that is tested
+      # rather than hoped for. A release never goes out with these failing.
+      - name: Test
+        run: cd app/IPSWSync && swift test --disable-sandbox
       - name: Build
         run: VERSION="${{ inputs.version }}" BUILD="${{ steps.stamp.outputs.build }}" bash app/IPSWSync/build-app.sh
       - name: Package

@@ -4,13 +4,14 @@
   "os_key": "macos",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-09-16T20:15:52Z",
+  "generated_at": "2026-09-17T09:43:51Z",
   "release_count": 274,
   "firmware_count": 274,
   "releases": [
     {
       "id": "macos-beta-27.2-beta-26B5086K",
       "version": "27.2",
+      "version_label": "27.2-beta",
       "build": "26B5086K",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -89,6 +90,7 @@
     {
       "id": "macos-beta-27.0-rc-26A428",
       "version": "27.0",
+      "version_label": "27.0-rc",
       "build": "26A428",
       "released_at": "2026-09-14T17:00:00Z",
       "signed_firmware_count": 0,
@@ -165,6 +167,7 @@
     {
       "id": "macos-beta-27.0-beta-8-26A5425A",
       "version": "27.0",
+      "version_label": "27.0-beta-8",
       "build": "26A5425A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -241,6 +244,7 @@
     {
       "id": "macos-beta-27.0-beta-7-26A5421A",
       "version": "27.0",
+      "version_label": "27.0-beta-7",
       "build": "26A5421A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -317,6 +321,7 @@
     {
       "id": "macos-beta-27.0-beta-6-26A5416B",
       "version": "27.0",
+      "version_label": "27.0-beta-6",
       "build": "26A5416B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -393,6 +398,7 @@
     {
       "id": "macos-beta-27.0-beta-5-26A5406E",
       "version": "27.0",
+      "version_label": "27.0-beta-5",
       "build": "26A5406E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -469,6 +475,7 @@
     {
       "id": "macos-beta-27.0-beta-4-26A5388G",
       "version": "27.0",
+      "version_label": "27.0-beta-4",
       "build": "26A5388G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -544,6 +551,7 @@
     {
       "id": "macos-beta-27.0-beta-3-26A5378N",
       "version": "27.0",
+      "version_label": "27.0-beta-3",
       "build": "26A5378N",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -619,6 +627,7 @@
     {
       "id": "macos-beta-27.0-beta-3-26A5378J",
       "version": "27.0",
+      "version_label": "27.0-beta-3",
       "build": "26A5378J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -694,6 +703,7 @@
     {
       "id": "macos-beta-27.0-beta-2-26A5368G",
       "version": "27.0",
+      "version_label": "27.0-beta-2",
       "build": "26A5368G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -769,6 +779,7 @@
     {
       "id": "macos-beta-27.0-beta-26A5353Q",
       "version": "27.0",
+      "version_label": "27.0-beta",
       "build": "26A5353Q",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -844,6 +855,7 @@
     {
       "id": "macos-beta-26.6.2-25G83",
       "version": "26.6.2",
+      "version_label": "26.6.2",
       "build": "25G83",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -920,6 +932,7 @@
     {
       "id": "macos-beta-26.6.2-rc-25G82",
       "version": "26.6.2",
+      "version_label": "26.6.2-rc",
       "build": "25G82",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -996,6 +1009,7 @@
     {
       "id": "macos-beta-26.6.1-25G76",
       "version": "26.6.1",
+      "version_label": "26.6.1",
       "build": "25G76",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1072,6 +1086,7 @@
     {
       "id": "macos-beta-26.6-25G72",
       "version": "26.6",
+      "version_label": "26.6",
       "build": "25G72",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1148,6 +1163,7 @@
     {
       "id": "macos-beta-26.6-rc-25G70",
       "version": "26.6",
+      "version_label": "26.6-rc",
       "build": "25G70",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1224,6 +1240,7 @@
     {
       "id": "macos-beta-26.6-beta-5-25G5065A",
       "version": "26.6",
+      "version_label": "26.6-beta-5",
       "build": "25G5065A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1300,6 +1317,7 @@
     {
       "id": "macos-beta-26.6-beta-4-25G5057C",
       "version": "26.6",
+      "version_label": "26.6-beta-4",
       "build": "25G5057C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1376,6 +1394,7 @@
     {
       "id": "macos-beta-26.6-beta-3-25G5052E",
       "version": "26.6",
+      "version_label": "26.6-beta-3",
       "build": "25G5052E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1452,6 +1471,7 @@
     {
       "id": "macos-beta-26.6-beta-2-25G5043D",
       "version": "26.6",
+      "version_label": "26.6-beta-2",
       "build": "25G5043D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1528,6 +1548,7 @@
     {
       "id": "macos-beta-26.6-beta-25G5028F",
       "version": "26.6",
+      "version_label": "26.6-beta",
       "build": "25G5028F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1604,6 +1625,7 @@
     {
       "id": "macos-beta-26.5.2-25F84",
       "version": "26.5.2",
+      "version_label": "26.5.2",
       "build": "25F84",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1680,6 +1702,7 @@
     {
       "id": "macos-beta-26.5-rc-25F71",
       "version": "26.5",
+      "version_label": "26.5-rc",
       "build": "25F71",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1755,6 +1778,7 @@
     {
       "id": "macos-beta-26.5-beta-4-25F5068A",
       "version": "26.5",
+      "version_label": "26.5-beta-4",
       "build": "25F5068A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1830,6 +1854,7 @@
     {
       "id": "macos-beta-26.5-beta-3-25F5058E",
       "version": "26.5",
+      "version_label": "26.5-beta-3",
       "build": "25F5058E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1905,6 +1930,7 @@
     {
       "id": "macos-beta-26.5-beta-2-25F5053D",
       "version": "26.5",
+      "version_label": "26.5-beta-2",
       "build": "25F5053D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1980,6 +2006,7 @@
     {
       "id": "macos-beta-26.5-beta-25F5042G",
       "version": "26.5",
+      "version_label": "26.5-beta",
       "build": "25F5042G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2055,6 +2082,7 @@
     {
       "id": "macos-beta-26.4-beta-4-25E5233C",
       "version": "26.4",
+      "version_label": "26.4-beta-4",
       "build": "25E5233C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2130,6 +2158,7 @@
     {
       "id": "macos-beta-26.4-beta-3-25E5223I",
       "version": "26.4",
+      "version_label": "26.4-beta-3",
       "build": "25E5223I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2199,6 +2228,7 @@
     {
       "id": "macos-beta-26.4-beta-2-25E5218F",
       "version": "26.4",
+      "version_label": "26.4-beta-2",
       "build": "25E5218F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2268,6 +2298,7 @@
     {
       "id": "macos-beta-26.4-beta-25E5207K",
       "version": "26.4",
+      "version_label": "26.4-beta",
       "build": "25E5207K",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2337,6 +2368,7 @@
     {
       "id": "macos-beta-26.4-25E246",
       "version": "26.4",
+      "version_label": "26.4",
       "build": "25E246",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2412,6 +2444,7 @@
     {
       "id": "macos-beta-26.4-rc-25E243",
       "version": "26.4",
+      "version_label": "26.4-rc",
       "build": "25E243",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2487,6 +2520,7 @@
     {
       "id": "macos-beta-26.3.2-25D2140",
       "version": "26.3.2",
+      "version_label": "26.3.2",
       "build": "25D2140",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2509,6 +2543,7 @@
     {
       "id": "macos-beta-26.3.1-25D2128",
       "version": "26.3.1",
+      "version_label": "26.3.1",
       "build": "25D2128",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2578,6 +2613,7 @@
     {
       "id": "macos-beta-26.3-beta-3-25D5112C",
       "version": "26.3",
+      "version_label": "26.3-beta-3",
       "build": "25D5112C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2647,6 +2683,7 @@
     {
       "id": "macos-beta-26.3-beta-2-25D5101C",
       "version": "26.3",
+      "version_label": "26.3-beta-2",
       "build": "25D5101C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2716,6 +2753,7 @@
     {
       "id": "macos-beta-26.3-beta-25D5087F",
       "version": "26.3",
+      "version_label": "26.3-beta",
       "build": "25D5087F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2785,6 +2823,7 @@
     {
       "id": "macos-beta-26.3-25D125",
       "version": "26.3",
+      "version_label": "26.3",
       "build": "25D125",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2854,6 +2893,7 @@
     {
       "id": "macos-beta-26.3-rc-25D122",
       "version": "26.3",
+      "version_label": "26.3-rc",
       "build": "25D122",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2923,6 +2963,7 @@
     {
       "id": "macos-beta-26.2-rc-25C56",
       "version": "26.2",
+      "version_label": "26.2-rc",
       "build": "25C56",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2992,6 +3033,7 @@
     {
       "id": "macos-beta-26.2-beta-3-25C5048A",
       "version": "26.2",
+      "version_label": "26.2-beta-3",
       "build": "25C5048A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3061,6 +3103,7 @@
     {
       "id": "macos-beta-26.2-beta-2-25C5037J",
       "version": "26.2",
+      "version_label": "26.2-beta-2",
       "build": "25C5037J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3130,6 +3173,7 @@
     {
       "id": "macos-beta-26.2-beta-25C5031I",
       "version": "26.2",
+      "version_label": "26.2-beta",
       "build": "25C5031I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3199,6 +3243,7 @@
     {
       "id": "macos-beta-26.1-25B78",
       "version": "26.1",
+      "version_label": "26.1",
       "build": "25B78",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3268,6 +3313,7 @@
     {
       "id": "macos-beta-26.1-rc-25B77",
       "version": "26.1",
+      "version_label": "26.1-rc",
       "build": "25B77",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3337,6 +3383,7 @@
     {
       "id": "macos-beta-26.1-beta-4-25B5072A",
       "version": "26.1",
+      "version_label": "26.1-beta-4",
       "build": "25B5072A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3406,6 +3453,7 @@
     {
       "id": "macos-beta-26.1-beta-3-25B5062E",
       "version": "26.1",
+      "version_label": "26.1-beta-3",
       "build": "25B5062E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3474,6 +3522,7 @@
     {
       "id": "macos-beta-26.1-beta-2-25B5057F",
       "version": "26.1",
+      "version_label": "26.1-beta-2",
       "build": "25B5057F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3542,6 +3591,7 @@
     {
       "id": "macos-beta-26.1-beta-25B5042K",
       "version": "26.1",
+      "version_label": "26.1-beta",
       "build": "25B5042K",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3610,6 +3660,7 @@
     {
       "id": "macos-beta-26.0.1-25A362",
       "version": "26.0.1",
+      "version_label": "26.0.1",
       "build": "25A362",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3678,6 +3729,7 @@
     {
       "id": "macos-beta-26.0-beta-9-25A5351B",
       "version": "26.0",
+      "version_label": "26.0-beta-9",
       "build": "25A5351B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3746,6 +3798,7 @@
     {
       "id": "macos-beta-26.0-beta-8-25A5349A",
       "version": "26.0",
+      "version_label": "26.0-beta-8",
       "build": "25A5349A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3814,6 +3867,7 @@
     {
       "id": "macos-beta-26.0-beta-7-25A5346A",
       "version": "26.0",
+      "version_label": "26.0-beta-7",
       "build": "25A5346A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3882,6 +3936,7 @@
     {
       "id": "macos-beta-26.0-beta-6-25A5338B",
       "version": "26.0",
+      "version_label": "26.0-beta-6",
       "build": "25A5338B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3950,6 +4005,7 @@
     {
       "id": "macos-beta-26.0-beta-5-25A5327H",
       "version": "26.0",
+      "version_label": "26.0-beta-5",
       "build": "25A5327H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4018,6 +4074,7 @@
     {
       "id": "macos-beta-26.0-beta-4-25A5316I",
       "version": "26.0",
+      "version_label": "26.0-beta-4",
       "build": "25A5316I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4086,6 +4143,7 @@
     {
       "id": "macos-beta-26.0-beta-3-25A5306G",
       "version": "26.0",
+      "version_label": "26.0-beta-3",
       "build": "25A5306G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4154,6 +4212,7 @@
     {
       "id": "macos-beta-26.0-beta-2-25A5295E",
       "version": "26.0",
+      "version_label": "26.0-beta-2",
       "build": "25A5295E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4222,6 +4281,7 @@
     {
       "id": "macos-beta-26.0-beta-25A5279M",
       "version": "26.0",
+      "version_label": "26.0-beta",
       "build": "25A5279M",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4290,6 +4350,7 @@
     {
       "id": "macos-beta-26.0-25A354",
       "version": "26.0",
+      "version_label": "26.0",
       "build": "25A354",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4358,6 +4419,7 @@
     {
       "id": "macos-beta-26.0-rc-25A353",
       "version": "26.0",
+      "version_label": "26.0-rc",
       "build": "25A353",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4426,6 +4488,7 @@
     {
       "id": "macos-beta-15.6.1-24G90",
       "version": "15.6.1",
+      "version_label": "15.6.1",
       "build": "24G90",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4494,6 +4557,7 @@
     {
       "id": "macos-beta-15.6-rc-24G84",
       "version": "15.6",
+      "version_label": "15.6-rc",
       "build": "24G84",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4562,6 +4626,7 @@
     {
       "id": "macos-beta-15.6-beta-3-24G5074C",
       "version": "15.6",
+      "version_label": "15.6-beta-3",
       "build": "24G5074C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4630,6 +4695,7 @@
     {
       "id": "macos-beta-15.6-beta-2-24G5065C",
       "version": "15.6",
+      "version_label": "15.6-beta-2",
       "build": "24G5065C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4698,6 +4764,7 @@
     {
       "id": "macos-beta-15.6-beta-24G5054D",
       "version": "15.6",
+      "version_label": "15.6-beta",
       "build": "24G5054D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4766,6 +4833,7 @@
     {
       "id": "macos-beta-15.5-rc-24F74",
       "version": "15.5",
+      "version_label": "15.5-rc",
       "build": "24F74",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4834,6 +4902,7 @@
     {
       "id": "macos-beta-15.5-beta-4-24F5068B",
       "version": "15.5",
+      "version_label": "15.5-beta-4",
       "build": "24F5068B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4902,6 +4971,7 @@
     {
       "id": "macos-beta-15.5-beta-3-24F5053J",
       "version": "15.5",
+      "version_label": "15.5-beta-3",
       "build": "24F5053J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4970,6 +5040,7 @@
     {
       "id": "macos-beta-15.5-beta-2-24F5053F",
       "version": "15.5",
+      "version_label": "15.5-beta-2",
       "build": "24F5053F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5038,6 +5109,7 @@
     {
       "id": "macos-beta-15.5-beta-24F5042G",
       "version": "15.5",
+      "version_label": "15.5-beta",
       "build": "24F5042G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5106,6 +5178,7 @@
     {
       "id": "macos-beta-15.4.1-24E263",
       "version": "15.4.1",
+      "version_label": "15.4.1",
       "build": "24E263",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5174,6 +5247,7 @@
     {
       "id": "macos-beta-15.4-beta-4-24E5238A",
       "version": "15.4",
+      "version_label": "15.4-beta-4",
       "build": "24E5238A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5242,6 +5316,7 @@
     {
       "id": "macos-beta-15.4-beta-3-24E5228E",
       "version": "15.4",
+      "version_label": "15.4-beta-3",
       "build": "24E5228E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5310,6 +5385,7 @@
     {
       "id": "macos-beta-15.4-beta-2-24E5222F",
       "version": "15.4",
+      "version_label": "15.4-beta-2",
       "build": "24E5222F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5374,6 +5450,7 @@
     {
       "id": "macos-beta-15.4-beta-24E5206S",
       "version": "15.4",
+      "version_label": "15.4-beta",
       "build": "24E5206S",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5438,6 +5515,7 @@
     {
       "id": "macos-beta-15.4-24E248",
       "version": "15.4",
+      "version_label": "15.4",
       "build": "24E248",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5506,6 +5584,7 @@
     {
       "id": "macos-beta-15.4-rc-2-24E247",
       "version": "15.4",
+      "version_label": "15.4-rc-2",
       "build": "24E247",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5574,6 +5653,7 @@
     {
       "id": "macos-beta-15.4-rc-24E246",
       "version": "15.4",
+      "version_label": "15.4-rc",
       "build": "24E246",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5642,6 +5722,7 @@
     {
       "id": "macos-beta-15.3.2-24D81",
       "version": "15.3.2",
+      "version_label": "15.3.2",
       "build": "24D81",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5706,6 +5787,7 @@
     {
       "id": "macos-beta-15.3.1-24D70",
       "version": "15.3.1",
+      "version_label": "15.3.1",
       "build": "24D70",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5770,6 +5852,7 @@
     {
       "id": "macos-beta-15.3-rc-24D60",
       "version": "15.3",
+      "version_label": "15.3-rc",
       "build": "24D60",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5833,6 +5916,7 @@
     {
       "id": "macos-beta-15.3-beta-3-24D5055B",
       "version": "15.3",
+      "version_label": "15.3-beta-3",
       "build": "24D5055B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5896,6 +5980,7 @@
     {
       "id": "macos-beta-15.3-beta-2-24D5040F",
       "version": "15.3",
+      "version_label": "15.3-beta-2",
       "build": "24D5040F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5959,6 +6044,7 @@
     {
       "id": "macos-beta-15.3-beta-24D5034F",
       "version": "15.3",
+      "version_label": "15.3-beta",
       "build": "24D5034F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6022,6 +6108,7 @@
     {
       "id": "macos-beta-15.2-rc-24C98",
       "version": "15.2",
+      "version_label": "15.2-rc",
       "build": "24C98",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6085,6 +6172,7 @@
     {
       "id": "macos-beta-15.2-beta-4-24C5089C",
       "version": "15.2",
+      "version_label": "15.2-beta-4",
       "build": "24C5089C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6148,6 +6236,7 @@
     {
       "id": "macos-beta-15.2-beta-3-24C5079E",
       "version": "15.2",
+      "version_label": "15.2-beta-3",
       "build": "24C5079E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6211,6 +6300,7 @@
     {
       "id": "macos-beta-15.2-beta-2-24C5073E",
       "version": "15.2",
+      "version_label": "15.2-beta-2",
       "build": "24C5073E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6274,6 +6364,7 @@
     {
       "id": "macos-beta-15.2-beta-24C5057P",
       "version": "15.2",
+      "version_label": "15.2-beta",
       "build": "24C5057P",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6328,6 +6419,7 @@
     {
       "id": "macos-beta-15.2-24C2101",
       "version": "15.2",
+      "version_label": "15.2",
       "build": "24C2101",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6351,6 +6443,7 @@
     {
       "id": "macos-beta-15.2-24C101",
       "version": "15.2",
+      "version_label": "15.2",
       "build": "24C101",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6414,6 +6507,7 @@
     {
       "id": "macos-beta-15.2-rc-2-24C100",
       "version": "15.2",
+      "version_label": "15.2-rc-2",
       "build": "24C100",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6477,6 +6571,7 @@
     {
       "id": "macos-beta-15.1.1-24B91",
       "version": "15.1.1",
+      "version_label": "15.1.1",
       "build": "24B91",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6531,6 +6626,7 @@
     {
       "id": "macos-beta-15.1.1-24B2091",
       "version": "15.1.1",
+      "version_label": "15.1.1",
       "build": "24B2091",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6561,6 +6657,7 @@
     {
       "id": "macos-beta-15.1-rc-2-24B83",
       "version": "15.1",
+      "version_label": "15.1-rc-2",
       "build": "24B83",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6615,6 +6712,7 @@
     {
       "id": "macos-beta-15.1-rc-24B82",
       "version": "15.1",
+      "version_label": "15.1-rc",
       "build": "24B82",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6670,6 +6768,7 @@
     {
       "id": "macos-beta-15.1-beta-6-24B5070A",
       "version": "15.1",
+      "version_label": "15.1-beta-6",
       "build": "24B5070A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6725,6 +6824,7 @@
     {
       "id": "macos-beta-15.1-beta-5-24B5055E",
       "version": "15.1",
+      "version_label": "15.1-beta-5",
       "build": "24B5055E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6780,6 +6880,7 @@
     {
       "id": "macos-beta-15.1-beta-4-24B5046F",
       "version": "15.1",
+      "version_label": "15.1-beta-4",
       "build": "24B5046F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6835,6 +6936,7 @@
     {
       "id": "macos-beta-15.1-beta-3-24B5035E",
       "version": "15.1",
+      "version_label": "15.1-beta-3",
       "build": "24B5035E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6890,6 +6992,7 @@
     {
       "id": "macos-beta-15.1-beta-2-24B5024E",
       "version": "15.1",
+      "version_label": "15.1-beta-2",
       "build": "24B5024E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -6945,6 +7048,7 @@
     {
       "id": "macos-beta-15.1-beta-24B5009L",
       "version": "15.1",
+      "version_label": "15.1-beta",
       "build": "24B5009L",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7000,6 +7104,7 @@
     {
       "id": "macos-beta-15.1-24B2083",
       "version": "15.1",
+      "version_label": "15.1",
       "build": "24B2083",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7030,6 +7135,7 @@
     {
       "id": "macos-beta-15.0.1-24A348",
       "version": "15.0.1",
+      "version_label": "15.0.1",
       "build": "24A348",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7085,6 +7191,7 @@
     {
       "id": "macos-beta-15.0-beta-8-24A5331B",
       "version": "15.0",
+      "version_label": "15.0-beta-8",
       "build": "24A5331B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7140,6 +7247,7 @@
     {
       "id": "macos-beta-15.0-beta-7-24A5327A",
       "version": "15.0",
+      "version_label": "15.0-beta-7",
       "build": "24A5327A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7195,6 +7303,7 @@
     {
       "id": "macos-beta-15.0-beta-6-24A5320A",
       "version": "15.0",
+      "version_label": "15.0-beta-6",
       "build": "24A5320A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7250,6 +7359,7 @@
     {
       "id": "macos-beta-15.0-beta-5-24A5309E",
       "version": "15.0",
+      "version_label": "15.0-beta-5",
       "build": "24A5309E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7305,6 +7415,7 @@
     {
       "id": "macos-beta-15.0-beta-4-24A5298H",
       "version": "15.0",
+      "version_label": "15.0-beta-4",
       "build": "24A5298H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7360,6 +7471,7 @@
     {
       "id": "macos-beta-15.0-beta-3-24A5289H",
       "version": "15.0",
+      "version_label": "15.0-beta-3",
       "build": "24A5289H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7415,6 +7527,7 @@
     {
       "id": "macos-beta-15.0-beta-3-24A5289G",
       "version": "15.0",
+      "version_label": "15.0-beta-3",
       "build": "24A5289G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7470,6 +7583,7 @@
     {
       "id": "macos-beta-15.0-beta-2-24A5279H",
       "version": "15.0",
+      "version_label": "15.0-beta-2",
       "build": "24A5279H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7525,6 +7639,7 @@
     {
       "id": "macos-beta-15.0-beta-24A5264N",
       "version": "15.0",
+      "version_label": "15.0-beta",
       "build": "24A5264N",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7580,6 +7695,7 @@
     {
       "id": "macos-beta-15.0-rc-24A335",
       "version": "15.0",
+      "version_label": "15.0-rc",
       "build": "24A335",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7635,6 +7751,7 @@
     {
       "id": "macos-beta-14.6.1-23G93",
       "version": "14.6.1",
+      "version_label": "14.6.1",
       "build": "23G93",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7690,6 +7807,7 @@
     {
       "id": "macos-beta-14.6-rc-23G80",
       "version": "14.6",
+      "version_label": "14.6-rc",
       "build": "23G80",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7745,6 +7863,7 @@
     {
       "id": "macos-beta-14.6-beta-4-23G5075B",
       "version": "14.6",
+      "version_label": "14.6-beta-4",
       "build": "23G5075B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7800,6 +7919,7 @@
     {
       "id": "macos-beta-14.6-beta-3-23G5066C",
       "version": "14.6",
+      "version_label": "14.6-beta-3",
       "build": "23G5066C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7855,6 +7975,7 @@
     {
       "id": "macos-beta-14.6-beta-2-23G5061B",
       "version": "14.6",
+      "version_label": "14.6-beta-2",
       "build": "23G5061B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7910,6 +8031,7 @@
     {
       "id": "macos-beta-14.6-beta-23G5052D",
       "version": "14.6",
+      "version_label": "14.6-beta",
       "build": "23G5052D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -7965,6 +8087,7 @@
     {
       "id": "macos-beta-14.5-rc-23F79",
       "version": "14.5",
+      "version_label": "14.5-rc",
       "build": "23F79",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8020,6 +8143,7 @@
     {
       "id": "macos-beta-14.5-beta-4-23F5074A",
       "version": "14.5",
+      "version_label": "14.5-beta-4",
       "build": "23F5074A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8075,6 +8199,7 @@
     {
       "id": "macos-beta-14.5-beta-3-23F5064F",
       "version": "14.5",
+      "version_label": "14.5-beta-3",
       "build": "23F5064F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8130,6 +8255,7 @@
     {
       "id": "macos-beta-14.5-beta-2-23F5059E",
       "version": "14.5",
+      "version_label": "14.5-beta-2",
       "build": "23F5059E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8185,6 +8311,7 @@
     {
       "id": "macos-beta-14.5-beta-23F5049F",
       "version": "14.5",
+      "version_label": "14.5-beta",
       "build": "23F5049F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8240,6 +8367,7 @@
     {
       "id": "macos-beta-14.4.1-23E224",
       "version": "14.4.1",
+      "version_label": "14.4.1",
       "build": "23E224",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8295,6 +8423,7 @@
     {
       "id": "macos-beta-14.4-beta-5-23E5211A",
       "version": "14.4",
+      "version_label": "14.4-beta-5",
       "build": "23E5211A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8348,6 +8477,7 @@
     {
       "id": "macos-beta-14.4-beta-4-23E5205C",
       "version": "14.4",
+      "version_label": "14.4-beta-4",
       "build": "23E5205C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8401,6 +8531,7 @@
     {
       "id": "macos-beta-14.4-beta-3-23E5196E",
       "version": "14.4",
+      "version_label": "14.4-beta-3",
       "build": "23E5196E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8454,6 +8585,7 @@
     {
       "id": "macos-beta-14.4-beta-2-23E5191E",
       "version": "14.4",
+      "version_label": "14.4-beta-2",
       "build": "23E5191E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8507,6 +8639,7 @@
     {
       "id": "macos-beta-14.4-beta-23E5180J",
       "version": "14.4",
+      "version_label": "14.4-beta",
       "build": "23E5180J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8560,6 +8693,7 @@
     {
       "id": "macos-beta-14.4-rc-23E214",
       "version": "14.4",
+      "version_label": "14.4-rc",
       "build": "23E214",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8615,6 +8749,7 @@
     {
       "id": "macos-beta-14.3.1-23D60",
       "version": "14.3.1",
+      "version_label": "14.3.1",
       "build": "23D60",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8668,6 +8803,7 @@
     {
       "id": "macos-beta-14.3-rc-23D56",
       "version": "14.3",
+      "version_label": "14.3-rc",
       "build": "23D56",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8721,6 +8857,7 @@
     {
       "id": "macos-beta-14.3-beta-3-23D5051B",
       "version": "14.3",
+      "version_label": "14.3-beta-3",
       "build": "23D5051B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8774,6 +8911,7 @@
     {
       "id": "macos-beta-14.3-beta-2-23D5043D",
       "version": "14.3",
+      "version_label": "14.3-beta-2",
       "build": "23D5043D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8827,6 +8965,7 @@
     {
       "id": "macos-beta-14.3-beta-23D5033F",
       "version": "14.3",
+      "version_label": "14.3-beta",
       "build": "23D5033F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8880,6 +9019,7 @@
     {
       "id": "macos-beta-14.2.1-23C71",
       "version": "14.2.1",
+      "version_label": "14.2.1",
       "build": "23C71",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8933,6 +9073,7 @@
     {
       "id": "macos-beta-14.2-rc-2-23C64",
       "version": "14.2",
+      "version_label": "14.2-rc-2",
       "build": "23C64",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -8986,6 +9127,7 @@
     {
       "id": "macos-beta-14.2-rc-23C63",
       "version": "14.2",
+      "version_label": "14.2-rc",
       "build": "23C63",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9039,6 +9181,7 @@
     {
       "id": "macos-beta-14.2-beta-4-23C5055B",
       "version": "14.2",
+      "version_label": "14.2-beta-4",
       "build": "23C5055B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9092,6 +9235,7 @@
     {
       "id": "macos-beta-14.2-beta-3-23C5047E",
       "version": "14.2",
+      "version_label": "14.2-beta-3",
       "build": "23C5047E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9145,6 +9289,7 @@
     {
       "id": "macos-beta-14.2-beta-2-23C5041E",
       "version": "14.2",
+      "version_label": "14.2-beta-2",
       "build": "23C5041E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9198,6 +9343,7 @@
     {
       "id": "macos-beta-14.2-beta-23C5030F",
       "version": "14.2",
+      "version_label": "14.2-beta",
       "build": "23C5030F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9242,6 +9388,7 @@
     {
       "id": "macos-beta-14.1.1-23B81",
       "version": "14.1.1",
+      "version_label": "14.1.1",
       "build": "23B81",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9286,6 +9433,7 @@
     {
       "id": "macos-beta-14.1.1-23B2082",
       "version": "14.1.1",
+      "version_label": "14.1.1",
       "build": "23B2082",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9316,6 +9464,7 @@
     {
       "id": "macos-beta-14.1-23B74",
       "version": "14.1",
+      "version_label": "14.1",
       "build": "23B74",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9360,6 +9509,7 @@
     {
       "id": "macos-beta-14.1-rc-23B73",
       "version": "14.1",
+      "version_label": "14.1-rc",
       "build": "23B73",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9404,6 +9554,7 @@
     {
       "id": "macos-beta-14.1-beta-3-23B5067A",
       "version": "14.1",
+      "version_label": "14.1-beta-3",
       "build": "23B5067A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9448,6 +9599,7 @@
     {
       "id": "macos-beta-14.1-beta-2-23B5056E",
       "version": "14.1",
+      "version_label": "14.1-beta-2",
       "build": "23B5056E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9492,6 +9644,7 @@
     {
       "id": "macos-beta-14.1-beta-23B5046F",
       "version": "14.1",
+      "version_label": "14.1-beta",
       "build": "23B5046F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9536,6 +9689,7 @@
     {
       "id": "macos-beta-14.0-beta-7-23A5337A",
       "version": "14.0",
+      "version_label": "14.0-beta-7",
       "build": "23A5337A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9580,6 +9734,7 @@
     {
       "id": "macos-beta-14.0-beta-6-23A5328B",
       "version": "14.0",
+      "version_label": "14.0-beta-6",
       "build": "23A5328B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9624,6 +9779,7 @@
     {
       "id": "macos-beta-14.0-beta-5-23A5312D",
       "version": "14.0",
+      "version_label": "14.0-beta-5",
       "build": "23A5312D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9668,6 +9824,7 @@
     {
       "id": "macos-beta-14.0-beta-4-23A5301H",
       "version": "14.0",
+      "version_label": "14.0-beta-4",
       "build": "23A5301H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9712,6 +9869,7 @@
     {
       "id": "macos-beta-14.0-beta-4-23A5286G",
       "version": "14.0",
+      "version_label": "14.0-beta-4",
       "build": "23A5286G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9756,6 +9914,7 @@
     {
       "id": "macos-beta-14.0-beta-2-23A5276G",
       "version": "14.0",
+      "version_label": "14.0-beta-2",
       "build": "23A5276G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9800,6 +9959,7 @@
     {
       "id": "macos-beta-14.0-rc-2-23A344",
       "version": "14.0",
+      "version_label": "14.0-rc-2",
       "build": "23A344",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9844,6 +10004,7 @@
     {
       "id": "macos-beta-14.0-rc-23A339",
       "version": "14.0",
+      "version_label": "14.0-rc",
       "build": "23A339",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9888,6 +10049,7 @@
     {
       "id": "macos-beta-13.6-22G120",
       "version": "13.6",
+      "version_label": "13.6",
       "build": "22G120",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9932,6 +10094,7 @@
     {
       "id": "macos-beta-13.5.2-22G91",
       "version": "13.5.2",
+      "version_label": "13.5.2",
       "build": "22G91",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -9976,6 +10139,7 @@
     {
       "id": "macos-beta-13.5.1-22G90",
       "version": "13.5.1",
+      "version_label": "13.5.1",
       "build": "22G90",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10020,6 +10184,7 @@
     {
       "id": "macos-beta-13.5-rc-22G74",
       "version": "13.5",
+      "version_label": "13.5-rc",
       "build": "22G74",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10064,6 +10229,7 @@
     {
       "id": "macos-beta-13.5-beta-5-22G5072A",
       "version": "13.5",
+      "version_label": "13.5-beta-5",
       "build": "22G5072A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10108,6 +10274,7 @@
     {
       "id": "macos-beta-13.5-beta-4-22G5059D",
       "version": "13.5",
+      "version_label": "13.5-beta-4",
       "build": "22G5059D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10148,6 +10315,7 @@
     {
       "id": "macos-beta-13.5-beta-3-22G5048D",
       "version": "13.5",
+      "version_label": "13.5-beta-3",
       "build": "22G5048D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10192,6 +10360,7 @@
     {
       "id": "macos-beta-13.5-beta-2-22G5038D",
       "version": "13.5",
+      "version_label": "13.5-beta-2",
       "build": "22G5038D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10232,6 +10401,7 @@
     {
       "id": "macos-beta-13.5-beta-22G5027E",
       "version": "13.5",
+      "version_label": "13.5-beta",
       "build": "22G5027E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10272,6 +10442,7 @@
     {
       "id": "macos-beta-13.4.1-22F82",
       "version": "13.4.1",
+      "version_label": "13.4.1",
       "build": "22F82",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10312,6 +10483,7 @@
     {
       "id": "macos-beta-13.4.1-22F2083",
       "version": "13.4.1",
+      "version_label": "13.4.1",
       "build": "22F2083",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10337,6 +10509,7 @@
     {
       "id": "macos-beta-13.4-rc-3-22F66",
       "version": "13.4",
+      "version_label": "13.4-rc-3",
       "build": "22F66",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10377,6 +10550,7 @@
     {
       "id": "macos-beta-13.4-rc-2-22F63",
       "version": "13.4",
+      "version_label": "13.4-rc-2",
       "build": "22F63",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10417,6 +10591,7 @@
     {
       "id": "macos-beta-13.4-rc-22F62",
       "version": "13.4",
+      "version_label": "13.4-rc",
       "build": "22F62",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10457,6 +10632,7 @@
     {
       "id": "macos-beta-13.4-beta-4-22F5059B",
       "version": "13.4",
+      "version_label": "13.4-beta-4",
       "build": "22F5059B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10497,6 +10673,7 @@
     {
       "id": "macos-beta-13.4-beta-3-22F5049E",
       "version": "13.4",
+      "version_label": "13.4-beta-3",
       "build": "22F5049E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10537,6 +10714,7 @@
     {
       "id": "macos-beta-13.4-beta-2-22F5037D",
       "version": "13.4",
+      "version_label": "13.4-beta-2",
       "build": "22F5037D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10577,6 +10755,7 @@
     {
       "id": "macos-beta-13.4-beta-22F5027F",
       "version": "13.4",
+      "version_label": "13.4-beta",
       "build": "22F5027F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10617,6 +10796,7 @@
     {
       "id": "macos-beta-13.4-22F2073",
       "version": "13.4",
+      "version_label": "13.4",
       "build": "22F2073",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10642,6 +10822,7 @@
     {
       "id": "macos-beta-13.3.1-22E261",
       "version": "13.3.1",
+      "version_label": "13.3.1",
       "build": "22E261",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10682,6 +10863,7 @@
     {
       "id": "macos-beta-13.3-beta-4-22E5246B",
       "version": "13.3",
+      "version_label": "13.3-beta-4",
       "build": "22E5246B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10722,6 +10904,7 @@
     {
       "id": "macos-beta-13.3-beta-3-22E5236F",
       "version": "13.3",
+      "version_label": "13.3-beta-3",
       "build": "22E5236F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10762,6 +10945,7 @@
     {
       "id": "macos-beta-13.3-beta-2-22E5230E",
       "version": "13.3",
+      "version_label": "13.3-beta-2",
       "build": "22E5230E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10802,6 +10986,7 @@
     {
       "id": "macos-beta-13.3-beta-22E5219E",
       "version": "13.3",
+      "version_label": "13.3-beta",
       "build": "22E5219E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10842,6 +11027,7 @@
     {
       "id": "macos-beta-13.3-rc-22E252",
       "version": "13.3",
+      "version_label": "13.3-rc",
       "build": "22E252",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10882,6 +11068,7 @@
     {
       "id": "macos-beta-13.2.1-22D68",
       "version": "13.2.1",
+      "version_label": "13.2.1",
       "build": "22D68",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10922,6 +11109,7 @@
     {
       "id": "macos-beta-13.2-beta-2-22D5038I",
       "version": "13.2",
+      "version_label": "13.2-beta-2",
       "build": "22D5038I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10956,6 +11144,7 @@
     {
       "id": "macos-beta-13.2-beta-22D5027D",
       "version": "13.2",
+      "version_label": "13.2-beta",
       "build": "22D5027D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -10990,6 +11179,7 @@
     {
       "id": "macos-beta-13.2-rc-22D49",
       "version": "13.2",
+      "version_label": "13.2-rc",
       "build": "22D49",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11030,6 +11220,7 @@
     {
       "id": "macos-beta-13.1-rc-22C65",
       "version": "13.1",
+      "version_label": "13.1-rc",
       "build": "22C65",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11064,6 +11255,7 @@
     {
       "id": "macos-beta-13.1-beta-4-22C5059B",
       "version": "13.1",
+      "version_label": "13.1-beta-4",
       "build": "22C5059B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11098,6 +11290,7 @@
     {
       "id": "macos-beta-13.1-beta-3-22C5050E",
       "version": "13.1",
+      "version_label": "13.1-beta-3",
       "build": "22C5050E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11132,6 +11325,7 @@
     {
       "id": "macos-beta-13.1-beta-2-22C5044E",
       "version": "13.1",
+      "version_label": "13.1-beta-2",
       "build": "22C5044E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11166,6 +11360,7 @@
     {
       "id": "macos-beta-13.1-beta-22C5033E",
       "version": "13.1",
+      "version_label": "13.1-beta",
       "build": "22C5033E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11200,6 +11395,7 @@
     {
       "id": "macos-beta-13.0.1-22A400",
       "version": "13.0.1",
+      "version_label": "13.0.1",
       "build": "22A400",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11234,6 +11430,7 @@
     {
       "id": "macos-beta-13.0-beta-11-22A5373B",
       "version": "13.0",
+      "version_label": "13.0-beta-11",
       "build": "22A5373B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11268,6 +11465,7 @@
     {
       "id": "macos-beta-13.0-beta-10-22A5365D",
       "version": "13.0",
+      "version_label": "13.0-beta-10",
       "build": "22A5365D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11302,6 +11500,7 @@
     {
       "id": "macos-beta-13.0-beta-9-22A5358E",
       "version": "13.0",
+      "version_label": "13.0-beta-9",
       "build": "22A5358E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11336,6 +11535,7 @@
     {
       "id": "macos-beta-13.0-beta-8-22A5352E",
       "version": "13.0",
+      "version_label": "13.0-beta-8",
       "build": "22A5352E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11370,6 +11570,7 @@
     {
       "id": "macos-beta-13.0-beta-7-22A5342F",
       "version": "13.0",
+      "version_label": "13.0-beta-7",
       "build": "22A5342F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11404,6 +11605,7 @@
     {
       "id": "macos-beta-13.0-beta-6-22A5331F",
       "version": "13.0",
+      "version_label": "13.0-beta-6",
       "build": "22A5331F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11438,6 +11640,7 @@
     {
       "id": "macos-beta-13.0-beta-5-22A5321D",
       "version": "13.0",
+      "version_label": "13.0-beta-5",
       "build": "22A5321D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11472,6 +11675,7 @@
     {
       "id": "macos-beta-13.0-beta-4-22A5311F",
       "version": "13.0",
+      "version_label": "13.0-beta-4",
       "build": "22A5311F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11506,6 +11710,7 @@
     {
       "id": "macos-beta-13.0-beta-3-22A5295I",
       "version": "13.0",
+      "version_label": "13.0-beta-3",
       "build": "22A5295I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11540,6 +11745,7 @@
     {
       "id": "macos-beta-13.0-beta-3-22A5295H",
       "version": "13.0",
+      "version_label": "13.0-beta-3",
       "build": "22A5295H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11574,6 +11780,7 @@
     {
       "id": "macos-beta-13.0-beta-2-22A5286J",
       "version": "13.0",
+      "version_label": "13.0-beta-2",
       "build": "22A5286J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11608,6 +11815,7 @@
     {
       "id": "macos-beta-13.0-rc-2-22A380",
       "version": "13.0",
+      "version_label": "13.0-rc-2",
       "build": "22A380",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11642,6 +11850,7 @@
     {
       "id": "macos-beta-13.0-rc-22A379",
       "version": "13.0",
+      "version_label": "13.0-rc",
       "build": "22A379",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11676,6 +11885,7 @@
     {
       "id": "macos-beta-12.6.1-rc-4-21G217",
       "version": "12.6.1",
+      "version_label": "12.6.1-rc-4",
       "build": "21G217",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11710,6 +11920,7 @@
     {
       "id": "macos-beta-12.6-rc-21G115",
       "version": "12.6",
+      "version_label": "12.6-rc",
       "build": "21G115",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11744,6 +11955,7 @@
     {
       "id": "macos-beta-12.5.1-21G83",
       "version": "12.5.1",
+      "version_label": "12.5.1",
       "build": "21G83",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11778,6 +11990,7 @@
     {
       "id": "macos-beta-12.5-rc-2-21G72",
       "version": "12.5",
+      "version_label": "12.5-rc-2",
       "build": "21G72",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11812,6 +12025,7 @@
     {
       "id": "macos-beta-12.5-rc-21G69",
       "version": "12.5",
+      "version_label": "12.5-rc",
       "build": "21G69",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11846,6 +12060,7 @@
     {
       "id": "macos-beta-12.5-beta-5-21G5063A",
       "version": "12.5",
+      "version_label": "12.5-beta-5",
       "build": "21G5063A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11880,6 +12095,7 @@
     {
       "id": "macos-beta-12.5-beta-4-21G5056B",
       "version": "12.5",
+      "version_label": "12.5-beta-4",
       "build": "21G5056B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11914,6 +12130,7 @@
     {
       "id": "macos-beta-12.5-beta-3-21G5046C",
       "version": "12.5",
+      "version_label": "12.5-beta-3",
       "build": "21G5046C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11946,6 +12163,7 @@
     {
       "id": "macos-beta-12.5-beta-2-21G5037D",
       "version": "12.5",
+      "version_label": "12.5-beta-2",
       "build": "21G5037D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -11978,6 +12196,7 @@
     {
       "id": "macos-beta-12.5-beta-21G5027D",
       "version": "12.5",
+      "version_label": "12.5-beta",
       "build": "21G5027D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12010,6 +12229,7 @@
     {
       "id": "macos-beta-12.4-rc-21F79",
       "version": "12.4",
+      "version_label": "12.4-rc",
       "build": "21F79",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12042,6 +12262,7 @@
     {
       "id": "macos-beta-12.4-beta-4-21F5071B",
       "version": "12.4",
+      "version_label": "12.4-beta-4",
       "build": "21F5071B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12074,6 +12295,7 @@
     {
       "id": "macos-beta-12.4-beta-3-21F5063E",
       "version": "12.4",
+      "version_label": "12.4-beta-3",
       "build": "21F5063E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12106,6 +12328,7 @@
     {
       "id": "macos-beta-12.4-beta-2-21F5058E",
       "version": "12.4",
+      "version_label": "12.4-beta-2",
       "build": "21F5058E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12138,6 +12361,7 @@
     {
       "id": "macos-beta-12.4-beta-21F5048E",
       "version": "12.4",
+      "version_label": "12.4-beta",
       "build": "21F5048E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12170,6 +12394,7 @@
     {
       "id": "macos-beta-12.4-21F2092",
       "version": "12.4",
+      "version_label": "12.4",
       "build": "21F2092",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12193,6 +12418,7 @@
     {
       "id": "macos-beta-12.3.1-21E258",
       "version": "12.3.1",
+      "version_label": "12.3.1",
       "build": "21E258",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12225,6 +12451,7 @@
     {
       "id": "macos-beta-12.3-beta-5-21E5227A",
       "version": "12.3",
+      "version_label": "12.3-beta-5",
       "build": "21E5227A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12255,6 +12482,7 @@
     {
       "id": "macos-beta-12.3-beta-4-21E5222A",
       "version": "12.3",
+      "version_label": "12.3-beta-4",
       "build": "21E5222A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12285,6 +12513,7 @@
     {
       "id": "macos-beta-12.3-beta-3-21E5212F",
       "version": "12.3",
+      "version_label": "12.3-beta-3",
       "build": "21E5212F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12315,6 +12544,7 @@
     {
       "id": "macos-beta-12.3-beta-2-21E5206E",
       "version": "12.3",
+      "version_label": "12.3-beta-2",
       "build": "21E5206E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12345,6 +12575,7 @@
     {
       "id": "macos-beta-12.3-beta-21E5196I",
       "version": "12.3",
+      "version_label": "12.3-beta",
       "build": "21E5196I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12375,6 +12606,7 @@
     {
       "id": "macos-beta-12.3-rc-21E230",
       "version": "12.3",
+      "version_label": "12.3-rc",
       "build": "21E230",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12407,6 +12639,7 @@
     {
       "id": "macos-beta-12.2.1-21D62",
       "version": "12.2.1",
+      "version_label": "12.2.1",
       "build": "21D62",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12437,6 +12670,7 @@
     {
       "id": "macos-beta-12.2-beta-2-21D5039D",
       "version": "12.2",
+      "version_label": "12.2-beta-2",
       "build": "21D5039D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12467,6 +12701,7 @@
     {
       "id": "macos-beta-12.2-beta-21D5025F",
       "version": "12.2",
+      "version_label": "12.2-beta",
       "build": "21D5025F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12497,6 +12732,7 @@
     {
       "id": "macos-beta-12.2-21D49",
       "version": "12.2",
+      "version_label": "12.2",
       "build": "21D49",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12527,6 +12763,7 @@
     {
       "id": "macos-beta-12.2-rc-21D48",
       "version": "12.2",
+      "version_label": "12.2-rc",
       "build": "21D48",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12557,6 +12794,7 @@
     {
       "id": "macos-beta-12.1-rc-2-21C52",
       "version": "12.1",
+      "version_label": "12.1-rc-2",
       "build": "21C52",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12587,6 +12825,7 @@
     {
       "id": "macos-beta-12.1-rc-21C51",
       "version": "12.1",
+      "version_label": "12.1-rc",
       "build": "21C51",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12617,6 +12856,7 @@
     {
       "id": "macos-beta-12.1-beta-4-21C5045A",
       "version": "12.1",
+      "version_label": "12.1-beta-4",
       "build": "21C5045A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12647,6 +12887,7 @@
     {
       "id": "macos-beta-12.1-beta-3-21C5039B",
       "version": "12.1",
+      "version_label": "12.1-beta-3",
       "build": "21C5039B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12677,6 +12918,7 @@
     {
       "id": "macos-beta-12.1-beta-2-21C5031D",
       "version": "12.1",
+      "version_label": "12.1-beta-2",
       "build": "21C5031D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12707,6 +12949,7 @@
     {
       "id": "macos-beta-12.1-beta-21C5021H",
       "version": "12.1",
+      "version_label": "12.1-beta",
       "build": "21C5021H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12737,6 +12980,7 @@
     {
       "id": "macos-beta-12.0.1-rc-2-21A559",
       "version": "12.0.1",
+      "version_label": "12.0.1-rc-2",
       "build": "21A559",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12767,6 +13011,7 @@
     {
       "id": "macos-beta-12.0.1-rc-21A558",
       "version": "12.0.1",
+      "version_label": "12.0.1-rc",
       "build": "21A558",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12797,6 +13042,7 @@
     {
       "id": "macos-beta-12.0-beta-10-21A5552A",
       "version": "12.0",
+      "version_label": "12.0-beta-10",
       "build": "21A5552A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12823,6 +13069,7 @@
     {
       "id": "macos-beta-12.0-beta-9-21A5543B",
       "version": "12.0",
+      "version_label": "12.0-beta-9",
       "build": "21A5543B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12849,6 +13096,7 @@
     {
       "id": "macos-beta-12.0-beta-8-21A5534D",
       "version": "12.0",
+      "version_label": "12.0-beta-8",
       "build": "21A5534D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12875,6 +13123,7 @@
     {
       "id": "macos-beta-12.0-beta-7-21A5522H",
       "version": "12.0",
+      "version_label": "12.0-beta-7",
       "build": "21A5522H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12901,6 +13150,7 @@
     {
       "id": "macos-beta-12.0-beta-6-21A5304G",
       "version": "12.0",
+      "version_label": "12.0-beta-6",
       "build": "21A5304G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12927,6 +13177,7 @@
     {
       "id": "macos-beta-12.0-beta-4-21A5294G",
       "version": "12.0",
+      "version_label": "12.0-beta-4",
       "build": "21A5294G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12953,6 +13204,7 @@
     {
       "id": "macos-beta-12.0-beta-3-21A5284E",
       "version": "12.0",
+      "version_label": "12.0-beta-3",
       "build": "21A5284E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -12979,6 +13231,7 @@
     {
       "id": "macos-beta-12.0-beta-2-21A5268H",
       "version": "12.0",
+      "version_label": "12.0-beta-2",
       "build": "21A5268H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13005,6 +13258,7 @@
     {
       "id": "macos-beta-11.6-20G165",
       "version": "11.6",
+      "version_label": "11.6",
       "build": "20G165",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13031,6 +13285,7 @@
     {
       "id": "macos-beta-11.5.2-20G95",
       "version": "11.5.2",
+      "version_label": "11.5.2",
       "build": "20G95",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13057,6 +13312,7 @@
     {
       "id": "macos-beta-11.5.1-20G80",
       "version": "11.5.1",
+      "version_label": "11.5.1",
       "build": "20G80",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13083,6 +13339,7 @@
     {
       "id": "macos-beta-11.5-rc-2-20G71",
       "version": "11.5",
+      "version_label": "11.5-rc-2",
       "build": "20G71",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13109,6 +13366,7 @@
     {
       "id": "macos-beta-11.5-rc-20G70",
       "version": "11.5",
+      "version_label": "11.5-rc",
       "build": "20G70",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13135,6 +13393,7 @@
     {
       "id": "macos-beta-11.5-beta-5-20G5065A",
       "version": "11.5",
+      "version_label": "11.5-beta-5",
       "build": "20G5065A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13161,6 +13420,7 @@
     {
       "id": "macos-beta-11.5-beta-4-20G5052C",
       "version": "11.5",
+      "version_label": "11.5-beta-4",
       "build": "20G5052C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13187,6 +13447,7 @@
     {
       "id": "macos-beta-11.4-rc-20F71",
       "version": "11.4",
+      "version_label": "11.4-rc",
       "build": "20F71",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13213,6 +13474,7 @@
     {
       "id": "macos-beta-11.3.1-20E241",
       "version": "11.3.1",
+      "version_label": "11.3.1",
       "build": "20E241",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13239,6 +13501,7 @@
     {
       "id": "macos-beta-11.3-beta-2-20E5186D",
       "version": "11.3",
+      "version_label": "11.3-beta-2",
       "build": "20E5186D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13263,6 +13526,7 @@
     {
       "id": "macos-beta-11.3-beta-20E5172I",
       "version": "11.3",
+      "version_label": "11.3-beta",
       "build": "20E5172I",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13287,6 +13551,7 @@
     {
       "id": "macos-beta-11.3-rc-20E232",
       "version": "11.3",
+      "version_label": "11.3-rc",
       "build": "20E232",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13313,6 +13578,7 @@
     {
       "id": "macos-beta-11.2-rc-3-20D64",
       "version": "11.2",
+      "version_label": "11.2-rc-3",
       "build": "20D64",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13337,6 +13603,7 @@
     {
       "id": "macos-beta-11.2-rc-2-20D62",
       "version": "11.2",
+      "version_label": "11.2-rc-2",
       "build": "20D62",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13361,6 +13628,7 @@
     {
       "id": "macos-beta-11.2-rc-20D53",
       "version": "11.2",
+      "version_label": "11.2-rc",
       "build": "20D53",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13385,6 +13653,7 @@
     {
       "id": "macos-beta-11.2-beta-2-20D5042D",
       "version": "11.2",
+      "version_label": "11.2-beta-2",
       "build": "20D5042D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13409,6 +13678,7 @@
     {
       "id": "macos-beta-11.2-beta-20D5029F",
       "version": "11.2",
+      "version_label": "11.2-beta",
       "build": "20D5029F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13433,6 +13703,7 @@
     {
       "id": "macos-beta-11.1-rc-20C69",
       "version": "11.1",
+      "version_label": "11.1-rc",
       "build": "20C69",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13457,6 +13728,7 @@
     {
       "id": "macos-beta-11.1-beta-2-20C5061B",
       "version": "11.1",
+      "version_label": "11.1-beta-2",
       "build": "20C5061B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13481,6 +13753,7 @@
     {
       "id": "macos-beta-11.0.1-20B29",
       "version": "11.0.1",
+      "version_label": "11.0.1",
       "build": "20B29",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13505,6 +13778,7 @@
     {
       "id": "macos-beta-11.0.1-rc-2-20B28",
       "version": "11.0.1",
+      "version_label": "11.0.1-rc-2",
       "build": "20B28",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -13527,5 +13801,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-17T05:15:52+09:00"
+  "generated_at_tokyo": "2026-09-17T18:43:51+09:00"
 }

@@ -4,13 +4,14 @@
   "os_key": "tvos",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-09-16T20:15:52Z",
+  "generated_at": "2026-09-17T09:43:51Z",
   "release_count": 256,
   "firmware_count": 256,
   "releases": [
     {
       "id": "tvos-beta-26.6-23L773",
       "version": "26.6",
+      "version_label": "26.6",
       "build": "23L773",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -33,6 +34,7 @@
     {
       "id": "tvos-beta-26.6-rc-23L772",
       "version": "26.6",
+      "version_label": "26.6-rc",
       "build": "23L772",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -55,6 +57,7 @@
     {
       "id": "tvos-beta-26.6-beta-5-23L5766A",
       "version": "26.6",
+      "version_label": "26.6-beta-5",
       "build": "23L5766A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -77,6 +80,7 @@
     {
       "id": "tvos-beta-26.6-beta-4-23L5758B",
       "version": "26.6",
+      "version_label": "26.6-beta-4",
       "build": "23L5758B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -99,6 +103,7 @@
     {
       "id": "tvos-beta-26.6-beta-3-23L5753C",
       "version": "26.6",
+      "version_label": "26.6-beta-3",
       "build": "23L5753C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -121,6 +126,7 @@
     {
       "id": "tvos-beta-26.6-beta-2-23L5744D",
       "version": "26.6",
+      "version_label": "26.6-beta-2",
       "build": "23L5744D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -143,6 +149,7 @@
     {
       "id": "tvos-beta-26.6-beta-23L5729E",
       "version": "26.6",
+      "version_label": "26.6-beta",
       "build": "23L5729E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -165,6 +172,7 @@
     {
       "id": "tvos-beta-26.5-beta-4-23L5469A",
       "version": "26.5",
+      "version_label": "26.5-beta-4",
       "build": "23L5469A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -187,6 +195,7 @@
     {
       "id": "tvos-beta-26.5-beta-3-23L5460D",
       "version": "26.5",
+      "version_label": "26.5-beta-3",
       "build": "23L5460D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -209,6 +218,7 @@
     {
       "id": "tvos-beta-26.5-beta-2-23L5455C",
       "version": "26.5",
+      "version_label": "26.5-beta-2",
       "build": "23L5455C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -231,6 +241,7 @@
     {
       "id": "tvos-beta-26.5-beta-23L5443G",
       "version": "26.5",
+      "version_label": "26.5-beta",
       "build": "23L5443G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -253,6 +264,7 @@
     {
       "id": "tvos-beta-26.5-rc-23L471",
       "version": "26.5",
+      "version_label": "26.5-rc",
       "build": "23L471",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -275,6 +287,7 @@
     {
       "id": "tvos-beta-26.4-beta-4-23L5234A",
       "version": "26.4",
+      "version_label": "26.4-beta-4",
       "build": "23L5234A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -297,6 +310,7 @@
     {
       "id": "tvos-beta-26.4-beta-3-23L5224D",
       "version": "26.4",
+      "version_label": "26.4-beta-3",
       "build": "23L5224D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -319,6 +333,7 @@
     {
       "id": "tvos-beta-26.4-beta-2-23L5219E",
       "version": "26.4",
+      "version_label": "26.4-beta-2",
       "build": "23L5219E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -341,6 +356,7 @@
     {
       "id": "tvos-beta-26.4-beta-23L5208M",
       "version": "26.4",
+      "version_label": "26.4-beta",
       "build": "23L5208M",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -363,6 +379,7 @@
     {
       "id": "tvos-beta-26.4-23L243",
       "version": "26.4",
+      "version_label": "26.4",
       "build": "23L243",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -385,6 +402,7 @@
     {
       "id": "tvos-beta-26.4-rc-23L240",
       "version": "26.4",
+      "version_label": "26.4-rc",
       "build": "23L240",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -407,6 +425,7 @@
     {
       "id": "tvos-beta-26.3-23K620",
       "version": "26.3",
+      "version_label": "26.3",
       "build": "23K620",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -429,6 +448,7 @@
     {
       "id": "tvos-beta-26.3-rc-23K619",
       "version": "26.3",
+      "version_label": "26.3-rc",
       "build": "23K619",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -451,6 +471,7 @@
     {
       "id": "tvos-beta-26.3-beta-3-23K5611C",
       "version": "26.3",
+      "version_label": "26.3-beta-3",
       "build": "23K5611C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -473,6 +494,7 @@
     {
       "id": "tvos-beta-26.3-beta-2-23K5600B",
       "version": "26.3",
+      "version_label": "26.3-beta-2",
       "build": "23K5600B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -495,6 +517,7 @@
     {
       "id": "tvos-beta-26.3-beta-23K5585C",
       "version": "26.3",
+      "version_label": "26.3-beta",
       "build": "23K5585C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -517,6 +540,7 @@
     {
       "id": "tvos-beta-26.2-23K54",
       "version": "26.2",
+      "version_label": "26.2",
       "build": "23K54",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -539,6 +563,7 @@
     {
       "id": "tvos-beta-26.2-rc-2-23K53",
       "version": "26.2",
+      "version_label": "26.2-rc-2",
       "build": "23K53",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -561,6 +586,7 @@
     {
       "id": "tvos-beta-26.2-rc-23K51",
       "version": "26.2",
+      "version_label": "26.2-rc",
       "build": "23K51",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -583,6 +609,7 @@
     {
       "id": "tvos-beta-26.2-beta-3-23K5046A",
       "version": "26.2",
+      "version_label": "26.2-beta-3",
       "build": "23K5046A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -605,6 +632,7 @@
     {
       "id": "tvos-beta-26.2-beta-2-23K5035D",
       "version": "26.2",
+      "version_label": "26.2-beta-2",
       "build": "23K5035D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -627,6 +655,7 @@
     {
       "id": "tvos-beta-26.2-beta-23K5029E",
       "version": "26.2",
+      "version_label": "26.2-beta",
       "build": "23K5029E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -649,6 +678,7 @@
     {
       "id": "tvos-beta-26.1-23J582",
       "version": "26.1",
+      "version_label": "26.1",
       "build": "23J582",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -671,6 +701,7 @@
     {
       "id": "tvos-beta-26.1-rc-23J580",
       "version": "26.1",
+      "version_label": "26.1-rc",
       "build": "23J580",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -693,6 +724,7 @@
     {
       "id": "tvos-beta-26.1-beta-4-23J5571A",
       "version": "26.1",
+      "version_label": "26.1-beta-4",
       "build": "23J5571A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -715,6 +747,7 @@
     {
       "id": "tvos-beta-26.1-beta-3-23J5563D",
       "version": "26.1",
+      "version_label": "26.1-beta-3",
       "build": "23J5563D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -737,6 +770,7 @@
     {
       "id": "tvos-beta-26.1-beta-2-23J5558E",
       "version": "26.1",
+      "version_label": "26.1-beta-2",
       "build": "23J5558E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -759,6 +793,7 @@
     {
       "id": "tvos-beta-26.1-beta-23J5543J",
       "version": "26.1",
+      "version_label": "26.1-beta",
       "build": "23J5543J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -781,6 +816,7 @@
     {
       "id": "tvos-beta-26.0.1-23J362",
       "version": "26.0.1",
+      "version_label": "26.0.1",
       "build": "23J362",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -803,6 +839,7 @@
     {
       "id": "tvos-beta-26.0-beta-9-23J5351A",
       "version": "26.0",
+      "version_label": "26.0-beta-9",
       "build": "23J5351A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -825,6 +862,7 @@
     {
       "id": "tvos-beta-26.0-beta-8-23J5348A",
       "version": "26.0",
+      "version_label": "26.0-beta-8",
       "build": "23J5348A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -847,6 +885,7 @@
     {
       "id": "tvos-beta-26.0-beta-7-23J5346A",
       "version": "26.0",
+      "version_label": "26.0-beta-7",
       "build": "23J5346A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -869,6 +908,7 @@
     {
       "id": "tvos-beta-26.0-beta-6-23J5339A",
       "version": "26.0",
+      "version_label": "26.0-beta-6",
       "build": "23J5339A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -891,6 +931,7 @@
     {
       "id": "tvos-beta-26.0-beta-5-23J5327G",
       "version": "26.0",
+      "version_label": "26.0-beta-5",
       "build": "23J5327G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -913,6 +954,7 @@
     {
       "id": "tvos-beta-26.0-beta-4-23J5316G",
       "version": "26.0",
+      "version_label": "26.0-beta-4",
       "build": "23J5316G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -935,6 +977,7 @@
     {
       "id": "tvos-beta-26.0-beta-3-23J5306G",
       "version": "26.0",
+      "version_label": "26.0-beta-3",
       "build": "23J5306G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -957,6 +1000,7 @@
     {
       "id": "tvos-beta-26.0-beta-2-23J5295E",
       "version": "26.0",
+      "version_label": "26.0-beta-2",
       "build": "23J5295E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -979,6 +1023,7 @@
     {
       "id": "tvos-beta-26.0-beta-23J5279M",
       "version": "26.0",
+      "version_label": "26.0-beta",
       "build": "23J5279M",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1001,6 +1046,7 @@
     {
       "id": "tvos-beta-26.0-23J353",
       "version": "26.0",
+      "version_label": "26.0",
       "build": "23J353",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1023,6 +1069,7 @@
     {
       "id": "tvos-beta-26.0-rc-23J352",
       "version": "26.0",
+      "version_label": "26.0-rc",
       "build": "23J352",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1045,6 +1092,7 @@
     {
       "id": "tvos-beta-18.6-rc-22M84",
       "version": "18.6",
+      "version_label": "18.6-rc",
       "build": "22M84",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1067,6 +1115,7 @@
     {
       "id": "tvos-beta-18.6-beta-3-22M5074B",
       "version": "18.6",
+      "version_label": "18.6-beta-3",
       "build": "22M5074B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1089,6 +1138,7 @@
     {
       "id": "tvos-beta-18.6-beta-2-22M5065B",
       "version": "18.6",
+      "version_label": "18.6-beta-2",
       "build": "22M5065B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1111,6 +1161,7 @@
     {
       "id": "tvos-beta-18.6-beta-22M5054B",
       "version": "18.6",
+      "version_label": "18.6-beta",
       "build": "22M5054B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1133,6 +1184,7 @@
     {
       "id": "tvos-beta-18.5-rc-22L572",
       "version": "18.5",
+      "version_label": "18.5-rc",
       "build": "22L572",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1155,6 +1207,7 @@
     {
       "id": "tvos-beta-18.5-beta-4-22L5566A",
       "version": "18.5",
+      "version_label": "18.5-beta-4",
       "build": "22L5566A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1177,6 +1230,7 @@
     {
       "id": "tvos-beta-18.5-beta-3-22L5559D",
       "version": "18.5",
+      "version_label": "18.5-beta-3",
       "build": "22L5559D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1199,6 +1253,7 @@
     {
       "id": "tvos-beta-18.5-beta-2-22L5553D",
       "version": "18.5",
+      "version_label": "18.5-beta-2",
       "build": "22L5553D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1221,6 +1276,7 @@
     {
       "id": "tvos-beta-18.5-beta-22L5542F",
       "version": "18.5",
+      "version_label": "18.5-beta",
       "build": "22L5542F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1243,6 +1299,7 @@
     {
       "id": "tvos-beta-18.4.1-22L261",
       "version": "18.4.1",
+      "version_label": "18.4.1",
       "build": "22L261",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1265,6 +1322,7 @@
     {
       "id": "tvos-beta-18.4-beta-4-22L5250A",
       "version": "18.4",
+      "version_label": "18.4-beta-4",
       "build": "22L5250A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1287,6 +1345,7 @@
     {
       "id": "tvos-beta-18.4-beta-3-22L5240E",
       "version": "18.4",
+      "version_label": "18.4-beta-3",
       "build": "22L5240E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1309,6 +1368,7 @@
     {
       "id": "tvos-beta-18.4-beta-2-22L5234E",
       "version": "18.4",
+      "version_label": "18.4-beta-2",
       "build": "22L5234E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1331,6 +1391,7 @@
     {
       "id": "tvos-beta-18.4-beta-22L5218L",
       "version": "18.4",
+      "version_label": "18.4-beta",
       "build": "22L5218L",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1353,6 +1414,7 @@
     {
       "id": "tvos-beta-18.4-22L255",
       "version": "18.4",
+      "version_label": "18.4",
       "build": "22L255",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1375,6 +1437,7 @@
     {
       "id": "tvos-beta-18.4-rc-22L254",
       "version": "18.4",
+      "version_label": "18.4-rc",
       "build": "22L254",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1397,6 +1460,7 @@
     {
       "id": "tvos-beta-18.3.1-22K561",
       "version": "18.3.1",
+      "version_label": "18.3.1",
       "build": "22K561",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1419,6 +1483,7 @@
     {
       "id": "tvos-beta-18.3-rc-22K557",
       "version": "18.3",
+      "version_label": "18.3-rc",
       "build": "22K557",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1441,6 +1506,7 @@
     {
       "id": "tvos-beta-18.3-beta-3-22K5553A",
       "version": "18.3",
+      "version_label": "18.3-beta-3",
       "build": "22K5553A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1463,6 +1529,7 @@
     {
       "id": "tvos-beta-18.3-beta-2-22K5540E",
       "version": "18.3",
+      "version_label": "18.3-beta-2",
       "build": "22K5540E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1485,6 +1552,7 @@
     {
       "id": "tvos-beta-18.3-beta-22K5534E",
       "version": "18.3",
+      "version_label": "18.3-beta",
       "build": "22K5534E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1507,6 +1575,7 @@
     {
       "id": "tvos-beta-18.2.1-22K160",
       "version": "18.2.1",
+      "version_label": "18.2.1",
       "build": "22K160",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1529,6 +1598,7 @@
     {
       "id": "tvos-beta-18.2-beta-3-22K5148A",
       "version": "18.2",
+      "version_label": "18.2-beta-3",
       "build": "22K5148A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1551,6 +1621,7 @@
     {
       "id": "tvos-beta-18.2-beta-2-22K5138E",
       "version": "18.2",
+      "version_label": "18.2-beta-2",
       "build": "22K5138E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1573,6 +1644,7 @@
     {
       "id": "tvos-beta-18.2-beta-22K5132E",
       "version": "18.2",
+      "version_label": "18.2-beta",
       "build": "22K5132E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1595,6 +1667,7 @@
     {
       "id": "tvos-beta-18.2-rc-2-22K155",
       "version": "18.2",
+      "version_label": "18.2-rc-2",
       "build": "22K155",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1617,6 +1690,7 @@
     {
       "id": "tvos-beta-18.2-rc-22K154",
       "version": "18.2",
+      "version_label": "18.2-rc",
       "build": "22K154",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1639,6 +1713,7 @@
     {
       "id": "tvos-beta-18.1-rc-2-22J580",
       "version": "18.1",
+      "version_label": "18.1-rc-2",
       "build": "22J580",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1661,6 +1736,7 @@
     {
       "id": "tvos-beta-18.1-rc-22J578",
       "version": "18.1",
+      "version_label": "18.1-rc",
       "build": "22J578",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1683,6 +1759,7 @@
     {
       "id": "tvos-beta-18.1-beta-5-22J5573A",
       "version": "18.1",
+      "version_label": "18.1-beta-5",
       "build": "22J5573A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1705,6 +1782,7 @@
     {
       "id": "tvos-beta-18.1-beta-4-22J5567A",
       "version": "18.1",
+      "version_label": "18.1-beta-4",
       "build": "22J5567A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1727,6 +1805,7 @@
     {
       "id": "tvos-beta-18.1-beta-3-22J5557D",
       "version": "18.1",
+      "version_label": "18.1-beta-3",
       "build": "22J5557D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1749,6 +1828,7 @@
     {
       "id": "tvos-beta-18.1-beta-2-22J5552D",
       "version": "18.1",
+      "version_label": "18.1-beta-2",
       "build": "22J5552D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1771,6 +1851,7 @@
     {
       "id": "tvos-beta-18.1-beta-22J5543E",
       "version": "18.1",
+      "version_label": "18.1-beta",
       "build": "22J5543E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1793,6 +1874,7 @@
     {
       "id": "tvos-beta-18.0-beta-8-22J5356A",
       "version": "18.0",
+      "version_label": "18.0-beta-8",
       "build": "22J5356A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1815,6 +1897,7 @@
     {
       "id": "tvos-beta-18.0-beta-7-22J5353A",
       "version": "18.0",
+      "version_label": "18.0-beta-7",
       "build": "22J5353A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1837,6 +1920,7 @@
     {
       "id": "tvos-beta-18.0-beta-6-22J5346A",
       "version": "18.0",
+      "version_label": "18.0-beta-6",
       "build": "22J5346A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1859,6 +1943,7 @@
     {
       "id": "tvos-beta-18.0-beta-5-22J5335D",
       "version": "18.0",
+      "version_label": "18.0-beta-5",
       "build": "22J5335D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1881,6 +1966,7 @@
     {
       "id": "tvos-beta-18.0-beta-4-22J5324F",
       "version": "18.0",
+      "version_label": "18.0-beta-4",
       "build": "22J5324F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1903,6 +1989,7 @@
     {
       "id": "tvos-beta-18.0-beta-3-22J5315E",
       "version": "18.0",
+      "version_label": "18.0-beta-3",
       "build": "22J5315E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1925,6 +2012,7 @@
     {
       "id": "tvos-beta-18.0-beta-2-22J5305E",
       "version": "18.0",
+      "version_label": "18.0-beta-2",
       "build": "22J5305E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1947,6 +2035,7 @@
     {
       "id": "tvos-beta-18.0-beta-22J5290L",
       "version": "18.0",
+      "version_label": "18.0-beta",
       "build": "22J5290L",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1969,6 +2058,7 @@
     {
       "id": "tvos-beta-18.0-rc-22J357",
       "version": "18.0",
+      "version_label": "18.0-rc",
       "build": "22J357",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -1991,6 +2081,7 @@
     {
       "id": "tvos-beta-17.6.1-21M80",
       "version": "17.6.1",
+      "version_label": "17.6.1",
       "build": "21M80",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2013,6 +2104,7 @@
     {
       "id": "tvos-beta-17.6-21M71",
       "version": "17.6",
+      "version_label": "17.6",
       "build": "21M71",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2035,6 +2127,7 @@
     {
       "id": "tvos-beta-17.6-beta-4-21M5068A",
       "version": "17.6",
+      "version_label": "17.6-beta-4",
       "build": "21M5068A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2057,6 +2150,7 @@
     {
       "id": "tvos-beta-17.6-beta-3-21M5059B",
       "version": "17.6",
+      "version_label": "17.6-beta-3",
       "build": "21M5059B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2079,6 +2173,7 @@
     {
       "id": "tvos-beta-17.6-beta-2-21M5054A",
       "version": "17.6",
+      "version_label": "17.6-beta-2",
       "build": "21M5054A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2101,6 +2196,7 @@
     {
       "id": "tvos-beta-17.6-beta-21M5045C",
       "version": "17.6",
+      "version_label": "17.6-beta",
       "build": "21M5045C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2123,6 +2219,7 @@
     {
       "id": "tvos-beta-17.5.1-21L580",
       "version": "17.5.1",
+      "version_label": "17.5.1",
       "build": "21L580",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2145,6 +2242,7 @@
     {
       "id": "tvos-beta-17.5-rc-21L569",
       "version": "17.5",
+      "version_label": "17.5-rc",
       "build": "21L569",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2167,6 +2265,7 @@
     {
       "id": "tvos-beta-17.5-beta-4-21L5567A",
       "version": "17.5",
+      "version_label": "17.5-beta-4",
       "build": "21L5567A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2189,6 +2288,7 @@
     {
       "id": "tvos-beta-17.5-beta-3-21L5558D",
       "version": "17.5",
+      "version_label": "17.5-beta-3",
       "build": "21L5558D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2211,6 +2311,7 @@
     {
       "id": "tvos-beta-17.5-beta-2-21L5553E",
       "version": "17.5",
+      "version_label": "17.5-beta-2",
       "build": "21L5553E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2233,6 +2334,7 @@
     {
       "id": "tvos-beta-17.5-beta-21L5543D",
       "version": "17.5",
+      "version_label": "17.5-beta",
       "build": "21L5543D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2255,6 +2357,7 @@
     {
       "id": "tvos-beta-17.4-beta-5-21L5225A",
       "version": "17.4",
+      "version_label": "17.4-beta-5",
       "build": "21L5225A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2277,6 +2380,7 @@
     {
       "id": "tvos-beta-17.4-beta-4-21L5222A",
       "version": "17.4",
+      "version_label": "17.4-beta-4",
       "build": "21L5222A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2299,6 +2403,7 @@
     {
       "id": "tvos-beta-17.4-beta-3-21L5212D",
       "version": "17.4",
+      "version_label": "17.4-beta-3",
       "build": "21L5212D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2321,6 +2426,7 @@
     {
       "id": "tvos-beta-17.4-beta-2-21L5206F",
       "version": "17.4",
+      "version_label": "17.4-beta-2",
       "build": "21L5206F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2343,6 +2449,7 @@
     {
       "id": "tvos-beta-17.4-beta-21L5195H",
       "version": "17.4",
+      "version_label": "17.4-beta",
       "build": "21L5195H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2365,6 +2472,7 @@
     {
       "id": "tvos-beta-17.4-rc-21L227",
       "version": "17.4",
+      "version_label": "17.4-rc",
       "build": "21L227",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2387,6 +2495,7 @@
     {
       "id": "tvos-beta-17.3-rc-21K646",
       "version": "17.3",
+      "version_label": "17.3-rc",
       "build": "21K646",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2409,6 +2518,7 @@
     {
       "id": "tvos-beta-17.3-beta-3-21K5643B",
       "version": "17.3",
+      "version_label": "17.3-beta-3",
       "build": "21K5643B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2431,6 +2541,7 @@
     {
       "id": "tvos-beta-17.3-beta-2-21K5635C",
       "version": "17.3",
+      "version_label": "17.3-beta-2",
       "build": "21K5635C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2453,6 +2564,7 @@
     {
       "id": "tvos-beta-17.3-beta-21K5625E",
       "version": "17.3",
+      "version_label": "17.3-beta",
       "build": "21K5625E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2475,6 +2587,7 @@
     {
       "id": "tvos-beta-17.2-beta-4-21K5356C",
       "version": "17.2",
+      "version_label": "17.2-beta-4",
       "build": "21K5356C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2497,6 +2610,7 @@
     {
       "id": "tvos-beta-17.2-beta-3-21K5348F",
       "version": "17.2",
+      "version_label": "17.2-beta-3",
       "build": "21K5348F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2519,6 +2633,7 @@
     {
       "id": "tvos-beta-17.2-beta-2-21K5341F",
       "version": "17.2",
+      "version_label": "17.2-beta-2",
       "build": "21K5341F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2541,6 +2656,7 @@
     {
       "id": "tvos-beta-17.2-beta-21K5330G",
       "version": "17.2",
+      "version_label": "17.2-beta",
       "build": "21K5330G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2563,6 +2679,7 @@
     {
       "id": "tvos-beta-17.2-rc-2-21K365",
       "version": "17.2",
+      "version_label": "17.2-rc-2",
       "build": "21K365",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2585,6 +2702,7 @@
     {
       "id": "tvos-beta-17.2-rc-21K364",
       "version": "17.2",
+      "version_label": "17.2-rc",
       "build": "21K364",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2607,6 +2725,7 @@
     {
       "id": "tvos-beta-17.1-rc-21K69",
       "version": "17.1",
+      "version_label": "17.1-rc",
       "build": "21K69",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2629,6 +2748,7 @@
     {
       "id": "tvos-beta-17.1-beta-3-21K5064B",
       "version": "17.1",
+      "version_label": "17.1-beta-3",
       "build": "21K5064B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2651,6 +2771,7 @@
     {
       "id": "tvos-beta-17.1-beta-2-21K5054E",
       "version": "17.1",
+      "version_label": "17.1-beta-2",
       "build": "21K5054E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2673,6 +2794,7 @@
     {
       "id": "tvos-beta-17.1-beta-21K5043E",
       "version": "17.1",
+      "version_label": "17.1-beta",
       "build": "21K5043E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2695,6 +2817,7 @@
     {
       "id": "tvos-beta-17.0-beta-9-21J5354A",
       "version": "17.0",
+      "version_label": "17.0-beta-9",
       "build": "21J5354A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2717,6 +2840,7 @@
     {
       "id": "tvos-beta-17.0-beta-8-21J5353A",
       "version": "17.0",
+      "version_label": "17.0-beta-8",
       "build": "21J5353A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2739,6 +2863,7 @@
     {
       "id": "tvos-beta-17.0-beta-7-21J5347A",
       "version": "17.0",
+      "version_label": "17.0-beta-7",
       "build": "21J5347A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2761,6 +2886,7 @@
     {
       "id": "tvos-beta-17.0-beta-6-21J5339B",
       "version": "17.0",
+      "version_label": "17.0-beta-6",
       "build": "21J5339B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2783,6 +2909,7 @@
     {
       "id": "tvos-beta-17.0-beta-5-21J5330E",
       "version": "17.0",
+      "version_label": "17.0-beta-5",
       "build": "21J5330E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2805,6 +2932,7 @@
     {
       "id": "tvos-beta-17.0-beta-4-21J5318F",
       "version": "17.0",
+      "version_label": "17.0-beta-4",
       "build": "21J5318F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2827,6 +2955,7 @@
     {
       "id": "tvos-beta-17.0-beta-3-21J5303H",
       "version": "17.0",
+      "version_label": "17.0-beta-3",
       "build": "21J5303H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2849,6 +2978,7 @@
     {
       "id": "tvos-beta-17.0-beta-3-21J5303F",
       "version": "17.0",
+      "version_label": "17.0-beta-3",
       "build": "21J5303F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2871,6 +3001,7 @@
     {
       "id": "tvos-beta-17.0-beta-2-21J5293G",
       "version": "17.0",
+      "version_label": "17.0-beta-2",
       "build": "21J5293G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2893,6 +3024,7 @@
     {
       "id": "tvos-beta-17.0-rc-21J354",
       "version": "17.0",
+      "version_label": "17.0-rc",
       "build": "21J354",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2915,6 +3047,7 @@
     {
       "id": "tvos-beta-16.6-rc-20M73",
       "version": "16.6",
+      "version_label": "16.6-rc",
       "build": "20M73",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2937,6 +3070,7 @@
     {
       "id": "tvos-beta-16.6-beta-5-20M5571A",
       "version": "16.6",
+      "version_label": "16.6-beta-5",
       "build": "20M5571A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2959,6 +3093,7 @@
     {
       "id": "tvos-beta-16.6-beta-4-20M5559C",
       "version": "16.6",
+      "version_label": "16.6-beta-4",
       "build": "20M5559C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -2981,6 +3116,7 @@
     {
       "id": "tvos-beta-16.6-beta-3-20M5548B",
       "version": "16.6",
+      "version_label": "16.6-beta-3",
       "build": "20M5548B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3003,6 +3139,7 @@
     {
       "id": "tvos-beta-16.6-beta-2-20M5538D",
       "version": "16.6",
+      "version_label": "16.6-beta-2",
       "build": "20M5538D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3025,6 +3162,7 @@
     {
       "id": "tvos-beta-16.6-beta-20M5527E",
       "version": "16.6",
+      "version_label": "16.6-beta",
       "build": "20M5527E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3047,6 +3185,7 @@
     {
       "id": "tvos-beta-16.5-20L563",
       "version": "16.5",
+      "version_label": "16.5",
       "build": "20L563",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3069,6 +3208,7 @@
     {
       "id": "tvos-beta-16.5-rc-20L562",
       "version": "16.5",
+      "version_label": "16.5-rc",
       "build": "20L562",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3091,6 +3231,7 @@
     {
       "id": "tvos-beta-16.5-beta-4-20L5559A",
       "version": "16.5",
+      "version_label": "16.5-beta-4",
       "build": "20L5559A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3113,6 +3254,7 @@
     {
       "id": "tvos-beta-16.5-beta-3-20L5549E",
       "version": "16.5",
+      "version_label": "16.5-beta-3",
       "build": "20L5549E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3135,6 +3277,7 @@
     {
       "id": "tvos-beta-16.5-beta-2-20L5538D",
       "version": "16.5",
+      "version_label": "16.5-beta-2",
       "build": "20L5538D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3157,6 +3300,7 @@
     {
       "id": "tvos-beta-16.5-beta-20L5527D",
       "version": "16.5",
+      "version_label": "16.5-beta",
       "build": "20L5527D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3179,6 +3323,7 @@
     {
       "id": "tvos-beta-16.4.1-20L498",
       "version": "16.4.1",
+      "version_label": "16.4.1",
       "build": "20L498",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3201,6 +3346,7 @@
     {
       "id": "tvos-beta-16.4-beta-4-20L5490A",
       "version": "16.4",
+      "version_label": "16.4-beta-4",
       "build": "20L5490A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3223,6 +3369,7 @@
     {
       "id": "tvos-beta-16.4-beta-3-20L5480G",
       "version": "16.4",
+      "version_label": "16.4-beta-3",
       "build": "20L5480G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3245,6 +3392,7 @@
     {
       "id": "tvos-beta-16.4-beta-2-20L5474E",
       "version": "16.4",
+      "version_label": "16.4-beta-2",
       "build": "20L5474E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3267,6 +3415,7 @@
     {
       "id": "tvos-beta-16.4-beta-20L5463G",
       "version": "16.4",
+      "version_label": "16.4-beta",
       "build": "20L5463G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3289,6 +3438,7 @@
     {
       "id": "tvos-beta-16.4-rc-20L497",
       "version": "16.4",
+      "version_label": "16.4-rc",
       "build": "20L497",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3311,6 +3461,7 @@
     {
       "id": "tvos-beta-16.3.2-20K672",
       "version": "16.3.2",
+      "version_label": "16.3.2",
       "build": "20K672",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3333,6 +3484,7 @@
     {
       "id": "tvos-beta-16.3.1-20K661",
       "version": "16.3.1",
+      "version_label": "16.3.1",
       "build": "20K661",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3355,6 +3507,7 @@
     {
       "id": "tvos-beta-16.3-rc-20K650",
       "version": "16.3",
+      "version_label": "16.3-rc",
       "build": "20K650",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3377,6 +3530,7 @@
     {
       "id": "tvos-beta-16.3-beta-2-20K5637G",
       "version": "16.3",
+      "version_label": "16.3-beta-2",
       "build": "20K5637G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3399,6 +3553,7 @@
     {
       "id": "tvos-beta-16.3-beta-20K5626C",
       "version": "16.3",
+      "version_label": "16.3-beta",
       "build": "20K5626C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3421,6 +3576,7 @@
     {
       "id": "tvos-beta-16.2-beta-4-20K5357B",
       "version": "16.2",
+      "version_label": "16.2-beta-4",
       "build": "20K5357B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3443,6 +3599,7 @@
     {
       "id": "tvos-beta-16.2-beta-3-20K5348D",
       "version": "16.2",
+      "version_label": "16.2-beta-3",
       "build": "20K5348D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3465,6 +3622,7 @@
     {
       "id": "tvos-beta-16.2-beta-2-20K5342D",
       "version": "16.2",
+      "version_label": "16.2-beta-2",
       "build": "20K5342D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3487,6 +3645,7 @@
     {
       "id": "tvos-beta-16.2-beta-20K5331F",
       "version": "16.2",
+      "version_label": "16.2-beta",
       "build": "20K5331F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3509,6 +3668,7 @@
     {
       "id": "tvos-beta-16.2-rc-20K362",
       "version": "16.2",
+      "version_label": "16.2-rc",
       "build": "20K362",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3531,6 +3691,7 @@
     {
       "id": "tvos-beta-16.1-rc-20K71",
       "version": "16.1",
+      "version_label": "16.1-rc",
       "build": "20K71",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3553,6 +3714,7 @@
     {
       "id": "tvos-beta-16.1-beta-5-20K5068A",
       "version": "16.1",
+      "version_label": "16.1-beta-5",
       "build": "20K5068A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3575,6 +3737,7 @@
     {
       "id": "tvos-beta-16.1-beta-4-20K5062A",
       "version": "16.1",
+      "version_label": "16.1-beta-4",
       "build": "20K5062A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3597,6 +3760,7 @@
     {
       "id": "tvos-beta-16.1-beta-3-20K5052C",
       "version": "16.1",
+      "version_label": "16.1-beta-3",
       "build": "20K5052C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3619,6 +3783,7 @@
     {
       "id": "tvos-beta-16.1-beta-2-20K5046D",
       "version": "16.1",
+      "version_label": "16.1-beta-2",
       "build": "20K5046D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3641,6 +3806,7 @@
     {
       "id": "tvos-beta-16.1-beta-20K5041D",
       "version": "16.1",
+      "version_label": "16.1-beta",
       "build": "20K5041D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3663,6 +3829,7 @@
     {
       "id": "tvos-beta-16.0-beta-7-20J5371A",
       "version": "16.0",
+      "version_label": "16.0-beta-7",
       "build": "20J5371A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3685,6 +3852,7 @@
     {
       "id": "tvos-beta-16.0-beta-6-20J5366A",
       "version": "16.0",
+      "version_label": "16.0-beta-6",
       "build": "20J5366A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3707,6 +3875,7 @@
     {
       "id": "tvos-beta-16.0-beta-5-20J5355F",
       "version": "16.0",
+      "version_label": "16.0-beta-5",
       "build": "20J5355F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3729,6 +3898,7 @@
     {
       "id": "tvos-beta-16.0-beta-4-20J5344F",
       "version": "16.0",
+      "version_label": "16.0-beta-4",
       "build": "20J5344F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3751,6 +3921,7 @@
     {
       "id": "tvos-beta-16.0-beta-3-20J5328G",
       "version": "16.0",
+      "version_label": "16.0-beta-3",
       "build": "20J5328G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3773,6 +3944,7 @@
     {
       "id": "tvos-beta-16.0-beta-2-20J5319H",
       "version": "16.0",
+      "version_label": "16.0-beta-2",
       "build": "20J5319H",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3795,6 +3967,7 @@
     {
       "id": "tvos-beta-16.0-rc-20J373",
       "version": "16.0",
+      "version_label": "16.0-rc",
       "build": "20J373",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3817,6 +3990,7 @@
     {
       "id": "tvos-beta-15.6-19M65",
       "version": "15.6",
+      "version_label": "15.6",
       "build": "19M65",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3839,6 +4013,7 @@
     {
       "id": "tvos-beta-15.6-rc-19M63",
       "version": "15.6",
+      "version_label": "15.6-rc",
       "build": "19M63",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3861,6 +4036,7 @@
     {
       "id": "tvos-beta-15.6-beta-5-19M5062A",
       "version": "15.6",
+      "version_label": "15.6-beta-5",
       "build": "19M5062A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3883,6 +4059,7 @@
     {
       "id": "tvos-beta-15.6-beta-4-19M5056C",
       "version": "15.6",
+      "version_label": "15.6-beta-4",
       "build": "19M5056C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3905,6 +4082,7 @@
     {
       "id": "tvos-beta-15.6-beta-3-19M5046C",
       "version": "15.6",
+      "version_label": "15.6-beta-3",
       "build": "19M5046C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3927,6 +4105,7 @@
     {
       "id": "tvos-beta-15.6-beta-2-19M5037C",
       "version": "15.6",
+      "version_label": "15.6-beta-2",
       "build": "19M5037C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3949,6 +4128,7 @@
     {
       "id": "tvos-beta-15.6-beta-19M5027C",
       "version": "15.6",
+      "version_label": "15.6-beta",
       "build": "19M5027C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3971,6 +4151,7 @@
     {
       "id": "tvos-beta-15.5.1-19L580",
       "version": "15.5.1",
+      "version_label": "15.5.1",
       "build": "19L580",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -3993,6 +4174,7 @@
     {
       "id": "tvos-beta-15.5-rc-19L570",
       "version": "15.5",
+      "version_label": "15.5-rc",
       "build": "19L570",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4015,6 +4197,7 @@
     {
       "id": "tvos-beta-15.5-beta-4-19L5569A",
       "version": "15.5",
+      "version_label": "15.5-beta-4",
       "build": "19L5569A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4037,6 +4220,7 @@
     {
       "id": "tvos-beta-15.5-beta-3-19L5562E",
       "version": "15.5",
+      "version_label": "15.5-beta-3",
       "build": "19L5562E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4059,6 +4243,7 @@
     {
       "id": "tvos-beta-15.5-beta-2-19L5557D",
       "version": "15.5",
+      "version_label": "15.5-beta-2",
       "build": "19L5557D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4081,6 +4266,7 @@
     {
       "id": "tvos-beta-15.5-beta-19L5547E",
       "version": "15.5",
+      "version_label": "15.5-beta",
       "build": "19L5547E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4103,6 +4289,7 @@
     {
       "id": "tvos-beta-15.4.1-19L452",
       "version": "15.4.1",
+      "version_label": "15.4.1",
       "build": "19L452",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4125,6 +4312,7 @@
     {
       "id": "tvos-beta-15.4-beta-5-19L5440A",
       "version": "15.4",
+      "version_label": "15.4-beta-5",
       "build": "19L5440A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4147,6 +4335,7 @@
     {
       "id": "tvos-beta-15.4-beta-4-19L5436A",
       "version": "15.4",
+      "version_label": "15.4-beta-4",
       "build": "19L5436A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4169,6 +4358,7 @@
     {
       "id": "tvos-beta-15.4-beta-3-19L5425E",
       "version": "15.4",
+      "version_label": "15.4-beta-3",
       "build": "19L5425E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4191,6 +4381,7 @@
     {
       "id": "tvos-beta-15.4-beta-2-19L5419E",
       "version": "15.4",
+      "version_label": "15.4-beta-2",
       "build": "19L5419E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4213,6 +4404,7 @@
     {
       "id": "tvos-beta-15.4-beta-19L5409J",
       "version": "15.4",
+      "version_label": "15.4-beta",
       "build": "19L5409J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4235,6 +4427,7 @@
     {
       "id": "tvos-beta-15.4-rc-19L440",
       "version": "15.4",
+      "version_label": "15.4-rc",
       "build": "19L440",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4257,6 +4450,7 @@
     {
       "id": "tvos-beta-15.3-beta-2-19K5541D",
       "version": "15.3",
+      "version_label": "15.3-beta-2",
       "build": "19K5541D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4279,6 +4473,7 @@
     {
       "id": "tvos-beta-15.3-beta-19K5527E",
       "version": "15.3",
+      "version_label": "15.3-beta",
       "build": "19K5527E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4301,6 +4496,7 @@
     {
       "id": "tvos-beta-15.3-19K547",
       "version": "15.3",
+      "version_label": "15.3",
       "build": "19K547",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4323,6 +4519,7 @@
     {
       "id": "tvos-beta-15.3-beta-3-19K545",
       "version": "15.3",
+      "version_label": "15.3-beta-3",
       "build": "19K545",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4345,6 +4542,7 @@
     {
       "id": "tvos-beta-15.2-rc-19K53",
       "version": "15.2",
+      "version_label": "15.2-rc",
       "build": "19K53",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4367,6 +4565,7 @@
     {
       "id": "tvos-beta-15.2-beta-4-19K5050A",
       "version": "15.2",
+      "version_label": "15.2-beta-4",
       "build": "19K5050A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4389,6 +4588,7 @@
     {
       "id": "tvos-beta-15.2-beta-3-19K5043B",
       "version": "15.2",
+      "version_label": "15.2-beta-3",
       "build": "19K5043B",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4411,6 +4611,7 @@
     {
       "id": "tvos-beta-15.2-beta-2-19K5035D",
       "version": "15.2",
+      "version_label": "15.2-beta-2",
       "build": "19K5035D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4433,6 +4634,7 @@
     {
       "id": "tvos-beta-15.2-beta-19K5025G",
       "version": "15.2",
+      "version_label": "15.2-beta",
       "build": "19K5025G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4455,6 +4657,7 @@
     {
       "id": "tvos-beta-15.1.1-19J581",
       "version": "15.1.1",
+      "version_label": "15.1.1",
       "build": "19J581",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4477,6 +4680,7 @@
     {
       "id": "tvos-beta-15.1-rc-19J572",
       "version": "15.1",
+      "version_label": "15.1-rc",
       "build": "19J572",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4499,6 +4703,7 @@
     {
       "id": "tvos-beta-15.1-beta-4-19J5567A",
       "version": "15.1",
+      "version_label": "15.1-beta-4",
       "build": "19J5567A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4521,6 +4726,7 @@
     {
       "id": "tvos-beta-15.1-beta-3-19J5560D",
       "version": "15.1",
+      "version_label": "15.1-beta-3",
       "build": "19J5560D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4543,6 +4749,7 @@
     {
       "id": "tvos-beta-15.1-beta-2-19J5552F",
       "version": "15.1",
+      "version_label": "15.1-beta-2",
       "build": "19J5552F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4565,6 +4772,7 @@
     {
       "id": "tvos-beta-15.1-beta-19J5542E",
       "version": "15.1",
+      "version_label": "15.1-beta",
       "build": "19J5542E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4587,6 +4795,7 @@
     {
       "id": "tvos-beta-15.0-beta-9-19J5346A",
       "version": "15.0",
+      "version_label": "15.0-beta-9",
       "build": "19J5346A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4609,6 +4818,7 @@
     {
       "id": "tvos-beta-15.0-beta-8-19J5345A",
       "version": "15.0",
+      "version_label": "15.0-beta-8",
       "build": "19J5345A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4631,6 +4841,7 @@
     {
       "id": "tvos-beta-15.0-beta-7-19J5340A",
       "version": "15.0",
+      "version_label": "15.0-beta-7",
       "build": "19J5340A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4653,6 +4864,7 @@
     {
       "id": "tvos-beta-15.0-beta-6-19J5332E",
       "version": "15.0",
+      "version_label": "15.0-beta-6",
       "build": "19J5332E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4675,6 +4887,7 @@
     {
       "id": "tvos-beta-15.0-beta-5-19J5325F",
       "version": "15.0",
+      "version_label": "15.0-beta-5",
       "build": "19J5325F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4697,6 +4910,7 @@
     {
       "id": "tvos-beta-15.0-beta-4-19J5314E",
       "version": "15.0",
+      "version_label": "15.0-beta-4",
       "build": "19J5314E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4719,6 +4933,7 @@
     {
       "id": "tvos-beta-15.0-beta-3-19J5304D",
       "version": "15.0",
+      "version_label": "15.0-beta-3",
       "build": "19J5304D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4741,6 +4956,7 @@
     {
       "id": "tvos-beta-15.0-beta-2-19J5288E",
       "version": "15.0",
+      "version_label": "15.0-beta-2",
       "build": "19J5288E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4763,6 +4979,7 @@
     {
       "id": "tvos-beta-15.0-rc-19J346",
       "version": "15.0",
+      "version_label": "15.0-rc",
       "build": "19J346",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4785,6 +5002,7 @@
     {
       "id": "tvos-beta-14.7-rc-18M60",
       "version": "14.7",
+      "version_label": "14.7-rc",
       "build": "18M60",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4807,6 +5025,7 @@
     {
       "id": "tvos-beta-14.7-beta-5-18M5559A",
       "version": "14.7",
+      "version_label": "14.7-beta-5",
       "build": "18M5559A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4829,6 +5048,7 @@
     {
       "id": "tvos-beta-14.7-beta-4-18M5552D",
       "version": "14.7",
+      "version_label": "14.7-beta-4",
       "build": "18M5552D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4851,6 +5071,7 @@
     {
       "id": "tvos-beta-14.7-beta-3-18M5542C",
       "version": "14.7",
+      "version_label": "14.7-beta-3",
       "build": "18M5542C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4873,6 +5094,7 @@
     {
       "id": "tvos-beta-14.7-beta-2-18M5533C",
       "version": "14.7",
+      "version_label": "14.7-beta-2",
       "build": "18M5533C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4895,6 +5117,7 @@
     {
       "id": "tvos-beta-14.7-beta-18M5523D",
       "version": "14.7",
+      "version_label": "14.7-beta",
       "build": "18M5523D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4917,6 +5140,7 @@
     {
       "id": "tvos-beta-14.6-rc-18L569",
       "version": "14.6",
+      "version_label": "14.6-rc",
       "build": "18L569",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4939,6 +5163,7 @@
     {
       "id": "tvos-beta-14.6-beta-3-18L5565A",
       "version": "14.6",
+      "version_label": "14.6-beta-3",
       "build": "18L5565A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4961,6 +5186,7 @@
     {
       "id": "tvos-beta-14.6-beta-2-18L5555C",
       "version": "14.6",
+      "version_label": "14.6-beta-2",
       "build": "18L5555C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -4983,6 +5209,7 @@
     {
       "id": "tvos-beta-14.6-beta-18L5546F",
       "version": "14.6",
+      "version_label": "14.6-beta",
       "build": "18L5546F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5005,6 +5232,7 @@
     {
       "id": "tvos-beta-14.5-beta-7-18L5203A",
       "version": "14.5",
+      "version_label": "14.5-beta-7",
       "build": "18L5203A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5027,6 +5255,7 @@
     {
       "id": "tvos-beta-14.5-beta-6-18L5200A",
       "version": "14.5",
+      "version_label": "14.5-beta-6",
       "build": "18L5200A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5049,6 +5278,7 @@
     {
       "id": "tvos-beta-14.5-beta-5-18L5193A",
       "version": "14.5",
+      "version_label": "14.5-beta-5",
       "build": "18L5193A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5071,6 +5301,7 @@
     {
       "id": "tvos-beta-14.5-beta-4-18L5186A",
       "version": "14.5",
+      "version_label": "14.5-beta-4",
       "build": "18L5186A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5093,6 +5324,7 @@
     {
       "id": "tvos-beta-14.5-beta-3-18L5173F",
       "version": "14.5",
+      "version_label": "14.5-beta-3",
       "build": "18L5173F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5115,6 +5347,7 @@
     {
       "id": "tvos-beta-14.5-beta-2-18L5163D",
       "version": "14.5",
+      "version_label": "14.5-beta-2",
       "build": "18L5163D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5137,6 +5370,7 @@
     {
       "id": "tvos-beta-14.5-beta-18L5149J",
       "version": "14.5",
+      "version_label": "14.5-beta",
       "build": "18L5149J",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5159,6 +5393,7 @@
     {
       "id": "tvos-beta-14.5-rc-18L204",
       "version": "14.5",
+      "version_label": "14.5-rc",
       "build": "18L204",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5181,6 +5416,7 @@
     {
       "id": "tvos-beta-14.4-rc-18K802",
       "version": "14.4",
+      "version_label": "14.4-rc",
       "build": "18K802",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5203,6 +5439,7 @@
     {
       "id": "tvos-beta-14.4-beta-2-18K5793D",
       "version": "14.4",
+      "version_label": "14.4-beta-2",
       "build": "18K5793D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5225,6 +5462,7 @@
     {
       "id": "tvos-beta-14.4-beta-18K5780C",
       "version": "14.4",
+      "version_label": "14.4-beta",
       "build": "18K5780C",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5247,6 +5485,7 @@
     {
       "id": "tvos-beta-14.3-rc-18K561",
       "version": "14.3",
+      "version_label": "14.3-rc",
       "build": "18K561",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5269,6 +5508,7 @@
     {
       "id": "tvos-beta-14.3-beta-3-18K5559A",
       "version": "14.3",
+      "version_label": "14.3-beta-3",
       "build": "18K5559A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5291,6 +5531,7 @@
     {
       "id": "tvos-beta-14.3-beta-2-18K5556A",
       "version": "14.3",
+      "version_label": "14.3-beta-2",
       "build": "18K5556A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5313,6 +5554,7 @@
     {
       "id": "tvos-beta-14.3-beta-18K5545E",
       "version": "14.3",
+      "version_label": "14.3-beta",
       "build": "18K5545E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5335,6 +5577,7 @@
     {
       "id": "tvos-beta-14.2-rc-18K57",
       "version": "14.2",
+      "version_label": "14.2-rc",
       "build": "18K57",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5357,6 +5600,7 @@
     {
       "id": "tvos-beta-14.2-beta-4-18K5057A",
       "version": "14.2",
+      "version_label": "14.2-beta-4",
       "build": "18K5057A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5379,6 +5623,7 @@
     {
       "id": "tvos-beta-14.2-beta-3-18K5047F",
       "version": "14.2",
+      "version_label": "14.2-beta-3",
       "build": "18K5047F",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5401,6 +5646,7 @@
     {
       "id": "tvos-beta-14.2-beta-2-18K5036D",
       "version": "14.2",
+      "version_label": "14.2-beta-2",
       "build": "18K5036D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5423,6 +5669,7 @@
     {
       "id": "tvos-beta-14.2-beta-18K5027E",
       "version": "14.2",
+      "version_label": "14.2-beta",
       "build": "18K5027E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5445,6 +5692,7 @@
     {
       "id": "tvos-beta-14.0.2-18J411",
       "version": "14.0.2",
+      "version_label": "14.0.2",
       "build": "18J411",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5467,6 +5715,7 @@
     {
       "id": "tvos-beta-14.0.1-18J400",
       "version": "14.0.1",
+      "version_label": "14.0.1",
       "build": "18J400",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5489,6 +5738,7 @@
     {
       "id": "tvos-beta-14.0-beta-8-18J5385A",
       "version": "14.0",
+      "version_label": "14.0-beta-8",
       "build": "18J5385A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5511,6 +5761,7 @@
     {
       "id": "tvos-beta-14.0-beta-7-18J5379A",
       "version": "14.0",
+      "version_label": "14.0-beta-7",
       "build": "18J5379A",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5533,6 +5784,7 @@
     {
       "id": "tvos-beta-14.0-beta-6-18J5370E",
       "version": "14.0",
+      "version_label": "14.0-beta-6",
       "build": "18J5370E",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5555,6 +5807,7 @@
     {
       "id": "tvos-beta-14.0-beta-5-18J5364D",
       "version": "14.0",
+      "version_label": "14.0-beta-5",
       "build": "18J5364D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5577,6 +5830,7 @@
     {
       "id": "tvos-beta-14.0-beta-3-18J5344D",
       "version": "14.0",
+      "version_label": "14.0-beta-3",
       "build": "18J5344D",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5599,6 +5853,7 @@
     {
       "id": "tvos-beta-14.0-beta-2-18J5331G",
       "version": "14.0",
+      "version_label": "14.0-beta-2",
       "build": "18J5331G",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5621,6 +5876,7 @@
     {
       "id": "tvos-beta-14.0-18J386",
       "version": "14.0",
+      "version_label": "14.0",
       "build": "18J386",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -5641,5 +5897,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-17T05:15:52+09:00"
+  "generated_at_tokyo": "2026-09-17T18:43:51+09:00"
 }

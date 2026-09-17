@@ -4,13 +4,14 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-16T20:15:52Z",
+  "generated_at": "2026-09-17T09:43:51Z",
   "release_count": 267,
   "firmware_count": 2175,
   "releases": [
     {
       "id": "ipados-release-27.0-24A437",
       "version": "27.0",
+      "version_label": "27.0",
       "build": "24A437",
       "released_at": "2026-09-14T17:00:00Z",
       "signed_firmware_count": 16,
@@ -232,6 +233,7 @@
     {
       "id": "ipados-release-26.7-23H24",
       "version": "26.7",
+      "version_label": "26.7",
       "build": "23H24",
       "released_at": "2026-09-09T17:00:00Z",
       "signed_firmware_count": 3,
@@ -291,6 +293,7 @@
     {
       "id": "ipados-release-26.6.2-23G90",
       "version": "26.6.2",
+      "version_label": "26.6.2",
       "build": "23G90",
       "released_at": "2026-09-08T17:00:00Z",
       "signed_firmware_count": 18,
@@ -546,6 +549,7 @@
     {
       "id": "ipados-release-26.6.1-23G83",
       "version": "26.6.1",
+      "version_label": "26.6.1",
       "build": "23G83",
       "released_at": "2026-08-17T17:49:17Z",
       "signed_firmware_count": 0,
@@ -801,6 +805,7 @@
     {
       "id": "ipados-release-26.6-23G71",
       "version": "26.6",
+      "version_label": "26.6",
       "build": "23G71",
       "released_at": "2026-07-27T17:38:10Z",
       "signed_firmware_count": 0,
@@ -1056,6 +1061,7 @@
     {
       "id": "ipados-release-26.5.2-23F84",
       "version": "26.5.2",
+      "version_label": "26.5.2",
       "build": "23F84",
       "released_at": "2026-06-29T17:41:10Z",
       "signed_firmware_count": 0,
@@ -1311,6 +1317,7 @@
     {
       "id": "ipados-release-26.5-23F77",
       "version": "26.5",
+      "version_label": "26.5",
       "build": "23F77",
       "released_at": "2026-05-11T17:48:02Z",
       "signed_firmware_count": 0,
@@ -1566,6 +1573,7 @@
     {
       "id": "ipados-release-26.4.2-23E261",
       "version": "26.4.2",
+      "version_label": "26.4.2",
       "build": "23E261",
       "released_at": "2026-04-22T17:34:55Z",
       "signed_firmware_count": 0,
@@ -1821,6 +1829,7 @@
     {
       "id": "ipados-release-26.4.1-23E254",
       "version": "26.4.1",
+      "version_label": "26.4.1",
       "build": "23E254",
       "released_at": "2026-04-08T20:20:48Z",
       "signed_firmware_count": 0,
@@ -2076,6 +2085,7 @@
     {
       "id": "ipados-release-26.4-23E246",
       "version": "26.4",
+      "version_label": "26.4",
       "build": "23E246",
       "released_at": "2026-03-24T17:40:01Z",
       "signed_firmware_count": 0,
@@ -2331,6 +2341,7 @@
     {
       "id": "ipados-release-26.3.1-23D8133",
       "version": "26.3.1",
+      "version_label": "26.3.1",
       "build": "23D8133",
       "released_at": "2026-03-04T18:41:59Z",
       "signed_firmware_count": 0,
@@ -2586,6 +2597,7 @@
     {
       "id": "ipados-release-26.3-23D127",
       "version": "26.3",
+      "version_label": "26.3",
       "build": "23D127",
       "released_at": "2026-02-11T18:34:24Z",
       "signed_firmware_count": 0,
@@ -2827,6 +2839,7 @@
     {
       "id": "ipados-release-26.2.1-23C71",
       "version": "26.2.1",
+      "version_label": "26.2.1",
       "build": "23C71",
       "released_at": "2026-01-26T18:21:48Z",
       "signed_firmware_count": 0,
@@ -3068,6 +3081,7 @@
     {
       "id": "ipados-release-26.2-23C55",
       "version": "26.2",
+      "version_label": "26.2",
       "build": "23C55",
       "released_at": "2025-12-13T00:20:50Z",
       "signed_firmware_count": 0,
@@ -3309,6 +3323,7 @@
     {
       "id": "ipados-release-26.1-23B85",
       "version": "26.1",
+      "version_label": "26.1",
       "build": "23B85",
       "released_at": "2025-11-03T21:45:32Z",
       "signed_firmware_count": 0,
@@ -3550,6 +3565,7 @@
     {
       "id": "ipados-release-26.0.1-23A8466",
       "version": "26.0.1",
+      "version_label": "26.0.1",
       "build": "23A8466",
       "released_at": "2025-10-21T17:30:43Z",
       "signed_firmware_count": 0,
@@ -3575,6 +3591,7 @@
     {
       "id": "ipados-release-26.0.1-23A8464",
       "version": "26.0.1",
+      "version_label": "26.0.1",
       "build": "23A8464",
       "released_at": "2025-10-15T23:29:17Z",
       "signed_firmware_count": 0,
@@ -3600,6 +3617,7 @@
     {
       "id": "ipados-release-26.0.1-23A355",
       "version": "26.0.1",
+      "version_label": "26.0.1",
       "build": "23A355",
       "released_at": "2025-09-29T17:44:03Z",
       "signed_firmware_count": 0,
@@ -3827,6 +3845,7 @@
     {
       "id": "ipados-release-26.0-23A341",
       "version": "26.0",
+      "version_label": "26.0",
       "build": "23A341",
       "released_at": "2025-09-15T17:06:21Z",
       "signed_firmware_count": 0,
@@ -4054,6 +4073,7 @@
     {
       "id": "ipados-release-18.7.10-22H374",
       "version": "18.7.10",
+      "version_label": "18.7.10",
       "build": "22H374",
       "released_at": "2026-08-17T17:00:00Z",
       "signed_firmware_count": 1,
@@ -4077,6 +4097,7 @@
     {
       "id": "ipados-release-18.7.9-22H355",
       "version": "18.7.9",
+      "version_label": "18.7.9",
       "build": "22H355",
       "released_at": "2026-05-11T17:47:25Z",
       "signed_firmware_count": 0,
@@ -4100,6 +4121,7 @@
     {
       "id": "ipados-release-18.7.8-22H352",
       "version": "18.7.8",
+      "version_label": "18.7.8",
       "build": "22H352",
       "released_at": "2026-04-22T17:34:55Z",
       "signed_firmware_count": 0,
@@ -4123,6 +4145,7 @@
     {
       "id": "ipados-release-18.7.7-22H340",
       "version": "18.7.7",
+      "version_label": "18.7.7",
       "build": "22H340",
       "released_at": "2026-04-01T17:12:29Z",
       "signed_firmware_count": 0,
@@ -4146,6 +4169,7 @@
     {
       "id": "ipados-release-18.7.7-22H333",
       "version": "18.7.7",
+      "version_label": "18.7.7",
       "build": "22H333",
       "released_at": "2026-03-24T17:39:37Z",
       "signed_firmware_count": 0,
@@ -4169,6 +4193,7 @@
     {
       "id": "ipados-release-18.7.5-22H311",
       "version": "18.7.5",
+      "version_label": "18.7.5",
       "build": "22H311",
       "released_at": "2026-02-11T18:34:27Z",
       "signed_firmware_count": 0,
@@ -4192,6 +4217,7 @@
     {
       "id": "ipados-release-18.7.4-22H218",
       "version": "18.7.4",
+      "version_label": "18.7.4",
       "build": "22H218",
       "released_at": "2026-01-26T18:21:54Z",
       "signed_firmware_count": 0,
@@ -4215,6 +4241,7 @@
     {
       "id": "ipados-release-18.7.3-22H217",
       "version": "18.7.3",
+      "version_label": "18.7.3",
       "build": "22H217",
       "released_at": "2025-12-22T18:04:17Z",
       "signed_firmware_count": 0,
@@ -4238,6 +4265,7 @@
     {
       "id": "ipados-release-18.7.2-22H124",
       "version": "18.7.2",
+      "version_label": "18.7.2",
       "build": "22H124",
       "released_at": "2025-11-05T18:22:12Z",
       "signed_firmware_count": 0,
@@ -4261,6 +4289,7 @@
     {
       "id": "ipados-release-18.7.1-22H31",
       "version": "18.7.1",
+      "version_label": "18.7.1",
       "build": "22H31",
       "released_at": "2025-09-29T17:43:59Z",
       "signed_firmware_count": 0,
@@ -4284,6 +4313,7 @@
     {
       "id": "ipados-release-18.7-22H20",
       "version": "18.7",
+      "version_label": "18.7",
       "build": "22H20",
       "released_at": "2025-09-15T17:06:21Z",
       "signed_firmware_count": 0,
@@ -4307,6 +4337,7 @@
     {
       "id": "ipados-release-18.6.2-22G100",
       "version": "18.6.2",
+      "version_label": "18.6.2",
       "build": "22G100",
       "released_at": "2025-08-20T17:34:45Z",
       "signed_firmware_count": 0,
@@ -4546,6 +4577,7 @@
     {
       "id": "ipados-release-18.6-22G86",
       "version": "18.6",
+      "version_label": "18.6",
       "build": "22G86",
       "released_at": "2025-07-29T18:40:49Z",
       "signed_firmware_count": 0,
@@ -4785,6 +4817,7 @@
     {
       "id": "ipados-release-18.5-22F76",
       "version": "18.5",
+      "version_label": "18.5",
       "build": "22F76",
       "released_at": "2025-05-12T17:18:20Z",
       "signed_firmware_count": 0,
@@ -5024,6 +5057,7 @@
     {
       "id": "ipados-release-18.4.1-22E252",
       "version": "18.4.1",
+      "version_label": "18.4.1",
       "build": "22E252",
       "released_at": "2025-04-16T19:25:59Z",
       "signed_firmware_count": 0,
@@ -5263,6 +5297,7 @@
     {
       "id": "ipados-release-18.4-22E240",
       "version": "18.4",
+      "version_label": "18.4",
       "build": "22E240",
       "released_at": "2025-03-31T17:30:10Z",
       "signed_firmware_count": 0,
@@ -5502,6 +5537,7 @@
     {
       "id": "ipados-release-18.3.2-22D2082",
       "version": "18.3.2",
+      "version_label": "18.3.2",
       "build": "22D2082",
       "released_at": "2025-03-11T17:35:26Z",
       "signed_firmware_count": 0,
@@ -5549,6 +5585,7 @@
     {
       "id": "ipados-release-18.3.2-22D82",
       "version": "18.3.2",
+      "version_label": "18.3.2",
       "build": "22D82",
       "released_at": "2025-03-11T17:35:12Z",
       "signed_firmware_count": 0,
@@ -5752,6 +5789,7 @@
     {
       "id": "ipados-release-18.3.1-22D72",
       "version": "18.3.1",
+      "version_label": "18.3.1",
       "build": "22D72",
       "released_at": "2025-02-10T18:32:33Z",
       "signed_firmware_count": 0,
@@ -5955,6 +5993,7 @@
     {
       "id": "ipados-release-18.3-22D63",
       "version": "18.3",
+      "version_label": "18.3",
       "build": "22D63",
       "released_at": "2025-01-27T18:55:15Z",
       "signed_firmware_count": 0,
@@ -6158,6 +6197,7 @@
     {
       "id": "ipados-release-18.2.1-22C161",
       "version": "18.2.1",
+      "version_label": "18.2.1",
       "build": "22C161",
       "released_at": "2025-01-06T18:07:14Z",
       "signed_firmware_count": 0,
@@ -6361,6 +6401,7 @@
     {
       "id": "ipados-release-18.2-22C152",
       "version": "18.2",
+      "version_label": "18.2",
       "build": "22C152",
       "released_at": "2024-12-11T18:47:13Z",
       "signed_firmware_count": 0,
@@ -6564,6 +6605,7 @@
     {
       "id": "ipados-release-18.1.1-22B91",
       "version": "18.1.1",
+      "version_label": "18.1.1",
       "build": "22B91",
       "released_at": "2024-11-19T18:24:02Z",
       "signed_firmware_count": 0,
@@ -6767,6 +6809,7 @@
     {
       "id": "ipados-release-18.1-22B83",
       "version": "18.1",
+      "version_label": "18.1",
       "build": "22B83",
       "released_at": "2024-10-28T17:33:15Z",
       "signed_firmware_count": 0,
@@ -6970,6 +7013,7 @@
     {
       "id": "ipados-release-18.0.1-22A8380",
       "version": "18.0.1",
+      "version_label": "18.0.1",
       "build": "22A8380",
       "released_at": "2024-10-22T19:25:14Z",
       "signed_firmware_count": 0,
@@ -6993,6 +7037,7 @@
     {
       "id": "ipados-release-18.0.1-22A3370",
       "version": "18.0.1",
+      "version_label": "18.0.1",
       "build": "22A3370",
       "released_at": "2024-10-03T21:57:08Z",
       "signed_firmware_count": 0,
@@ -7184,6 +7229,7 @@
     {
       "id": "ipados-release-18.0-22A3354",
       "version": "18.0",
+      "version_label": "18.0",
       "build": "22A3354",
       "released_at": "2024-09-16T17:18:00Z",
       "signed_firmware_count": 0,
@@ -7375,6 +7421,7 @@
     {
       "id": "ipados-release-17.7.11-21H461",
       "version": "17.7.11",
+      "version_label": "17.7.11",
       "build": "21H461",
       "released_at": "2026-05-11T17:00:00Z",
       "signed_firmware_count": 2,
@@ -7412,6 +7459,7 @@
     {
       "id": "ipados-release-17.7.10-21H450",
       "version": "17.7.10",
+      "version_label": "17.7.10",
       "build": "21H450",
       "released_at": "2025-08-20T17:34:49Z",
       "signed_firmware_count": 0,
@@ -7449,6 +7497,7 @@
     {
       "id": "ipados-release-17.7.9-21H446",
       "version": "17.7.9",
+      "version_label": "17.7.9",
       "build": "21H446",
       "released_at": "2025-07-29T18:40:50Z",
       "signed_firmware_count": 0,
@@ -7486,6 +7535,7 @@
     {
       "id": "ipados-release-17.7.8-21H440",
       "version": "17.7.8",
+      "version_label": "17.7.8",
       "build": "21H440",
       "released_at": "2025-05-19T17:07:32Z",
       "signed_firmware_count": 0,
@@ -7523,6 +7573,7 @@
     {
       "id": "ipados-release-17.7.7-21H433",
       "version": "17.7.7",
+      "version_label": "17.7.7",
       "build": "21H433",
       "released_at": "2025-05-12T17:18:19Z",
       "signed_firmware_count": 0,
@@ -7560,6 +7611,7 @@
     {
       "id": "ipados-release-17.7.6-21H423",
       "version": "17.7.6",
+      "version_label": "17.7.6",
       "build": "21H423",
       "released_at": "2025-03-31T17:30:10Z",
       "signed_firmware_count": 0,
@@ -7597,6 +7649,7 @@
     {
       "id": "ipados-release-17.7.5-21H420",
       "version": "17.7.5",
+      "version_label": "17.7.5",
       "build": "21H420",
       "released_at": "2025-02-10T18:32:35Z",
       "signed_firmware_count": 0,
@@ -7634,6 +7687,7 @@
     {
       "id": "ipados-release-17.7.4-21H414",
       "version": "17.7.4",
+      "version_label": "17.7.4",
       "build": "21H414",
       "released_at": "2025-01-27T18:55:16Z",
       "signed_firmware_count": 0,
@@ -7671,6 +7725,7 @@
     {
       "id": "ipados-release-17.7.3-21H312",
       "version": "17.7.3",
+      "version_label": "17.7.3",
       "build": "21H312",
       "released_at": "2024-12-11T18:47:10Z",
       "signed_firmware_count": 0,
@@ -7708,6 +7763,7 @@
     {
       "id": "ipados-release-17.7.2-21H221",
       "version": "17.7.2",
+      "version_label": "17.7.2",
       "build": "21H221",
       "released_at": "2024-11-19T18:24:00Z",
       "signed_firmware_count": 0,
@@ -7745,6 +7801,7 @@
     {
       "id": "ipados-release-17.7.1-21H216",
       "version": "17.7.1",
+      "version_label": "17.7.1",
       "build": "21H216",
       "released_at": "2024-10-28T17:33:13Z",
       "signed_firmware_count": 0,
@@ -7782,6 +7839,7 @@
     {
       "id": "ipados-release-17.7-21H16",
       "version": "17.7",
+      "version_label": "17.7",
       "build": "21H16",
       "released_at": "2024-09-16T17:00:00Z",
       "signed_firmware_count": 0,
@@ -7999,6 +8057,7 @@
     {
       "id": "ipados-release-17.6.1-21G101",
       "version": "17.6.1",
+      "version_label": "17.6.1",
       "build": "21G101",
       "released_at": "2024-08-19T17:59:50Z",
       "signed_firmware_count": 0,
@@ -8216,6 +8275,7 @@
     {
       "id": "ipados-release-17.6.1-21G93",
       "version": "17.6.1",
+      "version_label": "17.6.1",
       "build": "21G93",
       "released_at": "2024-08-07T22:49:15Z",
       "signed_firmware_count": 0,
@@ -8433,6 +8493,7 @@
     {
       "id": "ipados-release-17.6-21G80",
       "version": "17.6",
+      "version_label": "17.6",
       "build": "21G80",
       "released_at": "2024-07-29T20:41:13Z",
       "signed_firmware_count": 0,
@@ -8650,6 +8711,7 @@
     {
       "id": "ipados-release-17.5.1-21F91",
       "version": "17.5.1",
+      "version_label": "17.5.1",
       "build": "21F91",
       "released_at": "2024-06-03T18:16:22Z",
       "signed_firmware_count": 0,
@@ -8673,6 +8735,7 @@
     {
       "id": "ipados-release-17.5.1-21F90",
       "version": "17.5.1",
+      "version_label": "17.5.1",
       "build": "21F90",
       "released_at": "2024-05-20T18:01:24Z",
       "signed_firmware_count": 0,
@@ -8890,6 +8953,7 @@
     {
       "id": "ipados-release-17.5-21F84",
       "version": "17.5",
+      "version_label": "17.5",
       "build": "21F84",
       "released_at": "2024-05-14T03:08:25Z",
       "signed_firmware_count": 0,
@@ -8929,6 +8993,7 @@
     {
       "id": "ipados-release-17.5-21F79",
       "version": "17.5",
+      "version_label": "17.5",
       "build": "21F79",
       "released_at": "2024-05-13T18:05:37Z",
       "signed_firmware_count": 0,
@@ -9118,6 +9183,7 @@
     {
       "id": "ipados-release-17.4.1-21E237",
       "version": "17.4.1",
+      "version_label": "17.4.1",
       "build": "21E237",
       "released_at": "2024-03-27T04:12:48Z",
       "signed_firmware_count": 0,
@@ -9307,6 +9373,7 @@
     {
       "id": "ipados-release-17.4.1-21E236",
       "version": "17.4.1",
+      "version_label": "17.4.1",
       "build": "21E236",
       "released_at": "2024-03-21T18:13:09Z",
       "signed_firmware_count": 0,
@@ -9496,6 +9563,7 @@
     {
       "id": "ipados-release-17.4-21E219",
       "version": "17.4",
+      "version_label": "17.4",
       "build": "21E219",
       "released_at": "2024-03-05T19:30:13Z",
       "signed_firmware_count": 0,
@@ -9685,6 +9753,7 @@
     {
       "id": "ipados-release-17.3.1-21D61",
       "version": "17.3.1",
+      "version_label": "17.3.1",
       "build": "21D61",
       "released_at": "2024-02-08T19:54:14Z",
       "signed_firmware_count": 0,
@@ -9874,6 +9943,7 @@
     {
       "id": "ipados-release-17.3-21D50",
       "version": "17.3",
+      "version_label": "17.3",
       "build": "21D50",
       "released_at": "2024-01-22T18:58:59Z",
       "signed_firmware_count": 0,
@@ -10063,6 +10133,7 @@
     {
       "id": "ipados-release-17.2-21C62",
       "version": "17.2",
+      "version_label": "17.2",
       "build": "21C62",
       "released_at": "2023-12-11T18:58:33Z",
       "signed_firmware_count": 0,
@@ -10252,6 +10323,7 @@
     {
       "id": "ipados-release-17.1.2-21B101",
       "version": "17.1.2",
+      "version_label": "17.1.2",
       "build": "21B101",
       "released_at": "2023-11-30T18:28:34Z",
       "signed_firmware_count": 0,
@@ -10441,6 +10513,7 @@
     {
       "id": "ipados-release-17.1.1-21B91",
       "version": "17.1.1",
+      "version_label": "17.1.1",
       "build": "21B91",
       "released_at": "2023-11-08T18:58:23Z",
       "signed_firmware_count": 0,
@@ -10630,6 +10703,7 @@
     {
       "id": "ipados-release-17.1-21B74",
       "version": "17.1",
+      "version_label": "17.1",
       "build": "21B74",
       "released_at": "2023-10-25T17:36:33Z",
       "signed_firmware_count": 0,
@@ -10819,6 +10893,7 @@
     {
       "id": "ipados-release-17.0.3-21A360",
       "version": "17.0.3",
+      "version_label": "17.0.3",
       "build": "21A360",
       "released_at": "2023-10-04T17:39:09Z",
       "signed_firmware_count": 0,
@@ -11008,6 +11083,7 @@
     {
       "id": "ipados-release-17.0.2-21A351",
       "version": "17.0.2",
+      "version_label": "17.0.2",
       "build": "21A351",
       "released_at": "2023-09-26T20:14:53Z",
       "signed_firmware_count": 0,
@@ -11197,6 +11273,7 @@
     {
       "id": "ipados-release-17.0.1-21A340",
       "version": "17.0.1",
+      "version_label": "17.0.1",
       "build": "21A340",
       "released_at": "2023-09-21T18:18:50Z",
       "signed_firmware_count": 0,
@@ -11386,6 +11463,7 @@
     {
       "id": "ipados-release-17.0-21A329",
       "version": "17.0",
+      "version_label": "17.0",
       "build": "21A329",
       "released_at": "2023-09-18T19:08:45Z",
       "signed_firmware_count": 0,
@@ -11575,6 +11653,7 @@
     {
       "id": "ipados-release-16.7.16-20H392",
       "version": "16.7.16",
+      "version_label": "16.7.16",
       "build": "20H392",
       "released_at": "2026-05-11T17:00:00Z",
       "signed_firmware_count": 3,
@@ -11622,6 +11701,7 @@
     {
       "id": "ipados-release-16.7.15-20H380",
       "version": "16.7.15",
+      "version_label": "16.7.15",
       "build": "20H380",
       "released_at": "2026-03-11T22:06:41Z",
       "signed_firmware_count": 0,
@@ -11669,6 +11749,7 @@
     {
       "id": "ipados-release-16.7.14-20H370",
       "version": "16.7.14",
+      "version_label": "16.7.14",
       "build": "20H370",
       "released_at": "2026-02-02T22:31:37Z",
       "signed_firmware_count": 0,
@@ -11716,6 +11797,7 @@
     {
       "id": "ipados-release-16.7.13-20H365",
       "version": "16.7.13",
+      "version_label": "16.7.13",
       "build": "20H365",
       "released_at": "2026-01-26T18:21:50Z",
       "signed_firmware_count": 0,
@@ -11763,6 +11845,7 @@
     {
       "id": "ipados-release-16.7.12-20H364",
       "version": "16.7.12",
+      "version_label": "16.7.12",
       "build": "20H364",
       "released_at": "2025-09-15T17:06:45Z",
       "signed_firmware_count": 0,
@@ -11810,6 +11893,7 @@
     {
       "id": "ipados-release-16.7.11-20H360",
       "version": "16.7.11",
+      "version_label": "16.7.11",
       "build": "20H360",
       "released_at": "2025-03-31T17:30:12Z",
       "signed_firmware_count": 0,
@@ -11857,6 +11941,7 @@
     {
       "id": "ipados-release-16.7.10-20H350",
       "version": "16.7.10",
+      "version_label": "16.7.10",
       "build": "20H350",
       "released_at": "2024-08-07T22:49:15Z",
       "signed_firmware_count": 0,
@@ -11904,6 +11989,7 @@
     {
       "id": "ipados-release-16.7.9-20H348",
       "version": "16.7.9",
+      "version_label": "16.7.9",
       "build": "20H348",
       "released_at": "2024-07-29T20:41:08Z",
       "signed_firmware_count": 0,
@@ -11951,6 +12037,7 @@
     {
       "id": "ipados-release-16.7.8-20H343",
       "version": "16.7.8",
+      "version_label": "16.7.8",
       "build": "20H343",
       "released_at": "2024-05-13T18:05:37Z",
       "signed_firmware_count": 0,
@@ -11998,6 +12085,7 @@
     {
       "id": "ipados-release-16.7.7-20H330",
       "version": "16.7.7",
+      "version_label": "16.7.7",
       "build": "20H330",
       "released_at": "2024-03-21T18:13:06Z",
       "signed_firmware_count": 0,
@@ -12045,6 +12133,7 @@
     {
       "id": "ipados-release-16.7.6-20H320",
       "version": "16.7.6",
+      "version_label": "16.7.6",
       "build": "20H320",
       "released_at": "2024-03-05T19:30:14Z",
       "signed_firmware_count": 0,
@@ -12092,6 +12181,7 @@
     {
       "id": "ipados-release-16.7.5-20H307",
       "version": "16.7.5",
+      "version_label": "16.7.5",
       "build": "20H307",
       "released_at": "2024-01-22T18:59:02Z",
       "signed_firmware_count": 0,
@@ -12139,6 +12229,7 @@
     {
       "id": "ipados-release-16.7.4-20H240",
       "version": "16.7.4",
+      "version_label": "16.7.4",
       "build": "20H240",
       "released_at": "2023-12-19T19:27:37Z",
       "signed_firmware_count": 0,
@@ -12186,6 +12277,7 @@
     {
       "id": "ipados-release-16.7.3-20H232",
       "version": "16.7.3",
+      "version_label": "16.7.3",
       "build": "20H232",
       "released_at": "2023-12-11T18:58:33Z",
       "signed_firmware_count": 0,
@@ -12233,6 +12325,7 @@
     {
       "id": "ipados-release-16.7.2-20H115",
       "version": "16.7.2",
+      "version_label": "16.7.2",
       "build": "20H115",
       "released_at": "2023-10-25T17:36:31Z",
       "signed_firmware_count": 0,
@@ -12280,6 +12373,7 @@
     {
       "id": "ipados-release-16.7.1-20H30",
       "version": "16.7.1",
+      "version_label": "16.7.1",
       "build": "20H30",
       "released_at": "2023-10-10T18:41:23Z",
       "signed_firmware_count": 0,
@@ -12327,6 +12421,7 @@
     {
       "id": "ipados-release-16.7-20H19",
       "version": "16.7",
+      "version_label": "16.7",
       "build": "20H19",
       "released_at": "2023-09-21T18:18:49Z",
       "signed_firmware_count": 0,
@@ -12374,6 +12469,7 @@
     {
       "id": "ipados-release-16.6.1-20G81",
       "version": "16.6.1",
+      "version_label": "16.6.1",
       "build": "20G81",
       "released_at": "2023-09-07T18:00:00Z",
       "signed_firmware_count": 0,
@@ -12589,6 +12685,7 @@
     {
       "id": "ipados-release-16.6-20G75",
       "version": "16.6",
+      "version_label": "16.6",
       "build": "20G75",
       "released_at": "2023-07-24T18:16:40Z",
       "signed_firmware_count": 0,
@@ -12804,6 +12901,7 @@
     {
       "id": "ipados-release-16.5.1-20F75",
       "version": "16.5.1",
+      "version_label": "16.5.1",
       "build": "20F75",
       "released_at": "2023-06-21T18:33:28Z",
       "signed_firmware_count": 0,
@@ -13019,6 +13117,7 @@
     {
       "id": "ipados-release-16.5-20F66",
       "version": "16.5",
+      "version_label": "16.5",
       "build": "20F66",
       "released_at": "2023-05-18T18:14:21Z",
       "signed_firmware_count": 0,
@@ -13234,6 +13333,7 @@
     {
       "id": "ipados-release-16.4.1-20E252",
       "version": "16.4.1",
+      "version_label": "16.4.1",
       "build": "20E252",
       "released_at": "2023-04-07T18:15:15Z",
       "signed_firmware_count": 0,
@@ -13449,6 +13549,7 @@
     {
       "id": "ipados-release-16.4-20E246",
       "version": "16.4",
+      "version_label": "16.4",
       "build": "20E246",
       "released_at": "2023-03-27T18:24:27Z",
       "signed_firmware_count": 0,
@@ -13664,6 +13765,7 @@
     {
       "id": "ipados-release-16.3.1-20D67",
       "version": "16.3.1",
+      "version_label": "16.3.1",
       "build": "20D67",
       "released_at": "2023-02-13T18:50:39Z",
       "signed_firmware_count": 0,
@@ -13879,6 +13981,7 @@
     {
       "id": "ipados-release-16.3-20D47",
       "version": "16.3",
+      "version_label": "16.3",
       "build": "20D47",
       "released_at": "2023-01-23T21:37:29Z",
       "signed_firmware_count": 0,
@@ -14094,6 +14197,7 @@
     {
       "id": "ipados-release-16.2-20C65",
       "version": "16.2",
+      "version_label": "16.2",
       "build": "20C65",
       "released_at": "2022-12-13T18:45:14Z",
       "signed_firmware_count": 0,
@@ -14309,6 +14413,7 @@
     {
       "id": "ipados-release-16.1.1-20B101",
       "version": "16.1.1",
+      "version_label": "16.1.1",
       "build": "20B101",
       "released_at": "2022-11-09T18:48:56Z",
       "signed_firmware_count": 0,
@@ -14524,6 +14629,7 @@
     {
       "id": "ipados-release-16.1-20B82",
       "version": "16.1",
+      "version_label": "16.1",
       "build": "20B82",
       "released_at": "2022-10-24T18:25:32Z",
       "signed_firmware_count": 0,
@@ -14739,6 +14845,7 @@
     {
       "id": "ipados-release-15.8.8-19H422",
       "version": "15.8.8",
+      "version_label": "15.8.8",
       "build": "19H422",
       "released_at": "2026-05-11T17:00:00Z",
       "signed_firmware_count": 1,
@@ -14764,6 +14871,7 @@
     {
       "id": "ipados-release-15.8.7-19H411",
       "version": "15.8.7",
+      "version_label": "15.8.7",
       "build": "19H411",
       "released_at": "2026-03-11T22:06:47Z",
       "signed_firmware_count": 0,
@@ -14789,6 +14897,7 @@
     {
       "id": "ipados-release-15.8.6-19H402",
       "version": "15.8.6",
+      "version_label": "15.8.6",
       "build": "19H402",
       "released_at": "2026-01-26T18:21:45Z",
       "signed_firmware_count": 0,
@@ -14814,6 +14923,7 @@
     {
       "id": "ipados-release-15.8.5-19H394",
       "version": "15.8.5",
+      "version_label": "15.8.5",
       "build": "19H394",
       "released_at": "2025-09-15T17:06:02Z",
       "signed_firmware_count": 0,
@@ -14839,6 +14949,7 @@
     {
       "id": "ipados-release-15.8.4-19H390",
       "version": "15.8.4",
+      "version_label": "15.8.4",
       "build": "19H390",
       "released_at": "2025-03-31T17:30:15Z",
       "signed_firmware_count": 0,
@@ -14864,6 +14975,7 @@
     {
       "id": "ipados-release-15.8.3-19H386",
       "version": "15.8.3",
+      "version_label": "15.8.3",
       "build": "19H386",
       "released_at": "2024-07-29T20:41:12Z",
       "signed_firmware_count": 0,
@@ -14889,6 +15001,7 @@
     {
       "id": "ipados-release-15.8.2-19H384",
       "version": "15.8.2",
+      "version_label": "15.8.2",
       "build": "19H384",
       "released_at": "2024-03-05T19:30:12Z",
       "signed_firmware_count": 0,
@@ -14914,6 +15027,7 @@
     {
       "id": "ipados-release-15.8.1-19H380",
       "version": "15.8.1",
+      "version_label": "15.8.1",
       "build": "19H380",
       "released_at": "2024-01-22T18:59:01Z",
       "signed_firmware_count": 0,
@@ -14939,6 +15053,7 @@
     {
       "id": "ipados-release-15.8-19H370",
       "version": "15.8",
+      "version_label": "15.8",
       "build": "19H370",
       "released_at": "2023-10-25T17:36:32Z",
       "signed_firmware_count": 0,
@@ -14964,6 +15079,7 @@
     {
       "id": "ipados-release-15.7.9-19H365",
       "version": "15.7.9",
+      "version_label": "15.7.9",
       "build": "19H365",
       "released_at": "2023-09-11T19:36:10Z",
       "signed_firmware_count": 0,
@@ -14989,6 +15105,7 @@
     {
       "id": "ipados-release-15.7.8-19H364",
       "version": "15.7.8",
+      "version_label": "15.7.8",
       "build": "19H364",
       "released_at": "2023-07-24T18:16:44Z",
       "signed_firmware_count": 0,
@@ -15014,6 +15131,7 @@
     {
       "id": "ipados-release-15.7.7-19H357",
       "version": "15.7.7",
+      "version_label": "15.7.7",
       "build": "19H357",
       "released_at": "2023-06-21T18:33:30Z",
       "signed_firmware_count": 0,
@@ -15039,6 +15157,7 @@
     {
       "id": "ipados-release-15.7.6-19H349",
       "version": "15.7.6",
+      "version_label": "15.7.6",
       "build": "19H349",
       "released_at": "2023-05-18T18:14:18Z",
       "signed_firmware_count": 0,
@@ -15064,6 +15183,7 @@
     {
       "id": "ipados-release-15.7.5-19H332",
       "version": "15.7.5",
+      "version_label": "15.7.5",
       "build": "19H332",
       "released_at": "2023-04-10T17:53:03Z",
       "signed_firmware_count": 0,
@@ -15089,6 +15209,7 @@
     {
       "id": "ipados-release-15.7.4-19H321",
       "version": "15.7.4",
+      "version_label": "15.7.4",
       "build": "19H321",
       "released_at": "2023-03-27T18:24:27Z",
       "signed_firmware_count": 0,
@@ -15114,6 +15235,7 @@
     {
       "id": "ipados-release-15.7.3-19H307",
       "version": "15.7.3",
+      "version_label": "15.7.3",
       "build": "19H307",
       "released_at": "2023-01-23T21:37:32Z",
       "signed_firmware_count": 0,
@@ -15139,6 +15261,7 @@
     {
       "id": "ipados-release-15.7.2-19H218",
       "version": "15.7.2",
+      "version_label": "15.7.2",
       "build": "19H218",
       "released_at": "2022-12-13T18:45:13Z",
       "signed_firmware_count": 0,
@@ -15164,6 +15287,7 @@
     {
       "id": "ipados-release-15.7.1-19H117",
       "version": "15.7.1",
+      "version_label": "15.7.1",
       "build": "19H117",
       "released_at": "2022-10-27T18:21:13Z",
       "signed_firmware_count": 0,
@@ -15189,6 +15313,7 @@
     {
       "id": "ipados-release-15.7-19H12",
       "version": "15.7",
+      "version_label": "15.7",
       "build": "19H12",
       "released_at": "2022-09-12T17:38:24Z",
       "signed_firmware_count": 0,
@@ -15392,6 +15517,7 @@
     {
       "id": "ipados-release-15.6.1-19G82",
       "version": "15.6.1",
+      "version_label": "15.6.1",
       "build": "19G82",
       "released_at": "2022-08-17T19:57:29Z",
       "signed_firmware_count": 0,
@@ -15595,6 +15721,7 @@
     {
       "id": "ipados-release-15.6-19G71",
       "version": "15.6",
+      "version_label": "15.6",
       "build": "19G71",
       "released_at": "2022-07-20T16:44:47Z",
       "signed_firmware_count": 0,
@@ -15798,6 +15925,7 @@
     {
       "id": "ipados-release-15.5-19F77",
       "version": "15.5",
+      "version_label": "15.5",
       "build": "19F77",
       "released_at": "2022-05-16T18:23:43Z",
       "signed_firmware_count": 0,
@@ -16001,6 +16129,7 @@
     {
       "id": "ipados-release-15.4.1-19E258",
       "version": "15.4.1",
+      "version_label": "15.4.1",
       "build": "19E258",
       "released_at": "2022-03-31T16:45:50Z",
       "signed_firmware_count": 0,
@@ -16204,6 +16333,7 @@
     {
       "id": "ipados-release-15.4-19E241",
       "version": "15.4",
+      "version_label": "15.4",
       "build": "19E241",
       "released_at": "2022-03-14T16:48:27Z",
       "signed_firmware_count": 0,
@@ -16407,6 +16537,7 @@
     {
       "id": "ipados-release-15.3.1-19D52",
       "version": "15.3.1",
+      "version_label": "15.3.1",
       "build": "19D52",
       "released_at": "2022-02-10T19:12:19Z",
       "signed_firmware_count": 0,
@@ -16598,6 +16729,7 @@
     {
       "id": "ipados-release-15.3-19D50",
       "version": "15.3",
+      "version_label": "15.3",
       "build": "19D50",
       "released_at": "2022-01-26T18:02:14Z",
       "signed_firmware_count": 0,
@@ -16789,6 +16921,7 @@
     {
       "id": "ipados-release-15.2.1-19C63",
       "version": "15.2.1",
+      "version_label": "15.2.1",
       "build": "19C63",
       "released_at": "2022-01-12T18:00:04Z",
       "signed_firmware_count": 0,
@@ -16980,6 +17113,7 @@
     {
       "id": "ipados-release-15.2-19C56",
       "version": "15.2",
+      "version_label": "15.2",
       "build": "19C56",
       "released_at": "2021-12-13T17:46:05Z",
       "signed_firmware_count": 0,
@@ -17171,6 +17305,7 @@
     {
       "id": "ipados-release-15.1-19B75",
       "version": "15.1",
+      "version_label": "15.1",
       "build": "19B75",
       "released_at": "2021-10-25T20:29:02Z",
       "signed_firmware_count": 0,
@@ -17193,6 +17328,7 @@
     {
       "id": "ipados-release-15.1-19B74",
       "version": "15.1",
+      "version_label": "15.1",
       "build": "19B74",
       "released_at": "2021-10-25T20:29:02Z",
       "signed_firmware_count": 0,
@@ -17383,6 +17519,7 @@
     {
       "id": "ipados-release-15.0.2-19A404",
       "version": "15.0.2",
+      "version_label": "15.0.2",
       "build": "19A404",
       "released_at": "2021-10-11T16:43:03Z",
       "signed_firmware_count": 0,
@@ -17574,6 +17711,7 @@
     {
       "id": "ipados-release-15.0.1-19A348",
       "version": "15.0.1",
+      "version_label": "15.0.1",
       "build": "19A348",
       "released_at": "2021-10-01T18:54:10Z",
       "signed_firmware_count": 0,
@@ -17765,6 +17903,7 @@
     {
       "id": "ipados-release-15.0-19A346",
       "version": "15.0",
+      "version_label": "15.0",
       "build": "19A346",
       "released_at": "2021-09-20T18:33:25Z",
       "signed_firmware_count": 0,
@@ -17956,6 +18095,7 @@
     {
       "id": "ipados-release-14.8-18H17",
       "version": "14.8",
+      "version_label": "14.8",
       "build": "18H17",
       "released_at": "2021-09-13T16:44:00Z",
       "signed_firmware_count": 0,
@@ -18123,6 +18263,7 @@
     {
       "id": "ipados-release-14.7.1-18G82",
       "version": "14.7.1",
+      "version_label": "14.7.1",
       "build": "18G82",
       "released_at": "2021-07-26T16:43:45Z",
       "signed_firmware_count": 0,
@@ -18290,6 +18431,7 @@
     {
       "id": "ipados-release-14.7-18G69",
       "version": "14.7",
+      "version_label": "14.7",
       "build": "18G69",
       "released_at": "2021-07-21T17:23:07Z",
       "signed_firmware_count": 0,
@@ -18455,6 +18597,7 @@
     {
       "id": "ipados-release-14.7-18G70",
       "version": "14.7",
+      "version_label": "14.7",
       "build": "18G70",
       "released_at": "2021-07-21T17:23:05Z",
       "signed_firmware_count": 0,
@@ -18488,6 +18631,7 @@
     {
       "id": "ipados-release-14.6-18F72",
       "version": "14.6",
+      "version_label": "14.6",
       "build": "18F72",
       "released_at": "2021-05-24T20:58:11Z",
       "signed_firmware_count": 0,
@@ -18655,6 +18799,7 @@
     {
       "id": "ipados-release-14.5.1-18E212",
       "version": "14.5.1",
+      "version_label": "14.5.1",
       "build": "18E212",
       "released_at": "2021-05-03T16:41:48Z",
       "signed_firmware_count": 0,
@@ -18832,6 +18977,7 @@
     {
       "id": "ipados-release-14.5-18E199",
       "version": "14.5",
+      "version_label": "14.5",
       "build": "18E199",
       "released_at": "2021-04-26T16:43:25Z",
       "signed_firmware_count": 0,
@@ -19009,6 +19155,7 @@
     {
       "id": "ipados-release-14.4.2-18D70",
       "version": "14.4.2",
+      "version_label": "14.4.2",
       "build": "18D70",
       "released_at": "2021-03-26T16:58:14Z",
       "signed_firmware_count": 0,
@@ -19158,6 +19305,7 @@
     {
       "id": "ipados-release-14.4.1-18D61",
       "version": "14.4.1",
+      "version_label": "14.4.1",
       "build": "18D61",
       "released_at": "2021-03-08T18:05:28Z",
       "signed_firmware_count": 0,
@@ -19307,6 +19455,7 @@
     {
       "id": "ipados-release-14.4-18D52",
       "version": "14.4",
+      "version_label": "14.4",
       "build": "18D52",
       "released_at": "2021-01-26T18:06:11Z",
       "signed_firmware_count": 0,
@@ -19456,6 +19605,7 @@
     {
       "id": "ipados-release-14.3-18C66",
       "version": "14.3",
+      "version_label": "14.3",
       "build": "18C66",
       "released_at": "2020-12-14T17:59:51Z",
       "signed_firmware_count": 0,
@@ -19605,6 +19755,7 @@
     {
       "id": "ipados-release-14.2-18B92",
       "version": "14.2",
+      "version_label": "14.2",
       "build": "18B92",
       "released_at": "2020-11-05T17:58:30Z",
       "signed_firmware_count": 0,
@@ -19754,6 +19905,7 @@
     {
       "id": "ipados-release-14.1-18A8395",
       "version": "14.1",
+      "version_label": "14.1",
       "build": "18A8395",
       "released_at": "2020-10-20T17:15:41Z",
       "signed_firmware_count": 0,
@@ -19923,6 +20075,7 @@
     {
       "id": "ipados-release-14.0.1-18A393",
       "version": "14.0.1",
+      "version_label": "14.0.1",
       "build": "18A393",
       "released_at": "2020-09-24T17:51:29Z",
       "signed_firmware_count": 0,
@@ -20091,6 +20244,7 @@
     {
       "id": "ipados-release-14.0-18A373",
       "version": "14.0",
+      "version_label": "14.0",
       "build": "18A373",
       "released_at": "2020-09-16T19:40:39Z",
       "signed_firmware_count": 0,
@@ -20259,6 +20413,7 @@
     {
       "id": "ipados-release-13.7-17H35",
       "version": "13.7",
+      "version_label": "13.7",
       "build": "17H35",
       "released_at": "2020-09-01T17:10:48Z",
       "signed_firmware_count": 0,
@@ -20404,6 +20559,7 @@
     {
       "id": "ipados-release-13.6.1-17G80",
       "version": "13.6.1",
+      "version_label": "13.6.1",
       "build": "17G80",
       "released_at": "2020-08-12T20:23:23Z",
       "signed_firmware_count": 0,
@@ -20549,6 +20705,7 @@
     {
       "id": "ipados-release-13.6-17G68",
       "version": "13.6",
+      "version_label": "13.6",
       "build": "17G68",
       "released_at": "2020-07-15T17:05:16Z",
       "signed_firmware_count": 0,
@@ -20694,6 +20851,7 @@
     {
       "id": "ipados-release-13.5.1-17F80",
       "version": "13.5.1",
+      "version_label": "13.5.1",
       "build": "17F80",
       "released_at": "2020-06-01T17:06:21Z",
       "signed_firmware_count": 0,
@@ -20839,6 +20997,7 @@
     {
       "id": "ipados-release-13.5-17F75",
       "version": "13.5",
+      "version_label": "13.5",
       "build": "17F75",
       "released_at": "2020-05-20T16:56:53Z",
       "signed_firmware_count": 0,
@@ -20984,6 +21143,7 @@
     {
       "id": "ipados-release-13.4.1-17E262",
       "version": "13.4.1",
+      "version_label": "13.4.1",
       "build": "17E262",
       "released_at": "2020-04-07T17:02:46Z",
       "signed_firmware_count": 0,
@@ -21129,6 +21289,7 @@
     {
       "id": "ipados-release-13.4-17E255",
       "version": "13.4",
+      "version_label": "13.4",
       "build": "17E255",
       "released_at": "2020-03-24T16:58:40Z",
       "signed_firmware_count": 0,
@@ -21274,6 +21435,7 @@
     {
       "id": "ipados-release-13.3.1-17D50",
       "version": "13.3.1",
+      "version_label": "13.3.1",
       "build": "17D50",
       "released_at": "2020-01-28T18:02:48Z",
       "signed_firmware_count": 0,
@@ -21395,6 +21557,7 @@
     {
       "id": "ipados-release-13.3-17C54",
       "version": "13.3",
+      "version_label": "13.3",
       "build": "17C54",
       "released_at": "2019-12-10T17:56:43Z",
       "signed_firmware_count": 0,
@@ -21516,6 +21679,7 @@
     {
       "id": "ipados-release-13.2.3-17B111",
       "version": "13.2.3",
+      "version_label": "13.2.3",
       "build": "17B111",
       "released_at": "2019-11-18T17:58:57Z",
       "signed_firmware_count": 0,
@@ -21637,6 +21801,7 @@
     {
       "id": "ipados-release-13.2.2-17B102",
       "version": "13.2.2",
+      "version_label": "13.2.2",
       "build": "17B102",
       "released_at": "2019-11-07T17:59:18Z",
       "signed_firmware_count": 0,
@@ -21758,6 +21923,7 @@
     {
       "id": "ipados-release-13.2-17B84",
       "version": "13.2",
+      "version_label": "13.2",
       "build": "17B84",
       "released_at": "2019-10-28T17:02:14Z",
       "signed_firmware_count": 0,
@@ -21879,6 +22045,7 @@
     {
       "id": "ipados-release-13.1.3-17A878",
       "version": "13.1.3",
+      "version_label": "13.1.3",
       "build": "17A878",
       "released_at": "2019-10-15T17:00:28Z",
       "signed_firmware_count": 0,
@@ -22000,6 +22167,7 @@
     {
       "id": "ipados-release-13.1.2-17A860",
       "version": "13.1.2",
+      "version_label": "13.1.2",
       "build": "17A860",
       "released_at": "2019-09-30T17:11:17Z",
       "signed_firmware_count": 0,
@@ -22121,6 +22289,7 @@
     {
       "id": "ipados-release-13.1.1-17A854",
       "version": "13.1.1",
+      "version_label": "13.1.1",
       "build": "17A854",
       "released_at": "2019-09-27T16:58:01Z",
       "signed_firmware_count": 0,
@@ -22242,6 +22411,7 @@
     {
       "id": "ipados-release-13.1-17A844",
       "version": "13.1",
+      "version_label": "13.1",
       "build": "17A844",
       "released_at": "2019-09-24T17:03:05Z",
       "signed_firmware_count": 0,
@@ -22363,6 +22533,7 @@
     {
       "id": "ipados-release-12.5.8-16H88",
       "version": "12.5.8",
+      "version_label": "12.5.8",
       "build": "16H88",
       "released_at": "2026-01-26T18:21:53Z",
       "signed_firmware_count": 2,
@@ -22403,6 +22574,7 @@
     {
       "id": "ipados-release-12.5.7-16H81",
       "version": "12.5.7",
+      "version_label": "12.5.7",
       "build": "16H81",
       "released_at": "2023-01-23T21:37:31Z",
       "signed_firmware_count": 0,
@@ -22443,6 +22615,7 @@
     {
       "id": "ipados-release-12.5.6-16H71",
       "version": "12.5.6",
+      "version_label": "12.5.6",
       "build": "16H71",
       "released_at": "2022-08-31T17:27:45Z",
       "signed_firmware_count": 0,
@@ -22483,6 +22656,7 @@
     {
       "id": "ipados-release-12.5.5-16H62",
       "version": "12.5.5",
+      "version_label": "12.5.5",
       "build": "16H62",
       "released_at": "2021-09-23T16:52:28Z",
       "signed_firmware_count": 0,
@@ -22523,6 +22697,7 @@
     {
       "id": "ipados-release-12.5.4-16H50",
       "version": "12.5.4",
+      "version_label": "12.5.4",
       "build": "16H50",
       "released_at": "2021-06-14T18:07:18Z",
       "signed_firmware_count": 0,
@@ -22563,6 +22738,7 @@
     {
       "id": "ipados-release-12.5.3-16H41",
       "version": "12.5.3",
+      "version_label": "12.5.3",
       "build": "16H41",
       "released_at": "2021-05-03T16:41:54Z",
       "signed_firmware_count": 0,
@@ -22603,6 +22779,7 @@
     {
       "id": "ipados-release-12.5.2-16H30",
       "version": "12.5.2",
+      "version_label": "12.5.2",
       "build": "16H30",
       "released_at": "2021-03-26T16:58:13Z",
       "signed_firmware_count": 0,
@@ -22643,6 +22820,7 @@
     {
       "id": "ipados-release-12.5.1-16H22",
       "version": "12.5.1",
+      "version_label": "12.5.1",
       "build": "16H22",
       "released_at": "2021-01-11T18:14:36Z",
       "signed_firmware_count": 0,
@@ -22683,6 +22861,7 @@
     {
       "id": "ipados-release-12.5-16H20",
       "version": "12.5",
+      "version_label": "12.5",
       "build": "16H20",
       "released_at": "2020-12-14T17:59:58Z",
       "signed_firmware_count": 0,
@@ -22723,6 +22902,7 @@
     {
       "id": "ipados-release-12.4.9-16H5",
       "version": "12.4.9",
+      "version_label": "12.4.9",
       "build": "16H5",
       "released_at": "2020-11-05T17:58:23Z",
       "signed_firmware_count": 0,
@@ -22763,6 +22943,7 @@
     {
       "id": "ipados-release-12.4.8-16G201",
       "version": "12.4.8",
+      "version_label": "12.4.8",
       "build": "16G201",
       "released_at": "2020-07-15T17:05:22Z",
       "signed_firmware_count": 0,
@@ -22803,6 +22984,7 @@
     {
       "id": "ipados-release-12.4.7-16G192",
       "version": "12.4.7",
+      "version_label": "12.4.7",
       "build": "16G192",
       "released_at": "2020-05-20T16:56:54Z",
       "signed_firmware_count": 0,
@@ -22843,6 +23025,7 @@
     {
       "id": "ipados-release-12.4.6-16G183",
       "version": "12.4.6",
+      "version_label": "12.4.6",
       "build": "16G183",
       "released_at": "2020-03-24T16:59:09Z",
       "signed_firmware_count": 0,
@@ -22883,6 +23066,7 @@
     {
       "id": "ipados-release-12.4.5-16G161",
       "version": "12.4.5",
+      "version_label": "12.4.5",
       "build": "16G161",
       "released_at": "2020-01-28T18:02:39Z",
       "signed_firmware_count": 0,
@@ -22923,6 +23107,7 @@
     {
       "id": "ipados-release-12.4.4-16G140",
       "version": "12.4.4",
+      "version_label": "12.4.4",
       "build": "16G140",
       "released_at": "2019-12-10T17:56:45Z",
       "signed_firmware_count": 0,
@@ -22963,6 +23148,7 @@
     {
       "id": "ipados-release-12.4.3-16G130",
       "version": "12.4.3",
+      "version_label": "12.4.3",
       "build": "16G130",
       "released_at": "2019-10-28T17:02:15Z",
       "signed_firmware_count": 0,
@@ -23003,6 +23189,7 @@
     {
       "id": "ipados-release-12.4.2-16G114",
       "version": "12.4.2",
+      "version_label": "12.4.2",
       "build": "16G114",
       "released_at": "2019-09-26T17:04:57Z",
       "signed_firmware_count": 0,
@@ -23043,6 +23230,7 @@
     {
       "id": "ipados-release-12.4.1-16G102",
       "version": "12.4.1",
+      "version_label": "12.4.1",
       "build": "16G102",
       "released_at": "2019-08-26T19:48:30Z",
       "signed_firmware_count": 0,
@@ -23171,6 +23359,7 @@
     {
       "id": "ipados-release-12.4-16G77",
       "version": "12.4",
+      "version_label": "12.4",
       "build": "16G77",
       "released_at": "2019-07-22T17:14:13Z",
       "signed_firmware_count": 0,
@@ -23299,6 +23488,7 @@
     {
       "id": "ipados-release-12.3.1-16F203",
       "version": "12.3.1",
+      "version_label": "12.3.1",
       "build": "16F203",
       "released_at": "2019-05-24T17:01:38Z",
       "signed_firmware_count": 0,
@@ -23427,6 +23617,7 @@
     {
       "id": "ipados-release-12.3-16F156",
       "version": "12.3",
+      "version_label": "12.3",
       "build": "16F156",
       "released_at": "2019-05-13T16:57:25Z",
       "signed_firmware_count": 0,
@@ -23555,6 +23746,7 @@
     {
       "id": "ipados-release-12.2-16E227",
       "version": "12.2",
+      "version_label": "12.2",
       "build": "16E227",
       "released_at": "2019-03-25T19:28:31Z",
       "signed_firmware_count": 0,
@@ -23683,6 +23875,7 @@
     {
       "id": "ipados-release-12.1.1-16C50",
       "version": "12.1.1",
+      "version_label": "12.1.1",
       "build": "16C50",
       "released_at": "2018-12-05T17:57:30Z",
       "signed_firmware_count": 0,
@@ -23797,6 +23990,7 @@
     {
       "id": "ipados-release-12.1-16B92",
       "version": "12.1",
+      "version_label": "12.1",
       "build": "16B92",
       "released_at": "2018-10-30T17:08:05Z",
       "signed_firmware_count": 0,
@@ -23911,6 +24105,7 @@
     {
       "id": "ipados-release-12.0.1-16A404",
       "version": "12.0.1",
+      "version_label": "12.0.1",
       "build": "16A404",
       "released_at": "2018-10-08T16:57:57Z",
       "signed_firmware_count": 0,
@@ -24007,6 +24202,7 @@
     {
       "id": "ipados-release-12.0-16A366",
       "version": "12.0",
+      "version_label": "12.0",
       "build": "16A366",
       "released_at": "2018-09-17T17:07:44Z",
       "signed_firmware_count": 0,
@@ -24103,6 +24299,7 @@
     {
       "id": "ipados-release-11.4.1-15G77",
       "version": "11.4.1",
+      "version_label": "11.4.1",
       "build": "15G77",
       "released_at": "2018-07-09T17:04:09Z",
       "signed_firmware_count": 0,
@@ -24199,6 +24396,7 @@
     {
       "id": "ipados-release-11.4-15F79",
       "version": "11.4",
+      "version_label": "11.4",
       "build": "15F79",
       "released_at": "2018-05-29T17:03:13Z",
       "signed_firmware_count": 0,
@@ -24295,6 +24493,7 @@
     {
       "id": "ipados-release-11.3.1-15E302",
       "version": "11.3.1",
+      "version_label": "11.3.1",
       "build": "15E302",
       "released_at": "2018-04-24T17:15:35Z",
       "signed_firmware_count": 0,
@@ -24363,6 +24562,7 @@
     {
       "id": "ipados-release-10.3.4-14G61",
       "version": "10.3.4",
+      "version_label": "10.3.4",
       "build": "14G61",
       "released_at": "2019-07-22T17:06:23Z",
       "signed_firmware_count": 0,
@@ -24386,6 +24586,7 @@
     {
       "id": "ipados-release-10.1.1-14B150",
       "version": "10.1.1",
+      "version_label": "10.1.1",
       "build": "14B150",
       "released_at": "2016-11-09T18:19:32Z",
       "signed_firmware_count": 0,
@@ -24410,6 +24611,7 @@
     {
       "id": "ipados-release-10.1.1-14B100",
       "version": "10.1.1",
+      "version_label": "10.1.1",
       "build": "14B100",
       "released_at": "2016-10-31T15:30:58Z",
       "signed_firmware_count": 0,
@@ -24434,6 +24636,7 @@
     {
       "id": "ipados-release-10.1-14B72",
       "version": "10.1",
+      "version_label": "10.1",
       "build": "14B72",
       "released_at": "2016-10-24T17:35:24Z",
       "signed_firmware_count": 0,
@@ -24458,6 +24661,7 @@
     {
       "id": "ipados-release-10.0.2-14A456",
       "version": "10.0.2",
+      "version_label": "10.0.2",
       "build": "14A456",
       "released_at": "2016-09-23T15:55:53Z",
       "signed_firmware_count": 0,
@@ -24482,6 +24686,7 @@
     {
       "id": "ipados-release-10.0.1-14A403",
       "version": "10.0.1",
+      "version_label": "10.0.1",
       "build": "14A403",
       "released_at": "2016-09-13T19:08:24Z",
       "signed_firmware_count": 0,
@@ -24506,6 +24711,7 @@
     {
       "id": "ipados-release-9.3.6-13G37",
       "version": "9.3.6",
+      "version_label": "9.3.6",
       "build": "13G37",
       "released_at": "2019-07-22T17:13:11Z",
       "signed_firmware_count": 0,
@@ -24572,6 +24778,7 @@
     {
       "id": "ipados-release-9.3.5-13G36",
       "version": "9.3.5",
+      "version_label": "9.3.5",
       "build": "13G36",
       "released_at": "2016-08-25T16:58:25Z",
       "signed_firmware_count": 10,
@@ -24726,6 +24933,7 @@
     {
       "id": "ipados-release-9.3.4-13G35",
       "version": "9.3.4",
+      "version_label": "9.3.4",
       "build": "13G35",
       "released_at": "2016-08-04T16:56:58Z",
       "signed_firmware_count": 0,
@@ -24880,6 +25088,7 @@
     {
       "id": "ipados-release-9.3.3-13G34",
       "version": "9.3.3",
+      "version_label": "9.3.3",
       "build": "13G34",
       "released_at": "2016-07-18T17:06:46Z",
       "signed_firmware_count": 0,
@@ -25034,6 +25243,7 @@
     {
       "id": "ipados-release-9.3.2-13F69",
       "version": "9.3.2",
+      "version_label": "9.3.2",
       "build": "13F69",
       "released_at": "2016-05-16T16:51:42Z",
       "signed_firmware_count": 0,
@@ -25188,6 +25398,7 @@
     {
       "id": "ipados-release-9.3.1-13E238",
       "version": "9.3.1",
+      "version_label": "9.3.1",
       "build": "13E238",
       "released_at": "2016-03-31T17:36:51Z",
       "signed_firmware_count": 0,
@@ -25342,6 +25553,7 @@
     {
       "id": "ipados-release-9.3-13E237",
       "version": "9.3",
+      "version_label": "9.3",
       "build": "13E237",
       "released_at": "2016-03-28T18:28:56Z",
       "signed_firmware_count": 0,
@@ -25485,6 +25697,7 @@
     {
       "id": "ipados-release-9.3-13E236",
       "version": "9.3",
+      "version_label": "9.3",
       "build": "13E236",
       "released_at": "2016-03-25T02:07:22Z",
       "signed_firmware_count": 0,
@@ -25507,6 +25720,7 @@
     {
       "id": "ipados-release-9.3-13E233",
       "version": "9.3",
+      "version_label": "9.3",
       "build": "13E233",
       "released_at": "2016-03-21T20:46:56Z",
       "signed_firmware_count": 0,
@@ -25661,6 +25875,7 @@
     {
       "id": "ipados-release-9.2.1-13D15",
       "version": "9.2.1",
+      "version_label": "9.2.1",
       "build": "13D15",
       "released_at": "2016-01-19T18:00:07Z",
       "signed_firmware_count": 0,
@@ -25815,6 +26030,7 @@
     {
       "id": "ipados-release-9.2-13C75",
       "version": "9.2",
+      "version_label": "9.2",
       "build": "13C75",
       "released_at": "2015-12-08T18:19:22Z",
       "signed_firmware_count": 0,
@@ -25969,6 +26185,7 @@
     {
       "id": "ipados-release-9.1-13B143",
       "version": "9.1",
+      "version_label": "9.1",
       "build": "13B143",
       "released_at": "2015-10-21T16:54:28Z",
       "signed_firmware_count": 0,
@@ -26123,6 +26340,7 @@
     {
       "id": "ipados-release-9.0.2-13A452",
       "version": "9.0.2",
+      "version_label": "9.0.2",
       "build": "13A452",
       "released_at": "2015-09-30T18:03:02Z",
       "signed_firmware_count": 0,
@@ -26277,6 +26495,7 @@
     {
       "id": "ipados-release-9.0.1-13A404",
       "version": "9.0.1",
+      "version_label": "9.0.1",
       "build": "13A404",
       "released_at": "2015-09-23T18:31:02Z",
       "signed_firmware_count": 0,
@@ -26431,6 +26650,7 @@
     {
       "id": "ipados-release-9.0-13A344",
       "version": "9.0",
+      "version_label": "9.0",
       "build": "13A344",
       "released_at": "2015-09-16T18:06:03Z",
       "signed_firmware_count": 0,
@@ -26585,6 +26805,7 @@
     {
       "id": "ipados-release-8.4.1-12H321",
       "version": "8.4.1",
+      "version_label": "8.4.1",
       "build": "12H321",
       "released_at": "2015-08-13T17:59:03Z",
       "signed_firmware_count": 0,
@@ -26739,6 +26960,7 @@
     {
       "id": "ipados-release-8.4-12H143",
       "version": "8.4",
+      "version_label": "8.4",
       "build": "12H143",
       "released_at": "2015-06-30T16:10:42Z",
       "signed_firmware_count": 0,
@@ -26893,6 +27115,7 @@
     {
       "id": "ipados-release-8.3-12F69",
       "version": "8.3",
+      "version_label": "8.3",
       "build": "12F69",
       "released_at": "2015-04-08T18:27:43Z",
       "signed_firmware_count": 0,
@@ -27047,6 +27270,7 @@
     {
       "id": "ipados-release-8.2-12D508",
       "version": "8.2",
+      "version_label": "8.2",
       "build": "12D508",
       "released_at": "2015-03-09T18:56:03Z",
       "signed_firmware_count": 0,
@@ -27201,6 +27425,7 @@
     {
       "id": "ipados-release-8.1.3-12B466",
       "version": "8.1.3",
+      "version_label": "8.1.3",
       "build": "12B466",
       "released_at": "2015-01-27T18:08:03Z",
       "signed_firmware_count": 0,
@@ -27355,6 +27580,7 @@
     {
       "id": "ipados-release-8.1.2-12B440",
       "version": "8.1.2",
+      "version_label": "8.1.2",
       "build": "12B440",
       "released_at": "2014-12-09T18:01:11Z",
       "signed_firmware_count": 0,
@@ -27509,6 +27735,7 @@
     {
       "id": "ipados-release-8.1.1-12B435",
       "version": "8.1.1",
+      "version_label": "8.1.1",
       "build": "12B435",
       "released_at": "2014-11-17T17:58:58Z",
       "signed_firmware_count": 0,
@@ -27663,6 +27890,7 @@
     {
       "id": "ipados-release-8.1-12B410",
       "version": "8.1",
+      "version_label": "8.1",
       "build": "12B410",
       "released_at": "2014-10-20T17:56:02Z",
       "signed_firmware_count": 0,
@@ -27751,6 +27979,7 @@
     {
       "id": "ipados-release-8.0.2-12A405",
       "version": "8.0.2",
+      "version_label": "8.0.2",
       "build": "12A405",
       "released_at": "2014-09-26T03:28:30Z",
       "signed_firmware_count": 0,
@@ -27839,6 +28068,7 @@
     {
       "id": "ipados-release-8.0.1-12A402",
       "version": "8.0.1",
+      "version_label": "8.0.1",
       "build": "12A402",
       "released_at": "2014-09-24T18:16:46Z",
       "signed_firmware_count": 0,
@@ -27927,6 +28157,7 @@
     {
       "id": "ipados-release-8.0-12A365",
       "version": "8.0",
+      "version_label": "8.0",
       "build": "12A365",
       "released_at": "2014-09-17T17:59:03Z",
       "signed_firmware_count": 0,
@@ -28015,6 +28246,7 @@
     {
       "id": "ipados-release-7.1.2-11D257",
       "version": "7.1.2",
+      "version_label": "7.1.2",
       "build": "11D257",
       "released_at": "2014-06-30T18:29:04Z",
       "signed_firmware_count": 0,
@@ -28235,6 +28467,7 @@
     {
       "id": "ipados-release-7.1.1-11D201",
       "version": "7.1.1",
+      "version_label": "7.1.1",
       "build": "11D201",
       "released_at": "2014-04-22T17:46:32Z",
       "signed_firmware_count": 0,
@@ -28455,6 +28688,7 @@
     {
       "id": "ipados-release-7.1-11D167",
       "version": "7.1",
+      "version_label": "7.1",
       "build": "11D167",
       "released_at": "2014-03-10T17:57:46Z",
       "signed_firmware_count": 0,
@@ -28675,6 +28909,7 @@
     {
       "id": "ipados-release-7.0.6-11B651",
       "version": "7.0.6",
+      "version_label": "7.0.6",
       "build": "11B651",
       "released_at": "2014-02-21T17:51:20Z",
       "signed_firmware_count": 0,
@@ -28873,6 +29108,7 @@
     {
       "id": "ipados-release-7.0.4-11B554A",
       "version": "7.0.4",
+      "version_label": "7.0.4",
       "build": "11B554A",
       "released_at": "2013-11-15T02:24:01Z",
       "signed_firmware_count": 0,
@@ -29071,6 +29307,7 @@
     {
       "id": "ipados-release-7.0.3-11B511",
       "version": "7.0.3",
+      "version_label": "7.0.3",
       "build": "11B511",
       "released_at": "2013-10-22T19:55:34Z",
       "signed_firmware_count": 0,
@@ -29269,6 +29506,7 @@
     {
       "id": "ipados-release-7.0.2-11A501",
       "version": "7.0.2",
+      "version_label": "7.0.2",
       "build": "11A501",
       "released_at": "2013-09-26T18:00:13Z",
       "signed_firmware_count": 0,
@@ -29423,6 +29661,7 @@
     {
       "id": "ipados-release-7.0-11A465",
       "version": "7.0",
+      "version_label": "7.0",
       "build": "11A465",
       "released_at": "2013-09-18T18:54:48Z",
       "signed_firmware_count": 0,
@@ -29577,6 +29816,7 @@
     {
       "id": "ipados-release-6.1.3-10B329",
       "version": "6.1.3",
+      "version_label": "6.1.3",
       "build": "10B329",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -29731,6 +29971,7 @@
     {
       "id": "ipados-release-6.1.2-10B147",
       "version": "6.1.2",
+      "version_label": "6.1.2",
       "build": "10B147",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -29786,6 +30027,7 @@
     {
       "id": "ipados-release-6.1.2-10B146",
       "version": "6.1.2",
+      "version_label": "6.1.2",
       "build": "10B146",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -29896,6 +30138,7 @@
     {
       "id": "ipados-release-6.1-10B141",
       "version": "6.1",
+      "version_label": "6.1",
       "build": "10B141",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30050,6 +30293,7 @@
     {
       "id": "ipados-release-6.0.2-10A8500",
       "version": "6.0.2",
+      "version_label": "6.0.2",
       "build": "10A8500",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30083,6 +30327,7 @@
     {
       "id": "ipados-release-6.0.2-10A550",
       "version": "6.0.2",
+      "version_label": "6.0.2",
       "build": "10A550",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30105,6 +30350,7 @@
     {
       "id": "ipados-release-6.0.1-10A8426",
       "version": "6.0.1",
+      "version_label": "6.0.1",
       "build": "10A8426",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30160,6 +30406,7 @@
     {
       "id": "ipados-release-6.0.1-10A523",
       "version": "6.0.1",
+      "version_label": "6.0.1",
       "build": "10A523",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30270,6 +30517,7 @@
     {
       "id": "ipados-release-6.0-10A407",
       "version": "6.0",
+      "version_label": "6.0",
       "build": "10A407",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30292,6 +30540,7 @@
     {
       "id": "ipados-release-6.0-10A406",
       "version": "6.0",
+      "version_label": "6.0",
       "build": "10A406",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30314,6 +30563,7 @@
     {
       "id": "ipados-release-6.0-10A403",
       "version": "6.0",
+      "version_label": "6.0",
       "build": "10A403",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30402,6 +30652,7 @@
     {
       "id": "ipados-release-5.1.1-9B206",
       "version": "5.1.1",
+      "version_label": "5.1.1",
       "build": "9B206",
       "released_at": null,
       "signed_firmware_count": 1,
@@ -30501,6 +30752,7 @@
     {
       "id": "ipados-release-5.1-9B176",
       "version": "5.1",
+      "version_label": "5.1",
       "build": "9B176",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30600,6 +30852,7 @@
     {
       "id": "ipados-release-5.0.1-9A405",
       "version": "5.0.1",
+      "version_label": "5.0.1",
       "build": "9A405",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30655,6 +30908,7 @@
     {
       "id": "ipados-release-5.0-9A334",
       "version": "5.0",
+      "version_label": "5.0",
       "build": "9A334",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30710,6 +30964,7 @@
     {
       "id": "ipados-release-4.3.5-8L1",
       "version": "4.3.5",
+      "version_label": "4.3.5",
       "build": "8L1",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30765,6 +31020,7 @@
     {
       "id": "ipados-release-4.3.4-8K2",
       "version": "4.3.4",
+      "version_label": "4.3.4",
       "build": "8K2",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30820,6 +31076,7 @@
     {
       "id": "ipados-release-4.3.3-8J3",
       "version": "4.3.3",
+      "version_label": "4.3.3",
       "build": "8J3",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30842,6 +31099,7 @@
     {
       "id": "ipados-release-4.3.3-8J2",
       "version": "4.3.3",
+      "version_label": "4.3.3",
       "build": "8J2",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30886,6 +31144,7 @@
     {
       "id": "ipados-release-4.3.2-8H8",
       "version": "4.3.2",
+      "version_label": "4.3.2",
       "build": "8H8",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30908,6 +31167,7 @@
     {
       "id": "ipados-release-4.3.2-8H7",
       "version": "4.3.2",
+      "version_label": "4.3.2",
       "build": "8H7",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -30952,6 +31212,7 @@
     {
       "id": "ipados-release-4.3.1-8G4",
       "version": "4.3.1",
+      "version_label": "4.3.1",
       "build": "8G4",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -31007,6 +31268,7 @@
     {
       "id": "ipados-release-4.3-8F191",
       "version": "4.3",
+      "version_label": "4.3",
       "build": "8F191",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -31051,6 +31313,7 @@
     {
       "id": "ipados-release-4.3-8F190",
       "version": "4.3",
+      "version_label": "4.3",
       "build": "8F190",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -31073,6 +31336,7 @@
     {
       "id": "ipados-release-4.2.1-8C148",
       "version": "4.2.1",
+      "version_label": "4.2.1",
       "build": "8C148",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -31095,6 +31359,7 @@
     {
       "id": "ipados-release-3.2.2-7B500",
       "version": "3.2.2",
+      "version_label": "3.2.2",
       "build": "7B500",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -31117,6 +31382,7 @@
     {
       "id": "ipados-release-3.2.1-7B405",
       "version": "3.2.1",
+      "version_label": "3.2.1",
       "build": "7B405",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -31139,6 +31405,7 @@
     {
       "id": "ipados-release-3.2-7B367",
       "version": "3.2",
+      "version_label": "3.2",
       "build": "7B367",
       "released_at": null,
       "signed_firmware_count": 0,
@@ -31159,5 +31426,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-17T05:15:52+09:00"
+  "generated_at_tokyo": "2026-09-17T18:43:51+09:00"
 }

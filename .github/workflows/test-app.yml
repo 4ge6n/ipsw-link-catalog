@@ -1,0 +1,12 @@
+name: Test IPSW Sync
+on:
+  push:
+    paths: ['app/IPSWSync/**', '.github/workflows/test-app.yml']
+  pull_request:
+    paths: ['app/IPSWSync/**']
+jobs:
+  test:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+      - run: cd app/IPSWSync && swift test --disable-sandbox

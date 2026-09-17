@@ -26,11 +26,36 @@ struct Firmware: Codable, Identifiable, Hashable {
         filename.replacing(#/_[0-9][^_]*_[A-Za-z0-9]+_Restore\.ipsw$/#, with: "")
     }
 
-    /// iPhone19,7 against iPhone18,5. The catalog's own order runs through a
-    /// generation out of step — 17e, then 17, then 17 Pro — so anything meant
-    /// for a person to read down is put back in order with this.
+    /// The identifiers written into a filename, where there are any.
+    ///
+    /// iPhone19,2,iPhone19,3,iPhone19,7_27.2_24B5084k_Restore.ipsw is three
+    /// devices in one image — Apple began combining the iPhone 18 Pro line at
+    /// 27.2, having shipped one image each at 27.0 — and a name like
+    /// iPad_Pro_M4_27.2_24B5084k_Restore.ipsw is none at all.
+    static func devices(in filename: String) -> [String] {
+        let head = modelKey(of: filename)
+        return head.split(separator: ",").reduce(into: [String]()) { result, part in
+            // The split breaks "iPhone19,2" in half; the number rejoins the name.
+            if part.allSatisfy(\.isNumber), let last = result.last {
+                result[result.count - 1] = "\(last),\(part)"
+            } else {
+                result.append(String(part))
+            }
+        }
+        .filter { $0.contains(",") }
+    }
+
+    /// The highest identifier this image covers, as the three parts that
+    /// order it. The highest rather than the first, so an image covering a
+    /// whole generation sorts by the newest device in it.
     var modelNumber: (kind: String, major: Int, minor: Int) {
-        let identifier = devices.first ?? name
+        let parts = devices.map(Firmware.parts(of:))
+        let highest = parts.max { ($0.major, $0.minor) < ($1.major, $1.minor) }
+        return highest ?? Firmware.parts(of: name)
+    }
+
+    /// iPhone18,5 → ("iPhone", 18, 5).
+    private static func parts(of identifier: String) -> (kind: String, major: Int, minor: Int) {
         let kind = identifier.prefix { !$0.isNumber }
         let numbers = identifier.dropFirst(kind.count).split(separator: ",")
         return (String(kind),
@@ -38,30 +63,66 @@ struct Firmware: Codable, Identifiable, Hashable {
                 Int(numbers.dropFirst().first ?? "") ?? 0)
     }
 
-    /// Newest generation first, kept together by the kind of device, and within
-    /// a generation by name. The identifiers do not run in the order the models
-    /// are spoken of — 18,1 is the Pro and 18,3 the plain one — so past the
-    /// generation it is the name that decides.
+    /// Highest identifier first, kept together by the kind of device:
+    /// iPhone18,5 before iPhone18,4 before iPhone18,3, then iPhone17,x, and
+    /// the iPods after the iPhones. The identifier is what is being ordered,
+    /// so it is the identifier that decides — not the name, which runs in an
+    /// order of its own.
     static func newestFirst(_ one: Firmware, _ other: Firmware) -> Bool {
         let left = one.modelNumber, right = other.modelNumber
         if left.kind != right.kind { return left.kind < right.kind }
         if left.major != right.major { return left.major > right.major }
-        let byName = one.name.localizedStandardCompare(other.name)
-        if byName != .orderedSame { return byName == .orderedAscending }
-        return left.minor < right.minor
+        if left.minor != right.minor { return left.minor > right.minor }
+        return one.name.localizedStandardCompare(other.name) == .orderedAscending
     }
 }
 
 struct Release: Codable, Identifiable, Hashable {
     let id: String
     let version: String
+    /// "26.0-beta-2", "26.0-rc", "26.0". Apple's own numbering of the build,
+    /// as the catalog recorded it when the build was published — which is the
+    /// only place it is written down, and is never guessed at here.
+    let versionLabel: String?
     let build: String
     let releasedAt: Date?
     let firmwares: [Firmware]
 
     enum CodingKeys: String, CodingKey {
         case id, version, build, firmwares
+        case versionLabel = "version_label"
         case releasedAt = "released_at"
+    }
+
+    init(id: String, version: String, versionLabel: String? = nil, build: String,
+         releasedAt: Date?, firmwares: [Firmware]) {
+        self.id = id
+        self.version = version
+        self.versionLabel = versionLabel
+        self.build = build
+        self.releasedAt = releasedAt
+        self.firmwares = firmwares
+    }
+
+    /// What Apple called this build, without the version in front of it:
+    /// "beta 2", "RC", and nothing at all for a build that shipped.
+    ///
+    /// A revision — Apple posting a second build under the same beta number,
+    /// as it did with 23A5260N and 23A5260U — keeps that number. They are two
+    /// builds of beta 1, not beta 1 and beta 2.
+    var prerelease: String? {
+        guard let versionLabel, versionLabel != version else { return nil }
+        let tail = versionLabel.hasPrefix(version + "-")
+            ? String(versionLabel.dropFirst(version.count + 1))
+            : versionLabel
+        guard !tail.isEmpty else { return nil }
+        let text = tail
+            .replacingOccurrences(of: "rc", with: "RC")
+            .replacingOccurrences(of: "-", with: " ")
+        // Apple writes the first one as "beta" and the next as "beta 2". In a
+        // list of them that reads as a different kind of thing rather than as
+        // the one before beta 2, so the number it has is the number shown.
+        return text == "beta" ? "beta 1" : text
     }
 }
 

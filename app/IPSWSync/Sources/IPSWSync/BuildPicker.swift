@@ -78,7 +78,17 @@ struct BuildPicker: View {
     private var releaseList: some View {
         List(releases, selection: $selectedRelease) { release in
             VStack(alignment: .leading, spacing: 2) {
-                Text("\(release.version) (\(release.build))").fontWeight(.medium)
+                HStack(spacing: 6) {
+                    Text("\(release.version) (\(release.build))").fontWeight(.medium)
+                    // Apple's own numbering of the build, where the catalog
+                    // recorded it. Never worked out from the order here.
+                    if let prerelease = release.prerelease {
+                        Text(prerelease)
+                            .font(.caption2)
+                            .padding(.horizontal, 6).padding(.vertical, 1)
+                            .glassEffect(.regular, in: .capsule)
+                    }
+                }
                 HStack(spacing: 6) {
                     if let date = release.releasedAt {
                         Text(date.formatted(date: .abbreviated, time: .omitted))

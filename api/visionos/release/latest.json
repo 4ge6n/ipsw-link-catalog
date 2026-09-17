@@ -4,13 +4,14 @@
   "os_key": "visionos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-16T20:15:52Z",
+  "generated_at": "2026-09-17T09:43:51Z",
   "release_count": 1,
   "firmware_count": 2,
   "releases": [
     {
       "id": "visionos-release-27.0-24M362",
       "version": "27.0",
+      "version_label": "27.0",
       "build": "24M362",
       "released_at": "2026-09-14T17:00:00Z",
       "data": "27.0/24M362.json",
@@ -40,5 +41,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-17T05:15:52+09:00"
+  "generated_at_tokyo": "2026-09-17T18:43:51+09:00"
 }

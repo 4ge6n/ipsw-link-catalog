@@ -219,17 +219,14 @@ extension SyncEngine {
     nonisolated func removeReplacedBuilds(
         in folder: URL,
         keeping wanted: [Firmware],
+        using index: DeviceIndex,
         log: @escaping @Sendable @MainActor (LogEntry) -> Void
     ) async {
-        let keepNames = Set(wanted.map(\.filename))
-        let keepKeys = Set(wanted.map(\.modelKey))
         let contents = (try? FileManager.default.contentsOfDirectory(at: folder, includingPropertiesForKeys: nil)) ?? []
         for file in contents where file.pathExtension == "ipsw" {
             let name = file.lastPathComponent
-            guard !keepNames.contains(name) else { continue }
-            let key = name.replacing(#/_[0-9][^_]*_[A-Za-z0-9]+_Restore\.ipsw$/#, with: "")
-            // Only a device whose replacement is actually here loses its old build.
-            guard key != name, keepKeys.contains(key) else { continue }
+            // Only a build whose every device has a newer one here is removed.
+            guard Supersession.isReplaced(name, by: wanted, using: index) else { continue }
             do {
                 try FileManager.default.removeItem(at: file)
                 VerifiedStore.shared.forget(file)

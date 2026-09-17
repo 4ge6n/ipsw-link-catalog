@@ -4,13 +4,14 @@
   "os_key": "macos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-16T20:15:52Z",
+  "generated_at": "2026-09-17T09:43:51Z",
   "release_count": 90,
   "firmware_count": 90,
   "releases": [
     {
       "id": "macos-release-27.0-26A428",
       "version": "27.0",
+      "version_label": "27.0",
       "build": "26A428",
       "released_at": "2026-09-14T17:00:00Z",
       "signed_firmware_count": 1,
@@ -89,6 +90,7 @@
     {
       "id": "macos-release-26.6.2-25G83",
       "version": "26.6.2",
+      "version_label": "26.6.2",
       "build": "25G83",
       "released_at": "2026-08-17T17:00:00Z",
       "signed_firmware_count": 1,
@@ -163,6 +165,7 @@
     {
       "id": "macos-release-26.6.1-25G76",
       "version": "26.6.1",
+      "version_label": "26.6.1",
       "build": "25G76",
       "released_at": "2026-08-06T17:20:37Z",
       "signed_firmware_count": 1,
@@ -237,6 +240,7 @@
     {
       "id": "macos-release-26.6-25G72",
       "version": "26.6",
+      "version_label": "26.6",
       "build": "25G72",
       "released_at": "2026-07-27T18:10:53Z",
       "signed_firmware_count": 1,
@@ -311,6 +315,7 @@
     {
       "id": "macos-release-26.5.2-25F84",
       "version": "26.5.2",
+      "version_label": "26.5.2",
       "build": "25F84",
       "released_at": "2026-06-29T17:37:53Z",
       "signed_firmware_count": 1,
@@ -385,6 +390,7 @@
     {
       "id": "macos-release-26.5.1-25F80",
       "version": "26.5.1",
+      "version_label": "26.5.1",
       "build": "25F80",
       "released_at": "2026-06-01T17:22:21Z",
       "signed_firmware_count": 1,
@@ -459,6 +465,7 @@
     {
       "id": "macos-release-26.5-25F71",
       "version": "26.5",
+      "version_label": "26.5",
       "build": "25F71",
       "released_at": "2026-05-11T17:28:06Z",
       "signed_firmware_count": 1,
@@ -533,6 +540,7 @@
     {
       "id": "macos-release-26.4.1-25E253",
       "version": "26.4.1",
+      "version_label": "26.4.1",
       "build": "25E253",
       "released_at": "2026-04-09T17:35:34Z",
       "signed_firmware_count": 1,
@@ -607,6 +615,7 @@
     {
       "id": "macos-release-26.4-25E246",
       "version": "26.4",
+      "version_label": "26.4",
       "build": "25E246",
       "released_at": "2026-03-24T18:12:05Z",
       "signed_firmware_count": 1,
@@ -681,6 +690,7 @@
     {
       "id": "macos-release-26.3.2-25D2140",
       "version": "26.3.2",
+      "version_label": "26.3.2",
       "build": "25D2140",
       "released_at": "2026-03-10T17:57:23Z",
       "signed_firmware_count": 1,
@@ -703,6 +713,7 @@
     {
       "id": "macos-release-26.3.1-25D2128",
       "version": "26.3.1",
+      "version_label": "26.3.1",
       "build": "25D2128",
       "released_at": "2026-03-04T18:52:34Z",
       "signed_firmware_count": 1,
@@ -777,6 +788,7 @@
     {
       "id": "macos-release-26.3-25D125",
       "version": "26.3",
+      "version_label": "26.3",
       "build": "25D125",
       "released_at": "2026-02-11T18:32:14Z",
       "signed_firmware_count": 1,
@@ -844,6 +856,7 @@
     {
       "id": "macos-release-26.2-25C56",
       "version": "26.2",
+      "version_label": "26.2",
       "build": "25C56",
       "released_at": "2025-12-12T18:16:16Z",
       "signed_firmware_count": 1,
@@ -911,6 +924,7 @@
     {
       "id": "macos-release-26.1-25B78",
       "version": "26.1",
+      "version_label": "26.1",
       "build": "25B78",
       "released_at": "2025-11-03T21:34:30Z",
       "signed_firmware_count": 1,
@@ -978,6 +992,7 @@
     {
       "id": "macos-release-26.0.1-25A8364",
       "version": "26.0.1",
+      "version_label": "26.0.1",
       "build": "25A8364",
       "released_at": "2025-10-16T00:16:51Z",
       "signed_firmware_count": 1,
@@ -1000,6 +1015,7 @@
     {
       "id": "macos-release-26.0.1-25A362",
       "version": "26.0.1",
+      "version_label": "26.0.1",
       "build": "25A362",
       "released_at": "2025-09-29T17:08:58Z",
       "signed_firmware_count": 1,
@@ -1066,6 +1082,7 @@
     {
       "id": "macos-release-26.0-25A354",
       "version": "26.0",
+      "version_label": "26.0",
       "build": "25A354",
       "released_at": "2025-09-15T17:27:39Z",
       "signed_firmware_count": 1,
@@ -1132,6 +1149,7 @@
     {
       "id": "macos-release-15.6.1-24G90",
       "version": "15.6.1",
+      "version_label": "15.6.1",
       "build": "24G90",
       "released_at": "2025-08-20T17:44:25Z",
       "signed_firmware_count": 1,
@@ -1198,6 +1216,7 @@
     {
       "id": "macos-release-15.6-24G84",
       "version": "15.6",
+      "version_label": "15.6",
       "build": "24G84",
       "released_at": "2025-07-29T17:33:27Z",
       "signed_firmware_count": 1,
@@ -1264,6 +1283,7 @@
     {
       "id": "macos-release-15.5-24F74",
       "version": "15.5",
+      "version_label": "15.5",
       "build": "24F74",
       "released_at": "2025-05-12T17:24:17Z",
       "signed_firmware_count": 1,
@@ -1330,6 +1350,7 @@
     {
       "id": "macos-release-15.4.1-24E263",
       "version": "15.4.1",
+      "version_label": "15.4.1",
       "build": "24E263",
       "released_at": "2025-04-16T17:31:18Z",
       "signed_firmware_count": 1,
@@ -1396,6 +1417,7 @@
     {
       "id": "macos-release-15.4-24E248",
       "version": "15.4",
+      "version_label": "15.4",
       "build": "24E248",
       "released_at": "2025-03-31T17:45:46Z",
       "signed_firmware_count": 1,
@@ -1462,6 +1484,7 @@
     {
       "id": "macos-release-15.3.2-24D81",
       "version": "15.3.2",
+      "version_label": "15.3.2",
       "build": "24D81",
       "released_at": "2025-03-11T18:01:59Z",
       "signed_firmware_count": 1,
@@ -1524,6 +1547,7 @@
     {
       "id": "macos-release-15.3.2-24D2082",
       "version": "15.3.2",
+      "version_label": "15.3.2",
       "build": "24D2082",
       "released_at": "2025-03-11T18:01:59Z",
       "signed_firmware_count": 1,
@@ -1549,6 +1573,7 @@
     {
       "id": "macos-release-15.3.1-24D70",
       "version": "15.3.1",
+      "version_label": "15.3.1",
       "build": "24D70",
       "released_at": "2025-02-10T18:28:16Z",
       "signed_firmware_count": 1,
@@ -1611,6 +1636,7 @@
     {
       "id": "macos-release-15.3-24D60",
       "version": "15.3",
+      "version_label": "15.3",
       "build": "24D60",
       "released_at": "2025-01-27T18:42:36Z",
       "signed_firmware_count": 1,
@@ -1673,6 +1699,7 @@
     {
       "id": "macos-release-15.2-24C2101",
       "version": "15.2",
+      "version_label": "15.2",
       "build": "24C2101",
       "released_at": "2024-12-11T18:34:14Z",
       "signed_firmware_count": 1,
@@ -1703,6 +1730,7 @@
     {
       "id": "macos-release-15.2-24C101",
       "version": "15.2",
+      "version_label": "15.2",
       "build": "24C101",
       "released_at": "2024-12-11T18:34:14Z",
       "signed_firmware_count": 1,
@@ -1765,6 +1793,7 @@
     {
       "id": "macos-release-15.1.1-24B91",
       "version": "15.1.1",
+      "version_label": "15.1.1",
       "build": "24B91",
       "released_at": "2024-11-19T18:19:46Z",
       "signed_firmware_count": 1,
@@ -1818,6 +1847,7 @@
     {
       "id": "macos-release-15.1.1-24B2091",
       "version": "15.1.1",
+      "version_label": "15.1.1",
       "build": "24B2091",
       "released_at": "2024-11-19T18:19:46Z",
       "signed_firmware_count": 1,
@@ -1848,6 +1878,7 @@
     {
       "id": "macos-release-15.1-24B2083",
       "version": "15.1",
+      "version_label": "15.1",
       "build": "24B2083",
       "released_at": "2024-10-31T01:21:04Z",
       "signed_firmware_count": 1,
@@ -1878,6 +1909,7 @@
     {
       "id": "macos-release-15.1-24B83",
       "version": "15.1",
+      "version_label": "15.1",
       "build": "24B83",
       "released_at": "2024-10-28T15:37:33Z",
       "signed_firmware_count": 1,
@@ -1931,6 +1963,7 @@
     {
       "id": "macos-release-15.0.1-24A348",
       "version": "15.0.1",
+      "version_label": "15.0.1",
       "build": "24A348",
       "released_at": "2024-10-03T21:32:15Z",
       "signed_firmware_count": 1,
@@ -1984,6 +2017,7 @@
     {
       "id": "macos-release-15.0-24A335",
       "version": "15.0",
+      "version_label": "15.0",
       "build": "24A335",
       "released_at": "2024-09-16T17:36:19Z",
       "signed_firmware_count": 1,
@@ -2037,6 +2071,7 @@
     {
       "id": "macos-release-14.6.1-23G93",
       "version": "14.6.1",
+      "version_label": "14.6.1",
       "build": "23G93",
       "released_at": "2024-08-07T17:40:26Z",
       "signed_firmware_count": 1,
@@ -2090,6 +2125,7 @@
     {
       "id": "macos-release-14.6-23G80",
       "version": "14.6",
+      "version_label": "14.6",
       "build": "23G80",
       "released_at": "2024-07-29T20:33:57Z",
       "signed_firmware_count": 1,
@@ -2143,6 +2179,7 @@
     {
       "id": "macos-release-14.5-23F79",
       "version": "14.5",
+      "version_label": "14.5",
       "build": "23F79",
       "released_at": "2024-05-13T17:46:19Z",
       "signed_firmware_count": 1,
@@ -2196,6 +2233,7 @@
     {
       "id": "macos-release-14.4.1-23E224",
       "version": "14.4.1",
+      "version_label": "14.4.1",
       "build": "23E224",
       "released_at": "2024-03-25T17:19:44Z",
       "signed_firmware_count": 1,
@@ -2249,6 +2287,7 @@
     {
       "id": "macos-release-14.4-23E214",
       "version": "14.4",
+      "version_label": "14.4",
       "build": "23E214",
       "released_at": "2024-03-07T18:20:16Z",
       "signed_firmware_count": 1,
@@ -2302,6 +2341,7 @@
     {
       "id": "macos-release-14.3.1-23D60",
       "version": "14.3.1",
+      "version_label": "14.3.1",
       "build": "23D60",
       "released_at": "2024-02-08T18:42:01Z",
       "signed_firmware_count": 1,
@@ -2353,6 +2393,7 @@
     {
       "id": "macos-release-14.3-23D56",
       "version": "14.3",
+      "version_label": "14.3",
       "build": "23D56",
       "released_at": "2024-01-22T18:33:57Z",
       "signed_firmware_count": 1,
@@ -2404,6 +2445,7 @@
     {
       "id": "macos-release-14.2.1-23C71",
       "version": "14.2.1",
+      "version_label": "14.2.1",
       "build": "23C71",
       "released_at": "2023-12-19T18:58:48Z",
       "signed_firmware_count": 1,
@@ -2455,6 +2497,7 @@
     {
       "id": "macos-release-14.2-23C64",
       "version": "14.2",
+      "version_label": "14.2",
       "build": "23C64",
       "released_at": "2023-12-11T18:27:01Z",
       "signed_firmware_count": 1,
@@ -2506,6 +2549,7 @@
     {
       "id": "macos-release-14.1.2-23B92",
       "version": "14.1.2",
+      "version_label": "14.1.2",
       "build": "23B92",
       "released_at": "2023-11-30T18:15:47Z",
       "signed_firmware_count": 1,
@@ -2548,6 +2592,7 @@
     {
       "id": "macos-release-14.1.2-23B2091",
       "version": "14.1.2",
+      "version_label": "14.1.2",
       "build": "23B2091",
       "released_at": "2023-11-30T18:15:47Z",
       "signed_firmware_count": 1,
@@ -2578,6 +2623,7 @@
     {
       "id": "macos-release-14.1.1-23B81",
       "version": "14.1.1",
+      "version_label": "14.1.1",
       "build": "23B81",
       "released_at": "2023-11-07T21:43:22Z",
       "signed_firmware_count": 1,
@@ -2620,6 +2666,7 @@
     {
       "id": "macos-release-14.1.1-23B2082",
       "version": "14.1.1",
+      "version_label": "14.1.1",
       "build": "23B2082",
       "released_at": "2023-11-07T21:43:22Z",
       "signed_firmware_count": 1,
@@ -2650,6 +2697,7 @@
     {
       "id": "macos-release-14.1-23B2077",
       "version": "14.1",
+      "version_label": "14.1",
       "build": "23B2077",
       "released_at": "2023-11-03T17:05:44Z",
       "signed_firmware_count": 1,
@@ -2680,6 +2728,7 @@
     {
       "id": "macos-release-14.1-23B74",
       "version": "14.1",
+      "version_label": "14.1",
       "build": "23B74",
       "released_at": "2023-10-25T17:22:59Z",
       "signed_firmware_count": 1,
@@ -2722,6 +2771,7 @@
     {
       "id": "macos-release-14.0-23A344",
       "version": "14.0",
+      "version_label": "14.0",
       "build": "23A344",
       "released_at": "2023-09-26T17:15:05Z",
       "signed_firmware_count": 1,
@@ -2764,6 +2814,7 @@
     {
       "id": "macos-release-13.6-22G120",
       "version": "13.6",
+      "version_label": "13.6",
       "build": "22G120",
       "released_at": "2023-09-21T17:35:41Z",
       "signed_firmware_count": 1,
@@ -2806,6 +2857,7 @@
     {
       "id": "macos-release-13.5.2-22G91",
       "version": "13.5.2",
+      "version_label": "13.5.2",
       "build": "22G91",
       "released_at": "2023-09-07T18:00:00Z",
       "signed_firmware_count": 1,
@@ -2848,6 +2900,7 @@
     {
       "id": "macos-release-13.5.1-22G90",
       "version": "13.5.1",
+      "version_label": "13.5.1",
       "build": "22G90",
       "released_at": "2023-08-17T17:52:28Z",
       "signed_firmware_count": 1,
@@ -2890,6 +2943,7 @@
     {
       "id": "macos-release-13.5-22G74",
       "version": "13.5",
+      "version_label": "13.5",
       "build": "22G74",
       "released_at": "2023-07-24T17:31:31Z",
       "signed_firmware_count": 1,
@@ -2932,6 +2986,7 @@
     {
       "id": "macos-release-13.4.1-22F82",
       "version": "13.4.1",
+      "version_label": "13.4.1",
       "build": "22F82",
       "released_at": "2023-06-21T17:28:54Z",
       "signed_firmware_count": 1,
@@ -2970,6 +3025,7 @@
     {
       "id": "macos-release-13.4.1-22F2083",
       "version": "13.4.1",
+      "version_label": "13.4.1",
       "build": "22F2083",
       "released_at": "2023-06-21T17:28:54Z",
       "signed_firmware_count": 1,
@@ -2995,6 +3051,7 @@
     {
       "id": "macos-release-13.4-22F2073",
       "version": "13.4",
+      "version_label": "13.4",
       "build": "22F2073",
       "released_at": "2023-06-05T19:43:38Z",
       "signed_firmware_count": 1,
@@ -3020,6 +3077,7 @@
     {
       "id": "macos-release-13.4-22F66",
       "version": "13.4",
+      "version_label": "13.4",
       "build": "22F66",
       "released_at": "2023-05-18T17:20:36Z",
       "signed_firmware_count": 1,
@@ -3058,6 +3116,7 @@
     {
       "id": "macos-release-13.3.1-22E261",
       "version": "13.3.1",
+      "version_label": "13.3.1",
       "build": "22E261",
       "released_at": "2023-04-07T17:14:23Z",
       "signed_firmware_count": 1,
@@ -3096,6 +3155,7 @@
     {
       "id": "macos-release-13.3-22E252",
       "version": "13.3",
+      "version_label": "13.3",
       "build": "22E252",
       "released_at": "2023-03-27T17:24:26Z",
       "signed_firmware_count": 1,
@@ -3134,6 +3194,7 @@
     {
       "id": "macos-release-13.2.1-22D68",
       "version": "13.2.1",
+      "version_label": "13.2.1",
       "build": "22D68",
       "released_at": "2023-02-13T18:22:55Z",
       "signed_firmware_count": 1,
@@ -3172,6 +3233,7 @@
     {
       "id": "macos-release-13.2-22D49",
       "version": "13.2",
+      "version_label": "13.2",
       "build": "22D49",
       "released_at": "2023-01-23T18:46:52Z",
       "signed_firmware_count": 1,
@@ -3210,6 +3272,7 @@
     {
       "id": "macos-release-13.1-22C65",
       "version": "13.1",
+      "version_label": "13.1",
       "build": "22C65",
       "released_at": "2022-12-13T18:12:19Z",
       "signed_firmware_count": 1,
@@ -3242,6 +3305,7 @@
     {
       "id": "macos-release-13.0.1-22A400",
       "version": "13.0.1",
+      "version_label": "13.0.1",
       "build": "22A400",
       "released_at": "2022-11-09T18:07:06Z",
       "signed_firmware_count": 1,
@@ -3274,6 +3338,7 @@
     {
       "id": "macos-release-13.0-22A380",
       "version": "13.0",
+      "version_label": "13.0",
       "build": "22A380",
       "released_at": "2022-10-24T17:20:22Z",
       "signed_firmware_count": 1,
@@ -3306,6 +3371,7 @@
     {
       "id": "macos-release-12.6-21G115",
       "version": "12.6",
+      "version_label": "12.6",
       "build": "21G115",
       "released_at": "2022-09-12T17:17:27Z",
       "signed_firmware_count": 1,
@@ -3338,6 +3404,7 @@
     {
       "id": "macos-release-12.5.1-21G83",
       "version": "12.5.1",
+      "version_label": "12.5.1",
       "build": "21G83",
       "released_at": "2022-08-17T17:34:01Z",
       "signed_firmware_count": 1,
@@ -3370,6 +3437,7 @@
     {
       "id": "macos-release-12.5-21G72",
       "version": "12.5",
+      "version_label": "12.5",
       "build": "21G72",
       "released_at": "2022-07-20T17:35:26Z",
       "signed_firmware_count": 1,
@@ -3402,6 +3470,7 @@
     {
       "id": "macos-release-12.4-21F2092",
       "version": "12.4",
+      "version_label": "12.4",
       "build": "21F2092",
       "released_at": "2022-06-16T17:13:39Z",
       "signed_firmware_count": 1,
@@ -3425,6 +3494,7 @@
     {
       "id": "macos-release-12.4-21F2081",
       "version": "12.4",
+      "version_label": "12.4",
       "build": "21F2081",
       "released_at": "2022-06-14T17:21:09Z",
       "signed_firmware_count": 1,
@@ -3448,6 +3518,7 @@
     {
       "id": "macos-release-12.4-21F79",
       "version": "12.4",
+      "version_label": "12.4",
       "build": "21F79",
       "released_at": "2022-05-16T18:23:48Z",
       "signed_firmware_count": 1,
@@ -3478,6 +3549,7 @@
     {
       "id": "macos-release-12.3.1-21E258",
       "version": "12.3.1",
+      "version_label": "12.3.1",
       "build": "21E258",
       "released_at": "2022-03-31T17:25:26Z",
       "signed_firmware_count": 1,
@@ -3508,6 +3580,7 @@
     {
       "id": "macos-release-12.3-21E230",
       "version": "12.3",
+      "version_label": "12.3",
       "build": "21E230",
       "released_at": "2022-03-14T17:19:36Z",
       "signed_firmware_count": 1,
@@ -3538,6 +3611,7 @@
     {
       "id": "macos-release-12.2.1-21D62",
       "version": "12.2.1",
+      "version_label": "12.2.1",
       "build": "21D62",
       "released_at": "2022-02-10T18:25:00Z",
       "signed_firmware_count": 1,
@@ -3566,6 +3640,7 @@
     {
       "id": "macos-release-12.2-21D49",
       "version": "12.2",
+      "version_label": "12.2",
       "build": "21D49",
       "released_at": "2022-01-26T18:23:38Z",
       "signed_firmware_count": 1,
@@ -3594,6 +3669,7 @@
     {
       "id": "macos-release-12.1-21C52",
       "version": "12.1",
+      "version_label": "12.1",
       "build": "21C52",
       "released_at": "2021-12-13T18:34:13Z",
       "signed_firmware_count": 1,
@@ -3622,6 +3698,7 @@
     {
       "id": "macos-release-12.0.1-21A559",
       "version": "12.0.1",
+      "version_label": "12.0.1",
       "build": "21A559",
       "released_at": "2021-11-04T21:07:36Z",
       "signed_firmware_count": 1,
@@ -3650,6 +3727,7 @@
     {
       "id": "macos-release-11.6-20G165",
       "version": "11.6",
+      "version_label": "11.6",
       "build": "20G165",
       "released_at": "2021-09-17T19:17:05Z",
       "signed_firmware_count": 1,
@@ -3674,6 +3752,7 @@
     {
       "id": "macos-release-11.5.2-20G95",
       "version": "11.5.2",
+      "version_label": "11.5.2",
       "build": "20G95",
       "released_at": "2021-08-11T17:12:21Z",
       "signed_firmware_count": 1,
@@ -3698,6 +3777,7 @@
     {
       "id": "macos-release-11.5.1-20G80",
       "version": "11.5.1",
+      "version_label": "11.5.1",
       "build": "20G80",
       "released_at": "2021-07-26T17:20:44Z",
       "signed_firmware_count": 1,
@@ -3722,6 +3802,7 @@
     {
       "id": "macos-release-11.5-20G71",
       "version": "11.5",
+      "version_label": "11.5",
       "build": "20G71",
       "released_at": "2021-07-21T17:30:10Z",
       "signed_firmware_count": 1,
@@ -3746,6 +3827,7 @@
     {
       "id": "macos-release-11.4-20F71",
       "version": "11.4",
+      "version_label": "11.4",
       "build": "20F71",
       "released_at": "2021-05-24T17:25:31Z",
       "signed_firmware_count": 1,
@@ -3770,6 +3852,7 @@
     {
       "id": "macos-release-11.3.1-20E241",
       "version": "11.3.1",
+      "version_label": "11.3.1",
       "build": "20E241",
       "released_at": "2021-05-03T17:22:10Z",
       "signed_firmware_count": 1,
@@ -3794,6 +3877,7 @@
     {
       "id": "macos-release-11.3-20E232",
       "version": "11.3",
+      "version_label": "11.3",
       "build": "20E232",
       "released_at": "2021-04-26T17:48:28Z",
       "signed_firmware_count": 1,
@@ -3818,6 +3902,7 @@
     {
       "id": "macos-release-11.2.3-20D91",
       "version": "11.2.3",
+      "version_label": "11.2.3",
       "build": "20D91",
       "released_at": "2021-03-08T18:14:48Z",
       "signed_firmware_count": 1,
@@ -3842,6 +3927,7 @@
     {
       "id": "macos-release-11.2.2-20D80",
       "version": "11.2.2",
+      "version_label": "11.2.2",
       "build": "20D80",
       "released_at": "2021-02-25T18:06:29Z",
       "signed_firmware_count": 1,
@@ -3866,6 +3952,7 @@
     {
       "id": "macos-release-11.2.1-20D74",
       "version": "11.2.1",
+      "version_label": "11.2.1",
       "build": "20D74",
       "released_at": "2021-02-09T18:54:56Z",
       "signed_firmware_count": 1,
@@ -3890,6 +3977,7 @@
     {
       "id": "macos-release-11.2-20D64",
       "version": "11.2",
+      "version_label": "11.2",
       "build": "20D64",
       "released_at": "2021-02-01T18:38:14Z",
       "signed_firmware_count": 1,
@@ -3914,6 +4002,7 @@
     {
       "id": "macos-release-11.1-20C69",
       "version": "11.1",
+      "version_label": "11.1",
       "build": "20C69",
       "released_at": "2020-12-14T18:23:12Z",
       "signed_firmware_count": 1,
@@ -3938,6 +4027,7 @@
     {
       "id": "macos-release-11.0.1-20B29",
       "version": "11.0.1",
+      "version_label": "11.0.1",
       "build": "20B29",
       "released_at": "2020-11-18T00:32:40Z",
       "signed_firmware_count": 1,
@@ -3960,5 +4050,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-17T05:15:52+09:00"
+  "generated_at_tokyo": "2026-09-17T18:43:51+09:00"
 }

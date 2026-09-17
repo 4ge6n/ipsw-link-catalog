@@ -104,7 +104,7 @@ enum PortalCatalog {
             // iPad_Pro_M4_… — and Apple gives the identifier nowhere on the
             // page. The name without its version is the same as it was for the
             // build before, so what that one covered is what this one covers.
-            let named = self.identifiers(in: filename)
+            let named = Firmware.devices(in: filename)
             let devices = named.isEmpty ? identifiers.devices(for: filename) : named
             found.append(Firmware(id: "\(devices.first ?? filename)-\(build)", name: text(of: String(row[labelRange])),
                                   devices: devices, filename: filename, url: url,
@@ -112,20 +112,6 @@ enum PortalCatalog {
                                   sha1: nil, signed: true))
         }
         return found
-    }
-
-    /// iPhone19,2,iPhone19,3,iPhone19,7_27.2_24B5084k_Restore.ipsw
-    private static func identifiers(in filename: String) -> [String] {
-        let head = filename.split(separator: "_").first.map(String.init) ?? ""
-        return head.split(separator: ",").reduce(into: [String]()) { result, part in
-            // The split breaks "iPhone19,2" in half; the number rejoins the name.
-            if part.allSatisfy(\.isNumber), let last = result.last {
-                result[result.count - 1] = "\(last),\(part)"
-            } else {
-                result.append(String(part))
-            }
-        }
-        .filter { $0.contains(",") }
     }
 
     private static func platform(_ name: String) -> Platform? {

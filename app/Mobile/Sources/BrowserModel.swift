@@ -11,13 +11,6 @@ final class BrowserModel {
     private(set) var releases: [Release] = []
     /// The same builds, arranged major → point release → build.
     private(set) var tree: [VersionTree.Major] = []
-    /// Builds that shipped publicly. A build in the beta channel and not in
-    /// here is a pre-release — which is a fact rather than a guess about the
-    /// shape of its build number.
-    private(set) var public_: Set<String> = []
-    /// Apple's own wording for the builds it has announced lately: "beta 3",
-    /// "RC". Only the last few weeks, and never invented for the rest.
-    private(set) var wording: [String: String] = [:]
     private(set) var loading = false
     private(set) var failure: String?
 
@@ -30,7 +23,6 @@ final class BrowserModel {
 
     private let engine = SyncEngine()
     private let downloads = BackgroundDownloads.shared
-    private let feed = AppleFeed()
 
     func isRunning(_ firmware: Firmware) -> Bool {
         if case .downloading = transfer(for: firmware)?.state { return true }
@@ -72,25 +64,6 @@ final class BrowserModel {
             tree = []
             failure = error.localizedDescription
         }
-        // Both of these only add to what is shown, so neither is allowed to
-        // fail the load.
-        if channel == .beta, public_.isEmpty {
-            public_ = Set((try? await engine.everyBuild(platform, channel: .release))?.map(\.build) ?? [])
-        }
-        if wording.isEmpty, let announced = try? await feed.announcements() {
-            wording = Dictionary(announced.compactMap { announcement in
-                announcement.prerelease.map { (announcement.build, $0) }
-            }, uniquingKeysWith: { first, _ in first })
-        }
-    }
-
-    /// What to call one build, saying only what is known. Apple's own wording
-    /// where it has said it lately; "Pre-release" where all that is known is
-    /// that it never shipped; nothing where it did ship.
-    func label(for release: Release) -> String? {
-        if let said = wording[release.build] { return said }
-        guard channel == .beta, !public_.isEmpty, !public_.contains(release.build) else { return nil }
-        return String(localized: "Pre-release")
     }
 
     func refreshSaved() { saved = Library.contents() }

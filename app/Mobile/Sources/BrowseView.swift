@@ -76,7 +76,7 @@ struct BrowseView: View {
                 ForEach(group.versions) { version in
                     Section(version.name) {
                         ForEach(version.builds) { release in
-                            BuildRow(release: release, label: model.label(for: release))
+                            BuildRow(release: release)
                                 .tag(release.id)
                         }
                     }
@@ -103,15 +103,13 @@ struct BrowseView: View {
 
 private struct BuildRow: View {
     let release: Release
-    /// What Apple called it, where Apple has said so lately.
-    let label: String?
 
     var body: some View {
         HStack(spacing: 10) {
             VStack(alignment: .leading, spacing: 2) {
                 HStack(spacing: 6) {
                     Text(release.build).font(.body.monospaced())
-                    if let label {
+                    if let label = release.prerelease {
                         Text(label)
                             .font(.caption2)
                             .padding(.horizontal, 6).padding(.vertical, 1)
