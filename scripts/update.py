@@ -1,6 +1,7 @@
 """Atomically fetch, merge, generate, and validate the IPSW JSON catalog."""
 from __future__ import annotations
 import argparse, json, os, re, shutil, sys, tempfile
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
@@ -65,6 +66,34 @@ def learn_device_names(records, names) -> list[str]:
         DEVICE_NAMES.parent.mkdir(parents=True, exist_ok=True)
         DEVICE_NAMES.write_text(json.dumps(dict(sorted({**names, **learned}.items())), ensure_ascii=False, indent=2)+"\n")
     return sorted(learned)
+def refine_device_names(names, catalogue) -> dict[str, str]:
+    """Replace a name that was learned badly with one from the device catalogue.
+
+    A name learned from a page title is a guess at where the title ends; the
+    catalogue is a name. Two guesses went wrong often enough to matter: a title
+    trimmed at a hyphen left "iPad Pro 11" for "iPad Pro 11-inch", and several
+    different devices ended up sharing one name — six iPad Pros read alike.
+
+    Only those two cases are corrected, so a name that is already unique and
+    whole is never swapped for a differently-worded one:
+
+      * the catalogue's name merely continues ours, which was cut;
+      * ours is worn by more than one device, and so says nothing about any of
+        them — a MacBook Pro called "Mac Studio (M1 Max)" because that is what
+        the one image covering sixty Macs happened to be called.
+
+    A name that is already unique is never swapped for a differently-worded
+    one. That is what keeps a real name from being replaced by a stranger's.
+    """
+    shared = {name for name, count in Counter(names.values()).items() if count > 1}
+    changed = {}
+    for device, ours in names.items():
+        theirs = catalogue.get(device)
+        if not theirs or theirs == ours: continue
+        if theirs.startswith(ours) or ours in shared:
+            changed[device] = theirs
+    return changed
+
 def apply_device_names(records, names) -> None:
     for record in records:
         for firmware in record.get("firmwares", []):
@@ -179,6 +208,18 @@ def main():
             learned=sorted(set(learned) | set(found))
             apply_device_names(observed, device_names)
             unnamed=[device for device in unnamed if device not in found]
+    if not args.input:
+        # The catalogue is consulted for the names already held as well, not
+        # only for the devices with none: the first name a device is given is
+        # sometimes half of one, and it would otherwise be kept for ever.
+        try: catalogue=release.device_names(settings["request_timeout_seconds"])
+        except Exception: catalogue={}
+        refined=refine_device_names(device_names, catalogue)
+        if refined:
+            device_names.update(refined)
+            DEVICE_NAMES.write_text(json.dumps(dict(sorted(device_names.items())), ensure_ascii=False, indent=2)+"\n")
+            apply_device_names(observed, device_names)
+            print(json.dumps({"device_names_refined": len(refined)}))
     if learned or unnamed: print(json.dumps({"device_names_learned": learned, "devices_still_unnamed": unnamed}))
     # Public sources may include OTA/asset rows alongside IPSWs. They are
     # deliberately ignored; a syntactically valid IPSW on an unknown host is a
