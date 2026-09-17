@@ -114,14 +114,6 @@ enum PortalCatalog {
         return found
     }
 
-    /// iPad_Pro_M4_27.2_24B5084k_Restore.ipsw and the same image for every
-    /// other version share iPad_Pro_M4.
-    static func modelKey(of filename: String) -> String {
-        guard let expression = try? NSRegularExpression(pattern: #"_[0-9][^_]*_[A-Za-z0-9]+_Restore\.ipsw$"#) else { return filename }
-        let whole = NSRange(filename.startIndex..., in: filename)
-        return expression.stringByReplacingMatches(in: filename, range: whole, withTemplate: "")
-    }
-
     /// iPhone19,2,iPhone19,3,iPhone19,7_27.2_24B5084k_Restore.ipsw
     private static func identifiers(in filename: String) -> [String] {
         let head = filename.split(separator: "_").first.map(String.init) ?? ""

@@ -11,7 +11,12 @@ struct Firmware: Codable, Identifiable, Hashable {
     let signed: Bool
 
     /// iPhone18,5_27.0_24A437_Restore.ipsw and its other builds share this.
-    var modelKey: String {
+    var modelKey: String { Firmware.modelKey(of: filename) }
+
+    /// The name without its version and build. iPad_Pro_M4_27.2_24B5084k and
+    /// the same image for every other version share iPad_Pro_M4, which is what
+    /// lets one build say what another one covers.
+    static func modelKey(of filename: String) -> String {
         filename.replacing(#/_[0-9][^_]*_[A-Za-z0-9]+_Restore\.ipsw$/#, with: "")
     }
 

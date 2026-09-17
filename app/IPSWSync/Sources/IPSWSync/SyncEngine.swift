@@ -222,6 +222,6 @@ struct DeviceIndex: Sendable {
     }
 
     func devices(for filename: String) -> [String] {
-        byFilename[filename] ?? byModel[PortalCatalog.modelKey(of: filename)]?.devices ?? []
+        byFilename[filename] ?? byModel[Firmware.modelKey(of: filename)]?.devices ?? []
     }
 }

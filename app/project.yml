@@ -1,0 +1,154 @@
+# One project holding both apps. They are two targets rather than two projects
+# because they are mostly the same app: the catalog, the transfer engine, the
+# checksum record and the wording are one set of files, built into each.
+#
+# Generated with XcodeGen — `xcodegen generate --spec app/project.yml` — so the
+# project file stays something a person can read and a diff can explain.
+name: IPSW
+options:
+  bundleIdPrefix: com.github.4ge6n.ipsw-link-catalog
+  deploymentTarget:
+    macOS: "26.0"
+    iOS: "26.0"
+  createIntermediateGroups: true
+
+# Both apps read the same catalog, verify with the same code, and say the same
+# things in the same two languages.
+fileGroups:
+  - IPSWSync/Sources/IPSWSync
+  - Mobile/Sources
+
+targets:
+  IPSWSync:
+    type: application
+    platform: macOS
+    sources:
+      - path: IPSWSync/Sources/IPSWSync
+      - path: IPSWSync/Assets.xcassets
+      # Text("…") looks a string up in the main bundle and nowhere else, so the
+      # wording is carried as a resource rather than as a package's.
+      - path: IPSWSync/Localizations/en.lproj
+        buildPhase: resources
+      - path: IPSWSync/Localizations/ja.lproj
+        buildPhase: resources
+    info:
+      path: IPSWSync/Info.plist
+      properties:
+        CFBundleName: IPSW Sync
+        CFBundleDisplayName: IPSW Sync
+        CFBundleDevelopmentRegion: en
+        CFBundleLocalizations: [en, ja]
+        LSMinimumSystemVersion: "26.0"
+        NSHumanReadableCopyright: IPSW link catalog
+    preBuildScripts:
+      # The icon is drawn rather than checked in, so it stays editable as code.
+      # Drawn once; it is not redrawn on every build.
+      - name: Draw the app icon
+        script: |
+          icon="$SRCROOT/IPSWSync/Assets.xcassets/AppIcon.appiconset/AppIcon.png"
+          [ -f "$icon" ] || xcrun --sdk macosx swift \
+            "$SRCROOT/IPSWSync/icon/DrawIcon.swift" \
+            "$SRCROOT/IPSWSync/Assets.xcassets/AppIcon.appiconset" macos
+        outputFiles:
+          - $(SRCROOT)/IPSWSync/Assets.xcassets/AppIcon.appiconset/AppIcon.png
+        basedOnDependencyAnalysis: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.github.4ge6n.ipsw-link-catalog.IPSWSync
+        PRODUCT_NAME: IPSWSync
+        MARKETING_VERSION: "3.6"
+        CURRENT_PROJECT_VERSION: "160"
+        SWIFT_VERSION: "5.0"
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: FC3DBA48QG
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        # Not the Store version: it reads folders on any drive the person picks
+        # and links Finder's own restore folder at them, which a sandbox would
+        # forbid.
+        ENABLE_APP_SANDBOX: NO
+        ENABLE_HARDENED_RUNTIME: YES
+
+  IPSWBrowser:
+    type: application
+    platform: iOS
+    sources:
+      # The catalog and the transfer engine are the Mac app's own files, built
+      # straight into this target rather than copied or wrapped in a module.
+      - path: IPSWSync/Sources/IPSWSync/Catalog.swift
+      - path: IPSWSync/Sources/IPSWSync/SyncEngine.swift
+      - path: IPSWSync/Sources/IPSWSync/SyncEngine+Files.swift
+      - path: IPSWSync/Sources/IPSWSync/VerifiedStore.swift
+      - path: IPSWSync/Sources/IPSWSync/Transparency.swift
+      - path: Mobile/Sources
+      - path: Mobile/Assets.xcassets
+      # The same wording the Mac app is read in.
+      - path: IPSWSync/Localizations/en.lproj
+        buildPhase: resources
+      - path: IPSWSync/Localizations/ja.lproj
+        buildPhase: resources
+    info:
+      path: Mobile/Info.plist
+      properties:
+        # Written out rather than generated, because the generated one takes the
+        # name on the Home Screen from the product name and shows IPSWBrowser.
+        CFBundleName: IPSW Browser
+        CFBundleDisplayName: IPSW Browser
+        CFBundleDevelopmentRegion: en
+        CFBundleLocalizations: [en, ja]
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: true
+        UISupportedInterfaceOrientations~iphone:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        # Saved images land in the app's Documents folder, which the Files app
+        # then shows as a place of its own.
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+    preBuildScripts:
+      - name: Draw the app icon
+        script: |
+          icon="$SRCROOT/Mobile/Assets.xcassets/AppIcon.appiconset/AppIcon.png"
+          # The script draws with AppKit, so it is built for the Mac rather than
+          # for the SDK this target is being compiled against.
+          [ -f "$icon" ] || env -u SDKROOT -u PLATFORM_NAME \
+            -u IPHONEOS_DEPLOYMENT_TARGET -u MACOSX_DEPLOYMENT_TARGET \
+            xcrun --sdk macosx swift "$SRCROOT/IPSWSync/icon/DrawIcon.swift" \
+            "$SRCROOT/Mobile/Assets.xcassets/AppIcon.appiconset" ios
+        outputFiles:
+          - $(SRCROOT)/Mobile/Assets.xcassets/AppIcon.appiconset/AppIcon.png
+        basedOnDependencyAnalysis: false
+    entitlements:
+      path: Mobile/IPSWBrowser.entitlements
+      properties:
+        # Xcode swaps this for production when the build is signed for the
+        # store; development is what a build installed from here needs.
+        aps-environment: development
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.github.4ge6n.ipsw-link-catalog.IPSWBrowser
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SWIFT_VERSION: "5.0"
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: FC3DBA48QG
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+
+schemes:
+  IPSW Sync (Mac):
+    build:
+      targets: {IPSWSync: all}
+    run:
+      config: Debug
+  IPSW Browser (iPhone and iPad):
+    build:
+      targets: {IPSWBrowser: all}
+    run:
+      config: Debug

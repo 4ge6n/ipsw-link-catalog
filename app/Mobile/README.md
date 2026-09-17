@@ -8,20 +8,27 @@ app's own code, compiled straight into this target.
 
 ## Building
 
-The project is generated rather than checked in, so it never conflicts:
+Both apps are targets of one project, `app/IPSW.xcodeproj`, generated rather
+than checked in so it never conflicts:
 
 ```bash
 brew install xcodegen          # once
-cd app/Mobile && xcodegen generate
-open IPSWBrowser.xcodeproj
+cd app && xcodegen generate
+open IPSW.xcodeproj
 ```
+
+Two schemes: **IPSW Browser (iPhone and iPad)** and **IPSW Sync (Mac)**.
 
 Signing is left to you: pick your team under Signing & Capabilities the first
 time, and Xcode fills in the rest. Nothing here is tied to a particular account.
 
-`project.yml` is the source of truth. Edit that, not the generated project. The
-icon is drawn by the Mac app's own `DrawIcon.swift` on the first build, so
-neither it nor the generated project and Info.plist are checked in.
+`app/project.yml` is the source of truth. Edit that, not the generated project.
+The icon is drawn by `DrawIcon.swift` on the first build, so neither it nor the
+generated project and Info.plist are checked in.
+
+The Mac app is also built by `app/IPSWSync/build-app.sh` with SwiftPM, which is
+what the release workflow runs. The two are the same sources; the project is for
+working in Xcode, and the script is for producing the release.
 
 ## On iPad
 

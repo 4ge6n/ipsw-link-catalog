@@ -1,7 +1,10 @@
 // Draws the app icon at every size macOS asks for, and the single square iOS
 // asks for. iOS rounds and shadows the icon itself, so that one is drawn to the
 // edges with none of the plate macOS wants around it.
-// Run with: swift DrawIcon.swift <output directory> [ios]
+// Run with: swift DrawIcon.swift <output directory> [ios|macos]
+//
+// "ios" and "macos" write the single 1024 square an asset catalog wants; with
+// neither, it writes the whole set of sizes an .iconset is made of.
 import AppKit
 import CoreGraphics
 import ImageIO
@@ -106,8 +109,10 @@ func draw(size: CGFloat, fullBleed: Bool = false) -> CGImage {
 
 try? FileManager.default.createDirectory(at: outputDirectory, withIntermediateDirectories: true)
 
-if CommandLine.arguments.count > 2, CommandLine.arguments[2] == "ios" {
-    let image = draw(size: 1024, fullBleed: true)
+let single = CommandLine.arguments.count > 2 ? CommandLine.arguments[2] : ""
+if single == "ios" || single == "macos" {
+    // iOS rounds and shadows the icon itself; macOS wants the plate drawn in.
+    let image = draw(size: 1024, fullBleed: single == "ios")
     let url = outputDirectory.appending(path: "AppIcon.png")
     let destination = CGImageDestinationCreateWithURL(url as CFURL, "public.png" as CFString, 1, nil)!
     CGImageDestinationAddImage(destination, image, nil)
