@@ -17,6 +17,18 @@ const internal = async (path, init = {}) => {
   return response;
 };
 
+/// The relay answers unknown paths with its status rather than a 404, so a
+/// route that has not been deployed yet comes back 200 and looks like an
+/// answer. Say which field was missing, rather than failing later on a value
+/// that was never there.
+const listFrom = async (path, field) => {
+  const body = await (await internal(path)).json();
+  if (!Array.isArray(body[field])) {
+    throw new Error(`Worker ${path}: no "${field}" in the reply — is the relay deployed? Got: ${JSON.stringify(body).slice(0, 200)}`);
+  }
+  return body[field];
+};
+
 // A test run proves the delivery path without waiting for Apple to ship.
 const test = process.env.TEST_PUSH === "1";
 const builds = (() => {
@@ -38,7 +50,7 @@ const detail = test
     : "New Apple IPSW download links are available.";
 
 webpush.setVapidDetails("https://github.com/4ge6n", publicKey, privateKey);
-const { subscriptions } = await (await internal("/internal/subscriptions")).json();
+const subscriptions = await listFrom("/internal/subscriptions", "subscriptions");
 const payload = JSON.stringify({ title: headline, body: detail, url: "https://4ge6n.github.io/ipsw-link-catalog/" });
 
 let delivered = 0;
@@ -60,7 +72,7 @@ for (const subscription of subscriptions) {
 let phones = { delivered: 0, gone: [] };
 const key = process.env.APNS_KEY;
 if (key) {
-  const { devices } = await (await internal("/internal/device-tokens")).json();
+  const devices = await listFrom("/internal/device-tokens", "devices");
   phones = await deliver({
     devices,
     key,
