@@ -41,6 +41,8 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 private struct RootView: View {
+    /// Observed rather than read: a plain UserDefaults write notifies nobody.
+    @AppStorage("sawDisclosure") private var sawDisclosure = false
     @Environment(BrowserModel.self) private var model
 
     var body: some View {
@@ -59,9 +61,12 @@ private struct RootView: View {
         // The bar steps out of the way while a long list of builds is read.
         .tabBarMinimizeBehavior(.onScrollDown)
         // Said before anything is fetched, rather than when someone asks.
+        // Read through AppStorage rather than straight out of UserDefaults:
+        // writing a default notifies nobody, so the sheet stayed up after
+        // Continue was pressed and the app could not be reached at all.
         .sheet(isPresented: Binding(
-            get: { !UserDefaults.standard.bool(forKey: "sawDisclosure") },
-            set: { _ in }
+            get: { !sawDisclosure },
+            set: { if !$0 { sawDisclosure = true } }
         )) {
             TransparencyView(firstRun: true)
         }

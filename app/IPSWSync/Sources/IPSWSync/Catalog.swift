@@ -167,7 +167,8 @@ struct Catalog: Codable {
         let kept = releases.compactMap { release -> Release? in
             let firmwares = release.firmwares.filter(platform.covers)
             guard !firmwares.isEmpty else { return nil }
-            return Release(id: release.id, version: release.version, build: release.build,
+            return Release(id: release.id, version: release.version,
+                           versionLabel: release.versionLabel, build: release.build,
                            releasedAt: release.releasedAt, firmwares: firmwares)
         }
         return Catalog(os: os, osKey: osKey, generatedAt: generatedAt, releases: kept)

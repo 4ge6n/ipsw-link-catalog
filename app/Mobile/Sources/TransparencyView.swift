@@ -5,6 +5,7 @@ struct TransparencyView: View {
     /// Shown as a sheet the first time, and as a screen after that.
     var firstRun = false
     @Environment(\.dismiss) private var dismiss
+    @AppStorage("sawDisclosure") private var sawDisclosure = false
 
     var body: some View {
         NavigationStack {
@@ -43,7 +44,7 @@ struct TransparencyView: View {
                 if firstRun {
                     ToolbarItem(placement: .confirmationAction) {
                         Button("Continue") {
-                            UserDefaults.standard.set(true, forKey: "sawDisclosure")
+                            sawDisclosure = true
                             dismiss()
                         }
                         .buttonStyle(.borderedProminent)

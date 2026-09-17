@@ -151,3 +151,24 @@ struct ReleaseOrderTests {
         #expect(order == ["23A5276F", "23A5260U", "23A5260N"])
     }
 }
+
+struct CatalogFilteringTests {
+    /// Splitting a catalog per platform rebuilds each release, and a rebuild
+    /// that forgets a field loses it silently — the labels reached the app and
+    /// were thrown away one step later.
+    @Test func filteringKeepsWhatTheCatalogSaid() throws {
+        let json = """
+        {"os":"iOS","os_key":"ios","generated_at":"2026-09-17T00:00:00Z","releases":[
+          {"id":"a","version":"26.6","version_label":"26.6-beta-5","build":"23G5065A",
+           "released_at":null,"firmwares":[
+             {"id":"f","name":"iPhone 17","devices":["iPhone18,3"],
+              "filename":"iPhone18,3_26.6_23G5065A_Restore.ipsw",
+              "url":"https://updates.cdn-apple.com/x.ipsw","sha1":null,"signed":true}]}]}
+        """
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        let catalog = try decoder.decode(Catalog.self, from: Data(json.utf8))
+        #expect(catalog.releases[0].prerelease == "beta 5")
+        #expect(catalog.covering(.ios).releases[0].prerelease == "beta 5")
+    }
+}
