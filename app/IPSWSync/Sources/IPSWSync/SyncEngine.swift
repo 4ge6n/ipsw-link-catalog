@@ -200,10 +200,15 @@ struct DeviceIndex: Sendable {
     private var byFilename: [String: [String]] = [:]
     /// Failing that, what the name covered in the newest build that used it.
     private var byModel: [String: (devices: [String], at: Date)] = [:]
+    /// iPhone18,5 → "iPhone 17 Pro", for the sources that publish only the one.
+    private(set) var names: [String: String] = [:]
 
     mutating func add(_ firmware: Firmware, at moment: Date?) {
         guard !firmware.devices.isEmpty else { return }
         byFilename[firmware.filename] = firmware.devices
+        // Only an image for a single device says what that device is called;
+        // one covering four carries all four names at once.
+        if firmware.devices.count == 1 { names[firmware.devices[0]] = firmware.name }
         let when = moment ?? .distantPast
         if let held = byModel[firmware.modelKey], held.at >= when { return }
         byModel[firmware.modelKey] = (firmware.devices, when)
@@ -211,6 +216,7 @@ struct DeviceIndex: Sendable {
 
     /// Take the newer of two, name by name, rather than merging their devices.
     mutating func formUnion(_ other: DeviceIndex) {
+        names.merge(other.names) { mine, _ in mine }
         byFilename.merge(other.byFilename) { _, new in new }
         byModel.merge(other.byModel) { mine, theirs in mine.at >= theirs.at ? mine : theirs }
     }

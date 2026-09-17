@@ -22,16 +22,19 @@ enum Transparency {
     static let imageHosts = ["updates.cdn-apple.com", "secure-appldnld.apple.com", "appldnld.apple.com"]
     /// Only the iPhone and iPad app, and only while notifications are on.
     static let relayHost = "ipsw-link-catalog-feed-relay.shigelon.workers.dev"
+    /// Apple's own, read directly so a new build is known as it ships. Neither
+    /// needs an account; neither is told anything about you.
+    static let appleHosts = ["itunes.apple.com", "developer.apple.com"]
 
     static var mac: [Point] {
         [
             Point(symbol: "network",
                   title: String(localized: "What it connects to"),
-                  detail: String(format: String(localized: "The catalog at %1$@, Apple's own servers for the images themselves (%2$@), and GitHub to see whether a newer copy of this app exists."),
-                                 catalogHost, imageHosts.joined(separator: ", "))),
+                  detail: String(format: String(localized: "The catalog at %1$@; Apple's own releases feed and restore catalog (%2$@), read directly so a new build is known as it ships; Apple's servers for the images themselves (%3$@); and GitHub to see whether a newer copy of this app exists."),
+                                 catalogHost, appleHosts.joined(separator: ", "), imageHosts.joined(separator: ", "))),
             Point(symbol: "person.badge.key",
                   title: String(localized: "Your Apple Developer account, if you sign in"),
-                  detail: String(localized: "Signing in is optional and happens on Apple's own page, shown in a window. This app never sees your password. What it keeps afterwards is the session cookie Apple sets — the same one Safari would hold — used only to read Apple's downloads page and to fetch from it.")),
+                  detail: String(localized: "Signing in is optional, and everything except beta builds works without it. It happens on Apple's own page, shown in a window, and this app never sees your password. What it keeps afterwards is the session cookie Apple sets — the same one Safari would hold — used only to read Apple's downloads page and to fetch from it.")),
             Point(symbol: "hand.raised",
                   title: String(localized: "What it sends about you"),
                   detail: String(localized: "Nothing, to anyone but Apple. There is no account of ours, no identifier, and no analytics or telemetry of any kind in this app.")),

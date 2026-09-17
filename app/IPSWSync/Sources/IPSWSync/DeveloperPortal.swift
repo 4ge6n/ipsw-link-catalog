@@ -83,7 +83,7 @@ final class DeveloperPortal {
     }
 
     /// What Apple is offering this account, read from Apple's own page.
-    func downloads(resolvingWith engine: SyncEngine) async throws -> [PortalCatalog.Entry] {
+    func downloads(index: DeviceIndex) async throws -> [PortalCatalog.Entry] {
         busy = true
         defer { busy = false }
         let session = URLSession(configuration: await sessionConfiguration())
@@ -105,10 +105,6 @@ final class DeveloperPortal {
         lastResponse = saved
         // Apple names some images after the model and gives their identifiers
         // nowhere on the page. What each covered before is what it covers now.
-        var index = DeviceIndex()
-        for platform in Platform.allCases {
-            if let known = try? await engine.deviceIndex(platform) { index.formUnion(known) }
-        }
         let entries = PortalCatalog.parse(page, identifiers: index)
         guard !entries.isEmpty else { throw PortalError.nothingRecognised }
         return entries

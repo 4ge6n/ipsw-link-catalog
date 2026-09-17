@@ -255,3 +255,14 @@
 "Apple is now offering %1$@ (%2$@)." = "Apple が %1$@（%2$@）の配布を開始しました。";
 "Catalog" = "カタログ";
 "Apple Developer" = "Apple Developer";
+"%lld new build(s) from Apple" = "Apple から %lld 件の新しいビルド";
+"Build %@ — announced; no download yet." = "ビルド %@ — 公開告知のみ。ダウンロードはまだです。";
+"Apple announced %1$@ (%2$@); there is nothing to download yet." = "Apple が %1$@（%2$@）を告知しました。ダウンロードはまだありません。";
+"Could not read Apple's restore catalog." = "Apple の復元カタログを読み取れませんでした。";
+"Could not read Apple's releases feed." = "Apple のリリースフィードを読み取れませんでした。";
+"From Apple" = "Apple から直接";
+"New builds" = "新しいビルド";
+"Minute" = "1 分";
+"Apple's releases feed and restore catalog are read directly, so a build is known when it ships rather than when a catalog catches up. Betas are only listed on Apple's downloads page, which needs your developer account: you sign in on Apple's own page, and this app never sees your password — only the session Apple hands back." = "Apple のリリースフィードと復元カタログを直接読むため、カタログの更新を待たずにビルドを検知します。ベータは Apple のダウンロードページにしかなく、こちらはデベロッパーアカウントが必要です。サインインは Apple 自身のページで行われ、このアプリがパスワードを見ることはありません — 受け取るのは Apple が発行するセッションだけです。";
+"The catalog at %1$@; Apple's own releases feed and restore catalog (%2$@), read directly so a new build is known as it ships; Apple's servers for the images themselves (%3$@); and GitHub to see whether a newer copy of this app exists." = "%1$@ のカタログ、Apple 自身のリリースフィードと復元カタログ（%2$@。新しいビルドを公開と同時に検知するため直接読みます）、イメージ本体の取得元である Apple のサーバー（%3$@）、そしてこのアプリの新しい版があるかを確認するための GitHub。";
+"Signing in is optional, and everything except beta builds works without it. It happens on Apple's own page, shown in a window, and this app never sees your password. What it keeps afterwards is the session cookie Apple sets — the same one Safari would hold — used only to read Apple's downloads page and to fetch from it." = "サインインは任意で、ベータ以外はサインインなしで動作します。サインインはウインドウ内に表示される Apple 自身のページで行われ、このアプリがパスワードを見ることはありません。保持するのは Apple が設定するセッション Cookie（Safari が持つものと同じ）だけで、Apple のダウンロードページの読み取りと取得にのみ使われます。";

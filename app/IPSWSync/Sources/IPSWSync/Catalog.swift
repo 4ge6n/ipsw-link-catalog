@@ -97,6 +97,20 @@ enum Platform: String, CaseIterable, Identifiable, Codable {
     /// the folder a restore reads from is its own, so that is where they part.
     var catalogKey: String { self == .ipod ? Platform.ios.rawValue : rawValue }
 
+    /// Whether an image straight out of Apple's own restore catalog is this
+    /// platform's at all. That catalog carries the Apple TV, the HomePod and
+    /// the Watch alongside the rest, and none of them is a folder this app
+    /// keeps — so unlike `covers`, which sorts what the catalog has already
+    /// filtered, this decides whether it belongs here in the first place.
+    func owns(_ firmware: Firmware) -> Bool {
+        let prefix = switch self {
+        case .ios: "iPhone"
+        case .ipados: "iPad"
+        case .ipod: "iPod"
+        }
+        return !firmware.devices.isEmpty && firmware.devices.allSatisfy { $0.hasPrefix(prefix) }
+    }
+
     func covers(_ firmware: Firmware) -> Bool {
         let isPod = firmware.devices.contains { $0.hasPrefix("iPod") }
         switch self {
@@ -151,6 +165,8 @@ struct CatalogClient {
 
 enum SyncError: LocalizedError {
     case catalogUnavailable(Platform)
+    case appleCatalogUnavailable
+    case feedUnavailable
     case volumeNotMounted(String)
     case checksumMismatch(String)
     case http(Int, String)
@@ -159,6 +175,10 @@ enum SyncError: LocalizedError {
         switch self {
         case .catalogUnavailable(let platform):
             String(format: String(localized: "Could not read the %@ catalog."), platform.title)
+        case .appleCatalogUnavailable:
+            String(localized: "Could not read Apple's restore catalog.")
+        case .feedUnavailable:
+            String(localized: "Could not read Apple's releases feed.")
         case .volumeNotMounted(let volume):
             String(format: String(localized: "%@ is not mounted."), volume)
         case .checksumMismatch(let name):

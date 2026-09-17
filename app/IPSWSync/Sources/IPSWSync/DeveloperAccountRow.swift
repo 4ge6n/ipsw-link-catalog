@@ -7,7 +7,7 @@ struct DeveloperAccountRow: View {
     @Bindable private var settings = Settings.shared
     @State private var problem: String?
 
-    private var watch: PortalWatch { controller.portal }
+    private var watch: ReleaseWatch { controller.watch }
 
     var body: some View {
         LabeledContent("Apple Developer") {
@@ -26,23 +26,22 @@ struct DeveloperAccountRow: View {
         }
         .task { await portal.refreshSignedIn() }
 
-        if portal.signedIn {
-            Toggle("Tell me when Apple posts a build", isOn: $settings.portalWatch)
-                .onChange(of: settings.portalWatch) { watch.reschedule() }
-            if settings.portalWatch {
-                Picker("Look every", selection: $settings.portalMinutes) {
-                    Text("5 minutes").tag(5)
-                    Text("15 minutes").tag(15)
-                    Text("30 minutes").tag(30)
-                    Text("Hour").tag(60)
-                    Text("6 hours").tag(360)
-                }
-                .onChange(of: settings.portalMinutes) { watch.reschedule() }
+        Toggle("Tell me when Apple posts a build", isOn: $settings.portalWatch)
+            .onChange(of: settings.portalWatch) { watch.reschedule() }
+        if settings.portalWatch {
+            Picker("Look every", selection: $settings.portalMinutes) {
+                Text("Minute").tag(1)
+                Text("5 minutes").tag(5)
+                Text("15 minutes").tag(15)
+                Text("30 minutes").tag(30)
+                Text("Hour").tag(60)
+                Text("6 hours").tag(360)
             }
-            Toggle("Include beta and RC builds", isOn: $settings.portalIncludesBetas)
-            Toggle("Download what appears", isOn: $settings.portalFeedsSync)
-            summary
+            .onChange(of: settings.portalMinutes) { watch.reschedule() }
         }
+        Toggle("Include beta and RC builds", isOn: $settings.portalIncludesBetas)
+        Toggle("Download what appears", isOn: $settings.portalFeedsSync)
+        summary
         if let problem = problem ?? watch.failure {
             VStack(alignment: .leading, spacing: 4) {
                 Text(problem).font(.caption).foregroundStyle(.orange)
@@ -56,7 +55,7 @@ struct DeveloperAccountRow: View {
     }
 
     @ViewBuilder private var summary: some View {
-        let found = watch.entries
+        let found = watch.builds
         if !found.isEmpty {
             VStack(alignment: .leading, spacing: 2) {
                 Text(String(format: String(localized: "%1$lld build(s) and %2$lld restore image(s), %3$lld of them pre-release."),

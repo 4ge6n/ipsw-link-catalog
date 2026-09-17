@@ -30,9 +30,9 @@ struct ContentView: View {
                 Section {
                     DeveloperAccountRow()
                 } header: {
-                    Text("Apple Developer")
+                    Text("New builds")
                 } footer: {
-                    Text("Signing in reads Apple's downloads page directly, which carries builds before any catalog can. You sign in on Apple's own page — this app never sees your password, only the session Apple hands back.")
+                    Text("Apple's releases feed and restore catalog are read directly, so a build is known when it ships rather than when a catalog catches up. Betas are only listed on Apple's downloads page, which needs your developer account: you sign in on Apple's own page, and this app never sees your password — only the session Apple hands back.")
                         .font(.caption).foregroundStyle(.secondary)
                 }
                 Section("Devices") {

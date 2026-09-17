@@ -30,11 +30,11 @@ final class Settings {
     var showInMenuBar: Bool { didSet { write(showInMenuBar, "showInMenuBar") } }
     /// Watch Apple's own downloads page and say when something appears there.
     var portalWatch: Bool { didSet { write(portalWatch, "portalWatch") } }
-    /// How often to look, in minutes. Apple posts a build a few times a month,
-    /// so this is about being told within the hour rather than within seconds.
+    /// How often to look, in minutes. The feed sits in Apple's cache for five
+    /// of them, so asking faster than that is answered out of the same cache.
     var portalMinutes: Int {
         didSet {
-            let held = min(max(portalMinutes, 5), 24 * 60)
+            let held = min(max(portalMinutes, 1), 24 * 60)
             if held != portalMinutes { portalMinutes = held; return }
             write(portalMinutes, "portalMinutes")
         }
@@ -111,7 +111,7 @@ final class Settings {
         showInDock = defaults.object(forKey: "showInDock") as? Bool ?? true
         showInMenuBar = defaults.object(forKey: "showInMenuBar") as? Bool ?? true
         portalWatch = defaults.object(forKey: "portalWatch") as? Bool ?? true
-        portalMinutes = min(max(defaults.object(forKey: "portalMinutes") as? Int ?? 30, 5), 24 * 60)
+        portalMinutes = min(max(defaults.object(forKey: "portalMinutes") as? Int ?? 5, 1), 24 * 60)
         portalFeedsSync = defaults.object(forKey: "portalFeedsSync") as? Bool ?? true
         portalIncludesBetas = defaults.object(forKey: "portalIncludesBetas") as? Bool ?? true
         seenPortalBuilds = Set(defaults.stringArray(forKey: "seenPortalBuilds") ?? [])

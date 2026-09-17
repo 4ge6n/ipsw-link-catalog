@@ -8,13 +8,13 @@ struct BuildPicker: View {
     @Environment(\.dismiss) private var dismiss
 
     /// Where the list comes from. The catalog is every build ever published;
-    /// Apple's page is what it is offering this account right now, which is the
-    /// only place a build posted an hour ago can be found.
+    /// Apple is what it is offering this minute, which is the only place a
+    /// build posted an hour ago can be found.
     private enum Source: String, CaseIterable, Identifiable {
-        case catalog, portal
+        case catalog, live
         var id: String { rawValue }
         var title: String {
-            self == .catalog ? String(localized: "Catalog") : String(localized: "Apple Developer")
+            self == .catalog ? String(localized: "Catalog") : String(localized: "From Apple")
         }
     }
 
@@ -195,11 +195,10 @@ struct BuildPicker: View {
             switch source {
             case .catalog:
                 releases = try await controller.everyBuild(platform, channel: channel)
-            case .portal:
-                guard DeveloperPortal.shared.signedIn else { throw PortalError.signedOut }
-                releases = await controller.portalReleases(platform)
-                // The page answered, but not with anything for this platform.
-                if releases.isEmpty, let said = controller.portal.failure { failure = said }
+            case .live:
+                releases = await controller.liveReleases(platform)
+                // Something answered, but not with anything for this platform.
+                if releases.isEmpty, let said = controller.watch.failure { failure = said }
             }
             selectedRelease = releases.first?.id
             chosenDevices = []
