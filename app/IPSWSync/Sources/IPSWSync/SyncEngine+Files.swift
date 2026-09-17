@@ -93,8 +93,13 @@ extension SyncEngine {
         }
         // A server that ignores the range restarts the file, so the partial copy goes.
         let appending = offset > 0 && http.statusCode == 206
-        if !appending { try? FileManager.default.removeItem(at: destination) }
-        FileManager.default.createFile(atPath: destination.path(percentEncoded: false), contents: nil)
+        if !appending {
+            try? FileManager.default.removeItem(at: destination)
+            // Only then: createFile truncates whatever is already there, so
+            // calling it while resuming threw away everything already
+            // downloaded and kept nothing but the tail.
+            FileManager.default.createFile(atPath: destination.path(percentEncoded: false), contents: nil)
+        }
         let handle = try FileHandle(forWritingTo: destination)
         defer { try? handle.close() }
         if appending { try handle.seekToEnd() }
@@ -135,8 +140,16 @@ extension SyncEngine {
         return response.expectedContentLength > 0 ? response.expectedContentLength : 0
     }
 
+    /// How big the file is right now.
+    ///
+    /// Not through URL.resourceValues: a URL keeps the answers it has already
+    /// been given, so a file this app had just deleted still reported its old
+    /// size. The next download then asked for the bytes after the end of a
+    /// file that was not there, got an empty answer, and wrote an empty file
+    /// over the damaged one it was sent to replace.
     nonisolated func fileSize(_ url: URL) -> Int64? {
-        (try? url.resourceValues(forKeys: [.fileSizeKey]).fileSize).flatMap { $0 }.map(Int64.init)
+        let attributes = try? FileManager.default.attributesOfItem(atPath: url.path(percentEncoded: false))
+        return (attributes?[.size] as? NSNumber)?.int64Value
     }
 
     /// Hashing hundreds of gigabytes on every run is not affordable, so a file
