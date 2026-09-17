@@ -129,7 +129,13 @@ actor SyncEngine {
     }
 
     func everyBuild(_ platform: Platform, channel: Channel) async throws -> [Release] {
-        try await catalog.everyBuild(platform, channel: channel).releases
+        let releases = try await catalog.everyBuild(platform, channel: channel).releases
+        // The beta track carries the build that eventually shipped as well as
+        // the ones leading up to it. Asked for betas and release candidates,
+        // that is what comes back — a build Apple gave no beta or RC label is
+        // a release, and belongs in the other channel.
+        guard channel == .beta else { return releases }
+        return releases.filter { $0.prerelease != nil }
     }
 
     /// Fetch exactly what was asked for, leaving everything else alone.

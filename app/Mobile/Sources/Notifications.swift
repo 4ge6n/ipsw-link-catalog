@@ -11,6 +11,14 @@ import UserNotifications
 final class Notifications: NSObject {
     static let shared = Notifications()
 
+    private override init() {
+        let defaults = UserDefaults.standard
+        on = defaults.bool(forKey: "notificationsOn")
+        platforms = Set(defaults.stringArray(forKey: "notifyPlatforms") ?? [])
+        betas = defaults.bool(forKey: "notifyBetas")
+        super.init()
+    }
+
     private let relay = URL(string: "https://ipsw-link-catalog-feed-relay.shigelon.workers.dev")!
     private let defaults = UserDefaults.standard
 
@@ -19,20 +27,34 @@ final class Notifications: NSObject {
     private(set) var token: String?
     private(set) var failure: String?
 
+    /// These are stored and then written through, rather than read straight
+    /// out of UserDefaults on each access. Observation tracks stored
+    /// properties; a computed one reading defaults is invisible to it, so the
+    /// switch moved under the finger and sprang back — the setting did change,
+    /// and nothing on screen ever said so.
     var on: Bool {
-        get { defaults.bool(forKey: "notificationsOn") }
-        set { defaults.set(newValue, forKey: "notificationsOn"); Task { await apply() } }
+        didSet {
+            guard on != oldValue else { return }
+            defaults.set(on, forKey: "notificationsOn")
+            Task { await apply() }
+        }
     }
 
     /// Which platforms are worth waking the phone for. Empty means all of them.
     var platforms: Set<String> {
-        get { Set(defaults.stringArray(forKey: "notifyPlatforms") ?? []) }
-        set { defaults.set(Array(newValue).sorted(), forKey: "notifyPlatforms"); Task { await send() } }
+        didSet {
+            guard platforms != oldValue else { return }
+            defaults.set(Array(platforms).sorted(), forKey: "notifyPlatforms")
+            Task { await send() }
+        }
     }
 
     var betas: Bool {
-        get { defaults.bool(forKey: "notifyBetas") }
-        set { defaults.set(newValue, forKey: "notifyBetas"); Task { await send() } }
+        didSet {
+            guard betas != oldValue else { return }
+            defaults.set(betas, forKey: "notifyBetas")
+            Task { await send() }
+        }
     }
 
     func start() {

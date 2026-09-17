@@ -108,7 +108,11 @@ private struct BuildRow: View {
         HStack(spacing: 10) {
             VStack(alignment: .leading, spacing: 2) {
                 HStack(spacing: 6) {
-                    Text(release.build).font(.body.monospaced())
+                    // Not a monospaced face: a build number is a name, and a
+                    // list of names set in code type reads as output rather
+                    // than as something to choose from. Monospaced digits keep
+                    // the numbers lining up down the column.
+                    Text(release.build).font(.body.monospacedDigit())
                     if let label = release.prerelease {
                         Text(label)
                             .font(.caption2)
