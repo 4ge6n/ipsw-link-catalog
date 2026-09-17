@@ -48,7 +48,10 @@ def candidates_for_device(item: tuple[str, str, str], timeout: int) -> list[dict
         page = get_text(f"{BASE}/{PATHS[os_key]}/{track}/{identifier}", timeout)
     except Exception:
         return []
-    title = re.search(r"<title>\s*([^<–]+?)\s*[–-]", page, re.S)
+    # The separator is a dash with space around it. Written as a bare [–-] it
+    # also cut "iPad Pro 11-inch" down to "iPad Pro 11" and "Wi-Fi" to "Wi",
+    # and those truncations were then learned as the devices' names.
+    title = re.search(r"<title>\s*(.+?)\s+[–—-]\s+", page, re.S)
     name = html.unescape(title.group(1)).strip() if title else identifier
     candidates=[]
     for match in APPLE_URL.finditer(page):

@@ -19,7 +19,7 @@ struct ContentView: View {
                 } header: {
                     Text("Folders")
                 } footer: {
-                    Text("Each platform keeps to its own folder. One left unchosen is skipped, so a Mac that only holds iPhone images need choose only that.")
+                    Text("Each platform keeps to its own folder. One left unchosen is skipped, so a Mac that only holds iPhone images need choose only that. Finder has a name for each — “iPhone Software Updates” and the rest — and a folder called that works whether it is linked or simply put where Finder looks.")
                         .font(.caption).foregroundStyle(.secondary)
                 }
                 Section {
@@ -174,8 +174,25 @@ private struct FolderRow: View {
             }
             if let problem {
                 Text(problem).font(.caption).foregroundStyle(.orange)
+            } else if let mismatch {
+                Text(mismatch).font(.caption).foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
+    }
+
+    /// Said when the folder is not called what Finder calls it.
+    ///
+    /// Nothing is wrong: a link works whatever the folder underneath is named.
+    /// But a folder that already has Finder's name works whether it is linked
+    /// or simply sitting where Finder looks, and a drive full of them reads as
+    /// what it is. Worth saying once, quietly, rather than never.
+    private var mismatch: String? {
+        guard let folder = settings.folder(for: platform),
+              let wanted = StandardLocation.folderName(for: platform),
+              folder.lastPathComponent != wanted
+        else { return nil }
+        return String(format: String(localized: "Finder calls this folder %@."), wanted)
     }
 
     /// One pop-up naming the folder, rather than a truncated path and a row of
@@ -193,7 +210,9 @@ private struct FolderRow: View {
     @ViewBuilder private var chooser: some View {
         Menu {
             Button("Choose…") { choose() }
-            Button("New…") { create() }
+            // Named rather than "New…", so the one name that matters is on
+            // screen before the panel opens rather than only inside it.
+            Button(newFolderName) { create() }
             if let folder = settings.folder(for: platform) {
                 Divider()
                 Button("Show in Finder") {
@@ -209,6 +228,18 @@ private struct FolderRow: View {
         .help(settings.folder(for: platform)?.path(percentEncoded: false) ?? "")
     }
 
+    /// What the menu item says it will make.
+    private var newFolderName: String {
+        String(format: String(localized: "New \u{201C}%@\u{201D}…"), suggestedName)
+    }
+
+    /// Finder's own name where there is one, and the same shape of name where
+    /// there is not, so a drive laid out by hand reads consistently.
+    private var suggestedName: String {
+        StandardLocation.folderName(for: platform)
+            ?? String(format: String(localized: "%@ Software Updates"), platform.title)
+    }
+
     /// The folder's own name is what identifies it; the path it sits at is long,
     /// and is a thing to point at rather than to read.
     private var name: String {
@@ -221,7 +252,8 @@ private struct FolderRow: View {
         panel.canChooseFiles = false
         panel.canCreateDirectories = true
         panel.prompt = String(localized: "Use This Folder")
-        panel.message = String(format: String(localized: "Where %@ restore images should be kept"), platform.title)
+        panel.message = String(format: String(localized: "Where %1$@ restore images should be kept. Finder looks for a folder called \u{201C}%2$@\u{201D}, so one named that works whether it is linked or simply put where Finder looks."),
+                               platform.title, suggestedName)
         if panel.runModal() == .OK, let url = panel.url {
             problem = nil
             settings.setFolder(url, for: platform)
@@ -236,11 +268,11 @@ private struct FolderRow: View {
         panel.canCreateDirectories = true
         // Finder's own name where there is one, and the same shape of name
         // where there is not, so a drive laid out by hand reads consistently.
-        panel.nameFieldStringValue = StandardLocation.folderName(for: platform)
-            ?? String(format: String(localized: "%@ Software Updates"), platform.title)
+        panel.nameFieldStringValue = suggestedName
         panel.nameFieldLabel = String(localized: "Folder:")
         panel.prompt = String(localized: "Create")
-        panel.message = String(format: String(localized: "Create a folder for %@ restore images"), platform.title)
+        panel.message = String(format: String(localized: "Create a folder for %1$@ restore images. %2$@ is the name Finder itself uses; keeping it means the folder works whether it is linked or simply put where Finder looks."),
+                               platform.title, suggestedName)
         panel.directoryURL = settings.folder(for: platform)?.deletingLastPathComponent()
         guard panel.runModal() == .OK, let url = panel.url else { return }
         do {
