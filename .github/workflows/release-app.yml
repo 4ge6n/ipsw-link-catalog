@@ -60,5 +60,10 @@ jobs:
           git add app/appcast.json
           git diff --cached --quiet || {
             git commit -m "app: publish IPSW Sync ${{ inputs.version }}"
-            git push
+            # Anything pushed to main while this ran would otherwise reject
+            # this push and fail a release whose artifact is already up.
+            for attempt in 1 2 3; do
+              git push && break
+              git pull --rebase
+            done
           }
