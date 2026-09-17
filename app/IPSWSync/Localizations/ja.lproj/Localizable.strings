@@ -275,3 +275,6 @@
 "%@, for checksums Apple stops publishing" = "%@ — Apple が公開をやめたチェックサムの補完";
 "Apple publishes a checksum for a build only while it is still signing it; after that the download page still has the image but no checksum for it. This asks ipsw.me, by version number and nothing else — no identifier, no account, nothing about which devices you keep. Its answers match Apple's own wherever both have one. It can be turned off, and then those images are checked by size alone." = "Apple がチェックサムを公開するのは署名している間だけで、それ以降はダウンロードページにイメージは残ってもチェックサムはありません。そこで ipsw.me にバージョン番号だけを問い合わせます — 識別子もアカウントも、どのデバイスを保持しているかも送りません。両方に値がある範囲では Apple 自身の値と完全に一致することを確認済みです。オフにもでき、その場合これらのイメージはサイズのみで照合されます。";
 "Nothing, to anyone. Apple is told nothing but what any download tells it; %@ is told a version number. There is no account of ours, no identifier, and no analytics or telemetry of any kind in this app." = "誰にも送りません。Apple に伝わるのはダウンロードそのものから分かること以上ではなく、%@ に伝えるのはバージョン番号だけです。当方のアカウントも識別子も、解析・テレメトリの類も一切ありません。";
+"Pre-release" = "プレリリース";
+"Choose a version" = "バージョンを選択";
+"Its builds appear here." = "そのビルドがここに表示されます。";
