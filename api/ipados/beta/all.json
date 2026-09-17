@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-09-17T12:02:21Z",
+  "generated_at": "2026-09-17T20:17:08Z",
   "release_count": 431,
   "firmware_count": 4889,
   "releases": [
@@ -242,7 +242,7 @@
       "firmwares": [
         {
           "id": "ipados-beta-27.0-24A437-iPad8,10",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (2nd generation) Wi-Fi + Cellular",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -256,7 +256,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad17,1",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M5) Wi-Fi",
           "devices": [
             "iPad17,1",
             "iPad17,2",
@@ -270,7 +270,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad16,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,3",
             "iPad16,4",
@@ -284,7 +284,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad16,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -298,7 +298,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad16,1",
-          "name": "iPad mini (A17 Pro) Wi",
+          "name": "iPad mini (A17 Pro) Wi-Fi",
           "devices": [
             "iPad16,1",
             "iPad16,2"
@@ -310,7 +310,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad15,8",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi + Cellular",
           "devices": [
             "iPad15,8"
           ],
@@ -321,7 +321,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad15,7",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi",
           "devices": [
             "iPad15,7"
           ],
@@ -332,7 +332,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad15,3",
-          "name": "iPad Air 11",
+          "name": "iPad Air 11-inch (M3) Wi-Fi",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -346,7 +346,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad14,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
           "devices": [
             "iPad14,3",
             "iPad14,4",
@@ -360,7 +360,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad14,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
             "iPad14,10",
             "iPad14,11",
@@ -374,7 +374,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad14,1",
-          "name": "iPad mini (6th generation) Wi",
+          "name": "iPad mini (6th generation) Wi-Fi",
           "devices": [
             "iPad14,1",
             "iPad14,2"
@@ -386,7 +386,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad13,18",
-          "name": "iPad (10th generation) Wi",
+          "name": "iPad (10th generation) Wi-Fi",
           "devices": [
             "iPad13,18",
             "iPad13,19"
@@ -398,7 +398,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad13,16",
-          "name": "iPad Air (5th generation) Wi",
+          "name": "iPad Air (5th generation) Wi-Fi",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -410,7 +410,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad13,10",
-          "name": "iPad Pro 12.9",
+          "name": "iPad Pro 12.9-inch (5th generation) Wi-Fi + Cellular",
           "devices": [
             "iPad13,10",
             "iPad13,11",
@@ -428,7 +428,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad13,1",
-          "name": "iPad Air (4th generation) Wi",
+          "name": "iPad Air (4th generation) Wi-Fi",
           "devices": [
             "iPad13,1",
             "iPad13,2"
@@ -440,7 +440,7 @@
         },
         {
           "id": "ipados-beta-27.0-24A437-iPad12,1",
-          "name": "iPad (9th generation) Wi",
+          "name": "iPad (9th generation) Wi-Fi",
           "devices": [
             "iPad12,1",
             "iPad12,2"
@@ -464,7 +464,7 @@
       "firmwares": [
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad8,10",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (2nd generation) Wi-Fi + Cellular",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -478,7 +478,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad17,1",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M5) Wi-Fi",
           "devices": [
             "iPad17,1",
             "iPad17,2",
@@ -492,7 +492,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad16,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,3",
             "iPad16,4",
@@ -506,7 +506,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad16,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -520,7 +520,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad16,1",
-          "name": "iPad mini (A17 Pro) Wi",
+          "name": "iPad mini (A17 Pro) Wi-Fi",
           "devices": [
             "iPad16,1",
             "iPad16,2"
@@ -532,7 +532,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad15,8",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi + Cellular",
           "devices": [
             "iPad15,8"
           ],
@@ -543,7 +543,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad15,7",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi",
           "devices": [
             "iPad15,7"
           ],
@@ -554,7 +554,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad15,3",
-          "name": "iPad Air 11",
+          "name": "iPad Air 11-inch (M3) Wi-Fi",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -568,7 +568,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad14,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
           "devices": [
             "iPad14,3",
             "iPad14,4",
@@ -582,7 +582,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad14,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
             "iPad14,10",
             "iPad14,11",
@@ -596,7 +596,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad14,1",
-          "name": "iPad mini (6th generation) Wi",
+          "name": "iPad mini (6th generation) Wi-Fi",
           "devices": [
             "iPad14,1",
             "iPad14,2"
@@ -608,7 +608,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad13,18",
-          "name": "iPad (10th generation) Wi",
+          "name": "iPad (10th generation) Wi-Fi",
           "devices": [
             "iPad13,18",
             "iPad13,19"
@@ -620,7 +620,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad13,16",
-          "name": "iPad Air (5th generation) Wi",
+          "name": "iPad Air (5th generation) Wi-Fi",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -632,7 +632,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad13,10",
-          "name": "iPad Pro 12.9",
+          "name": "iPad Pro 12.9-inch (5th generation) Wi-Fi + Cellular",
           "devices": [
             "iPad13,10",
             "iPad13,11",
@@ -650,7 +650,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad13,1",
-          "name": "iPad Air (4th generation) Wi",
+          "name": "iPad Air (4th generation) Wi-Fi",
           "devices": [
             "iPad13,1",
             "iPad13,2"
@@ -662,7 +662,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-8-24A5430A-iPad12,1",
-          "name": "iPad (9th generation) Wi",
+          "name": "iPad (9th generation) Wi-Fi",
           "devices": [
             "iPad12,1",
             "iPad12,2"
@@ -686,7 +686,7 @@
       "firmwares": [
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad8,10",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (2nd generation) Wi-Fi + Cellular",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -700,7 +700,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad17,1",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M5) Wi-Fi",
           "devices": [
             "iPad17,1",
             "iPad17,2",
@@ -714,7 +714,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad16,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,3",
             "iPad16,4",
@@ -728,7 +728,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad16,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -742,7 +742,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad16,1",
-          "name": "iPad mini (A17 Pro) Wi",
+          "name": "iPad mini (A17 Pro) Wi-Fi",
           "devices": [
             "iPad16,1",
             "iPad16,2"
@@ -754,7 +754,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad15,8",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi + Cellular",
           "devices": [
             "iPad15,8"
           ],
@@ -765,7 +765,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad15,7",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi",
           "devices": [
             "iPad15,7"
           ],
@@ -776,7 +776,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad15,3",
-          "name": "iPad Air 11",
+          "name": "iPad Air 11-inch (M3) Wi-Fi",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -790,7 +790,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad14,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
           "devices": [
             "iPad14,3",
             "iPad14,4",
@@ -804,7 +804,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad14,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
             "iPad14,10",
             "iPad14,11",
@@ -818,7 +818,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad14,1",
-          "name": "iPad mini (6th generation) Wi",
+          "name": "iPad mini (6th generation) Wi-Fi",
           "devices": [
             "iPad14,1",
             "iPad14,2"
@@ -830,7 +830,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad13,18",
-          "name": "iPad (10th generation) Wi",
+          "name": "iPad (10th generation) Wi-Fi",
           "devices": [
             "iPad13,18",
             "iPad13,19"
@@ -842,7 +842,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad13,16",
-          "name": "iPad Air (5th generation) Wi",
+          "name": "iPad Air (5th generation) Wi-Fi",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -854,7 +854,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad13,10",
-          "name": "iPad Pro 12.9",
+          "name": "iPad Pro 12.9-inch (5th generation) Wi-Fi + Cellular",
           "devices": [
             "iPad13,10",
             "iPad13,11",
@@ -872,7 +872,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad13,1",
-          "name": "iPad Air (4th generation) Wi",
+          "name": "iPad Air (4th generation) Wi-Fi",
           "devices": [
             "iPad13,1",
             "iPad13,2"
@@ -884,7 +884,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-7-24A5424A-iPad12,1",
-          "name": "iPad (9th generation) Wi",
+          "name": "iPad (9th generation) Wi-Fi",
           "devices": [
             "iPad12,1",
             "iPad12,2"
@@ -908,7 +908,7 @@
       "firmwares": [
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad8,10",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (2nd generation) Wi-Fi + Cellular",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -922,7 +922,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad17,1",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M5) Wi-Fi",
           "devices": [
             "iPad17,1",
             "iPad17,2",
@@ -936,7 +936,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad16,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,3",
             "iPad16,4",
@@ -950,7 +950,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad16,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -964,7 +964,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad16,1",
-          "name": "iPad mini (A17 Pro) Wi",
+          "name": "iPad mini (A17 Pro) Wi-Fi",
           "devices": [
             "iPad16,1",
             "iPad16,2"
@@ -976,7 +976,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad15,8",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi + Cellular",
           "devices": [
             "iPad15,8"
           ],
@@ -987,7 +987,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad15,7",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi",
           "devices": [
             "iPad15,7"
           ],
@@ -998,7 +998,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad15,3",
-          "name": "iPad Air 11",
+          "name": "iPad Air 11-inch (M3) Wi-Fi",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -1012,7 +1012,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad14,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
           "devices": [
             "iPad14,3",
             "iPad14,4",
@@ -1026,7 +1026,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad14,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
             "iPad14,10",
             "iPad14,11",
@@ -1040,7 +1040,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad14,1",
-          "name": "iPad mini (6th generation) Wi",
+          "name": "iPad mini (6th generation) Wi-Fi",
           "devices": [
             "iPad14,1",
             "iPad14,2"
@@ -1052,7 +1052,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad13,18",
-          "name": "iPad (10th generation) Wi",
+          "name": "iPad (10th generation) Wi-Fi",
           "devices": [
             "iPad13,18",
             "iPad13,19"
@@ -1064,7 +1064,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad13,16",
-          "name": "iPad Air (5th generation) Wi",
+          "name": "iPad Air (5th generation) Wi-Fi",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -1076,7 +1076,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad13,10",
-          "name": "iPad Pro 12.9",
+          "name": "iPad Pro 12.9-inch (5th generation) Wi-Fi + Cellular",
           "devices": [
             "iPad13,10",
             "iPad13,11",
@@ -1094,7 +1094,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad13,1",
-          "name": "iPad Air (4th generation) Wi",
+          "name": "iPad Air (4th generation) Wi-Fi",
           "devices": [
             "iPad13,1",
             "iPad13,2"
@@ -1106,7 +1106,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-6-24A5418B-iPad12,1",
-          "name": "iPad (9th generation) Wi",
+          "name": "iPad (9th generation) Wi-Fi",
           "devices": [
             "iPad12,1",
             "iPad12,2"
@@ -1130,7 +1130,7 @@
       "firmwares": [
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad8,10",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (2nd generation) Wi-Fi + Cellular",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -1144,7 +1144,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad17,1",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M5) Wi-Fi",
           "devices": [
             "iPad17,1",
             "iPad17,2",
@@ -1158,7 +1158,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad16,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,3",
             "iPad16,4",
@@ -1172,7 +1172,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad16,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -1186,7 +1186,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad16,1",
-          "name": "iPad mini (A17 Pro) Wi",
+          "name": "iPad mini (A17 Pro) Wi-Fi",
           "devices": [
             "iPad16,1",
             "iPad16,2"
@@ -1198,7 +1198,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad15,8",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi + Cellular",
           "devices": [
             "iPad15,8"
           ],
@@ -1209,7 +1209,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad15,7",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi",
           "devices": [
             "iPad15,7"
           ],
@@ -1220,7 +1220,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad15,3",
-          "name": "iPad Air 11",
+          "name": "iPad Air 11-inch (M3) Wi-Fi",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -1234,7 +1234,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad14,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
           "devices": [
             "iPad14,3",
             "iPad14,4",
@@ -1248,7 +1248,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad14,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
             "iPad14,10",
             "iPad14,11",
@@ -1262,7 +1262,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad14,1",
-          "name": "iPad mini (6th generation) Wi",
+          "name": "iPad mini (6th generation) Wi-Fi",
           "devices": [
             "iPad14,1",
             "iPad14,2"
@@ -1274,7 +1274,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad13,18",
-          "name": "iPad (10th generation) Wi",
+          "name": "iPad (10th generation) Wi-Fi",
           "devices": [
             "iPad13,18",
             "iPad13,19"
@@ -1286,7 +1286,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad13,16",
-          "name": "iPad Air (5th generation) Wi",
+          "name": "iPad Air (5th generation) Wi-Fi",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -1298,7 +1298,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad13,10",
-          "name": "iPad Pro 12.9",
+          "name": "iPad Pro 12.9-inch (5th generation) Wi-Fi + Cellular",
           "devices": [
             "iPad13,10",
             "iPad13,11",
@@ -1316,7 +1316,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad13,1",
-          "name": "iPad Air (4th generation) Wi",
+          "name": "iPad Air (4th generation) Wi-Fi",
           "devices": [
             "iPad13,1",
             "iPad13,2"
@@ -1328,7 +1328,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-5-24A5408D-iPad12,1",
-          "name": "iPad (9th generation) Wi",
+          "name": "iPad (9th generation) Wi-Fi",
           "devices": [
             "iPad12,1",
             "iPad12,2"
@@ -1352,7 +1352,7 @@
       "firmwares": [
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad8,10",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (2nd generation) Wi-Fi + Cellular",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -1366,7 +1366,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad17,1",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M5) Wi-Fi",
           "devices": [
             "iPad17,1",
             "iPad17,2",
@@ -1380,7 +1380,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad16,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,3",
             "iPad16,4",
@@ -1394,7 +1394,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad16,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -1408,7 +1408,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad16,1",
-          "name": "iPad mini (A17 Pro) Wi",
+          "name": "iPad mini (A17 Pro) Wi-Fi",
           "devices": [
             "iPad16,1",
             "iPad16,2"
@@ -1420,7 +1420,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad15,8",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi + Cellular",
           "devices": [
             "iPad15,8"
           ],
@@ -1431,7 +1431,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad15,7",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi",
           "devices": [
             "iPad15,7"
           ],
@@ -1442,7 +1442,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad15,3",
-          "name": "iPad Air 11",
+          "name": "iPad Air 11-inch (M3) Wi-Fi",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -1456,7 +1456,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad14,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
           "devices": [
             "iPad14,3",
             "iPad14,4",
@@ -1470,7 +1470,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad14,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
             "iPad14,10",
             "iPad14,11",
@@ -1484,7 +1484,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad14,1",
-          "name": "iPad mini (6th generation) Wi",
+          "name": "iPad mini (6th generation) Wi-Fi",
           "devices": [
             "iPad14,1",
             "iPad14,2"
@@ -1496,7 +1496,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad13,18",
-          "name": "iPad (10th generation) Wi",
+          "name": "iPad (10th generation) Wi-Fi",
           "devices": [
             "iPad13,18",
             "iPad13,19"
@@ -1508,7 +1508,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad13,16",
-          "name": "iPad Air (5th generation) Wi",
+          "name": "iPad Air (5th generation) Wi-Fi",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -1520,7 +1520,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad13,10",
-          "name": "iPad Pro 12.9",
+          "name": "iPad Pro 12.9-inch (5th generation) Wi-Fi + Cellular",
           "devices": [
             "iPad13,10",
             "iPad13,11",
@@ -1538,7 +1538,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad13,1",
-          "name": "iPad Air (4th generation) Wi",
+          "name": "iPad Air (4th generation) Wi-Fi",
           "devices": [
             "iPad13,1",
             "iPad13,2"
@@ -1550,7 +1550,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-4-24A5390F-iPad12,1",
-          "name": "iPad (9th generation) Wi",
+          "name": "iPad (9th generation) Wi-Fi",
           "devices": [
             "iPad12,1",
             "iPad12,2"
@@ -1574,7 +1574,7 @@
       "firmwares": [
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad8,10",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (2nd generation) Wi-Fi + Cellular",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -1588,7 +1588,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad17,1",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M5) Wi-Fi",
           "devices": [
             "iPad17,1",
             "iPad17,2",
@@ -1602,7 +1602,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad16,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,3",
             "iPad16,4",
@@ -1616,7 +1616,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad16,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -1630,7 +1630,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad16,1",
-          "name": "iPad mini (A17 Pro) Wi",
+          "name": "iPad mini (A17 Pro) Wi-Fi",
           "devices": [
             "iPad16,1",
             "iPad16,2"
@@ -1642,7 +1642,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad15,8",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi + Cellular",
           "devices": [
             "iPad15,8"
           ],
@@ -1653,7 +1653,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad15,7",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi",
           "devices": [
             "iPad15,7"
           ],
@@ -1664,7 +1664,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad15,3",
-          "name": "iPad Air 11",
+          "name": "iPad Air 11-inch (M3) Wi-Fi",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -1678,7 +1678,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad14,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
           "devices": [
             "iPad14,3",
             "iPad14,4",
@@ -1692,7 +1692,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad14,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
             "iPad14,10",
             "iPad14,11",
@@ -1706,7 +1706,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad14,1",
-          "name": "iPad mini (6th generation) Wi",
+          "name": "iPad mini (6th generation) Wi-Fi",
           "devices": [
             "iPad14,1",
             "iPad14,2"
@@ -1718,7 +1718,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad13,18",
-          "name": "iPad (10th generation) Wi",
+          "name": "iPad (10th generation) Wi-Fi",
           "devices": [
             "iPad13,18",
             "iPad13,19"
@@ -1730,7 +1730,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad13,16",
-          "name": "iPad Air (5th generation) Wi",
+          "name": "iPad Air (5th generation) Wi-Fi",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -1742,7 +1742,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad13,10",
-          "name": "iPad Pro 12.9",
+          "name": "iPad Pro 12.9-inch (5th generation) Wi-Fi + Cellular",
           "devices": [
             "iPad13,10",
             "iPad13,11",
@@ -1760,7 +1760,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad13,1",
-          "name": "iPad Air (4th generation) Wi",
+          "name": "iPad Air (4th generation) Wi-Fi",
           "devices": [
             "iPad13,1",
             "iPad13,2"
@@ -1772,7 +1772,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380L-iPad12,1",
-          "name": "iPad (9th generation) Wi",
+          "name": "iPad (9th generation) Wi-Fi",
           "devices": [
             "iPad12,1",
             "iPad12,2"
@@ -1796,7 +1796,7 @@
       "firmwares": [
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad8,10",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (2nd generation) Wi-Fi + Cellular",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -1810,7 +1810,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad17,1",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M5) Wi-Fi",
           "devices": [
             "iPad17,1",
             "iPad17,2",
@@ -1824,7 +1824,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad16,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,3",
             "iPad16,4",
@@ -1838,7 +1838,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad16,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -1852,7 +1852,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad16,1",
-          "name": "iPad mini (A17 Pro) Wi",
+          "name": "iPad mini (A17 Pro) Wi-Fi",
           "devices": [
             "iPad16,1",
             "iPad16,2"
@@ -1864,7 +1864,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad15,8",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi + Cellular",
           "devices": [
             "iPad15,8"
           ],
@@ -1875,7 +1875,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad15,7",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi",
           "devices": [
             "iPad15,7"
           ],
@@ -1886,7 +1886,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad15,3",
-          "name": "iPad Air 11",
+          "name": "iPad Air 11-inch (M3) Wi-Fi",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -1900,7 +1900,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad14,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
           "devices": [
             "iPad14,3",
             "iPad14,4",
@@ -1914,7 +1914,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad14,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
             "iPad14,10",
             "iPad14,11",
@@ -1928,7 +1928,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad14,1",
-          "name": "iPad mini (6th generation) Wi",
+          "name": "iPad mini (6th generation) Wi-Fi",
           "devices": [
             "iPad14,1",
             "iPad14,2"
@@ -1940,7 +1940,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad13,18",
-          "name": "iPad (10th generation) Wi",
+          "name": "iPad (10th generation) Wi-Fi",
           "devices": [
             "iPad13,18",
             "iPad13,19"
@@ -1952,7 +1952,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad13,16",
-          "name": "iPad Air (5th generation) Wi",
+          "name": "iPad Air (5th generation) Wi-Fi",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -1964,7 +1964,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad13,10",
-          "name": "iPad Pro 12.9",
+          "name": "iPad Pro 12.9-inch (5th generation) Wi-Fi + Cellular",
           "devices": [
             "iPad13,10",
             "iPad13,11",
@@ -1982,7 +1982,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad13,1",
-          "name": "iPad Air (4th generation) Wi",
+          "name": "iPad Air (4th generation) Wi-Fi",
           "devices": [
             "iPad13,1",
             "iPad13,2"
@@ -1994,7 +1994,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-3-24A5380H-iPad12,1",
-          "name": "iPad (9th generation) Wi",
+          "name": "iPad (9th generation) Wi-Fi",
           "devices": [
             "iPad12,1",
             "iPad12,2"
@@ -2018,7 +2018,7 @@
       "firmwares": [
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad8,10",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (2nd generation) Wi-Fi + Cellular",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -2032,7 +2032,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad17,1",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M5) Wi-Fi",
           "devices": [
             "iPad17,1",
             "iPad17,2",
@@ -2046,7 +2046,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad16,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,3",
             "iPad16,4",
@@ -2060,7 +2060,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad16,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -2074,7 +2074,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad16,1",
-          "name": "iPad mini (A17 Pro) Wi",
+          "name": "iPad mini (A17 Pro) Wi-Fi",
           "devices": [
             "iPad16,1",
             "iPad16,2"
@@ -2086,7 +2086,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad15,8",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi + Cellular",
           "devices": [
             "iPad15,8"
           ],
@@ -2097,7 +2097,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad15,7",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi",
           "devices": [
             "iPad15,7"
           ],
@@ -2108,7 +2108,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad15,3",
-          "name": "iPad Air 11",
+          "name": "iPad Air 11-inch (M3) Wi-Fi",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -2122,7 +2122,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad14,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
           "devices": [
             "iPad14,3",
             "iPad14,4",
@@ -2136,7 +2136,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad14,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
             "iPad14,10",
             "iPad14,11",
@@ -2150,7 +2150,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad14,1",
-          "name": "iPad mini (6th generation) Wi",
+          "name": "iPad mini (6th generation) Wi-Fi",
           "devices": [
             "iPad14,1",
             "iPad14,2"
@@ -2162,7 +2162,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad13,18",
-          "name": "iPad (10th generation) Wi",
+          "name": "iPad (10th generation) Wi-Fi",
           "devices": [
             "iPad13,18",
             "iPad13,19"
@@ -2174,7 +2174,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad13,16",
-          "name": "iPad Air (5th generation) Wi",
+          "name": "iPad Air (5th generation) Wi-Fi",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -2186,7 +2186,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad13,10",
-          "name": "iPad Pro 12.9",
+          "name": "iPad Pro 12.9-inch (5th generation) Wi-Fi + Cellular",
           "devices": [
             "iPad13,10",
             "iPad13,11",
@@ -2204,7 +2204,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad13,1",
-          "name": "iPad Air (4th generation) Wi",
+          "name": "iPad Air (4th generation) Wi-Fi",
           "devices": [
             "iPad13,1",
             "iPad13,2"
@@ -2216,7 +2216,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-2-24A5370H-iPad12,1",
-          "name": "iPad (9th generation) Wi",
+          "name": "iPad (9th generation) Wi-Fi",
           "devices": [
             "iPad12,1",
             "iPad12,2"
@@ -2240,7 +2240,7 @@
       "firmwares": [
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad8,10",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (2nd generation) Wi-Fi + Cellular",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -2254,7 +2254,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad17,1",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M5) Wi-Fi",
           "devices": [
             "iPad17,1",
             "iPad17,2",
@@ -2268,7 +2268,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad16,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,3",
             "iPad16,4",
@@ -2282,7 +2282,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad16,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -2296,7 +2296,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad16,1",
-          "name": "iPad mini (A17 Pro) Wi",
+          "name": "iPad mini (A17 Pro) Wi-Fi",
           "devices": [
             "iPad16,1",
             "iPad16,2"
@@ -2308,7 +2308,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad15,8",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi + Cellular",
           "devices": [
             "iPad15,8"
           ],
@@ -2319,7 +2319,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad15,7",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi",
           "devices": [
             "iPad15,7"
           ],
@@ -2330,7 +2330,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad15,3",
-          "name": "iPad Air 11",
+          "name": "iPad Air 11-inch (M3) Wi-Fi",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -2344,7 +2344,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad14,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
           "devices": [
             "iPad14,3",
             "iPad14,4",
@@ -2358,7 +2358,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad14,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
             "iPad14,10",
             "iPad14,11",
@@ -2372,7 +2372,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad14,1",
-          "name": "iPad mini (6th generation) Wi",
+          "name": "iPad mini (6th generation) Wi-Fi",
           "devices": [
             "iPad14,1",
             "iPad14,2"
@@ -2384,7 +2384,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad13,18",
-          "name": "iPad (10th generation) Wi",
+          "name": "iPad (10th generation) Wi-Fi",
           "devices": [
             "iPad13,18",
             "iPad13,19"
@@ -2396,7 +2396,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad13,16",
-          "name": "iPad Air (5th generation) Wi",
+          "name": "iPad Air (5th generation) Wi-Fi",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -2408,7 +2408,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad13,10",
-          "name": "iPad Pro 12.9",
+          "name": "iPad Pro 12.9-inch (5th generation) Wi-Fi + Cellular",
           "devices": [
             "iPad13,10",
             "iPad13,11",
@@ -2426,7 +2426,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad13,1",
-          "name": "iPad Air (4th generation) Wi",
+          "name": "iPad Air (4th generation) Wi-Fi",
           "devices": [
             "iPad13,1",
             "iPad13,2"
@@ -2438,7 +2438,7 @@
         },
         {
           "id": "ipados-beta-27.0-beta-24A5355Q-iPad12,1",
-          "name": "iPad (9th generation) Wi",
+          "name": "iPad (9th generation) Wi-Fi",
           "devices": [
             "iPad12,1",
             "iPad12,2"
@@ -2462,7 +2462,7 @@
       "firmwares": [
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad8,10",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (2nd generation) Wi-Fi + Cellular",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -2476,7 +2476,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad17,1",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M5) Wi-Fi",
           "devices": [
             "iPad17,1",
             "iPad17,2",
@@ -2490,7 +2490,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad16,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,3",
             "iPad16,4",
@@ -2504,7 +2504,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad16,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M4) Wi-Fi",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -2518,7 +2518,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad16,1",
-          "name": "iPad mini (A17 Pro) Wi",
+          "name": "iPad mini (A17 Pro) Wi-Fi",
           "devices": [
             "iPad16,1",
             "iPad16,2"
@@ -2530,7 +2530,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad15,8",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi + Cellular",
           "devices": [
             "iPad15,8"
           ],
@@ -2541,7 +2541,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad15,7",
-          "name": "iPad (A16) Wi",
+          "name": "iPad (A16) Wi-Fi",
           "devices": [
             "iPad15,7"
           ],
@@ -2552,7 +2552,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad15,3",
-          "name": "iPad Air 11",
+          "name": "iPad Air 11-inch (M3) Wi-Fi",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -2566,7 +2566,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad14,3",
-          "name": "iPad Pro 11",
+          "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
           "devices": [
             "iPad14,3",
             "iPad14,4",
@@ -2580,7 +2580,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad14,10",
-          "name": "iPad Air 13",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
             "iPad14,10",
             "iPad14,11",
@@ -2594,7 +2594,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad14,1",
-          "name": "iPad mini (6th generation) Wi",
+          "name": "iPad mini (6th generation) Wi-Fi",
           "devices": [
             "iPad14,1",
             "iPad14,2"
@@ -2606,7 +2606,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad13,18",
-          "name": "iPad (10th generation) Wi",
+          "name": "iPad (10th generation) Wi-Fi",
           "devices": [
             "iPad13,18",
             "iPad13,19"
@@ -2618,7 +2618,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad13,16",
-          "name": "iPad Air (5th generation) Wi",
+          "name": "iPad Air (5th generation) Wi-Fi",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -2630,7 +2630,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad13,10",
-          "name": "iPad Pro 12.9",
+          "name": "iPad Pro 12.9-inch (5th generation) Wi-Fi + Cellular",
           "devices": [
             "iPad13,10",
             "iPad13,11",
@@ -2648,7 +2648,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad13,1",
-          "name": "iPad Air (4th generation) Wi",
+          "name": "iPad Air (4th generation) Wi-Fi",
           "devices": [
             "iPad13,1",
             "iPad13,2"
@@ -2660,7 +2660,7 @@
         },
         {
           "id": "ipados-beta-27.0-rc-24A435-iPad12,1",
-          "name": "iPad (9th generation) Wi",
+          "name": "iPad (9th generation) Wi-Fi",
           "devices": [
             "iPad12,1",
             "iPad12,2"
@@ -71968,5 +71968,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-17T21:02:21+09:00"
+  "generated_at_tokyo": "2026-09-18T05:17:08+09:00"
 }
