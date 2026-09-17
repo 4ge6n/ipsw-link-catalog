@@ -12,13 +12,18 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 0) {
             Form {
-                Section("Folders") {
+                Section {
                     ForEach(Platform.allCases) { platform in
                         FolderRow(platform: platform, settings: settings)
                     }
+                } header: {
+                    Text("Folders")
+                } footer: {
+                    Text("Each platform keeps to its own folder. One left unchosen is skipped, so a Mac that only holds iPhone images need choose only that.")
+                        .font(.caption).foregroundStyle(.secondary)
                 }
                 Section {
-                    ForEach(Platform.allCases) { platform in
+                    ForEach(StandardLocation.linkable) { platform in
                         StandardLocationRow(platform: platform, settings: settings)
                     }
                 } header: {
@@ -160,33 +165,48 @@ private struct FolderRow: View {
     @State private var problem: String?
 
     var body: some View {
-        LabeledContent(platform.title) {
-            HStack {
-                // One pop-up naming the folder, rather than a truncated path and
-                // a row of buttons beside it — which is how the system offers a
-                // place to put something everywhere else.
-                Menu {
-                    Button("Choose…") { choose() }
-                    Button("New…") { create() }
-                    if let folder = settings.folder(for: platform) {
-                        Divider()
-                        Button("Show in Finder") {
-                            NSWorkspace.shared.activateFileViewerSelecting([folder])
-                        }
-                        Button("Forget") { settings.setFolder(nil, for: platform) }
-                    }
-                } label: {
-                    Label(name, systemImage: settings.folder(for: platform) == nil ? "folder.badge.questionmark" : "folder")
+        VStack(alignment: .leading, spacing: 4) {
+            LabeledContent(platform.title) {
+                HStack(spacing: 8) {
+                    chooser
+                    Spacer(minLength: 0)
                 }
-                .menuStyle(.button)
-                .fixedSize()
-                .help(settings.folder(for: platform)?.path(percentEncoded: false) ?? "")
-                Spacer(minLength: 0)
+            }
+            if let problem {
+                Text(problem).font(.caption).foregroundStyle(.orange)
             }
         }
-        if let problem {
-            Text(problem).font(.caption).foregroundStyle(.orange)
+    }
+
+    /// One pop-up naming the folder, rather than a truncated path and a row of
+    /// buttons beside it — which is how the system offers a place to put
+    /// something everywhere else.
+    ///
+    /// Known defect: whichever platform is last in this section draws its
+    /// pop-up bordered and sits outside the section's background, while every
+    /// row above it is plain and inside it. It followed the iPod when the iPod
+    /// was last and follows the Mac now, so it is the position and not the
+    /// platform. The section beneath, built the same way, does not do it.
+    /// Pulling the menu out here, giving the section a header and a footer,
+    /// dropping `fixedSize`, and matching the neighbouring row's shape all left
+    /// it unchanged; the trigger is still unidentified.
+    @ViewBuilder private var chooser: some View {
+        Menu {
+            Button("Choose…") { choose() }
+            Button("New…") { create() }
+            if let folder = settings.folder(for: platform) {
+                Divider()
+                Button("Show in Finder") {
+                    NSWorkspace.shared.activateFileViewerSelecting([folder])
+                }
+                Button("Forget") { settings.setFolder(nil, for: platform) }
+            }
+        } label: {
+            Label(name, systemImage: settings.folder(for: platform) == nil ? "folder.badge.questionmark" : "folder")
         }
+        .menuStyle(.button)
+        .fixedSize()
+        .help(settings.folder(for: platform)?.path(percentEncoded: false) ?? "")
     }
 
     /// The folder's own name is what identifies it; the path it sits at is long,
@@ -214,7 +234,10 @@ private struct FolderRow: View {
     private func create() {
         let panel = NSSavePanel()
         panel.canCreateDirectories = true
+        // Finder's own name where there is one, and the same shape of name
+        // where there is not, so a drive laid out by hand reads consistently.
         panel.nameFieldStringValue = StandardLocation.folderName(for: platform)
+            ?? String(format: String(localized: "%@ Software Updates"), platform.title)
         panel.nameFieldLabel = String(localized: "Folder:")
         panel.prompt = String(localized: "Create")
         panel.message = String(format: String(localized: "Create a folder for %@ restore images"), platform.title)

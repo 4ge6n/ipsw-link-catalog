@@ -80,6 +80,9 @@ struct AppleFeed {
         switch name {
         case "iOS": .ios
         case "iPadOS": .ipados
+        case "tvOS": .tvos
+        case "visionOS": .visionos
+        case "macOS": .macos
         // macOS, tvOS, watchOS, visionOS, Xcode and the rest are announced here
         // too, and none of them is a folder this app keeps.
         default: nil

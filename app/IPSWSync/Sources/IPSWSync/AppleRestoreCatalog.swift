@@ -9,9 +9,12 @@ import Foundation
 /// so it learns the same thing twenty minutes later; this is here for the
 /// twenty minutes in between.
 ///
-/// It is six megabytes, which would be a rude thing to ask for every minute —
-/// so it is asked for conditionally. Nothing new means a reply of nothing at
-/// all, and polling it costs a round trip.
+/// It is six megabytes, which would be a rude thing to ask for every minute, so
+/// it is asked for two ways at once: conditionally, which often has Apple
+/// answer with nothing at all, and only when there is a reason to. Apple
+/// re-dates the object every few minutes even when its contents have not
+/// changed, so a conditional ask is a saving rather than a guarantee, and the
+/// header is no use as a signal that something is new.
 actor AppleRestoreCatalog {
     private let source = ProcessInfo.processInfo.environment["IPSW_APPLE_CATALOG"].flatMap(URL.init(string:))
         ?? URL(string: "https://itunes.apple.com/WebObjects/MZStore.woa/wa"
@@ -23,14 +26,13 @@ actor AppleRestoreCatalog {
 
     init(session: URLSession = .shared) { self.session = session }
 
-    /// True when Apple's catalog has changed since it was last read.
-    struct Reading: Sendable {
-        let releases: [Release]
-        let changed: Bool
-    }
+    /// When it was last actually read, so a caller can decide to leave it.
+    private var lastRead: Date?
 
-    /// Read it, or find out that there is nothing to read.
-    func read(naming names: [String: String] = [:]) async throws -> Reading {
+    /// Read it — unless it was read within `keepingFor`, in which case what was
+    /// read then is what comes back. `.zero` always asks.
+    func read(naming names: [String: String] = [:], keepingFor: TimeInterval = 0) async throws -> [Release] {
+        if !held.isEmpty, let lastRead, Date.now.timeIntervalSince(lastRead) < keepingFor { return held }
         var request = URLRequest(url: source)
         request.cachePolicy = .reloadIgnoringLocalCacheData
         request.timeoutInterval = 60
@@ -38,14 +40,15 @@ actor AppleRestoreCatalog {
         if let lastModified { request.setValue(lastModified, forHTTPHeaderField: "If-Modified-Since") }
         let (data, response) = try await session.data(for: request)
         guard let http = response as? HTTPURLResponse else { throw SyncError.appleCatalogUnavailable }
+        lastRead = .now
         // Unchanged. Apple sends no body at all, which is the point of asking
         // this way.
-        if http.statusCode == 304 { return Reading(releases: held, changed: false) }
+        if http.statusCode == 304 { return held }
         guard http.statusCode == 200 else { throw SyncError.appleCatalogUnavailable }
         let tree = try PropertyListSerialization.propertyList(from: data, format: nil)
         held = group(entries(in: tree).compactMap { firmware(from: $0, names: names) })
         lastModified = http.value(forHTTPHeaderField: "Last-Modified")
-        return Reading(releases: held, changed: true)
+        return held
     }
 
     /// What was read last, without asking again.

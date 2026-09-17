@@ -97,7 +97,7 @@ final class SyncController {
         var unreachable = 0
         // Asked once for the whole run rather than once per platform, since it
         // is one page covering all of them.
-        let fromApple = settings.portalFeedsSync ? await watch.look(announce: false) : []
+        let fromApple = settings.portalFeedsSync ? await watch.look(announce: false, force: true) : []
         for platform in Platform.allCases {
             guard let folder = settings.folder(for: platform) else {
                 note(.warning, String(format: String(localized: "No folder chosen for %@; skipped."), platform.title))
@@ -157,7 +157,7 @@ final class SyncController {
 
     /// Every build Apple is offering right now, as the picker wants them.
     func liveReleases(_ platform: Platform) async -> [Release] {
-        await watch.look(announce: false)
+        await watch.look(announce: false, force: true)
             .compactMap { build -> Release? in
                 let firmwares = build.firmwares(for: platform)
                 guard !firmwares.isEmpty else { return nil }

@@ -31,6 +31,9 @@ final class DeveloperPortal {
     private(set) var lastResponse: URL?
 
     private var window: NSWindow?
+    /// What the page last held, and when, so it need not be read every tick.
+    private var held: [PortalCatalog.Entry] = []
+    private var lastRead: Date?
 
     func refreshSignedIn() async {
         signedIn = await cookies().contains { $0.name == Self.sessionCookie }
@@ -74,6 +77,8 @@ final class DeveloperPortal {
         for cookie in HTTPCookieStorage.shared.cookies ?? [] where cookie.domain.contains("apple.com") {
             HTTPCookieStorage.shared.deleteCookie(cookie)
         }
+        held = []
+        lastRead = nil
         signedIn = false
     }
 
@@ -83,7 +88,10 @@ final class DeveloperPortal {
     }
 
     /// What Apple is offering this account, read from Apple's own page.
-    func downloads(index: DeviceIndex) async throws -> [PortalCatalog.Entry] {
+    func downloads(index: DeviceIndex, keepingFor: TimeInterval = 0) async throws -> [PortalCatalog.Entry] {
+        // The page is a hundred and seventy kilobytes and needs the session, so
+        // it is read when there is a reason to rather than on every tick.
+        if !held.isEmpty, let lastRead, Date.now.timeIntervalSince(lastRead) < keepingFor { return held }
         busy = true
         defer { busy = false }
         let session = URLSession(configuration: await sessionConfiguration())
@@ -107,6 +115,8 @@ final class DeveloperPortal {
         // nowhere on the page. What each covered before is what it covers now.
         let entries = PortalCatalog.parse(page, identifiers: index)
         guard !entries.isEmpty else { throw PortalError.nothingRecognised }
+        held = entries
+        lastRead = .now
         return entries
     }
 

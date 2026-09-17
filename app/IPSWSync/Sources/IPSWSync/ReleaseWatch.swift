@@ -53,9 +53,11 @@ final class ReleaseWatch {
 
     /// Ask Apple what it has. `announce` is what makes this a watch rather than
     /// a fetch: it is off for the look the interface asks for and for the one
-    /// the daily run makes, and on for the ones the timer makes.
+    /// the daily run makes, and on for the ones the timer makes. `force` reads
+    /// the heavy sources whether or not anything was announced, which is what
+    /// somebody pressing a button means by it.
     @discardableResult
-    func look(announce: Bool = true) async -> [Build] {
+    func look(announce: Bool = true, force: Bool = false) async -> [Build] {
         guard let controller, !looking else { return builds }
         looking = true
         defer { looking = false }
@@ -74,10 +76,17 @@ final class ReleaseWatch {
         } catch { trouble.append(error.localizedDescription) }
 
         let known = await identifiers(controller)
+        // A build named in the feed that nothing has files for is the reason to
+        // go and ask the two heavy sources. Without one, they are asked on a
+        // slower rhythm of their own, since Apple can start signing a build
+        // without announcing it.
+        let reason = force || announced.contains { !settings.seenPortalBuilds.contains($0.id) }
+        let keepingFor: TimeInterval = reason ? 0 : 30 * 60
+
         // Then the link and the checksum, if Apple has started signing it.
         do {
-            let reading = try await apple.read(naming: known.names)
-            for build in fromApple(reading.releases, announced: announced) {
+            let releases = try await apple.read(naming: known.names, keepingFor: keepingFor)
+            for build in fromApple(releases, announced: announced) {
                 found[build.id] = found[build.id]?.merged(with: build) ?? build
             }
         } catch { trouble.append(error.localizedDescription) }
@@ -86,7 +95,7 @@ final class ReleaseWatch {
         // the account, so it is only read when there is one.
         if DeveloperPortal.shared.signedIn {
             do {
-                for entry in try await DeveloperPortal.shared.downloads(index: known) {
+                for entry in try await DeveloperPortal.shared.downloads(index: known, keepingFor: keepingFor) {
                     let build = Build(platform: entry.platform, version: entry.version, build: entry.build,
                                       prerelease: entry.prerelease, at: entry.released,
                                       firmwares: entry.firmwares, source: .portal)

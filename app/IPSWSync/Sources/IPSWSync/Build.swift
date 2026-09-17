@@ -35,11 +35,12 @@ struct Build: Sendable, Hashable, Identifiable {
     /// Whether there is anything to fetch yet.
     var isDownloadable: Bool { !firmwares.isEmpty }
 
-    /// What of this belongs in a given platform's folder. Apple heads a row iOS
-    /// and puts the iPod touch images under it, as the catalog does.
+    /// What of this belongs in a given platform's folder. Every source heads a
+    /// release with one platform and puts more than one under it — the iPod
+    /// touch inside iOS, the HomePod inside tvOS — so it is the identifiers
+    /// that decide, not the heading.
     func firmwares(for wanted: Platform) -> [Firmware] {
-        guard platform.catalogKey == wanted.catalogKey else { return [] }
-        return firmwares.filter(wanted.covers)
+        firmwares.filter(wanted.owns)
     }
 
     /// The same build heard about twice. The one that can be downloaded wins,

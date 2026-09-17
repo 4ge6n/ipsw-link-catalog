@@ -12,21 +12,29 @@ enum StandardLocation {
     }
 
     /// Finder's name for each platform's folder, which is the whole point of
-    /// linking: it looks here and nowhere else.
-    static func folderName(for platform: Platform) -> String {
+    /// linking: it looks here and nowhere else. Nothing for the platforms
+    /// Finder does not restore — a Mac, a HomePod and a Vision Pro are
+    /// restored from somewhere else entirely, so there is no folder to point.
+    static func folderName(for platform: Platform) -> String? {
         switch platform {
         case .ios: "iPhone Software Updates"
         case .ipados: "iPad Software Updates"
         case .ipod: "iPod Software Updates"
+        case .tvos: "Apple TV Software Updates"
+        case .audioos, .visionos, .macos: nil
         }
     }
 
-    static func url(for platform: Platform, inside home: URL = .init(filePath: NSHomeDirectory())) -> URL {
-        home.appending(path: "Library/iTunes").appending(path: folderName(for: platform))
+    /// The platforms there is anything to link at all.
+    static var linkable: [Platform] { Platform.allCases.filter { folderName(for: $0) != nil } }
+
+    static func url(for platform: Platform, inside home: URL = .init(filePath: NSHomeDirectory())) -> URL? {
+        guard let name = folderName(for: platform) else { return nil }
+        return home.appending(path: "Library/iTunes").appending(path: name)
     }
 
     static func state(for platform: Platform, inside home: URL = .init(filePath: NSHomeDirectory())) -> State {
-        let path = url(for: platform, inside: home)
+        guard let path = url(for: platform, inside: home) else { return .missing }
         let manager = FileManager.default
         if let destination = try? manager.destinationOfSymbolicLink(atPath: path.path(percentEncoded: false)) {
             return .linked(to: URL(filePath: destination))
@@ -46,7 +54,7 @@ enum StandardLocation {
     /// then is the empty shell replaced.
     static func link(_ platform: Platform, to folder: URL,
                      inside home: URL = .init(filePath: NSHomeDirectory())) throws {
-        let path = url(for: platform, inside: home)
+        guard let path = url(for: platform, inside: home) else { throw LinkError.notLinkable }
         let manager = FileManager.default
         try manager.createDirectory(at: path.deletingLastPathComponent(), withIntermediateDirectories: true)
         switch state(for: platform, inside: home) {
@@ -70,7 +78,7 @@ enum StandardLocation {
     @discardableResult
     static func moveContentsThenLink(_ platform: Platform, to folder: URL,
                                      inside home: URL = .init(filePath: NSHomeDirectory())) throws -> (moved: Int, kept: [String]) {
-        let path = url(for: platform, inside: home)
+        guard let path = url(for: platform, inside: home) else { throw LinkError.notLinkable }
         let manager = FileManager.default
         try manager.createDirectory(at: folder, withIntermediateDirectories: true)
         var moved = 0
@@ -93,7 +101,7 @@ enum StandardLocation {
 
     /// Put an ordinary empty folder back where the link was.
     static func unlink(_ platform: Platform, inside home: URL = .init(filePath: NSHomeDirectory())) throws {
-        let path = url(for: platform, inside: home)
+        guard let path = url(for: platform, inside: home) else { throw LinkError.notLinkable }
         let manager = FileManager.default
         guard case .linked = state(for: platform, inside: home) else { throw LinkError.notLinked }
         try manager.removeItem(at: path)
@@ -106,6 +114,7 @@ enum LinkError: LocalizedError {
     case inTheWay(String)
     case wouldOverwrite([String])
     case notLinked
+    case notLinkable
 
     var errorDescription: String? {
         switch self {
@@ -116,6 +125,7 @@ enum LinkError: LocalizedError {
             String(format: String(localized: "%1$lld file(s) are already in the destination, so nothing was moved: %2$@"),
                    names.count, names.prefix(3).joined(separator: ", "))
         case .notLinked: String(localized: "The standard folder is not a link.")
+        case .notLinkable: String(localized: "Finder does not restore this platform, so there is no folder to point.")
         }
     }
 }

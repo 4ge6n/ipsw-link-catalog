@@ -13,6 +13,8 @@ struct StandardLocationRow: View {
     @State private var target: URL?
 
     var body: some View {
+        // One row, for the reason FolderRow gives.
+        VStack(alignment: .leading, spacing: 4) {
         LabeledContent(platform.title) {
             HStack(spacing: 8) {
                 action
@@ -28,11 +30,12 @@ struct StandardLocationRow: View {
             Button("Cancel", role: .cancel) {}
         } message: {
             Text(String(format: String(localized: "The files in %1$@ will be moved into %2$@, then Finder will be pointed at it."),
-                        StandardLocation.folderName(for: platform),
+                        StandardLocation.folderName(for: platform) ?? platform.title,
                         destination?.path(percentEncoded: false) ?? String(localized: "the folder you chose")))
         }
         if let problem {
             Text(problem).font(.caption).foregroundStyle(.orange)
+        }
         }
     }
 

@@ -121,11 +121,7 @@ final class Settings {
     /// Folders are kept as security-scoped bookmarks so access survives a relaunch.
     /// A path in the environment overrides one, for running without the interface.
     func folder(for platform: Platform) -> URL? {
-        let variable = switch platform {
-        case .ios: "IPSW_FOLDER_IOS"
-        case .ipados: "IPSW_FOLDER_IPADOS"
-        case .ipod: "IPSW_FOLDER_IPOD"
-        }
+        let variable = "IPSW_FOLDER_\(platform.rawValue.uppercased())"
         if let path = ProcessInfo.processInfo.environment[variable], !path.isEmpty {
             return URL(filePath: path)
         }

@@ -81,7 +81,7 @@ struct Catalog: Codable {
 
 /// The operating systems this app can keep a folder in step with.
 enum Platform: String, CaseIterable, Identifiable, Codable {
-    case ios, ipados, ipod
+    case ios, ipados, ipod, tvos, audioos, visionos, macos
 
     var id: String { rawValue }
 
@@ -90,6 +90,12 @@ enum Platform: String, CaseIterable, Identifiable, Codable {
         case .ios: "iOS"
         case .ipados: "iPadOS"
         case .ipod: "iPod"
+        case .tvos: "tvOS"
+        // Apple ships this inside tvOS and has never given it a name of its
+        // own in public, so it goes by the thing it runs on.
+        case .audioos: "HomePod"
+        case .visionos: "visionOS"
+        case .macos: "macOS"
         }
     }
 
@@ -97,27 +103,35 @@ enum Platform: String, CaseIterable, Identifiable, Codable {
     /// the folder a restore reads from is its own, so that is where they part.
     var catalogKey: String { self == .ipod ? Platform.ios.rawValue : rawValue }
 
-    /// Whether an image straight out of Apple's own restore catalog is this
-    /// platform's at all. That catalog carries the Apple TV, the HomePod and
-    /// the Watch alongside the rest, and none of them is a folder this app
-    /// keeps — so unlike `covers`, which sorts what the catalog has already
-    /// filtered, this decides whether it belongs here in the first place.
-    func owns(_ firmware: Firmware) -> Bool {
-        let prefix = switch self {
+    /// The identifiers that belong to this platform and no other. Every source
+    /// this app reads — the catalog, Apple's restore catalog, Apple's downloads
+    /// page — mixes platforms together under one heading: a tvOS release
+    /// carries the HomePod, an iOS one carries the iPod touch. The identifier
+    /// is the only thing that says which is which.
+    var prefix: String {
+        switch self {
         case .ios: "iPhone"
         case .ipados: "iPad"
         case .ipod: "iPod"
+        case .tvos: "AppleTV"
+        case .audioos: "AudioAccessory"
+        case .visionos: "RealityDevice"
+        // Mac14,3, MacBookPro18,1, Macmini9,1 — all of them.
+        case .macos: "Mac"
         }
-        return !firmware.devices.isEmpty && firmware.devices.allSatisfy { $0.hasPrefix(prefix) }
     }
 
+    /// Whether any part of an image is this platform's.
     func covers(_ firmware: Firmware) -> Bool {
-        let isPod = firmware.devices.contains { $0.hasPrefix("iPod") }
-        switch self {
-        case .ipod: return isPod
-        case .ios: return !isPod
-        case .ipados: return true
-        }
+        firmware.devices.contains { $0.hasPrefix(prefix) }
+    }
+
+    /// Whether an image straight out of Apple's own restore catalog is wholly
+    /// this platform's. That catalog hands over everything Apple restores at
+    /// once, so unlike `covers` — which sorts an image known to be somewhere in
+    /// this family — this decides whether it belongs here in the first place.
+    func owns(_ firmware: Firmware) -> Bool {
+        !firmware.devices.isEmpty && firmware.devices.allSatisfy { $0.hasPrefix(prefix) }
     }
 }
 

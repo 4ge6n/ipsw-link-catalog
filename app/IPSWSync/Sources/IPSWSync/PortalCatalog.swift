@@ -140,6 +140,9 @@ enum PortalCatalog {
         switch name {
         case "iOS": .ios
         case "iPadOS": .ipados
+        case "tvOS": .tvos
+        case "visionOS": .visionos
+        case "macOS": .macos
         // Apple stopped shipping iPod touch before it had a page of its own; it
         // rides along with iOS, as it does everywhere else.
         default: nil
