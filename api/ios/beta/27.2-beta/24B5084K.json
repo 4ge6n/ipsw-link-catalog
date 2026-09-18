@@ -10,14 +10,27 @@
   "sources": [
     {
       "name": "ipsw.dev",
-      "checked_at": "2026-09-18T04:25:56Z"
+      "checked_at": "2026-09-18T15:02:55Z"
     },
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-18T04:25:56Z"
+      "checked_at": "2026-09-18T15:02:55Z"
     }
   ],
   "firmwares": [
+    {
+      "name": "iPhone 13 Pro Max",
+      "devices": [
+        "iPhone14,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallSeed/07c1cdec-c676-442c-bc88-472297efd9a7/iPhone14,3_27.2_24B5084k_Restore.ipsw",
+      "filename": "iPhone14,3_27.2_24B5084k_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-16T20:15:52Z",
+        "unsigned_since": null
+      }
+    },
     {
       "name": "iPhone 11",
       "devices": [
@@ -105,19 +118,6 @@
       ],
       "url": "https://updates.cdn-apple.com/2026FallSeed/7ab0a37c-dc92-4dfa-9a71-2c5dc7bb8adf/iPhone14,2_27.2_24B5084k_Restore.ipsw",
       "filename": "iPhone14,2_27.2_24B5084k_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-16T20:15:52Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPhone 13 Pro Max",
-      "devices": [
-        "iPhone14,3"
-      ],
-      "url": "https://updates.cdn-apple.com/2026FallSeed/07c1cdec-c676-442c-bc88-472297efd9a7/iPhone14,3_27.2_24B5084k_Restore.ipsw",
-      "filename": "iPhone14,3_27.2_24B5084k_Restore.ipsw",
       "signing": {
         "status": "unknown",
         "checked_at": "2026-09-16T20:15:52Z",
@@ -414,5 +414,5 @@
     }
   ],
   "first_seen_at": "2026-09-16T20:15:52Z",
-  "last_seen_at": "2026-09-18T04:25:56Z"
+  "last_seen_at": "2026-09-18T15:02:55Z"
 }
