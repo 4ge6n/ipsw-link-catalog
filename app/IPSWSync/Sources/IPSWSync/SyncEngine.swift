@@ -74,7 +74,7 @@ actor SyncEngine {
     func sync(
         platform: Platform,
         into folder: URL,
-        devices: Set<String>,
+        devices: Set<String>?,
         /// Builds from Apple's own page, which the catalog may not carry yet.
         alongside extra: [Firmware] = [],
         prune: Bool,
@@ -91,7 +91,7 @@ actor SyncEngine {
         let known = Set(wanted.map(\.filename))
         wanted += extra.filter { firmware in
             !known.contains(firmware.filename)
-            && (devices.isEmpty || !devices.isDisjoint(with: firmware.devices))
+            && (devices.map { !$0.isDisjoint(with: firmware.devices) } ?? true)
         }
         guard !wanted.isEmpty else {
             await log(LogEntry(kind: .warning, message: String(localized: "No signed builds match the selected devices.")))
@@ -181,10 +181,14 @@ actor SyncEngine {
         }
     }
 
-    func wantedFirmwares(_ platform: Platform, devices: Set<String>) async throws -> [Firmware] {
+    /// `nil` means every device; an empty set means none. They used to be the
+    /// same value, so clearing the device list fetched the whole catalog.
+    func wantedFirmwares(_ platform: Platform, devices: Set<String>?) async throws -> [Firmware] {
         let document = try await catalog.latest(platform)
         return document.releases.flatMap(\.firmwares).filter { firmware in
-            firmware.signed && (devices.isEmpty || !devices.isDisjoint(with: firmware.devices))
+            guard firmware.signed else { return false }
+            guard let devices else { return true }
+            return !devices.isDisjoint(with: firmware.devices)
         }
     }
 

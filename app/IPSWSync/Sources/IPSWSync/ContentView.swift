@@ -293,8 +293,10 @@ private struct DeviceSummary: View {
     var body: some View {
         LabeledContent("Included") {
             HStack {
-                Text(settings.selectedDevices.isEmpty
+                Text(settings.everyDevice
                      ? String(localized: "Every device in the latest release")
+                     : settings.selectedDevices.isEmpty
+                       ? String(localized: "None")
                      : String(format: String(localized: "%lld selected"), settings.selectedDevices.count))
                 Spacer()
                 Button("Choose…") { showingDevices = true }

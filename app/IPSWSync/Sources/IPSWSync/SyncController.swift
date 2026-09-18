@@ -56,7 +56,7 @@ final class SyncController {
     func loadDevices() async {
         for platform in Platform.allCases {
             do {
-                knownDevices[platform] = try await engine.wantedFirmwares(platform, devices: [])
+                knownDevices[platform] = try await engine.wantedFirmwares(platform, devices: nil)
             } catch {
                 // Starting hidden closes the window, which cancels this; that is
                 // not something to report as a failure.
@@ -109,7 +109,7 @@ final class SyncController {
             do {
                 try await engine.sync(
                     platform: platform, into: folder,
-                    devices: settings.selectedDevices,
+                    devices: settings.everyDevice ? nil : settings.selectedDevices,
                     alongside: portalFirmwares(fromApple, for: platform),
                     prune: settings.prune,
                     concurrently: settings.maxConcurrent,
@@ -187,7 +187,7 @@ final class SyncController {
         defer { running = false }
         for platform in Platform.allCases {
             let wanted = portalFirmwares(fresh, for: platform).filter { firmware in
-                settings.selectedDevices.isEmpty
+                settings.everyDevice
                 || !settings.selectedDevices.isDisjoint(with: firmware.devices)
             }
             guard !wanted.isEmpty, let folder = settings.folder(for: platform) else { continue }

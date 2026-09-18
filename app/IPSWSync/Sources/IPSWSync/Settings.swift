@@ -8,6 +8,9 @@ final class Settings {
     static let shared = Settings()
 
     var selectedDevices: Set<String> { didSet { write(Array(selectedDevices).sorted(), "devices") } }
+    /// Said rather than inferred. An empty device list used to be read as
+    /// every device, so unticking the last box downloaded everything.
+    var everyDevice: Bool { didSet { write(everyDevice, "everyDevice") } }
     var prune: Bool { didSet { write(prune, "prune") } }
     /// Typed by hand, so it is held to something a connection can actually do.
     var maxConcurrent: Int {
@@ -98,7 +101,9 @@ final class Settings {
 
     private init() {
         let defaults = UserDefaults.standard
-        selectedDevices = Set(defaults.stringArray(forKey: "devices") ?? [])
+        let chosen = Set(defaults.stringArray(forKey: "devices") ?? [])
+        selectedDevices = chosen
+        everyDevice = defaults.object(forKey: "everyDevice") as? Bool ?? chosen.isEmpty
         prune = defaults.object(forKey: "prune") as? Bool ?? true
         maxConcurrent = min(max(defaults.object(forKey: "maxConcurrent") as? Int ?? 3, 1), 16)
         scheduleEnabled = defaults.bool(forKey: "scheduleEnabled")

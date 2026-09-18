@@ -172,3 +172,44 @@ struct CatalogFilteringTests {
         #expect(catalog.covering(.ios).releases[0].prerelease == "beta 5")
     }
 }
+
+/// What the device list is asked for is what is fetched. An empty selection
+/// used to be read as "every device", so clearing every box downloaded the
+/// whole catalog instead of nothing.
+struct ChoiceTests {
+    private let images = [
+        Firmware(id: "a", name: "iPhone 17e", devices: ["iPhone17,5"], filename: "a.ipsw",
+                 url: URL(string: "https://updates.cdn-apple.com/a.ipsw")!, sha1: nil, signed: true),
+        Firmware(id: "b", name: "iPad Air", devices: ["iPad16,8", "iPad16,10"], filename: "b.ipsw",
+                 url: URL(string: "https://updates.cdn-apple.com/b.ipsw")!, sha1: nil, signed: true)
+    ]
+
+    /// The same test the engine's filter applies.
+    private func wanted(_ devices: Set<String>?) -> [Firmware] {
+        images.filter { image in
+            guard image.signed else { return false }
+            guard let devices else { return true }
+            return !devices.isDisjoint(with: image.devices)
+        }
+    }
+
+    @Test func nothingChosenFetchesNothing() {
+        #expect(wanted([]).isEmpty)
+    }
+
+    @Test func everyDeviceFetchesEverything() {
+        #expect(wanted(nil).count == 2)
+    }
+
+    @Test func oneDeviceFetchesOnlyItsImage() {
+        #expect(wanted(["iPhone17,5"]).map(\.id) == ["a"])
+    }
+
+    /// Apple ships one file for several iPads, so asking for one of them
+    /// necessarily brings the others; the row names them all.
+    @Test func aSharedImageBringsTheDevicesItServes() {
+        let only = wanted(["iPad16,8"])
+        #expect(only.count == 1)
+        #expect(only[0].devices.contains("iPad16,10"))
+    }
+}

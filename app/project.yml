@@ -79,6 +79,7 @@ targets:
       - path: IPSWSync/Sources/IPSWSync/Supersession.swift
       - path: IPSWSync/Sources/IPSWSync/SyncEngine.swift
       - path: IPSWSync/Sources/IPSWSync/SyncEngine+Files.swift
+      - path: IPSWSync/Sources/IPSWSync/Receiver.swift
       - path: IPSWSync/Sources/IPSWSync/VerifiedStore.swift
       - path: IPSWSync/Sources/IPSWSync/Transparency.swift
       - path: Mobile/Sources
