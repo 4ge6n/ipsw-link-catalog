@@ -229,3 +229,21 @@ struct RoomTests {
         #expect(engine.hasRoom(for: tooBig, in: folder, alreadyHave: tooBig))
     }
 }
+
+struct StopTests {
+    /// Stop is two flags: one the actor reads between files, one the transfer
+    /// reads between chunks. Beginning a run cleared only the first, so the
+    /// transfer went on being told to stop — every download after the first
+    /// Stop of the session ended one chunk in, about ninety-seven kilobytes,
+    /// and said it would carry on next time.
+    @Test func stopDoesNotOutlastTheRunItStopped() async throws {
+        let engine = SyncEngine()
+        await engine.cancel()
+        #expect(await engine.isCancelled)
+        #expect(await engine.stopRequested())
+        // What sync and fetchChosen do before anything is fetched.
+        await engine.resetCancellation()
+        #expect(!(await engine.isCancelled))
+        #expect(!(await engine.stopRequested()))
+    }
+}

@@ -82,7 +82,7 @@ actor SyncEngine {
         report: @escaping @Sendable @MainActor (Transfer) -> Void,
         log: @escaping @Sendable @MainActor (LogEntry) -> Void
     ) async throws {
-        cancelled = false
+        resetCancellation()
         await log(LogEntry(kind: .info, message: "\(platform.title) → \(folder.path(percentEncoded: false))"))
         try checkVolume(folder)
         var wanted = try await wantedFirmwares(platform, devices: devices)
@@ -158,7 +158,7 @@ actor SyncEngine {
         report: @escaping @Sendable @MainActor (Transfer) -> Void,
         log: @escaping @Sendable @MainActor (LogEntry) -> Void
     ) async {
-        cancelled = false
+        resetCancellation()
         do { try checkVolume(folder) } catch {
             await log(LogEntry(kind: .bad, message: error.localizedDescription))
             return
