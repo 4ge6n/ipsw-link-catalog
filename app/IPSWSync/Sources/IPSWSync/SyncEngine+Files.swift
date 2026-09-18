@@ -6,6 +6,10 @@ extension SyncEngine {
     nonisolated func fetch(
         _ firmware: Firmware,
         into folder: URL,
+        /// What the run will delete once this one is here, so the room it is
+        /// about to give back counts as room. Nothing is reclaimed when the
+        /// run is not pruning, because then nothing is deleted.
+        reclaiming index: DeviceIndex? = nil,
         report: @escaping @Sendable @MainActor (Transfer) -> Void,
         log: @escaping @Sendable @MainActor (LogEntry) -> Void
     ) async {
@@ -45,7 +49,8 @@ extension SyncEngine {
             // Asked before a byte is fetched. Without this the run filled the
             // drive: every device Apple still signs is some two hundred images,
             // and nothing was counting them against the room left.
-            guard hasRoom(for: expected, in: folder, alreadyHave: onDisk ?? 0) else {
+            let reclaimable = index.map { reclaimableSpace(replacedBy: firmware, in: folder, using: $0) } ?? 0
+            guard hasRoom(for: expected, in: folder, alreadyHave: (onDisk ?? 0) + reclaimable) else {
                 let free = freeSpace(at: folder) ?? 0
                 transfer.state = .failed(String(localized: "not enough room"))
                 await report(transfer)
@@ -127,6 +132,19 @@ extension SyncEngine {
     /// size. The next download then asked for the bytes after the end of a
     /// file that was not there, got an empty answer, and wrote an empty file
     /// over the damaged one it was sent to replace.
+    /// What the builds this one replaces are taking up. Once it is here they
+    /// go, so what they hold is room this transfer may use — a drive with one
+    /// old copy of everything has room for a new copy of everything.
+    nonisolated func reclaimableSpace(replacedBy firmware: Firmware, in folder: URL,
+                                      using index: DeviceIndex) -> Int64 {
+        let contents = (try? FileManager.default.contentsOfDirectory(at: folder, includingPropertiesForKeys: nil)) ?? []
+        return contents
+            .filter { $0.pathExtension == "ipsw" }
+            .filter { Supersession.isReplaced($0.lastPathComponent, by: [firmware], using: index) }
+            .compactMap { fileSize($0) }
+            .reduce(0, +)
+    }
+
     /// How much room is left where these are being kept.
     nonisolated func freeSpace(at folder: URL) -> Int64? {
         let values = try? folder.resourceValues(forKeys: [.volumeAvailableCapacityForImportantUsageKey])

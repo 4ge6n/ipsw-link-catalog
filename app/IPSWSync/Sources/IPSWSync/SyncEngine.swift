@@ -99,13 +99,16 @@ actor SyncEngine {
         }
         // The actor only coordinates; the transfers themselves are nonisolated
         // so the chosen number of them genuinely run at once.
+        // Read once, and used twice: to decide what a new build replaces, and
+        // to count the room those will give back when it does.
+        let index = prune ? ((try? await deviceIndex(platform)) ?? DeviceIndex()) : nil
         var pending = wanted[...]
         await withTaskGroup(of: Void.self) { group in
             var running = 0
             while !cancelled, let firmware = pending.first {
                 pending = pending.dropFirst()
                 group.addTask { [self] in
-                    await fetch(firmware, into: folder, report: report, log: log)
+                    await fetch(firmware, into: folder, reclaiming: index, report: report, log: log)
                 }
                 running += 1
                 if running >= max(1, limit) {
@@ -118,8 +121,7 @@ actor SyncEngine {
         if prune, !cancelled {
             // What each image on the drive is for, so a build is replaced by
             // devices rather than by the name Apple happened to give the file.
-            let index = (try? await deviceIndex(platform)) ?? DeviceIndex()
-            await removeReplacedBuilds(in: folder, keeping: wanted, using: index, log: log)
+            await removeReplacedBuilds(in: folder, keeping: wanted, using: index ?? DeviceIndex(), log: log)
         }
     }
 

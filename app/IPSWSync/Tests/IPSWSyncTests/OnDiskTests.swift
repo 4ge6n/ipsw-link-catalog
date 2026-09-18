@@ -182,6 +182,28 @@ struct RoomTests {
         #expect(engine.hasRoom(for: free - SyncEngine.spareRoom, in: folder))
     }
 
+    /// The old build goes as soon as the new one is here, so what it is
+    /// holding is room the new one may use. A drive with one old copy of
+    /// everything has room for a new copy of everything, and refusing that was
+    /// refusing the whole point of the run.
+    @Test func theBuildAboutToBeReplacedCountsAsRoom() async throws {
+        let folder = URL.temporaryDirectory.appending(path: "room-\(UUID().uuidString)")
+        try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+        defer { try? FileManager.default.removeItem(at: folder) }
+        let old = folder.appending(path: "iPhone18,5_27.0_24A437_Restore.ipsw")
+        try Data(repeating: 0x41, count: 4096).write(to: old)
+        // Something else, for a device this one has nothing to do with.
+        try Data(repeating: 0x42, count: 4096).write(to: folder.appending(path: "iPhone18,4_27.0_24A437_Restore.ipsw"))
+
+        let engine = SyncEngine()
+        let newer = Firmware(id: "n", name: "iPhone 17e", devices: ["iPhone18,5"],
+                             filename: "iPhone18,5_27.2_24B5084k_Restore.ipsw",
+                             url: URL(string: "https://updates.cdn-apple.com/x.ipsw")!,
+                             sha1: nil, signed: true)
+        // Only the build it replaces, not the one beside it.
+        #expect(engine.reclaimableSpace(replacedBy: newer, in: folder, using: DeviceIndex()) == 4096)
+    }
+
     /// Replacing an image needs only the difference, not the whole of it.
     @Test func whatIsAlreadyThereCounts() async throws {
         let engine = SyncEngine()
