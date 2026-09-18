@@ -43,6 +43,9 @@ actor SyncEngine {
     private let catalog: CatalogClient
     let session: URLSession
     private var cancelled = false
+    /// The same answer, readable from the transfer's delegate, which is handed
+    /// chunks on a queue of URLSession's choosing and cannot await an actor.
+    private let stopped = Flag()
 
     init(catalog: CatalogClient = CatalogClient()) {
         self.catalog = catalog
@@ -53,12 +56,19 @@ actor SyncEngine {
         self.session = URLSession(configuration: configuration)
     }
 
-    func cancel() { cancelled = true }
+    func cancel() { cancelled = true; stopped.set(true) }
 
     /// Readable from the transfer itself, which runs outside the actor.
     var isCancelled: Bool { cancelled }
 
-    func resetCancellation() { cancelled = false }
+    func resetCancellation() { cancelled = false; stopped.set(false) }
+
+    /// Read by the delegate between chunks, so Stop reaches the transfer that
+    /// is actually running rather than only the gap before the next file.
+    nonisolated var stopRequested: @Sendable () -> Bool {
+        let flag = stopped
+        return { flag.value }
+    }
 
     /// Bring one folder in step with the newest signed builds for a platform.
     func sync(
@@ -233,4 +243,13 @@ struct DeviceIndex: Sendable {
     func devices(for filename: String) -> [String] {
         byFilename[filename] ?? byModel[Firmware.modelKey(of: filename)]?.devices ?? []
     }
+}
+
+
+/// A boolean two threads may look at.
+final class Flag: @unchecked Sendable {
+    private let lock = NSLock()
+    private var held = false
+    var value: Bool { lock.lock(); defer { lock.unlock() }; return held }
+    func set(_ newValue: Bool) { lock.lock(); held = newValue; lock.unlock() }
 }

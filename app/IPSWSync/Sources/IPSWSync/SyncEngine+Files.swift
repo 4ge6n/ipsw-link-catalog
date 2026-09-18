@@ -83,54 +83,21 @@ extension SyncEngine {
 
     /// Append to whatever is already on disk rather than starting over.
     nonisolated private func download(_ url: URL, to destination: URL, from offset: Int64,
-                          progress: @escaping (Int64) -> Void) async throws {
-        var request = URLRequest(url: url)
-        if offset > 0 { request.setValue("bytes=\(offset)-", forHTTPHeaderField: "Range") }
-        let (stream, response) = try await session.bytes(for: request)
-        guard let http = response as? HTTPURLResponse, (200...299).contains(http.statusCode) else {
-            let code = (response as? HTTPURLResponse)?.statusCode ?? 0
-            throw SyncError.http(code, destination.lastPathComponent)
-        }
-        // A server that ignores the range restarts the file, so the partial copy goes.
-        let appending = offset > 0 && http.statusCode == 206
-        if !appending {
-            try? FileManager.default.removeItem(at: destination)
-            // Only then: createFile truncates whatever is already there, so
-            // calling it while resuming threw away everything already
-            // downloaded and kept nothing but the tail.
-            FileManager.default.createFile(atPath: destination.path(percentEncoded: false), contents: nil)
-        }
-        let handle = try FileHandle(forWritingTo: destination)
-        defer { try? handle.close() }
-        if appending { try handle.seekToEnd() }
+                          progress: @escaping @Sendable (Int64) -> Void) async throws {
+        let receiver = Receiver(to: destination, from: offset,
+                                progress: progress, shouldStop: await stopRequested)
+        try await receiver.receive(url, using: Self.transferConfiguration)
+    }
 
-        var buffer = Data(capacity: 1 << 20)
-        var written: Int64 = appending ? offset : 0
-        var lastReport = Date.distantPast
-        for try await byte in stream {
-            buffer.append(byte)
-            if buffer.count >= 1 << 20 {
-                try handle.write(contentsOf: buffer)
-                written += Int64(buffer.count)
-                buffer.removeAll(keepingCapacity: true)
-                if Date.now.timeIntervalSince(lastReport) > 0.2 {
-                    lastReport = .now
-                    progress(written)
-                }
-                // Asked once a megabyte rather than once a byte. Stop had been
-                // read only between files, so it did nothing at all to the one
-                // transfer a person was actually watching.
-                if await isCancelled {
-                    progress(written)
-                    throw CancellationError()
-                }
-            }
-        }
-        if !buffer.isEmpty {
-            try handle.write(contentsOf: buffer)
-            written += Int64(buffer.count)
-        }
-        progress(written)
+    /// The same settings the rest of the app uses, minus the cache: a ten
+    /// gigabyte image has nothing to gain from being remembered.
+    nonisolated static var transferConfiguration: URLSessionConfiguration {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 60
+        configuration.timeoutIntervalForResource = 24 * 60 * 60
+        configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
+        configuration.urlCache = nil
+        return configuration
     }
 
     nonisolated private func contentLength(_ url: URL) async throws -> Int64 {
