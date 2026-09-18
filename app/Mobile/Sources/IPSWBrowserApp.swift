@@ -60,6 +60,9 @@ private struct RootView: View {
         }
         // The bar steps out of the way while a long list of builds is read.
         .tabBarMinimizeBehavior(.onScrollDown)
+        // Above the tab bar on every tab, because a transfer belongs to the
+        // app rather than to the screen it was started from.
+        .safeAreaInset(edge: .bottom) { ActivityBar() }
         // Said before anything is fetched, rather than when someone asks.
         // Read through AppStorage rather than straight out of UserDefaults:
         // writing a default notifies nobody, so the sheet stayed up after

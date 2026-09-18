@@ -121,12 +121,22 @@ struct ActivityPane: View {
                 }
                 .listStyle(.inset)
                 .frame(height: activityHeight)
-                ResizeHandle(height: $activityHeight, lowest: 60, highest: 600)
             }
             // The log is the record, not the work, so it gets a strip rather
             // than half the window — and it keeps its own scroll, newest first.
             if !controller.log.isEmpty {
-                Divider()
+                // The handle is the line between the two, and it moves that
+                // line: what is above it grows as what is below it shrinks.
+                // It used to sit under the log, at the very bottom of the
+                // window, where dragging it down asked for room that is not
+                // there — the place it was in had nothing to do with the edge
+                // it moved.
+                if !active.isEmpty || queued > 0 {
+                    SplitHandle(above: $activityHeight, below: $logHeight,
+                                leastAbove: 60, leastBelow: 40)
+                } else {
+                    Divider()
+                }
                 ScrollView {
                     LazyVStack(alignment: .leading, spacing: 2) {
                         ForEach(controller.log.suffix(200).reversed()) { entry in
@@ -145,7 +155,6 @@ struct ActivityPane: View {
                 }
                 .frame(height: logHeight)
                 .background(.quaternary.opacity(0.25))
-                ResizeHandle(height: $logHeight, lowest: 40, highest: 500)
             }
         }
         .background(
@@ -161,22 +170,25 @@ struct ActivityPane: View {
     }
 }
 
-/// A divider that can be dragged. The one above it grows and shrinks; nothing
-/// else moves, so the window itself stays the size it was put at.
-private struct ResizeHandle: View {
-    @Binding var height: Double
-    let lowest: Double
-    let highest: Double
-    @State private var startedAt: Double?
+/// The line between the transfer list and the log, which can be dragged.
+///
+/// Whatever it takes from one it gives to the other, so the pair keeps the
+/// height it had and the edge that moves is the one under the cursor.
+private struct SplitHandle: View {
+    @Binding var above: Double
+    @Binding var below: Double
+    let leastAbove: Double
+    let leastBelow: Double
+    @State private var startedAt: (above: Double, below: Double)?
 
     var body: some View {
         ZStack {
             Rectangle().fill(.quaternary).frame(height: 1)
             // A one-point line is not something anyone can catch with a mouse.
-            Rectangle().fill(.clear).frame(height: 9).contentShape(.rect)
-            Capsule().fill(.tertiary).frame(width: 26, height: 3)
+            Rectangle().fill(.clear).frame(height: 10).contentShape(.rect)
+            Capsule().fill(.tertiary).frame(width: 28, height: 3)
         }
-        .frame(height: 9)
+        .frame(height: 10)
         .onHover { inside in
             // The cursor is what says it can be dragged at all.
             if inside { NSCursor.resizeUpDown.push() } else { NSCursor.pop() }
@@ -184,9 +196,15 @@ private struct ResizeHandle: View {
         .gesture(
             DragGesture(minimumDistance: 1)
                 .onChanged { move in
-                    let from = startedAt ?? height
+                    let from = startedAt ?? (above, below)
                     if startedAt == nil { startedAt = from }
-                    height = min(max(from + move.translation.height, lowest), highest)
+                    // Clamped on both sides before either is written, so the
+                    // pair always adds up to what it did before the drag.
+                    let total = from.above + from.below
+                    let wanted = min(max(from.above + move.translation.height, leastAbove),
+                                     total - leastBelow)
+                    above = wanted
+                    below = total - wanted
                 }
                 .onEnded { _ in startedAt = nil }
         )
