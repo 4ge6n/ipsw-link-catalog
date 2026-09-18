@@ -66,10 +66,7 @@ extension SyncEngine {
                 transfer.startedAt = .now
                 transfer.state = .downloading
                 await report(transfer)
-                try await download(firmware.url, to: destination, from: transfer.resumedFrom) { received in
-                    transfer.received = received
-                    Task { @MainActor in report(transfer) }
-                }
+                try await carryOn(firmware, to: destination, from: &transfer, report: report, log: log)
                 transfer.state = .verifying
                 await report(transfer)
                 guard let sha1 = firmware.sha1 else { break }
@@ -97,6 +94,52 @@ extension SyncEngine {
             await report(transfer)
             await log(LogEntry(kind: .bad, message: error.localizedDescription))
         }
+    }
+
+    /// Fetch it, and pick it up again if the connection gives out.
+    ///
+    /// A twelve gigabyte transfer is minutes long, and a connection that
+    /// drops once in those minutes used to end it: the whole file was marked
+    /// failed and left for the next day's run. What has arrived is on disk
+    /// already, so carrying on from it costs nothing — and a transfer that is
+    /// still making progress is not one to give up on.
+    nonisolated private func carryOn(
+        _ firmware: Firmware,
+        to destination: URL,
+        from transfer: inout Transfer,
+        report: @escaping @Sendable @MainActor (Transfer) -> Void,
+        log: @escaping @Sendable @MainActor (LogEntry) -> Void
+    ) async throws {
+        var lastFailure: Error?
+        for attempt in 1...4 {
+            var held = transfer
+            do {
+                try await download(firmware.url, to: destination, from: held.resumedFrom) { received in
+                    held.received = received
+                    Task { @MainActor in report(held) }
+                }
+                transfer = held
+                return
+            } catch is CancellationError {
+                transfer = held
+                throw CancellationError()
+            } catch {
+                lastFailure = error
+                let sofar = fileSize(destination) ?? 0
+                // Nothing arrived this time either: the connection is not
+                // coming back within this run.
+                guard attempt < 4 else { break }
+                await log(LogEntry(kind: .warning, message: String(format: String(localized: "%1$@ stopped at %2$@; carrying on from there"),
+                                                                   firmware.filename,
+                                                                   ByteCountFormatter.string(fromByteCount: sofar, countStyle: .file))))
+                try? await Task.sleep(for: .seconds(Double(attempt) * 2))
+                if await isCancelled { throw CancellationError() }
+                transfer.resumedFrom = sofar
+                transfer.received = sofar
+                transfer.startedAt = .now
+            }
+        }
+        throw lastFailure ?? SyncError.http(0, firmware.filename)
     }
 
     /// Append to whatever is already on disk rather than starting over.
