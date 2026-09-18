@@ -247,8 +247,11 @@ struct DeviceIndex: Sendable {
     }
 
     func devices(for filename: String) -> [String] {
-        byFilename[filename] ?? byModel[Firmware.modelKey(of: filename)]?.devices ?? []
+        exact(filename) ?? byModel[Firmware.modelKey(of: filename)]?.devices ?? []
     }
+
+    /// The catalog's own answer for this very file, where it has one.
+    func exact(_ filename: String) -> [String]? { byFilename[filename] }
 }
 
 

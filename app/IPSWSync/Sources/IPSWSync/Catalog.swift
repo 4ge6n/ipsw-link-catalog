@@ -42,8 +42,15 @@ struct Firmware: Codable, Identifiable, Hashable {
                 result.append(String(part))
             }
         }
-        .filter { $0.contains(",") }
+        // A name is only read as an identifier when it is one. Apple has
+        // shipped iPad_7,5_iPad_7,6_11.3_… , which splits into "5_iPad_7,6" —
+        // a device that does not exist, and which was then believed over the
+        // catalog, so the file was never matched to anything again.
+        .filter { (try? Firmware.identifier.wholeMatch(in: $0)) != nil }
     }
+
+    /// iPhone19,2 and nothing else shaped roughly like it.
+    static let identifier = #/^[A-Za-z][A-Za-z0-9]*[0-9]+,[0-9]+$/#
 
     /// The highest identifier this image covers, as the three parts that
     /// order it. The highest rather than the first, so an image covering a

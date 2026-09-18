@@ -213,3 +213,53 @@ struct ChoiceTests {
         #expect(only[0].devices.contains("iPad16,10"))
     }
 }
+
+/// The awkward names Apple has actually shipped, taken from its catalog.
+struct RealNameTests {
+    private func firmware(_ filename: String, _ devices: [String]) -> Firmware {
+        Firmware(id: filename, name: devices[0], devices: devices, filename: filename,
+                 url: URL(string: "https://updates.cdn-apple.com/\(filename)")!, sha1: nil, signed: true)
+    }
+
+    private func index(_ firmwares: [Firmware]) -> DeviceIndex {
+        var built = DeviceIndex()
+        for firmware in firmwares { built.add(firmware, at: nil) }
+        return built
+    }
+
+    /// The GSM iPhone X. Apple names the file for iPhone10,6 alone and
+    /// restores the global iPhone10,3 with it, so the name undercounts.
+    @Test func aFileNamedForOneHalfOfAPairCoversBoth() {
+        let real = firmware("iPhone10,6_11.2.6_15D100_Restore.ipsw", ["iPhone10,3", "iPhone10,6"])
+        let found = Supersession.devices(of: real.filename, using: index([real]))
+        #expect(Set(found) == ["iPhone10,3", "iPhone10,6"])
+    }
+
+    /// iPad_7,5_iPad_7,6 splits into "5_iPad_7,6", which is not a device.
+    @Test func aNameThatIsNotAnIdentifierIsNotReadAsOne() {
+        #expect(Firmware.devices(in: "iPad_7,5_iPad_7,6_11.3_15E216_Restore.ipsw").isEmpty)
+    }
+
+    @Test func thatSameNameIsStillResolvedThroughTheCatalog() {
+        let real = firmware("iPad_7,5_iPad_7,6_11.3_15E216_Restore.ipsw", ["iPad7,5"])
+        #expect(Supersession.devices(of: real.filename, using: index([real])) == ["iPad7,5"])
+    }
+
+    /// The combined iPhone 18 Pro image must still be read from its name, for
+    /// a file the catalog has moved on from.
+    @Test func identifiersInANameAreStillReadWhenTheCatalogHasMovedOn() {
+        #expect(Firmware.devices(in: "iPhone19,2,iPhone19,3,iPhone19,7_27.2_24B5084k_Restore.ipsw")
+                == ["iPhone19,2", "iPhone19,3", "iPhone19,7"])
+    }
+
+    /// And the GSM pair's older build must be deletable once the newer one,
+    /// whatever Apple has named it, covers both halves.
+    @Test func theOlderBuildOfThatPairIsReplaced() {
+        let old = firmware("iPhone10,6_11.2.6_15D100_Restore.ipsw", ["iPhone10,3", "iPhone10,6"])
+        let new = firmware("iPhone10,3_11.4_15F79_Restore.ipsw", ["iPhone10,3", "iPhone10,6"])
+        var both = DeviceIndex()
+        both.add(old, at: nil)
+        both.add(new, at: Date())
+        #expect(Supersession.isReplaced(old.filename, by: [new], using: both))
+    }
+}

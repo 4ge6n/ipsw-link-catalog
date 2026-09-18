@@ -13,9 +13,18 @@ import Foundation
 /// true of a merge, of a split, and of a rename, without knowing which
 /// happened.
 enum Supersession {
-    /// The devices a file on the drive is for. From the name where Apple wrote
-    /// them into it, and from what the catalog knows of that name otherwise.
+    /// The devices a file on the drive is for.
+    ///
+    /// The catalog first where it holds this very file, because the name is
+    /// not the whole truth: iPhone10,6_11.2.6_15D100_Restore.ipsw is named for
+    /// the GSM iPhone X alone and restores the global iPhone10,3 as well. Read
+    /// from the name, the other half of the pair was invisible — its build was
+    /// never seen as held, and an older one was never seen as replaced.
+    ///
+    /// Only for a file the catalog no longer lists does the name have to do,
+    /// and the model-name table is the last resort under that.
     static func devices(of filename: String, using index: DeviceIndex) -> [String] {
+        if let exact = index.exact(filename) { return exact }
         let written = Firmware.devices(in: filename)
         return written.isEmpty ? index.devices(for: filename) : written
     }
