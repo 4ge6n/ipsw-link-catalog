@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-17T20:17:08Z",
+  "generated_at": "2026-09-18T04:25:56Z",
   "release_count": 267,
   "firmware_count": 2175,
   "releases": [
@@ -24781,7 +24781,7 @@
       "version_label": "9.3.5",
       "build": "13G36",
       "released_at": "2016-08-25T16:58:25Z",
-      "signed_firmware_count": 10,
+      "signed_firmware_count": 0,
       "total_firmware_count": 13,
       "data": "9.3.5/13G36.json",
       "firmwares": [
@@ -24827,7 +24827,7 @@
           "filename": "iPad2,7_9.3.5_13G36_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-73007-20160825-6A2BD37C-6711-11E6-9DD1-0D3834D2D062/iPad2,7_9.3.5_13G36_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-9.3.5-13G36-iPad2,6",
@@ -24838,7 +24838,7 @@
           "filename": "iPad2,6_9.3.5_13G36_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-72988-20160825-6A297D84-6711-11E6-B0E0-093834D2D062/iPad2,6_9.3.5_13G36_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-9.3.5-13G36-iPad2,5",
@@ -24849,7 +24849,7 @@
           "filename": "iPad2,5_9.3.5_13G36_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-74004-20160825-995D69FE-6715-11E6-A974-933E34D2D062/iPad2,5_9.3.5_13G36_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-9.3.5-13G36-iPad3,3",
@@ -24860,7 +24860,7 @@
           "filename": "iPad3,3_9.3.5_13G36_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-73292-20160825-6A2B9DC6-6711-11E6-B9E8-1F3834D2D062/iPad3,3_9.3.5_13G36_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-9.3.5-13G36-iPad3,2",
@@ -24871,7 +24871,7 @@
           "filename": "iPad3,2_9.3.5_13G36_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-74119-20160825-AE571872-6716-11E6-B65C-4A3F34D2D062/iPad3,2_9.3.5_13G36_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-9.3.5-13G36-iPad3,1",
@@ -24882,7 +24882,7 @@
           "filename": "iPad3,1_9.3.5_13G36_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-73961-20160825-88328FDE-6714-11E6-97F2-B63D34D2D062/iPad3,1_9.3.5_13G36_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-9.3.5-13G36-iPad2,4",
@@ -24893,7 +24893,7 @@
           "filename": "iPad2,4_9.3.5_13G36_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-73989-20160825-088A95A0-6715-11E6-A551-343E34D2D062/iPad2,4_9.3.5_13G36_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-9.3.5-13G36-iPad2,3",
@@ -24904,7 +24904,7 @@
           "filename": "iPad2,3_9.3.5_13G36_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-73591-20160825-6A39353A-6711-11E6-A402-333834D2D062/iPad2,3_9.3.5_13G36_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-9.3.5-13G36-iPad2,2",
@@ -24915,7 +24915,7 @@
           "filename": "iPad2,2_9.3.5_13G36_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-74153-20160825-1250B23E-6717-11E6-AB83-973F34D2D062/iPad2,2_9.3.5_13G36_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-9.3.5-13G36-iPad2,1",
@@ -24926,7 +24926,7 @@
           "filename": "iPad2,1_9.3.5_13G36_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-73136-20160825-6A2B0F0A-6711-11E6-BE6C-193834D2D062/iPad2,1_9.3.5_13G36_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -31426,5 +31426,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-18T05:17:08+09:00"
+  "generated_at_tokyo": "2026-09-18T13:25:56+09:00"
 }
