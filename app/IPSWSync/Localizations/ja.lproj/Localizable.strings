@@ -283,3 +283,5 @@
 "Where %1$@ restore images should be kept. Finder looks for a folder called “%2$@”, so one named that works whether it is linked or simply put where Finder looks." = "%1$@ の復元イメージを置く場所です。Finder は「%2$@」という名前のフォルダを探すので、その名前にしておけば、リンクしても、Finder が見る場所へそのまま置いても使えます。";
 "Create a folder for %1$@ restore images. %2$@ is the name Finder itself uses; keeping it means the folder works whether it is linked or simply put where Finder looks." = "%1$@ の復元イメージ用のフォルダを作ります。「%2$@」は Finder 自身が使う名前です。この名前のままにしておけば、リンクしても、Finder が見る場所へそのまま置いても使えます。";
 "Each platform keeps to its own folder. One left unchosen is skipped, so a Mac that only holds iPhone images need choose only that. Finder has a name for each — “iPhone Software Updates” and the rest — and a folder called that works whether it is linked or simply put where Finder looks." = "プラットフォームごとに別のフォルダを使います。未選択のものは同期されないので、iPhone のイメージだけを置く Mac なら iOS だけ選べば十分です。Finder にはそれぞれ決まった名前（「iPhone Software Updates」など）があり、その名前のフォルダはリンクしても、Finder が見る場所へそのまま置いても使えます。";
+"No room for %1$@: it needs %2$@ and %3$@ is free." = "%1$@ を置く空きがありません。必要 %2$@ に対して空きは %3$@ です。";
+"not enough room" = "空き容量不足";

@@ -163,3 +163,32 @@ struct OnDiskTests {
         #expect(try images(in: folder) == ["holiday.jpg", "something_renamed.ipsw"])
     }
 }
+
+/// Neither Mac app counted what it was about to fetch against the room left.
+/// Every device Apple still signs is some two hundred images — about two
+/// terabytes — and a drive with twenty-six gigabytes free was asked for all of
+/// it, filled, and stopped answering.
+struct RoomTests {
+    @Test func whatFitsIsFetchedAndWhatDoesNotIsNot() async throws {
+        let engine = SyncEngine()
+        let folder = URL.temporaryDirectory
+        guard let free = engine.freeSpace(at: folder) else { return }
+        // A byte is always fine; the whole volume never is.
+        #expect(engine.hasRoom(for: 1, in: folder))
+        #expect(!engine.hasRoom(for: free + 1, in: folder))
+        // Room is kept back on purpose, so filling it exactly is refused too.
+        #expect(!engine.hasRoom(for: free, in: folder))
+        #expect(!engine.hasRoom(for: free - SyncEngine.spareRoom + 1, in: folder))
+        #expect(engine.hasRoom(for: free - SyncEngine.spareRoom, in: folder))
+    }
+
+    /// Replacing an image needs only the difference, not the whole of it.
+    @Test func whatIsAlreadyThereCounts() async throws {
+        let engine = SyncEngine()
+        let folder = URL.temporaryDirectory
+        guard let free = engine.freeSpace(at: folder) else { return }
+        let tooBig = free + (8 << 30)
+        #expect(!engine.hasRoom(for: tooBig, in: folder))
+        #expect(engine.hasRoom(for: tooBig, in: folder, alreadyHave: tooBig))
+    }
+}

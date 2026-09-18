@@ -42,6 +42,19 @@ extension SyncEngine {
                 await log(LogEntry(kind: .warning, message: String(format: String(localized: "Refetching %@: the copy on disk did not match"), firmware.filename)))
             }
             transfer.total = expected
+            // Asked before a byte is fetched. Without this the run filled the
+            // drive: every device Apple still signs is some two hundred images,
+            // and nothing was counting them against the room left.
+            guard hasRoom(for: expected, in: folder, alreadyHave: onDisk ?? 0) else {
+                let free = freeSpace(at: folder) ?? 0
+                transfer.state = .failed(String(localized: "not enough room"))
+                await report(transfer)
+                await log(LogEntry(kind: .bad, message: String(format: String(localized: "No room for %1$@: it needs %2$@ and %3$@ is free."),
+                                                               firmware.filename,
+                                                               ByteCountFormatter.string(fromByteCount: expected, countStyle: .file),
+                                                               ByteCountFormatter.string(fromByteCount: free, countStyle: .file))))
+                return
+            }
             for attempt in 1...2 {
                 transfer.resumedFrom = fileSize(destination) ?? 0
                 transfer.received = transfer.resumedFrom
@@ -114,6 +127,23 @@ extension SyncEngine {
     /// size. The next download then asked for the bytes after the end of a
     /// file that was not there, got an empty answer, and wrote an empty file
     /// over the damaged one it was sent to replace.
+    /// How much room is left where these are being kept.
+    nonisolated func freeSpace(at folder: URL) -> Int64? {
+        let values = try? folder.resourceValues(forKeys: [.volumeAvailableCapacityForImportantUsageKey])
+        return values?.volumeAvailableCapacityForImportantUsage
+    }
+
+    /// Whether one more image of this size can be taken without filling the
+    /// drive. A little is always left: a volume with nothing free at all stops
+    /// being a volume that anything — this app included — can work on.
+    nonisolated func hasRoom(for bytes: Int64, in folder: URL, alreadyHave onDisk: Int64 = 0) -> Bool {
+        guard bytes > 0, let free = freeSpace(at: folder) else { return true }
+        return bytes - onDisk + Self.spareRoom <= free
+    }
+
+    /// Kept free whatever happens.
+    nonisolated static let spareRoom: Int64 = 2 << 30
+
     nonisolated func fileSize(_ url: URL) -> Int64? {
         let attributes = try? FileManager.default.attributesOfItem(atPath: url.path(percentEncoded: false))
         return (attributes?[.size] as? NSNumber)?.int64Value
