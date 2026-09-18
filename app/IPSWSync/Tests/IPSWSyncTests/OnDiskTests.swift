@@ -84,6 +84,21 @@ struct OnDiskTests {
         #expect(!(await engine.isIntact(file, sha1: abc)))
     }
 
+    /// And noticed without being told to forget first. The record is trusted
+    /// on the file's size and date, and those were read through a URL, which
+    /// keeps the answers it has already been given — so a file replaced after
+    /// it was verified went on being called verified, which is the one place
+    /// where the shortcut means never reading the bytes at all.
+    @Test func aFileChangedBehindTheAppIsNoticedAnyway() async throws {
+        let folder = try scratch()
+        defer { try? FileManager.default.removeItem(at: folder) }
+        let file = try write("x.ipsw", "abc", into: folder)
+        let engine = SyncEngine()
+        #expect(await engine.isIntact(file, sha1: abc))
+        try Data("something else entirely".utf8).write(to: file)
+        #expect(!(await engine.isIntact(file, sha1: abc)))
+    }
+
     /// A URL keeps the answers it has already been given. Asked its size, then
     /// deleted, then asked again, it answered with the size it used to be —
     /// and the download that followed asked for the bytes after the end of a

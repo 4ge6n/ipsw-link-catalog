@@ -31,10 +31,15 @@ final class VerifiedStore: @unchecked Sendable {
         try? JSONEncoder().encode(records).write(to: path(for: folder), options: .atomic)
     }
 
+    /// Through FileManager rather than URL.resourceValues: a URL keeps the
+    /// answers it has already been given, so a file that changed after being
+    /// verified still reported the size and date it had when it was — and this
+    /// is the one place where believing that means not reading the file.
     private func stamp(_ url: URL) -> (Int64, Date)? {
-        guard let values = try? url.resourceValues(forKeys: [.fileSizeKey, .contentModificationDateKey]),
-              let size = values.fileSize, let modified = values.contentModificationDate else { return nil }
-        return (Int64(size), modified)
+        guard let attributes = try? FileManager.default.attributesOfItem(atPath: url.path(percentEncoded: false)),
+              let size = (attributes[.size] as? NSNumber)?.int64Value,
+              let modified = attributes[.modificationDate] as? Date else { return nil }
+        return (size, modified)
     }
 
     func matches(_ url: URL, sha1: String) -> Bool {
