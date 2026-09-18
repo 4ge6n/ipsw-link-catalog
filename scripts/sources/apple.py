@@ -17,6 +17,15 @@ from ..normalize import os_key_for
 
 CATALOG = ("https://itunes.apple.com/WebObjects/MZStore.woa/wa"
            "/com.apple.jingle.appserver.client.MZITunesClientCheck/version")
+# The catalog above holds the iPhone, the iPad and the iPod and no Macs at all.
+# Apple publishes those separately, in the same shape and with the same
+# checksums — which is the only place a Mac image's SHA-1 comes from, and
+# without it every macOS build here could be checked by its length alone.
+MAC_CATALOG = ("https://mesu.apple.com/assets/macos"
+               "/com_apple_macOSIPSW/com_apple_macOSIPSW.xml")
+# And the Vision Pro, which is in neither of the two above.
+VISION_CATALOG = ("https://mesu.apple.com/assets/visionos"
+                  "/com_apple_visionOSIPSW/com_apple_visionOSIPSW.xml")
 # Apple's own announcements, which carry the time each build shipped.
 RELEASES = "https://developer.apple.com/news/releases/rss/releases.rss"
 # "iOS 27.0 (24A437)", or "iOS 27.0 RC (24A435)" before release day.
@@ -81,9 +90,15 @@ def restore_entries(node, device: str | None = None):
             yield from restore_entries(value, device)
 
 def fetch(timeout: int) -> list[dict]:
-    catalog = get_plist(CATALOG, timeout)
+    entries = list(restore_entries(get_plist(CATALOG, timeout)))
+    for catalog in (MAC_CATALOG, VISION_CATALOG):
+        try:
+            entries += list(restore_entries(get_plist(catalog, timeout)))
+        except Exception:
+            # One catalog that will not answer must not cost us the others.
+            continue
     candidates: dict[tuple[str, str], dict] = {}
-    for device, entry in restore_entries(catalog):
+    for device, entry in entries:
         url = entry.get("FirmwareURL", "")
         version, build = entry.get("ProductVersion"), entry.get("BuildVersion")
         if not device or not url.endswith(".ipsw") or not version or not build:
