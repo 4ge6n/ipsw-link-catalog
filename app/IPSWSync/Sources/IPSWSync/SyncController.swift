@@ -98,28 +98,46 @@ final class SyncController {
         // Asked once for the whole run rather than once per platform, since it
         // is one page covering all of them.
         let fromApple = settings.portalFeedsSync ? await watch.look(announce: false, force: true) : []
+        // One run, not seven. The platforms used to be synced one after the
+        // other, so the iPads sat at nothing until every iPhone was in and the
+        // bar started over each time; the list of what to do was only ever a
+        // seventh of the truth. They go together now, and the number of
+        // transfers sharing the line is held by the engine for all of them.
+        await engine.beginRun(concurrently: settings.maxConcurrent)
+        var folders: [(Platform, URL)] = []
         for platform in Platform.allCases {
             guard let folder = settings.folder(for: platform) else {
                 note(.warning, String(format: String(localized: "No folder chosen for %@; skipped."), platform.title))
                 continue
             }
-            attempted += 1
-            let scoped = folder.startAccessingSecurityScopedResource()
-            defer { if scoped { folder.stopAccessingSecurityScopedResource() } }
-            do {
-                try await engine.sync(
-                    platform: platform, into: folder,
-                    devices: settings.everyDevice ? nil : settings.selectedDevices,
-                    alongside: portalFirmwares(fromApple, for: platform),
-                    prune: settings.prune,
-                    concurrently: settings.maxConcurrent,
-                    report: { [weak self] transfer in self?.update(transfer) },
-                    log: { [weak self] entry in self?.log.append(entry) }
-                )
-            } catch {
-                unreachable += 1
-                note(.bad, error.localizedDescription)
+            folders.append((platform, folder))
+        }
+        attempted = folders.count
+        unreachable = await withTaskGroup(of: Bool.self) { group in
+            for (platform, folder) in folders {
+                group.addTask { [engine, settings] in
+                    let scoped = folder.startAccessingSecurityScopedResource()
+                    defer { if scoped { folder.stopAccessingSecurityScopedResource() } }
+                    do {
+                        try await engine.sync(
+                            platform: platform, into: folder,
+                            devices: settings.everyDevice ? nil : settings.selectedDevices,
+                            alongside: await self.portalFirmwares(fromApple, for: platform),
+                            prune: settings.prune,
+                            concurrently: settings.maxConcurrent,
+                            report: { [weak self] transfer in self?.update(transfer) },
+                            log: { [weak self] entry in self?.log.append(entry) }
+                        )
+                        return false
+                    } catch {
+                        await self.note(.bad, error.localizedDescription)
+                        return true
+                    }
+                }
             }
+            var failed = 0
+            for await didFail in group where didFail { failed += 1 }
+            return failed
         }
         // A run that reached nothing is not a run. Leaving the mark alone keeps
         // it counted as missed, so plugging the drive in earns a catch-up rather

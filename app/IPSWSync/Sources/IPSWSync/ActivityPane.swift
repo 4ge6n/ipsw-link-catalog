@@ -7,7 +7,31 @@ struct ActivityPane: View {
     @Environment(SyncController.self) private var controller
     @State private var width: CGFloat = 700
 
+    @State private var showingQueue = false
+    /// Dragged by the handles below, and remembered: someone who wants a tall
+    /// log and a short list of transfers should not have to say so every time.
+    @AppStorage("activityHeight") private var activityHeight = 150.0
+    @AppStorage("logHeight") private var logHeight = 96.0
+
     private var narrow: Bool { width < 470 }
+
+    /// What is actually moving: being looked at, coming down, or being hashed.
+    private var active: [Transfer] {
+        controller.transfers.filter {
+            switch $0.state {
+            case .checking, .downloading, .verifying: true
+            case .waiting, .queued, .done, .failed: false
+            }
+        }
+    }
+
+    /// Everything that has not started yet, whether or not it has reached the
+    /// line for the wire.
+    private var queued: Int {
+        controller.transfers.count {
+            $0.state == .queued || $0.state == .waiting
+        }
+    }
 
     private var shortCaption: String {
         let state = controller.overall
@@ -62,27 +86,66 @@ struct ActivityPane: View {
                 }
             }
             .padding(narrow ? 10 : 12)
-            // An empty list is just a black slab; the strip stays the height of
-            // its own row until a run has something to show in it.
-            if !controller.transfers.isEmpty || !controller.log.isEmpty {
+            // Only what is happening. A finished file leaves the list —
+            // its line in the log below is the record of it — so the middle
+            // of the window stays the size of the work in hand rather than
+            // growing to two hundred rows by the end of a run.
+            if !active.isEmpty || queued > 0 {
                 Divider()
                 List {
-                    ForEach(controller.transfers.filter { $0.state != .waiting }) { transfer in
+                    ForEach(active) { transfer in
                         TransferRow(transfer: transfer, narrow: narrow)
                     }
-                    ForEach(controller.log.suffix(40).reversed()) { entry in
-                        HStack(alignment: .firstTextBaseline, spacing: 8) {
-                            Image(systemName: entry.kind.symbol).foregroundStyle(entry.kind.tint)
+                    if queued > 0 {
+                        DisclosureGroup(isExpanded: $showingQueue) {
+                            ForEach(controller.transfers.filter { $0.state == .queued || $0.state == .waiting }) { transfer in
+                                HStack {
+                                    Text(transfer.device).lineLimit(1).truncationMode(.tail)
+                                    Spacer(minLength: 8)
+                                    Text(transfer.state == .queued
+                                         ? String(localized: "in line")
+                                         : String(localized: "waiting"))
+                                        .foregroundStyle(.tertiary)
+                                }
                                 .font(.caption)
-                            Text(entry.message).font(.callout)
-                            Spacer()
-                            Text(entry.at.formatted(date: .omitted, time: .standard))
-                                .font(.caption2).foregroundStyle(.tertiary).monospacedDigit()
+                            }
+                        } label: {
+                            HStack(spacing: 6) {
+                                Image(systemName: "list.bullet")
+                                Text(String(format: String(localized: "Queue — %lld to go"), queued))
+                                Spacer()
+                            }
+                            .font(.caption).foregroundStyle(.secondary)
                         }
                     }
                 }
                 .listStyle(.inset)
-                .frame(minHeight: 120, idealHeight: 240)
+                .frame(height: activityHeight)
+                ResizeHandle(height: $activityHeight, lowest: 60, highest: 600)
+            }
+            // The log is the record, not the work, so it gets a strip rather
+            // than half the window — and it keeps its own scroll, newest first.
+            if !controller.log.isEmpty {
+                Divider()
+                ScrollView {
+                    LazyVStack(alignment: .leading, spacing: 2) {
+                        ForEach(controller.log.suffix(200).reversed()) { entry in
+                            HStack(alignment: .firstTextBaseline, spacing: 6) {
+                                Image(systemName: entry.kind.symbol).foregroundStyle(entry.kind.tint)
+                                Text(entry.at.formatted(date: .omitted, time: .standard))
+                                    .foregroundStyle(.tertiary).monospacedDigit()
+                                Text(entry.message).foregroundStyle(.secondary)
+                                    .lineLimit(1).truncationMode(.middle)
+                                Spacer(minLength: 0)
+                            }
+                            .font(.caption2)
+                        }
+                    }
+                    .padding(.horizontal, 10).padding(.vertical, 6)
+                }
+                .frame(height: logHeight)
+                .background(.quaternary.opacity(0.25))
+                ResizeHandle(height: $logHeight, lowest: 40, highest: 500)
             }
         }
         .background(
@@ -95,6 +158,39 @@ struct ActivityPane: View {
                 }
             }
         )
+    }
+}
+
+/// A divider that can be dragged. The one above it grows and shrinks; nothing
+/// else moves, so the window itself stays the size it was put at.
+private struct ResizeHandle: View {
+    @Binding var height: Double
+    let lowest: Double
+    let highest: Double
+    @State private var startedAt: Double?
+
+    var body: some View {
+        ZStack {
+            Rectangle().fill(.quaternary).frame(height: 1)
+            // A one-point line is not something anyone can catch with a mouse.
+            Rectangle().fill(.clear).frame(height: 9).contentShape(.rect)
+            Capsule().fill(.tertiary).frame(width: 26, height: 3)
+        }
+        .frame(height: 9)
+        .onHover { inside in
+            // The cursor is what says it can be dragged at all.
+            if inside { NSCursor.resizeUpDown.push() } else { NSCursor.pop() }
+        }
+        .gesture(
+            DragGesture(minimumDistance: 1)
+                .onChanged { move in
+                    let from = startedAt ?? height
+                    if startedAt == nil { startedAt = from }
+                    height = min(max(from + move.translation.height, lowest), highest)
+                }
+                .onEnded { _ in startedAt = nil }
+        )
+        .accessibilityLabel(Text("Resize"))
     }
 }
 
@@ -124,6 +220,7 @@ private struct TransferRow: View {
         case .downloading: "\(Int(transfer.fraction * 100))%"
         case .verifying: String(localized: "checking")
         case .checking: "…"
+        case .queued: String(localized: "in line")
         case .done(let had): had ? String(localized: "have") : String(localized: "done")
         case .failed: String(localized: "failed")
         case .waiting: ""
@@ -133,6 +230,7 @@ private struct TransferRow: View {
     private var detail: String {
         switch transfer.state {
         case .waiting: String(localized: "waiting")
+        case .queued: String(localized: "waiting for a slot")
         case .checking: String(localized: "checking what is already here")
         case .verifying: String(localized: "verifying checksum")
         case .done(let had): had ? String(localized: "already had it") : String(localized: "done")

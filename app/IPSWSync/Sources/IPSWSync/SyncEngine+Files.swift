@@ -64,9 +64,22 @@ extension SyncEngine {
                 transfer.resumedFrom = fileSize(destination) ?? 0
                 transfer.received = transfer.resumedFrom
                 transfer.startedAt = .now
-                transfer.state = .downloading
+                // The queue is here, not around the whole of this: a file
+                // waits for a place on the line, gives it up the moment the
+                // last byte lands, and is hashed outside it.
+                transfer.state = .queued
                 await report(transfer)
-                try await carryOn(firmware, to: destination, from: &transfer, report: report, log: log)
+                await downloads.enter()
+                transfer.state = .downloading
+                transfer.startedAt = .now
+                await report(transfer)
+                do {
+                    try await carryOn(firmware, to: destination, from: &transfer, report: report, log: log)
+                    await downloads.leave()
+                } catch {
+                    await downloads.leave()
+                    throw error
+                }
                 transfer.state = .verifying
                 await report(transfer)
                 guard let sha1 = firmware.sha1 else { break }

@@ -4,7 +4,9 @@ import Foundation
 /// What one file is doing right now, for the progress list.
 struct Transfer: Identifiable, Sendable {
     enum State: Sendable, Equatable {
-        case waiting, checking, downloading, verifying
+        /// Not started. `queued` is narrower: it is in the line for a place
+        /// on the wire, with everything before the transfer already done.
+        case waiting, checking, queued, downloading, verifying
         case done(alreadyHad: Bool)
         case failed(String)
     }
@@ -46,6 +48,10 @@ actor SyncEngine {
     /// The same answer, readable from the transfer's delegate, which is handed
     /// chunks on a queue of URLSession's choosing and cannot await an actor.
     private let stopped = Flag()
+    /// How many downloads may run at once. Held by the engine rather than by
+    /// one platform's run, so seven folders syncing at the same time still add
+    /// up to the number that was asked for.
+    let downloads = Gate()
 
     init(catalog: CatalogClient = CatalogClient()) {
         self.catalog = catalog
@@ -62,6 +68,14 @@ actor SyncEngine {
     var isCancelled: Bool { cancelled }
 
     func resetCancellation() { cancelled = false; stopped.set(false) }
+
+    /// Start a run: clear any earlier Stop and set how many transfers may share
+    /// the line. Called once for the whole run, because the platforms are
+    /// synced together and a limit each would be seven times the limit.
+    func beginRun(concurrently limit: Int) async {
+        resetCancellation()
+        await downloads.setLimit(limit)
+    }
 
     /// Read by the delegate between chunks, so Stop reaches the transfer that
     /// is actually running rather than only the gap before the next file.
@@ -82,7 +96,6 @@ actor SyncEngine {
         report: @escaping @Sendable @MainActor (Transfer) -> Void,
         log: @escaping @Sendable @MainActor (LogEntry) -> Void
     ) async throws {
-        resetCancellation()
         await log(LogEntry(kind: .info, message: "\(platform.title) → \(folder.path(percentEncoded: false))"))
         try checkVolume(folder)
         var wanted = try await wantedFirmwares(platform, devices: devices)
@@ -103,6 +116,10 @@ actor SyncEngine {
         // to count the room those will give back when it does.
         let index = prune ? ((try? await deviceIndex(platform)) ?? DeviceIndex()) : nil
         var pending = wanted[...]
+        // The cap here is not the download limit — the gate is. It is a few
+        // more than that, so a file that has finished downloading can be
+        // hashed while the slot it gave up is already carrying the next one.
+        let atOnce = max(1, limit) + 4
         await withTaskGroup(of: Void.self) { group in
             var running = 0
             while !cancelled, let firmware = pending.first {
@@ -111,7 +128,7 @@ actor SyncEngine {
                     await fetch(firmware, into: folder, reclaiming: index, report: report, log: log)
                 }
                 running += 1
-                if running >= max(1, limit) {
+                if running >= atOnce {
                     await group.next()
                     running -= 1
                 }
@@ -163,7 +180,9 @@ actor SyncEngine {
             await log(LogEntry(kind: .bad, message: error.localizedDescription))
             return
         }
+        await downloads.setLimit(limit)
         var pending = firmwares[...]
+        let atOnce = max(1, limit) + 4
         await withTaskGroup(of: Void.self) { group in
             var running = 0
             while !cancelled, let firmware = pending.first {
@@ -172,7 +191,7 @@ actor SyncEngine {
                     await fetch(firmware, into: folder, report: report, log: log)
                 }
                 running += 1
-                if running >= max(1, limit) {
+                if running >= atOnce {
                     await group.next()
                     running -= 1
                 }

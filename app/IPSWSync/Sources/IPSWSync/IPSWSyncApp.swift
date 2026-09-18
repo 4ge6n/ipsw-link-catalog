@@ -118,23 +118,57 @@ private struct MenuBarContent: View {
     }
 
     /// Enough to see it moving without opening the window.
+    ///
+    /// Every transfer, not the first of them: three run at once by default, and
+    /// showing one meant the menu bar reported a third of what was happening
+    /// and stalled whenever that particular file was the one being hashed.
     @ViewBuilder private var progress: some View {
         let state = controller.overall
         VStack(alignment: .leading, spacing: 4) {
             ProgressView(value: state.fraction)
             HStack {
-                Text(current).lineLimit(1).truncationMode(.middle)
+                Text(String(format: String(localized: "%1$lld of %2$lld file(s)"), state.done, state.total))
                 Spacer(minLength: 8)
                 Text(volume).monospacedDigit()
             }
             .font(.caption2).foregroundStyle(.secondary)
+            ForEach(running) { transfer in
+                VStack(alignment: .leading, spacing: 1) {
+                    HStack(spacing: 6) {
+                        Text(transfer.device).lineLimit(1).truncationMode(.middle)
+                        Spacer(minLength: 6)
+                        Text(detail(of: transfer)).foregroundStyle(.secondary).monospacedDigit()
+                    }
+                    .font(.caption2)
+                    if transfer.state == .downloading {
+                        ProgressView(value: transfer.fraction).controlSize(.small)
+                    }
+                }
+            }
+            if queued > 0 {
+                Text(String(format: String(localized: "%lld more in the queue"), queued))
+                    .font(.caption2).foregroundStyle(.tertiary)
+            }
         }
     }
 
-    /// The file being fetched right now, of however many are running at once.
-    private var current: String {
-        controller.transfers.first { if case .downloading = $0.state { return true } else { return false } }?
-            .device ?? ""
+    /// What is moving right now — coming down, or being hashed.
+    private var running: [Transfer] {
+        controller.transfers.filter {
+            $0.state == .downloading || $0.state == .verifying || $0.state == .checking
+        }
+    }
+
+    private var queued: Int {
+        controller.transfers.count { $0.state == .queued || $0.state == .waiting }
+    }
+
+    private func detail(of transfer: Transfer) -> String {
+        switch transfer.state {
+        case .downloading: "\(Int(transfer.fraction * 100))%"
+        case .verifying: String(localized: "checking")
+        default: "…"
+        }
     }
 
     private var volume: String {

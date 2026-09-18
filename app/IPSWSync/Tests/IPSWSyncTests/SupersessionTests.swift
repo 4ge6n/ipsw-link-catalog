@@ -263,3 +263,64 @@ struct RealNameTests {
         #expect(Supersession.isReplaced(old.filename, by: [new], using: both))
     }
 }
+
+/// The number in Settings is a number of downloads.
+struct GateTests {
+    /// Counts how many are inside at once.
+    private actor Peak {
+        private var now = 0
+        private(set) var highest = 0
+        func enter() { now += 1; highest = max(highest, now) }
+        func leave() { now -= 1 }
+    }
+
+    @Test func neverMoreThanTheLimitAtOnce() async {
+        let gate = Gate(limit: 3)
+        let peak = Peak()
+        await withTaskGroup(of: Void.self) { group in
+            for _ in 0..<40 {
+                group.addTask {
+                    await gate.enter()
+                    await peak.enter()
+                    try? await Task.sleep(for: .milliseconds(5))
+                    await peak.leave()
+                    await gate.leave()
+                }
+            }
+        }
+        #expect(await peak.highest <= 3)
+        #expect(await peak.highest > 1)
+    }
+
+    /// The point of the whole thing: work done after leaving the gate — hashing
+    /// a file that has just landed — does not hold the next transfer up.
+    @Test func hashingRunsWhileTheNextFileIsAlreadyComing() async {
+        let gate = Gate(limit: 1)
+        let peak = Peak()
+        await withTaskGroup(of: Void.self) { group in
+            for _ in 0..<6 {
+                group.addTask {
+                    await gate.enter()
+                    try? await Task.sleep(for: .milliseconds(2))   // the transfer
+                    await gate.leave()
+                    await peak.enter()
+                    try? await Task.sleep(for: .milliseconds(20))  // the checksum
+                    await peak.leave()
+                }
+            }
+        }
+        // One download at a time, and yet several checksums at once.
+        #expect(await peak.highest > 1)
+    }
+
+    /// Raising the limit lets the ones already waiting through.
+    @Test func aRaisedLimitAdmitsWhatIsWaiting() async {
+        let gate = Gate(limit: 1)
+        await gate.enter()
+        let waiting = Task { await gate.enter() }
+        try? await Task.sleep(for: .milliseconds(10))
+        await gate.setLimit(4)
+        await waiting.value
+        #expect(true)  // it returned rather than hanging
+    }
+}
