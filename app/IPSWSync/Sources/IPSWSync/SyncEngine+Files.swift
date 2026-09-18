@@ -189,8 +189,20 @@ extension SyncEngine {
         let handle = try FileHandle(forReadingFrom: url)
         defer { try? handle.close() }
         var hasher = Insecure.SHA1()
-        while let chunk = try handle.read(upToCount: 4 << 20), !chunk.isEmpty {
-            hasher.update(data: chunk)
+        var done = false
+        while !done {
+            // Each chunk comes back autoreleased, and nothing drains the pool
+            // inside a loop of one's own making. Hashing a ten gigabyte image
+            // therefore held all ten of them at once — and the daily run hashes
+            // whatever is already on the drive, which is why this only showed
+            // itself on a drive that already had something on it.
+            try autoreleasepool {
+                guard let chunk = try handle.read(upToCount: 4 << 20), !chunk.isEmpty else {
+                    done = true
+                    return
+                }
+                hasher.update(data: chunk)
+            }
         }
         return hasher.finalize().map { String(format: "%02x", $0) }.joined()
     }
