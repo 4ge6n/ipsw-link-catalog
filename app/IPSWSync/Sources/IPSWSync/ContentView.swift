@@ -93,6 +93,16 @@ struct ContentView: View {
                     Toggle("Run every day", isOn: $settings.scheduleEnabled)
                     if settings.scheduleEnabled {
                         TimeRow(settings: settings)
+                        Picker("How often", selection: $settings.everyHours) {
+                            Text("Once a day").tag(24)
+                            Text("Every 12 hours").tag(12)
+                            Text("Every 8 hours").tag(8)
+                            Text("Every 6 hours").tag(6)
+                            Text("Every 4 hours").tag(4)
+                            Text("Every 2 hours").tag(2)
+                            Text("Every hour").tag(1)
+                        }
+                        Toggle("Try again soon if something did not arrive", isOn: $settings.retrySoon)
                         if let next = controller.nextRun {
                             LabeledContent("Next run", value: next.formatted(date: .abbreviated, time: .shortened))
                         }
@@ -113,6 +123,7 @@ struct ContentView: View {
         .onChange(of: settings.scheduleEnabled) { controller.scheduleNext() }
         .onChange(of: settings.hour) { controller.scheduleNext() }
         .onChange(of: settings.minute) { controller.scheduleNext() }
+        .onChange(of: settings.everyHours) { controller.scheduleNext() }
         .sheet(isPresented: $showingDevices) { DevicePicker() }
         .sheet(isPresented: $showingBuilds) { BuildPicker().environment(controller) }
         .sheet(isPresented: $showingTransparency) { TransparencyPanel() }

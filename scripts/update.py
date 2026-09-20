@@ -95,13 +95,27 @@ def refine_device_names(names, catalogue) -> dict[str, str]:
     return changed
 
 def apply_device_names(records, names) -> None:
+    """Name a device from our own table, not from whoever found the row.
+
+    This used to fill in a name only where the source had left the identifier
+    standing, so whatever ipsw.me happened to call a device was published
+    untouched: "iPhone 6+", "iPod touch 6", "iPad (A16, WiFi)", "iPhone SE
+    (2020)" — that source's shorthand rather than the name Apple gives the
+    device, sitting in the same list as our own "iPhone 6 Plus". The table is
+    the name now wherever it has one, and a source's name survives only for a
+    device the table has never heard of.
+
+    An image covering more than one device is left alone. There is no single
+    right answer for it — one file restores the iPhone 11, the 11 Pro and the
+    11 Pro Max — and naming it after any one of them would be a new wrong
+    answer rather than a fixed one.
+    """
     for record in records:
         for firmware in record.get("firmwares", []):
-            if firmware.get("name") not in (firmware.get("devices") or []): continue
-            for device in firmware["devices"]:
-                if device in names:
-                    firmware["name"]=names[device]
-                    break
+            devices = firmware.get("devices") or []
+            if len(devices) != 1: continue
+            if devices[0] in names: firmware["name"] = names[devices[0]]
+
 def verify_signing(records, apple_urls, settings, now, limit=12):
     """Confirm with Apple whether builds it no longer lists are still signed.
 

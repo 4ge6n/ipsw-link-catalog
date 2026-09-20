@@ -24,6 +24,18 @@ final class Settings {
     var hour: Int { didSet { write(hour, "hour") } }
     var minute: Int { didSet { write(minute, "minute") } }
     var lastRun: Date? { didSet { write(lastRun, "lastRun") } }
+    /// How often the run comes round. Once a day is a long time to be a few
+    /// files short of a restore, so it does not have to be once a day.
+    var everyHours: Int {
+        didSet {
+            let held = min(max(everyHours, 1), 24)
+            if held != everyHours { everyHours = held; return }
+            write(everyHours, "everyHours")
+        }
+    }
+    /// Come back sooner than the next scheduled run when something did not
+    /// arrive, rather than leaving the drive short until tomorrow.
+    var retrySoon: Bool { didSet { write(retrySoon, "retrySoon") } }
     var autoUpdate: Bool { didSet { write(autoUpdate, "autoUpdate") } }
     var hasLaunchedBefore: Bool { didSet { write(hasLaunchedBefore, "hasLaunchedBefore") } }
     var sawDisclosure: Bool { didSet { write(sawDisclosure, "sawDisclosure") } }
@@ -110,6 +122,8 @@ final class Settings {
         hour = defaults.object(forKey: "hour") as? Int ?? 4
         minute = defaults.object(forKey: "minute") as? Int ?? 0
         lastRun = defaults.object(forKey: "lastRun") as? Date
+        everyHours = min(max(defaults.object(forKey: "everyHours") as? Int ?? 24, 1), 24)
+        retrySoon = defaults.object(forKey: "retrySoon") as? Bool ?? true
         autoUpdate = defaults.object(forKey: "autoUpdate") as? Bool ?? true
         hasLaunchedBefore = defaults.bool(forKey: "hasLaunchedBefore")
         sawDisclosure = defaults.bool(forKey: "sawDisclosure")
@@ -168,24 +182,17 @@ final class Settings {
     /// When the next daily run is due, counting from a reference point.
     func nextRun(after moment: Date = .now) -> Date? {
         guard scheduleEnabled else { return nil }
-        var components = DateComponents()
-        components.hour = hour
-        components.minute = minute
-        return Calendar.current.nextDate(after: moment, matching: components,
-                                         matchingPolicy: .nextTime)
+        return Schedule.next(after: moment, hour: hour, minute: minute, everyHours: everyHours)
     }
 
-    /// True when today's run was missed — the Mac was asleep or the app was not
-    /// running — so it can be caught up instead of waiting another day.
+    /// True when a run was missed — the Mac was asleep or the app was not
+    /// running — so it can be caught up instead of waiting for the next one.
     func missedRun(now: Date = .now) -> Bool {
         guard scheduleEnabled else { return false }
-        var components = DateComponents()
-        components.hour = hour
-        components.minute = minute
-        guard let due = Calendar.current.nextDate(after: now, matching: components,
-                                                  matchingPolicy: .nextTime,
-                                                  direction: .backward) else { return false }
+        guard let due = Schedule.lastDue(before: now, hour: hour, minute: minute, everyHours: everyHours)
+        else { return false }
         guard let lastRun else { return true }
         return lastRun < due
     }
+
 }

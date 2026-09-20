@@ -115,31 +115,73 @@ actor SyncEngine {
         // Read once, and used twice: to decide what a new build replaces, and
         // to count the room those will give back when it does.
         let index = prune ? ((try? await deviceIndex(platform)) ?? DeviceIndex()) : nil
-        var pending = wanted[...]
-        // The cap here is not the download limit — the gate is. It is a few
-        // more than that, so a file that has finished downloading can be
-        // hashed while the slot it gave up is already carrying the next one.
-        let atOnce = max(1, limit) + 4
-        await withTaskGroup(of: Void.self) { group in
-            var running = 0
-            while !cancelled, let firmware = pending.first {
-                pending = pending.dropFirst()
-                group.addTask { [self] in
-                    await fetch(firmware, into: folder, reclaiming: index, report: report, log: log)
-                }
-                running += 1
-                if running >= atOnce {
-                    await group.next()
-                    running -= 1
-                }
-            }
-            await group.waitForAll()
+        // A run used to be one attempt each: a file that lost its connection
+        // was left failed until the same time tomorrow, and a drive could sit
+        // for days a few files short. What the line dropped is asked for again
+        // before the run is called done.
+        var remaining = wanted
+        for round in 1...3 {
+            remaining = await fetchEach(remaining, into: folder, reclaiming: index,
+                                        concurrently: limit, report: report, log: log)
+            guard !remaining.isEmpty, !cancelled, round < 3 else { break }
+            let pause = Double(round) * 20
+            await log(LogEntry(kind: .warning, message: String(format: String(localized: "%1$lld file(s) did not arrive; trying again in %2$.0f seconds"),
+                                                               remaining.count, pause)))
+            try? await Task.sleep(for: .seconds(pause))
+        }
+        // Swept whether or not the run is pruning: this is not someone else's
+        // file being tidied away, it is this app's own unfinished business.
+        if !cancelled {
+            // A run that is not pruning has not read the catalog's whole
+            // history, and the sweep needs it to measure what it finds.
+            var known = index
+            if known == nil { known = try? await deviceIndex(platform) }
+            await removeFailedRemnants(in: folder, keeping: wanted,
+                                       using: known ?? DeviceIndex(), log: log)
         }
         if prune, !cancelled {
             // What each image on the drive is for, so a build is replaced by
             // devices rather than by the name Apple happened to give the file.
             await removeReplacedBuilds(in: folder, keeping: wanted, using: index ?? DeviceIndex(), log: log)
         }
+    }
+
+    /// One pass at a list of files, returning the ones the line dropped.
+    ///
+    /// The cap here is not the download limit — the gate is. It is a few more
+    /// than that, so a file that has finished downloading can be hashed while
+    /// the slot it gave up is already carrying the next one.
+    private func fetchEach(
+        _ firmwares: [Firmware],
+        into folder: URL,
+        reclaiming index: DeviceIndex?,
+        concurrently limit: Int,
+        report: @escaping @Sendable @MainActor (Transfer) -> Void,
+        log: @escaping @Sendable @MainActor (LogEntry) -> Void
+    ) async -> [Firmware] {
+        var pending = firmwares[...]
+        var again: [Firmware] = []
+        let atOnce = max(1, limit) + 4
+        await withTaskGroup(of: Firmware?.self) { group in
+            var running = 0
+            while !cancelled, let firmware = pending.first {
+                pending = pending.dropFirst()
+                group.addTask { [self] in
+                    await fetch(firmware, into: folder, reclaiming: index,
+                                report: report, log: log) == .worthAnotherGo ? firmware : nil
+                }
+                running += 1
+                if running >= atOnce {
+                    if let dropped = await group.next() ?? nil { again.append(dropped) }
+                    running -= 1
+                }
+            }
+            for await dropped in group {
+                if let dropped { again.append(dropped) }
+            }
+        }
+        // Whatever never started is not a failure; it is a Stop.
+        return cancelled ? [] : again
     }
 
     /// What each model-named image has covered before, for reading a page that
@@ -181,22 +223,12 @@ actor SyncEngine {
             return
         }
         await downloads.setLimit(limit)
-        var pending = firmwares[...]
-        let atOnce = max(1, limit) + 4
-        await withTaskGroup(of: Void.self) { group in
-            var running = 0
-            while !cancelled, let firmware = pending.first {
-                pending = pending.dropFirst()
-                group.addTask { [self] in
-                    await fetch(firmware, into: folder, report: report, log: log)
-                }
-                running += 1
-                if running >= atOnce {
-                    await group.next()
-                    running -= 1
-                }
-            }
-            await group.waitForAll()
+        var remaining = firmwares
+        for round in 1...3 {
+            remaining = await fetchEach(remaining, into: folder, reclaiming: nil,
+                                        concurrently: limit, report: report, log: log)
+            guard !remaining.isEmpty, !cancelled, round < 3 else { break }
+            try? await Task.sleep(for: .seconds(Double(round) * 20))
         }
     }
 
@@ -246,10 +278,14 @@ struct DeviceIndex: Sendable {
     private var byModel: [String: (devices: [String], at: Date)] = [:]
     /// iPhone18,5 → "iPhone 17 Pro", for the sources that publish only the one.
     private(set) var names: [String: String] = [:]
+    /// Where each file came from, so one left on the drive can be measured
+    /// against the length Apple says it should be.
+    private var links: [String: URL] = [:]
 
     mutating func add(_ firmware: Firmware, at moment: Date?) {
         guard !firmware.devices.isEmpty else { return }
         byFilename[firmware.filename] = firmware.devices
+        links[firmware.filename] = firmware.url
         // Only an image for a single device says what that device is called;
         // one covering four carries all four names at once.
         if firmware.devices.count == 1 { names[firmware.devices[0]] = firmware.name }
@@ -262,6 +298,7 @@ struct DeviceIndex: Sendable {
     mutating func formUnion(_ other: DeviceIndex) {
         names.merge(other.names) { mine, _ in mine }
         byFilename.merge(other.byFilename) { _, new in new }
+        links.merge(other.links) { mine, _ in mine }
         byModel.merge(other.byModel) { mine, theirs in mine.at >= theirs.at ? mine : theirs }
     }
 
@@ -271,6 +308,9 @@ struct DeviceIndex: Sendable {
 
     /// The catalog's own answer for this very file, where it has one.
     func exact(_ filename: String) -> [String]? { byFilename[filename] }
+
+    /// Where a file by this name is published, if the catalog knows it at all.
+    func link(for filename: String) -> URL? { links[filename] }
 }
 
 

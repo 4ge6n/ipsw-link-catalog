@@ -33,6 +33,8 @@ final class SyncController {
     let watch = ReleaseWatch()
     private let settings = Settings.shared
     private var timer: Timer?
+    /// How many short-notice retries have been made since the last clean run.
+    private var retries = 0
 
     init() {
         NotificationCenter.default.addObserver(
@@ -143,6 +145,9 @@ final class SyncController {
         // it counted as missed, so plugging the drive in earns a catch-up rather
         // than a wait until tomorrow.
         if attempted == 0 || unreachable < attempted { settings.lastRun = .now }
+        if unreachable == 0, !transfers.contains(where: { if case .failed = $0.state { return true } else { return false } }) {
+            retries = 0
+        }
         running = false
         // The app updates itself on the same daily rhythm as the catalog.
         if settings.autoUpdate { await updater.check(installAutomatically: true) }
@@ -151,6 +156,35 @@ final class SyncController {
         let failed = failures.count + unreachable
         note(failed == 0 ? .good : .bad, summary(fetched: fetched.count, failed: failed))
         notify(fetched: fetched.count, failed: failed)
+        // A run that came up short does not wait for the next scheduled one.
+        // The engine already tried three times inside the run; this is for the
+        // line that is down for the minute rather than the second.
+        if failed > 0, settings.retrySoon, settings.scheduleEnabled {
+            scheduleRetry()
+        } else {
+            scheduleNext()
+        }
+    }
+
+    /// Come back in a quarter of an hour, doubling up to four hours, until a
+    /// run finishes with nothing failed or the next scheduled one comes first.
+    private func scheduleRetry() {
+        retries = min(retries + 1, 5)
+        let minutes = min(15 * pow(2, Double(retries - 1)), 240)
+        let when = Date.now.addingTimeInterval(minutes * 60)
+        // Never later than the run that was coming anyway.
+        guard let due = settings.nextRun(), when < due else { scheduleNext(); return }
+        timer?.invalidate()
+        nextRun = when
+        note(.info, String(format: String(localized: "Some files did not arrive; trying again at %@"),
+                           when.formatted(date: .omitted, time: .shortened)))
+        let fires = Timer(fire: when, interval: 0, repeats: false) { [weak self] _ in
+            Task { @MainActor in
+                await self?.run()
+            }
+        }
+        RunLoop.main.add(fires, forMode: .common)
+        timer = fires
     }
 
     func cancel() { Task { await engine.cancel() } }

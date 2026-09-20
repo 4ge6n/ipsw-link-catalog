@@ -3,6 +3,16 @@ import Foundation
 
 extension SyncEngine {
     /// Download one file if the folder does not already hold it intact.
+    /// What came of one attempt at one file.
+    enum Outcome: Sendable {
+        /// On the drive, or not worth asking again this run: no room for it,
+        /// or Apple's own copy does not match Apple's own checksum.
+        case settled
+        /// The line gave out. Worth another go in a moment.
+        case worthAnotherGo
+    }
+
+    @discardableResult
     nonisolated func fetch(
         _ firmware: Firmware,
         into folder: URL,
@@ -12,7 +22,7 @@ extension SyncEngine {
         reclaiming index: DeviceIndex? = nil,
         report: @escaping @Sendable @MainActor (Transfer) -> Void,
         log: @escaping @Sendable @MainActor (LogEntry) -> Void
-    ) async {
+    ) async -> Outcome {
         let destination = folder.appending(path: firmware.filename)
         var transfer = Transfer(id: firmware.id, name: firmware.filename, device: firmware.name)
         transfer.state = .checking
@@ -22,7 +32,7 @@ extension SyncEngine {
             transfer.state = .done(alreadyHad: true)
             await report(transfer)
             await log(LogEntry(kind: .info, message: String(format: String(localized: "Already have %@"), firmware.filename)))
-            return
+            return .settled
         }
         do {
             let expected = try await contentLength(firmware.url)
@@ -37,7 +47,7 @@ extension SyncEngine {
                 transfer.state = .done(alreadyHad: true)
                 await report(transfer)
                 await log(LogEntry(kind: .info, message: String(format: String(localized: "Already have %@"), firmware.filename)))
-                return
+                return .settled
             }
             // A file that is already the full length but hashes wrong is damaged,
             // not partial, so resuming would only append to the damage.
@@ -58,7 +68,8 @@ extension SyncEngine {
                                                                firmware.filename,
                                                                ByteCountFormatter.string(fromByteCount: expected, countStyle: .file),
                                                                ByteCountFormatter.string(fromByteCount: free, countStyle: .file))))
-                return
+                // Another go will find the same drive with the same room on it.
+                return .settled
             }
             for attempt in 1...2 {
                 transfer.resumedFrom = fileSize(destination) ?? 0
@@ -98,14 +109,21 @@ extension SyncEngine {
             transfer.state = .done(alreadyHad: false)
             await report(transfer)
             await log(LogEntry(kind: .good, message: String(format: String(localized: firmware.sha1 == nil ? "Downloaded %@" : "Downloaded %@, SHA-1 verified"), firmware.filename)))
+            return .settled
         } catch is CancellationError {
             transfer.state = .waiting
             await report(transfer)
             await log(LogEntry(kind: .warning, message: String(format: String(localized: "Stopped %@; what arrived is kept to carry on from"), firmware.filename)))
+            return .settled
         } catch {
             transfer.state = .failed(error.localizedDescription)
             await report(transfer)
             await log(LogEntry(kind: .bad, message: error.localizedDescription))
+            // A checksum that will not match is Apple's copy against Apple's
+            // own number, and asking again in thirty seconds cannot change it;
+            // anything else is the line, which can.
+            if case SyncError.checksumMismatch = error { return .settled }
+            return .worthAnotherGo
         }
     }
 
@@ -312,6 +330,53 @@ extension SyncEngine {
     }
 
     /// Remove the build each newly present file replaces, and nothing else.
+    /// Clear away what a failed transfer left behind.
+    ///
+    /// A file that is not wanted is normally left alone — someone may have put
+    /// it there on purpose, and this app does not tidy other people's drives.
+    /// The exception is its own wreckage: a part-file from a device that was
+    /// later unticked stayed for ever, counted against the room, and looked
+    /// from the outside exactly like an image that was already there.
+    ///
+    /// Only a file the catalog can name and measure is touched, and only when
+    /// it is short of the length Apple gives for it. A file of the right
+    /// length is a real image, wanted or not, and is left where it is.
+    nonisolated func removeFailedRemnants(
+        in folder: URL,
+        keeping wanted: [Firmware],
+        using index: DeviceIndex,
+        log: @escaping @Sendable @MainActor (LogEntry) -> Void
+    ) async {
+        let manager = FileManager.default
+        let contents = (try? manager.contentsOfDirectory(at: folder, includingPropertiesForKeys: nil)) ?? []
+        let keep = Set(wanted.map(\.filename))
+        for file in contents {
+            let name = file.lastPathComponent
+            // A quarantined copy is damaged by definition: it was fetched
+            // twice and hashed wrong both times.
+            if file.pathExtension == "sha1-mismatch" {
+                try? manager.removeItem(at: file)
+                await log(LogEntry(kind: .info, message: String(format: String(localized: "Removed the damaged copy left behind by %@"), name)))
+                continue
+            }
+            guard file.pathExtension == "ipsw", !keep.contains(name),
+                  let link = index.link(for: name), let onDisk = fileSize(file),
+                  let expected = try? await contentLength(link), expected > 0,
+                  onDisk < expected
+            else { continue }
+            do {
+                try manager.removeItem(at: file)
+                VerifiedStore.shared.forget(file)
+                await log(LogEntry(kind: .info, message: String(format: String(localized: "Removed an unfinished %1$@ (%2$@ of %3$@) that is no longer wanted"),
+                                                               name,
+                                                               ByteCountFormatter.string(fromByteCount: onDisk, countStyle: .file),
+                                                               ByteCountFormatter.string(fromByteCount: expected, countStyle: .file))))
+            } catch {
+                await log(LogEntry(kind: .warning, message: String(format: String(localized: "Could not remove %1$@: %2$@"), name, error.localizedDescription)))
+            }
+        }
+    }
+
     nonisolated func removeReplacedBuilds(
         in folder: URL,
         keeping wanted: [Firmware],

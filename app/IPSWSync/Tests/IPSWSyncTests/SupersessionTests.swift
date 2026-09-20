@@ -324,3 +324,32 @@ struct GateTests {
         #expect(true)  // it returned rather than hanging
     }
 }
+
+/// Once a day is a long time to be a few files short of a restore.
+struct ScheduleTests {
+    private func at(_ day: Int, _ hour: Int, _ minute: Int = 0) -> Date {
+        Calendar.current.date(from: DateComponents(year: 2026, month: 9, day: day, hour: hour, minute: minute))!
+    }
+
+    @Test func dailyIsStillDaily() {
+        #expect(Schedule.next(after: at(20, 5), hour: 4, minute: 0, everyHours: 24) == at(21, 4))
+    }
+
+    /// Counted from the time that was set, not from whenever the app started.
+    @Test func everySixHoursKeepsToTheHourThatWasSet() {
+        #expect(Schedule.next(after: at(20, 5), hour: 4, minute: 0, everyHours: 6) == at(20, 10))
+        #expect(Schedule.next(after: at(20, 10, 1), hour: 4, minute: 0, everyHours: 6) == at(20, 16))
+        #expect(Schedule.next(after: at(20, 23), hour: 4, minute: 0, everyHours: 6) == at(21, 4))
+    }
+
+    @Test func everyHourIsEveryHour() {
+        #expect(Schedule.next(after: at(20, 9, 30), hour: 4, minute: 0, everyHours: 1) == at(20, 10))
+    }
+
+    /// What says whether a run was missed while the Mac was asleep.
+    @Test func theLastTimeOneWasDue() {
+        #expect(Schedule.lastDue(before: at(20, 10, 30), hour: 4, minute: 0, everyHours: 6) == at(20, 10))
+        #expect(Schedule.lastDue(before: at(20, 9, 59), hour: 4, minute: 0, everyHours: 6) == at(20, 4))
+        #expect(Schedule.lastDue(before: at(20, 10, 30), hour: 4, minute: 0, everyHours: 24) == at(20, 4))
+    }
+}
