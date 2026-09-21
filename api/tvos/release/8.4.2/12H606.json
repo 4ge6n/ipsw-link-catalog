@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipsw.me",
-      "checked_at": "2026-09-21T17:55:18Z"
+      "checked_at": "2026-09-21T22:51:29Z"
     }
   ],
   "firmwares": [
@@ -22,9 +22,9 @@
       "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-84121-20161212-123095D6-B59A-11E6-A84D-CE194F99B54B/AppleTV3,2_8.4.2_12H606_Restore.ipsw",
       "filename": "AppleTV3,2_8.4.2_12H606_Restore.ipsw",
       "signing": {
-        "status": "signed",
-        "checked_at": "2026-09-21T17:55:18Z",
-        "unsigned_since": null
+        "status": "unsigned",
+        "checked_at": "2026-09-21T22:51:29Z",
+        "unsigned_since": "2026-09-21T22:51:29Z"
       }
     },
     {
@@ -35,12 +35,12 @@
       "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-84128-20161212-12309AA4-B59A-11E6-AD42-AA1AE37229E1/AppleTV3,1_8.4.2_12H606_Restore.ipsw",
       "filename": "AppleTV3,1_8.4.2_12H606_Restore.ipsw",
       "signing": {
-        "status": "signed",
-        "checked_at": "2026-09-21T17:55:18Z",
-        "unsigned_since": null
+        "status": "unsigned",
+        "checked_at": "2026-09-21T22:51:29Z",
+        "unsigned_since": "2026-09-21T22:51:29Z"
       }
     }
   ],
   "first_seen_at": "2026-09-11T19:15:16Z",
-  "last_seen_at": "2026-09-21T17:55:18Z"
+  "last_seen_at": "2026-09-21T22:51:29Z"
 }

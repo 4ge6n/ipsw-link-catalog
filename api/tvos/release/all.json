@@ -4,7 +4,7 @@
   "os_key": "tvos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-21T17:55:18Z",
+  "generated_at": "2026-09-21T22:51:29Z",
   "release_count": 144,
   "firmware_count": 189,
   "releases": [
@@ -2245,7 +2245,7 @@
       "version_label": "8.4.7",
       "build": "12H1006",
       "released_at": "2022-03-14T16:48:40Z",
-      "signed_firmware_count": 2,
+      "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "8.4.7/12H1006.json",
       "firmwares": [
@@ -2258,7 +2258,7 @@
           "filename": "AppleTV3,2_8.4.3_12H1006_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2022/ios/002-77717-20220309-806B4BF8-FF71-4485-9BB8-3E2D10E3D1D8/AppleTV3,2_8.4.3_12H1006_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "tvos-release-8.4.7-12H1006-AppleTV3,1",
@@ -2269,7 +2269,7 @@
           "filename": "AppleTV3,1_8.4.3_12H1006_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2022/ios/002-77725-20220309-8070E2E2-28B3-463C-96F0-A6FAC4D86F1D/AppleTV3,1_8.4.3_12H1006_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -2585,7 +2585,7 @@
       "version_label": "8.4.2",
       "build": "12H606",
       "released_at": "2016-12-12T17:55:20Z",
-      "signed_firmware_count": 2,
+      "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "8.4.2/12H606.json",
       "firmwares": [
@@ -2598,7 +2598,7 @@
           "filename": "AppleTV3,2_8.4.2_12H606_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-84121-20161212-123095D6-B59A-11E6-A84D-CE194F99B54B/AppleTV3,2_8.4.2_12H606_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "tvos-release-8.4.2-12H606-AppleTV3,1",
@@ -2609,7 +2609,7 @@
           "filename": "AppleTV3,1_8.4.2_12H606_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-84128-20161212-12309AA4-B59A-11E6-AD42-AA1AE37229E1/AppleTV3,1_8.4.2_12H606_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -3816,5 +3816,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-22T02:55:18+09:00"
+  "generated_at_tokyo": "2026-09-22T07:51:29+09:00"
 }

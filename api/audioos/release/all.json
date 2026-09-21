@@ -4,7 +4,7 @@
   "os_key": "audioos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-21T17:55:18Z",
+  "generated_at": "2026-09-21T22:51:29Z",
   "release_count": 52,
   "firmware_count": 53,
   "releases": [
@@ -37,7 +37,7 @@
       "version_label": "26.6",
       "build": "23L773",
       "released_at": "2026-07-27T17:00:00Z",
-      "signed_firmware_count": 2,
+      "signed_firmware_count": 1,
       "total_firmware_count": 2,
       "data": "26.6/23L773.json",
       "firmwares": [
@@ -50,7 +50,7 @@
           "filename": "AudioAccessory5,1_26.6_23L773_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-67259/44F8A245-A169-4917-872D-E57B32140013/AudioAccessory5,1_26.6_23L773_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "audioos-release-26.6-23L773-AudioAccessory6,1",
@@ -1216,5 +1216,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-22T02:55:18+09:00"
+  "generated_at_tokyo": "2026-09-22T07:51:29+09:00"
 }

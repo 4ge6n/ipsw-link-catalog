@@ -4,7 +4,7 @@
   "os_key": "visionos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-21T17:55:18Z",
+  "generated_at": "2026-09-21T22:51:29Z",
   "release_count": 31,
   "firmware_count": 40,
   "releases": [
@@ -48,7 +48,7 @@
       "version_label": "26.6.1",
       "build": "23O780",
       "released_at": "2026-08-17T17:00:00Z",
-      "signed_firmware_count": 2,
+      "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.6.1/23O780.json",
       "firmwares": [
@@ -61,7 +61,7 @@
           "filename": "Apple_Vision_Pro_M5_26.6.1_23O780_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-73454/790819ED-E7D6-4116-BB29-8BD72ACA3E35/Apple_Vision_Pro_M5_26.6.1_23O780_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "visionos-release-26.6.1-23O780-RealityDevice14,1",
@@ -72,7 +72,7 @@
           "filename": "Apple_Vision_Pro_26.6.1_23O780_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-73755/E919F2D6-D995-4F33-A375-526573DC7565/Apple_Vision_Pro_26.6.1_23O780_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -821,5 +821,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-22T02:55:18+09:00"
+  "generated_at_tokyo": "2026-09-22T07:51:29+09:00"
 }
