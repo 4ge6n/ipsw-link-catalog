@@ -4,10 +4,44 @@
   "os_key": "visionos",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-09-18T18:23:59Z",
-  "release_count": 127,
-  "firmware_count": 168,
+  "generated_at": "2026-09-21T17:55:18Z",
+  "release_count": 128,
+  "firmware_count": 170,
   "releases": [
+    {
+      "id": "visionos-beta-27.2-beta-2-24N5093F",
+      "version": "27.2",
+      "version_label": "27.2-beta-2",
+      "build": "24N5093F",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "27.2-beta-2/24N5093F.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-27.2-beta-2-24N5093F-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_27.2_24N5093f_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/8842fc61-f5ea-47c8-a0b4-08f0c45c0f71/Apple_Vision_Pro_M5_27.2_24N5093f_Restore.ipsw",
+          "sha1": null,
+          "signed": false
+        },
+        {
+          "id": "visionos-beta-27.2-beta-2-24N5093F-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_27.2_24N5093f_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/d5259a1f-cfeb-47b7-92d4-78386a56007a/Apple_Vision_Pro_27.2_24N5093f_Restore.ipsw",
+          "sha1": null,
+          "signed": false
+        }
+      ]
+    },
     {
       "id": "visionos-beta-27.2-beta-24N5088L",
       "version": "27.2",
@@ -3381,5 +3415,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-19T03:23:59+09:00"
+  "generated_at_tokyo": "2026-09-22T02:55:18+09:00"
 }
