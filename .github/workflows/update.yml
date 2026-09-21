@@ -97,3 +97,15 @@ jobs:
         with: {path: site}
       - uses: actions/deploy-pages@v4
         if: github.event_name == 'push' || steps.commit.outputs.changed == 'true'
+
+      # The relay is what makes a notification arrive in the minute Apple
+      # publishes rather than whenever GitHub next feels like running the
+      # schedule. When GitHub refuses its dispatch the relay has nowhere to
+      # say so: iOS 27.2 beta 2 went out, the relay saw it within the hour,
+      # GitHub answered 403, and the first anyone knew was a notification
+      # that never came. Checked last so a bad token cannot stop the catalog
+      # being published, and loud so the next to hear about it is not the
+      # person waiting for a push.
+      - name: Check that the relay can still reach GitHub
+        if: github.event_name != 'push'
+        run: python3 scripts/check_relay.py
