@@ -10,33 +10,28 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-22T01:25:06Z"
+      "checked_at": "2026-09-22T06:45:56Z"
     }
   ],
   "firmwares": [
     {
-      "name": "Mac Studio (M1 Max)",
+      "name": "Mac Studio (M1 Ultra)",
       "devices": [
-        "Mac13,1",
         "Mac13,2",
         "Mac14,10",
         "Mac14,12",
         "Mac14,13",
         "Mac14,14",
-        "Mac14,15",
         "Mac14,2",
         "Mac14,3",
-        "Mac14,5",
         "Mac14,6",
         "Mac14,7",
-        "Mac14,8",
         "Mac14,9",
         "Mac15,10",
         "Mac15,11",
         "Mac15,12",
         "Mac15,13",
         "Mac15,14",
-        "Mac15,3",
         "Mac15,4",
         "Mac15,5",
         "Mac15,6",
@@ -51,10 +46,8 @@
         "Mac16,2",
         "Mac16,3",
         "Mac16,5",
-        "Mac16,6",
         "Mac16,7",
         "Mac16,8",
-        "Mac16,9",
         "Mac17,2",
         "Mac17,3",
         "Mac17,4",
@@ -62,7 +55,6 @@
         "Mac17,6",
         "Mac17,7",
         "Mac17,8",
-        "Mac17,9",
         "MacBookAir10,1",
         "MacBookPro17,1",
         "MacBookPro18,1",
@@ -83,5 +75,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T10:48:41Z",
-  "last_seen_at": "2026-09-22T01:25:06Z"
+  "last_seen_at": "2026-09-22T06:45:56Z"
 }

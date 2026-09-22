@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-22T01:25:06Z"
+      "checked_at": "2026-09-22T06:45:56Z"
     }
   ],
   "firmwares": [
@@ -19,8 +19,7 @@
       "devices": [
         "iPad8,10",
         "iPad8,11",
-        "iPad8,12",
-        "iPad8,9"
+        "iPad8,12"
       ],
       "url": "https://updates.cdn-apple.com/2026FallSeed/b99cabed-011e-4078-b127-9190357dfe8f/iPad_Pro_A12X_A12Z_27.2_24B5084k_Restore.ipsw",
       "filename": "iPad_Pro_A12X_A12Z_27.2_24B5084k_Restore.ipsw",
@@ -106,23 +105,9 @@
       }
     },
     {
-      "name": "iPad (A16) Wi-Fi",
-      "devices": [
-        "iPad15,7"
-      ],
-      "url": "https://updates.cdn-apple.com/2026FallSeed/53db561a-1a24-442c-9a29-7afaa6ef09d3/iPad15,7_27.2_24B5084k_Restore.ipsw",
-      "filename": "iPad15,7_27.2_24B5084k_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-16T20:15:52Z",
-        "unsigned_since": null
-      }
-    },
-    {
       "name": "iPad Air 11-inch (M3) Wi-Fi",
       "devices": [
         "iPad15,3",
-        "iPad15,4",
         "iPad15,5",
         "iPad15,6"
       ],
@@ -154,7 +139,6 @@
       "name": "iPad Air 13-inch (M2) Wi-Fi",
       "devices": [
         "iPad14,10",
-        "iPad14,11",
         "iPad14,8",
         "iPad14,9"
       ],
@@ -255,8 +239,21 @@
         "checked_at": "2026-09-16T20:15:52Z",
         "unsigned_since": null
       }
+    },
+    {
+      "name": "iPad (A16) Wi-Fi",
+      "devices": [
+        "iPad15,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallSeed/53db561a-1a24-442c-9a29-7afaa6ef09d3/iPad15,7_27.2_24B5084k_Restore.ipsw",
+      "filename": "iPad15,7_27.2_24B5084k_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-16T20:15:52Z",
+        "unsigned_since": null
+      }
     }
   ],
   "first_seen_at": "2026-09-16T20:15:52Z",
-  "last_seen_at": "2026-09-22T01:25:06Z"
+  "last_seen_at": "2026-09-22T06:45:56Z"
 }
