@@ -4,8 +4,8 @@
   "os_key": "tvos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-21T22:51:29Z",
-  "release_count": 3,
+  "generated_at": "2026-09-22T01:25:06Z",
+  "release_count": 2,
   "firmware_count": 3,
   "releases": [
     {
@@ -30,27 +30,6 @@
       ]
     },
     {
-      "id": "tvos-release-7.1.2-11D258",
-      "version": "7.1.2",
-      "version_label": "7.1.2",
-      "build": "11D258",
-      "released_at": "2014-09-17T17:59:02Z",
-      "data": "7.1.2/11D258.json",
-      "firmwares": [
-        {
-          "id": "tvos-release-7.1.2-11D258-AppleTV2,1",
-          "name": "Apple TV 2G",
-          "devices": [
-            "AppleTV2,1"
-          ],
-          "filename": "AppleTV2,1_6.2.1_11D258_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/iOS8/031-07202.20140917.tF6Fs/AppleTV2,1_6.2.1_11D258_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        }
-      ]
-    },
-    {
       "id": "tvos-release-6.1.4-10B809",
       "version": "6.1.4",
       "version_label": "6.1.4",
@@ -58,6 +37,17 @@
       "released_at": null,
       "data": "6.1.4/10B809.json",
       "firmwares": [
+        {
+          "id": "tvos-release-6.1.4-10B809-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_5.3_10B809_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/AppleTV/091-5256.20130618.MagBg/AppleTV2,1_5.3_10B809_Restore.ipsw",
+          "sha1": null,
+          "signed": true
+        },
         {
           "id": "tvos-release-6.1.4-10B809-AppleTV3,1",
           "name": "Apple TV 3",
@@ -72,5 +62,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-22T07:51:29+09:00"
+  "generated_at_tokyo": "2026-09-22T10:25:06+09:00"
 }
