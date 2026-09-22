@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-22T13:39:09Z"
+      "checked_at": "2026-09-22T17:04:55Z"
     }
   ],
   "firmwares": [
@@ -43,6 +43,7 @@
         "Mac15,7",
         "Mac15,8",
         "Mac15,9",
+        "Mac16,1",
         "Mac16,10",
         "Mac16,11",
         "Mac16,12",
@@ -69,7 +70,8 @@
         "MacBookPro18,3",
         "MacBookPro18,4",
         "Macmini9,1",
-        "iMac21,1"
+        "iMac21,1",
+        "iMac21,2"
       ],
       "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/140-81421/E76AF7DE-7F9D-4808-B023-AC9A8313B177/UniversalMac_27.0_26A5406e_Restore.ipsw",
       "filename": "UniversalMac_27.0_26A5406e_Restore.ipsw",
@@ -81,5 +83,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T10:48:41Z",
-  "last_seen_at": "2026-09-22T13:39:09Z"
+  "last_seen_at": "2026-09-22T17:04:55Z"
 }
