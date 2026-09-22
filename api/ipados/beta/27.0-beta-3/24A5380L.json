@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-22T06:45:56Z"
+      "checked_at": "2026-09-22T10:52:27Z"
     }
   ],
   "firmwares": [
@@ -19,7 +19,8 @@
       "devices": [
         "iPad8,10",
         "iPad8,11",
-        "iPad8,12"
+        "iPad8,12",
+        "iPad8,9"
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-38799/94CAFFFC-0AAB-4FDB-9488-F7433F0B9652/iPad_Pro_A12X_A12Z_27.0_24A5380l_Restore.ipsw",
       "filename": "iPad_Pro_A12X_A12Z_27.0_24A5380l_Restore.ipsw",
@@ -105,9 +106,23 @@
       }
     },
     {
+      "name": "iPad (A16) Wi-Fi",
+      "devices": [
+        "iPad15,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-39078/1084F745-43EA-41DC-9D40-A7DA633A83DE/iPad15,7_27.0_24A5380l_Restore.ipsw",
+      "filename": "iPad15,7_27.0_24A5380l_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
       "name": "iPad Air 11-inch (M3) Wi-Fi",
       "devices": [
         "iPad15,3",
+        "iPad15,4",
         "iPad15,5",
         "iPad15,6"
       ],
@@ -139,6 +154,7 @@
       "name": "iPad Air 13-inch (M2) Wi-Fi",
       "devices": [
         "iPad14,10",
+        "iPad14,11",
         "iPad14,8",
         "iPad14,9"
       ],
@@ -239,21 +255,8 @@
         "checked_at": "2026-09-12T10:48:41Z",
         "unsigned_since": null
       }
-    },
-    {
-      "name": "iPad (A16) Wi-Fi",
-      "devices": [
-        "iPad15,7"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-39078/1084F745-43EA-41DC-9D40-A7DA633A83DE/iPad15,7_27.0_24A5380l_Restore.ipsw",
-      "filename": "iPad15,7_27.0_24A5380l_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
     }
   ],
   "first_seen_at": "2026-09-12T10:48:41Z",
-  "last_seen_at": "2026-09-22T06:45:56Z"
+  "last_seen_at": "2026-09-22T10:52:27Z"
 }
