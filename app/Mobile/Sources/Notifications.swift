@@ -16,6 +16,7 @@ final class Notifications: NSObject {
         on = defaults.bool(forKey: "notificationsOn")
         platforms = Set(defaults.stringArray(forKey: "notifyPlatforms") ?? [])
         betas = defaults.bool(forKey: "notifyBetas")
+        watchThisDevice = defaults.object(forKey: "watchThisDevice") as? Bool ?? true
         super.init()
     }
 
@@ -53,6 +54,21 @@ final class Notifications: NSObject {
         didSet {
             guard betas != oldValue else { return }
             defaults.set(betas, forKey: "notifyBetas")
+            Task { await send() }
+        }
+    }
+
+    /// Whether to be told when this very device loses a signing window.
+    ///
+    /// Apple stops signing a build without announcing it, and the catalog
+    /// cannot say so afterwards: the build simply leaves the list of what can
+    /// be restored, and by then it is too late to have wanted it. The only
+    /// thing sent is what this device is — iPhone18,4 — and only while this
+    /// is on.
+    var watchThisDevice: Bool {
+        didSet {
+            guard watchThisDevice != oldValue else { return }
+            defaults.set(watchThisDevice, forKey: "watchThisDevice")
             Task { await send() }
         }
     }
@@ -107,6 +123,7 @@ final class Notifications: NSObject {
             "sandbox": Self.isDevelopmentBuild,
             "platforms": Array(platforms).sorted(),
             "betas": betas,
+            "watching": watchThisDevice ? ThisDevice.current.identifier : "",
             "bundle": Bundle.main.bundleIdentifier ?? "",
         ])
         do {

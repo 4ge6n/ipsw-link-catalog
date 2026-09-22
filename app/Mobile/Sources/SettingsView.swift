@@ -25,6 +25,14 @@ struct SettingsView: View {
                         }
                     }
                     Section {
+                        Toggle(String(format: String(localized: "Tell me when this %@ loses its signing window"),
+                                      ThisDevice.current.kindName),
+                               isOn: $notifications.watchThisDevice)
+                        Text(String(format: String(localized: "Apple stops signing a build without saying so. Only %@ is sent."),
+                                    ThisDevice.current.identifier))
+                            .font(.caption).foregroundStyle(.secondary)
+                    }
+                    Section {
                         Toggle("Beta and RC", isOn: $notifications.betas)
                     } footer: {
                         Text("Betas arrive far more often than releases do.")

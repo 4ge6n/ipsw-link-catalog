@@ -286,3 +286,16 @@
 "No room for %1$@: it needs %2$@ and %3$@ is free." = "%1$@ を置く空きがありません。必要 %2$@ に対して空きは %3$@ です。";
 "not enough room" = "空き容量不足";
 "%1$@ stopped at %2$@; carrying on from there" = "%1$@ が %2$@ で中断しました。そこから再開します。";
+
+/* This iPhone */
+"This %@" = "この%@";
+"iPhone" = "iPhone";
+"iPad" = "iPad";
+"iPod touch" = "iPod touch";
+"up to date" = "最新";
+"%1$@ (%2$@) available" = "%1$@ (%2$@) にできます";
+"signed" = "署名中";
+"Hide unsigned" = "署名なしを隠す";
+"not signed" = "署名なし";
+"Tell me when this %@ loses its signing window" = "この%@の署名が終了したら知らせる";
+"Apple stops signing a build without saying so. Only %@ is sent." = "Appleは予告なく署名を終了します。送るのは %@ だけです。";

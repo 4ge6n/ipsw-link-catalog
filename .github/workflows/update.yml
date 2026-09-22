@@ -52,12 +52,15 @@ jobs:
           print(f"new_firmware_urls={summary.get('new_firmware_urls', 0)}")
           # One line, so it survives being a step output.
           print("new_builds=" + json.dumps(summary.get("new_builds", []), separators=(",", ":")))
+          closed = summary.get("signing_closed", [])
+          print(f"signing_closed_count={len(closed)}")
+          print("signing_closed=" + json.dumps(closed, separators=(",", ":")))
           PY
         env:
           BETA_HISTORY: ${{ inputs.full_beta_history == true && '1' || '0' }}
         if: github.event_name != 'push'
       - name: Send notifications for new links
-        if: github.event_name != 'push' && (steps.catalog.outputs.new_firmware_urls != '0' || inputs.test_push)
+        if: github.event_name != 'push' && (steps.catalog.outputs.new_firmware_urls != '0' || steps.catalog.outputs.signing_closed_count != '0' || inputs.test_push)
         env:
           PUSH_API_TOKEN: ${{ secrets.PUSH_API_TOKEN }}
           WEB_PUSH_VAPID_PRIVATE_KEY: ${{ secrets.WEB_PUSH_VAPID_PRIVATE_KEY }}
@@ -67,6 +70,7 @@ jobs:
           APNS_KEY_ID: ${{ secrets.APNS_KEY_ID }}
           APNS_TEAM_ID: ${{ secrets.APNS_TEAM_ID }}
           NEW_BUILDS: ${{ steps.catalog.outputs.new_builds }}
+          SIGNING_CLOSED: ${{ steps.catalog.outputs.signing_closed }}
           TEST_PUSH: ${{ inputs.test_push && '1' || '' }}
         run: |
           npm ci --prefix push-sender

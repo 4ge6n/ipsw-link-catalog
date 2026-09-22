@@ -174,6 +174,9 @@ interface DeviceTokenRecord {
   platforms: string[];
   betas: boolean;
   bundle: string;
+  /// The phone's own model, iPhone18,4, when it has asked to hear about that
+  /// device losing its signing window. Empty when it has not asked.
+  watching: string;
   updated?: number;
 }
 
@@ -188,6 +191,9 @@ export class DeviceTokens extends DurableObject<Env> {
       platforms: Array.isArray(record.platforms) ? record.platforms.slice(0, 8) : [],
       betas: Boolean(record.betas),
       bundle: record.bundle,
+      // One identifier, shaped like one: this is the phone saying what it is,
+      // not a place to keep a list of anything.
+      watching: /^[A-Za-z][A-Za-z0-9]*[0-9]+,[0-9]+$/.test(record.watching ?? "") ? record.watching : "",
       updated: Date.now(),
     };
     await this.ctx.storage.put("tokens", tokens);

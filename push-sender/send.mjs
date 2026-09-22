@@ -34,6 +34,13 @@ const test = process.env.TEST_PUSH === "1";
 const builds = (() => {
   try { return JSON.parse(process.env.NEW_BUILDS || "[]"); } catch { return []; }
 })();
+// Builds that have just stopped being signed, each naming the devices it was
+// for. This is the one thing the catalog cannot tell anyone afterwards: a
+// build that is no longer signed simply leaves the list of what can be
+// restored, and by then it is too late to have wanted it.
+const closed = (() => {
+  try { return JSON.parse(process.env.SIGNING_CLOSED || "[]"); } catch { return []; }
+})();
 
 const names = { ios: "iOS", ipados: "iPadOS", macos: "macOS", tvos: "tvOS", visionos: "visionOS", audioos: "audioOS" };
 const describe = (build) => `${names[build.os] ?? build.os} ${build.version} (${build.build})`;
@@ -80,6 +87,27 @@ if (key) {
     teamId: process.env.APNS_TEAM_ID,
     collapse: test ? "test" : (builds[0] ? `${builds[0].os}-${builds[0].build}` : "catalog"),
     payloadFor: (device) => {
+      // A phone that said what it is gets told when its own device loses a
+      // signing window, whatever platforms it asked about.
+      const mine = device.watching
+        ? closed.filter((build) => (build.devices ?? []).includes(device.watching))
+        : [];
+      if (!test && mine.length > 0) {
+        const first = mine[0];
+        return {
+          aps: {
+            alert: {
+              title: `${describe(first)} is no longer signed`,
+              body: mine.length === 1
+                ? `Apple has stopped signing it for your ${device.watching}.`
+                : `${mine.length} builds for your ${device.watching} are no longer signed.`,
+            },
+            sound: "default",
+            "interruption-level": "active",
+          },
+          closed: mine.slice(0, 8),
+        };
+      }
       const wanted = test ? builds : builds.filter((build) =>
         (device.platforms.length === 0 || device.platforms.includes(build.os))
         && (device.betas || build.channel === "release"));
@@ -104,7 +132,7 @@ if (key) {
 }
 
 console.log(JSON.stringify({
-  subscriptions: subscriptions.length, delivered,
+  subscriptions: subscriptions.length, delivered, signing_closed: closed.length,
   phones: phones.delivered, forgotten: phones.gone.length,
   builds: builds.length,
 }));

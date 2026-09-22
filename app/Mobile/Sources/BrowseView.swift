@@ -10,6 +10,7 @@ struct BrowseView: View {
     @State private var search = ""
     @State private var major: VersionTree.Major.ID?
     @State private var selected: Release.ID?
+    @State private var showingThisDevice = false
 
     var body: some View {
         @Bindable var model = model
@@ -31,13 +32,36 @@ struct BrowseView: View {
 
     private var majorList: some View {
         @Bindable var model = model
-        return List(shown, selection: $major) { group in
-            LabeledContent {
-                Text(group.buildCount.formatted()).foregroundStyle(.secondary)
-            } label: {
-                Text("\(model.platform.title) \(group.name)")
+        return List(selection: $major) {
+            // The device in your hand is somewhere in a list of every device
+            // Apple has shipped. It is easier to start from it.
+            if search.isEmpty, let mine = forThisDevice {
+                Section(String(format: String(localized: "This %@"), ThisDevice.current.kindName)) {
+                    // A button and a sheet rather than a NavigationLink: this
+                    // list drives the split view's other columns through its
+                    // selection, and a link inside it is swallowed by that.
+                    Button { showingThisDevice = true } label: {
+                        HStack {
+                            ThisDeviceRow(release: mine.release, images: mine.images,
+                                          name: ThisDevice.current.name(from: model.releases))
+                            Spacer()
+                            Image(systemName: "chevron.right").font(.caption).foregroundStyle(.tertiary)
+                        }
+                        .contentShape(.rect)
+                    }
+                    .buttonStyle(.plain)
+                }
             }
-            .tag(group.id)
+            Section {
+                ForEach(shown) { group in
+                    LabeledContent {
+                        Text(group.buildCount.formatted()).foregroundStyle(.secondary)
+                    } label: {
+                        Text("\(model.platform.title) \(group.name)")
+                    }
+                    .tag(group.id)
+                }
+            }
         }
         .listStyle(.sidebar)
         .navigationTitle("Catalog")
@@ -66,6 +90,13 @@ struct BrowseView: View {
             }
         }
         .refreshable { await model.load() }
+        .sheet(isPresented: $showingThisDevice) {
+            if let mine = forThisDevice {
+                NavigationStack {
+                    DeviceList(release: mine.release, only: ThisDevice.current.identifier)
+                }
+            }
+        }
     }
 
     // MARK: Its point releases, and the builds under each
@@ -90,6 +121,19 @@ struct BrowseView: View {
         }
     }
 
+    /// The newest build in the catalog that this very device can be restored
+    /// with — which is not always the newest build there is, since one image
+    /// does not cover every device.
+    private var forThisDevice: (release: Release, images: [Firmware])? {
+        let mine = ThisDevice.current
+        guard !mine.identifier.isEmpty else { return nil }
+        for release in model.releases {
+            let images = mine.images(in: release)
+            if !images.isEmpty { return (release, images) }
+        }
+        return nil
+    }
+
     /// Searching reaches through the whole tree rather than the level being
     /// looked at, so a build number typed in finds the version holding it.
     private var shown: [VersionTree.Major] {
@@ -98,6 +142,47 @@ struct BrowseView: View {
             $0.version.localizedCaseInsensitiveContains(search)
             || $0.build.localizedCaseInsensitiveContains(search)
         })
+    }
+}
+
+/// What this device is on, and what it could be put on.
+private struct ThisDeviceRow: View {
+    let release: Release
+    let images: [Firmware]
+    let name: String
+    private let mine = ThisDevice.current
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text(name).font(.body)
+            HStack(spacing: 6) {
+                Text(mine.identifier)
+                Text("·")
+                // What it is running now, said in the same words as the
+                // catalog: a version is not a build, and a restore is keyed
+                // by the build.
+                Text(mine.build.isEmpty ? mine.version : "\(mine.version) (\(mine.build))")
+            }
+            .font(.caption).foregroundStyle(.secondary)
+            HStack(spacing: 6) {
+                if mine.isInstalled(release) {
+                    Text("up to date")
+                        .padding(.horizontal, 6).padding(.vertical, 1)
+                        .background(.quaternary, in: .capsule)
+                } else {
+                    Text(String(format: String(localized: "%1$@ (%2$@) available"),
+                                release.versionLabel ?? release.version, release.build))
+                        .padding(.horizontal, 6).padding(.vertical, 1)
+                        .background(.tint.opacity(0.15), in: .capsule)
+                }
+                if images.contains(where: { $0.signed == true }) {
+                    Image(systemName: "checkmark.seal.fill").foregroundStyle(.green)
+                        .accessibilityLabel(Text("signed"))
+                }
+            }
+            .font(.caption2)
+        }
+        .padding(.vertical, 2)
     }
 }
 

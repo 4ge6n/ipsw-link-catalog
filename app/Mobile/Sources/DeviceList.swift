@@ -5,6 +5,9 @@ import SwiftUI
 /// trailing edge rather than a bar across the row.
 struct DeviceList: View {
     let release: Release
+    /// Set when the list was opened from "This iPhone": the one device is
+    /// what was asked for, and the other sixty are not.
+    var only: String? = nil
     @State private var search = ""
     @State private var signedOnly = false
 
@@ -33,6 +36,7 @@ struct DeviceList: View {
 
     private var shown: [Firmware] {
         release.firmwares
+            .filter { only == nil || $0.devices.contains(only!) }
             .filter { firmware in
                 (!signedOnly || firmware.mightBeSigned)
                 && (search.isEmpty

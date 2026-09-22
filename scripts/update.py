@@ -141,17 +141,30 @@ def verify_signing(records, apple_urls, settings, now, limit=12):
             if verdict is not None: return key, verdict
         return key, None
     checked=0
+    # A build that has just stopped being signed is the one thing an owner of
+    # that device cannot find out from the catalog after the fact: it simply
+    # disappears from what can be restored. Collected here so the phones that
+    # asked about those devices can be told the moment it happens.
+    closed=[]
     with ThreadPoolExecutor(max_workers=4) as pool:
         for key, verdict in pool.map(probe, newest):
             if verdict is None: continue
             checked += 1
             record, stale = pending[key]
+            devices=set()
             for firmware in stale:
                 firmware["signing"]["status"]="signed" if verdict else "unsigned"
                 firmware["signing"]["checked_at"]=now
-                if not verdict and not firmware["signing"].get("unsigned_since"):
-                    firmware["signing"]["unsigned_since"]=now
-    return {"builds_probed": len(newest), "builds_answered": checked}
+                if not verdict:
+                    devices.update(firmware.get("devices") or [])
+                    if not firmware["signing"].get("unsigned_since"):
+                        firmware["signing"]["unsigned_since"]=now
+            if not verdict and devices:
+                closed.append({"os": record["os_key"], "channel": record["channel"],
+                               "version": record["version"], "build": record["build"],
+                               "devices": sorted(devices)})
+    return {"builds_probed": len(newest), "builds_answered": checked,
+            "signing_closed": closed}
 def generate(records, api, settings, now, now_tokyo):
     indexes={}
     for os_key in OS_ORDER:
@@ -246,9 +259,12 @@ def main():
     observed_records={(r["os_key"], r["channel"], r["version"], r["build"]) for r in observed}
     observed_urls={fw["url"] for record in observed for fw in record.get("firmwares", [])}
     records=merge(old, observed, now)
+    signing_closed=[]
     if not args.input and not args.bootstrap_empty:
         apple_urls={row["url"] for row in candidates if row.get("source") == "apple"}
-        print(json.dumps(verify_signing(records, apple_urls, settings, now)))
+        verified=verify_signing(records, apple_urls, settings, now)
+        signing_closed=verified.pop("signing_closed", [])
+        print(json.dumps(verified))
     with tempfile.TemporaryDirectory(prefix="ipsw-catalog-") as tmp:
         stage=Path(tmp)/"api"; site_stage=Path(tmp)/"site"; indexes=generate(records, stage, settings, now, now_tokyo)
         errors=validate_api(stage, set(settings["allowed_cdn_hosts"]))
@@ -262,5 +278,8 @@ def main():
     # Named rather than counted, so a notification can say what turned up
     # instead of that something did. Capped: a first run sees everything.
     new_builds=[{"os":os_key, "channel":channel, "version":version, "build":build} for os_key, channel, version, build in sorted(observed_records-old_records)][:12]
-    print(json.dumps({"candidates":len(candidates), "records":len(records), "rejected":len(rejected), "new_records":len(observed_records-old_records), "new_firmware_urls":len(observed_urls-old_urls), "new_builds":new_builds}))
+    # The last line is what the workflow reads, so what the phones need has
+    # to be in it: a build that stopped being signed is news to whoever owns
+    # one of its devices, and news that the catalog cannot tell them later.
+    print(json.dumps({"candidates":len(candidates), "records":len(records), "rejected":len(rejected), "new_records":len(observed_records-old_records), "new_firmware_urls":len(observed_urls-old_urls), "new_builds":new_builds, "signing_closed":signing_closed[:12]}))
 if __name__ == "__main__": main()
