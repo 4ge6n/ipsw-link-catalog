@@ -26,6 +26,9 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  # The relay check reports by opening one issue rather than by painting
+  # every run of the day red.
+  issues: write
 concurrency:
   group: ipsw-data-update
   cancel-in-progress: false
@@ -109,3 +112,6 @@ jobs:
       - name: Check that the relay can still reach GitHub
         if: github.event_name != 'push'
         run: python3 scripts/check_relay.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
