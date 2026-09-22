@@ -94,7 +94,9 @@ struct BuildPicker: View {
                         Text(date.formatted(date: .abbreviated, time: .omitted))
                     }
                     Text(String(format: String(localized: "%lld file(s)"), release.firmwares.count))
-                    if release.firmwares.contains(where: \.signed) {
+                    // Only where Apple has actually been asked. "Not checked" shown
+                    // as signed is the same defect as showing it as unsigned.
+                    if release.firmwares.contains(where: { $0.signed == true }) {
                         Text("signed")
                             .padding(.horizontal, 6).padding(.vertical, 1)
                             .glassEffect(.regular.tint(.green.opacity(0.35)), in: .capsule)
@@ -115,7 +117,7 @@ struct BuildPicker: View {
     private var shown: [Firmware] {
         let all = current?.firmwares ?? []
         return all.filter { firmware in
-            (!signedOnly || firmware.signed)
+            (!signedOnly || firmware.mightBeSigned)
             && (search.isEmpty
                 || firmware.name.localizedCaseInsensitiveContains(search)
                 || firmware.devices.contains { $0.localizedCaseInsensitiveContains(search) })
@@ -148,7 +150,7 @@ struct BuildPicker: View {
                             VStack(alignment: .leading, spacing: 1) {
                                 HStack(spacing: 6) {
                                     Text(firmware.name)
-                                    if !firmware.signed {
+                                    if let signed = firmware.signed, !signed {
                                         Text("not signed").font(.caption2)
                                             .padding(.horizontal, 6).padding(.vertical, 2)
                                             .glassEffect(.regular, in: .capsule)

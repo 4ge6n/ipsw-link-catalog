@@ -79,9 +79,24 @@ def index(records, os_key, channel, now, include_unknown_beta=True):
             if channel == "release" and f["signing"]["status"] != "signed": continue
             devices=[d for d in f["devices"] if channel != "release" or newest_by_device.get(d) == release_sort(r)]
             if not devices: continue
-            fws.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}-{devices[0]}", "name": f["name"], "devices": devices, "filename": f["filename"], "url": f["url"], "sha1": f.get("sha1"), "signed": f["signing"]["status"] == "signed"})
+            fws.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}-{devices[0]}", "name": f["name"], "devices": devices, "filename": f["filename"], "url": f["url"], "sha1": f.get("sha1"), "signed": published_signing(f)})
         if fws: releases.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}", "version": r["version"], "version_label": r["version_label"], "build": r["build"], "released_at": r.get("released_at"), "data": f"{r['version_label']}/{r['build']}.json", "firmwares": fws})
     return {"schema_version": 1, "os": OS_NAMES[os_key], "os_key": os_key, "channel": channel, "definition": "all currently signed release IPSWs" if channel == "release" else "current latest beta or release candidate IPSWs", "generated_at": now, "release_count": len(releases), "firmware_count": sum(len(r["firmwares"]) for r in releases), "releases": releases}
+
+def published_signing(firmware):
+    """true, false, or null — and null when that is the honest answer.
+
+    The canonical record has three states and says "unknown" for a build
+    nobody has asked Apple about yet, which is every beta the moment it
+    appears. This used to be published as `signed: status == "signed"`, so
+    unknown arrived at the apps as false and every beta was labelled not
+    signed — a claim nothing had been checked to support. Null now means
+    unknown, and the apps say nothing rather than saying something wrong.
+    """
+    status = firmware["signing"]["status"]
+    if status == "signed": return True
+    if status == "unsigned": return False
+    return None
 
 def all_index(records, os_key, channel, now):
     doc=index(records, os_key, channel, now, True)
@@ -97,7 +112,7 @@ def all_index(records, os_key, channel, now):
         for f in r["firmwares"]:
             if f["url"] in seen_urls: continue
             seen_urls.add(f["url"])
-            fws.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}-{f['devices'][0]}", "name": f["name"], "devices": f["devices"], "filename": f["filename"], "url": f["url"], "sha1": f.get("sha1"), "signed": f["signing"]["status"] == "signed"})
-        doc["releases"].append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}", "version": r["version"], "version_label": r["version_label"], "build": r["build"], "released_at": r.get("released_at"), "signed_firmware_count": sum(f["signed"] for f in fws), "total_firmware_count": len(fws), "data": f"{r['version_label']}/{r['build']}.json", "firmwares": fws})
+            fws.append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}-{f['devices'][0]}", "name": f["name"], "devices": f["devices"], "filename": f["filename"], "url": f["url"], "sha1": f.get("sha1"), "signed": published_signing(f)})
+        doc["releases"].append({"id": f"{os_key}-{channel}-{r['version_label']}-{r['build']}", "version": r["version"], "version_label": r["version_label"], "build": r["build"], "released_at": r.get("released_at"), "signed_firmware_count": sum(1 for f in fws if f["signed"] is True), "total_firmware_count": len(fws), "data": f"{r['version_label']}/{r['build']}.json", "firmwares": fws})
     doc["release_count"], doc["firmware_count"] = len(doc["releases"]), sum(len(x["firmwares"]) for x in doc["releases"])
     return doc

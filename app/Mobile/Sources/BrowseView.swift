@@ -121,7 +121,9 @@ private struct BuildRow: View {
                     }
                     // A seal rather than a coloured pill: it is a state, not a
                     // label, and the list is long enough without one on each row.
-                    if release.firmwares.contains(where: \.signed) {
+                    // Only where Apple has actually been asked. "Not checked" shown
+                    // as signed is the same defect as showing it as unsigned.
+                    if release.firmwares.contains(where: { $0.signed == true }) {
                         Image(systemName: "checkmark.seal.fill")
                             .font(.caption)
                             .foregroundStyle(.green)

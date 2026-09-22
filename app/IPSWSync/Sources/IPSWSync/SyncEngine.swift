@@ -237,7 +237,7 @@ actor SyncEngine {
     func wantedFirmwares(_ platform: Platform, devices: Set<String>?) async throws -> [Firmware] {
         let document = try await catalog.latest(platform)
         return document.releases.flatMap(\.firmwares).filter { firmware in
-            guard firmware.signed else { return false }
+            guard firmware.mightBeSigned else { return false }
             guard let devices else { return true }
             return !devices.isDisjoint(with: firmware.devices)
         }

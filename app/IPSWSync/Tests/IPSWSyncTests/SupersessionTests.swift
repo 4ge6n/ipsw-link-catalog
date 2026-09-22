@@ -187,7 +187,7 @@ struct ChoiceTests {
     /// The same test the engine's filter applies.
     private func wanted(_ devices: Set<String>?) -> [Firmware] {
         images.filter { image in
-            guard image.signed else { return false }
+            guard image.mightBeSigned else { return false }
             guard let devices else { return true }
             return !devices.isDisjoint(with: image.devices)
         }
@@ -351,5 +351,34 @@ struct ScheduleTests {
         #expect(Schedule.lastDue(before: at(20, 10, 30), hour: 4, minute: 0, everyHours: 6) == at(20, 10))
         #expect(Schedule.lastDue(before: at(20, 9, 59), hour: 4, minute: 0, everyHours: 6) == at(20, 4))
         #expect(Schedule.lastDue(before: at(20, 10, 30), hour: 4, minute: 0, everyHours: 24) == at(20, 4))
+    }
+}
+
+/// Three states, and none of them invented.
+struct SigningTests {
+    private func firmware(_ signed: Bool?) -> Firmware {
+        Firmware(id: "a", name: "iPhone 17e", devices: ["iPhone18,5"], filename: "a.ipsw",
+                 url: URL(string: "https://updates.cdn-apple.com/a.ipsw")!, sha1: nil, signed: signed)
+    }
+
+    /// The badge says signed. It may only appear when that has been checked.
+    @Test func onlyACheckedBuildIsCalledSigned() {
+        #expect(firmware(true).signed == true)
+        #expect(firmware(nil).signed != true)
+        #expect(firmware(false).signed != true)
+    }
+
+    /// And the other label says not signed, which is also a claim.
+    @Test func onlyARuledOutBuildIsCalledUnsigned() {
+        #expect(firmware(false).knownUnsigned)
+        #expect(!firmware(nil).knownUnsigned)
+        #expect(!firmware(true).knownUnsigned)
+    }
+
+    /// A beta nobody has asked Apple about is still worth fetching.
+    @Test func anUncheckedBuildIsNotTreatedAsUnusable() {
+        #expect(firmware(nil).mightBeSigned)
+        #expect(firmware(true).mightBeSigned)
+        #expect(!firmware(false).mightBeSigned)
     }
 }

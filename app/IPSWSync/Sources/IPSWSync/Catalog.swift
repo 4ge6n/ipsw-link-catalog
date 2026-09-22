@@ -8,7 +8,16 @@ struct Firmware: Codable, Identifiable, Hashable {
     let filename: String
     let url: URL
     let sha1: String?
-    let signed: Bool
+    /// Whether Apple will still restore to this build — and nothing at all
+    /// when that has not been established. A beta is published before anyone
+    /// has asked Apple's signing server about it, and "not checked" said as
+    /// "not signed" is a claim the app cannot support.
+    let signed: Bool?
+
+    /// Known not to be signed, as against merely unchecked.
+    var knownUnsigned: Bool { signed == false }
+    /// Anything that has not been ruled out.
+    var mightBeSigned: Bool { signed != false }
 
     /// The same image, with a checksum that was found somewhere else.
     func checked(against sha1: String) -> Firmware {

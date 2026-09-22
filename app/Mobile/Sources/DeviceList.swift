@@ -20,7 +20,7 @@ struct DeviceList: View {
         .searchable(text: $search, prompt: Text("Search devices"))
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Toggle("Signed only", systemImage: "checkmark.seal", isOn: $signedOnly)
+                Toggle("Hide unsigned", systemImage: "checkmark.seal", isOn: $signedOnly)
                     .toggleStyle(.button)
             }
         }
@@ -34,7 +34,7 @@ struct DeviceList: View {
     private var shown: [Firmware] {
         release.firmwares
             .filter { firmware in
-                (!signedOnly || firmware.signed)
+                (!signedOnly || firmware.mightBeSigned)
                 && (search.isEmpty
                     || firmware.name.localizedCaseInsensitiveContains(search)
                     || firmware.devices.contains { $0.localizedCaseInsensitiveContains(search) })
@@ -103,9 +103,16 @@ private struct FirmwareRow: View {
         return "iphone"
     }
 
+    /// Three states, not two. A beta is published before anyone has asked
+    /// Apple's signing server about it, and every one of them was being
+    /// labelled "not signed" — which was not something anything had checked.
+    /// Nothing is said until there is something to say.
     private var subtitle: String {
         let devices = firmware.devices.joined(separator: ", ")
-        return firmware.signed ? devices : devices + " · " + String(localized: "not signed")
+        switch firmware.signed {
+        case .some(true), .none: return devices
+        case .some(false): return devices + " · " + String(localized: "not signed")
+        }
     }
 
     /// Small and at the trailing edge, the way a download is offered everywhere

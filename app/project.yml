@@ -81,6 +81,7 @@ targets:
       - path: IPSWSync/Sources/IPSWSync/SyncEngine+Files.swift
       - path: IPSWSync/Sources/IPSWSync/Receiver.swift
       - path: IPSWSync/Sources/IPSWSync/Gate.swift
+      - path: IPSWSync/Sources/IPSWSync/Schedule.swift
       - path: IPSWSync/Sources/IPSWSync/VerifiedStore.swift
       - path: IPSWSync/Sources/IPSWSync/Transparency.swift
       - path: Mobile/Sources
