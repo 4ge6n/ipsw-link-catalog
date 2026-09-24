@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-24T06:43:04Z"
+      "checked_at": "2026-09-24T12:20:32Z"
     }
   ],
   "firmwares": [
@@ -19,6 +19,7 @@
       "devices": [
         "iPad8,10",
         "iPad8,11",
+        "iPad8,12",
         "iPad8,9"
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21568/6114C7F2-EE62-468B-B4B9-8352106211D7/iPad_Pro_A12X_A12Z_27.0_24A5370h_Restore.ipsw",
@@ -33,6 +34,8 @@
       "name": "iPad Pro 11-inch (M5) Wi-Fi",
       "devices": [
         "iPad17,1",
+        "iPad17,2",
+        "iPad17,3",
         "iPad17,4"
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-22016/CD39F6DC-E21A-4250-8C3D-0D96FBC9A42B/iPad17,1,iPad17,2,iPad17,3,iPad17,4_27.0_24A5370h_Restore.ipsw",
@@ -44,10 +47,12 @@
       }
     },
     {
-      "name": "iPad Pro 11-inch (M4) Wi-Fi + Cellular",
+      "name": "iPad Pro 11-inch (M4) Wi-Fi",
       "devices": [
+        "iPad16,3",
         "iPad16,4",
-        "iPad16,5"
+        "iPad16,5",
+        "iPad16,6"
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-22005/2A6EEE08-48E8-4962-83C7-B7E08545710F/iPad_Pro_M4_27.0_24A5370h_Restore.ipsw",
       "filename": "iPad_Pro_M4_27.0_24A5370h_Restore.ipsw",
@@ -61,105 +66,12 @@
       "name": "iPad Air 13-inch (M4) Wi-Fi",
       "devices": [
         "iPad16,10",
+        "iPad16,11",
         "iPad16,8",
         "iPad16,9"
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-22066/16E49774-1CB6-49C5-AB86-B863BFB31E58/iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.0_24A5370h_Restore.ipsw",
       "filename": "iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.0_24A5370h_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPad (A16) Wi-Fi + Cellular",
-      "devices": [
-        "iPad15,8"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21640/E600129E-8D55-4A6D-8C44-B0AD2973BB53/iPad15,8_27.0_24A5370h_Restore.ipsw",
-      "filename": "iPad15,8_27.0_24A5370h_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPad Air 11-inch (M3, Cellular)",
-      "devices": [
-        "iPad15,4"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21591/2132C9EC-4982-4004-B3B6-B78D84A162A0/iPad15,3,iPad15,4,iPad15,5,iPad15,6_27.0_24A5370h_Restore.ipsw",
-      "filename": "iPad15,3,iPad15,4,iPad15,5,iPad15,6_27.0_24A5370h_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPad Air (M2, 11-inch, Cellular)",
-      "devices": [
-        "iPad14,9"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21623/2892CC3F-75E6-47DD-BB2B-CCED1BAEA515/iPad_Air_M2_27.0_24A5370h_Restore.ipsw",
-      "filename": "iPad_Air_M2_27.0_24A5370h_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
-      "devices": [
-        "iPad14,3",
-        "iPad14,6"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-22007/324AD2C6-2CE8-4883-8A16-2DB859CB4EEE/iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A5370h_Restore.ipsw",
-      "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A5370h_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPad mini 6 (Cellular)",
-      "devices": [
-        "iPad14,2"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21572/6766089F-413D-4830-9248-1B4802B21F22/iPad_Fall_2021_27.0_24A5370h_Restore.ipsw",
-      "filename": "iPad_Fall_2021_27.0_24A5370h_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPad Pro 11-inch (3rd generation) Wi-Fi (1 or 2 TB)",
-      "devices": [
-        "iPad13,5",
-        "iPad13,8",
-        "iPad13,9"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21652/C13A2F91-2BFB-44FD-BACF-C0DD098BC5E4/iPad_Pro_Spring_2021_27.0_24A5370h_Restore.ipsw",
-      "filename": "iPad_Pro_Spring_2021_27.0_24A5370h_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPad Air 5 (WiFi)",
-      "devices": [
-        "iPad13,16"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21604/D4E22EEC-6BD3-46CE-BCF0-BC1B7AE2800A/iPad_Spring_2022_27.0_24A5370h_Restore.ipsw",
-      "filename": "iPad_Spring_2022_27.0_24A5370h_Restore.ipsw",
       "signing": {
         "status": "unknown",
         "checked_at": "2026-09-12T10:48:41Z",
@@ -181,12 +93,87 @@
       }
     },
     {
+      "name": "iPad (A16) Wi-Fi + Cellular",
+      "devices": [
+        "iPad15,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21640/E600129E-8D55-4A6D-8C44-B0AD2973BB53/iPad15,8_27.0_24A5370h_Restore.ipsw",
+      "filename": "iPad15,8_27.0_24A5370h_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
       "name": "iPad (A16) Wi-Fi",
       "devices": [
         "iPad15,7"
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21620/C3E8CF1C-A575-4D3F-891E-F80F4A88F907/iPad15,7_27.0_24A5370h_Restore.ipsw",
       "filename": "iPad15,7_27.0_24A5370h_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Air 11-inch (M3) Wi-Fi",
+      "devices": [
+        "iPad15,3",
+        "iPad15,4",
+        "iPad15,5",
+        "iPad15,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21591/2132C9EC-4982-4004-B3B6-B78D84A162A0/iPad15,3,iPad15,4,iPad15,5,iPad15,6_27.0_24A5370h_Restore.ipsw",
+      "filename": "iPad15,3,iPad15,4,iPad15,5,iPad15,6_27.0_24A5370h_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
+      "devices": [
+        "iPad14,3",
+        "iPad14,4",
+        "iPad14,5",
+        "iPad14,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-22007/324AD2C6-2CE8-4883-8A16-2DB859CB4EEE/iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A5370h_Restore.ipsw",
+      "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A5370h_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Air 13-inch (M2) Wi-Fi",
+      "devices": [
+        "iPad14,10",
+        "iPad14,11",
+        "iPad14,8",
+        "iPad14,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21623/2892CC3F-75E6-47DD-BB2B-CCED1BAEA515/iPad_Air_M2_27.0_24A5370h_Restore.ipsw",
+      "filename": "iPad_Air_M2_27.0_24A5370h_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini (6th generation) Wi-Fi",
+      "devices": [
+        "iPad14,1",
+        "iPad14,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21572/6766089F-413D-4830-9248-1B4802B21F22/iPad_Fall_2021_27.0_24A5370h_Restore.ipsw",
+      "filename": "iPad_Fall_2021_27.0_24A5370h_Restore.ipsw",
       "signing": {
         "status": "unknown",
         "checked_at": "2026-09-12T10:48:41Z",
@@ -201,6 +188,40 @@
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21639/1B98799E-8A35-4D79-A826-78ABE1659FCF/iPad_Fall_2022_27.0_24A5370h_Restore.ipsw",
       "filename": "iPad_Fall_2022_27.0_24A5370h_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Air (5th generation) Wi-Fi",
+      "devices": [
+        "iPad13,16",
+        "iPad13,17"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21604/D4E22EEC-6BD3-46CE-BCF0-BC1B7AE2800A/iPad_Spring_2022_27.0_24A5370h_Restore.ipsw",
+      "filename": "iPad_Spring_2022_27.0_24A5370h_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad Pro 12.9-inch (5th generation) Wi-Fi + Cellular",
+      "devices": [
+        "iPad13,10",
+        "iPad13,11",
+        "iPad13,4",
+        "iPad13,5",
+        "iPad13,6",
+        "iPad13,7",
+        "iPad13,8",
+        "iPad13,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-21652/C13A2F91-2BFB-44FD-BACF-C0DD098BC5E4/iPad_Pro_Spring_2021_27.0_24A5370h_Restore.ipsw",
+      "filename": "iPad_Pro_Spring_2021_27.0_24A5370h_Restore.ipsw",
       "signing": {
         "status": "unknown",
         "checked_at": "2026-09-12T10:48:41Z",
@@ -237,5 +258,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T10:48:41Z",
-  "last_seen_at": "2026-09-24T06:43:04Z"
+  "last_seen_at": "2026-09-24T12:20:32Z"
 }

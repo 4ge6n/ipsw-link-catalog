@@ -9,24 +9,15 @@
   "release_candidate": false,
   "sources": [
     {
+      "name": "ipsw.dev",
+      "checked_at": "2026-09-24T12:20:32Z"
+    },
+    {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-24T06:43:04Z"
+      "checked_at": "2026-09-24T12:20:32Z"
     }
   ],
   "firmwares": [
-    {
-      "name": "iPhone 17 Pro",
-      "devices": [
-        "iPhone18,1"
-      ],
-      "url": "https://updates.cdn-apple.com/2026FallSeed/c57bab8d-83a1-4de4-923d-657ead5a961c/iPhone18,1_27.2_24B5089g_Restore.ipsw",
-      "filename": "iPhone18,1_27.2_24B5089g_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-21T17:55:18Z",
-        "unsigned_since": null
-      }
-    },
     {
       "name": "iPhone 11",
       "devices": [
@@ -368,6 +359,19 @@
       }
     },
     {
+      "name": "iPhone 17 Pro",
+      "devices": [
+        "iPhone18,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallSeed/c57bab8d-83a1-4de4-923d-657ead5a961c/iPhone18,1_27.2_24B5089g_Restore.ipsw",
+      "filename": "iPhone18,1_27.2_24B5089g_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-21T17:55:18Z",
+        "unsigned_since": null
+      }
+    },
+    {
       "name": "iPhone 17 Pro Max",
       "devices": [
         "iPhone18,2"
@@ -410,5 +414,5 @@
     }
   ],
   "first_seen_at": "2026-09-21T17:55:18Z",
-  "last_seen_at": "2026-09-24T06:43:04Z"
+  "last_seen_at": "2026-09-24T12:20:32Z"
 }
