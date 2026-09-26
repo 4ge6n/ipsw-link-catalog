@@ -116,7 +116,7 @@ def apply_device_names(records, names) -> None:
             if len(devices) != 1: continue
             if devices[0] in names: firmware["name"] = names[devices[0]]
 
-def verify_signing(records, apple_urls, settings, now, limit=12):
+def verify_signing(records, apple_urls, settings, now, limit=12, before=None):
     """Confirm with Apple whether builds it no longer lists are still signed.
 
     Apple's catalog only names the build it currently restores for each
@@ -159,7 +159,13 @@ def verify_signing(records, apple_urls, settings, now, limit=12):
                     devices.update(firmware.get("devices") or [])
                     if not firmware["signing"].get("unsigned_since"):
                         firmware["signing"]["unsigned_since"]=now
-            if not verdict and devices:
+            # Reported once, when it changes — not every time it is checked.
+            # A third-party index kept calling iOS 10.3.4 signed, Apple kept
+            # saying it was not, and every run read that as a fresh closure:
+            # the same ten builds announced twice a day. What the last run
+            # published is what this one is compared against.
+            was_signed = any((before or {}).get(f["url"]) == "signed" for f in stale)
+            if not verdict and devices and was_signed:
                 closed.append({"os": record["os_key"], "channel": record["channel"],
                                "version": record["version"], "build": record["build"],
                                "devices": sorted(devices)})
@@ -262,7 +268,10 @@ def main():
     signing_closed=[]
     if not args.input and not args.bootstrap_empty:
         apple_urls={row["url"] for row in candidates if row.get("source") == "apple"}
-        verified=verify_signing(records, apple_urls, settings, now)
+        # What the previous run published, file by file, taken before the
+        # fresh observations are merged over it.
+        before={f["url"]: f["signing"]["status"] for r in old for f in r.get("firmwares", [])}
+        verified=verify_signing(records, apple_urls, settings, now, before=before)
         signing_closed=verified.pop("signing_closed", [])
         print(json.dumps(verified))
     with tempfile.TemporaryDirectory(prefix="ipsw-catalog-") as tmp:

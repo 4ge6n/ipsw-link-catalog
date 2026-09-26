@@ -61,7 +61,10 @@ const subscriptions = await listFrom("/internal/subscriptions", "subscriptions")
 const payload = JSON.stringify({ title: headline, body: detail, url: "https://4ge6n.github.io/ipsw-link-catalog/" });
 
 let delivered = 0;
-for (const subscription of subscriptions) {
+// A browser asked to hear about new builds and nothing else. A run with none
+// — one that only found a build had stopped being signed — used to send it
+// "IPSW Link Catalog updated" anyway, twice a day, about nothing.
+for (const subscription of (test || builds.length > 0) ? subscriptions : []) {
   try {
     await webpush.sendNotification(subscription, payload, { TTL: 60 * 60 });
     delivered += 1;
