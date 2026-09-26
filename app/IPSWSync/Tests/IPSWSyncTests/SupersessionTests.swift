@@ -382,3 +382,30 @@ struct SigningTests {
         #expect(!firmware(false).mightBeSigned)
     }
 }
+
+/// Six transfers used to look at the same free space, each see enough for
+/// itself, and fill the drive together.
+struct RoomClaimTests {
+    @Test func whatOneTransferClaimsIsNotThereForTheNext() async throws {
+        let engine = SyncEngine()
+        let folder = FileManager.default.temporaryDirectory
+        let free = try #require(engine.freeSpace(at: folder))
+        // More than half of what is free, twice: the first fits, the second
+        // would have fitted too when each only looked.
+        let big = free / 2 + (free / 10)
+        #expect(await engine.claimRoom(big, in: folder))
+        #expect(!(await engine.claimRoom(big, in: folder)))
+        await engine.releaseRoom(big, in: folder)
+        #expect(await engine.claimRoom(big, in: folder))
+        await engine.releaseRoom(big, in: folder)
+    }
+
+    @Test func aFullDriveIsRecognisedHoweverItIsSaid() {
+        #expect(SyncEngine.isOutOfSpace(NSError(domain: NSCocoaErrorDomain, code: NSFileWriteOutOfSpaceError)))
+        #expect(SyncEngine.isOutOfSpace(NSError(domain: NSPOSIXErrorDomain, code: Int(ENOSPC))))
+        let wrapped = NSError(domain: NSURLErrorDomain, code: -1,
+                              userInfo: [NSUnderlyingErrorKey: NSError(domain: NSPOSIXErrorDomain, code: Int(ENOSPC))])
+        #expect(SyncEngine.isOutOfSpace(wrapped))
+        #expect(!SyncEngine.isOutOfSpace(URLError(.timedOut)))
+    }
+}

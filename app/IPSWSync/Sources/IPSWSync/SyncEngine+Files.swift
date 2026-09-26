@@ -81,14 +81,46 @@ extension SyncEngine {
                 transfer.state = .queued
                 await report(transfer)
                 await downloads.enter()
+                // Room is claimed, not just looked at. Six transfers used to
+                // look at the same free space, each see enough for itself,
+                // and start together — and the drive filled under all six at
+                // once, leaving six part-files that each held room the others
+                // needed. What a transfer is about to write is set aside for
+                // it while it writes, and counted against everyone else.
+                let needed = max(0, expected - (fileSize(destination) ?? 0) - reclaimable)
+                guard await claimRoom(needed, in: folder) else {
+                    await downloads.leave()
+                    let free = freeSpace(at: folder) ?? 0
+                    transfer.state = .failed(String(localized: "not enough room"))
+                    await report(transfer)
+                    await log(LogEntry(kind: .bad, message: String(format: String(localized: "No room for %1$@: it needs %2$@ and %3$@ is free."),
+                                                                   firmware.filename,
+                                                                   ByteCountFormatter.string(fromByteCount: needed, countStyle: .file),
+                                                                   ByteCountFormatter.string(fromByteCount: free, countStyle: .file))))
+                    return .settled
+                }
                 transfer.state = .downloading
                 transfer.startedAt = .now
                 await report(transfer)
                 do {
                     try await carryOn(firmware, to: destination, from: &transfer, report: report, log: log)
+                    await releaseRoom(needed, in: folder)
                     await downloads.leave()
                 } catch {
+                    await releaseRoom(needed, in: folder)
                     await downloads.leave()
+                    // A drive that filled anyway — another program wrote to
+                    // it — is not a line that dropped. The part-file cannot
+                    // be finished and only holds room something else could
+                    // use, and asking again in twenty seconds finds the same
+                    // full drive.
+                    if Self.isOutOfSpace(error) {
+                        try? FileManager.default.removeItem(at: destination)
+                        transfer.state = .failed(String(localized: "not enough room"))
+                        await report(transfer)
+                        await log(LogEntry(kind: .bad, message: String(format: String(localized: "The drive filled while %@ was arriving; what arrived was removed."), firmware.filename)))
+                        return .settled
+                    }
                     throw error
                 }
                 transfer.state = .verifying
@@ -220,9 +252,37 @@ extension SyncEngine {
     }
 
     /// How much room is left where these are being kept.
+    /// What can be written to the folder's drive right now.
+    ///
+    /// Asked of the file system each time. A URL keeps the answers it has
+    /// been given, so the same folder asked twice reported the room it had
+    /// the first time, however much had been written since. And it is the
+    /// room actually free, not the "important usage" figure, which counts
+    /// space the system could purge — a promise, on an external drive, that
+    /// the write does not get to cash.
     nonisolated func freeSpace(at folder: URL) -> Int64? {
-        let values = try? folder.resourceValues(forKeys: [.volumeAvailableCapacityForImportantUsageKey])
-        return values?.volumeAvailableCapacityForImportantUsage
+        var stats = statfs()
+        guard statfs(folder.path(percentEncoded: false), &stats) == 0 else { return nil }
+        return Int64(stats.f_bavail) * Int64(stats.f_bsize)
+    }
+
+    /// Which drive a folder is on, so two folders on one drive share one
+    /// account of what has been set aside.
+    nonisolated func volume(of folder: URL) -> String {
+        var stats = statfs()
+        guard statfs(folder.path(percentEncoded: false), &stats) == 0 else {
+            return folder.path(percentEncoded: false)
+        }
+        return withUnsafeBytes(of: stats.f_mntonname) { String(decoding: $0.prefix { $0 != 0 }, as: UTF8.self) }
+    }
+
+    /// Whether an error is the drive being full, however it was phrased.
+    nonisolated static func isOutOfSpace(_ error: Error) -> Bool {
+        let error = error as NSError
+        if error.domain == NSCocoaErrorDomain, error.code == NSFileWriteOutOfSpaceError { return true }
+        if error.domain == NSPOSIXErrorDomain, error.code == Int(ENOSPC) { return true }
+        if let underlying = error.userInfo[NSUnderlyingErrorKey] as? Error { return isOutOfSpace(underlying) }
+        return false
     }
 
     /// Whether one more image of this size can be taken without filling the

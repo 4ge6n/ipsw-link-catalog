@@ -52,6 +52,27 @@ actor SyncEngine {
     /// one platform's run, so seven folders syncing at the same time still add
     /// up to the number that was asked for.
     let downloads = Gate()
+    /// Bytes set aside on each drive for transfers that are writing now.
+    private var claimed: [String: Int64] = [:]
+
+    /// Set room aside for a transfer, or say there is none. Checked against
+    /// what is free less what every other running transfer is about to
+    /// write, and a margin that is never given away.
+    func claimRoom(_ bytes: Int64, in folder: URL) -> Bool {
+        guard bytes > 0 else { return true }
+        let drive = volume(of: folder)
+        guard let free = freeSpace(at: folder) else { return true }
+        let held = claimed[drive] ?? 0
+        guard bytes + held + Self.spareRoom <= free else { return false }
+        claimed[drive] = held + bytes
+        return true
+    }
+
+    func releaseRoom(_ bytes: Int64, in folder: URL) {
+        guard bytes > 0 else { return }
+        let drive = volume(of: folder)
+        claimed[drive] = max(0, (claimed[drive] ?? 0) - bytes)
+    }
 
     init(catalog: CatalogClient = CatalogClient()) {
         self.catalog = catalog
