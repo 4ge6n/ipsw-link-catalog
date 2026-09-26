@@ -409,3 +409,35 @@ struct RoomClaimTests {
         #expect(!SyncEngine.isOutOfSpace(URLError(.timedOut)))
     }
 }
+
+
+/// The old build goes first only when that is what makes the room, and never
+/// when it would not be enough.
+struct ReplaceInPlaceTests {
+    private func oldFile() throws -> URL {
+        let folder = FileManager.default.temporaryDirectory.appending(path: UUID().uuidString)
+        try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+        let file = folder.appending(path: "iPhone12,1_27.0_24A437_Restore.ipsw")
+        try Data(count: 4096).write(to: file)
+        return file
+    }
+
+    /// Room enough without it: the old build stays until the end of the run.
+    @Test func anOldBuildIsNotRemovedWhenThereIsRoomAnyway() async throws {
+        let file = try oldFile()
+        let claim = await SyncEngine().claimRoom(1024, in: file.deletingLastPathComponent(), replacing: [file])
+        #expect(claim.held)
+        #expect(claim.removed.isEmpty)
+        #expect(FileManager.default.fileExists(atPath: file.path(percentEncoded: false)))
+    }
+
+    /// Not enough even with it: nothing is removed, so the device keeps the
+    /// build it had rather than ending up with neither.
+    @Test func anOldBuildIsNotRemovedWhenItWouldNotBeEnough() async throws {
+        let file = try oldFile()
+        let claim = await SyncEngine().claimRoom(Int64.max / 4, in: file.deletingLastPathComponent(), replacing: [file])
+        #expect(!claim.held)
+        #expect(claim.removed.isEmpty)
+        #expect(FileManager.default.fileExists(atPath: file.path(percentEncoded: false)))
+    }
+}

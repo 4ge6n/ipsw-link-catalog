@@ -59,13 +59,33 @@ actor SyncEngine {
     /// what is free less what every other running transfer is about to
     /// write, and a margin that is never given away.
     func claimRoom(_ bytes: Int64, in folder: URL) -> Bool {
-        guard bytes > 0 else { return true }
+        claimRoom(bytes, in: folder, replacing: []).held
+    }
+
+    /// Set room aside, giving back the builds this one replaces if — and only
+    /// if — that is what it takes. One step inside the actor: the room a
+    /// removal frees is claimed before any other transfer can look, and
+    /// nothing is removed unless the claim then succeeds.
+    func claimRoom(_ bytes: Int64, in folder: URL, replacing old: [URL]) -> (held: Bool, removed: [String]) {
+        guard bytes > 0 else { return (true, []) }
         let drive = volume(of: folder)
-        guard let free = freeSpace(at: folder) else { return true }
+        guard let free = freeSpace(at: folder) else { return (true, []) }
         let held = claimed[drive] ?? 0
-        guard bytes + held + Self.spareRoom <= free else { return false }
+        if bytes + held + Self.spareRoom <= free {
+            // Room enough without touching anything: the old builds stay
+            // until the end of the run, as they always have.
+            claimed[drive] = held + bytes
+            return (true, [])
+        }
+        let back = old.compactMap { fileSize($0) }.reduce(0, +)
+        guard back > 0, bytes + held + Self.spareRoom <= free + back else { return (false, []) }
+        var removed: [String] = []
+        for file in old where (try? FileManager.default.removeItem(at: file)) != nil {
+            VerifiedStore.shared.forget(file)
+            removed.append(file.lastPathComponent)
+        }
         claimed[drive] = held + bytes
-        return true
+        return (true, removed)
     }
 
     func releaseRoom(_ bytes: Int64, in folder: URL) {
@@ -141,14 +161,28 @@ actor SyncEngine {
         // for days a few files short. What the line dropped is asked for again
         // before the run is called done.
         var remaining = wanted
+        var landed: [Firmware] = []
+        var noRoom: [Firmware] = []
         for round in 1...3 {
-            remaining = await fetchEach(remaining, into: folder, reclaiming: index,
-                                        concurrently: limit, report: report, log: log)
+            let pass = await fetchEach(remaining, into: folder, reclaiming: index,
+                                       concurrently: limit, report: report, log: log)
+            landed += pass.landed
+            noRoom += pass.noRoom
+            remaining = pass.again
             guard !remaining.isEmpty, !cancelled, round < 3 else { break }
             let pause = Double(round) * 20
             await log(LogEntry(kind: .warning, message: String(format: String(localized: "%1$lld file(s) did not arrive; trying again in %2$.0f seconds"),
                                                                remaining.count, pause)))
             try? await Task.sleep(for: .seconds(pause))
+        }
+        // What did not fit while six were writing gets one more go, one at a
+        // time, once they are done. The room in question is then its own
+        // predecessor's, which it can take without anyone else reaching for it.
+        for firmware in noRoom where !cancelled {
+            if await fetch(firmware, into: folder, reclaiming: index,
+                           report: report, log: log) == .landed {
+                landed.append(firmware)
+            }
         }
         // Swept whether or not the run is pruning: this is not someone else's
         // file being tidied away, it is this app's own unfinished business.
@@ -163,7 +197,11 @@ actor SyncEngine {
         if prune, !cancelled {
             // What each image on the drive is for, so a build is replaced by
             // devices rather than by the name Apple happened to give the file.
-            await removeReplacedBuilds(in: folder, keeping: wanted, using: index ?? DeviceIndex(), log: log)
+            // Against what actually arrived, not what was meant to. A device
+            // whose new build did not fit kept its old one only until here,
+            // where the plan said the new one covered it — and it was left
+            // with neither.
+            await removeReplacedBuilds(in: folder, keeping: landed, using: index ?? DeviceIndex(), log: log)
         }
     }
 
@@ -179,30 +217,37 @@ actor SyncEngine {
         concurrently limit: Int,
         report: @escaping @Sendable @MainActor (Transfer) -> Void,
         log: @escaping @Sendable @MainActor (LogEntry) -> Void
-    ) async -> [Firmware] {
+    ) async -> (landed: [Firmware], noRoom: [Firmware], again: [Firmware]) {
         var pending = firmwares[...]
-        var again: [Firmware] = []
+        var landed: [Firmware] = [], noRoom: [Firmware] = [], again: [Firmware] = []
         let atOnce = max(1, limit) + 4
-        await withTaskGroup(of: Firmware?.self) { group in
+        func sort(_ result: (Firmware, Outcome)?) {
+            guard let (firmware, outcome) = result else { return }
+            switch outcome {
+            case .landed: landed.append(firmware)
+            case .noRoom: noRoom.append(firmware)
+            case .worthAnotherGo: again.append(firmware)
+            case .settled: break
+            }
+        }
+        await withTaskGroup(of: (Firmware, Outcome).self) { group in
             var running = 0
             while !cancelled, let firmware = pending.first {
                 pending = pending.dropFirst()
                 group.addTask { [self] in
-                    await fetch(firmware, into: folder, reclaiming: index,
-                                report: report, log: log) == .worthAnotherGo ? firmware : nil
+                    (firmware, await fetch(firmware, into: folder, reclaiming: index,
+                                           report: report, log: log))
                 }
                 running += 1
                 if running >= atOnce {
-                    if let dropped = await group.next() ?? nil { again.append(dropped) }
+                    sort(await group.next())
                     running -= 1
                 }
             }
-            for await dropped in group {
-                if let dropped { again.append(dropped) }
-            }
+            for await result in group { sort(result) }
         }
         // Whatever never started is not a failure; it is a Stop.
-        return cancelled ? [] : again
+        return (landed, cancelled ? [] : noRoom, cancelled ? [] : again)
     }
 
     /// What each model-named image has covered before, for reading a page that
@@ -247,7 +292,7 @@ actor SyncEngine {
         var remaining = firmwares
         for round in 1...3 {
             remaining = await fetchEach(remaining, into: folder, reclaiming: nil,
-                                        concurrently: limit, report: report, log: log)
+                                        concurrently: limit, report: report, log: log).again
             guard !remaining.isEmpty, !cancelled, round < 3 else { break }
             try? await Task.sleep(for: .seconds(Double(round) * 20))
         }

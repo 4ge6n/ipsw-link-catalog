@@ -4,12 +4,19 @@ import Foundation
 extension SyncEngine {
     /// Download one file if the folder does not already hold it intact.
     /// What came of one attempt at one file.
-    enum Outcome: Sendable {
-        /// On the drive, or not worth asking again this run: no room for it,
-        /// or Apple's own copy does not match Apple's own checksum.
-        case settled
+    enum Outcome: Sendable, Equatable {
+        /// On the drive and matching Apple's checksum, whether it arrived
+        /// now or was already there.
+        case landed
+        /// Did not fit while other transfers were writing. Worth one more
+        /// go once they have finished, when the only room in question is
+        /// its own predecessor's.
+        case noRoom
         /// The line gave out. Worth another go in a moment.
         case worthAnotherGo
+        /// Not worth asking again this run: stopped, or Apple's own copy
+        /// does not match Apple's own checksum.
+        case settled
     }
 
     @discardableResult
@@ -32,7 +39,7 @@ extension SyncEngine {
             transfer.state = .done(alreadyHad: true)
             await report(transfer)
             await log(LogEntry(kind: .info, message: String(format: String(localized: "Already have %@"), firmware.filename)))
-            return .settled
+            return .landed
         }
         do {
             let expected = try await contentLength(firmware.url)
@@ -47,7 +54,7 @@ extension SyncEngine {
                 transfer.state = .done(alreadyHad: true)
                 await report(transfer)
                 await log(LogEntry(kind: .info, message: String(format: String(localized: "Already have %@"), firmware.filename)))
-                return .settled
+                return .landed
             }
             // A file that is already the full length but hashes wrong is damaged,
             // not partial, so resuming would only append to the damage.
@@ -69,7 +76,7 @@ extension SyncEngine {
                                                                ByteCountFormatter.string(fromByteCount: expected, countStyle: .file),
                                                                ByteCountFormatter.string(fromByteCount: free, countStyle: .file))))
                 // Another go will find the same drive with the same room on it.
-                return .settled
+                return .noRoom
             }
             for attempt in 1...2 {
                 transfer.resumedFrom = fileSize(destination) ?? 0
@@ -87,8 +94,20 @@ extension SyncEngine {
                 // once, leaving six part-files that each held room the others
                 // needed. What a transfer is about to write is set aside for
                 // it while it writes, and counted against everyone else.
-                let needed = max(0, expected - (fileSize(destination) ?? 0) - reclaimable)
-                guard await claimRoom(needed, in: folder) else {
+                let needed = max(0, expected - (fileSize(destination) ?? 0))
+                // The builds this one replaces are going at the end of the run
+                // anyway. When their room is what makes the difference, they
+                // go now, and the room they leave is this transfer's: removed
+                // and claimed in one step, so another transfer cannot take it
+                // in between and leave this device with neither build.
+                let replaced = index.map { replacedFiles(by: firmware, in: folder, using: $0) } ?? []
+                let claim = await claimRoom(needed, in: folder, replacing: replaced)
+                for name in claim.removed {
+                    await log(LogEntry(kind: .info, message: String(format: String(localized: "Removed older build %1$@ first, to make room for %2$@"),
+                                                                   name, firmware.filename)))
+                }
+                let roomHeld = claim.held
+                guard roomHeld else {
                     await downloads.leave()
                     let free = freeSpace(at: folder) ?? 0
                     transfer.state = .failed(String(localized: "not enough room"))
@@ -97,7 +116,7 @@ extension SyncEngine {
                                                                    firmware.filename,
                                                                    ByteCountFormatter.string(fromByteCount: needed, countStyle: .file),
                                                                    ByteCountFormatter.string(fromByteCount: free, countStyle: .file))))
-                    return .settled
+                    return .noRoom
                 }
                 transfer.state = .downloading
                 transfer.startedAt = .now
@@ -119,7 +138,7 @@ extension SyncEngine {
                         transfer.state = .failed(String(localized: "not enough room"))
                         await report(transfer)
                         await log(LogEntry(kind: .bad, message: String(format: String(localized: "The drive filled while %@ was arriving; what arrived was removed."), firmware.filename)))
-                        return .settled
+                        return .noRoom
                     }
                     throw error
                 }
@@ -141,7 +160,7 @@ extension SyncEngine {
             transfer.state = .done(alreadyHad: false)
             await report(transfer)
             await log(LogEntry(kind: .good, message: String(format: String(localized: firmware.sha1 == nil ? "Downloaded %@" : "Downloaded %@, SHA-1 verified"), firmware.filename)))
-            return .settled
+            return .landed
         } catch is CancellationError {
             transfer.state = .waiting
             await report(transfer)
@@ -241,6 +260,16 @@ extension SyncEngine {
     /// What the builds this one replaces are taking up. Once it is here they
     /// go, so what they hold is room this transfer may use — a drive with one
     /// old copy of everything has room for a new copy of everything.
+    /// The files on the drive that this build replaces.
+    nonisolated func replacedFiles(by firmware: Firmware, in folder: URL,
+                                   using index: DeviceIndex) -> [URL] {
+        let contents = (try? FileManager.default.contentsOfDirectory(at: folder, includingPropertiesForKeys: nil)) ?? []
+        return contents.filter {
+            $0.pathExtension == "ipsw"
+            && Supersession.isReplaced($0.lastPathComponent, by: [firmware], using: index)
+        }
+    }
+
     nonisolated func reclaimableSpace(replacedBy firmware: Firmware, in folder: URL,
                                       using index: DeviceIndex) -> Int64 {
         let contents = (try? FileManager.default.contentsOfDirectory(at: folder, includingPropertiesForKeys: nil)) ?? []
