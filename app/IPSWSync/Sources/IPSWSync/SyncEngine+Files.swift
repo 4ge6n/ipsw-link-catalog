@@ -31,6 +31,11 @@ extension SyncEngine {
         log: @escaping @Sendable @MainActor (LogEntry) -> Void
     ) async -> Outcome {
         let destination = folder.appending(path: firmware.filename)
+        // Written under another name until it is whole and checked. A file
+        // with the image's own name is then always a finished one — ours, or
+        // one Finder put there when it restored something — and anything
+        // unfinished is unmistakably this app's, to resume or to clear away.
+        let part = folder.appending(path: firmware.filename + ".part")
         var transfer = Transfer(id: firmware.id, name: firmware.filename, device: firmware.name)
         transfer.state = .checking
         await report(transfer)
@@ -56,18 +61,43 @@ extension SyncEngine {
                 await log(LogEntry(kind: .info, message: String(format: String(localized: "Already have %@"), firmware.filename)))
                 return .landed
             }
-            // A file that is already the full length but hashes wrong is damaged,
-            // not partial, so resuming would only append to the damage.
-            if let size = onDisk, expected > 0, size >= expected {
-                try? FileManager.default.removeItem(at: destination)
-                await log(LogEntry(kind: .warning, message: String(format: String(localized: "Refetching %@: the copy on disk did not match"), firmware.filename)))
+            if let size = onDisk {
+                if isBeingWritten(destination) {
+                    // Finder restores from this folder, and downloads into it
+                    // when the image it wants is not there. A file with the
+                    // right name that is still growing is that, and is left
+                    // to finish; the next run finds it whole and checks it.
+                    // Not a failure, and not reported as one: nothing is
+                    // wrong, and a red row or a "some files failed"
+                    // notification about Finder doing its job would be.
+                    transfer.state = .waiting
+                    await report(transfer)
+                    await log(LogEntry(kind: .info, message: String(format: String(localized: "%@ is still being written by another app; left alone until it is finished"), firmware.filename)))
+                    return .settled
+                }
+                if expected > 0, size < expected, fileSize(part) == nil {
+                    // Earlier versions wrote in place. What they left is the
+                    // start of this file, and it is carried on from, not thrown
+                    // away.
+                    try? FileManager.default.moveItem(at: destination, to: part)
+                } else {
+                    // Full length but the wrong bytes: damaged, not partial,
+                    // and resuming would only append to the damage.
+                    try? FileManager.default.removeItem(at: destination)
+                    VerifiedStore.shared.forget(destination)
+                    await log(LogEntry(kind: .warning, message: String(format: String(localized: "Refetching %@: the copy on disk did not match"), firmware.filename)))
+                }
+            }
+            // A part longer than the file it is part of is not a start of it.
+            if let size = fileSize(part), expected > 0, size > expected {
+                try? FileManager.default.removeItem(at: part)
             }
             transfer.total = expected
             // Asked before a byte is fetched. Without this the run filled the
             // drive: every device Apple still signs is some two hundred images,
             // and nothing was counting them against the room left.
             let reclaimable = index.map { reclaimableSpace(replacedBy: firmware, in: folder, using: $0) } ?? 0
-            guard hasRoom(for: expected, in: folder, alreadyHave: (onDisk ?? 0) + reclaimable) else {
+            guard hasRoom(for: expected, in: folder, alreadyHave: (fileSize(part) ?? 0) + reclaimable) else {
                 let free = freeSpace(at: folder) ?? 0
                 transfer.state = .failed(String(localized: "not enough room"))
                 await report(transfer)
@@ -79,7 +109,7 @@ extension SyncEngine {
                 return .noRoom
             }
             for attempt in 1...2 {
-                transfer.resumedFrom = fileSize(destination) ?? 0
+                transfer.resumedFrom = fileSize(part) ?? 0
                 transfer.received = transfer.resumedFrom
                 transfer.startedAt = .now
                 // The queue is here, not around the whole of this: a file
@@ -94,7 +124,7 @@ extension SyncEngine {
                 // once, leaving six part-files that each held room the others
                 // needed. What a transfer is about to write is set aside for
                 // it while it writes, and counted against everyone else.
-                let needed = max(0, expected - (fileSize(destination) ?? 0))
+                let needed = max(0, expected - (fileSize(part) ?? 0))
                 // The builds this one replaces are going at the end of the run
                 // anyway. When their room is what makes the difference, they
                 // go now, and the room they leave is this transfer's: removed
@@ -122,7 +152,7 @@ extension SyncEngine {
                 transfer.startedAt = .now
                 await report(transfer)
                 do {
-                    try await carryOn(firmware, to: destination, from: &transfer, report: report, log: log)
+                    try await carryOn(firmware, to: part, from: &transfer, report: report, log: log)
                     await releaseRoom(needed, in: folder)
                     await downloads.leave()
                 } catch {
@@ -134,7 +164,7 @@ extension SyncEngine {
                     // use, and asking again in twenty seconds finds the same
                     // full drive.
                     if Self.isOutOfSpace(error) {
-                        try? FileManager.default.removeItem(at: destination)
+                        try? FileManager.default.removeItem(at: part)
                         transfer.state = .failed(String(localized: "not enough room"))
                         await report(transfer)
                         await log(LogEntry(kind: .bad, message: String(format: String(localized: "The drive filled while %@ was arriving; what arrived was removed."), firmware.filename)))
@@ -144,18 +174,30 @@ extension SyncEngine {
                 }
                 transfer.state = .verifying
                 await report(transfer)
-                guard let sha1 = firmware.sha1 else { break }
-                if await isIntact(destination, sha1: sha1) { break }
-                if attempt == 1 {
-                    // A resumed transfer can inherit damage from what was there.
-                    try? FileManager.default.removeItem(at: destination)
-                    await log(LogEntry(kind: .warning, message: String(format: String(localized: "Checksum did not match; fetching %@ whole"), firmware.filename)))
-                    continue
+                let whole: Bool
+                if let sha1 = firmware.sha1 {
+                    whole = await isIntact(part, sha1: sha1)
+                } else {
+                    // No checksum to read it against: the length is all there is.
+                    whole = expected <= 0 || fileSize(part) == expected
                 }
-                let quarantine = destination.appendingPathExtension("sha1-mismatch")
-                try? FileManager.default.removeItem(at: quarantine)
-                try? FileManager.default.moveItem(at: destination, to: quarantine)
-                throw SyncError.checksumMismatch(firmware.filename)
+                if !whole {
+                    if attempt == 1 {
+                        // A resumed transfer can inherit damage from what was there.
+                        try? FileManager.default.removeItem(at: part)
+                        VerifiedStore.shared.forget(part)
+                        await log(LogEntry(kind: .warning, message: String(format: String(localized: "Checksum did not match; fetching %@ whole"), firmware.filename)))
+                        continue
+                    }
+                    let quarantine = destination.appendingPathExtension("sha1-mismatch")
+                    try? FileManager.default.removeItem(at: quarantine)
+                    try? FileManager.default.moveItem(at: part, to: quarantine)
+                    VerifiedStore.shared.forget(part)
+                    throw SyncError.checksumMismatch(firmware.filename)
+                }
+                // Only now does it take the image's name.
+                try await land(part, as: destination, sha1: firmware.sha1)
+                break
             }
             transfer.state = .done(alreadyHad: false)
             await report(transfer)
@@ -419,6 +461,34 @@ extension SyncEngine {
     }
 
     /// Remove the build each newly present file replaces, and nothing else.
+    /// Give a finished, checked download the image's own name.
+    nonisolated func land(_ part: URL, as destination: URL, sha1: String?) async throws {
+        let manager = FileManager.default
+        if manager.fileExists(atPath: destination.path(percentEncoded: false)) {
+            // Something else finished the same image meanwhile — Finder does,
+            // when it restores a device from this folder. Theirs is as good
+            // as ours if it checks out.
+            if await isIntact(destination, sha1: sha1) {
+                try? manager.removeItem(at: part)
+                VerifiedStore.shared.forget(part)
+                return
+            }
+            try manager.removeItem(at: destination)
+            VerifiedStore.shared.forget(destination)
+        }
+        try manager.moveItem(at: part, to: destination)
+        VerifiedStore.shared.forget(part)
+        if let sha1 { VerifiedStore.shared.remember(destination, sha1: sha1) }
+    }
+
+    /// Whether another app is writing this file now: changed in the last few
+    /// minutes. Finder downloads into the folder it restores from.
+    nonisolated func isBeingWritten(_ url: URL, within seconds: TimeInterval = 600) -> Bool {
+        guard let attributes = try? FileManager.default.attributesOfItem(atPath: url.path(percentEncoded: false)),
+              let modified = attributes[.modificationDate] as? Date else { return false }
+        return Date.now.timeIntervalSince(modified) < seconds
+    }
+
     /// Clear away what a failed transfer left behind.
     ///
     /// A file that is not wanted is normally left alone — someone may have put
@@ -448,7 +518,22 @@ extension SyncEngine {
                 await log(LogEntry(kind: .info, message: String(format: String(localized: "Removed the damaged copy left behind by %@"), name)))
                 continue
             }
+            // Our own unfinished downloads: anything not wanted any more goes.
+            // A wanted one stays, to be carried on from.
+            if file.pathExtension == "part" {
+                let image = String(name.dropLast(".part".count))
+                guard !keep.contains(image) else { continue }
+                try? manager.removeItem(at: file)
+                VerifiedStore.shared.forget(file)
+                await log(LogEntry(kind: .info, message: String(format: String(localized: "Removed an unfinished download of %@ that is no longer wanted"), image)))
+                continue
+            }
+            // An image-named file that is short is either left over from
+            // before downloads had their own name, or Finder still writing
+            // one. Only the first is cleared, and only once nothing has
+            // touched it for six hours.
             guard file.pathExtension == "ipsw", !keep.contains(name),
+                  !isBeingWritten(file, within: 6 * 3600),
                   let link = index.link(for: name), let onDisk = fileSize(file),
                   let expected = try? await contentLength(link), expected > 0,
                   onDisk < expected

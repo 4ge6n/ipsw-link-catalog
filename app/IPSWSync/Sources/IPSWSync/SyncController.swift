@@ -8,6 +8,8 @@ import UserNotifications
 @MainActor
 @Observable
 final class SyncController {
+    static let shared = SyncController()
+
     private(set) var transfers: [Transfer] = []
     private(set) var log: [LogEntry] = []
     private(set) var running = false
@@ -33,10 +35,22 @@ final class SyncController {
     let watch = ReleaseWatch()
     private let settings = Settings.shared
     private var timer: Timer?
+    private var lastBooked: Date?
     /// How many short-notice retries have been made since the last clean run.
     private var retries = 0
 
     init() {
+        // What happened before this launch, including every run made while
+        // the app was silent.
+        log = RunJournal.shared.recent(300)
+        // The schedule is the app's, not the window's. It used to be set up
+        // by the main window as it appeared, and an app started silently
+        // never shows that window — so no run was ever booked, and nothing
+        // was fetched until someone happened to open it.
+        Task { @MainActor [weak self] in
+            self?.scheduleNext(catchUpIfMissed: true)
+            self?.startWatching()
+        }
         NotificationCenter.default.addObserver(
             forName: NSWorkspace.didWakeNotification, object: nil, queue: .main
         ) { [weak self] _ in
@@ -81,18 +95,49 @@ final class SyncController {
             Task { await run() }
         }
         let fires = Timer(fire: nextRun, interval: 0, repeats: false) { [weak self] _ in
-            Task { @MainActor in
-                await self?.run()
-                self?.scheduleNext()
-            }
+            // The run books what comes after it — the next regular run, or a
+            // retry in a quarter of an hour. Booking again here overwrote the
+            // retry with tomorrow.
+            Task { @MainActor in await self?.run() }
         }
+        fires.tolerance = 60
         RunLoop.main.add(fires, forMode: .common)
         timer = fires
+        if nextRun != lastBooked {
+            lastBooked = nextRun
+            note(.info, String(format: String(localized: "Next run %@."),
+                               nextRun.formatted(date: .abbreviated, time: .shortened)))
+        }
+    }
+
+    /// A look every few minutes at whether a run was due and did not happen.
+    ///
+    /// A timer is only as good as the process holding it. A Mac asleep at the
+    /// hour, an app napped by the system for having no window, a booking lost
+    /// when something rescheduled — each used to mean no run until the next
+    /// one, and a silent app gave no sign of it. This notices and catches up.
+    private func startWatching() {
+        let watch = Timer(timeInterval: 300, repeats: true) { [weak self] _ in
+            Task { @MainActor in
+                guard let self, !self.running, self.settings.missedRun() else { return }
+                self.note(.info, String(localized: "A run was due and had not happened; running it now."))
+                await self.run()
+            }
+        }
+        watch.tolerance = 60
+        RunLoop.main.add(watch, forMode: .common)
     }
 
     func run() async {
         guard !running else { return }
         running = true
+        // An app with no window is exactly what the system naps: timers
+        // stretched, the network throttled, a ten-gigabyte transfer crawling.
+        // Held for the length of the run, and no longer.
+        let activity = ProcessInfo.processInfo.beginActivity(
+            options: [.userInitiated, .idleSystemSleepDisabled],
+            reason: "Keeping restore images up to date")
+        defer { ProcessInfo.processInfo.endActivity(activity) }
         transfers = []
         note(.info, String(localized: "Sync started."))
         var attempted = 0
@@ -128,7 +173,7 @@ final class SyncController {
                             prune: settings.prune,
                             concurrently: settings.maxConcurrent,
                             report: { [weak self] transfer in self?.update(transfer) },
-                            log: { [weak self] entry in self?.log.append(entry) }
+                            log: { [weak self] entry in self?.record(entry) }
                         )
                         return false
                     } catch {
@@ -251,7 +296,7 @@ final class SyncController {
             await engine.fetchChosen(
                 wanted, into: folder, concurrently: settings.maxConcurrent,
                 report: { [weak self] transfer in self?.update(transfer) },
-                log: { [weak self] entry in self?.log.append(entry) })
+                log: { [weak self] entry in self?.record(entry) })
             if scoped { folder.stopAccessingSecurityScopedResource() }
         }
     }
@@ -271,7 +316,7 @@ final class SyncController {
                 try await engine.verify(
                     platform, in: folder,
                     report: { [weak self] transfer in self?.update(transfer) },
-                    log: { [weak self] entry in self?.log.append(entry) })
+                    log: { [weak self] entry in self?.record(entry) })
             } catch {
                 note(.bad, error.localizedDescription)
             }
@@ -297,7 +342,7 @@ final class SyncController {
         await engine.fetchChosen(
             firmwares, into: folder, concurrently: settings.maxConcurrent,
             report: { [weak self] transfer in self?.update(transfer) },
-            log: { [weak self] entry in self?.log.append(entry) }
+            log: { [weak self] entry in self?.record(entry) }
         )
         if scoped { folder.stopAccessingSecurityScopedResource() }
         running = false
@@ -330,8 +375,15 @@ final class SyncController {
         }
     }
 
+    /// Every line goes to the screen and to disk, so a run that happened
+    /// while the app was silent is still there when someone looks.
+    private func record(_ entry: LogEntry) {
+        log.append(entry)
+        RunJournal.shared.append(entry)
+    }
+
     private func note(_ kind: LogEntry.Kind, _ message: String) {
-        log.append(LogEntry(kind: kind, message: message))
+        record(LogEntry(kind: kind, message: message))
     }
 
     private func notify(fetched: Int, failed: Int) {

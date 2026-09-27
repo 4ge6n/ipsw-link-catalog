@@ -5,7 +5,11 @@ import UserNotifications
 
 @main
 struct IPSWSyncApp: App {
-    @State private var controller = SyncController()
+    /// Made by the app delegate at launch, not by SwiftUI on demand. As
+    /// view state it was only created when a window or the menu bar item
+    /// asked for it — and a silent app has neither, so nothing was ever
+    /// scheduled, nothing ran, and nothing was written down to say so.
+    @State private var controller = SyncController.shared
     @Bindable private var settings = Settings.shared
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var delegate
     @Environment(\.openWindow) private var openWindow
@@ -26,7 +30,6 @@ struct IPSWSyncApp: App {
                         _ = try? await UNUserNotificationCenter.current()
                             .requestAuthorization(options: [.alert])
                     }
-                    controller.scheduleNext(catchUpIfMissed: true)
                     // Apple's page, watched from here on, so a build posted
                     // this afternoon is announced this afternoon.
                     controller.beginWatching()
@@ -253,6 +256,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     var showMainWindow: (() -> Void)?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // Before anything else: the schedule lives here, window or no window.
+        _ = SyncController.shared
         // SwiftUI puts its own object between the app and this one, and it keeps
         // the reopen event to itself — applicationShouldHandleReopen is never
         // called here, which is what left an invisible copy with no way back.

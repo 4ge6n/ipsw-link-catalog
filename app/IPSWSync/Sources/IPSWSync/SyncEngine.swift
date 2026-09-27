@@ -36,9 +36,15 @@ struct Transfer: Identifiable, Sendable {
 struct LogEntry: Identifiable, Sendable {
     enum Kind: Sendable { case info, good, warning, bad }
     let id = UUID()
-    let at = Date.now
+    let at: Date
     let kind: Kind
     let message: String
+
+    init(kind: Kind, message: String, at: Date = .now) {
+        self.kind = kind
+        self.message = message
+        self.at = at
+    }
 }
 
 actor SyncEngine {
