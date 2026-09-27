@@ -1,21 +1,168 @@
 import SwiftUI
 
-/// What the current run is doing, and what the last one said. Below a certain
-/// width the row stacks and the per-file lines drop their detail, so the bar and
-/// the percentage survive at any size the window is dragged to.
+/// What the app is doing, and what it did.
+///
+/// One summary always at the top — how far a run has got, or how the last one
+/// ended and when the next is due — and under it one list at a time: what is
+/// moving now, what is waiting, or the log. The three used to be stacked in a
+/// strip a few rows tall, which made each of them too short to read and the
+/// log a wall of identical warnings with no telling where one run ended.
 struct ActivityPane: View {
     @Environment(SyncController.self) private var controller
-    @State private var width: CGFloat = 700
+    @AppStorage("activityPaneHeight") private var paneHeight = 260.0
+    @AppStorage("activityShowsProblemsOnly") private var problemsOnly = false
+    @State private var tab: Tab = .log
+    @State private var dragStart: Double?
 
-    @State private var showingQueue = false
-    /// Dragged by the handles below, and remembered: someone who wants a tall
-    /// log and a short list of transfers should not have to say so every time.
-    @AppStorage("activityHeight") private var activityHeight = 150.0
-    @AppStorage("logHeight") private var logHeight = 96.0
+    enum Tab: Hashable { case now, queue, log }
 
-    private var narrow: Bool { width < 470 }
+    var body: some View {
+        VStack(spacing: 0) {
+            resizeEdge
+            header
+                .padding(.horizontal, 14).padding(.vertical, 10)
+            Divider()
+            Picker("", selection: $tab) {
+                Text(String(format: String(localized: "Now (%lld)"), active.count)).tag(Tab.now)
+                Text(String(format: String(localized: "Queue (%lld)"), waiting.count)).tag(Tab.queue)
+                Text("Log").tag(Tab.log)
+            }
+            .pickerStyle(.segmented)
+            .labelsHidden()
+            .padding(.horizontal, 14).padding(.vertical, 8)
+            Group {
+                switch tab {
+                case .now: nowList
+                case .queue: queueList
+                case .log: logList
+                }
+            }
+            .frame(height: paneHeight)
+        }
+        .background(.background)
+        // A run starting is what someone opening the window wants to watch;
+        // one ending leaves the log, which says how it went.
+        .onChange(of: controller.running) { _, running in tab = running ? .now : .log }
+        .onAppear { tab = controller.running ? .now : .log }
+    }
 
-    /// What is actually moving: being looked at, coming down, or being hashed.
+    // MARK: The edge that sizes the pane
+
+    /// The pane's own top edge, dragged: up makes it taller. It sits on the
+    /// line it moves.
+    private var resizeEdge: some View {
+        ZStack {
+            Rectangle().fill(.separator).frame(height: 1)
+            Capsule().fill(.tertiary).frame(width: 34, height: 4)
+        }
+        .frame(height: 10)
+        .frame(maxWidth: .infinity)
+        .contentShape(.rect)
+        .onHover { inside in
+            if inside { NSCursor.resizeUpDown.push() } else { NSCursor.pop() }
+        }
+        .gesture(
+            DragGesture(minimumDistance: 1)
+                .onChanged { drag in
+                    let from = dragStart ?? paneHeight
+                    if dragStart == nil { dragStart = from }
+                    paneHeight = min(max(from - drag.translation.height, 90), 700)
+                }
+                .onEnded { _ in dragStart = nil }
+        )
+        .accessibilityLabel(Text("Resize"))
+    }
+
+    // MARK: The summary
+
+    @ViewBuilder private var header: some View {
+        if controller.running {
+            let state = controller.overall
+            VStack(alignment: .leading, spacing: 6) {
+                HStack(alignment: .firstTextBaseline) {
+                    Label("Syncing", systemImage: "arrow.down.circle.fill")
+                        .font(.headline).foregroundStyle(.tint)
+                    Text(String(format: String(localized: "%1$lld of %2$lld"), state.done, state.total))
+                        .font(.headline).monospacedDigit()
+                    Spacer()
+                    Button("Stop", role: .destructive) { controller.cancel() }
+                        .controlSize(.small)
+                }
+                ProgressView(value: state.fraction)
+                Text(breakdown).font(.callout).foregroundStyle(.secondary).monospacedDigit()
+            }
+        } else {
+            HStack(alignment: .center, spacing: 10) {
+                Image(systemName: lastResult.symbol)
+                    .font(.title2).foregroundStyle(lastResult.tint)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(lastResult.text).font(.headline).lineLimit(2)
+                    Text(when).font(.callout).foregroundStyle(.secondary)
+                }
+                Spacer()
+                Button("Sync Now") { Task { await controller.run() } }
+                    .buttonStyle(.borderedProminent)
+                    .keyboardShortcut(.defaultAction)
+            }
+        }
+    }
+
+    /// "48.3 GB of 120 GB · 3 downloading · 2 checking · 60 waiting · about 1 h 20 min"
+    private var breakdown: String {
+        let state = controller.overall
+        var parts: [String] = []
+        if state.expected > 0 {
+            parts.append(String(format: String(localized: "%1$@ of %2$@"),
+                                state.received.formatted(.byteCount(style: .file)),
+                                state.expected.formatted(.byteCount(style: .file))))
+        }
+        let downloading = active.count { $0.state == .downloading }
+        let checking = active.count { $0.state == .verifying || $0.state == .checking }
+        if downloading > 0 { parts.append(String(format: String(localized: "%lld downloading"), downloading)) }
+        if checking > 0 { parts.append(String(format: String(localized: "%lld checking"), checking)) }
+        if !waiting.isEmpty { parts.append(String(format: String(localized: "%lld waiting"), waiting.count)) }
+        if let eta = overallETA { parts.append(String(format: String(localized: "about %@ left"), TransferRow.remaining(eta))) }
+        return parts.joined(separator: "  ·  ")
+    }
+
+    /// From the combined rate of what is coming down now.
+    private var overallETA: TimeInterval? {
+        let state = controller.overall
+        let rate = active.reduce(0.0) { $0 + $1.bytesPerSecond }
+        guard rate > 0, state.expected > state.received else { return nil }
+        return Double(state.expected - state.received) / rate
+    }
+
+    /// How the last run ended, read from the log it left — which survives a
+    /// relaunch, so a run made while the app was silent is reported too.
+    private var lastResult: (text: String, symbol: String, tint: Color) {
+        let lastStart = controller.log.lastIndex { $0.kind == .start }
+        let after = lastStart.map { controller.log[controller.log.index(after: $0)...] } ?? controller.log[...]
+        if let ending = after.last(where: { $0.kind == .good || $0.kind == .bad }) {
+            return ending.kind == .good
+                ? (ending.message, "checkmark.circle.fill", .green)
+                : (ending.message, "exclamationmark.triangle.fill", .orange)
+        }
+        return (String(localized: "Not run yet"), "circle.dashed", .secondary)
+    }
+
+    private var when: String {
+        var parts: [String] = []
+        if let last = Settings.shared.lastRun {
+            parts.append(String(format: String(localized: "Last run %@"),
+                                last.formatted(date: .abbreviated, time: .shortened)))
+        }
+        if let next = controller.nextRun {
+            parts.append(String(format: String(localized: "next %@"),
+                                next.formatted(date: .abbreviated, time: .shortened)))
+        } else {
+            parts.append(String(localized: "No daily run"))
+        }
+        return parts.joined(separator: "  ·  ")
+    }
+
+    // MARK: Now
+
     private var active: [Transfer] {
         controller.transfers.filter {
             switch $0.state {
@@ -25,266 +172,227 @@ struct ActivityPane: View {
         }
     }
 
-    /// Everything that has not started yet, whether or not it has reached the
-    /// line for the wire.
-    private var queued: Int {
-        controller.transfers.count {
-            $0.state == .queued || $0.state == .waiting
+    private var waiting: [Transfer] {
+        controller.transfers.filter { $0.state == .queued || $0.state == .waiting }
+    }
+
+    @ViewBuilder private var nowList: some View {
+        if active.isEmpty {
+            ContentUnavailableView(controller.running ? "Getting ready" : "Nothing running",
+                                   systemImage: "arrow.down.circle")
+        } else {
+            List(active) { transfer in TransferRow(transfer: transfer) }
+                .listStyle(.plain)
         }
     }
 
-    private var shortCaption: String {
-        let state = controller.overall
-        return "\(state.done)/\(state.total)  ·  \(Int(state.fraction * 100))%"
+    // MARK: Queue
+
+    @ViewBuilder private var queueList: some View {
+        if waiting.isEmpty {
+            ContentUnavailableView("Nothing waiting", systemImage: "tray")
+        } else {
+            List(Array(waiting.enumerated()), id: \.element.id) { index, transfer in
+                HStack(spacing: 10) {
+                    Text("\(index + 1)").font(.caption).monospacedDigit()
+                        .foregroundStyle(.tertiary).frame(width: 26, alignment: .trailing)
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text(transfer.device).lineLimit(1)
+                        Text(transfer.name).font(.caption).foregroundStyle(.secondary)
+                            .lineLimit(1).truncationMode(.middle)
+                    }
+                    Spacer()
+                    if transfer.total > 0 {
+                        Text(transfer.total.formatted(.byteCount(style: .file)))
+                            .font(.caption).foregroundStyle(.secondary).monospacedDigit()
+                    }
+                }
+            }
+            .listStyle(.plain)
+        }
     }
 
-    private var progressCaption: String {
-        let state = controller.overall
-        let files = "\(state.done) of \(state.total) file(s)"
-        guard state.expected > 0 else { return files }
-        return files + "  ·  \(state.received.formatted(.byteCount(style: .file)))"
-            + " of \(state.expected.formatted(.byteCount(style: .file)))"
-            + "  ·  \(Int(state.fraction * 100))%"
-    }
+    // MARK: Log
 
-    var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
+    /// Runs, newest first, each with its lines in order and repeats folded.
+    private var runs: [LogRun] { LogRun.group(controller.log, problemsOnly: problemsOnly) }
+
+    private var logList: some View {
+        VStack(spacing: 0) {
             HStack {
-                if controller.running {
-                    VStack(alignment: .leading, spacing: 4) {
-                        ViewThatFits(in: .horizontal) {
-                            HStack(spacing: 8) {
-                                Text("Syncing").fontWeight(.medium)
-                                Text(progressCaption).foregroundStyle(.secondary).monospacedDigit()
-                            }
-                            // Too narrow for the whole caption: keep the counts.
-                            HStack(spacing: 8) {
-                                Text("Syncing").fontWeight(.medium)
-                                Text(shortCaption).foregroundStyle(.secondary).monospacedDigit()
-                            }
-                            Text(shortCaption).foregroundStyle(.secondary).monospacedDigit()
-                        }
-                        .font(.callout)
-                        .lineLimit(1)
-                        ProgressView(value: controller.overall.fraction)
-                    }
-                    Spacer(minLength: 8)
-                    Button("Stop") { controller.cancel() }
-                        .buttonStyle(.glass)
-                        .controlSize(narrow ? .small : .regular)
-                } else {
-                    Text(Settings.shared.lastRun.map {
-                        narrow ? $0.formatted(date: .omitted, time: .shortened)
-                               : String(format: String(localized: "Last run %@"), $0.formatted(date: .abbreviated, time: .shortened))
-                    } ?? String(localized: "Not run yet"))
-                        .foregroundStyle(.secondary).lineLimit(1).truncationMode(.tail)
-                    Spacer(minLength: 8)
-                    Button(narrow ? String(localized: "Sync") : String(localized: "Sync Now")) { Task { await controller.run() } }
-                        .buttonStyle(.glassProminent)
-                        .keyboardShortcut(.defaultAction)
-                        .controlSize(narrow ? .small : .regular)
-                }
+                Toggle("Problems only", isOn: $problemsOnly).toggleStyle(.checkbox).controlSize(.small)
+                Spacer()
             }
-            .padding(narrow ? 10 : 12)
-            // Only what is happening. A finished file leaves the list —
-            // its line in the log below is the record of it — so the middle
-            // of the window stays the size of the work in hand rather than
-            // growing to two hundred rows by the end of a run.
-            if !active.isEmpty || queued > 0 {
-                Divider()
+            .padding(.horizontal, 14).padding(.bottom, 4)
+            if runs.isEmpty {
+                ContentUnavailableView(problemsOnly ? "No problems" : "Nothing logged yet",
+                                       systemImage: "text.alignleft")
+            } else {
                 List {
-                    ForEach(active) { transfer in
-                        TransferRow(transfer: transfer, narrow: narrow)
-                    }
-                    if queued > 0 {
-                        DisclosureGroup(isExpanded: $showingQueue) {
-                            ForEach(controller.transfers.filter { $0.state == .queued || $0.state == .waiting }) { transfer in
-                                HStack {
-                                    Text(transfer.device).lineLimit(1).truncationMode(.tail)
-                                    Spacer(minLength: 8)
-                                    Text(transfer.state == .queued
-                                         ? String(localized: "in line")
-                                         : String(localized: "waiting"))
-                                        .foregroundStyle(.tertiary)
-                                }
-                                .font(.caption)
-                            }
-                        } label: {
-                            HStack(spacing: 6) {
-                                Image(systemName: "list.bullet")
-                                Text(String(format: String(localized: "Queue — %lld to go"), queued))
+                    ForEach(runs) { run in
+                        Section {
+                            ForEach(run.lines) { line in LogLine(line: line) }
+                        } header: {
+                            HStack {
+                                Text(run.title).font(.subheadline.weight(.semibold))
                                 Spacer()
+                                if let outcome = run.outcome {
+                                    Text(outcome).font(.caption).foregroundStyle(.secondary).lineLimit(1)
+                                }
                             }
-                            .font(.caption).foregroundStyle(.secondary)
                         }
                     }
                 }
-                .listStyle(.inset)
-                .frame(height: activityHeight)
+                .listStyle(.plain)
             }
-            // The log is the record, not the work, so it gets a strip rather
-            // than half the window — and it keeps its own scroll, newest first.
-            if !controller.log.isEmpty {
-                // The handle is the line between the two, and it moves that
-                // line: what is above it grows as what is below it shrinks.
-                // It used to sit under the log, at the very bottom of the
-                // window, where dragging it down asked for room that is not
-                // there — the place it was in had nothing to do with the edge
-                // it moved.
-                if !active.isEmpty || queued > 0 {
-                    SplitHandle(above: $activityHeight, below: $logHeight,
-                                leastAbove: 60, leastBelow: 40)
+        }
+    }
+}
+
+/// One run's worth of log, for the grouped view.
+struct LogRun: Identifiable {
+    struct Line: Identifiable {
+        let id: UUID
+        let entry: LogEntry
+        let repeats: Int
+    }
+    let id: UUID
+    let started: Date?
+    let lines: [Line]
+    let outcome: String?
+
+    var title: String {
+        guard let started else { return String(localized: "Earlier") }
+        return String(format: String(localized: "Run at %@"), started.formatted(date: .abbreviated, time: .shortened))
+    }
+
+    static func group(_ log: [LogEntry], problemsOnly: Bool) -> [LogRun] {
+        var runs: [LogRun] = []
+        var current: [LogEntry] = []
+        var started: Date?
+        var anchor = UUID()
+        func close() {
+            guard !current.isEmpty else { return }
+            let outcome = current.last { $0.kind == .good || $0.kind == .bad }?.message
+            var shown = current
+            if problemsOnly { shown = shown.filter { $0.kind == .warning || $0.kind == .bad } }
+            // Repeats folded: four platforms saying the same thing is one line.
+            var lines: [Line] = []
+            for entry in shown {
+                if let last = lines.last, last.entry.kind == entry.kind, last.entry.message == entry.message {
+                    lines[lines.count - 1] = Line(id: last.id, entry: last.entry, repeats: last.repeats + 1)
                 } else {
-                    Divider()
+                    lines.append(Line(id: entry.id, entry: entry, repeats: 1))
                 }
-                ScrollView {
-                    LazyVStack(alignment: .leading, spacing: 2) {
-                        ForEach(controller.log.suffix(200).reversed()) { entry in
-                            HStack(alignment: .firstTextBaseline, spacing: 6) {
-                                Image(systemName: entry.kind.symbol).foregroundStyle(entry.kind.tint)
-                                Text(entry.at.formatted(date: .omitted, time: .standard))
-                                    .foregroundStyle(.tertiary).monospacedDigit()
-                                Text(entry.message).foregroundStyle(.secondary)
-                                    .lineLimit(1).truncationMode(.middle)
-                                Spacer(minLength: 0)
-                            }
-                            .font(.caption2)
-                        }
-                    }
-                    .padding(.horizontal, 10).padding(.vertical, 6)
-                }
-                .frame(height: logHeight)
-                .background(.quaternary.opacity(0.25))
+            }
+            if !lines.isEmpty || !problemsOnly {
+                runs.append(LogRun(id: anchor, started: started, lines: lines, outcome: outcome))
             }
         }
-        .background(
-            GeometryReader { proxy in
-                // Writing state from inside layout can feed back into layout, so
-                // the measurement is handed over after the pass has finished.
-                Color.clear.task(id: proxy.size.width) {
-                    let measured = proxy.size.width
-                    if abs(measured - width) > 1 { width = measured }
-                }
+        for entry in log {
+            if entry.kind == .start {
+                close()
+                current = []
+                started = entry.at
+                anchor = entry.id
+                continue
             }
-        )
+            current.append(entry)
+        }
+        close()
+        return runs.reversed()
     }
 }
 
-/// The line between the transfer list and the log, which can be dragged.
-///
-/// Whatever it takes from one it gives to the other, so the pair keeps the
-/// height it had and the edge that moves is the one under the cursor.
-private struct SplitHandle: View {
-    @Binding var above: Double
-    @Binding var below: Double
-    let leastAbove: Double
-    let leastBelow: Double
-    @State private var startedAt: (above: Double, below: Double)?
+private struct LogLine: View {
+    let line: LogRun.Line
 
     var body: some View {
-        ZStack {
-            Rectangle().fill(.quaternary).frame(height: 1)
-            // A one-point line is not something anyone can catch with a mouse.
-            Rectangle().fill(.clear).frame(height: 10).contentShape(.rect)
-            Capsule().fill(.tertiary).frame(width: 28, height: 3)
+        HStack(alignment: .firstTextBaseline, spacing: 8) {
+            Image(systemName: line.entry.kind.symbol)
+                .foregroundStyle(line.entry.kind.tint).font(.caption)
+                .frame(width: 14)
+            Text(line.entry.at.formatted(date: .omitted, time: .standard))
+                .font(.caption.monospacedDigit()).foregroundStyle(.tertiary)
+            Text(line.entry.message).font(.callout)
+                .lineLimit(3)
+                .textSelection(.enabled)
+            if line.repeats > 1 {
+                Text("×\(line.repeats)").font(.caption.weight(.semibold)).foregroundStyle(.secondary)
+                    .padding(.horizontal, 5).padding(.vertical, 1)
+                    .background(.quaternary, in: .capsule)
+            }
+            Spacer(minLength: 0)
         }
-        .frame(height: 10)
-        .onHover { inside in
-            // The cursor is what says it can be dragged at all.
-            if inside { NSCursor.resizeUpDown.push() } else { NSCursor.pop() }
-        }
-        .gesture(
-            DragGesture(minimumDistance: 1)
-                .onChanged { move in
-                    let from = startedAt ?? (above, below)
-                    if startedAt == nil { startedAt = from }
-                    // Clamped on both sides before either is written, so the
-                    // pair always adds up to what it did before the drag.
-                    let total = from.above + from.below
-                    let wanted = min(max(from.above + move.translation.height, leastAbove),
-                                     total - leastBelow)
-                    above = wanted
-                    below = total - wanted
-                }
-                .onEnded { _ in startedAt = nil }
-        )
-        .accessibilityLabel(Text("Resize"))
+        .padding(.vertical, 1)
     }
 }
 
-private struct TransferRow: View {
+struct TransferRow: View {
     let transfer: Transfer
-    var narrow = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            HStack(spacing: 8) {
-                Text(transfer.device).fontWeight(.medium).lineLimit(1).truncationMode(.tail)
-                Spacer(minLength: 4)
-                Text(narrow ? shortDetail : detail)
-                    .font(.caption).foregroundStyle(.secondary).monospacedDigit()
-                    .lineLimit(1)
+        VStack(alignment: .leading, spacing: 5) {
+            HStack(alignment: .firstTextBaseline, spacing: 8) {
+                Text(transfer.device).font(.body.weight(.medium)).lineLimit(1)
+                Spacer(minLength: 6)
+                status
             }
-            if case .downloading = transfer.state {
+            if transfer.state == .downloading {
                 ProgressView(value: transfer.fraction)
+                Text(detail).font(.caption).foregroundStyle(.secondary).monospacedDigit()
+            } else {
+                Text(transfer.name).font(.caption).foregroundStyle(.secondary)
+                    .lineLimit(1).truncationMode(.middle)
             }
         }
-        .padding(.vertical, 2)
+        .padding(.vertical, 4)
     }
 
-    /// Enough to follow the transfer when the window is only a few hundred points wide.
-    private var shortDetail: String {
+    @ViewBuilder private var status: some View {
         switch transfer.state {
-        case .downloading: "\(Int(transfer.fraction * 100))%"
-        case .verifying: String(localized: "checking")
-        case .checking: "…"
-        case .queued: String(localized: "in line")
-        case .done(let had): had ? String(localized: "have") : String(localized: "done")
-        case .failed: String(localized: "failed")
-        case .waiting: ""
+        case .downloading:
+            Text("\(Int(transfer.fraction * 100))%").font(.callout.monospacedDigit()).foregroundStyle(.tint)
+        case .verifying:
+            HStack(spacing: 5) {
+                ProgressView().controlSize(.mini)
+                Text("Checking SHA-1").font(.caption).foregroundStyle(.secondary)
+            }
+        default:
+            HStack(spacing: 5) {
+                ProgressView().controlSize(.mini)
+                Text("Looking").font(.caption).foregroundStyle(.secondary)
+            }
         }
     }
 
     private var detail: String {
-        switch transfer.state {
-        case .waiting: String(localized: "waiting")
-        case .queued: String(localized: "waiting for a slot")
-        case .checking: String(localized: "checking what is already here")
-        case .verifying: String(localized: "verifying checksum")
-        case .done(let had): had ? String(localized: "already had it") : String(localized: "done")
-        case .failed(let why): why
-        case .downloading:
-            "\(format(transfer.received)) / \(format(transfer.total))"
-            + "  ·  \(format(Int64(transfer.bytesPerSecond)))/s"
-            + (transfer.eta.map { "  ·  \(Self.remaining($0)) left" } ?? "")
-        }
+        var parts = ["\(format(transfer.received)) / \(format(transfer.total))"]
+        if transfer.bytesPerSecond > 0 { parts.append("\(format(Int64(transfer.bytesPerSecond)))/s") }
+        if let eta = transfer.eta { parts.append(String(format: String(localized: "%@ left"), Self.remaining(eta))) }
+        return parts.joined(separator: "  ·  ")
     }
 
-    /// The rest of the interface is in English, so the time is too rather than
-    /// following whatever locale the Mac is set to.
     static func remaining(_ seconds: TimeInterval) -> String {
-        Duration.seconds(seconds).formatted(
-            .units(allowed: [.hours, .minutes, .seconds], width: .narrow)
-                .locale(Locale(identifier: "en_US")))
+        Duration.seconds(seconds).formatted(.units(allowed: [.hours, .minutes], width: .abbreviated))
     }
 
-    private func format(_ bytes: Int64) -> String {
-        bytes.formatted(.byteCount(style: .file))
-    }
+    private func format(_ bytes: Int64) -> String { bytes.formatted(.byteCount(style: .file)) }
 }
 
 extension LogEntry.Kind {
     var symbol: String {
         switch self {
+        case .start: "play.circle"
         case .info: "info.circle"
-        case .good: "checkmark.circle"
-        case .warning: "exclamationmark.triangle"
-        case .bad: "xmark.octagon"
+        case .good: "checkmark.circle.fill"
+        case .warning: "exclamationmark.triangle.fill"
+        case .bad: "xmark.octagon.fill"
         }
     }
     var tint: Color {
         switch self {
-        case .info: .secondary
+        case .start, .info: .secondary
         case .good: .green
         case .warning: .orange
         case .bad: .red

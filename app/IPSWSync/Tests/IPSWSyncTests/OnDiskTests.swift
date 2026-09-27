@@ -192,9 +192,13 @@ struct RoomTests {
         #expect(engine.hasRoom(for: 1, in: folder))
         #expect(!engine.hasRoom(for: free + 1, in: folder))
         // Room is kept back on purpose, so filling it exactly is refused too.
+        // Free space is read afresh each time, and something else on the Mac
+        // may write in between, so the edges are tested with a little slack
+        // rather than to the byte.
+        let slack: Int64 = 200 << 20
         #expect(!engine.hasRoom(for: free, in: folder))
-        #expect(!engine.hasRoom(for: free - SyncEngine.spareRoom + 1, in: folder))
-        #expect(engine.hasRoom(for: free - SyncEngine.spareRoom, in: folder))
+        #expect(!engine.hasRoom(for: free - SyncEngine.spareRoom + slack, in: folder))
+        #expect(engine.hasRoom(for: free - SyncEngine.spareRoom - slack, in: folder))
     }
 
     /// The old build goes as soon as the new one is here, so what it is

@@ -14,6 +14,8 @@ final class SyncController {
     private(set) var log: [LogEntry] = []
     private(set) var running = false
     private(set) var knownDevices: [Platform: [Firmware]] = [:]
+    /// Image id → "27.0 (24A437)": the build each row would be kept at.
+    private(set) var latest: [String: String] = [:]
     private(set) var nextRun: Date?
 
     /// Where the whole run stands, for the bar above the per-file list.
@@ -73,6 +75,10 @@ final class SyncController {
         for platform in Platform.allCases {
             do {
                 knownDevices[platform] = try await engine.wantedFirmwares(platform, devices: nil)
+                for release in (try? await engine.latestReleases(platform)) ?? [] {
+                    let label = "\(release.versionLabel ?? release.version) (\(release.build))"
+                    for image in release.firmwares { latest[image.id] = label }
+                }
             } catch {
                 // Starting hidden closes the window, which cancels this; that is
                 // not something to report as a failure.
@@ -139,7 +145,7 @@ final class SyncController {
             reason: "Keeping restore images up to date")
         defer { ProcessInfo.processInfo.endActivity(activity) }
         transfers = []
-        note(.info, String(localized: "Sync started."))
+        note(.start, String(localized: "Sync started."))
         var attempted = 0
         var unreachable = 0
         // Asked once for the whole run rather than once per platform, since it

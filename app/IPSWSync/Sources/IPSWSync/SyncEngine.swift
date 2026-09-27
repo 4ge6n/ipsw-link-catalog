@@ -34,7 +34,8 @@ struct Transfer: Identifiable, Sendable {
 
 /// A line in the run log.
 struct LogEntry: Identifiable, Sendable {
-    enum Kind: Sendable { case info, good, warning, bad }
+    /// `start` opens a run, so the log can be read one run at a time.
+    enum Kind: Sendable { case start, info, good, warning, bad }
     let id = UUID()
     let at: Date
     let kind: Kind
@@ -306,6 +307,12 @@ actor SyncEngine {
 
     /// `nil` means every device; an empty set means none. They used to be the
     /// same value, so clearing the device list fetched the whole catalog.
+    /// The newest signed release for each image, for the device list to say
+    /// what each device would be kept at.
+    func latestReleases(_ platform: Platform) async throws -> [Release] {
+        try await catalog.latest(platform).releases
+    }
+
     func wantedFirmwares(_ platform: Platform, devices: Set<String>?) async throws -> [Firmware] {
         let document = try await catalog.latest(platform)
         return document.releases.flatMap(\.firmwares).filter { firmware in

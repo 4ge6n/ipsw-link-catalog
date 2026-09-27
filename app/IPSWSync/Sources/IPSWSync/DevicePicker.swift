@@ -32,7 +32,8 @@ struct DevicePicker: View {
                     Section(platform.title) {
                         ForEach(matching(platform)) { firmware in
                             DeviceRow(firmware: firmware, settings: settings,
-                                      allDevices: allDevices)
+                                      allDevices: allDevices,
+                                      latest: controller.latest[firmware.id])
                         }
                     }
                 }
@@ -92,6 +93,8 @@ private struct DeviceRow: View {
     let firmware: Firmware
     @Bindable var settings: Settings
     let allDevices: Set<String>
+    /// "27.0 (24A437)", the newest signed build of this image.
+    let latest: String?
 
     private var isOn: Binding<Bool> {
         Binding(
@@ -111,8 +114,17 @@ private struct DeviceRow: View {
         Toggle(isOn: isOn) {
             VStack(alignment: .leading, spacing: 1) {
                 Text(firmware.name)
-                Text(firmware.devices.joined(separator: ", "))
-                    .font(.caption).foregroundStyle(.secondary)
+                HStack(spacing: 6) {
+                    Text(firmware.devices.joined(separator: ", "))
+                    if let version = latest {
+                        // The build this image is at, which is the one Apple
+                        // restores these devices to now.
+                        Text(version).monospacedDigit()
+                            .padding(.horizontal, 5).padding(.vertical, 1)
+                            .background(.tint.opacity(0.12), in: .capsule)
+                    }
+                }
+                .font(.caption).foregroundStyle(.secondary)
             }
         }
     }

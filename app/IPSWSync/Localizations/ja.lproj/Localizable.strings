@@ -299,3 +299,64 @@
 "not signed" = "署名なし";
 "Tell me when this %@ loses its signing window" = "この%@の署名が終了したら知らせる";
 "Apple stops signing a build without saying so. Only %@ is sent." = "Appleは予告なく署名を終了します。送るのは %@ だけです。";
+
+/* Activity pane */
+"Now (%lld)" = "進行中 (%lld)";
+"Queue (%lld)" = "キュー (%lld)";
+"Log" = "ログ";
+"%1$lld of %2$lld" = "%1$lld / %2$lld";
+"%1$@ of %2$@" = "%1$@ / %2$@";
+"%lld downloading" = "%lld 本ダウンロード中";
+"%lld checking" = "%lld 本照合中";
+"%lld waiting" = "%lld 本待機中";
+"%lld more in the queue" = "キューに残り %lld 本";
+"about %@ left" = "残り約 %@";
+"%@ left" = "残り %@";
+"next %@" = "次回 %@";
+"Getting ready" = "準備中";
+"Nothing running" = "実行中のものはありません";
+"Nothing waiting" = "待機中のものはありません";
+"Problems only" = "問題のみ";
+"No problems" = "問題はありません";
+"Nothing logged yet" = "まだ記録がありません";
+"Earlier" = "それ以前";
+"Run at %@" = "%@ の実行";
+"Checking SHA-1" = "SHA-1 照合中";
+"Looking" = "確認中";
+"Resize" = "サイズ変更";
+"No devices" = "なし";
+
+/* Schedule */
+"How often" = "頻度";
+"Once a day" = "1日1回";
+"Every 12 hours" = "12時間ごと";
+"Every 8 hours" = "8時間ごと";
+"Every 6 hours" = "6時間ごと";
+"Every 4 hours" = "4時間ごと";
+"Every 2 hours" = "2時間ごと";
+"Every hour" = "1時間ごと";
+"Try again soon if something did not arrive" = "届かなかったものがあれば早めに再試行する";
+"Next run %@." = "次回の実行は %@ です。";
+"A run was due and had not happened; running it now." = "予定の実行が行われていなかったため、今から実行します。";
+"Some files did not arrive; trying again at %@" = "届かなかったファイルがあるため、%@ に再試行します";
+"%1$lld file(s) did not arrive; trying again in %2$.0f seconds" = "%1$lld 件が届きませんでした。%2$.0f 秒後に再試行します";
+
+/* Files on the drive */
+"%@ is still being written by another app; left alone until it is finished" = "%@ は別のアプリ（Finderなど）が書き込み中です。終わるまで触りません";
+"Removed an unfinished download of %@ that is no longer wanted" = "不要になった %@ の途中ダウンロードを削除しました";
+"Removed an unfinished %1$@ (%2$@ of %3$@) that is no longer wanted" = "不要になった途中の %1$@（%3$@ 中 %2$@）を削除しました";
+"Removed older build %1$@ first, to make room for %2$@" = "%2$@ の容量を空けるため、先に古いビルド %1$@ を削除しました";
+"Removed the damaged copy left behind by %@" = "%@ が残した破損コピーを削除しました";
+"The drive filled while %@ was arriving; what arrived was removed." = "%@ の受信中にドライブが満杯になったため、途中までの分を削除しました。";
+
+/* Devices */
+"Keep an image for every device Apple still signs" = "Appleが署名中のすべてのデバイスのイメージを保持";
+"Every device: %1$lld of them, about %2$@ to hold." = "すべてのデバイス：%1$lld 台、必要容量 約 %2$@";
+"No devices chosen, so nothing will be kept." = "デバイスが選ばれていないため、何も保持しません。";
+"one file with %@" = "%@ と同じファイル";
+"Every device: %1$lld image(s), about %2$@ to hold." = "すべてのデバイス：イメージ %1$lld 本、必要容量 約 %2$@";
+"Keep an image for every signed device" = "署名中のすべてのデバイスのイメージを保持";
+"New \u{201C}%@\u{201D}…" = "新しい「%@」…";
+"Nothing chosen, so nothing will be kept." = "何も選ばれていないため、何も保持しません。";
+"Platform" = "プラットフォーム";
+"Where %1$@ restore images should be kept. Finder looks for a folder called \u{201C}%2$@\u{201D}, so one named that works whether it is linked or simply put where Finder looks." = "%1$@ の復元イメージの保存先です。Finder は「%2$@」という名前のフォルダを探すので、その名前にしておけばリンクでも直接置いても使えます。";

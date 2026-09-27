@@ -62,6 +62,7 @@ final class RunJournal: @unchecked Sendable {
 extension LogEntry.Kind {
     var name: String {
         switch self {
+        case .start: "start"
         case .info: "info"
         case .good: "good"
         case .warning: "warning"
@@ -71,6 +72,7 @@ extension LogEntry.Kind {
 
     init(name: String) {
         switch name {
+        case "start": self = .start
         case "good": self = .good
         case "warning": self = .warning
         case "bad": self = .bad

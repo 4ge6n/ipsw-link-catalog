@@ -307,7 +307,7 @@ private struct DeviceSummary: View {
                 Text(settings.everyDevice
                      ? String(localized: "Every device in the latest release")
                      : settings.selectedDevices.isEmpty
-                       ? String(localized: "None")
+                       ? String(localized: "No devices")
                      : String(format: String(localized: "%lld selected"), settings.selectedDevices.count))
                 Spacer()
                 Button("Choose…") { showingDevices = true }
