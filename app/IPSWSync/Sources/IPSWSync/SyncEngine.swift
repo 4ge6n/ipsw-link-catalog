@@ -59,6 +59,8 @@ actor SyncEngine {
     /// one platform's run, so seven folders syncing at the same time still add
     /// up to the number that was asked for.
     let downloads = Gate()
+    /// How many files are hashed at once when the whole drive is checked.
+    let hashing = Gate(limit: 3)
     /// Bytes set aside on each drive for transfers that are writing now.
     private var claimed: [String: Int64] = [:]
 

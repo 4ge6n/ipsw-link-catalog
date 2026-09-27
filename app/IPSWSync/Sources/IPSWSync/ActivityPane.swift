@@ -338,7 +338,8 @@ struct TransferRow: View {
                 Spacer(minLength: 6)
                 status
             }
-            if transfer.state == .downloading {
+            // A check reads the whole file too, and says how far it has got.
+            if transfer.state == .downloading || (transfer.state == .verifying && transfer.total > 0) {
                 ProgressView(value: transfer.fraction)
                 Text(detail).font(.caption).foregroundStyle(.secondary).monospacedDigit()
             } else {
@@ -355,8 +356,13 @@ struct TransferRow: View {
             Text("\(Int(transfer.fraction * 100))%").font(.callout.monospacedDigit()).foregroundStyle(.tint)
         case .verifying:
             HStack(spacing: 5) {
-                ProgressView().controlSize(.mini)
-                Text("Checking SHA-1").font(.caption).foregroundStyle(.secondary)
+                if transfer.total > 0 {
+                    Text("Checking SHA-1").font(.caption).foregroundStyle(.secondary)
+                    Text("\(Int(transfer.fraction * 100))%").font(.callout.monospacedDigit()).foregroundStyle(.tint)
+                } else {
+                    ProgressView().controlSize(.mini)
+                    Text("Checking SHA-1").font(.caption).foregroundStyle(.secondary)
+                }
             }
         default:
             HStack(spacing: 5) {

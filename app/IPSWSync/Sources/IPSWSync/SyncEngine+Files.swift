@@ -176,7 +176,16 @@ extension SyncEngine {
                 await report(transfer)
                 let whole: Bool
                 if let sha1 = firmware.sha1 {
-                    whole = await isIntact(part, sha1: sha1)
+                    transfer.received = 0
+                    transfer.resumedFrom = 0
+                    transfer.startedAt = .now
+                    await report(transfer)
+                    let shown = transfer
+                    whole = await isIntact(part, sha1: sha1) { bytes in
+                        var now = shown
+                        now.received = bytes
+                        Task { @MainActor in report(now) }
+                    }
                 } else {
                     // No checksum to read it against: the length is all there is.
                     whole = expected <= 0 || fileSize(part) == expected
@@ -380,69 +389,119 @@ extension SyncEngine {
     /// need not read a terabyte every night; this is for when you want to know
     /// rather than to be told.
     func verify(_ platform: Platform, in folder: URL,
+                concurrently limit: Int = 3,
                 report: @escaping @Sendable @MainActor (Transfer) -> Void,
                 log: @escaping @Sendable @MainActor (LogEntry) -> Void) async throws {
-        resetCancellation()
         try checkVolume(folder)
         let known = try await everyBuild(platform, channel: .release)
             + everyBuild(platform, channel: .beta)
         var sums: [String: String] = [:]
+        var names: [String: String] = [:]
         for release in known {
-            for firmware in release.firmwares where firmware.sha1 != nil {
-                sums[firmware.filename] = firmware.sha1
+            for firmware in release.firmwares {
+                if let sha1 = firmware.sha1 { sums[firmware.filename] = sha1 }
+                names[firmware.filename] = firmware.name
             }
         }
-        let names = ((try? FileManager.default.contentsOfDirectory(atPath: folder.path(percentEncoded: false))) ?? [])
+        let files = ((try? FileManager.default.contentsOfDirectory(atPath: folder.path(percentEncoded: false))) ?? [])
             .filter { $0.hasSuffix(".ipsw") }.sorted()
-        guard !names.isEmpty else {
+        guard !files.isEmpty else {
             await log(LogEntry(kind: .info, message: String(format: String(localized: "Nothing to check in %@"), folder.lastPathComponent)))
             return
         }
-        var good = 0, bad = 0, unknown = 0
-        for name in names {
-            if isCancelled { break }
-            let file = folder.appending(path: name)
-            var transfer = Transfer(id: name, name: name, device: name)
-            transfer.state = .verifying
-            await report(transfer)
-            guard let sha1 = sums[name] else {
-                unknown += 1
-                transfer.state = .done(alreadyHad: true)
-                await report(transfer)
-                await log(LogEntry(kind: .warning, message: String(format: String(localized: "%@ — Apple publishes no checksum for this one"), name)))
-                continue
-            }
-            // Read the bytes rather than the note saying they were read.
-            VerifiedStore.shared.forget(file)
-            if await isIntact(file, sha1: sha1) {
-                good += 1
-                transfer.state = .done(alreadyHad: true)
-                await report(transfer)
-            } else {
-                bad += 1
-                transfer.state = .failed(String(localized: "does not match"))
-                await report(transfer)
-                await log(LogEntry(kind: .bad, message: String(format: String(localized: "%@ does not match Apple's checksum."), name)))
-            }
+        // Everything in the queue before anything starts, so what is left is
+        // always visible — it used to appear one file at a time, as it began.
+        func transfer(_ name: String) -> Transfer {
+            var t = Transfer(id: "verify-\(folder.path(percentEncoded: false))-\(name)", name: name,
+                             device: names[name] ?? name)
+            t.total = fileSize(folder.appending(path: name)) ?? 0
+            return t
         }
+        for name in files {
+            var queued = transfer(name)
+            queued.state = .queued
+            await report(queued)
+        }
+        // A few at a time, not one: hashing is the disk and a core each, and
+        // a Mac has several of both. Held by its own gate rather than the one
+        // downloads use, so a check never waits behind a transfer.
+        await hashing.setLimit(limit)
+        struct Tally: Sendable { var good = 0, bad = 0, unknown = 0 }
+        let tally = await withTaskGroup(of: Tally.self) { group in
+            for name in files {
+                group.addTask { [self] in
+                    var result = Tally()
+                    if await isCancelled { return result }
+                    let file = folder.appending(path: name)
+                    var current = transfer(name)
+                    guard let sha1 = sums[name] else {
+                        result.unknown = 1
+                        current.state = .done(alreadyHad: true)
+                        await report(current)
+                        await log(LogEntry(kind: .warning, message: String(format: String(localized: "%@ — Apple publishes no checksum for this one"), name)))
+                        return result
+                    }
+                    await hashing.enter()
+                    current.state = .verifying
+                    current.startedAt = .now
+                    await report(current)
+                    // Read the bytes rather than the note saying they were read.
+                    VerifiedStore.shared.forget(file)
+                    let shown = current
+                    let matches = await isIntact(file, sha1: sha1) { bytes in
+                        var now = shown
+                        now.received = bytes
+                        Task { @MainActor in report(now) }
+                    }
+                    // Said before the place is given up, not after: the next
+                    // file takes it at once, and reporting in the other order
+                    // put one more "checking" on screen than the limit allows.
+                    if matches {
+                        result.good = 1
+                        current.received = current.total
+                        current.state = .done(alreadyHad: true)
+                        await report(current)
+                    } else {
+                        result.bad = 1
+                        current.state = .failed(String(localized: "does not match"))
+                        await report(current)
+                        await log(LogEntry(kind: .bad, message: String(format: String(localized: "%@ does not match Apple's checksum."), name)))
+                    }
+                    await hashing.leave()
+                    return result
+                }
+            }
+            var total = Tally()
+            for await one in group {
+                total.good += one.good; total.bad += one.bad; total.unknown += one.unknown
+            }
+            return total
+        }
+        let (good, bad, unknown) = (tally.good, tally.bad, tally.unknown)
         await log(LogEntry(kind: bad == 0 ? .good : .bad,
                            message: String(format: String(localized: "Checked %1$lld: %2$lld matched, %3$lld did not, %4$lld had nothing to check against."),
-                                           names.count, good, bad, unknown)))
+                                           files.count, good, bad, unknown)))
     }
 
-    nonisolated func isIntact(_ url: URL, sha1: String?) async -> Bool {
+    nonisolated func isIntact(_ url: URL, sha1: String?,
+                              progress: (@Sendable (Int64) -> Void)? = nil) async -> Bool {
         guard let sha1, FileManager.default.fileExists(atPath: url.path(percentEncoded: false)) else { return false }
         if VerifiedStore.shared.matches(url, sha1: sha1) { return true }
-        guard let digest = try? sha1OfFile(url), digest == sha1.lowercased() else { return false }
+        guard let digest = try? sha1OfFile(url, progress: progress), digest == sha1.lowercased() else { return false }
         VerifiedStore.shared.remember(url, sha1: sha1)
         return true
     }
 
-    nonisolated private func sha1OfFile(_ url: URL) throws -> String {
+    /// SHA-1 of a file, saying how far it has read as it goes. A twelve-
+    /// gigabyte image takes a while, and a spinner for all of it said
+    /// nothing about whether it was moving.
+    nonisolated private func sha1OfFile(_ url: URL, progress: (@Sendable (Int64) -> Void)? = nil) throws -> String {
         let handle = try FileHandle(forReadingFrom: url)
         defer { try? handle.close() }
         var hasher = Insecure.SHA1()
         var done = false
+        var read: Int64 = 0
+        var told: Int64 = 0
         while !done {
             // Each chunk comes back autoreleased, and nothing drains the pool
             // inside a loop of one's own making. Hashing a ten gigabyte image
@@ -455,8 +514,14 @@ extension SyncEngine {
                     return
                 }
                 hasher.update(data: chunk)
+                read += Int64(chunk.count)
+            }
+            if let progress, read - told >= 64 << 20 {
+                told = read
+                progress(read)
             }
         }
+        progress?(read)
         return hasher.finalize().map { String(format: "%02x", $0) }.joined()
     }
 

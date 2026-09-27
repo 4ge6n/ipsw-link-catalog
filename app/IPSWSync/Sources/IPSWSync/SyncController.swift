@@ -313,18 +313,28 @@ final class SyncController {
         guard !running else { return }
         running = true
         transfers = []
-        note(.info, String(localized: "Checking what is already here against Apple's checksums."))
+        note(.start, String(localized: "Checking what is already here against Apple's checksums."))
+        await engine.beginRun(concurrently: settings.maxConcurrent)
+        var folders: [(Platform, URL)] = []
         for platform in Platform.allCases {
-            guard let folder = settings.folder(for: platform) else { continue }
-            let scoped = folder.startAccessingSecurityScopedResource()
-            defer { if scoped { folder.stopAccessingSecurityScopedResource() } }
-            do {
-                try await engine.verify(
-                    platform, in: folder,
-                    report: { [weak self] transfer in self?.update(transfer) },
-                    log: { [weak self] entry in self?.record(entry) })
-            } catch {
-                note(.bad, error.localizedDescription)
+            if let folder = settings.folder(for: platform) { folders.append((platform, folder)) }
+        }
+        // Every platform at once, sharing one limit on how many are hashed.
+        await withTaskGroup(of: Void.self) { group in
+            for (platform, folder) in folders {
+                group.addTask { [engine, settings] in
+                    let scoped = folder.startAccessingSecurityScopedResource()
+                    defer { if scoped { folder.stopAccessingSecurityScopedResource() } }
+                    do {
+                        try await engine.verify(
+                            platform, in: folder,
+                            concurrently: min(max(settings.maxConcurrent, 1), 4),
+                            report: { [weak self] transfer in self?.update(transfer) },
+                            log: { [weak self] entry in self?.record(entry) })
+                    } catch {
+                        await self.note(.bad, error.localizedDescription)
+                    }
+                }
             }
         }
         running = false
@@ -375,6 +385,14 @@ final class SyncController {
 
     private func update(_ transfer: Transfer) {
         if let index = transfers.firstIndex(where: { $0.id == transfer.id }) {
+            // Progress is reported from inside the transfer or the hash, and
+            // those reports hop to the main actor on their own — so one can
+            // arrive after the report that the file is done, and put a
+            // finished row back under "Now", where it stayed. Nothing starts
+            // again once it is done within a run, so a late report is dropped.
+            if case .done = transfers[index].state {
+                if case .done = transfer.state {} else { return }
+            }
             transfers[index] = transfer
         } else {
             transfers.append(transfer)
