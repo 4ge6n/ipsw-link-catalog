@@ -296,6 +296,8 @@ enum SyncError: LocalizedError {
     case volumeNotMounted(String)
     case checksumMismatch(String)
     case http(Int, String)
+    /// Downloaded and checked, but the drive was too full even to rename it.
+    case landingDeferred(String)
 
     var errorDescription: String? {
         switch self {
@@ -311,6 +313,8 @@ enum SyncError: LocalizedError {
             String(format: String(localized: "%@ does not match Apple's checksum."), name)
         case .http(let code, let name):
             String(format: String(localized: "%1$@ failed with HTTP %2$lld."), name, code)
+        case .landingDeferred(let name):
+            String(format: String(localized: "%@ arrived whole but the drive is too full to put it in place yet; it will be finished shortly."), name)
         }
     }
 }

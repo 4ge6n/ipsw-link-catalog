@@ -360,3 +360,6 @@
 "Nothing chosen, so nothing will be kept." = "何も選ばれていないため、何も保持しません。";
 "Platform" = "プラットフォーム";
 "Where %1$@ restore images should be kept. Finder looks for a folder called \u{201C}%2$@\u{201D}, so one named that works whether it is linked or simply put where Finder looks." = "%1$@ の復元イメージの保存先です。Finder は「%2$@」という名前のフォルダを探すので、その名前にしておけばリンクでも直接置いても使えます。";
+"%@ arrived whole but the drive is too full to put it in place yet; it will be finished shortly." = "%@ は揃いましたが、ドライブが満杯で所定の名前にできません。空きができ次第仕上げます。";
+"The drive filled while %@ was arriving; kept to carry on from, since its old build is already gone." = "%@ の受信中にドライブが満杯になりました。古いビルドは既に削除済みのため、途中までの分を残して続きから再開します。";
+"%1$@ has no image on the drive now: %2$@ did not arrive." = "%1$@ のイメージがドライブにありません：%2$@ が届きませんでした。";

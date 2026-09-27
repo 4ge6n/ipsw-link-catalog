@@ -169,6 +169,14 @@ actor SyncEngine {
         // was left failed until the same time tomorrow, and a drive could sit
         // for days a few files short. What the line dropped is asked for again
         // before the run is called done.
+        // The whole list in the queue before anything starts. A file used to
+        // appear only when its turn came, so of seventy-five waiting, two
+        // were ever visible.
+        for firmware in wanted {
+            var waiting = Transfer(id: firmware.id, name: firmware.filename, device: firmware.name)
+            waiting.state = .waiting
+            await report(waiting)
+        }
         var remaining = wanted
         var landed: [Firmware] = []
         var noRoom: [Firmware] = []
@@ -184,13 +192,35 @@ actor SyncEngine {
                                                                remaining.count, pause)))
             try? await Task.sleep(for: .seconds(pause))
         }
-        // What did not fit while six were writing gets one more go, one at a
-        // time, once they are done. The room in question is then its own
-        // predecessor's, which it can take without anyone else reaching for it.
-        for firmware in noRoom where !cancelled {
-            if await fetch(firmware, into: folder, reclaiming: index,
-                           report: report, log: log) == .landed {
-                landed.append(firmware)
+        // What did not fit while the others were writing gets another go once
+        // they are done — side by side, not one at a time. On a nearly full
+        // drive that was most of the run, and it went at the speed of one
+        // transfer. It is safe in parallel because a claim that removes an
+        // old build is one step that either succeeds whole or touches
+        // nothing. Passes repeat while each still lands something.
+        var pending = noRoom
+        while !pending.isEmpty, !cancelled {
+            let pass = await fetchEach(pending, into: folder, reclaiming: index,
+                                       concurrently: limit, report: report, log: log)
+            landed += pass.landed
+            guard !pass.landed.isEmpty else { break }
+            pending = pass.noRoom + pass.again
+        }
+        // Anything wanted that did not arrive, and whose devices now have no
+        // image here at all, is said plainly — the one outcome worse than a
+        // missing update is a missing device.
+        let present = Set(((try? FileManager.default.contentsOfDirectory(atPath: folder.path(percentEncoded: false))) ?? [])
+            .filter { $0.hasSuffix(".ipsw") })
+        let landedNames = Set(landed.map(\.filename))
+        for firmware in wanted where !landedNames.contains(firmware.filename) && !present.contains(firmware.filename) {
+            // By what the catalog says each file is for, not by its name:
+            // iPhone_4.7_P3_16.7.16 names no device at all.
+            let covered = present.contains { name in
+                !Set(firmware.devices).isDisjoint(with: Supersession.devices(of: name, using: index ?? DeviceIndex()))
+            }
+            if !covered {
+                await log(LogEntry(kind: .bad, message: String(format: String(localized: "%1$@ has no image on the drive now: %2$@ did not arrive."),
+                                                               firmware.name, firmware.filename)))
             }
         }
         // Swept whether or not the run is pruning: this is not someone else's

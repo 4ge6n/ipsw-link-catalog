@@ -136,6 +136,11 @@ extension SyncEngine {
                     await log(LogEntry(kind: .info, message: String(format: String(localized: "Removed older build %1$@ first, to make room for %2$@"),
                                                                    name, firmware.filename)))
                 }
+                // Once the old build is gone, this download is the only image
+                // the device has. A failure from here on is not given up on
+                // this run: what arrived is kept and carried on from.
+                let replacedOld = !claim.removed.isEmpty
+                if replacedOld { await waitForRoom(needed, in: folder) }
                 let roomHeld = claim.held
                 guard roomHeld else {
                     await downloads.leave()
@@ -163,6 +168,15 @@ extension SyncEngine {
                     // be finished and only holds room something else could
                     // use, and asking again in twenty seconds finds the same
                     // full drive.
+                    if Self.isOutOfSpace(error), replacedOld {
+                        // The old build is already gone, so throwing this away
+                        // would leave the device with nothing. Keep it; the
+                        // next pass carries on from it once others finish.
+                        transfer.state = .failed(String(localized: "not enough room"))
+                        await report(transfer)
+                        await log(LogEntry(kind: .warning, message: String(format: String(localized: "The drive filled while %@ was arriving; kept to carry on from, since its old build is already gone."), firmware.filename)))
+                        return .worthAnotherGo
+                    }
                     if Self.isOutOfSpace(error) {
                         try? FileManager.default.removeItem(at: part)
                         transfer.state = .failed(String(localized: "not enough room"))
@@ -369,7 +383,10 @@ extension SyncEngine {
     /// drive. A little is always left: a volume with nothing free at all stops
     /// being a volume that anything — this app included — can work on.
     nonisolated func hasRoom(for bytes: Int64, in folder: URL, alreadyHave onDisk: Int64 = 0) -> Bool {
-        guard bytes > 0, let free = freeSpace(at: folder) else { return true }
+        // Nothing left to write needs no room. A finished download waiting
+        // only for its name was refused for want of the margin, on the very
+        // drive it was about to free, and never landed.
+        guard bytes > 0, bytes - onDisk > 0, let free = freeSpace(at: folder) else { return true }
         return bytes - onDisk + Self.spareRoom <= free
     }
 
@@ -526,6 +543,19 @@ extension SyncEngine {
     }
 
     /// Remove the build each newly present file replaces, and nothing else.
+    /// Wait for the room a removal gave back to show up as free.
+    ///
+    /// APFS does not always hand back a deleted file's blocks at the moment of
+    /// the delete. A transfer that removed its old build and started writing
+    /// straight away could run into a full drive on room it had been counted
+    /// as having — and by then the old build was gone.
+    nonisolated func waitForRoom(_ bytes: Int64, in folder: URL) async {
+        for _ in 0..<60 {
+            if let free = freeSpace(at: folder), free >= bytes { return }
+            try? await Task.sleep(for: .milliseconds(500))
+        }
+    }
+
     /// Give a finished, checked download the image's own name.
     nonisolated func land(_ part: URL, as destination: URL, sha1: String?) async throws {
         let manager = FileManager.default
@@ -541,7 +571,14 @@ extension SyncEngine {
             try manager.removeItem(at: destination)
             VerifiedStore.shared.forget(destination)
         }
-        try manager.moveItem(at: part, to: destination)
+        do {
+            try manager.moveItem(at: part, to: destination)
+        } catch where Self.isOutOfSpace(error) {
+            // Even a rename writes a little on APFS. On a drive at the brim it
+            // can fail; the whole, checked part stays, and lands on a later
+            // pass once something has given room back.
+            throw SyncError.landingDeferred(destination.lastPathComponent)
+        }
         VerifiedStore.shared.forget(part)
         if let sha1 { VerifiedStore.shared.remember(destination, sha1: sha1) }
     }
