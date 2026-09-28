@@ -4,9 +4,9 @@
   "os_key": "tvos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-24T12:20:32Z",
-  "release_count": 2,
-  "firmware_count": 3,
+  "generated_at": "2026-09-28T22:31:34Z",
+  "release_count": 3,
+  "firmware_count": 4,
   "releases": [
     {
       "id": "tvos-release-26.6-23L773",
@@ -30,37 +30,58 @@
       ]
     },
     {
-      "id": "tvos-release-6.1.4-10B809",
-      "version": "6.1.4",
-      "version_label": "6.1.4",
-      "build": "10B809",
-      "released_at": null,
-      "data": "6.1.4/10B809.json",
+      "id": "tvos-release-8.4.7-12H1006",
+      "version": "8.4.7",
+      "version_label": "8.4.7",
+      "build": "12H1006",
+      "released_at": "2022-03-14T16:48:40Z",
+      "data": "8.4.7/12H1006.json",
       "firmwares": [
         {
-          "id": "tvos-release-6.1.4-10B809-AppleTV2,1",
-          "name": "Apple TV 2G",
-          "devices": [
-            "AppleTV2,1"
-          ],
-          "filename": "AppleTV2,1_5.3_10B809_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/AppleTV/091-5256.20130618.MagBg/AppleTV2,1_5.3_10B809_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        },
-        {
-          "id": "tvos-release-6.1.4-10B809-AppleTV3,1",
+          "id": "tvos-release-8.4.7-12H1006-AppleTV3,1",
           "name": "Apple TV 3",
           "devices": [
             "AppleTV3,1"
           ],
-          "filename": "AppleTV3,1_5.3_10B809_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/AppleTV/091-5257.20130618.Eu5uy/AppleTV3,1_5.3_10B809_Restore.ipsw",
+          "filename": "AppleTV3,1_8.4.3_12H1006_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022/ios/002-77725-20220309-8070E2E2-28B3-463C-96F0-A6FAC4D86F1D/AppleTV3,1_8.4.3_12H1006_Restore.ipsw",
+          "sha1": null,
+          "signed": true
+        },
+        {
+          "id": "tvos-release-8.4.7-12H1006-AppleTV3,2",
+          "name": "Apple TV 3 (2013)",
+          "devices": [
+            "AppleTV3,2"
+          ],
+          "filename": "AppleTV3,2_8.4.3_12H1006_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2022/ios/002-77717-20220309-806B4BF8-FF71-4485-9BB8-3E2D10E3D1D8/AppleTV3,2_8.4.3_12H1006_Restore.ipsw",
+          "sha1": null,
+          "signed": true
+        }
+      ]
+    },
+    {
+      "id": "tvos-release-7.1.2-11D258",
+      "version": "7.1.2",
+      "version_label": "7.1.2",
+      "build": "11D258",
+      "released_at": "2014-09-17T17:59:02Z",
+      "data": "7.1.2/11D258.json",
+      "firmwares": [
+        {
+          "id": "tvos-release-7.1.2-11D258-AppleTV2,1",
+          "name": "Apple TV 2G",
+          "devices": [
+            "AppleTV2,1"
+          ],
+          "filename": "AppleTV2,1_6.2.1_11D258_Restore.ipsw",
+          "url": "https://secure-appldnld.apple.com/iOS8/031-07202.20140917.tF6Fs/AppleTV2,1_6.2.1_11D258_Restore.ipsw",
           "sha1": null,
           "signed": true
         }
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-24T21:20:32+09:00"
+  "generated_at_tokyo": "2026-09-29T07:31:34+09:00"
 }

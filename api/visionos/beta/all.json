@@ -4,9 +4,9 @@
   "os_key": "visionos",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-09-24T12:20:32Z",
-  "release_count": 128,
-  "firmware_count": 170,
+  "generated_at": "2026-09-28T22:31:34Z",
+  "release_count": 129,
+  "firmware_count": 172,
   "releases": [
     {
       "id": "visionos-beta-27.2-beta-2-24N5093F",
@@ -77,34 +77,34 @@
       ]
     },
     {
-      "id": "visionos-beta-27.0-rc-24M362",
-      "version": "27.0",
-      "version_label": "27.0-rc",
-      "build": "24M362",
-      "released_at": "2026-09-14T17:00:00Z",
+      "id": "visionos-beta-27.0.1-24M372",
+      "version": "27.0.1",
+      "version_label": "27.0.1",
+      "build": "24M372",
+      "released_at": "2026-09-28T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.0-rc/24M362.json",
+      "data": "27.0.1/24M372.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.0-rc-24M362-RealityDevice17,1",
+          "id": "visionos-beta-27.0.1-24M372-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
           ],
-          "filename": "Apple_Vision_Pro_M5_27.0_24M362_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/36f0fa38-2ff6-4ad3-8952-01b0b3a139d7/Apple_Vision_Pro_M5_27.0_24M362_Restore.ipsw",
+          "filename": "Apple_Vision_Pro_M5_27.0.1_24M372_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/f07f1823-ed20-434c-b3a5-035e03e17e3a/Apple_Vision_Pro_M5_27.0.1_24M372_Restore.ipsw",
           "sha1": null,
           "signed": null
         },
         {
-          "id": "visionos-beta-27.0-rc-24M362-RealityDevice14,1",
+          "id": "visionos-beta-27.0.1-24M372-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
           ],
-          "filename": "Apple_Vision_Pro_27.0_24M362_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/15a5b6d9-74ee-4986-a40e-63ee98bcd0ab/Apple_Vision_Pro_27.0_24M362_Restore.ipsw",
+          "filename": "Apple_Vision_Pro_27.0.1_24M372_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/1b8ee6f0-3a97-4ef4-86ed-59eec8718331/Apple_Vision_Pro_27.0.1_24M372_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -377,6 +377,40 @@
           ],
           "filename": "Apple_Vision_Pro_27.0_24M5291p_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SummerSeed/fullrestores/122-98905/5945589A-01AA-430A-9DD3-0615D2AE6E75/Apple_Vision_Pro_27.0_24M5291p_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-27.0-rc-24M362",
+      "version": "27.0",
+      "version_label": "27.0-rc",
+      "build": "24M362",
+      "released_at": null,
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "27.0-rc/24M362.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-27.0-rc-24M362-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_27.0_24M362_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/36f0fa38-2ff6-4ad3-8952-01b0b3a139d7/Apple_Vision_Pro_M5_27.0_24M362_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "visionos-beta-27.0-rc-24M362-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_27.0_24M362_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/15a5b6d9-74ee-4986-a40e-63ee98bcd0ab/Apple_Vision_Pro_27.0_24M362_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -3415,5 +3449,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-24T21:20:32+09:00"
+  "generated_at_tokyo": "2026-09-29T07:31:34+09:00"
 }

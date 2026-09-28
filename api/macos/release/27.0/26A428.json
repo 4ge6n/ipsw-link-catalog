@@ -4,22 +4,18 @@
   "version": "27.0",
   "version_label": "27.0",
   "build": "26A428",
-  "released_at": "2026-09-14T17:00:00Z",
+  "released_at": "2026-09-14T17:19:02Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
-      "name": "apple",
-      "checked_at": "2026-09-24T12:20:32Z"
-    },
-    {
       "name": "ipsw.me",
-      "checked_at": "2026-09-24T12:20:32Z"
+      "checked_at": "2026-09-28T22:31:34Z"
     }
   ],
   "firmwares": [
     {
-      "name": "Mac mini (M1, Late 2020)",
+      "name": "MacBook Pro (M1, Late 2020)",
       "devices": [
         "Mac13,1",
         "Mac13,2",
@@ -83,12 +79,11 @@
       "filename": "UniversalMac_27.0_26A428_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-24T12:20:32Z",
+        "checked_at": "2026-09-28T22:31:34Z",
         "unsigned_since": null
-      },
-      "sha1": "2d17f2fe0d7726dd66f0522fdb9ad162942c3f3d"
+      }
     }
   ],
   "first_seen_at": "2026-09-14T17:20:28Z",
-  "last_seen_at": "2026-09-24T12:20:32Z"
+  "last_seen_at": "2026-09-28T22:31:34Z"
 }

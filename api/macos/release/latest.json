@@ -4,20 +4,20 @@
   "os_key": "macos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-09-24T12:20:32Z",
+  "generated_at": "2026-09-28T22:31:34Z",
   "release_count": 1,
   "firmware_count": 1,
   "releases": [
     {
-      "id": "macos-release-27.0-26A428",
-      "version": "27.0",
-      "version_label": "27.0",
-      "build": "26A428",
-      "released_at": "2026-09-14T17:00:00Z",
-      "data": "27.0/26A428.json",
+      "id": "macos-release-27.0.1-26A434",
+      "version": "27.0.1",
+      "version_label": "27.0.1",
+      "build": "26A434",
+      "released_at": "2026-09-28T17:00:00Z",
+      "data": "27.0.1/26A434.json",
       "firmwares": [
         {
-          "id": "macos-release-27.0-26A428-Mac13,1",
+          "id": "macos-release-27.0.1-26A434-Mac13,1",
           "name": "Mac mini (M1, Late 2020)",
           "devices": [
             "Mac13,1",
@@ -78,13 +78,13 @@
             "MacBookPro18,4",
             "Macmini9,1"
           ],
-          "filename": "UniversalMac_27.0_26A428_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/afcfc88e-bbe6-44bf-a5da-07c56eebc06c/UniversalMac_27.0_26A428_Restore.ipsw",
-          "sha1": "2d17f2fe0d7726dd66f0522fdb9ad162942c3f3d",
+          "filename": "UniversalMac_27.0.1_26A434_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/59241290-5d51-4ca8-9df4-31624b9a4eac/UniversalMac_27.0.1_26A434_Restore.ipsw",
+          "sha1": "7e020710acade1911309aa73901ed5a92790bafc",
           "signed": true
         }
       ]
     }
   ],
-  "generated_at_tokyo": "2026-09-24T21:20:32+09:00"
+  "generated_at_tokyo": "2026-09-29T07:31:34+09:00"
 }

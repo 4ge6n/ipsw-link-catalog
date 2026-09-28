@@ -4,17 +4,13 @@
   "version": "27.0",
   "version_label": "27.0",
   "build": "24M362",
-  "released_at": "2026-09-14T17:00:00Z",
+  "released_at": "2026-09-14T17:25:28Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
-      "name": "apple",
-      "checked_at": "2026-09-24T12:20:32Z"
-    },
-    {
       "name": "ipsw.me",
-      "checked_at": "2026-09-24T12:20:32Z"
+      "checked_at": "2026-09-28T22:31:34Z"
     }
   ],
   "firmwares": [
@@ -27,10 +23,9 @@
       "filename": "Apple_Vision_Pro_M5_27.0_24M362_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-24T12:20:32Z",
+        "checked_at": "2026-09-28T22:31:34Z",
         "unsigned_since": null
-      },
-      "sha1": "0179229a457084e7b58e328c3d5027de0905fb28"
+      }
     },
     {
       "name": "Apple Vision Pro",
@@ -41,12 +36,11 @@
       "filename": "Apple_Vision_Pro_27.0_24M362_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-09-24T12:20:32Z",
+        "checked_at": "2026-09-28T22:31:34Z",
         "unsigned_since": null
-      },
-      "sha1": "5586b003dd9179d6c3c79ca5c9cda2493adf7b2a"
+      }
     }
   ],
   "first_seen_at": "2026-09-14T17:34:56Z",
-  "last_seen_at": "2026-09-24T12:20:32Z"
+  "last_seen_at": "2026-09-28T22:31:34Z"
 }
