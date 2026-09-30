@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-09-30T15:53:00Z",
+  "generated_at": "2026-09-30T20:46:20Z",
   "release_count": 433,
   "firmware_count": 4921,
   "releases": [
@@ -350,6 +350,7 @@
           "devices": [
             "iPad14,3",
             "iPad14,4",
+            "iPad14,5",
             "iPad14,6"
           ],
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.2_24B5084k_Restore.ipsw",
@@ -358,9 +359,10 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.2-beta-24B5084K-iPad14,11",
-          "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
+          "id": "ipados-beta-27.2-beta-24B5084K-iPad14,10",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
+            "iPad14,10",
             "iPad14,11",
             "iPad14,8",
             "iPad14,9"
@@ -570,6 +572,7 @@
           "devices": [
             "iPad14,3",
             "iPad14,4",
+            "iPad14,5",
             "iPad14,6"
           ],
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0.1_24A446_Restore.ipsw",
@@ -578,9 +581,10 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.0.1-24A446-iPad14,11",
-          "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
+          "id": "ipados-beta-27.0.1-24A446-iPad14,10",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
+            "iPad14,10",
             "iPad14,11",
             "iPad14,8",
             "iPad14,9"
@@ -790,6 +794,7 @@
           "devices": [
             "iPad14,3",
             "iPad14,4",
+            "iPad14,5",
             "iPad14,6"
           ],
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A5430a_Restore.ipsw",
@@ -798,9 +803,10 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.0-beta-8-24A5430A-iPad14,11",
-          "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
+          "id": "ipados-beta-27.0-beta-8-24A5430A-iPad14,10",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
+            "iPad14,10",
             "iPad14,11",
             "iPad14,8",
             "iPad14,9"
@@ -1010,6 +1016,7 @@
           "devices": [
             "iPad14,3",
             "iPad14,4",
+            "iPad14,5",
             "iPad14,6"
           ],
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A5424a_Restore.ipsw",
@@ -1018,9 +1025,10 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.0-beta-7-24A5424A-iPad14,11",
-          "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
+          "id": "ipados-beta-27.0-beta-7-24A5424A-iPad14,10",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
+            "iPad14,10",
             "iPad14,11",
             "iPad14,8",
             "iPad14,9"
@@ -1230,6 +1238,7 @@
           "devices": [
             "iPad14,3",
             "iPad14,4",
+            "iPad14,5",
             "iPad14,6"
           ],
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A5418b_Restore.ipsw",
@@ -1238,9 +1247,10 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.0-beta-6-24A5418B-iPad14,11",
-          "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
+          "id": "ipados-beta-27.0-beta-6-24A5418B-iPad14,10",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
+            "iPad14,10",
             "iPad14,11",
             "iPad14,8",
             "iPad14,9"
@@ -1450,6 +1460,7 @@
           "devices": [
             "iPad14,3",
             "iPad14,4",
+            "iPad14,5",
             "iPad14,6"
           ],
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A5408d_Restore.ipsw",
@@ -1458,9 +1469,10 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.0-beta-5-24A5408D-iPad14,11",
-          "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
+          "id": "ipados-beta-27.0-beta-5-24A5408D-iPad14,10",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
+            "iPad14,10",
             "iPad14,11",
             "iPad14,8",
             "iPad14,9"
@@ -1670,6 +1682,7 @@
           "devices": [
             "iPad14,3",
             "iPad14,4",
+            "iPad14,5",
             "iPad14,6"
           ],
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A5390f_Restore.ipsw",
@@ -1678,9 +1691,10 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.0-beta-4-24A5390F-iPad14,11",
-          "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
+          "id": "ipados-beta-27.0-beta-4-24A5390F-iPad14,10",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
+            "iPad14,10",
             "iPad14,11",
             "iPad14,8",
             "iPad14,9"
@@ -1890,6 +1904,7 @@
           "devices": [
             "iPad14,3",
             "iPad14,4",
+            "iPad14,5",
             "iPad14,6"
           ],
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A5380l_Restore.ipsw",
@@ -1898,9 +1913,10 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.0-beta-3-24A5380L-iPad14,11",
-          "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
+          "id": "ipados-beta-27.0-beta-3-24A5380L-iPad14,10",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
+            "iPad14,10",
             "iPad14,11",
             "iPad14,8",
             "iPad14,9"
@@ -2110,6 +2126,7 @@
           "devices": [
             "iPad14,3",
             "iPad14,4",
+            "iPad14,5",
             "iPad14,6"
           ],
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A5380h_Restore.ipsw",
@@ -2118,9 +2135,10 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.0-beta-3-24A5380H-iPad14,11",
-          "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
+          "id": "ipados-beta-27.0-beta-3-24A5380H-iPad14,10",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
+            "iPad14,10",
             "iPad14,11",
             "iPad14,8",
             "iPad14,9"
@@ -2330,6 +2348,7 @@
           "devices": [
             "iPad14,3",
             "iPad14,4",
+            "iPad14,5",
             "iPad14,6"
           ],
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A5370h_Restore.ipsw",
@@ -2338,9 +2357,10 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.0-beta-2-24A5370H-iPad14,11",
-          "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
+          "id": "ipados-beta-27.0-beta-2-24A5370H-iPad14,10",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
+            "iPad14,10",
             "iPad14,11",
             "iPad14,8",
             "iPad14,9"
@@ -2550,6 +2570,7 @@
           "devices": [
             "iPad14,3",
             "iPad14,4",
+            "iPad14,5",
             "iPad14,6"
           ],
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A5355q_Restore.ipsw",
@@ -2558,9 +2579,10 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.0-beta-24A5355Q-iPad14,11",
-          "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
+          "id": "ipados-beta-27.0-beta-24A5355Q-iPad14,10",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
+            "iPad14,10",
             "iPad14,11",
             "iPad14,8",
             "iPad14,9"
@@ -2770,6 +2792,7 @@
           "devices": [
             "iPad14,3",
             "iPad14,4",
+            "iPad14,5",
             "iPad14,6"
           ],
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A437_Restore.ipsw",
@@ -2778,9 +2801,10 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.0-24A437-iPad14,11",
-          "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
+          "id": "ipados-beta-27.0-24A437-iPad14,10",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
+            "iPad14,10",
             "iPad14,11",
             "iPad14,8",
             "iPad14,9"
@@ -2990,6 +3014,7 @@
           "devices": [
             "iPad14,3",
             "iPad14,4",
+            "iPad14,5",
             "iPad14,6"
           ],
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A435_Restore.ipsw",
@@ -2998,9 +3023,10 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.0-rc-24A435-iPad14,11",
-          "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
+          "id": "ipados-beta-27.0-rc-24A435-iPad14,10",
+          "name": "iPad Air 13-inch (M2) Wi-Fi",
           "devices": [
+            "iPad14,10",
             "iPad14,11",
             "iPad14,8",
             "iPad14,9"
@@ -72386,5 +72412,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-10-01T00:53:00+09:00"
+  "generated_at_tokyo": "2026-10-01T05:46:20+09:00"
 }
