@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-28T22:31:34Z"
+      "checked_at": "2026-09-30T15:53:00Z"
     }
   ],
   "firmwares": [
@@ -139,7 +139,6 @@
       "devices": [
         "iPad14,3",
         "iPad14,4",
-        "iPad14,5",
         "iPad14,6"
       ],
       "url": "https://updates.cdn-apple.com/2026FallFCS/6c04c90b-e290-45f9-9caa-f36997bb2cad/iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.0_24A435_Restore.ipsw",
@@ -151,9 +150,8 @@
       }
     },
     {
-      "name": "iPad Air 13-inch (M2) Wi-Fi",
+      "name": "iPad Air 13-inch (M2) Wi-Fi + Cellular",
       "devices": [
-        "iPad14,10",
         "iPad14,11",
         "iPad14,8",
         "iPad14,9"
@@ -258,5 +256,5 @@
     }
   ],
   "first_seen_at": "2026-09-11T19:39:29Z",
-  "last_seen_at": "2026-09-28T22:31:34Z"
+  "last_seen_at": "2026-09-30T15:53:00Z"
 }
