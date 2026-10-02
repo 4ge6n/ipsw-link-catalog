@@ -9,6 +9,11 @@ struct Transfer: Identifiable, Sendable {
         case waiting, checking, queued, downloading, verifying
         case done(alreadyHad: Bool)
         case failed(String)
+        /// Finished without being fetched, and not because anything went
+        /// wrong: stopped, left for Finder to finish, or not reached before
+        /// the run ended. It used to be put back to "waiting", where it was
+        /// counted in the queue long after the run was over.
+        case skipped(String)
     }
     let id: String
     let name: String
@@ -17,6 +22,9 @@ struct Transfer: Identifiable, Sendable {
     var total: Int64 = 0
     var state: State = .waiting
     var startedAt: Date = .now
+    /// When it reached done, failed or skipped, for listing what finished
+    /// most recently first.
+    var finishedAt: Date?
     var resumedFrom: Int64 = 0
 
     var fraction: Double { total > 0 ? min(1, Double(received) / Double(total)) : 0 }
@@ -35,13 +43,23 @@ struct Transfer: Identifiable, Sendable {
 /// A line in the run log.
 struct LogEntry: Identifiable, Sendable {
     /// `start` opens a run, so the log can be read one run at a time.
-    enum Kind: Sendable { case start, info, good, warning, bad }
+    /// `detail` is the routine — a file already here, which folder is being
+    /// looked at — shown only when every line is asked for. A run over a
+    /// hundred images used to be a hundred "Already have" lines around the
+    /// two that mattered.
+    enum Kind: Sendable { case start, detail, info, good, warning, bad }
     let id = UUID()
     let at: Date
     let kind: Kind
     let message: String
 
-    init(kind: Kind, message: String, at: Date = .now) {
+    /// Filled in by the controller so concurrent platforms can be told
+    /// apart in the log and in an exported journal.
+    var platform: Platform?
+    var runID: UUID?
+
+    init(kind: Kind, message: String, at: Date = .now, platform: Platform? = nil) {
+        self.platform = platform
         self.kind = kind
         self.message = message
         self.at = at
@@ -146,7 +164,7 @@ actor SyncEngine {
         report: @escaping @Sendable @MainActor (Transfer) -> Void,
         log: @escaping @Sendable @MainActor (LogEntry) -> Void
     ) async throws {
-        await log(LogEntry(kind: .info, message: "\(platform.title) → \(folder.path(percentEncoded: false))"))
+        await log(LogEntry(kind: .detail, message: "\(platform.title) → \(folder.path(percentEncoded: false))"))
         try checkVolume(folder)
         var wanted = try await wantedFirmwares(platform, devices: devices)
         // The same image can be in both; the catalog's copy carries a checksum,
@@ -157,7 +175,10 @@ actor SyncEngine {
             && (devices.map { !$0.isDisjoint(with: firmware.devices) } ?? true)
         }
         guard !wanted.isEmpty else {
-            await log(LogEntry(kind: .warning, message: String(localized: "No signed builds match the selected devices.")))
+            // Not a warning: a platform with none of the chosen devices on
+            // it has nothing to do, and four of these per run read as four
+            // things gone wrong.
+            await log(LogEntry(kind: .detail, message: String(format: String(localized: "%@: none of the chosen devices"), platform.title)))
             return
         }
         // The actor only coordinates; the transfers themselves are nonisolated

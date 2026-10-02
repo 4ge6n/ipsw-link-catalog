@@ -12,7 +12,24 @@ final class SyncController {
 
     private(set) var transfers: [Transfer] = []
     private(set) var log: [LogEntry] = []
-    private(set) var running = false
+    private(set) var running = false {
+        didSet {
+            if running { currentRunID = UUID() }
+            guard oldValue, !running else { return }
+            currentRunID = nil
+            // Whatever a run did not reach is over with it. Left as
+            // "waiting", it was counted in the queue long after the run
+            // had finished.
+            for index in transfers.indices {
+                switch transfers[index].state {
+                case .waiting, .queued, .checking, .downloading, .verifying:
+                    transfers[index].state = .skipped(String(localized: "not reached"))
+                    transfers[index].finishedAt = .now
+                default: break
+                }
+            }
+        }
+    }
     private(set) var knownDevices: [Platform: [Firmware]] = [:]
     /// Image id → "27.0 (24A437)": the build each row would be kept at.
     private(set) var latest: [String: String] = [:]
@@ -111,7 +128,7 @@ final class SyncController {
         timer = fires
         if nextRun != lastBooked {
             lastBooked = nextRun
-            note(.info, String(format: String(localized: "Next run %@."),
+            note(.detail, String(format: String(localized: "Next run %@."),
                                nextRun.formatted(date: .abbreviated, time: .shortened)))
         }
     }
@@ -179,7 +196,7 @@ final class SyncController {
                             prune: settings.prune,
                             concurrently: settings.maxConcurrent,
                             report: { [weak self] transfer in self?.update(transfer) },
-                            log: { [weak self] entry in self?.record(entry) }
+                            log: { [weak self] entry in self?.record(entry, platform: platform) }
                         )
                         return false
                     } catch {
@@ -330,7 +347,7 @@ final class SyncController {
                             platform, in: folder,
                             concurrently: min(max(settings.maxConcurrent, 1), 4),
                             report: { [weak self] transfer in self?.update(transfer) },
-                            log: { [weak self] entry in self?.record(entry) })
+                            log: { [weak self] entry in self?.record(entry, platform: platform) })
                     } catch {
                         await self.note(.bad, error.localizedDescription)
                     }
@@ -383,7 +400,12 @@ final class SyncController {
             : String(format: String(localized: "Downloaded %lld file(s)."), fetched)
     }
 
-    private func update(_ transfer: Transfer) {
+    private func update(_ incoming: Transfer) {
+        var transfer = incoming
+        switch transfer.state {
+        case .done, .failed, .skipped: transfer.finishedAt = transfer.finishedAt ?? .now
+        default: transfer.finishedAt = nil
+        }
         if let index = transfers.firstIndex(where: { $0.id == transfer.id }) {
             // Progress is reported from inside the transfer or the hash, and
             // those reports hop to the main actor on their own — so one can
@@ -401,7 +423,13 @@ final class SyncController {
 
     /// Every line goes to the screen and to disk, so a run that happened
     /// while the app was silent is still there when someone looks.
-    private func record(_ entry: LogEntry) {
+    private var currentRunID: UUID?
+
+    private func record(_ incoming: LogEntry, platform: Platform? = nil) {
+        var entry = incoming
+        entry.platform = platform ?? entry.platform
+        entry.runID = currentRunID
+        if log.count > 1000 { log.removeFirst(log.count - 1000) }
         log.append(entry)
         RunJournal.shared.append(entry)
     }

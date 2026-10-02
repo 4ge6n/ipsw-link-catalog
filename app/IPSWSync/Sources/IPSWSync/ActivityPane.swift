@@ -1,16 +1,15 @@
+import AppKit
 import SwiftUI
 
 /// What the app is doing, and what it did.
 ///
 /// One summary always at the top — how far a run has got, or how the last one
 /// ended and when the next is due — and under it one list at a time: what is
-/// moving now, what is waiting, or the log. The three used to be stacked in a
-/// strip a few rows tall, which made each of them too short to read and the
-/// log a wall of identical warnings with no telling where one run ended.
+/// moving now, what is waiting and what has finished, or the log.
 struct ActivityPane: View {
     @Environment(SyncController.self) private var controller
     @AppStorage("activityPaneHeight") private var paneHeight = 260.0
-    @AppStorage("activityShowsProblemsOnly") private var problemsOnly = false
+    @AppStorage("activityLogFilter") private var filter: LogFilter = .summary
     @State private var tab: Tab = .log
     @State private var dragStart: Double?
 
@@ -41,15 +40,13 @@ struct ActivityPane: View {
         }
         .background(.background)
         // A run starting is what someone opening the window wants to watch;
-        // one ending leaves the log, which says how it went.
-        .onChange(of: controller.running) { _, running in tab = running ? .now : .log }
+        // one ending leaves what finished, which is what they then ask about.
+        .onChange(of: controller.running) { _, running in tab = running ? .now : .queue }
         .onAppear { tab = controller.running ? .now : .log }
     }
 
     // MARK: The edge that sizes the pane
 
-    /// The pane's own top edge, dragged: up makes it taller. It sits on the
-    /// line it moves.
     private var resizeEdge: some View {
         ZStack {
             Rectangle().fill(.separator).frame(height: 1)
@@ -82,7 +79,7 @@ struct ActivityPane: View {
                 HStack(alignment: .firstTextBaseline) {
                     Label("Syncing", systemImage: "arrow.down.circle.fill")
                         .font(.headline).foregroundStyle(.tint)
-                    Text(String(format: String(localized: "%1$lld of %2$lld"), state.done, state.total))
+                    Text(String(format: String(localized: "%1$lld of %2$lld"), finished.count, controller.transfers.count))
                         .font(.headline).monospacedDigit()
                     Spacer()
                     Button("Stop", role: .destructive) { controller.cancel() }
@@ -107,7 +104,6 @@ struct ActivityPane: View {
         }
     }
 
-    /// "48.3 GB of 120 GB · 3 downloading · 2 checking · 60 waiting · about 1 h 20 min"
     private var breakdown: String {
         let state = controller.overall
         var parts: [String] = []
@@ -125,23 +121,20 @@ struct ActivityPane: View {
         return parts.joined(separator: "  ·  ")
     }
 
-    /// From the combined rate of what is coming down now.
     private var overallETA: TimeInterval? {
         let state = controller.overall
-        let rate = active.reduce(0.0) { $0 + $1.bytesPerSecond }
+        let rate = active.reduce(0.0) { $0 + ($1.state == .downloading ? $1.bytesPerSecond : 0) }
         guard rate > 0, state.expected > state.received else { return nil }
         return Double(state.expected - state.received) / rate
     }
 
-    /// How the last run ended, read from the log it left — which survives a
-    /// relaunch, so a run made while the app was silent is reported too.
     private var lastResult: (text: String, symbol: String, tint: Color) {
         let lastStart = controller.log.lastIndex { $0.kind == .start }
         let after = lastStart.map { controller.log[controller.log.index(after: $0)...] } ?? controller.log[...]
         if let ending = after.last(where: { $0.kind == .good || $0.kind == .bad }) {
             return ending.kind == .good
-                ? (ending.message, "checkmark.circle.fill", .green)
-                : (ending.message, "exclamationmark.triangle.fill", .orange)
+                ? (Pretty.message(ending.message), "checkmark.circle.fill", .green)
+                : (Pretty.message(ending.message), "exclamationmark.triangle.fill", .orange)
         }
         return (String(localized: "Not run yet"), "circle.dashed", .secondary)
     }
@@ -161,13 +154,13 @@ struct ActivityPane: View {
         return parts.joined(separator: "  ·  ")
     }
 
-    // MARK: Now
+    // MARK: What is where
 
     private var active: [Transfer] {
         controller.transfers.filter {
             switch $0.state {
             case .checking, .downloading, .verifying: true
-            case .waiting, .queued, .done, .failed: false
+            case .waiting, .queued, .done, .failed, .skipped: false
             }
         }
     }
@@ -175,6 +168,15 @@ struct ActivityPane: View {
     private var waiting: [Transfer] {
         controller.transfers.filter { $0.state == .queued || $0.state == .waiting }
     }
+
+    /// Done, failed or skipped, the most recent first.
+    private var finished: [Transfer] {
+        controller.transfers
+            .filter { $0.finishedAt != nil }
+            .sorted { ($0.finishedAt ?? .distantPast) > ($1.finishedAt ?? .distantPast) }
+    }
+
+    // MARK: Now
 
     @ViewBuilder private var nowList: some View {
         if active.isEmpty {
@@ -186,25 +188,40 @@ struct ActivityPane: View {
         }
     }
 
-    // MARK: Queue
+    // MARK: Queue, and what has finished
 
     @ViewBuilder private var queueList: some View {
-        if waiting.isEmpty {
+        if waiting.isEmpty && finished.isEmpty {
             ContentUnavailableView("Nothing waiting", systemImage: "tray")
         } else {
-            List(Array(waiting.enumerated()), id: \.element.id) { index, transfer in
-                HStack(spacing: 10) {
-                    Text("\(index + 1)").font(.caption).monospacedDigit()
-                        .foregroundStyle(.tertiary).frame(width: 26, alignment: .trailing)
-                    VStack(alignment: .leading, spacing: 1) {
-                        Text(transfer.device).lineLimit(1)
-                        Text(transfer.name).font(.caption).foregroundStyle(.secondary)
-                            .lineLimit(1).truncationMode(.middle)
+            List {
+                if !waiting.isEmpty {
+                    Section {
+                        ForEach(Array(waiting.enumerated()), id: \.element.id) { index, transfer in
+                            HStack(spacing: 10) {
+                                Text("\(index + 1)").font(.caption).monospacedDigit()
+                                    .foregroundStyle(.tertiary).frame(width: 26, alignment: .trailing)
+                                FileLabel(transfer: transfer)
+                                Spacer()
+                                if transfer.total > 0 {
+                                    Text(transfer.total.formatted(.byteCount(style: .file)))
+                                        .font(.caption).foregroundStyle(.secondary).monospacedDigit()
+                                }
+                            }
+                        }
+                    } header: {
+                        Text(String(format: String(localized: "Waiting (%lld)"), waiting.count))
                     }
-                    Spacer()
-                    if transfer.total > 0 {
-                        Text(transfer.total.formatted(.byteCount(style: .file)))
-                            .font(.caption).foregroundStyle(.secondary).monospacedDigit()
+                }
+                if !finished.isEmpty {
+                    Section {
+                        ForEach(finished) { transfer in FinishedRow(transfer: transfer) }
+                    } header: {
+                        HStack {
+                            Text(String(format: String(localized: "Finished (%lld)"), finished.count))
+                            Spacer()
+                            Text(finishedSummary).font(.caption).foregroundStyle(.secondary)
+                        }
                     }
                 }
             }
@@ -212,20 +229,53 @@ struct ActivityPane: View {
         }
     }
 
+    /// "3 downloaded · 72 already here · 1 failed · 2 skipped"
+    private var finishedSummary: String {
+        var got = 0, had = 0, failed = 0, skipped = 0
+        for transfer in finished {
+            switch transfer.state {
+            case .done(let already): if already { had += 1 } else { got += 1 }
+            case .failed: failed += 1
+            case .skipped: skipped += 1
+            default: break
+            }
+        }
+        var parts: [String] = []
+        if got > 0 { parts.append(String(format: String(localized: "%lld downloaded"), got)) }
+        if had > 0 { parts.append(String(format: String(localized: "%lld already here"), had)) }
+        if failed > 0 { parts.append(String(format: String(localized: "%lld failed"), failed)) }
+        if skipped > 0 { parts.append(String(format: String(localized: "%lld skipped"), skipped)) }
+        return parts.joined(separator: " · ")
+    }
+
     // MARK: Log
 
-    /// Runs, newest first, each with its lines in order and repeats folded.
-    private var runs: [LogRun] { LogRun.group(controller.log, problemsOnly: problemsOnly) }
+    enum LogFilter: String, CaseIterable {
+        /// Everything but the routine.
+        case summary
+        case everything
+        case problems
+    }
+
+    private var runs: [LogRun] { LogRun.group(controller.log, filter: filter) }
 
     private var logList: some View {
         VStack(spacing: 0) {
             HStack {
-                Toggle("Problems only", isOn: $problemsOnly).toggleStyle(.checkbox).controlSize(.small)
+                Picker("", selection: $filter) {
+                    Text("Summary").tag(LogFilter.summary)
+                    Text("Everything").tag(LogFilter.everything)
+                    Text("Problems").tag(LogFilter.problems)
+                }
+                .pickerStyle(.segmented).labelsHidden().fixedSize()
+                .controlSize(.small)
                 Spacer()
+                Button("Export Diagnostic Log") { exportLog() }
+                    .controlSize(.small)
             }
             .padding(.horizontal, 14).padding(.bottom, 4)
             if runs.isEmpty {
-                ContentUnavailableView(problemsOnly ? "No problems" : "Nothing logged yet",
+                ContentUnavailableView(filter == .problems ? "No problems" : "Nothing logged yet",
                                        systemImage: "text.alignleft")
             } else {
                 List {
@@ -233,11 +283,13 @@ struct ActivityPane: View {
                         Section {
                             ForEach(run.lines) { line in LogLine(line: line) }
                         } header: {
-                            HStack {
+                            HStack(alignment: .firstTextBaseline) {
                                 Text(run.title).font(.subheadline.weight(.semibold))
                                 Spacer()
                                 if let outcome = run.outcome {
-                                    Text(outcome).font(.caption).foregroundStyle(.secondary).lineLimit(1)
+                                    Label(Pretty.message(outcome.message),
+                                          systemImage: outcome.kind.symbol)
+                                        .font(.caption).foregroundStyle(outcome.kind.tint).lineLimit(1)
                                 }
                             }
                         }
@@ -246,6 +298,46 @@ struct ActivityPane: View {
                 .listStyle(.plain)
             }
         }
+    }
+
+    private func exportLog() {
+        let panel = NSSavePanel()
+        panel.nameFieldStringValue = "ipsw-sync-diagnostics.jsonl"
+        panel.canCreateDirectories = true
+        panel.begin { response in
+            guard response == .OK, let destination = panel.url else { return }
+            do {
+                try RunJournal.shared.export(to: destination)
+            } catch {
+                NSAlert(error: error).runModal()
+            }
+        }
+    }
+}
+
+/// Long machine names made readable: the image file becomes the device and
+/// the build, and a folder path becomes the folder's name.
+enum Pretty {
+    private static let image = try! NSRegularExpression(
+        pattern: #"([A-Za-z][A-Za-z0-9_,.]*?)_([0-9]+(?:\.[0-9]+)*)_([0-9]+[A-Za-z][0-9A-Za-z]*)_Restore\.ipsw(?:\.part)?"#)
+    private static let path = try! NSRegularExpression(pattern: #"(?:/[^/\s]+)+/([^/\s][^/]*?)/?(?=$|\s|\))"#)
+
+    static func message(_ text: String) -> String {
+        var out = text
+        out = image.stringByReplacingMatches(in: out, range: NSRange(out.startIndex..., in: out),
+                                             withTemplate: "$1 · $2 ($3)")
+        out = path.stringByReplacingMatches(in: out, range: NSRange(out.startIndex..., in: out),
+                                            withTemplate: "$1")
+        return out
+    }
+
+    /// "iPhone12,1_27.0.1_24A446_Restore.ipsw" → "27.0.1 (24A446)"
+    static func build(of filename: String) -> String? {
+        let range = NSRange(filename.startIndex..., in: filename)
+        guard let match = image.firstMatch(in: filename, range: range),
+              let version = Range(match.range(at: 2), in: filename),
+              let build = Range(match.range(at: 3), in: filename) else { return nil }
+        return "\(filename[version]) (\(filename[build]))"
     }
 }
 
@@ -259,23 +351,28 @@ struct LogRun: Identifiable {
     let id: UUID
     let started: Date?
     let lines: [Line]
-    let outcome: String?
+    let outcome: LogEntry?
 
     var title: String {
         guard let started else { return String(localized: "Earlier") }
         return String(format: String(localized: "Run at %@"), started.formatted(date: .abbreviated, time: .shortened))
     }
 
-    static func group(_ log: [LogEntry], problemsOnly: Bool) -> [LogRun] {
+    static func group(_ log: [LogEntry], filter: ActivityPane.LogFilter) -> [LogRun] {
         var runs: [LogRun] = []
         var current: [LogEntry] = []
         var started: Date?
         var anchor = UUID()
         func close() {
-            guard !current.isEmpty else { return }
-            let outcome = current.last { $0.kind == .good || $0.kind == .bad }?.message
-            var shown = current
-            if problemsOnly { shown = shown.filter { $0.kind == .warning || $0.kind == .bad } }
+            guard !current.isEmpty || started != nil else { return }
+            let outcome = current.last { $0.kind == .good || $0.kind == .bad }
+            let shown = current.filter { entry in
+                switch filter {
+                case .everything: true
+                case .summary: entry.kind != .detail
+                case .problems: entry.kind == .warning || entry.kind == .bad
+                }
+            }
             // Repeats folded: four platforms saying the same thing is one line.
             var lines: [Line] = []
             for entry in shown {
@@ -285,7 +382,7 @@ struct LogRun: Identifiable {
                     lines.append(Line(id: entry.id, entry: entry, repeats: 1))
                 }
             }
-            if !lines.isEmpty || !problemsOnly {
+            if !lines.isEmpty || filter != .problems {
                 runs.append(LogRun(id: anchor, started: started, lines: lines, outcome: outcome))
             }
         }
@@ -312,9 +409,17 @@ private struct LogLine: View {
             Image(systemName: line.entry.kind.symbol)
                 .foregroundStyle(line.entry.kind.tint).font(.caption)
                 .frame(width: 14)
-            Text(line.entry.at.formatted(date: .omitted, time: .standard))
+            Text(line.entry.at.formatted(date: .omitted, time: .shortened))
                 .font(.caption.monospacedDigit()).foregroundStyle(.tertiary)
-            Text(line.entry.message).font(.callout)
+                .frame(width: 44, alignment: .leading)
+            if let platform = line.entry.platform {
+                Text(platform.title).font(.caption2.weight(.semibold))
+                    .padding(.horizontal, 5).padding(.vertical, 1)
+                    .background(.quaternary, in: .capsule)
+            }
+            Text(Pretty.message(line.entry.message))
+                .font(.callout)
+                .foregroundStyle(line.entry.kind == .detail ? .secondary : .primary)
                 .lineLimit(3)
                 .textSelection(.enabled)
             if line.repeats > 1 {
@@ -328,23 +433,78 @@ private struct LogLine: View {
     }
 }
 
+/// The device, and under it the build the file is — not the file's name.
+private struct FileLabel: View {
+    let transfer: Transfer
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 1) {
+            Text(transfer.device).lineLimit(1)
+            Text(Pretty.build(of: transfer.name) ?? transfer.name)
+                .font(.caption).foregroundStyle(.secondary).monospacedDigit()
+                .lineLimit(1).truncationMode(.middle)
+        }
+    }
+}
+
+private struct FinishedRow: View {
+    let transfer: Transfer
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Image(systemName: symbol).foregroundStyle(tint).frame(width: 18)
+            FileLabel(transfer: transfer)
+            Spacer()
+            VStack(alignment: .trailing, spacing: 1) {
+                Text(outcome).font(.caption).foregroundStyle(tint).lineLimit(1)
+                if let at = transfer.finishedAt {
+                    Text(at.formatted(date: .omitted, time: .shortened))
+                        .font(.caption2).foregroundStyle(.tertiary).monospacedDigit()
+                }
+            }
+        }
+    }
+
+    private var symbol: String {
+        switch transfer.state {
+        case .done(let had): had ? "checkmark.circle" : "arrow.down.circle.fill"
+        case .failed: "xmark.circle.fill"
+        case .skipped: "forward.circle"
+        default: "circle"
+        }
+    }
+
+    private var tint: Color {
+        switch transfer.state {
+        case .done(let had): had ? .secondary : .green
+        case .failed: .red
+        default: .secondary
+        }
+    }
+
+    private var outcome: String {
+        switch transfer.state {
+        case .done(let had): had ? String(localized: "already here") : String(localized: "downloaded")
+        case .failed(let why): Pretty.message(why)
+        case .skipped(let why): why
+        default: ""
+        }
+    }
+}
+
 struct TransferRow: View {
     let transfer: Transfer
 
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             HStack(alignment: .firstTextBaseline, spacing: 8) {
-                Text(transfer.device).font(.body.weight(.medium)).lineLimit(1)
+                FileLabel(transfer: transfer)
                 Spacer(minLength: 6)
                 status
             }
-            // A check reads the whole file too, and says how far it has got.
             if transfer.state == .downloading || (transfer.state == .verifying && transfer.total > 0) {
                 ProgressView(value: transfer.fraction)
                 Text(detail).font(.caption).foregroundStyle(.secondary).monospacedDigit()
-            } else {
-                Text(transfer.name).font(.caption).foregroundStyle(.secondary)
-                    .lineLimit(1).truncationMode(.middle)
             }
         }
         .padding(.vertical, 4)
@@ -356,12 +516,11 @@ struct TransferRow: View {
             Text("\(Int(transfer.fraction * 100))%").font(.callout.monospacedDigit()).foregroundStyle(.tint)
         case .verifying:
             HStack(spacing: 5) {
+                Text("Checking SHA-1").font(.caption).foregroundStyle(.secondary)
                 if transfer.total > 0 {
-                    Text("Checking SHA-1").font(.caption).foregroundStyle(.secondary)
                     Text("\(Int(transfer.fraction * 100))%").font(.callout.monospacedDigit()).foregroundStyle(.tint)
                 } else {
                     ProgressView().controlSize(.mini)
-                    Text("Checking SHA-1").font(.caption).foregroundStyle(.secondary)
                 }
             }
         default:
@@ -390,6 +549,7 @@ extension LogEntry.Kind {
     var symbol: String {
         switch self {
         case .start: "play.circle"
+        case .detail: "minus"
         case .info: "info.circle"
         case .good: "checkmark.circle.fill"
         case .warning: "exclamationmark.triangle.fill"
@@ -398,7 +558,7 @@ extension LogEntry.Kind {
     }
     var tint: Color {
         switch self {
-        case .start, .info: .secondary
+        case .start, .detail, .info: .secondary
         case .good: .green
         case .warning: .orange
         case .bad: .red

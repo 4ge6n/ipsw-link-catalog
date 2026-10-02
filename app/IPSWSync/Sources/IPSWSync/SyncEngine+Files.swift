@@ -43,7 +43,7 @@ extension SyncEngine {
         if await isIntact(destination, sha1: firmware.sha1) {
             transfer.state = .done(alreadyHad: true)
             await report(transfer)
-            await log(LogEntry(kind: .info, message: String(format: String(localized: "Already have %@"), firmware.filename)))
+            await log(LogEntry(kind: .detail, message: String(format: String(localized: "Already have %@"), firmware.filename)))
             return .landed
         }
         do {
@@ -58,7 +58,7 @@ extension SyncEngine {
                 transfer.received = size
                 transfer.state = .done(alreadyHad: true)
                 await report(transfer)
-                await log(LogEntry(kind: .info, message: String(format: String(localized: "Already have %@"), firmware.filename)))
+                await log(LogEntry(kind: .detail, message: String(format: String(localized: "Already have %@"), firmware.filename)))
                 return .landed
             }
             if let size = onDisk {
@@ -70,7 +70,7 @@ extension SyncEngine {
                     // Not a failure, and not reported as one: nothing is
                     // wrong, and a red row or a "some files failed"
                     // notification about Finder doing its job would be.
-                    transfer.state = .waiting
+                    transfer.state = .skipped(String(localized: "Finder is writing it"))
                     await report(transfer)
                     await log(LogEntry(kind: .info, message: String(format: String(localized: "%@ is still being written by another app; left alone until it is finished"), firmware.filename)))
                     return .settled
@@ -227,7 +227,7 @@ extension SyncEngine {
             await log(LogEntry(kind: .good, message: String(format: String(localized: firmware.sha1 == nil ? "Downloaded %@" : "Downloaded %@, SHA-1 verified"), firmware.filename)))
             return .landed
         } catch is CancellationError {
-            transfer.state = .waiting
+            transfer.state = .skipped(String(localized: "stopped"))
             await report(transfer)
             await log(LogEntry(kind: .warning, message: String(format: String(localized: "Stopped %@; what arrived is kept to carry on from"), firmware.filename)))
             return .settled

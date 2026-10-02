@@ -304,6 +304,9 @@
 "Now (%lld)" = "進行中 (%lld)";
 "Queue (%lld)" = "キュー (%lld)";
 "Log" = "ログ";
+"Diagnostics" = "診断";
+"Export Diagnostic Log" = "診断ログを書き出す";
+"The log stays on this device until you choose to share it." = "共有するまでログはこのデバイス内に保存されます。";
 "%1$lld of %2$lld" = "%1$lld / %2$lld";
 "%1$@ of %2$@" = "%1$@ / %2$@";
 "%lld downloading" = "%lld 本ダウンロード中";
@@ -363,3 +366,21 @@
 "%@ arrived whole but the drive is too full to put it in place yet; it will be finished shortly." = "%@ は揃いましたが、ドライブが満杯で所定の名前にできません。空きができ次第仕上げます。";
 "The drive filled while %@ was arriving; kept to carry on from, since its old build is already gone." = "%@ の受信中にドライブが満杯になりました。古いビルドは既に削除済みのため、途中までの分を残して続きから再開します。";
 "%1$@ has no image on the drive now: %2$@ did not arrive." = "%1$@ のイメージがドライブにありません：%2$@ が届きませんでした。";
+
+/* Queue and finished */
+"Waiting (%lld)" = "待機 (%lld)";
+"Finished (%lld)" = "完了 (%lld)";
+"%lld downloaded" = "取得 %lld";
+"%lld already here" = "既存 %lld";
+"%lld failed" = "失敗 %lld";
+"%lld skipped" = "見送り %lld";
+"already here" = "既にあり";
+"downloaded" = "取得済み";
+"not reached" = "未着手";
+"stopped" = "停止";
+"Finder is writing it" = "Finder が書き込み中";
+"Summary" = "要点";
+"Everything" = "すべて";
+"Problems" = "問題";
+"%@: none of the chosen devices" = "%@：対象のデバイスなし";
+"Check finished." = "照合が終わりました。";
