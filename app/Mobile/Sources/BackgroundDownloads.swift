@@ -16,6 +16,7 @@ final class BackgroundDownloads: NSObject, URLSessionDownloadDelegate {
         let filename: String
         let device: String
         let sha1: String?
+        let platform: String?
     }
 
     /// Handed over when the system wakes the app to say a transfer finished, and
@@ -30,6 +31,11 @@ final class BackgroundDownloads: NSObject, URLSessionDownloadDelegate {
     private var session: URLSession!
     private let defaults = UserDefaults.standard
     private let pendingKey = "pendingDownloads"
+    private let progressLock = NSLock()
+    private var loggedProgress: [String: Int] = [:]
+    /// The system's completion handler must wait for checksum and file landing,
+    /// not merely for the delegate to hand us the temporary download URL.
+    private let checks = DispatchGroup()
 
     private override init() {
         super.init()
@@ -45,8 +51,13 @@ final class BackgroundDownloads: NSObject, URLSessionDownloadDelegate {
     /// Adopt whatever the system was still carrying, so the interface shows it.
     func resumeReporting() {
         session.getAllTasks { tasks in
+            DiagnosticJournal.shared.record("detail", area: "background", event: "adopt",
+                                            "URLSession has \(tasks.count) task(s)")
             for task in tasks {
                 guard let url = task.originalRequest?.url, let pending = self.pending(for: url) else { continue }
+                DiagnosticJournal.shared.record("info", area: "transfer", event: "resumed_reporting",
+                                                "\(pending.filename): received=\(task.countOfBytesReceived), expected=\(task.countOfBytesExpectedToReceive) bytes",
+                                                transferID: pending.id, platform: pending.platform)
                 var transfer = Transfer(id: pending.id, name: pending.filename, device: pending.device)
                 transfer.state = .downloading
                 transfer.received = task.countOfBytesReceived
@@ -62,8 +73,13 @@ final class BackgroundDownloads: NSObject, URLSessionDownloadDelegate {
 
     func start(_ firmware: Firmware) {
         guard pending(for: firmware.url) == nil else { return }
+        let platform = Platform.allCases.first { $0.covers(firmware) }?.rawValue
         remember(Pending(id: firmware.id, filename: firmware.filename,
-                         device: firmware.name, sha1: firmware.sha1), for: firmware.url)
+                         device: firmware.name, sha1: firmware.sha1,
+                         platform: platform), for: firmware.url)
+        DiagnosticJournal.shared.record("info", area: "transfer", event: "started",
+                                        "\(firmware.filename): host=\(firmware.url.host() ?? "?"), checksum=\(firmware.sha1 == nil ? "none" : "SHA-1")",
+                                        transferID: firmware.id, platform: platform)
         var transfer = Transfer(id: firmware.id, name: firmware.filename, device: firmware.name)
         transfer.state = .downloading
         tell(transfer)
@@ -87,11 +103,32 @@ final class BackgroundDownloads: NSObject, URLSessionDownloadDelegate {
         transfer.received = totalBytesWritten
         transfer.total = totalBytesExpectedToWrite
         tell(transfer)
+        let bucket = totalBytesExpectedToWrite > 0
+            ? Int(min(10, totalBytesWritten * 10 / totalBytesExpectedToWrite))
+            : Int(totalBytesWritten / (512 * 1024 * 1024))
+        progressLock.lock()
+        let previous = loggedProgress[pending.id] ?? 0
+        if bucket > previous { loggedProgress[pending.id] = bucket }
+        progressLock.unlock()
+        if bucket > previous {
+            DiagnosticJournal.shared.record("detail", area: "transfer", event: "progress",
+                                            "\(pending.filename): \(totalBytesWritten)/\(totalBytesExpectedToWrite) bytes",
+                                            transferID: pending.id, platform: pending.platform)
+        }
     }
 
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask,
                     didFinishDownloadingTo location: URL) {
         guard let url = downloadTask.originalRequest?.url, let pending = pending(for: url) else { return }
+        let status = (downloadTask.response as? HTTPURLResponse)?.statusCode ?? 0
+        DiagnosticJournal.shared.record((200...299).contains(status) ? "info" : "error",
+                                        area: "transfer", event: "response",
+                                        "\(pending.filename): HTTP \(status), received=\(downloadTask.countOfBytesReceived) bytes",
+                                        transferID: pending.id, platform: pending.platform)
+        guard (200...299).contains(status) else {
+            finish(url, pending, failure: "HTTP \(status)")
+            return
+        }
         // What arrives here is swept away the moment this method returns, so it
         // is moved before anything else is done with it.
         let staged = Library.incoming.appending(path: pending.filename)
@@ -99,10 +136,17 @@ final class BackgroundDownloads: NSObject, URLSessionDownloadDelegate {
         do {
             try FileManager.default.moveItem(at: location, to: staged)
         } catch {
+            DiagnosticJournal.shared.recordError(error, area: "transfer", event: "stage_failed",
+                                                 pending.filename, transferID: pending.id,
+                                                 platform: pending.platform)
             finish(url, pending, failure: error.localizedDescription)
             return
         }
-        Task.detached { await self.check(staged, url: url, pending: pending) }
+        checks.enter()
+        Task.detached {
+            await self.check(staged, url: url, pending: pending)
+            self.checks.leave()
+        }
     }
 
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
@@ -110,27 +154,41 @@ final class BackgroundDownloads: NSObject, URLSessionDownloadDelegate {
         guard let error else { return }   // success is dealt with above
         if (error as? URLError)?.code == .cancelled {
             forget(url)
-            tellLog(.warning, String(format: String(localized: "Stopped %@; what arrived is kept to carry on from"), pending.filename))
+            tellLog(.warning, String(format: String(localized: "Stopped %@; what arrived is kept to carry on from"), pending.filename),
+                    event: "cancelled", pending: pending)
             settle()
         } else {
+            DiagnosticJournal.shared.recordError(error, area: "transfer", event: "network_failed",
+                                                 pending.filename, transferID: pending.id,
+                                                 platform: pending.platform)
             finish(url, pending, failure: error.localizedDescription)
         }
     }
 
     func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
-        DispatchQueue.main.async {
+        DiagnosticJournal.shared.record("detail", area: "background", event: "events_finished",
+                                        "URLSession callbacks ended; waiting for file checks")
+        checks.notify(queue: .main) {
             let handler = self.whenWokenFinished
             self.whenWokenFinished = nil
+            DiagnosticJournal.shared.record("detail", area: "background", event: "completion",
+                                            "File checks finished; releasing background wake")
             handler?()
         }
     }
 
     /// Read the file back against Apple's checksum before it is called saved.
     private func check(_ staged: URL, url: URL, pending: Pending) async {
+        DiagnosticJournal.shared.record("detail", area: "transfer", event: "verify_started",
+                                        "\(pending.filename): staged=\((try? staged.resourceValues(forKeys: [.fileSizeKey]).fileSize) ?? 0) bytes, checksum=\(pending.sha1 == nil ? "none" : "SHA-1")",
+                                        transferID: pending.id, platform: pending.platform)
         var transfer = Transfer(id: pending.id, name: pending.filename, device: pending.device)
         transfer.state = .verifying
         tell(transfer)
         if pending.sha1 != nil, await SyncEngine().isIntact(staged, sha1: pending.sha1) == false {
+            DiagnosticJournal.shared.record("error", area: "transfer", event: "checksum_mismatch",
+                                            pending.filename, transferID: pending.id,
+                                            platform: pending.platform)
             try? FileManager.default.removeItem(at: staged)
             finish(url, pending, failure: SyncError.checksumMismatch(pending.filename).localizedDescription)
             return
@@ -140,9 +198,13 @@ final class BackgroundDownloads: NSObject, URLSessionDownloadDelegate {
             forget(url)
             transfer.state = .done(alreadyHad: false)
             tell(transfer)
-            tellLog(.good, String(format: String(localized: pending.sha1 == nil ? "Downloaded %@" : "Downloaded %@, SHA-1 verified"), pending.filename))
+            tellLog(.good, String(format: String(localized: pending.sha1 == nil ? "Downloaded %@" : "Downloaded %@, SHA-1 verified"), pending.filename),
+                    event: "saved", pending: pending)
             settle()
         } catch {
+            DiagnosticJournal.shared.recordError(error, area: "transfer", event: "save_failed",
+                                                 pending.filename, transferID: pending.id,
+                                                 platform: pending.platform)
             finish(url, pending, failure: error.localizedDescription)
         }
     }
@@ -152,7 +214,7 @@ final class BackgroundDownloads: NSObject, URLSessionDownloadDelegate {
         var transfer = Transfer(id: pending.id, name: pending.filename, device: pending.device)
         transfer.state = .failed(failure)
         tell(transfer)
-        tellLog(.bad, failure)
+        tellLog(.bad, "\(pending.filename): \(failure)", event: "failed", pending: pending)
         settle()
     }
 
@@ -163,7 +225,17 @@ final class BackgroundDownloads: NSObject, URLSessionDownloadDelegate {
         Task { @MainActor in report(transfer) }
     }
 
-    private func tellLog(_ kind: LogEntry.Kind, _ message: String) {
+    private func tellLog(_ kind: LogEntry.Kind, _ message: String,
+                         event: String, pending: Pending) {
+        let level: String
+        switch kind {
+        case .bad: level = "error"
+        case .warning: level = "warning"
+        case .good: level = "success"
+        default: level = "info"
+        }
+        DiagnosticJournal.shared.record(level, area: "transfer", event: event, message,
+                                        transferID: pending.id, platform: pending.platform)
         guard let log else { return }
         Task { @MainActor in log(LogEntry(kind: kind, message: message)) }
     }

@@ -17,7 +17,7 @@ struct ActivityBar: View {
         model.transfers.filter {
             switch $0.state {
             case .checking, .downloading, .verifying: true
-            case .waiting, .queued, .done, .failed: false
+            case .waiting, .queued, .done, .failed, .skipped: false
             }
         }
     }

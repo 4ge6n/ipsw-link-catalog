@@ -75,8 +75,11 @@ struct DevicePicker: View {
         if settings.selectedDevices.isEmpty {
             return String(localized: "Nothing chosen, so nothing will be kept.")
         }
-        return String(format: String(localized: "%1$lld device(s), about %2$@ to hold."),
-                      settings.selectedDevices.count, estimate)
+        // Devices and files side by side: one file restores several devices,
+        // so the queue holds files and is shorter than the choice.
+        let files = every.filter { !settings.selectedDevices.isDisjoint(with: $0.devices) }.count
+        return String(format: String(localized: "%1$lld devices → %2$lld files, about %3$@ to hold."),
+                      settings.selectedDevices.count, files, estimate)
     }
 
     /// Restore images run about nine gigabytes each; worth saying before a

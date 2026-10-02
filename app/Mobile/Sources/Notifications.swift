@@ -88,6 +88,8 @@ final class Notifications: NSObject {
     /// Ask, then register with Apple. The token arrives at the delegate below.
     private func apply() async {
         guard on else {
+            DiagnosticJournal.shared.record("info", area: "notifications", event: "disabled",
+                                            "Notifications turned off")
             if let token { await forget(token) }
             return
         }
@@ -95,20 +97,30 @@ final class Notifications: NSObject {
             let granted = try await UNUserNotificationCenter.current()
                 .requestAuthorization(options: [.alert, .sound, .badge])
             authorised = granted
+            DiagnosticJournal.shared.record(granted ? "info" : "warning", area: "notifications",
+                                            event: "authorisation", "granted=\(granted)")
             guard granted else { failure = String(localized: "Notifications are turned off for IPSW Browser in Settings."); return }
             failure = nil
             UIApplication.shared.registerForRemoteNotifications()
         } catch {
             failure = error.localizedDescription
+            DiagnosticJournal.shared.recordError(error, area: "notifications", event: "authorisation_failed",
+                                                 "Notification permission request")
         }
     }
 
     func accept(_ deviceToken: Data) {
         token = deviceToken.map { String(format: "%02x", $0) }.joined()
+        DiagnosticJournal.shared.record("info", area: "notifications", event: "apns_registered",
+                                        "APNs token received")
         Task { await send() }
     }
 
-    func reject(_ error: Error) { failure = error.localizedDescription }
+    func reject(_ error: Error) {
+        failure = error.localizedDescription
+        DiagnosticJournal.shared.recordError(error, area: "notifications", event: "apns_failed",
+                                             "APNs registration")
+    }
 
     /// Tell the relay where to reach this phone and what it wants.
     private func send() async {
@@ -130,11 +142,17 @@ final class Notifications: NSObject {
             let (_, response) = try await URLSession.shared.data(for: request)
             if let http = response as? HTTPURLResponse, !(200...299).contains(http.statusCode) {
                 failure = String(format: String(localized: "The notification service answered %lld."), http.statusCode)
+                DiagnosticJournal.shared.record("error", area: "notifications", event: "relay_status",
+                                                "Registration answered HTTP \(http.statusCode)")
             } else {
                 failure = nil
+                DiagnosticJournal.shared.record("info", area: "notifications", event: "relay_registered",
+                                                "Subscription saved; platforms=\(platforms.sorted().joined(separator: ",")); betas=\(betas); watchThisDevice=\(watchThisDevice)")
             }
         } catch {
             failure = error.localizedDescription
+            DiagnosticJournal.shared.recordError(error, area: "notifications", event: "relay_failed",
+                                                 "Subscription request")
         }
     }
 
@@ -143,7 +161,16 @@ final class Notifications: NSObject {
         request.httpMethod = "DELETE"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = try? JSONSerialization.data(withJSONObject: ["token": token])
-        _ = try? await URLSession.shared.data(for: request)
+        do {
+            let (_, response) = try await URLSession.shared.data(for: request)
+            let status = (response as? HTTPURLResponse)?.statusCode ?? 0
+            DiagnosticJournal.shared.record((200...299).contains(status) ? "info" : "warning",
+                                            area: "notifications", event: "relay_unregistered",
+                                            "Unsubscribe answered HTTP \(status)")
+        } catch {
+            DiagnosticJournal.shared.recordError(error, area: "notifications", event: "relay_unsubscribe_failed",
+                                                 "Unsubscribe request")
+        }
     }
 
     /// Which APNs host will be able to reach this copy.

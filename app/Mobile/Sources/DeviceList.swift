@@ -86,6 +86,7 @@ private struct FirmwareRow: View {
             }
         }
         .padding(.vertical, 4)
+        .linkMenu(for: firmware)
         // The link is worth having and not worth a button on every row.
         .swipeActions(edge: .leading, allowsFullSwipe: false) {
             ShareLink(item: firmware.url) {

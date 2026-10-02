@@ -210,7 +210,14 @@ struct ActivityPane: View {
                             }
                         }
                     } header: {
-                        Text(String(format: String(localized: "Waiting (%lld)"), waiting.count))
+                        HStack {
+                            Text(String(format: String(localized: "Waiting (%lld)"), waiting.count))
+                            Spacer()
+                            // Said where the count is read: one file restores
+                            // several devices, so this is fewer than chosen.
+                            Text("Counted in files; one file can serve several devices")
+                                .font(.caption).foregroundStyle(.secondary)
+                        }
                     }
                 }
                 if !finished.isEmpty {

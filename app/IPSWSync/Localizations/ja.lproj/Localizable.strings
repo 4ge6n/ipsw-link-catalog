@@ -384,3 +384,27 @@
 "Problems" = "問題";
 "%@: none of the chosen devices" = "%@：対象のデバイスなし";
 "Check finished." = "照合が終わりました。";
+
+/* iOS: My Devices, Latest Releases, Devices */
+"My Devices" = "マイデバイス";
+"Latest Releases" = "最新リリース";
+"Betas" = "ベータ";
+"By version" = "バージョン別";
+"Name or identifier" = "名前または識別子";
+"Signed" = "署名中";
+"Not checked" = "未確認";
+"No longer signed" = "署名停止";
+"Add to My Devices" = "マイデバイスに追加";
+"Remove from My Devices" = "マイデバイスから外す";
+"Nothing in the catalog for this device" = "このデバイスのビルドはカタログにありません";
+"One file for %lld devices" = "%lld 台で共通のファイル";
+"Starred" = "お気に入り";
+"Star a device from Devices to keep it here." = "「デバイス」で ☆ を付けると、ここに並びます。";
+
+"Every device: %1$lld devices → %2$lld files, about %3$@ to hold." = "すべてのデバイス：%1$lld 台 → ファイル %2$lld 本、必要容量 約 %3$@";
+"%1$lld devices → %2$lld files, about %3$@ to hold." = "%1$lld 台 → ファイル %2$lld 本、必要容量 約 %3$@";
+"Counted in files; one file can serve several devices" = "ファイル単位（1本で複数台を賄うため、台数より少なくなります）";
+"%1$lld downloading · %2$lld checking" = "%1$lld 本ダウンロード中 · %2$lld 本照合中";
+"Now" = "進行中";
+"Queue" = "キュー";
+"Copy Link" = "リンクをコピー";

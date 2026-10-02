@@ -61,6 +61,7 @@ struct LibraryView: View {
     private func symbol(_ kind: LogEntry.Kind) -> String {
         switch kind {
         case .start: "play.circle"
+        case .detail: "text.alignleft"
         case .info: "info.circle"
         case .good: "checkmark.circle"
         case .warning: "exclamationmark.triangle"
@@ -70,7 +71,7 @@ struct LibraryView: View {
 
     private func colour(_ kind: LogEntry.Kind) -> Color {
         switch kind {
-        case .start, .info: .secondary
+        case .start, .detail, .info: .secondary
         case .good: .green
         case .warning: .orange
         case .bad: .red

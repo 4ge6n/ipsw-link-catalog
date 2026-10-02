@@ -50,19 +50,31 @@ final class BrowserModel {
         downloads.log = { [weak self] entry in self?.log.append(entry) }
         downloads.settled = { [weak self] in self?.refreshSaved() }
         downloads.resumeReporting()
+        DiagnosticJournal.shared.record("detail", area: "app", event: "listen",
+                                        "Transfer reporting resumed")
     }
 
     func load() async {
+        let requestedPlatform = platform
+        let requestedChannel = channel
+        DiagnosticJournal.shared.record("detail", area: "catalog", event: "request",
+                                        "Loading \(requestedChannel.rawValue) catalog",
+                                        platform: requestedPlatform.rawValue)
         loading = true
         failure = nil
         defer { loading = false }
         do {
-            releases = try await engine.everyBuild(platform, channel: channel)
+            releases = try await engine.everyBuild(requestedPlatform, channel: requestedChannel)
             tree = VersionTree.of(releases)
+            DiagnosticJournal.shared.record("info", area: "catalog", event: "loaded",
+                                            "releases=\(releases.count), images=\(releases.flatMap(\.firmwares).count)",
+                                            platform: requestedPlatform.rawValue)
         } catch {
             releases = []
             tree = []
             failure = error.localizedDescription
+            DiagnosticJournal.shared.recordError(error, area: "catalog", event: "failed",
+                                                 "Catalog request failed", platform: requestedPlatform.rawValue)
         }
     }
 
@@ -71,21 +83,35 @@ final class BrowserModel {
     /// Ask the server how large it is, check it will fit, and hand it over.
     func download(_ firmware: Firmware) async {
         guard !isRunning(firmware) else { return }
+        let platform = Platform.allCases.first { $0.covers(firmware) }?.rawValue
+        DiagnosticJournal.shared.record("info", area: "transfer", event: "preflight",
+                                        "\(firmware.filename): checking size and free space; host=\(firmware.url.host() ?? "?")",
+                                        transferID: firmware.id, platform: platform)
         var transfer = Transfer(id: firmware.id, name: firmware.filename, device: firmware.name)
         transfer.state = .checking
         record(transfer)
-        if let wanted = await size(of: firmware.url), let free = Library.freeSpace, wanted > free {
+        let wanted = await size(of: firmware.url)
+        let free = Library.freeSpace
+        DiagnosticJournal.shared.record("detail", area: "transfer", event: "capacity",
+                                        "\(firmware.filename): expected=\(wanted.map { String($0) } ?? "unknown") bytes, free=\(free.map { String($0) } ?? "unknown") bytes",
+                                        transferID: firmware.id, platform: platform)
+        if let wanted, let free, wanted > free {
             transfers.removeAll { $0.id == firmware.id }
             noRoom = String(format: String(localized: "%1$@ needs %2$@ and there is %3$@ free."),
                             firmware.name,
                             wanted.formatted(.byteCount(style: .file)),
                             free.formatted(.byteCount(style: .file)))
+            DiagnosticJournal.shared.record("warning", area: "transfer", event: "no_room",
+                                            "\(firmware.filename): expected=\(wanted), free=\(free) bytes",
+                                            transferID: firmware.id, platform: platform)
             return
         }
         downloads.start(firmware)
     }
 
     func cancel(_ firmware: Firmware) {
+        DiagnosticJournal.shared.record("warning", area: "transfer", event: "stop_requested",
+                                        firmware.filename, transferID: firmware.id)
         downloads.stop(firmware)
         transfers.removeAll { $0.id == firmware.id }
     }
@@ -98,9 +124,20 @@ final class BrowserModel {
         var request = URLRequest(url: url)
         request.httpMethod = "HEAD"
         request.timeoutInterval = 30
-        guard let (_, response) = try? await URLSession.shared.data(for: request) else { return nil }
-        let length = response.expectedContentLength
-        return length > 0 ? length : nil
+        do {
+            let (_, response) = try await URLSession.shared.data(for: request)
+            if let http = response as? HTTPURLResponse, !(200...299).contains(http.statusCode) {
+                DiagnosticJournal.shared.record("warning", area: "transfer", event: "head_status",
+                                                "HEAD \(url.lastPathComponent): HTTP \(http.statusCode)")
+                return nil
+            }
+            let length = response.expectedContentLength
+            return length > 0 ? length : nil
+        } catch {
+            DiagnosticJournal.shared.recordError(error, area: "transfer", event: "head_failed",
+                                                 "HEAD \(url.lastPathComponent)")
+            return nil
+        }
     }
 
     private func record(_ transfer: Transfer) {

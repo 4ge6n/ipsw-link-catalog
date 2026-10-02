@@ -4,12 +4,14 @@ import UIKit
 @main
 struct IPSWBrowserApp: App {
     @State private var model = BrowserModel()
+    @State private var feed = ReleaseFeed()
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var delegate
 
     var body: some Scene {
         WindowGroup {
             RootView()
                 .environment(model)
+                .environment(feed)
                 .task {
                     Notifications.shared.start()
                     model.listen()
@@ -24,8 +26,19 @@ struct IPSWBrowserApp: App {
 /// carrying finishes, and this is where it says so.
 final class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "?"
+        let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "?"
+        DiagnosticJournal.shared.record("info", area: "app", event: "launch",
+                                        "IPSW Browser \(version) (\(build)); iOS \(ProcessInfo.processInfo.operatingSystemVersionString); device=\(ThisDevice.current.identifier)")
+        return true
+    }
+
+    func application(_ application: UIApplication,
                      handleEventsForBackgroundURLSession identifier: String,
                      completionHandler: @escaping () -> Void) {
+        DiagnosticJournal.shared.record("info", area: "background", event: "wake",
+                                        "Background URLSession events delivered")
         BackgroundDownloads.shared.whenWokenFinished = completionHandler
     }
 
@@ -48,8 +61,18 @@ private struct RootView: View {
     var body: some View {
         @Bindable var model = model
         TabView {
-            Tab("Catalog", systemImage: "square.stack.3d.up") {
-                BrowseView()
+            // The device in hand and the ones starred, then what came out
+            // when, then every device — the order IPSW Go uses, which is the
+            // order the questions come in. The version tree is still a button
+            // away on the Devices tab.
+            Tab("My Devices", systemImage: "iphone") {
+                MyDevicesView()
+            }
+            Tab("Latest Releases", systemImage: "sparkles") {
+                ReleasesView()
+            }
+            Tab("Devices", systemImage: "laptopcomputer.and.iphone") {
+                DevicesView()
             }
             Tab("Saved", systemImage: "internaldrive") {
                 LibraryView()

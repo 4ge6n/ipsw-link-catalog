@@ -85,6 +85,8 @@ targets:
       - path: IPSWSync/Sources/IPSWSync/VerifiedStore.swift
       - path: IPSWSync/Sources/IPSWSync/Transparency.swift
       - path: Mobile/Sources
+      - path: Mobile/device-names.json
+        buildPhase: resources
       - path: Mobile/Assets.xcassets
       # The same wording the Mac app is read in.
       - path: IPSWSync/Localizations/en.lproj
@@ -98,6 +100,7 @@ targets:
         # name on the Home Screen from the product name and shows IPSWBrowser.
         CFBundleName: IPSW Browser
         CFBundleDisplayName: IPSW Browser
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
         CFBundleDevelopmentRegion: en
         CFBundleLocalizations: [en, ja]
         UILaunchScreen: {}
@@ -139,7 +142,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.github.4ge6n.ipsw-link-catalog.IPSWBrowser
         MARKETING_VERSION: "1.0"
-        CURRENT_PROJECT_VERSION: "1"
+        CURRENT_PROJECT_VERSION: "3"
         TARGETED_DEVICE_FAMILY: "1,2"
         SWIFT_VERSION: "5.0"
         CODE_SIGN_STYLE: Automatic

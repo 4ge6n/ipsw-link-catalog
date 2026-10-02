@@ -57,6 +57,16 @@ struct SettingsView: View {
                 }
 
                 Section {
+                    ShareLink(item: DiagnosticJournal.shared.location) {
+                        Label("Export Diagnostic Log", systemImage: "square.and.arrow.up")
+                    }
+                } header: {
+                    Text("Diagnostics")
+                } footer: {
+                    Text("The log stays on this device until you choose to share it.")
+                }
+
+                Section {
                     Button("About this app") { showingTransparency = true }
                     LabeledContent("Version", value: version)
                 } footer: {
