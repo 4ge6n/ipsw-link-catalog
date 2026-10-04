@@ -165,7 +165,7 @@ private struct ForecastCard: View {
                 }
                 if let release = forecast.release { ForecastRow(forecast: release, platform: platform) }
                 if let beta = forecast.beta { ForecastRow(forecast: beta, platform: platform) }
-                Text("An estimate from the gaps between past builds, not anything Apple has announced.")
+                Text("An estimate from the gaps between past builds, moved off Friday to Sunday since Apple almost always ships Monday to Thursday. Not anything Apple has announced.")
                     .font(.caption2).foregroundStyle(.secondary)
             }
             .padding(16)
@@ -187,8 +187,12 @@ private struct ForecastRow: View {
                 Text(String(format: String(localized: "around %@"),
                             forecast.expected.formatted(.dateTime.month(.abbreviated).day().weekday(.abbreviated))))
                     .font(.title3.weight(.bold))
-                Text("\(forecast.earliest.formatted(.dateTime.month(.abbreviated).day()))–\(forecast.latest.formatted(.dateTime.month(.abbreviated).day()))")
-                    .font(.callout).foregroundStyle(.secondary).monospacedDigit()
+                // A range only when there is one: gaps that were all the same
+                // made "28 Sep–28 Sep".
+                if !Calendar.current.isDate(forecast.earliest, inSameDayAs: forecast.latest) {
+                    Text("\(forecast.earliest.formatted(.dateTime.month(.abbreviated).day()))–\(forecast.latest.formatted(.dateTime.month(.abbreviated).day()))")
+                        .font(.callout).foregroundStyle(.secondary).monospacedDigit()
+                }
             }
             if forecast.overdue {
                 Text("Past the usual gap; could come any day.")

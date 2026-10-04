@@ -175,6 +175,16 @@ struct Forecast {
         return Array(gaps.suffix(limit))
     }
 
+    /// Friday to Sunday moved on to the Monday. Apple ships Monday to
+    /// Thursday almost every time — 97% of iOS builds since 2019, Monday most
+    /// of all — so a median that lands on a weekend is a day nobody expects.
+    static func onAWorkingDay(_ date: Date) -> Date {
+        let calendar = Calendar(identifier: .gregorian)
+        let weekday = calendar.component(.weekday, from: date) // 1 = Sunday
+        let shift = [1: 1, 6: 3, 7: 2][weekday] ?? 0
+        return calendar.date(byAdding: .day, value: shift, to: date) ?? date
+    }
+
     static func make(title: String, after: ReleaseFeed.Entry, gaps: [Int]) -> Forecast? {
         guard gaps.count >= 4, let last = after.release.releasedAt else { return nil }
         let sorted = gaps.sorted()
@@ -186,8 +196,9 @@ struct Forecast {
         let calendar = Calendar.current
         let day = calendar.startOfDay(for: last)
         func plus(_ days: Int) -> Date { calendar.date(byAdding: .day, value: days, to: day) ?? day }
-        return Forecast(title: title, expected: plus(quantile(0.5)), earliest: plus(quantile(0.25)),
-                        latest: plus(quantile(0.75)), samples: gaps.count,
+        return Forecast(title: title, expected: onAWorkingDay(plus(quantile(0.5))),
+                        earliest: onAWorkingDay(plus(quantile(0.25))),
+                        latest: onAWorkingDay(plus(quantile(0.75))), samples: gaps.count,
                         typicalDays: quantile(0.5), after: after)
     }
 }

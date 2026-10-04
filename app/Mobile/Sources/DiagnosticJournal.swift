@@ -31,8 +31,11 @@ final class DiagnosticJournal: @unchecked Sendable {
         location = folder.appending(path: "ipsw-browser.jsonl")
         do {
             try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
-            if !FileManager.default.fileExists(atPath: location.path()) {
-                try Data().write(to: location, options: .atomic)
+            // The path as the file system spells it: path() alone is
+            // percent-encoded, so "Application Support" read as
+            // "Application%20Support" and the file was never found.
+            if !FileManager.default.fileExists(atPath: location.path(percentEncoded: false)) {
+                FileManager.default.createFile(atPath: location.path(percentEncoded: false), contents: nil)
             }
         } catch {
             fallback.error("Cannot create diagnostic journal: \(error.localizedDescription, privacy: .public)")
@@ -50,11 +53,18 @@ final class DiagnosticJournal: @unchecked Sendable {
             var data = try encoder.encode(item)
             data.append(0x0A)
             lock.lock(); defer { lock.unlock() }
+            // Created here if it is missing, rather than once at launch and
+            // hoped for: no journal line was ever written on the Simulator
+            // because the file the launch meant to make was not there.
+            let path = location.path(percentEncoded: false)
+            if !FileManager.default.fileExists(atPath: path) {
+                FileManager.default.createFile(atPath: path, contents: nil)
+            }
             let handle = try FileHandle(forWritingTo: location)
             defer { try? handle.close() }
             _ = try handle.seekToEnd()
             try handle.write(contentsOf: data)
-            let size = (try FileManager.default.attributesOfItem(atPath: location.path())[.size] as? NSNumber)?.intValue ?? 0
+            let size = (try FileManager.default.attributesOfItem(atPath: path)[.size] as? NSNumber)?.intValue ?? 0
             if size > maxBytes {
                 let contents = try Data(contentsOf: location)
                 let start = max(0, contents.count - keepBytes)

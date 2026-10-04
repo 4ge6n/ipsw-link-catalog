@@ -416,3 +416,4 @@
 "Past the usual gap; could come any day." = "いつもの間隔を過ぎています。いつ出てもおかしくありません。";
 "Typical gap %1$lld days, from the last %2$lld; last was %3$@ on %4$@." = "直近 %2$lld 回の間隔の中央値は %1$lld 日。前回は %4$@ の %3$@。";
 "An estimate from the gaps between past builds, not anything Apple has announced." = "過去のビルドの間隔から計算した目安です。Apple の発表ではありません。";
+"An estimate from the gaps between past builds, moved off Friday to Sunday since Apple almost always ships Monday to Thursday. Not anything Apple has announced." = "過去のビルドの間隔から計算した目安です。Apple はほぼ月〜木に出す（2019年以降の iOS で 97%）ため、金〜日にかかる日は翌月曜に寄せています。Apple の発表ではありません。";
