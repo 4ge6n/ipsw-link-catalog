@@ -408,3 +408,11 @@
 "Now" = "進行中";
 "Queue" = "キュー";
 "Copy Link" = "リンクをコピー";
+
+"Forecast" = "今後の予想";
+"Next release" = "次のリリース";
+"Next beta" = "次のベータ";
+"around %@" = "%@ ごろ";
+"Past the usual gap; could come any day." = "いつもの間隔を過ぎています。いつ出てもおかしくありません。";
+"Typical gap %1$lld days, from the last %2$lld; last was %3$@ on %4$@." = "直近 %2$lld 回の間隔の中央値は %1$lld 日。前回は %4$@ の %3$@。";
+"An estimate from the gaps between past builds, not anything Apple has announced." = "過去のビルドの間隔から計算した目安です。Apple の発表ではありません。";

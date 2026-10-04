@@ -9,6 +9,8 @@ struct ReleasesView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 0) {
+                    ForecastCard()
+                        .padding(.bottom, 8)
                     ForEach(feed.days) { day in
                         DayRow(day: day)
                     }
@@ -135,6 +137,68 @@ extension Platform {
         case .audioos: .pink
         case .visionos: .indigo
         case .macos: .purple
+        }
+    }
+}
+
+/// What might come next, worked out from what came before — and said to be
+/// exactly that.
+private struct ForecastCard: View {
+    @Environment(ReleaseFeed.self) private var feed
+    @AppStorage("forecastPlatform") private var platform: Platform = .ios
+
+    var body: some View {
+        let forecast = feed.forecast(for: platform)
+        if forecast.release != nil || forecast.beta != nil {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack {
+                    Label("Forecast", systemImage: "calendar.badge.clock")
+                        .font(.headline)
+                    Spacer()
+                    Menu {
+                        Picker("Platform", selection: $platform) {
+                            ForEach(ReleaseFeed.platforms, id: \.self) { Text($0.title).tag($0) }
+                        }
+                    } label: {
+                        PlatformChip(platform: platform)
+                    }
+                }
+                if let release = forecast.release { ForecastRow(forecast: release, platform: platform) }
+                if let beta = forecast.beta { ForecastRow(forecast: beta, platform: platform) }
+                Text("An estimate from the gaps between past builds, not anything Apple has announced.")
+                    .font(.caption2).foregroundStyle(.secondary)
+            }
+            .padding(16)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(.tint.opacity(0.08), in: .rect(cornerRadius: 22))
+            .overlay(RoundedRectangle(cornerRadius: 22).strokeBorder(.tint.opacity(0.25), style: StrokeStyle(lineWidth: 1, dash: [5, 4])))
+        }
+    }
+}
+
+private struct ForecastRow: View {
+    let forecast: Forecast
+    let platform: Platform
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text(forecast.title).font(.subheadline.weight(.semibold))
+            HStack(alignment: .firstTextBaseline, spacing: 8) {
+                Text(String(format: String(localized: "around %@"),
+                            forecast.expected.formatted(.dateTime.month(.abbreviated).day().weekday(.abbreviated))))
+                    .font(.title3.weight(.bold))
+                Text("\(forecast.earliest.formatted(.dateTime.month(.abbreviated).day()))–\(forecast.latest.formatted(.dateTime.month(.abbreviated).day()))")
+                    .font(.callout).foregroundStyle(.secondary).monospacedDigit()
+            }
+            if forecast.overdue {
+                Text("Past the usual gap; could come any day.")
+                    .font(.caption).foregroundStyle(.orange)
+            }
+            Text(String(format: String(localized: "Typical gap %1$lld days, from the last %2$lld; last was %3$@ on %4$@."),
+                        forecast.typicalDays, forecast.samples,
+                        "\(platform.title) \(forecast.after.release.displayVersion)",
+                        (forecast.after.release.releasedAt ?? .now).formatted(.dateTime.month(.abbreviated).day())))
+                .font(.caption).foregroundStyle(.secondary)
         }
     }
 }

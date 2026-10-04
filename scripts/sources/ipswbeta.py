@@ -42,6 +42,33 @@ def devices_for_track(os_key: str, track: str, timeout: int) -> list[str]:
     pattern = rf'href="/{re.escape(path)}/{re.escape(track)}/([^"/?#]+)"'
     return sorted({unquote(identifier) for identifier in re.findall(pattern, page) if re.fullmatch(r"[A-Za-z]+[0-9]+,[0-9]+", unquote(identifier))})
 
+DATE = re.compile(r"\b(January|February|March|April|May|June|July|August|September|October|November|December) (\d{1,2}), (\d{4})\b")
+MONTHS = {name: number for number, name in enumerate(
+    ["January", "February", "March", "April", "May", "June", "July",
+     "August", "September", "October", "November", "December"], start=1)}
+
+def row_date(page: str, at: int) -> str | None:
+    """The date printed in the same table row as a download link.
+
+    Each build is one row: label, build, the day Apple released it, the link.
+    Betas carry no date anywhere else this pipeline reads — Apple's own feed
+    holds only the last few weeks — and without it a beta could be listed
+    but never placed on a timeline or counted towards when the next might
+    come. Only a date in the link's own row is taken, never a neighbour's.
+
+    The page gives a day, not a time. Noon UTC is written so the day stays
+    the same day in every time zone the apps are likely to show it in.
+    """
+    start = page.rfind("<tr", 0, at)
+    end = page.find("</tr>", at)
+    if start < 0 or end < 0:
+        return None
+    found = DATE.search(html.unescape(re.sub(r"<[^>]+>", " ", page[start:end])))
+    if not found:
+        return None
+    month, day, year = MONTHS[found.group(1)], int(found.group(2)), int(found.group(3))
+    return f"{year:04d}-{month:02d}-{day:02d}T12:00:00Z"
+
 def candidates_for_device(item: tuple[str, str, str], timeout: int) -> list[dict]:
     os_key, track, identifier = item
     try:
@@ -63,10 +90,11 @@ def candidates_for_device(item: tuple[str, str, str], timeout: int) -> list[dict
         preceding=page[:match.start()]
         labels=re.findall(r'<div class="font-bold">\s*([^<]+)', preceding)
         label=html.unescape(labels[-1]).strip() if labels else f"{version} beta"
+        released_at=row_date(page, match.start())
         # The source track is authoritative for historical iPad builds: iOS
         # existed before iPadOS, so identifier-based classification alone
         # would incorrectly publish iOS 10–12 iPads under iPadOS.
-        candidates.append({"os_key": os_key, "device": identifier, "name": name, "version": version, "label": label, "build": build, "url": url, "signed": None, "channel": "beta", "source": "ipswbeta.dev"})
+        candidates.append({"os_key": os_key, "device": identifier, "name": name, "version": version, "label": label, "build": build, "url": url, "signed": None, "channel": "beta", "source": "ipswbeta.dev", "released_at": released_at})
     return candidates
 
 def fetch(timeout: int, os_keys: set[str]) -> list[dict]:

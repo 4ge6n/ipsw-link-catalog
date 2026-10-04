@@ -142,6 +142,88 @@ final class ReleaseFeed {
     }
 }
 
+/// When the next build might come, from how far apart the last ones were.
+///
+/// A guess and labelled as one: the median gap between recent builds, added
+/// to the last one, with the middle half of those gaps as the range. Apple
+/// announces nothing in advance and this knows nothing it does not show.
+struct Forecast {
+    let title: String
+    let expected: Date
+    let earliest: Date
+    let latest: Date
+    /// How many gaps it was worked out from, and the typical one.
+    let samples: Int
+    let typicalDays: Int
+    let after: ReleaseFeed.Entry
+
+    var overdue: Bool { expected < Calendar.current.startOfDay(for: .now) }
+
+    /// Gaps between distinct days, newest last; `limit` of them at most, and
+    /// none longer than `cap` (a quiet summer between cycles is not a gap
+    /// between betas).
+    static func gaps(_ days: [Date], limit: Int, cap: Int?) -> [Int] {
+        let calendar = Calendar.current
+        let sorted = Array(Set(days.map { calendar.startOfDay(for: $0) })).sorted()
+        var gaps: [Int] = []
+        for (one, next) in zip(sorted, sorted.dropFirst()) {
+            let days = calendar.dateComponents([.day], from: one, to: next).day ?? 0
+            if days <= 0 { continue }
+            if let cap, days > cap { continue }
+            gaps.append(days)
+        }
+        return Array(gaps.suffix(limit))
+    }
+
+    static func make(title: String, after: ReleaseFeed.Entry, gaps: [Int]) -> Forecast? {
+        guard gaps.count >= 4, let last = after.release.releasedAt else { return nil }
+        let sorted = gaps.sorted()
+        func quantile(_ q: Double) -> Int {
+            let position = q * Double(sorted.count - 1)
+            let low = Int(position.rounded(.down)), high = Int(position.rounded(.up))
+            return Int((Double(sorted[low]) + (Double(sorted[high]) - Double(sorted[low])) * (position - Double(low))).rounded())
+        }
+        let calendar = Calendar.current
+        let day = calendar.startOfDay(for: last)
+        func plus(_ days: Int) -> Date { calendar.date(byAdding: .day, value: days, to: day) ?? day }
+        return Forecast(title: title, expected: plus(quantile(0.5)), earliest: plus(quantile(0.25)),
+                        latest: plus(quantile(0.75)), samples: gaps.count,
+                        typicalDays: quantile(0.5), after: after)
+    }
+}
+
+extension ReleaseFeed {
+    /// The next release and the next beta for one platform, where there is
+    /// enough history to say anything.
+    func forecast(for platform: Platform) -> (release: Forecast?, beta: Forecast?) {
+        let mine = entries.filter { $0.platform == platform && $0.release.releasedAt != nil }
+        let releases = mine.filter { $0.channel == .release && $0.release.prerelease == nil }
+            .sorted { ($0.release.releasedAt ?? .distantPast) < ($1.release.releasedAt ?? .distantPast) }
+        let betas = mine.filter { $0.release.prerelease != nil }
+            .sorted { ($0.release.releasedAt ?? .distantPast) < ($1.release.releasedAt ?? .distantPast) }
+
+        var release: Forecast?
+        if let last = releases.last {
+            release = Forecast.make(title: String(localized: "Next release"), after: last,
+                                    gaps: Forecast.gaps(releases.compactMap(\.release.releasedAt), limit: 12, cap: nil))
+        }
+        var beta: Forecast?
+        if let last = betas.last {
+            // The number that comes next, when the track is still open: a
+            // beta after beta 2 is beta 3. After an RC, or once that version
+            // has shipped, what comes next is not something to number.
+            var title = String(localized: "Next beta")
+            let shipped = releases.contains { $0.release.version == last.release.version }
+            if !shipped, last.release.stage.rank == 0 {
+                title = "\(last.release.version) beta \(last.release.stage.number + 1)"
+            }
+            beta = Forecast.make(title: title, after: last,
+                                 gaps: Forecast.gaps(betas.compactMap(\.release.releasedAt), limit: 10, cap: 45))
+        }
+        return (release, beta)
+    }
+}
+
 extension Release {
     /// "27.0.1", "27.2 beta 2"
     var displayVersion: String {
