@@ -4,18 +4,18 @@
   "version": "15.2",
   "version_label": "15.2",
   "build": "24C2101",
-  "released_at": null,
+  "released_at": "2024-12-11T12:00:00Z",
   "prerelease": true,
   "release_candidate": false,
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:25:58Z"
+      "checked_at": "2026-10-04T13:40:50Z"
     }
   ],
   "firmwares": [
     {
-      "name": "MacBook Air (13",
+      "name": "MacBook Air (13-inch, M4, 2025)",
       "devices": [
         "Mac16,12",
         "Mac16,13"
@@ -30,5 +30,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:25:58Z"
+  "last_seen_at": "2026-10-04T13:40:50Z"
 }

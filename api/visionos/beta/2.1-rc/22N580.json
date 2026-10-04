@@ -4,13 +4,13 @@
   "version": "2.1",
   "version_label": "2.1-rc",
   "build": "22N580",
-  "released_at": null,
+  "released_at": "2024-10-21T12:00:00Z",
   "prerelease": true,
   "release_candidate": true,
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:25:58Z"
+      "checked_at": "2026-10-04T13:40:50Z"
     }
   ],
   "firmwares": [
@@ -29,5 +29,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:25:58Z"
+  "last_seen_at": "2026-10-04T13:40:50Z"
 }

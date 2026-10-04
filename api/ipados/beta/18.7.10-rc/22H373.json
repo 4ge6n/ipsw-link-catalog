@@ -4,16 +4,30 @@
   "version": "18.7.10",
   "version_label": "18.7.10-rc",
   "build": "22H373",
-  "released_at": null,
+  "released_at": "2026-08-10T12:00:00Z",
   "prerelease": true,
   "release_candidate": true,
   "sources": [
     {
-      "name": "ipsw.dev",
-      "checked_at": "2026-09-15T21:31:38Z"
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-10-04T13:40:50Z"
     }
   ],
   "firmwares": [
+    {
+      "name": "iPad (8th generation) Wi-Fi",
+      "devices": [
+        "iPad11,6",
+        "iPad11,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/140-81742/23BD40AE-5AC0-402F-874E-2A2674EC768F/iPad_10.2_2020_18.7.10_22H373_Restore.ipsw",
+      "filename": "iPad_10.2_2020_18.7.10_22H373_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T11:20:35Z",
+        "unsigned_since": null
+      }
+    },
     {
       "name": "iPad (8th generation) Wi-Fi + Cellular",
       "devices": [
@@ -27,22 +41,8 @@
         "checked_at": "2026-09-11T19:39:29Z",
         "unsigned_since": null
       }
-    },
-    {
-      "name": "iPad (8th generation) Wi",
-      "devices": [
-        "iPad11,6",
-        "iPad11,7"
-      ],
-      "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/140-81742/23BD40AE-5AC0-402F-874E-2A2674EC768F/iPad_10.2_2020_18.7.10_22H373_Restore.ipsw",
-      "filename": "iPad_10.2_2020_18.7.10_22H373_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T11:20:35Z",
-        "unsigned_since": null
-      }
     }
   ],
   "first_seen_at": "2026-09-11T19:39:29Z",
-  "last_seen_at": "2026-09-15T21:31:38Z"
+  "last_seen_at": "2026-10-04T13:40:50Z"
 }

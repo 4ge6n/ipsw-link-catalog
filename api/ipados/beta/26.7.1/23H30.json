@@ -1,0 +1,74 @@
+{
+  "os_key": "ipados",
+  "channel": "beta",
+  "version": "26.7.1",
+  "version_label": "26.7.1",
+  "build": "23H30",
+  "released_at": "2026-09-28T17:00:00Z",
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-10-04T13:40:50Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad Pro 11-inch (1st generation) Wi-Fi",
+      "devices": [
+        "iPad8,1",
+        "iPad8,10",
+        "iPad8,11",
+        "iPad8,12",
+        "iPad8,2",
+        "iPad8,3",
+        "iPad8,4",
+        "iPad8,5",
+        "iPad8,6",
+        "iPad8,7",
+        "iPad8,8",
+        "iPad8,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/a12e7557-25ba-4859-a74f-c700d3043d6f/iPad_Pro_A12X_A12Z_26.7.1_23H30_Restore.ipsw",
+      "filename": "iPad_Pro_A12X_A12Z_26.7.1_23H30_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-10-04T13:40:50Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (8th generation) Wi-Fi",
+      "devices": [
+        "iPad11,6",
+        "iPad11,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/59641f3d-14e1-4095-859e-2d9949b8d92a/iPad_10.2_2020_26.7.1_23H30_Restore.ipsw",
+      "filename": "iPad_10.2_2020_26.7.1_23H30_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-10-04T13:40:50Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini (5th generation) Wi-Fi",
+      "devices": [
+        "iPad11,1",
+        "iPad11,2",
+        "iPad11,3",
+        "iPad11,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/3274d949-00c2-4e8d-911a-461f7153a819/iPad_Spring_2019_26.7.1_23H30_Restore.ipsw",
+      "filename": "iPad_Spring_2019_26.7.1_23H30_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-10-04T13:40:50Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-10-04T13:40:50Z",
+  "last_seen_at": "2026-10-04T13:40:50Z"
+}

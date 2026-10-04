@@ -4,18 +4,18 @@
   "version": "17.5",
   "version_label": "17.5-beta-2",
   "build": "21F5058E",
-  "released_at": null,
+  "released_at": "2024-04-16T12:00:00Z",
   "prerelease": true,
   "release_candidate": false,
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:25:58Z"
+      "checked_at": "2026-10-04T13:40:50Z"
     }
   ],
   "firmwares": [
     {
-      "name": "iPad Pro 11",
+      "name": "iPad Pro 11-inch (1st generation) Wi-Fi",
       "devices": [
         "iPad8,1",
         "iPad8,10",
@@ -39,7 +39,7 @@
       }
     },
     {
-      "name": "iPad (6th generation) Wi",
+      "name": "iPad (6th generation) Wi-Fi",
       "devices": [
         "iPad7,5",
         "iPad7,6"
@@ -53,7 +53,7 @@
       }
     },
     {
-      "name": "iPad (7th generation) Wi",
+      "name": "iPad (7th generation) Wi-Fi",
       "devices": [
         "iPad7,11",
         "iPad7,12"
@@ -67,7 +67,7 @@
       }
     },
     {
-      "name": "iPad Pro (12.9",
+      "name": "iPad Pro (12.9-inch) (2nd generation) Wi-Fi",
       "devices": [
         "iPad7,1",
         "iPad7,2",
@@ -83,7 +83,7 @@
       }
     },
     {
-      "name": "iPad Pro 11",
+      "name": "iPad Pro 11-inch (4th generation) Wi-Fi",
       "devices": [
         "iPad14,3",
         "iPad14,4",
@@ -99,7 +99,7 @@
       }
     },
     {
-      "name": "iPad mini (6th generation) Wi",
+      "name": "iPad mini (6th generation) Wi-Fi",
       "devices": [
         "iPad14,1",
         "iPad14,2"
@@ -113,7 +113,7 @@
       }
     },
     {
-      "name": "iPad (10th generation) Wi",
+      "name": "iPad (10th generation) Wi-Fi",
       "devices": [
         "iPad13,18",
         "iPad13,19"
@@ -127,7 +127,7 @@
       }
     },
     {
-      "name": "iPad Air (5th generation) Wi",
+      "name": "iPad Air (5th generation) Wi-Fi",
       "devices": [
         "iPad13,16",
         "iPad13,17"
@@ -141,7 +141,7 @@
       }
     },
     {
-      "name": "iPad Pro 12.9",
+      "name": "iPad Pro 12.9-inch (5th generation) Wi-Fi + Cellular",
       "devices": [
         "iPad13,10",
         "iPad13,11",
@@ -161,7 +161,7 @@
       }
     },
     {
-      "name": "iPad Air (4th generation) Wi",
+      "name": "iPad Air (4th generation) Wi-Fi",
       "devices": [
         "iPad13,1",
         "iPad13,2"
@@ -175,7 +175,7 @@
       }
     },
     {
-      "name": "iPad (9th generation) Wi",
+      "name": "iPad (9th generation) Wi-Fi",
       "devices": [
         "iPad12,1",
         "iPad12,2"
@@ -189,7 +189,7 @@
       }
     },
     {
-      "name": "iPad (8th generation) Wi",
+      "name": "iPad (8th generation) Wi-Fi",
       "devices": [
         "iPad11,6",
         "iPad11,7"
@@ -203,7 +203,7 @@
       }
     },
     {
-      "name": "iPad mini (5th generation) Wi",
+      "name": "iPad mini (5th generation) Wi-Fi",
       "devices": [
         "iPad11,1",
         "iPad11,2",
@@ -220,5 +220,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:25:58Z"
+  "last_seen_at": "2026-10-04T13:40:50Z"
 }

@@ -4,18 +4,18 @@
   "version": "15.8",
   "version_label": "15.8-rc",
   "build": "19H370",
-  "released_at": null,
+  "released_at": "2023-10-18T12:00:00Z",
   "prerelease": true,
   "release_candidate": true,
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:25:58Z"
+      "checked_at": "2026-10-04T13:40:50Z"
     }
   ],
   "firmwares": [
     {
-      "name": "iPad mini 4 Wi",
+      "name": "iPad mini 4 Wi-Fi",
       "devices": [
         "iPad5,1",
         "iPad5,2",
@@ -32,5 +32,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:25:58Z"
+  "last_seen_at": "2026-10-04T13:40:50Z"
 }

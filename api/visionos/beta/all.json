@@ -4,7 +4,7 @@
   "os_key": "visionos",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-09-30T20:46:20Z",
+  "generated_at": "2026-10-04T13:40:50Z",
   "release_count": 129,
   "firmware_count": 172,
   "releases": [
@@ -13,7 +13,7 @@
       "version": "27.2",
       "version_label": "27.2-beta-2",
       "build": "24N5093F",
-      "released_at": null,
+      "released_at": "2026-09-21T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "27.2-beta-2/24N5093F.json",
@@ -47,7 +47,7 @@
       "version": "27.2",
       "version_label": "27.2-beta",
       "build": "24N5088L",
-      "released_at": null,
+      "released_at": "2026-09-16T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "27.2-beta/24N5088L.json",
@@ -111,11 +111,45 @@
       ]
     },
     {
+      "id": "visionos-beta-27.0-rc-24M362",
+      "version": "27.0",
+      "version_label": "27.0-rc",
+      "build": "24M362",
+      "released_at": "2026-09-09T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "27.0-rc/24M362.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-27.0-rc-24M362-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_27.0_24M362_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/36f0fa38-2ff6-4ad3-8952-01b0b3a139d7/Apple_Vision_Pro_M5_27.0_24M362_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "visionos-beta-27.0-rc-24M362-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_27.0_24M362_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/15a5b6d9-74ee-4986-a40e-63ee98bcd0ab/Apple_Vision_Pro_27.0_24M362_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
       "id": "visionos-beta-27.0-beta-8-24M5361A",
       "version": "27.0",
       "version_label": "27.0-beta-8",
       "build": "24M5361A",
-      "released_at": null,
+      "released_at": "2026-08-31T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "27.0-beta-8/24M5361A.json",
@@ -149,7 +183,7 @@
       "version": "27.0",
       "version_label": "27.0-beta-7",
       "build": "24M5359A",
-      "released_at": null,
+      "released_at": "2026-08-24T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "27.0-beta-7/24M5359A.json",
@@ -183,7 +217,7 @@
       "version": "27.0",
       "version_label": "27.0-beta-6",
       "build": "24M5355A",
-      "released_at": null,
+      "released_at": "2026-08-17T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "27.0-beta-6/24M5355A.json",
@@ -217,7 +251,7 @@
       "version": "27.0",
       "version_label": "27.0-beta-5",
       "build": "24M5348B",
-      "released_at": null,
+      "released_at": "2026-08-10T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "27.0-beta-5/24M5348B.json",
@@ -251,7 +285,7 @@
       "version": "27.0",
       "version_label": "27.0-beta-4",
       "build": "24M5326G",
-      "released_at": null,
+      "released_at": "2026-07-20T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "27.0-beta-4/24M5326G.json",
@@ -285,7 +319,7 @@
       "version": "27.0",
       "version_label": "27.0-beta-3",
       "build": "24M5316K",
-      "released_at": null,
+      "released_at": "2026-07-06T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "27.0-beta-3/24M5316K.json",
@@ -319,7 +353,7 @@
       "version": "27.0",
       "version_label": "27.0-beta-2",
       "build": "24M5306I",
-      "released_at": null,
+      "released_at": "2026-06-22T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "27.0-beta-2/24M5306I.json",
@@ -353,7 +387,7 @@
       "version": "27.0",
       "version_label": "27.0-beta",
       "build": "24M5291P",
-      "released_at": null,
+      "released_at": "2026-06-08T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "27.0-beta/24M5291P.json",
@@ -383,45 +417,11 @@
       ]
     },
     {
-      "id": "visionos-beta-27.0-rc-24M362",
-      "version": "27.0",
-      "version_label": "27.0-rc",
-      "build": "24M362",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 2,
-      "data": "27.0-rc/24M362.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-27.0-rc-24M362-RealityDevice17,1",
-          "name": "Apple Vision Pro (M5)",
-          "devices": [
-            "RealityDevice17,1"
-          ],
-          "filename": "Apple_Vision_Pro_M5_27.0_24M362_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/36f0fa38-2ff6-4ad3-8952-01b0b3a139d7/Apple_Vision_Pro_M5_27.0_24M362_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "visionos-beta-27.0-rc-24M362-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_27.0_24M362_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/15a5b6d9-74ee-4986-a40e-63ee98bcd0ab/Apple_Vision_Pro_27.0_24M362_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
       "id": "visionos-beta-26.6.1-23O780",
       "version": "26.6.1",
       "version_label": "26.6.1",
       "build": "23O780",
-      "released_at": null,
+      "released_at": "2026-08-17T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.6.1/23O780.json",
@@ -455,7 +455,7 @@
       "version": "26.6",
       "version_label": "26.6-rc",
       "build": "23O770",
-      "released_at": null,
+      "released_at": "2026-07-20T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.6-rc/23O770.json",
@@ -489,7 +489,7 @@
       "version": "26.6",
       "version_label": "26.6-beta-5",
       "build": "23O5765A",
-      "released_at": null,
+      "released_at": "2026-07-13T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.6-beta-5/23O5765A.json",
@@ -523,7 +523,7 @@
       "version": "26.6",
       "version_label": "26.6-beta-4",
       "build": "23O5757C",
-      "released_at": null,
+      "released_at": "2026-07-06T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.6-beta-4/23O5757C.json",
@@ -557,7 +557,7 @@
       "version": "26.6",
       "version_label": "26.6-beta-3",
       "build": "23O5752D",
-      "released_at": null,
+      "released_at": "2026-06-29T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.6-beta-3/23O5752D.json",
@@ -591,7 +591,7 @@
       "version": "26.6",
       "version_label": "26.6-beta-2",
       "build": "23O5743C",
-      "released_at": null,
+      "released_at": "2026-06-15T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.6-beta-2/23O5743C.json",
@@ -625,7 +625,7 @@
       "version": "26.6",
       "version_label": "26.6-beta",
       "build": "23O5728E",
-      "released_at": null,
+      "released_at": "2026-05-26T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.6-beta/23O5728E.json",
@@ -655,11 +655,45 @@
       ]
     },
     {
+      "id": "visionos-beta-26.5-rc-23O471",
+      "version": "26.5",
+      "version_label": "26.5-rc",
+      "build": "23O471",
+      "released_at": "2026-05-04T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.5-rc/23O471.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-26.5-rc-23O471-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_26.5_23O471_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-35396/8EDEDC5B-6F93-41D1-BACE-F9324BD66DE9/Apple_Vision_Pro_M5_26.5_23O471_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "visionos-beta-26.5-rc-23O471-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.5_23O471_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-32476/EE0344BF-4A56-452D-885E-0CC80FF39D05/Apple_Vision_Pro_26.5_23O471_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
       "id": "visionos-beta-26.5-beta-4-23O5468A",
       "version": "26.5",
       "version_label": "26.5-beta-4",
       "build": "23O5468A",
-      "released_at": null,
+      "released_at": "2026-04-27T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.5-beta-4/23O5468A.json",
@@ -693,7 +727,7 @@
       "version": "26.5",
       "version_label": "26.5-beta-3",
       "build": "23O5458E",
-      "released_at": null,
+      "released_at": "2026-04-20T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.5-beta-3/23O5458E.json",
@@ -727,7 +761,7 @@
       "version": "26.5",
       "version_label": "26.5-beta-2",
       "build": "23O5453D",
-      "released_at": null,
+      "released_at": "2026-04-13T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.5-beta-2/23O5453D.json",
@@ -761,7 +795,7 @@
       "version": "26.5",
       "version_label": "26.5-beta",
       "build": "23O5441G",
-      "released_at": null,
+      "released_at": "2026-03-30T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.5-beta/23O5441G.json",
@@ -791,181 +825,11 @@
       ]
     },
     {
-      "id": "visionos-beta-26.5-rc-23O471",
-      "version": "26.5",
-      "version_label": "26.5-rc",
-      "build": "23O471",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 2,
-      "data": "26.5-rc/23O471.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-26.5-rc-23O471-RealityDevice17,1",
-          "name": "Apple Vision Pro (M5)",
-          "devices": [
-            "RealityDevice17,1"
-          ],
-          "filename": "Apple_Vision_Pro_M5_26.5_23O471_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-35396/8EDEDC5B-6F93-41D1-BACE-F9324BD66DE9/Apple_Vision_Pro_M5_26.5_23O471_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "visionos-beta-26.5-rc-23O471-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_26.5_23O471_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026SpringFCS/fullrestores/122-32476/EE0344BF-4A56-452D-885E-0CC80FF39D05/Apple_Vision_Pro_26.5_23O471_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-26.4-beta-4-23O5235A",
-      "version": "26.4",
-      "version_label": "26.4-beta-4",
-      "build": "23O5235A",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 2,
-      "data": "26.4-beta-4/23O5235A.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-26.4-beta-4-23O5235A-RealityDevice17,1",
-          "name": "Apple Vision Pro (M5)",
-          "devices": [
-            "RealityDevice17,1"
-          ],
-          "filename": "Apple_Vision_Pro_M5_26.4_23O5235a_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-85992/BDF942D7-EEEE-4FBA-BB34-9423D7678306/Apple_Vision_Pro_M5_26.4_23O5235a_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "visionos-beta-26.4-beta-4-23O5235A-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_26.4_23O5235a_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-86000/D73BD5D4-D046-4824-9CEF-ABE1D9271AA9/Apple_Vision_Pro_26.4_23O5235a_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-26.4-beta-3-23O5225F",
-      "version": "26.4",
-      "version_label": "26.4-beta-3",
-      "build": "23O5225F",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 2,
-      "data": "26.4-beta-3/23O5225F.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-26.4-beta-3-23O5225F-RealityDevice17,1",
-          "name": "Apple Vision Pro (M5)",
-          "devices": [
-            "RealityDevice17,1"
-          ],
-          "filename": "Apple_Vision_Pro_M5_26.4_23O5225f_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-71848/F4CC088C-E934-458D-B3D6-376CFE416685/Apple_Vision_Pro_M5_26.4_23O5225f_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "visionos-beta-26.4-beta-3-23O5225F-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_26.4_23O5225f_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-71840/098619CB-1538-4878-90C3-7DA48E3A7059/Apple_Vision_Pro_26.4_23O5225f_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-26.4-beta-2-23O5220E",
-      "version": "26.4",
-      "version_label": "26.4-beta-2",
-      "build": "23O5220E",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 2,
-      "data": "26.4-beta-2/23O5220E.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-26.4-beta-2-23O5220E-RealityDevice17,1",
-          "name": "Apple Vision Pro (M5)",
-          "devices": [
-            "RealityDevice17,1"
-          ],
-          "filename": "Apple_Vision_Pro_M5_26.4_23O5220e_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-67349/77C4CADC-3DC3-4026-8666-15C5C7AB97B9/Apple_Vision_Pro_M5_26.4_23O5220e_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "visionos-beta-26.4-beta-2-23O5220E-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_26.4_23O5220e_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-67346/8D706216-B3D7-4324-8629-BC44B52F19C3/Apple_Vision_Pro_26.4_23O5220e_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-26.4-beta-23O5209M",
-      "version": "26.4",
-      "version_label": "26.4-beta",
-      "build": "23O5209M",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 2,
-      "data": "26.4-beta/23O5209M.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-26.4-beta-23O5209M-RealityDevice17,1",
-          "name": "Apple Vision Pro (M5)",
-          "devices": [
-            "RealityDevice17,1"
-          ],
-          "filename": "Apple_Vision_Pro_M5_26.4_23O5209m_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-37980/62FA7323-014E-4C79-84B8-662349DE7CDA/Apple_Vision_Pro_M5_26.4_23O5209m_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "visionos-beta-26.4-beta-23O5209M-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_26.4_23O5209m_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-37981/2B60AEC7-F872-4482-83EB-059D1673A4A8/Apple_Vision_Pro_26.4_23O5209m_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
       "id": "visionos-beta-26.4-23O247",
       "version": "26.4",
       "version_label": "26.4",
       "build": "23O247",
-      "released_at": null,
+      "released_at": "2026-03-24T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.4/23O247.json",
@@ -999,7 +863,7 @@
       "version": "26.4",
       "version_label": "26.4-rc",
       "build": "23O244",
-      "released_at": null,
+      "released_at": "2026-03-18T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.4-rc/23O244.json",
@@ -1029,11 +893,147 @@
       ]
     },
     {
+      "id": "visionos-beta-26.4-beta-4-23O5235A",
+      "version": "26.4",
+      "version_label": "26.4-beta-4",
+      "build": "23O5235A",
+      "released_at": "2026-03-09T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.4-beta-4/23O5235A.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-26.4-beta-4-23O5235A-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_26.4_23O5235a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-85992/BDF942D7-EEEE-4FBA-BB34-9423D7678306/Apple_Vision_Pro_M5_26.4_23O5235a_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "visionos-beta-26.4-beta-4-23O5235A-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.4_23O5235a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-86000/D73BD5D4-D046-4824-9CEF-ABE1D9271AA9/Apple_Vision_Pro_26.4_23O5235a_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-26.4-beta-3-23O5225F",
+      "version": "26.4",
+      "version_label": "26.4-beta-3",
+      "build": "23O5225F",
+      "released_at": "2026-03-02T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.4-beta-3/23O5225F.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-26.4-beta-3-23O5225F-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_26.4_23O5225f_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-71848/F4CC088C-E934-458D-B3D6-376CFE416685/Apple_Vision_Pro_M5_26.4_23O5225f_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "visionos-beta-26.4-beta-3-23O5225F-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.4_23O5225f_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-71840/098619CB-1538-4878-90C3-7DA48E3A7059/Apple_Vision_Pro_26.4_23O5225f_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-26.4-beta-2-23O5220E",
+      "version": "26.4",
+      "version_label": "26.4-beta-2",
+      "build": "23O5220E",
+      "released_at": "2026-02-23T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.4-beta-2/23O5220E.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-26.4-beta-2-23O5220E-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_26.4_23O5220e_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-67349/77C4CADC-3DC3-4026-8666-15C5C7AB97B9/Apple_Vision_Pro_M5_26.4_23O5220e_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "visionos-beta-26.4-beta-2-23O5220E-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.4_23O5220e_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-67346/8D706216-B3D7-4324-8629-BC44B52F19C3/Apple_Vision_Pro_26.4_23O5220e_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-26.4-beta-23O5209M",
+      "version": "26.4",
+      "version_label": "26.4-beta",
+      "build": "23O5209M",
+      "released_at": "2026-02-16T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.4-beta/23O5209M.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-26.4-beta-23O5209M-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_26.4_23O5209m_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-37980/62FA7323-014E-4C79-84B8-662349DE7CDA/Apple_Vision_Pro_M5_26.4_23O5209m_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "visionos-beta-26.4-beta-23O5209M-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.4_23O5209m_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026WinterSeed/fullrestores/047-37981/2B60AEC7-F872-4482-83EB-059D1673A4A8/Apple_Vision_Pro_26.4_23O5209m_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
       "id": "visionos-beta-26.3.1-23N630",
       "version": "26.3.1",
       "version_label": "26.3.1",
       "build": "23N630",
-      "released_at": null,
+      "released_at": "2026-02-26T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.3.1/23N630.json",
@@ -1067,7 +1067,7 @@
       "version": "26.3",
       "version_label": "26.3",
       "build": "23N620",
-      "released_at": null,
+      "released_at": "2026-02-11T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.3/23N620.json",
@@ -1101,7 +1101,7 @@
       "version": "26.3",
       "version_label": "26.3-rc",
       "build": "23N619",
-      "released_at": null,
+      "released_at": "2026-02-04T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.3-rc/23N619.json",
@@ -1135,7 +1135,7 @@
       "version": "26.3",
       "version_label": "26.3-beta-3",
       "build": "23N5613B",
-      "released_at": null,
+      "released_at": "2026-01-26T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.3-beta-3/23N5613B.json",
@@ -1169,7 +1169,7 @@
       "version": "26.3",
       "version_label": "26.3-beta-2",
       "build": "23N5602D",
-      "released_at": null,
+      "released_at": "2026-01-12T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.3-beta-2/23N5602D.json",
@@ -1203,7 +1203,7 @@
       "version": "26.3",
       "version_label": "26.3-beta",
       "build": "23N5588C",
-      "released_at": null,
+      "released_at": "2025-12-15T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.3-beta/23N5588C.json",
@@ -1233,11 +1233,45 @@
       ]
     },
     {
+      "id": "visionos-beta-26.2-rc-23N301",
+      "version": "26.2",
+      "version_label": "26.2-rc",
+      "build": "23N301",
+      "released_at": "2025-12-03T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.2-rc/23N301.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-26.2-rc-23N301-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_26.2_23N301_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-46429/B8B9260D-C88F-4D23-91E8-29DF18386092/Apple_Vision_Pro_M5_26.2_23N301_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "visionos-beta-26.2-rc-23N301-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.2_23N301_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-46444/B3B7D709-0374-486E-B875-9A2464981BF8/Apple_Vision_Pro_26.2_23N301_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
       "id": "visionos-beta-26.2-beta-3-23N5296B",
       "version": "26.2",
       "version_label": "26.2-beta-3",
       "build": "23N5296B",
-      "released_at": null,
+      "released_at": "2025-11-18T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.2-beta-3/23N5296B.json",
@@ -1271,7 +1305,7 @@
       "version": "26.2",
       "version_label": "26.2-beta-2",
       "build": "23N5285D",
-      "released_at": null,
+      "released_at": "2025-11-12T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.2-beta-2/23N5285D.json",
@@ -1305,7 +1339,7 @@
       "version": "26.2",
       "version_label": "26.2-beta",
       "build": "23N5279E",
-      "released_at": null,
+      "released_at": "2025-11-04T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.2-beta/23N5279E.json",
@@ -1335,148 +1369,11 @@
       ]
     },
     {
-      "id": "visionos-beta-26.2-rc-23N301",
-      "version": "26.2",
-      "version_label": "26.2-rc",
-      "build": "23N301",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 2,
-      "data": "26.2-rc/23N301.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-26.2-rc-23N301-RealityDevice17,1",
-          "name": "Apple Vision Pro (M5)",
-          "devices": [
-            "RealityDevice17,1"
-          ],
-          "filename": "Apple_Vision_Pro_M5_26.2_23N301_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-46429/B8B9260D-C88F-4D23-91E8-29DF18386092/Apple_Vision_Pro_M5_26.2_23N301_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "visionos-beta-26.2-rc-23N301-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_26.2_23N301_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/093-46444/B3B7D709-0374-486E-B875-9A2464981BF8/Apple_Vision_Pro_26.2_23N301_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-26.1-beta-4-23N5042A",
-      "version": "26.1",
-      "version_label": "26.1-beta-4",
-      "build": "23N5042A",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 2,
-      "data": "26.1-beta-4/23N5042A.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-26.1-beta-4-23N5042A-RealityDevice17,1",
-          "name": "Apple Vision Pro (M5)",
-          "devices": [
-            "RealityDevice17,1"
-          ],
-          "filename": "Apple_Vision_Pro_26.1_23N5042a_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2025FallSeed/fullrestores/093-89623/DF07B246-551B-42B5-80A2-E588296C2DBE/Apple_Vision_Pro_26.1_23N5042a_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "visionos-beta-26.1-beta-4-23N5042A-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_26.1_23N5042a_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2025FallSeed/fullrestores/093-89613/14D330A6-6F64-43B5-8F65-4442F93BC0AD/Apple_Vision_Pro_26.1_23N5042a_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-26.1-beta-3-23N5033D",
-      "version": "26.1",
-      "version_label": "26.1-beta-3",
-      "build": "23N5033D",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "26.1-beta-3/23N5033D.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-26.1-beta-3-23N5033D-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_26.1_23N5033d_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2025FallSeed/fullrestores/093-76912/9488AA15-7AFE-41FB-9C51-FF1D371437A6/Apple_Vision_Pro_26.1_23N5033d_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-26.1-beta-2-23N5028E",
-      "version": "26.1",
-      "version_label": "26.1-beta-2",
-      "build": "23N5028E",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "26.1-beta-2/23N5028E.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-26.1-beta-2-23N5028E-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_26.1_23N5028e_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2025FallSeed/fullrestores/093-55663/A1BF95CA-1E6B-4F9E-96B4-919FF52270C0/Apple_Vision_Pro_26.1_23N5028e_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-26.1-beta-23N5013J",
-      "version": "26.1",
-      "version_label": "26.1-beta",
-      "build": "23N5013J",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "26.1-beta/23N5013J.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-26.1-beta-23N5013J-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_26.1_23N5013j_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2025FallSeed/fullrestores/093-25119/4675463E-5965-4FE6-9C9F-AC8935B5F82D/Apple_Vision_Pro_26.1_23N5013j_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
       "id": "visionos-beta-26.1-23N49",
       "version": "26.1",
       "version_label": "26.1",
       "build": "23N49",
-      "released_at": null,
+      "released_at": "2025-11-03T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.1/23N49.json",
@@ -1510,7 +1407,7 @@
       "version": "26.1",
       "version_label": "26.1-rc",
       "build": "23N48",
-      "released_at": null,
+      "released_at": "2025-10-28T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.1-rc/23N48.json",
@@ -1540,11 +1437,114 @@
       ]
     },
     {
+      "id": "visionos-beta-26.1-beta-4-23N5042A",
+      "version": "26.1",
+      "version_label": "26.1-beta-4",
+      "build": "23N5042A",
+      "released_at": "2025-10-20T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 2,
+      "data": "26.1-beta-4/23N5042A.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-26.1-beta-4-23N5042A-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.1_23N5042a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallSeed/fullrestores/093-89623/DF07B246-551B-42B5-80A2-E588296C2DBE/Apple_Vision_Pro_26.1_23N5042a_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "visionos-beta-26.1-beta-4-23N5042A-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.1_23N5042a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallSeed/fullrestores/093-89613/14D330A6-6F64-43B5-8F65-4442F93BC0AD/Apple_Vision_Pro_26.1_23N5042a_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-26.1-beta-3-23N5033D",
+      "version": "26.1",
+      "version_label": "26.1-beta-3",
+      "build": "23N5033D",
+      "released_at": "2025-10-13T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.1-beta-3/23N5033D.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-26.1-beta-3-23N5033D-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.1_23N5033d_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallSeed/fullrestores/093-76912/9488AA15-7AFE-41FB-9C51-FF1D371437A6/Apple_Vision_Pro_26.1_23N5033d_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-26.1-beta-2-23N5028E",
+      "version": "26.1",
+      "version_label": "26.1-beta-2",
+      "build": "23N5028E",
+      "released_at": "2025-10-06T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.1-beta-2/23N5028E.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-26.1-beta-2-23N5028E-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.1_23N5028e_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallSeed/fullrestores/093-55663/A1BF95CA-1E6B-4F9E-96B4-919FF52270C0/Apple_Vision_Pro_26.1_23N5028e_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-26.1-beta-23N5013J",
+      "version": "26.1",
+      "version_label": "26.1-beta",
+      "build": "23N5013J",
+      "released_at": "2025-09-22T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.1-beta/23N5013J.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-26.1-beta-23N5013J-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.1_23N5013j_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallSeed/fullrestores/093-25119/4675463E-5965-4FE6-9C9F-AC8935B5F82D/Apple_Vision_Pro_26.1_23N5013j_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
       "id": "visionos-beta-26.0.1-23M341",
       "version": "26.0.1",
       "version_label": "26.0.1",
       "build": "23M341",
-      "released_at": null,
+      "released_at": "2025-09-29T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "26.0.1/23M341.json",
@@ -1563,11 +1563,34 @@
       ]
     },
     {
+      "id": "visionos-beta-26.0-rc-23M336",
+      "version": "26.0",
+      "version_label": "26.0-rc",
+      "build": "23M336",
+      "released_at": "2025-09-09T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "26.0-rc/23M336.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-26.0-rc-23M336-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_26.0_23M336_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/052-71660/BFCC4AD1-7C76-495D-97BF-AD08D81F7FEF/Apple_Vision_Pro_26.0_23M336_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
       "id": "visionos-beta-26.0-beta-9-23M5335B",
       "version": "26.0",
       "version_label": "26.0-beta-9",
       "build": "23M5335B",
-      "released_at": null,
+      "released_at": "2025-09-02T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "26.0-beta-9/23M5335B.json",
@@ -1590,7 +1613,7 @@
       "version": "26.0",
       "version_label": "26.0-beta-8",
       "build": "23M5332A",
-      "released_at": null,
+      "released_at": "2025-08-25T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "26.0-beta-8/23M5332A.json",
@@ -1613,7 +1636,7 @@
       "version": "26.0",
       "version_label": "26.0-beta-7",
       "build": "23M5328A",
-      "released_at": null,
+      "released_at": "2025-08-18T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "26.0-beta-7/23M5328A.json",
@@ -1636,7 +1659,7 @@
       "version": "26.0",
       "version_label": "26.0-beta-6",
       "build": "23M5322B",
-      "released_at": null,
+      "released_at": "2025-08-11T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "26.0-beta-6/23M5322B.json",
@@ -1659,7 +1682,7 @@
       "version": "26.0",
       "version_label": "26.0-beta-5",
       "build": "23M5311G",
-      "released_at": null,
+      "released_at": "2025-08-05T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "26.0-beta-5/23M5311G.json",
@@ -1682,7 +1705,7 @@
       "version": "26.0",
       "version_label": "26.0-beta-4",
       "build": "23M5300G",
-      "released_at": null,
+      "released_at": "2025-07-22T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "26.0-beta-4/23M5300G.json",
@@ -1705,7 +1728,7 @@
       "version": "26.0",
       "version_label": "26.0-beta-3",
       "build": "23M5290F",
-      "released_at": null,
+      "released_at": "2025-07-07T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "26.0-beta-3/23M5290F.json",
@@ -1728,7 +1751,7 @@
       "version": "26.0",
       "version_label": "26.0-beta-2",
       "build": "23M5279F",
-      "released_at": null,
+      "released_at": "2025-06-23T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "26.0-beta-2/23M5279F.json",
@@ -1751,7 +1774,7 @@
       "version": "26.0",
       "version_label": "26.0-beta",
       "build": "23M5263M",
-      "released_at": null,
+      "released_at": "2025-06-09T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "26.0-beta/23M5263M.json",
@@ -1770,34 +1793,11 @@
       ]
     },
     {
-      "id": "visionos-beta-26.0-rc-23M336",
-      "version": "26.0",
-      "version_label": "26.0-rc",
-      "build": "23M336",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "26.0-rc/23M336.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-26.0-rc-23M336-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_26.0_23M336_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2025FallFCS/fullrestores/052-71660/BFCC4AD1-7C76-495D-97BF-AD08D81F7FEF/Apple_Vision_Pro_26.0_23M336_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
       "id": "visionos-beta-2.6-22O785",
       "version": "2.6",
       "version_label": "2.6",
       "build": "22O785",
-      "released_at": null,
+      "released_at": "2025-07-29T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.6/22O785.json",
@@ -1820,7 +1820,7 @@
       "version": "2.6",
       "version_label": "2.6-rc",
       "build": "22O783",
-      "released_at": null,
+      "released_at": "2025-07-21T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.6-rc/22O783.json",
@@ -1843,7 +1843,7 @@
       "version": "2.6",
       "version_label": "2.6-beta-3",
       "build": "22O5773B",
-      "released_at": null,
+      "released_at": "2025-07-14T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.6-beta-3/22O5773B.json",
@@ -1866,7 +1866,7 @@
       "version": "2.6",
       "version_label": "2.6-beta-2",
       "build": "22O5764B",
-      "released_at": null,
+      "released_at": "2025-06-30T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.6-beta-2/22O5764B.json",
@@ -1889,7 +1889,7 @@
       "version": "2.6",
       "version_label": "2.6-beta",
       "build": "22O5754C",
-      "released_at": null,
+      "released_at": "2025-06-16T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.6-beta/22O5754C.json",
@@ -1908,11 +1908,34 @@
       ]
     },
     {
+      "id": "visionos-beta-2.5-rc-22O473",
+      "version": "2.5",
+      "version_label": "2.5-rc",
+      "build": "22O473",
+      "released_at": "2025-05-06T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.5-rc/22O473.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-2.5-rc-22O473-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.5_22O473_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-44320/C1A9E952-EA7B-4A30-B0BB-CA19C1014638/Apple_Vision_Pro_2.5_22O473_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
       "id": "visionos-beta-2.5-beta-4-22O5467A",
       "version": "2.5",
       "version_label": "2.5-beta-4",
       "build": "22O5467A",
-      "released_at": null,
+      "released_at": "2025-04-28T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.5-beta-4/22O5467A.json",
@@ -1935,7 +1958,7 @@
       "version": "2.5",
       "version_label": "2.5-beta-3",
       "build": "22O5459C",
-      "released_at": null,
+      "released_at": "2025-04-21T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.5-beta-3/22O5459C.json",
@@ -1958,7 +1981,7 @@
       "version": "2.5",
       "version_label": "2.5-beta-2",
       "build": "22O5453E",
-      "released_at": null,
+      "released_at": "2025-04-14T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.5-beta-2/22O5453E.json",
@@ -1981,7 +2004,7 @@
       "version": "2.5",
       "version_label": "2.5-beta",
       "build": "22O5442G",
-      "released_at": null,
+      "released_at": "2025-04-02T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.5-beta/22O5442G.json",
@@ -2000,34 +2023,11 @@
       ]
     },
     {
-      "id": "visionos-beta-2.5-rc-22O473",
-      "version": "2.5",
-      "version_label": "2.5-rc",
-      "build": "22O473",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "2.5-rc/22O473.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-2.5-rc-22O473-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_2.5_22O473_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2025SpringFCS/fullrestores/082-44320/C1A9E952-EA7B-4A30-B0BB-CA19C1014638/Apple_Vision_Pro_2.5_22O473_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
       "id": "visionos-beta-2.4.1-22O251",
       "version": "2.4.1",
       "version_label": "2.4.1",
       "build": "22O251",
-      "released_at": null,
+      "released_at": "2025-04-16T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.4.1/22O251.json",
@@ -2046,103 +2046,11 @@
       ]
     },
     {
-      "id": "visionos-beta-2.4-beta-4-22O5231A",
-      "version": "2.4",
-      "version_label": "2.4-beta-4",
-      "build": "22O5231A",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "2.4-beta-4/22O5231A.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-2.4-beta-4-22O5231A-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_2.4_22O5231a_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/082-07919/652EAA36-0162-4B67-AC5E-A84C33036D24/Apple_Vision_Pro_2.4_22O5231a_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-2.4-beta-3-22O5221D",
-      "version": "2.4",
-      "version_label": "2.4-beta-3",
-      "build": "22O5221D",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "2.4-beta-3/22O5221D.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-2.4-beta-3-22O5221D-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_2.4_22O5221d_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/072-97012/B089AECC-510E-43E6-B780-2081D636BFCC/Apple_Vision_Pro_2.4_22O5221d_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-2.4-beta-2-22O5215F",
-      "version": "2.4",
-      "version_label": "2.4-beta-2",
-      "build": "22O5215F",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "2.4-beta-2/22O5215F.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-2.4-beta-2-22O5215F-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_2.4_22O5215f_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/072-94759/BE9DA465-ECC0-4D1B-A735-703F77CD5571/Apple_Vision_Pro_2.4_22O5215f_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-2.4-beta-22O5199O",
-      "version": "2.4",
-      "version_label": "2.4-beta",
-      "build": "22O5199O",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "2.4-beta/22O5199O.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-2.4-beta-22O5199O-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_2.4_22O5199o_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/072-90551/F5479625-0E4A-403D-BF39-4420580E2260/Apple_Vision_Pro_2.4_22O5199o_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
       "id": "visionos-beta-2.4-22O238",
       "version": "2.4",
       "version_label": "2.4",
       "build": "22O238",
-      "released_at": null,
+      "released_at": "2025-03-31T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.4/22O238.json",
@@ -2165,7 +2073,7 @@
       "version": "2.4",
       "version_label": "2.4-rc",
       "build": "22O237",
-      "released_at": null,
+      "released_at": "2025-03-24T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.4-rc/22O237.json",
@@ -2184,11 +2092,103 @@
       ]
     },
     {
+      "id": "visionos-beta-2.4-beta-4-22O5231A",
+      "version": "2.4",
+      "version_label": "2.4-beta-4",
+      "build": "22O5231A",
+      "released_at": "2025-03-17T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.4-beta-4/22O5231A.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-2.4-beta-4-22O5231A-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.4_22O5231a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/082-07919/652EAA36-0162-4B67-AC5E-A84C33036D24/Apple_Vision_Pro_2.4_22O5231a_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-2.4-beta-3-22O5221D",
+      "version": "2.4",
+      "version_label": "2.4-beta-3",
+      "build": "22O5221D",
+      "released_at": "2025-03-10T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.4-beta-3/22O5221D.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-2.4-beta-3-22O5221D-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.4_22O5221d_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/072-97012/B089AECC-510E-43E6-B780-2081D636BFCC/Apple_Vision_Pro_2.4_22O5221d_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-2.4-beta-2-22O5215F",
+      "version": "2.4",
+      "version_label": "2.4-beta-2",
+      "build": "22O5215F",
+      "released_at": "2025-03-03T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.4-beta-2/22O5215F.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-2.4-beta-2-22O5215F-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.4_22O5215f_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/072-94759/BE9DA465-ECC0-4D1B-A735-703F77CD5571/Apple_Vision_Pro_2.4_22O5215f_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-2.4-beta-22O5199O",
+      "version": "2.4",
+      "version_label": "2.4-beta",
+      "build": "22O5199O",
+      "released_at": "2025-02-21T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.4-beta/22O5199O.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-2.4-beta-22O5199O-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.4_22O5199o_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2025WinterSeed/fullrestores/072-90551/F5479625-0E4A-403D-BF39-4420580E2260/Apple_Vision_Pro_2.4_22O5199o_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
       "id": "visionos-beta-2.3.2-22N906",
       "version": "2.3.2",
       "version_label": "2.3.2",
       "build": "22N906",
-      "released_at": null,
+      "released_at": "2025-03-11T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.3.2/22N906.json",
@@ -2211,7 +2211,7 @@
       "version": "2.3.1",
       "version_label": "2.3.1",
       "build": "22N900",
-      "released_at": null,
+      "released_at": "2025-02-10T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.3.1/22N900.json",
@@ -2234,7 +2234,7 @@
       "version": "2.3",
       "version_label": "2.3-rc",
       "build": "22N896",
-      "released_at": null,
+      "released_at": "2025-01-21T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.3-rc/22N896.json",
@@ -2257,7 +2257,7 @@
       "version": "2.3",
       "version_label": "2.3-beta-3",
       "build": "22N5894A",
-      "released_at": null,
+      "released_at": "2025-01-16T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.3-beta-3/22N5894A.json",
@@ -2280,7 +2280,7 @@
       "version": "2.3",
       "version_label": "2.3-beta-2",
       "build": "22N5881D",
-      "released_at": null,
+      "released_at": "2025-01-07T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.3-beta-2/22N5881D.json",
@@ -2303,7 +2303,7 @@
       "version": "2.3",
       "version_label": "2.3-beta",
       "build": "22N5875E",
-      "released_at": null,
+      "released_at": "2024-12-16T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.3-beta/22N5875E.json",
@@ -2326,7 +2326,7 @@
       "version": "2.2",
       "version_label": "2.2",
       "build": "22N842",
-      "released_at": null,
+      "released_at": "2024-12-11T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.2/22N842.json",
@@ -2349,7 +2349,7 @@
       "version": "2.2",
       "version_label": "2.2-rc-2",
       "build": "22N841",
-      "released_at": null,
+      "released_at": "2024-12-09T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.2-rc-2/22N841.json",
@@ -2372,7 +2372,7 @@
       "version": "2.2",
       "version_label": "2.2-rc",
       "build": "22N840",
-      "released_at": null,
+      "released_at": "2024-12-05T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.2-rc/22N840.json",
@@ -2395,7 +2395,7 @@
       "version": "2.2",
       "version_label": "2.2-beta-4",
       "build": "22N5800A",
-      "released_at": null,
+      "released_at": "2024-12-03T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.2-beta-4/22N5800A.json",
@@ -2418,7 +2418,7 @@
       "version": "2.2",
       "version_label": "2.2-beta-3",
       "build": "22N5794A",
-      "released_at": null,
+      "released_at": "2024-11-18T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.2-beta-3/22N5794A.json",
@@ -2441,7 +2441,7 @@
       "version": "2.2",
       "version_label": "2.2-beta-2",
       "build": "22N5784E",
-      "released_at": null,
+      "released_at": "2024-11-12T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.2-beta-2/22N5784E.json",
@@ -2464,7 +2464,7 @@
       "version": "2.2",
       "version_label": "2.2-beta",
       "build": "22N5778F",
-      "released_at": null,
+      "released_at": "2024-11-04T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.2-beta/22N5778F.json",
@@ -2487,7 +2487,7 @@
       "version": "2.1.1",
       "version_label": "2.1.1",
       "build": "22N591",
-      "released_at": null,
+      "released_at": "2024-11-19T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.1.1/22N591.json",
@@ -2510,7 +2510,7 @@
       "version": "2.1",
       "version_label": "2.1-rc-2",
       "build": "22N581",
-      "released_at": null,
+      "released_at": "2024-10-22T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.1-rc-2/22N581.json",
@@ -2533,7 +2533,7 @@
       "version": "2.1",
       "version_label": "2.1-rc",
       "build": "22N580",
-      "released_at": null,
+      "released_at": "2024-10-21T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.1-rc/22N580.json",
@@ -2556,7 +2556,7 @@
       "version": "2.1",
       "version_label": "2.1-beta-6",
       "build": "22N5573B",
-      "released_at": null,
+      "released_at": "2024-10-18T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.1-beta-6/22N5573B.json",
@@ -2579,7 +2579,7 @@
       "version": "2.1",
       "version_label": "2.1-beta-5",
       "build": "22N5573A",
-      "released_at": null,
+      "released_at": "2024-10-14T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.1-beta-5/22N5573A.json",
@@ -2602,7 +2602,7 @@
       "version": "2.1",
       "version_label": "2.1-beta-4",
       "build": "22N5567A",
-      "released_at": null,
+      "released_at": "2024-10-07T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.1-beta-4/22N5567A.json",
@@ -2625,7 +2625,7 @@
       "version": "2.1",
       "version_label": "2.1-beta-3",
       "build": "22N5558E",
-      "released_at": null,
+      "released_at": "2024-10-01T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.1-beta-3/22N5558E.json",
@@ -2648,7 +2648,7 @@
       "version": "2.1",
       "version_label": "2.1-beta-2",
       "build": "22N5553D",
-      "released_at": null,
+      "released_at": "2024-09-23T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.1-beta-2/22N5553D.json",
@@ -2671,7 +2671,7 @@
       "version": "2.1",
       "version_label": "2.1-beta",
       "build": "22N5548D",
-      "released_at": null,
+      "released_at": "2024-09-17T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.1-beta/22N5548D.json",
@@ -2694,7 +2694,7 @@
       "version": "2.0.1",
       "version_label": "2.0.1",
       "build": "22N342",
-      "released_at": null,
+      "released_at": "2024-10-03T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.0.1/22N342.json",
@@ -2713,11 +2713,34 @@
       ]
     },
     {
+      "id": "visionos-beta-2.0-rc-22N320",
+      "version": "2.0",
+      "version_label": "2.0-rc",
+      "build": "22N320",
+      "released_at": "2024-09-09T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "2.0-rc/22N320.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-2.0-rc-22N320-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_2.0_22N320_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024FallFCS/fullrestores/062-78392/FF14AD56-2171-42AA-9AE4-0F9DAD4944D3/Apple_Vision_Pro_2.0_22N320_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
       "id": "visionos-beta-2.0-beta-9-22N5319A",
       "version": "2.0",
       "version_label": "2.0-beta-9",
       "build": "22N5319A",
-      "released_at": null,
+      "released_at": "2024-09-03T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.0-beta-9/22N5319A.json",
@@ -2740,7 +2763,7 @@
       "version": "2.0",
       "version_label": "2.0-beta-8",
       "build": "22N5318A",
-      "released_at": null,
+      "released_at": "2024-08-28T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.0-beta-8/22N5318A.json",
@@ -2763,7 +2786,7 @@
       "version": "2.0",
       "version_label": "2.0-beta-7",
       "build": "22N5314A",
-      "released_at": null,
+      "released_at": "2024-08-20T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.0-beta-7/22N5314A.json",
@@ -2786,7 +2809,7 @@
       "version": "2.0",
       "version_label": "2.0-beta-6",
       "build": "22N5308B",
-      "released_at": null,
+      "released_at": "2024-08-12T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.0-beta-6/22N5308B.json",
@@ -2809,7 +2832,7 @@
       "version": "2.0",
       "version_label": "2.0-beta-5",
       "build": "22N5297G",
-      "released_at": null,
+      "released_at": "2024-08-05T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.0-beta-5/22N5297G.json",
@@ -2832,7 +2855,7 @@
       "version": "2.0",
       "version_label": "2.0-beta-4",
       "build": "22N5286G",
-      "released_at": null,
+      "released_at": "2024-07-23T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.0-beta-4/22N5286G.json",
@@ -2855,7 +2878,7 @@
       "version": "2.0",
       "version_label": "2.0-beta-3",
       "build": "22N5277G",
-      "released_at": null,
+      "released_at": "2024-07-08T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.0-beta-3/22N5277G.json",
@@ -2878,7 +2901,7 @@
       "version": "2.0",
       "version_label": "2.0-beta-2",
       "build": "22N5267G",
-      "released_at": null,
+      "released_at": "2024-06-24T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.0-beta-2/22N5267G.json",
@@ -2901,7 +2924,7 @@
       "version": "2.0",
       "version_label": "2.0-beta",
       "build": "22N5252N",
-      "released_at": null,
+      "released_at": "2024-06-10T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "2.0-beta/22N5252N.json",
@@ -2920,34 +2943,11 @@
       ]
     },
     {
-      "id": "visionos-beta-2.0-rc-22N320",
-      "version": "2.0",
-      "version_label": "2.0-rc",
-      "build": "22N320",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "2.0-rc/22N320.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-2.0-rc-22N320-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_2.0_22N320_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2024FallFCS/fullrestores/062-78392/FF14AD56-2171-42AA-9AE4-0F9DAD4944D3/Apple_Vision_Pro_2.0_22N320_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
       "id": "visionos-beta-1.3-rc-21O771",
       "version": "1.3",
       "version_label": "1.3-rc",
       "build": "21O771",
-      "released_at": null,
+      "released_at": "2024-07-23T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.3-rc/21O771.json",
@@ -2970,7 +2970,7 @@
       "version": "1.3",
       "version_label": "1.3-beta-4",
       "build": "21O5768A",
-      "released_at": null,
+      "released_at": "2024-07-16T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.3-beta-4/21O5768A.json",
@@ -2993,7 +2993,7 @@
       "version": "1.3",
       "version_label": "1.3-beta-3",
       "build": "21O5761A",
-      "released_at": null,
+      "released_at": "2024-07-09T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.3-beta-3/21O5761A.json",
@@ -3016,7 +3016,7 @@
       "version": "1.3",
       "version_label": "1.3-beta-2",
       "build": "21O5756A",
-      "released_at": null,
+      "released_at": "2024-07-01T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.3-beta-2/21O5756A.json",
@@ -3039,7 +3039,7 @@
       "version": "1.3",
       "version_label": "1.3-beta",
       "build": "21O5747C",
-      "released_at": null,
+      "released_at": "2024-06-17T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.3-beta/21O5747C.json",
@@ -3062,7 +3062,7 @@
       "version": "1.2",
       "version_label": "1.2",
       "build": "21O589",
-      "released_at": null,
+      "released_at": "2024-06-10T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.2/21O589.json",
@@ -3085,7 +3085,7 @@
       "version": "1.2",
       "version_label": "1.2-beta-5",
       "build": "21O5587A",
-      "released_at": null,
+      "released_at": "2024-05-07T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.2-beta-5/21O5587A.json",
@@ -3108,7 +3108,7 @@
       "version": "1.2",
       "version_label": "1.2-beta-4",
       "build": "21O5580A",
-      "released_at": null,
+      "released_at": "2024-04-30T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.2-beta-4/21O5580A.json",
@@ -3131,7 +3131,7 @@
       "version": "1.2",
       "version_label": "1.2-beta-3",
       "build": "21O5570D",
-      "released_at": null,
+      "released_at": "2024-04-23T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.2-beta-3/21O5570D.json",
@@ -3154,7 +3154,7 @@
       "version": "1.2",
       "version_label": "1.2-beta-2",
       "build": "21O5565D",
-      "released_at": null,
+      "released_at": "2024-04-16T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.2-beta-2/21O5565D.json",
@@ -3177,7 +3177,7 @@
       "version": "1.2",
       "version_label": "1.2-beta",
       "build": "21O5555F",
-      "released_at": null,
+      "released_at": "2024-04-09T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.2-beta/21O5555F.json",
@@ -3200,7 +3200,7 @@
       "version": "1.2",
       "version_label": "1.2-beta",
       "build": "21O5555E",
-      "released_at": null,
+      "released_at": "2024-04-02T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.2-beta/21O5555E.json",
@@ -3223,7 +3223,7 @@
       "version": "1.1.2",
       "version_label": "1.1.2",
       "build": "21O231",
-      "released_at": null,
+      "released_at": "2024-04-09T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.1.2/21O231.json",
@@ -3246,7 +3246,7 @@
       "version": "1.1.1",
       "version_label": "1.1.1",
       "build": "21O224",
-      "released_at": null,
+      "released_at": "2024-03-21T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.1.1/21O224.json",
@@ -3265,103 +3265,11 @@
       ]
     },
     {
-      "id": "visionos-beta-1.1-beta-4-21O5203A",
-      "version": "1.1",
-      "version_label": "1.1-beta-4",
-      "build": "21O5203A",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "1.1-beta-4/21O5203A.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-1.1-beta-4-21O5203A-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_1.1_21O5203a_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2024WinterSeed/fullrestores/052-58484/625695BD-1AD5-4407-837A-AC9E95952CB0/Apple_Vision_Pro_1.1_21O5203a_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-1.1-beta-3-21O5197A",
-      "version": "1.1",
-      "version_label": "1.1-beta-3",
-      "build": "21O5197A",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "1.1-beta-3/21O5197A.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-1.1-beta-3-21O5197A-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_1.1_21O5197a_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2024WinterSeed/fullrestores/052-55541/DAE1ECF7-8841-4B7B-BB6F-CCF5BBEFE431/Apple_Vision_Pro_1.1_21O5197a_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-1.1-beta-2-21O5188C",
-      "version": "1.1",
-      "version_label": "1.1-beta-2",
-      "build": "21O5188C",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "1.1-beta-2/21O5188C.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-1.1-beta-2-21O5188C-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_1.1_21O5188c_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2024WinterSeed/fullrestores/052-51919/8343D0C7-AD6E-416D-8F1D-2A43345ECBBD/Apple_Vision_Pro_1.1_21O5188c_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
-      "id": "visionos-beta-1.1-beta-21O5181E",
-      "version": "1.1",
-      "version_label": "1.1-beta",
-      "build": "21O5181E",
-      "released_at": null,
-      "signed_firmware_count": 0,
-      "total_firmware_count": 1,
-      "data": "1.1-beta/21O5181E.json",
-      "firmwares": [
-        {
-          "id": "visionos-beta-1.1-beta-21O5181E-RealityDevice14,1",
-          "name": "Apple Vision Pro",
-          "devices": [
-            "RealityDevice14,1"
-          ],
-          "filename": "Apple_Vision_Pro_1.1_21O5181e_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2024WinterSeed/fullrestores/052-11625/CFA72F33-0B76-4EA1-9A06-89DDA1A00131/Apple_Vision_Pro_1.1_21O5181e_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        }
-      ]
-    },
-    {
       "id": "visionos-beta-1.1-21O211",
       "version": "1.1",
       "version_label": "1.1",
       "build": "21O211",
-      "released_at": null,
+      "released_at": "2024-03-07T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.1/21O211.json",
@@ -3384,7 +3292,7 @@
       "version": "1.1",
       "version_label": "1.1-rc",
       "build": "21O209",
-      "released_at": null,
+      "released_at": "2024-03-04T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.1-rc/21O209.json",
@@ -3403,11 +3311,103 @@
       ]
     },
     {
+      "id": "visionos-beta-1.1-beta-4-21O5203A",
+      "version": "1.1",
+      "version_label": "1.1-beta-4",
+      "build": "21O5203A",
+      "released_at": "2024-02-27T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "1.1-beta-4/21O5203A.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-1.1-beta-4-21O5203A-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_1.1_21O5203a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterSeed/fullrestores/052-58484/625695BD-1AD5-4407-837A-AC9E95952CB0/Apple_Vision_Pro_1.1_21O5203a_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-1.1-beta-3-21O5197A",
+      "version": "1.1",
+      "version_label": "1.1-beta-3",
+      "build": "21O5197A",
+      "released_at": "2024-02-20T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "1.1-beta-3/21O5197A.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-1.1-beta-3-21O5197A-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_1.1_21O5197a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterSeed/fullrestores/052-55541/DAE1ECF7-8841-4B7B-BB6F-CCF5BBEFE431/Apple_Vision_Pro_1.1_21O5197a_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-1.1-beta-2-21O5188C",
+      "version": "1.1",
+      "version_label": "1.1-beta-2",
+      "build": "21O5188C",
+      "released_at": "2024-02-13T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "1.1-beta-2/21O5188C.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-1.1-beta-2-21O5188C-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_1.1_21O5188c_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterSeed/fullrestores/052-51919/8343D0C7-AD6E-416D-8F1D-2A43345ECBBD/Apple_Vision_Pro_1.1_21O5188c_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "visionos-beta-1.1-beta-21O5181E",
+      "version": "1.1",
+      "version_label": "1.1-beta",
+      "build": "21O5181E",
+      "released_at": "2024-02-06T12:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "1.1-beta/21O5181E.json",
+      "firmwares": [
+        {
+          "id": "visionos-beta-1.1-beta-21O5181E-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_1.1_21O5181e_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2024WinterSeed/fullrestores/052-11625/CFA72F33-0B76-4EA1-9A06-89DDA1A00131/Apple_Vision_Pro_1.1_21O5181e_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
       "id": "visionos-beta-1.0.3-21N333",
       "version": "1.0.3",
       "version_label": "1.0.3",
       "build": "21N333",
-      "released_at": null,
+      "released_at": "2024-02-12T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.0.3/21N333.json",
@@ -3430,7 +3430,7 @@
       "version": "1.0.2",
       "version_label": "1.0.2",
       "build": "21N323",
-      "released_at": null,
+      "released_at": "2024-01-31T12:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "1.0.2/21N323.json",
@@ -3449,5 +3449,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-10-01T05:46:20+09:00"
+  "generated_at_tokyo": "2026-10-04T22:40:50+09:00"
 }

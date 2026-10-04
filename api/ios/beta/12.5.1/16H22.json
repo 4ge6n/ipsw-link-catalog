@@ -4,13 +4,13 @@
   "version": "12.5.1",
   "version_label": "12.5.1",
   "build": "16H22",
-  "released_at": null,
+  "released_at": "2021-01-11T12:00:00Z",
   "prerelease": true,
   "release_candidate": false,
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:25:58Z"
+      "checked_at": "2026-10-04T13:40:50Z"
     }
   ],
   "firmwares": [
@@ -68,7 +68,7 @@
       }
     },
     {
-      "name": "iPad mini 3 Wi",
+      "name": "iPad mini 3 Wi-Fi",
       "devices": [
         "iPad4,7",
         "iPad4,8",
@@ -83,7 +83,7 @@
       }
     },
     {
-      "name": "iPad Air Wi",
+      "name": "iPad Air Wi-Fi",
       "devices": [
         "iPad4,1",
         "iPad4,2",
@@ -102,5 +102,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:25:58Z"
+  "last_seen_at": "2026-10-04T13:40:50Z"
 }

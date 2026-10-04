@@ -4,13 +4,13 @@
   "version": "12.1",
   "version_label": "12.1-beta",
   "build": "16B5059D",
-  "released_at": null,
+  "released_at": "2018-09-18T12:00:00Z",
   "prerelease": true,
   "release_candidate": false,
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:25:58Z"
+      "checked_at": "2026-10-04T13:40:50Z"
     }
   ],
   "firmwares": [
@@ -143,7 +143,7 @@
       }
     },
     {
-      "name": "iPad Pro (12.9",
+      "name": "iPad Pro (12.9-inch) (2nd generation) Wi-Fi",
       "devices": [
         "iPad7,1",
         "iPad7,2",
@@ -159,7 +159,7 @@
       }
     },
     {
-      "name": "iPad Pro (12.9",
+      "name": "iPad Pro (12.9-inch) (1st generation) Wi-Fi",
       "devices": [
         "iPad6,7",
         "iPad6,8"
@@ -173,7 +173,7 @@
       }
     },
     {
-      "name": "iPad Pro (9.7",
+      "name": "iPad Pro (9.7-inch) Wi-Fi",
       "devices": [
         "iPad6,3",
         "iPad6,4"
@@ -187,7 +187,7 @@
       }
     },
     {
-      "name": "iPad mini 4 Wi",
+      "name": "iPad mini 4 Wi-Fi",
       "devices": [
         "iPad5,1",
         "iPad5,2",
@@ -203,7 +203,7 @@
       }
     },
     {
-      "name": "iPad mini 3 Wi",
+      "name": "iPad mini 3 Wi-Fi",
       "devices": [
         "iPad4,7",
         "iPad4,8",
@@ -222,7 +222,7 @@
       }
     },
     {
-      "name": "iPad Air Wi",
+      "name": "iPad Air Wi-Fi",
       "devices": [
         "iPad4,1",
         "iPad4,2",
@@ -241,5 +241,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:25:58Z"
+  "last_seen_at": "2026-10-04T13:40:50Z"
 }

@@ -9,13 +9,13 @@
   "release_candidate": true,
   "sources": [
     {
-      "name": "ipsw.dev",
-      "checked_at": "2026-09-15T21:31:38Z"
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-10-04T13:40:50Z"
     }
   ],
   "firmwares": [
     {
-      "name": "iPad Pro 12.9-inch (4th generation) Wi-Fi + Cellular",
+      "name": "iPad Pro 11-inch (1st generation) Wi-Fi",
       "devices": [
         "iPad8,1",
         "iPad8,10",
@@ -39,7 +39,21 @@
       }
     },
     {
-      "name": "iPad Air (3rd generation) Wi-Fi + Cellular",
+      "name": "iPad (8th generation) Wi-Fi",
+      "devices": [
+        "iPad11,6",
+        "iPad11,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/a450ccb6-6fca-445c-bbeb-1fded28367dc/iPad_10.2_2020_26.7_23H24_Restore.ipsw",
+      "filename": "iPad_10.2_2020_26.7_23H24_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-11T19:39:29Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini (5th generation) Wi-Fi",
       "devices": [
         "iPad11,1",
         "iPad11,2",
@@ -53,22 +67,8 @@
         "checked_at": "2026-09-11T19:39:29Z",
         "unsigned_since": null
       }
-    },
-    {
-      "name": "iPad (8th generation) Wi-Fi + Cellular",
-      "devices": [
-        "iPad11,6",
-        "iPad11,7"
-      ],
-      "url": "https://updates.cdn-apple.com/2026FallFCS/a450ccb6-6fca-445c-bbeb-1fded28367dc/iPad_10.2_2020_26.7_23H24_Restore.ipsw",
-      "filename": "iPad_10.2_2020_26.7_23H24_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-11T19:39:29Z",
-        "unsigned_since": null
-      }
     }
   ],
   "first_seen_at": "2026-09-11T19:39:29Z",
-  "last_seen_at": "2026-09-15T21:31:38Z"
+  "last_seen_at": "2026-10-04T13:40:50Z"
 }

@@ -4,13 +4,13 @@
   "version": "12.1.3",
   "version_label": "12.1.3",
   "build": "16D40",
-  "released_at": null,
+  "released_at": "2019-01-22T12:00:00Z",
   "prerelease": true,
   "release_candidate": false,
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-09-12T11:25:58Z"
+      "checked_at": "2026-10-04T13:40:50Z"
     }
   ],
   "firmwares": [
@@ -55,7 +55,7 @@
       }
     },
     {
-      "name": "iPad Pro 11",
+      "name": "iPad Pro 11-inch (1st generation) Wi-Fi",
       "devices": [
         "iPad8,1",
         "iPad8,2",
@@ -76,5 +76,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T11:20:35Z",
-  "last_seen_at": "2026-09-12T11:25:58Z"
+  "last_seen_at": "2026-10-04T13:40:50Z"
 }
