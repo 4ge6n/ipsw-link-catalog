@@ -12,6 +12,8 @@ import html, os
 import re
 from urllib.parse import unquote
 from urllib.request import Request, urlopen
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 BASE = "https://ipswbeta.dev"
 PATHS = {"ios": "ios", "ipados": "ipados", "macos": "macos", "tvos": "tvos", "visionos": "visionos"}
@@ -56,8 +58,10 @@ def row_date(page: str, at: int) -> str | None:
     but never placed on a timeline or counted towards when the next might
     come. Only a date in the link's own row is taken, never a neighbour's.
 
-    The page gives a day, not a time. Noon UTC is written so the day stays
-    the same day in every time zone the apps are likely to show it in.
+    The page gives a day in Cupertino, not a time. Apple publishes at about
+    ten in the morning Pacific time, so that is what is written — which is
+    two or three the next morning in Japan. Writing noon UTC instead put
+    every beta a day early for anyone east of the Pacific date line.
     """
     start = page.rfind("<tr", 0, at)
     end = page.find("</tr>", at)
@@ -67,7 +71,8 @@ def row_date(page: str, at: int) -> str | None:
     if not found:
         return None
     month, day, year = MONTHS[found.group(1)], int(found.group(2)), int(found.group(3))
-    return f"{year:04d}-{month:02d}-{day:02d}T12:00:00Z"
+    local = datetime(year, month, day, 10, 0, tzinfo=ZoneInfo("America/Los_Angeles"))
+    return local.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 def candidates_for_device(item: tuple[str, str, str], timeout: int) -> list[dict]:
     os_key, track, identifier = item
