@@ -4,7 +4,7 @@
   "os_key": "visionos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-10-04T14:52:45Z",
+  "generated_at": "2026-10-05T22:46:57Z",
   "release_count": 32,
   "firmware_count": 42,
   "releases": [
@@ -48,7 +48,7 @@
       "version_label": "27.0",
       "build": "24M362",
       "released_at": "2026-09-14T17:25:28Z",
-      "signed_firmware_count": 2,
+      "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "27.0/24M362.json",
       "firmwares": [
@@ -61,7 +61,7 @@
           "filename": "Apple_Vision_Pro_M5_27.0_24M362_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/36f0fa38-2ff6-4ad3-8952-01b0b3a139d7/Apple_Vision_Pro_M5_27.0_24M362_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "visionos-release-27.0-24M362-RealityDevice14,1",
@@ -72,7 +72,7 @@
           "filename": "Apple_Vision_Pro_27.0_24M362_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/15a5b6d9-74ee-4986-a40e-63ee98bcd0ab/Apple_Vision_Pro_27.0_24M362_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -855,5 +855,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-10-04T23:52:45+09:00"
+  "generated_at_tokyo": "2026-10-06T07:46:57+09:00"
 }
