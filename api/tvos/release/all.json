@@ -4,7 +4,7 @@
   "os_key": "tvos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-10-05T22:46:57Z",
+  "generated_at": "2026-10-06T02:33:09Z",
   "release_count": 144,
   "firmware_count": 189,
   "releases": [
@@ -2585,7 +2585,7 @@
       "version_label": "8.4.2",
       "build": "12H606",
       "released_at": "2016-12-12T17:55:20Z",
-      "signed_firmware_count": 2,
+      "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "8.4.2/12H606.json",
       "firmwares": [
@@ -2598,7 +2598,7 @@
           "filename": "AppleTV3,2_8.4.2_12H606_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-84121-20161212-123095D6-B59A-11E6-A84D-CE194F99B54B/AppleTV3,2_8.4.2_12H606_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "tvos-release-8.4.2-12H606-AppleTV3,1",
@@ -2609,7 +2609,7 @@
           "filename": "AppleTV3,1_8.4.2_12H606_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-84128-20161212-12309AA4-B59A-11E6-AD42-AA1AE37229E1/AppleTV3,1_8.4.2_12H606_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -2857,7 +2857,7 @@
       "version_label": "7.1.2",
       "build": "11D258",
       "released_at": "2014-09-17T17:59:02Z",
-      "signed_firmware_count": 1,
+      "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "7.1.2/11D258.json",
       "firmwares": [
@@ -2870,7 +2870,7 @@
           "filename": "AppleTV2,1_6.2.1_11D258_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS8/031-07202.20140917.tF6Fs/AppleTV2,1_6.2.1_11D258_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -3816,5 +3816,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-10-06T07:46:57+09:00"
+  "generated_at_tokyo": "2026-10-06T11:33:09+09:00"
 }
