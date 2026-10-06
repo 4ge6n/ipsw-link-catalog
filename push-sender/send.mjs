@@ -114,6 +114,14 @@ if (key) {
       const wanted = test ? builds : builds.filter((build) =>
         (device.platforms.length === 0 || device.platforms.includes(build.os))
         && (device.betas || build.channel === "release"));
+      // Said aloud, so a phone that heard nothing can be told why from the
+      // run log: which phone (by the first few characters only), what it
+      // asked for, and what of this run it was sent.
+      console.log(JSON.stringify({
+        phone: device.token.slice(0, 8), sandbox: Boolean(device.sandbox),
+        platforms: device.platforms, betas: Boolean(device.betas),
+        sending: wanted.map((build) => `${build.os} ${build.version} ${build.build}`),
+      }));
       if (!test && wanted.length === 0) return null;
       const title = test
         ? "IPSW Browser test"
