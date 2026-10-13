@@ -4,7 +4,7 @@
   "os_key": "macos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-10-13T01:36:19Z",
+  "generated_at": "2026-10-13T08:27:16Z",
   "release_count": 1,
   "firmware_count": 1,
   "releases": [
@@ -18,7 +18,7 @@
       "firmwares": [
         {
           "id": "macos-release-27.0.1-26A434-Mac13,1",
-          "name": "MacBook Pro (M1, Late 2020)",
+          "name": "Mac mini (M1, Late 2020)",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -80,11 +80,11 @@
           ],
           "filename": "UniversalMac_27.0.1_26A434_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/59241290-5d51-4ca8-9df4-31624b9a4eac/UniversalMac_27.0.1_26A434_Restore.ipsw",
-          "sha1": null,
+          "sha1": "7e020710acade1911309aa73901ed5a92790bafc",
           "signed": true
         }
       ]
     }
   ],
-  "generated_at_tokyo": "2026-10-13T10:36:19+09:00"
+  "generated_at_tokyo": "2026-10-13T17:27:16+09:00"
 }
