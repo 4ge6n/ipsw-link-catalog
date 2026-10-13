@@ -31,9 +31,19 @@ const listFrom = async (path, field) => {
 
 // A test run proves the delivery path without waiting for Apple to ship.
 const test = process.env.TEST_PUSH === "1";
-const builds = (() => {
-  try { return JSON.parse(process.env.NEW_BUILDS || "[]"); } catch { return []; }
+const parsed = (name) => {
+  try { const value = JSON.parse(process.env[name] || "[]"); return Array.isArray(value) ? value : []; } catch { return []; }
+};
+// A beta is usually heard of twice: first from Apple's update service, before
+// it has any links, then hours later when its links reach the catalog. Each
+// build is announced once, whichever comes first.
+const keyOf = (build) => `${build.os}:${String(build.build).toUpperCase()}`;
+const announced = test ? [] : await (async () => {
+  try { return (await (await internal("/internal/announced")).json()).announced ?? []; } catch { return []; }
 })();
+const builds = [...parsed("OTA_BUILDS"), ...parsed("NEW_BUILDS")]
+  .filter((build, index, all) => all.findIndex((other) => keyOf(other) === keyOf(build)) === index)
+  .filter((build) => !announced.includes(keyOf(build)));
 // Builds that have just stopped being signed, each naming the devices it was
 // for. This is the one thing the catalog cannot tell anyone afterwards: a
 // build that is no longer signed simply leaves the list of what can be
@@ -43,7 +53,7 @@ const closed = (() => {
 })();
 
 const names = { ios: "iOS", ipados: "iPadOS", macos: "macOS", tvos: "tvOS", visionos: "visionOS", audioos: "audioOS" };
-const describe = (build) => `${names[build.os] ?? build.os} ${build.version} (${build.build})`;
+const describe = (build) => `${names[build.os] ?? build.os} ${build.label ?? build.version} (${build.build})`;
 
 /// What the whole run is about, for the browsers, which are not told which
 /// platform they asked for.
@@ -140,6 +150,10 @@ if (key) {
   for (const dead of phones.gone) {
     await internal("/internal/device-tokens", { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ token: dead }) });
   }
+}
+
+if (!test && builds.length > 0) {
+  await internal("/internal/announced", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ keys: builds.map(keyOf) }) });
 }
 
 console.log(JSON.stringify({

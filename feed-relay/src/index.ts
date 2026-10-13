@@ -1,4 +1,5 @@
 import { DurableObject } from "cloudflare:workers";
+import { otaBuilds, type OtaBuild } from "./ota";
 
 interface Env {
   FEED_STATE: DurableObjectNamespace<FeedState>;
@@ -67,7 +68,38 @@ async function fingerprint(): Promise<{ value: string; sources: string[] }> {
 }
 
 export class FeedState extends DurableObject<Env> {
-  async check(): Promise<{ changed: boolean; initial: boolean; retry_attempt?: number }> {
+  /// Builds Apple's update service offers that have not been seen before.
+  /// The first look only learns what is already out, so deploying this does
+  /// not announce every current beta at once.
+  private async newOtaBuilds(): Promise<OtaBuild[]> {
+    let found: OtaBuild[];
+    try {
+      ({ builds: found } = await otaBuilds());
+    } catch {
+      return [];
+    }
+    const key = (build: OtaBuild) => `${build.os}:${build.build.toUpperCase()}`;
+    const seen = await this.ctx.storage.get<string[]>("ota_seen");
+    const fresh = seen ? found.filter((build) => !seen.includes(key(build))) : [];
+    if (!seen || fresh.length > 0) {
+      await this.ctx.storage.put("ota_seen", [...new Set([...(seen ?? []), ...found.map(key)])].slice(-500));
+    }
+    if (fresh.length > 0) {
+      const pending = (await this.ctx.storage.get<OtaBuild[]>("ota_pending")) ?? [];
+      await this.ctx.storage.put("ota_pending", [...pending, ...fresh].slice(-20));
+    }
+    return fresh;
+  }
+
+  async check(): Promise<{ changed: boolean; initial: boolean; retry_attempt?: number; ota?: string[] }> {
+    const fresh = await this.newOtaBuilds();
+    if (fresh.length > 0) {
+      // A new build from Apple is reason enough to run now, whatever the
+      // other feeds say and wherever the retry sequence had got to.
+      await this.ctx.storage.put("retry_attempt", 0);
+      await this.ctx.storage.put("next_retry_at", Date.now());
+      await this.ctx.storage.put("ota_last_new", `${new Date().toISOString()} ${fresh.map((b) => `${b.os} ${b.label} ${b.build}`).join(", ")}`);
+    }
     const current = await fingerprint();
     const previous = await this.ctx.storage.get<string>("fingerprint");
     const previousSchema = await this.ctx.storage.get<number>("fingerprint_schema");
@@ -96,6 +128,9 @@ export class FeedState extends DurableObject<Env> {
     // Re-run a small, bounded sequence after a real feed change; idle polling
     // never creates GitHub Actions runs.
     await this.ctx.storage.put("pending_fingerprint", current.value);
+    // Held until GitHub accepts the dispatch, so a refused one is retried
+    // with the same builds rather than losing them.
+    const otaPending = (await this.ctx.storage.get<OtaBuild[]>("ota_pending")) ?? [];
     const response = await fetch(`https://api.github.com/repos/${this.env.GITHUB_REPOSITORY}/dispatches`, {
       method: "POST",
       headers: {
@@ -104,7 +139,7 @@ export class FeedState extends DurableObject<Env> {
         "User-Agent": "ipsw-link-catalog-feed-relay/1.0",
         "X-GitHub-Api-Version": "2022-11-28",
       },
-      body: JSON.stringify({ event_type: "firmware_release", client_payload: { sources: current.sources, retry_attempt: attempt } }),
+      body: JSON.stringify({ event_type: "firmware_release", client_payload: { sources: current.sources, retry_attempt: attempt, ota_builds: otaPending } }),
     });
     if (!response.ok) {
       // A rejected dispatch used to throw here, which left checked_at unwritten
@@ -115,6 +150,7 @@ export class FeedState extends DurableObject<Env> {
       return { changed: sourceChanged, initial: false, retry_attempt: attempt };
     }
     await this.ctx.storage.delete("last_dispatch_error");
+    await this.ctx.storage.delete("ota_pending");
     await this.ctx.storage.delete("pending_fingerprint");
     const nextAttempt = attempt + 1;
     if (nextAttempt < RETRY_DELAYS_MS.length) {
@@ -137,7 +173,21 @@ export class FeedState extends DurableObject<Env> {
       // Present only when GitHub last refused the dispatch, which is the one
       // failure that cannot be seen from outside the Worker otherwise.
       last_dispatch_error: await this.ctx.storage.get("last_dispatch_error"),
+      ota_last_new: await this.ctx.storage.get("ota_last_new"),
+      ota_pending: ((await this.ctx.storage.get<OtaBuild[]>("ota_pending")) ?? []).map((b) => `${b.os} ${b.label} ${b.build}`),
     };
+  }
+
+  /// Builds a notification has already gone out for, so a beta announced
+  /// from Apple's update service is not announced again when its links land
+  /// in the catalog hours later.
+  async announced(): Promise<string[]> {
+    return (await this.ctx.storage.get<string[]>("announced")) ?? [];
+  }
+
+  async announce(keys: string[]): Promise<void> {
+    const known = await this.announced();
+    await this.ctx.storage.put("announced", [...new Set([...known, ...keys])].slice(-1000));
   }
 }
 
@@ -272,6 +322,16 @@ export default {
         const { token } = await request.json<{ token?: string }>();
         if (!token) return new Response("Invalid device token", { status: 400 });
         await devices.remove(token);
+        return new Response(null, { status: 204 });
+      }
+    }
+    if (url.pathname === "/internal/announced") {
+      if (!authorized(request, env.PUSH_API_TOKEN)) return new Response("Unauthorized", { status: 401 });
+      const feeds = env.FEED_STATE.getByName("firmware-feeds");
+      if (request.method === "GET") return Response.json({ announced: await feeds.announced() });
+      if (request.method === "POST") {
+        const { keys } = await request.json<{ keys?: string[] }>();
+        await feeds.announce((keys ?? []).filter((key) => typeof key === "string").slice(0, 100));
         return new Response(null, { status: 204 });
       }
     }
