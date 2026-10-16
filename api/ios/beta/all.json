@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-10-16T05:10:51Z",
+  "generated_at": "2026-10-16T09:57:29Z",
   "release_count": 545,
   "firmware_count": 8649,
   "releases": [
@@ -598,6 +598,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.2_24B5099f_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/72166a39-a639-43e9-83eb-da9e27bd9489/iPhone14,4_27.2_24B5099f_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.2-beta-3-24B5099F-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -684,17 +695,6 @@
           ],
           "filename": "iPhone12,1_27.2_24B5099f_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallSeed/930cb119-cb7c-45b5-ad45-5e70492ccc9c/iPhone12,1_27.2_24B5099f_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.2_24B5099f_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallSeed/72166a39-a639-43e9-83eb-da9e27bd9489/iPhone14,4_27.2_24B5099f_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -944,6 +944,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.2_24B5089g_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/8287d719-5af8-417e-91c8-3fb0a123bde5/iPhone14,4_27.2_24B5089g_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.2-beta-2-24B5089G-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -1030,17 +1041,6 @@
           ],
           "filename": "iPhone12,1_27.2_24B5089g_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallSeed/ee2bf86c-c98a-46fb-8707-20e7e9cf2627/iPhone12,1_27.2_24B5089g_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.2_24B5089g_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallSeed/8287d719-5af8-417e-91c8-3fb0a123bde5/iPhone14,4_27.2_24B5089g_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -1290,6 +1290,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.2-beta-24B5084K-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.2_24B5084k_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/4af6d1f9-b36c-44ed-bbea-29ccc5f6180a/iPhone14,4_27.2_24B5084k_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.2-beta-24B5084K-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -1376,17 +1387,6 @@
           ],
           "filename": "iPhone12,1_27.2_24B5084k_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallSeed/21c37aa5-58dc-42d5-9bbd-459c576aeaa1/iPhone12,1_27.2_24B5084k_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.2-beta-24B5084K-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.2_24B5084k_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallSeed/4af6d1f9-b36c-44ed-bbea-29ccc5f6180a/iPhone14,4_27.2_24B5084k_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -1656,6 +1656,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.0.1-24A446-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.0.1_24A446_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/0748752a-4554-47fe-b07e-36b5702830b8/iPhone14,4_27.0.1_24A446_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.0.1-24A446-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -1742,17 +1753,6 @@
           ],
           "filename": "iPhone12,1_27.0.1_24A446_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/0ff99efa-0099-463a-85d0-8d0c83b3a7a1/iPhone12,1_27.0.1_24A446_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.0.1-24A446-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.0.1_24A446_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/0748752a-4554-47fe-b07e-36b5702830b8/iPhone14,4_27.0.1_24A446_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -2022,6 +2022,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.0-24A437-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.0_24A437_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/ec9a617d-f05e-4cd9-9e70-e23c47abf18c/iPhone14,4_27.0_24A437_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.0-24A437-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -2108,17 +2119,6 @@
           ],
           "filename": "iPhone12,1_27.0_24A437_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/d47bac10-cddf-4f79-a014-411e2fea1fdb/iPhone12,1_27.0_24A437_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.0-24A437-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.0_24A437_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/ec9a617d-f05e-4cd9-9e70-e23c47abf18c/iPhone14,4_27.0_24A437_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -2355,6 +2355,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.0-rc-24A435-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.0_24A435_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/619fbd5f-ca2b-4c5a-bef3-eda53bd02ab3/iPhone14,4_27.0_24A435_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.0-rc-24A435-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -2441,17 +2452,6 @@
           ],
           "filename": "iPhone12,1_27.0_24A435_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/dd6ac1a0-8f9c-436c-a4b7-e8cbd509ae87/iPhone12,1_27.0_24A435_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.0-rc-24A435-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.0_24A435_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/619fbd5f-ca2b-4c5a-bef3-eda53bd02ab3/iPhone14,4_27.0_24A435_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -2688,6 +2688,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.0_24A5430a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringSeed/3ffea56f-1466-401c-9b5e-d97017936c6f/iPhone14,4_27.0_24A5430a_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.0-beta-8-24A5430A-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -2774,17 +2785,6 @@
           ],
           "filename": "iPhone12,1_27.0_24A5430a_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SpringSeed/d8214853-f9e5-4bd3-ac86-288a6a702745/iPhone12,1_27.0_24A5430a_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.0_24A5430a_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026SpringSeed/3ffea56f-1466-401c-9b5e-d97017936c6f/iPhone14,4_27.0_24A5430a_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -3021,6 +3021,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.0_24A5424a_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringSeed/141c8daf-999d-48fb-85c4-efc19e409c95/iPhone14,4_27.0_24A5424a_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.0-beta-7-24A5424A-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -3107,17 +3118,6 @@
           ],
           "filename": "iPhone12,1_27.0_24A5424a_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SpringSeed/277735d2-0f45-4f34-af87-0ec763c96b0e/iPhone12,1_27.0_24A5424a_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.0_24A5424a_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026SpringSeed/141c8daf-999d-48fb-85c4-efc19e409c95/iPhone14,4_27.0_24A5424a_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -3354,6 +3354,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.0_24A5418b_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringSeed/d682ec22-1e03-4207-a37a-7f68abe4e83b/iPhone14,4_27.0_24A5418b_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.0-beta-6-24A5418B-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -3440,17 +3451,6 @@
           ],
           "filename": "iPhone12,1_27.0_24A5418b_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SpringSeed/d47a0caa-8370-4f76-b6db-530036d40fea/iPhone12,1_27.0_24A5418b_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.0_24A5418b_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026SpringSeed/d682ec22-1e03-4207-a37a-7f68abe4e83b/iPhone14,4_27.0_24A5418b_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -3687,6 +3687,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.0_24A5408d_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-92461/35530B74-7B50-4F39-9A68-FDB1A273B21A/iPhone14,4_27.0_24A5408d_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.0-beta-5-24A5408D-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -3773,17 +3784,6 @@
           ],
           "filename": "iPhone12,1_27.0_24A5408d_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-88307/45EFADAD-349E-4B74-8A50-9720A6166D40/iPhone12,1_27.0_24A5408d_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.0_24A5408d_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-92461/35530B74-7B50-4F39-9A68-FDB1A273B21A/iPhone14,4_27.0_24A5408d_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -4020,6 +4020,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.0_24A5390f_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-57444/CC1CC96B-D278-4C33-9418-A46E6EA8EAF1/iPhone14,4_27.0_24A5390f_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.0-beta-4-24A5390F-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -4106,17 +4117,6 @@
           ],
           "filename": "iPhone12,1_27.0_24A5390f_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-57675/E5882B77-9CE2-4290-A637-1AD5271DFD37/iPhone12,1_27.0_24A5390f_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.0_24A5390f_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-57444/CC1CC96B-D278-4C33-9418-A46E6EA8EAF1/iPhone14,4_27.0_24A5390f_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -4353,6 +4353,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.0_24A5380h_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-35965/4A6C5D84-7F1A-440A-9EF5-D0ABF2FD1F36/iPhone14,4_27.0_24A5380h_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.0-beta-3-24A5380H-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -4439,17 +4450,6 @@
           ],
           "filename": "iPhone12,1_27.0_24A5380h_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-36357/5058D7CB-6E6C-41BC-BA64-F481AD9688FA/iPhone12,1_27.0_24A5380h_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.0_24A5380h_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-35965/4A6C5D84-7F1A-440A-9EF5-D0ABF2FD1F36/iPhone14,4_27.0_24A5380h_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -4686,6 +4686,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.0_24A5370h_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-20534/3EC26AAF-9FA9-4791-B0D4-90453D9FA877/iPhone14,4_27.0_24A5370h_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.0-beta-2-24A5370H-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -4772,17 +4783,6 @@
           ],
           "filename": "iPhone12,1_27.0_24A5370h_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-22021/D0162154-2E44-48E1-BDE6-4DF72795E6D3/iPhone12,1_27.0_24A5370h_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.0_24A5370h_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-20534/3EC26AAF-9FA9-4791-B0D4-90453D9FA877/iPhone14,4_27.0_24A5370h_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -5019,6 +5019,17 @@
           "signed": null
         },
         {
+          "id": "ios-beta-27.0-beta-24A5355Q-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.0_24A5355q_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/122-99361/AF513B10-AECE-4778-8B5C-949ECE9A50F6/iPhone14,4_27.0_24A5355q_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
           "id": "ios-beta-27.0-beta-24A5355Q-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
@@ -5105,17 +5116,6 @@
           ],
           "filename": "iPhone12,1_27.0_24A5355q_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/122-99556/42F1835C-6D7D-43F4-9599-31DD7BB23D25/iPhone12,1_27.0_24A5355q_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.0-beta-24A5355Q-iPhone14,4",
-          "name": "iPhone 13 mini",
-          "devices": [
-            "iPhone14,4"
-          ],
-          "filename": "iPhone14,4_27.0_24A5355q_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/122-99361/AF513B10-AECE-4778-8B5C-949ECE9A50F6/iPhone14,4_27.0_24A5355q_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -107027,5 +107027,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-10-16T14:10:51+09:00"
+  "generated_at_tokyo": "2026-10-16T18:57:29+09:00"
 }
