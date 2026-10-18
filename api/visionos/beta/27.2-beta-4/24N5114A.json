@@ -9,8 +9,12 @@
   "release_candidate": false,
   "sources": [
     {
+      "name": "ipsw.dev",
+      "checked_at": "2026-10-18T17:19:19Z"
+    },
+    {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-10-18T14:03:58Z"
+      "checked_at": "2026-10-18T17:19:19Z"
     }
   ],
   "firmwares": [
@@ -42,5 +46,5 @@
     }
   ],
   "first_seen_at": "2026-10-14T00:35:36Z",
-  "last_seen_at": "2026-10-18T14:03:58Z"
+  "last_seen_at": "2026-10-18T17:19:19Z"
 }
