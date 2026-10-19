@@ -61,11 +61,13 @@ async function probe(p: (typeof PROBES)[number]): Promise<OtaBuild[]> {
     // iOS reports "9.9.27.2" to devices that may not yet understand 27.2.
     const version = asset.OSVersion.replace(/^9\.9\./, "");
     const documentation = asset.SUDocumentationID ?? "";
-    const prerelease = /Beta|RC/i.test(documentation) || /[a-z]$/.test(asset.Build);
-    found.set(asset.Build, {
-      os: p.os, channel: prerelease ? "beta" : "release", version, build: asset.Build,
-      label: labelFrom(documentation, version),
-    });
+    // Devices on a beta audience are given an RC as 24B6115 where everyone
+    // else, and the catalog, will know it as 24B115. Name it the way the
+    // catalog will, so the two sightings are one build.
+    const build = asset.Build.replace(/^(\d+[A-Z])6(\d{3})$/, "$1$2");
+    // Everything a beta audience offers is pre-release, RCs included, which
+    // carry no "Beta" in their documentation id and no letter on their build.
+    found.set(build, { os: p.os, channel: "beta", version, build, label: labelFrom(documentation, version) });
   }
   return [...found.values()];
 }
