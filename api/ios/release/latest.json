@@ -4,10 +4,31 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-10-19T20:28:12Z",
-  "release_count": 8,
-  "firmware_count": 52,
+  "generated_at": "2026-10-22T23:53:06Z",
+  "release_count": 9,
+  "firmware_count": 53,
   "releases": [
+    {
+      "id": "ios-release-27.1-24A94425",
+      "version": "27.1",
+      "version_label": "27.1",
+      "build": "24A94425",
+      "released_at": null,
+      "data": "27.1/24A94425.json",
+      "firmwares": [
+        {
+          "id": "ios-release-27.1-24A94425-iPhone19,4",
+          "name": "iPhone19,4",
+          "devices": [
+            "iPhone19,4"
+          ],
+          "filename": "iPhone19,4_27.1_24A94425_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/3f41a447-d8a6-48ae-83ae-056a64f57fd4/iPhone19,4_27.1_24A94425_Restore.ipsw",
+          "sha1": "19f1bafde7dc4cba523a146a16213464aaf3bf90",
+          "signed": true
+        }
+      ]
+    },
     {
       "id": "ios-release-27.0.1-24A446",
       "version": "27.0.1",
@@ -671,5 +692,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-10-20T05:28:12+09:00"
+  "generated_at_tokyo": "2026-10-23T08:53:06+09:00"
 }

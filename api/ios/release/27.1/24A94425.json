@@ -1,0 +1,34 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "27.1",
+  "version_label": "27.1",
+  "build": "24A94425",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "apple",
+      "checked_at": "2026-10-22T23:53:06Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone19,4",
+      "devices": [
+        "iPhone19,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/3f41a447-d8a6-48ae-83ae-056a64f57fd4/iPhone19,4_27.1_24A94425_Restore.ipsw",
+      "filename": "iPhone19,4_27.1_24A94425_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-10-22T23:53:06Z",
+        "unsigned_since": null
+      },
+      "sha1": "19f1bafde7dc4cba523a146a16213464aaf3bf90"
+    }
+  ],
+  "first_seen_at": "2026-10-22T23:53:06Z",
+  "last_seen_at": "2026-10-22T23:53:06Z"
+}
