@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-10-22T23:53:06Z",
+  "generated_at": "2026-10-23T04:40:18Z",
   "release_count": 318,
   "firmware_count": 3032,
   "releases": [
@@ -13,14 +13,14 @@
       "version": "27.1",
       "version_label": "27.1",
       "build": "24A94425",
-      "released_at": null,
+      "released_at": "2026-10-22T23:26:05Z",
       "signed_firmware_count": 1,
       "total_firmware_count": 1,
       "data": "27.1/24A94425.json",
       "firmwares": [
         {
           "id": "ios-release-27.1-24A94425-iPhone19,4",
-          "name": "iPhone19,4",
+          "name": "iPhone Duo",
           "devices": [
             "iPhone19,4"
           ],
@@ -38299,5 +38299,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-10-23T08:53:06+09:00"
+  "generated_at_tokyo": "2026-10-23T13:40:18+09:00"
 }

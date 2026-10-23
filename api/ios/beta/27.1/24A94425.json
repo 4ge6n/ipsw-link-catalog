@@ -1,0 +1,33 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "27.1",
+  "version_label": "27.1",
+  "build": "24A94425",
+  "released_at": "2026-10-22T17:00:00Z",
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-10-23T04:40:18Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone Duo",
+      "devices": [
+        "iPhone19,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/3f41a447-d8a6-48ae-83ae-056a64f57fd4/iPhone19,4_27.1_24A94425_Restore.ipsw",
+      "filename": "iPhone19,4_27.1_24A94425_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-10-23T04:40:18Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-10-23T04:40:18Z",
+  "last_seen_at": "2026-10-23T04:40:18Z"
+}

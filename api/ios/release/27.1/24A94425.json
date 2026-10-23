@@ -4,18 +4,22 @@
   "version": "27.1",
   "version_label": "27.1",
   "build": "24A94425",
-  "released_at": null,
+  "released_at": "2026-10-22T23:26:05Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-10-22T23:53:06Z"
+      "checked_at": "2026-10-23T04:40:18Z"
+    },
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-10-23T04:40:18Z"
     }
   ],
   "firmwares": [
     {
-      "name": "iPhone19,4",
+      "name": "iPhone Duo",
       "devices": [
         "iPhone19,4"
       ],
@@ -23,12 +27,12 @@
       "filename": "iPhone19,4_27.1_24A94425_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-10-22T23:53:06Z",
+        "checked_at": "2026-10-23T04:40:18Z",
         "unsigned_since": null
       },
       "sha1": "19f1bafde7dc4cba523a146a16213464aaf3bf90"
     }
   ],
   "first_seen_at": "2026-10-22T23:53:06Z",
-  "last_seen_at": "2026-10-22T23:53:06Z"
+  "last_seen_at": "2026-10-23T04:40:18Z"
 }

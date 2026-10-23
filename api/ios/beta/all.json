@@ -4,9 +4,9 @@
   "os_key": "ios",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-10-22T23:53:06Z",
-  "release_count": 546,
-  "firmware_count": 8679,
+  "generated_at": "2026-10-23T04:40:18Z",
+  "release_count": 547,
+  "firmware_count": 8680,
   "releases": [
     {
       "id": "ios-beta-27.2-rc-24B115",
@@ -1733,6 +1733,29 @@
           ],
           "filename": "iPhone12,1_27.2_24B5084k_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallSeed/21c37aa5-58dc-42d5-9bbd-459c576aeaa1/iPhone12,1_27.2_24B5084k_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "ios-beta-27.1-24A94425",
+      "version": "27.1",
+      "version_label": "27.1",
+      "build": "24A94425",
+      "released_at": "2026-10-22T17:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "27.1/24A94425.json",
+      "firmwares": [
+        {
+          "id": "ios-beta-27.1-24A94425-iPhone19,4",
+          "name": "iPhone Duo",
+          "devices": [
+            "iPhone19,4"
+          ],
+          "filename": "iPhone19,4_27.1_24A94425_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/3f41a447-d8a6-48ae-83ae-056a64f57fd4/iPhone19,4_27.1_24A94425_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -107373,5 +107396,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-10-23T08:53:06+09:00"
+  "generated_at_tokyo": "2026-10-23T13:40:18+09:00"
 }
