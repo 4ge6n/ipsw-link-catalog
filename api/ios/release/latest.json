@@ -4,9 +4,9 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-10-23T09:37:55Z",
-  "release_count": 10,
-  "firmware_count": 56,
+  "generated_at": "2026-10-23T14:28:55Z",
+  "release_count": 9,
+  "firmware_count": 53,
   "releases": [
     {
       "id": "ios-release-27.1-24A94425",
@@ -24,7 +24,7 @@
           ],
           "filename": "iPhone19,4_27.1_24A94425_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/3f41a447-d8a6-48ae-83ae-056a64f57fd4/iPhone19,4_27.1_24A94425_Restore.ipsw",
-          "sha1": null,
+          "sha1": "19f1bafde7dc4cba523a146a16213464aaf3bf90",
           "signed": true
         }
       ]
@@ -607,49 +607,6 @@
       ]
     },
     {
-      "id": "ios-release-7.1.2-11D257",
-      "version": "7.1.2",
-      "version_label": "7.1.2",
-      "build": "11D257",
-      "released_at": "2014-06-30T18:29:09Z",
-      "data": "7.1.2/11D257.json",
-      "firmwares": [
-        {
-          "id": "ios-release-7.1.2-11D257-iPhone3,1",
-          "name": "iPhone 4 (GSM)",
-          "devices": [
-            "iPhone3,1"
-          ],
-          "filename": "iPhone3,1_7.1.2_11D257_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/iOS7.1/031-4812.20140627.cq6y8/iPhone3,1_7.1.2_11D257_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        },
-        {
-          "id": "ios-release-7.1.2-11D257-iPhone3,2",
-          "name": "iPhone 4 (GSM / 2012)",
-          "devices": [
-            "iPhone3,2"
-          ],
-          "filename": "iPhone3,2_7.1.2_11D257_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/iOS7.1/031-4785.20140627.zZ42j/iPhone3,2_7.1.2_11D257_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        },
-        {
-          "id": "ios-release-7.1.2-11D257-iPhone3,3",
-          "name": "iPhone 4 (CDMA)",
-          "devices": [
-            "iPhone3,3"
-          ],
-          "filename": "iPhone3,3_7.1.2_11D257_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/iOS7.1/031-4768.20140627.DXmmp/iPhone3,3_7.1.2_11D257_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        }
-      ]
-    },
-    {
       "id": "ios-release-6.1.6-10B500",
       "version": "6.1.6",
       "version_label": "6.1.6",
@@ -735,5 +692,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-10-23T18:37:55+09:00"
+  "generated_at_tokyo": "2026-10-23T23:28:55+09:00"
 }
