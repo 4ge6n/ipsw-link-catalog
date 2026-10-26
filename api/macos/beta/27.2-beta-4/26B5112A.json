@@ -4,18 +4,18 @@
   "version": "27.2",
   "version_label": "27.2-beta-4",
   "build": "26B5112A",
-  "released_at": null,
+  "released_at": "2026-10-13T17:00:00Z",
   "prerelease": true,
   "release_candidate": false,
   "sources": [
     {
-      "name": "ipsw.dev",
-      "checked_at": "2026-10-19T09:08:07Z"
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-10-26T21:43:12Z"
     }
   ],
   "firmwares": [
     {
-      "name": "Mac mini (M6)",
+      "name": "Mac Studio (M1 Max)",
       "devices": [
         "Mac13,1",
         "Mac13,2",
@@ -73,7 +73,9 @@
         "MacBookPro18,2",
         "MacBookPro18,3",
         "MacBookPro18,4",
-        "Macmini9,1"
+        "Macmini9,1",
+        "iMac21,1",
+        "iMac21,2"
       ],
       "url": "https://updates.cdn-apple.com/2026FallSeed/8f75f440-23bc-4da0-9047-940c00cf9546/UniversalMac_27.2_26B5112a_Restore.ipsw",
       "filename": "UniversalMac_27.2_26B5112a_Restore.ipsw",
@@ -85,5 +87,5 @@
     }
   ],
   "first_seen_at": "2026-10-14T00:35:36Z",
-  "last_seen_at": "2026-10-19T09:08:07Z"
+  "last_seen_at": "2026-10-26T21:43:12Z"
 }

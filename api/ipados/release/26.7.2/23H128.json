@@ -1,0 +1,77 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "26.7.2",
+  "version_label": "26.7.2",
+  "build": "23H128",
+  "released_at": "2026-10-26T17:00:00Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "apple",
+      "checked_at": "2026-10-26T21:43:12Z"
+    },
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-10-26T21:43:12Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad 8 (WiFi)",
+      "devices": [
+        "iPad11,6",
+        "iPad11,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/3d123248-6c99-43f3-b763-532414de9768/iPad_10.2_2020_26.7.2_23H128_Restore.ipsw",
+      "filename": "iPad_10.2_2020_26.7.2_23H128_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-10-26T21:43:12Z",
+        "unsigned_since": null
+      },
+      "sha1": "5f7d82631cd5c7562733ddae697daee85f66c871"
+    },
+    {
+      "name": "iPad mini 5 (WiFi)",
+      "devices": [
+        "iPad11,1",
+        "iPad11,2",
+        "iPad11,3",
+        "iPad11,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/688d3935-dc4f-47cf-bb64-88f679489250/iPad_Spring_2019_26.7.2_23H128_Restore.ipsw",
+      "filename": "iPad_Spring_2019_26.7.2_23H128_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-10-26T21:43:12Z",
+        "unsigned_since": null
+      },
+      "sha1": "99839ecba68475b7f996311a0d918f35861a8b8e"
+    },
+    {
+      "name": "iPad Pro 3 (11-inch, WiFi)",
+      "devices": [
+        "iPad8,1",
+        "iPad8,2",
+        "iPad8,3",
+        "iPad8,4",
+        "iPad8,5",
+        "iPad8,6",
+        "iPad8,7",
+        "iPad8,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/4d023f15-cc68-4a18-8901-152f979c4f2e/iPad_Pro_A12X_26.7.2_23H128_Restore.ipsw",
+      "filename": "iPad_Pro_A12X_26.7.2_23H128_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-10-26T21:43:12Z",
+        "unsigned_since": null
+      },
+      "sha1": "6ddb81dd54ceb97999b177535f92a4451b3d0fe4"
+    }
+  ],
+  "first_seen_at": "2026-10-26T21:43:12Z",
+  "last_seen_at": "2026-10-26T21:43:12Z"
+}

@@ -1,0 +1,38 @@
+{
+  "os_key": "tvos",
+  "channel": "release",
+  "version": "26.6.1",
+  "version_label": "26.6.1",
+  "build": "23L781",
+  "released_at": "2026-10-26T18:33:14Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "apple",
+      "checked_at": "2026-10-26T21:43:12Z"
+    },
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-10-26T21:43:12Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Apple TV HD (4th generation)",
+      "devices": [
+        "AppleTV5,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/142-23175/686B5890-EE38-4DFD-9A0D-6848A994D337/AppleTV5,3_26.6.1_23L781_Restore.ipsw",
+      "filename": "AppleTV5,3_26.6.1_23L781_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-10-26T21:43:12Z",
+        "unsigned_since": null
+      },
+      "sha1": "366e9518068958ca0054f654e35f09a27df3141f"
+    }
+  ],
+  "first_seen_at": "2026-10-26T21:43:12Z",
+  "last_seen_at": "2026-10-26T21:43:12Z"
+}

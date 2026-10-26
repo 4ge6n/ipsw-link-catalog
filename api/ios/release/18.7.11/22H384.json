@@ -1,0 +1,54 @@
+{
+  "os_key": "ios",
+  "channel": "release",
+  "version": "18.7.11",
+  "version_label": "18.7.11",
+  "build": "22H384",
+  "released_at": "2026-10-26T17:00:00Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "apple",
+      "checked_at": "2026-10-26T21:43:12Z"
+    },
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-10-26T21:43:12Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone XR",
+      "devices": [
+        "iPhone11,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2026WinterFCS/226d78bb-5511-4c5e-acb2-afd14875b940/iPhone11,8_18.7.11_22H384_Restore.ipsw",
+      "filename": "iPhone11,8_18.7.11_22H384_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-10-26T21:43:12Z",
+        "unsigned_since": null
+      },
+      "sha1": "0167231d1aeda1a22eb922da9d7ed77b027cbdff"
+    },
+    {
+      "name": "iPhone XS",
+      "devices": [
+        "iPhone11,2",
+        "iPhone11,4",
+        "iPhone11,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2026WinterFCS/81ee8c78-5e14-4c22-ba1b-27c9270911b6/iPhone11,2,iPhone11,4,iPhone11,6_18.7.11_22H384_Restore.ipsw",
+      "filename": "iPhone11,2,iPhone11,4,iPhone11,6_18.7.11_22H384_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-10-26T21:43:12Z",
+        "unsigned_since": null
+      },
+      "sha1": "e1c439ab288a576995d91aefadffafd04a22af0e"
+    }
+  ],
+  "first_seen_at": "2026-10-26T21:43:12Z",
+  "last_seen_at": "2026-10-26T21:43:12Z"
+}

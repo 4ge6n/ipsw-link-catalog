@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-10-26T17:18:35Z"
+      "checked_at": "2026-10-26T21:43:12Z"
     }
   ],
   "firmwares": [
@@ -217,7 +217,8 @@
         "iPad13,5",
         "iPad13,6",
         "iPad13,7",
-        "iPad13,8"
+        "iPad13,8",
+        "iPad13,9"
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/140-84059/E2C8ABAD-7DF7-47F3-9072-87E45E3A001D/iPad_Pro_Spring_2021_27.0_24A5408d_Restore.ipsw",
       "filename": "iPad_Pro_Spring_2021_27.0_24A5408d_Restore.ipsw",
@@ -257,5 +258,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T10:48:41Z",
-  "last_seen_at": "2026-10-26T17:18:35Z"
+  "last_seen_at": "2026-10-26T21:43:12Z"
 }

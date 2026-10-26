@@ -4,10 +4,44 @@
   "os_key": "audioos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-10-26T17:18:35Z",
-  "release_count": 52,
-  "firmware_count": 53,
+  "generated_at": "2026-10-26T21:43:12Z",
+  "release_count": 53,
+  "firmware_count": 55,
   "releases": [
+    {
+      "id": "audioos-release-27.2-24K122",
+      "version": "27.2",
+      "version_label": "27.2",
+      "build": "24K122",
+      "released_at": "2026-10-26T17:00:00Z",
+      "signed_firmware_count": 2,
+      "total_firmware_count": 2,
+      "data": "27.2/24K122.json",
+      "firmwares": [
+        {
+          "id": "audioos-release-27.2-24K122-AudioAccessory11,1",
+          "name": "HomePod mini 2",
+          "devices": [
+            "AudioAccessory11,1"
+          ],
+          "filename": "AudioAccessory11,1_27.2_24K122_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/05f045dd-35a4-4b00-8bdc-de83b90d9ff8/AudioAccessory11,1_27.2_24K122_Restore.ipsw",
+          "sha1": "7d8b7606d4f121e3ff6bf975e413dc4d026689ad",
+          "signed": true
+        },
+        {
+          "id": "audioos-release-27.2-24K122-AudioAccessory5,1",
+          "name": "HomePod mini",
+          "devices": [
+            "AudioAccessory5,1"
+          ],
+          "filename": "AudioAccessory5,1_27.2_24K122_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/4ee5d3c9-158b-4ad9-95b4-6cfa9ac0f0d4/AudioAccessory5,1_27.2_24K122_Restore.ipsw",
+          "sha1": "2aa5d5d1f074d4093a943415e65f617612e8909f",
+          "signed": true
+        }
+      ]
+    },
     {
       "id": "audioos-release-27.0-24J361",
       "version": "27.0",
@@ -26,7 +60,7 @@
           ],
           "filename": "AudioAccessory5,1_27.0_24J361_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SFallFCS/a595a3b2-2c42-470a-9417-a705aaafa05c/AudioAccessory5,1_27.0_24J361_Restore.ipsw",
-          "sha1": "39d9f4bf4be948eb134a57c9d5b427bf2b2438c1",
+          "sha1": null,
           "signed": true
         }
       ]
@@ -1216,5 +1250,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-10-27T02:18:35+09:00"
+  "generated_at_tokyo": "2026-10-27T06:43:12+09:00"
 }

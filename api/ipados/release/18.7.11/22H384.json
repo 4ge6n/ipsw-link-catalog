@@ -1,0 +1,39 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "18.7.11",
+  "version_label": "18.7.11",
+  "build": "22H384",
+  "released_at": "2026-10-26T17:00:00Z",
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "apple",
+      "checked_at": "2026-10-26T21:43:12Z"
+    },
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-10-26T21:43:12Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad 7 (WiFi)",
+      "devices": [
+        "iPad7,11",
+        "iPad7,12"
+      ],
+      "url": "https://updates.cdn-apple.com/2026WinterFCS/cae87706-e21d-4989-a880-3210b045ef28/iPad_10.2_18.7.11_22H384_Restore.ipsw",
+      "filename": "iPad_10.2_18.7.11_22H384_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-10-26T21:43:12Z",
+        "unsigned_since": null
+      },
+      "sha1": "c505fd252c8b0ac07442b188ab1f9d3d0a9e3891"
+    }
+  ],
+  "first_seen_at": "2026-10-26T21:43:12Z",
+  "last_seen_at": "2026-10-26T21:43:12Z"
+}

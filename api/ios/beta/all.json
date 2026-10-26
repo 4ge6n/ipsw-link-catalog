@@ -4,10 +4,379 @@
   "os_key": "ios",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-10-26T17:18:35Z",
-  "release_count": 547,
-  "firmware_count": 8680,
+  "generated_at": "2026-10-26T21:43:12Z",
+  "release_count": 549,
+  "firmware_count": 8711,
   "releases": [
+    {
+      "id": "ios-beta-27.2-24B91020",
+      "version": "27.2",
+      "version_label": "27.2",
+      "build": "24B91020",
+      "released_at": "2026-10-26T17:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "27.2/24B91020.json",
+      "firmwares": [
+        {
+          "id": "ios-beta-27.2-24B91020-iPhone19,4",
+          "name": "iPhone Duo",
+          "devices": [
+            "iPhone19,4"
+          ],
+          "filename": "iPhone19,4_27.2_24B91020_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/8d0335dc-f553-4d16-b07b-28951fde8f9e/iPhone19,4_27.2_24B91020_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "ios-beta-27.2-24B119",
+      "version": "27.2",
+      "version_label": "27.2",
+      "build": "24B119",
+      "released_at": "2026-10-26T17:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 30,
+      "data": "27.2/24B119.json",
+      "firmwares": [
+        {
+          "id": "ios-beta-27.2-24B119-iPhone19,2",
+          "name": "iPhone 18 Pro",
+          "devices": [
+            "iPhone19,2",
+            "iPhone19,3",
+            "iPhone19,7"
+          ],
+          "filename": "iPhone19,2,iPhone19,3,iPhone19,7_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/fdde63b6-6de4-4199-a5d4-7ba4e46b758e/iPhone19,2,iPhone19,3,iPhone19,7_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone18,5",
+          "name": "iPhone 17e",
+          "devices": [
+            "iPhone18,5"
+          ],
+          "filename": "iPhone18,5_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/8864e09a-978e-418a-8924-1ebd914df39b/iPhone18,5_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone18,4",
+          "name": "iPhone Air",
+          "devices": [
+            "iPhone18,4"
+          ],
+          "filename": "iPhone18,4_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/9d7e9bfa-4de2-4654-8f87-c63c26c7cf03/iPhone18,4_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone18,3",
+          "name": "iPhone 17",
+          "devices": [
+            "iPhone18,3"
+          ],
+          "filename": "iPhone18,3_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/fd6e15e5-2710-4a00-821d-215fdcf1af95/iPhone18,3_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone18,2",
+          "name": "iPhone 17 Pro Max",
+          "devices": [
+            "iPhone18,2"
+          ],
+          "filename": "iPhone18,2_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/82995481-b196-4d33-bd11-97788acc1d53/iPhone18,2_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone18,1",
+          "name": "iPhone 17 Pro",
+          "devices": [
+            "iPhone18,1"
+          ],
+          "filename": "iPhone18,1_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/f7e03864-9d1c-4854-8f15-440ee15f9114/iPhone18,1_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone17,5",
+          "name": "iPhone 16e",
+          "devices": [
+            "iPhone17,5"
+          ],
+          "filename": "iPhone17,5_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/a31d2089-6410-4063-81a3-1f7f3f53277e/iPhone17,5_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone17,4",
+          "name": "iPhone 16 Plus",
+          "devices": [
+            "iPhone17,4"
+          ],
+          "filename": "iPhone17,4_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/690caa55-74ed-47aa-b017-cb3a692bf20d/iPhone17,4_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone17,3",
+          "name": "iPhone 16",
+          "devices": [
+            "iPhone17,3"
+          ],
+          "filename": "iPhone17,3_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/c6c0afa0-c002-45b9-ad4c-d2db3bfa30ac/iPhone17,3_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone17,2",
+          "name": "iPhone 16 Pro Max",
+          "devices": [
+            "iPhone17,2"
+          ],
+          "filename": "iPhone17,2_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/3a256522-d649-403a-8ec5-b6fbcb940cbe/iPhone17,2_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone17,1",
+          "name": "iPhone 16 Pro",
+          "devices": [
+            "iPhone17,1"
+          ],
+          "filename": "iPhone17,1_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/ba681148-cc53-467c-bff5-dbcb03cb03bc/iPhone17,1_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone16,2",
+          "name": "iPhone 15 Pro Max",
+          "devices": [
+            "iPhone16,2"
+          ],
+          "filename": "iPhone16,2_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/dcf3b441-e473-4c28-a936-99d6af8c60a2/iPhone16,2_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone16,1",
+          "name": "iPhone 15 Pro",
+          "devices": [
+            "iPhone16,1"
+          ],
+          "filename": "iPhone16,1_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/c7039e15-4e45-489f-8cbf-d0c4cd4649bf/iPhone16,1_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone15,5",
+          "name": "iPhone 15 Plus",
+          "devices": [
+            "iPhone15,5"
+          ],
+          "filename": "iPhone15,5_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/8f409903-0c3a-4333-976e-87f5afa55174/iPhone15,5_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone15,4",
+          "name": "iPhone 15",
+          "devices": [
+            "iPhone15,4"
+          ],
+          "filename": "iPhone15,4_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/70fb28d9-6aa1-4349-9756-6423adbda326/iPhone15,4_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone15,3",
+          "name": "iPhone 14 Pro Max",
+          "devices": [
+            "iPhone15,3"
+          ],
+          "filename": "iPhone15,3_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/d3fbbcde-32ef-4def-8d18-bcabbbdd01b3/iPhone15,3_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone15,2",
+          "name": "iPhone 14 Pro",
+          "devices": [
+            "iPhone15,2"
+          ],
+          "filename": "iPhone15,2_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/af566c65-4bae-4e61-ab68-8406b4def41c/iPhone15,2_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone14,8",
+          "name": "iPhone 14 Plus",
+          "devices": [
+            "iPhone14,8"
+          ],
+          "filename": "iPhone14,8_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/89559732-687f-4a34-8b12-1e1030952835/iPhone14,8_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone14,7",
+          "name": "iPhone 14",
+          "devices": [
+            "iPhone14,7"
+          ],
+          "filename": "iPhone14,7_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/9e4d9a90-76a7-4d2f-b8ff-f762f4d056d8/iPhone14,7_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone14,6",
+          "name": "iPhone SE (3rd generation)",
+          "devices": [
+            "iPhone14,6"
+          ],
+          "filename": "iPhone14,6_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/57f5b9d2-d7e3-4458-a03e-a2ea5aa40a19/iPhone14,6_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone14,5",
+          "name": "iPhone 13",
+          "devices": [
+            "iPhone14,5"
+          ],
+          "filename": "iPhone14,5_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/28a1e046-aaaf-4f60-9990-b6cfa708511a/iPhone14,5_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/21a77e9c-f77a-4350-a47e-d5083375d0b2/iPhone14,4_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone14,3",
+          "name": "iPhone 13 Pro Max",
+          "devices": [
+            "iPhone14,3"
+          ],
+          "filename": "iPhone14,3_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/59db57ab-bf39-4722-ae2c-930079835914/iPhone14,3_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone14,2",
+          "name": "iPhone 13 Pro",
+          "devices": [
+            "iPhone14,2"
+          ],
+          "filename": "iPhone14,2_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/f1b55dac-7e4b-4958-8d7f-eeb46b1515ae/iPhone14,2_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone13,4",
+          "name": "iPhone 12 Pro Max",
+          "devices": [
+            "iPhone13,4"
+          ],
+          "filename": "iPhone13,4_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/7940f088-6006-4815-8b8b-ef2fd2f0f4cc/iPhone13,4_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone13,2",
+          "name": "iPhone 12",
+          "devices": [
+            "iPhone13,2",
+            "iPhone13,3"
+          ],
+          "filename": "iPhone13,2,iPhone13,3_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/e42b4fa4-b87e-4bce-b076-ef7dd9121ce1/iPhone13,2,iPhone13,3_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone13,1",
+          "name": "iPhone 12 mini",
+          "devices": [
+            "iPhone13,1"
+          ],
+          "filename": "iPhone13,1_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/82e77164-5a04-4098-acac-29669613f87f/iPhone13,1_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone12,8",
+          "name": "iPhone SE (2nd generation)",
+          "devices": [
+            "iPhone12,8"
+          ],
+          "filename": "iPhone12,8_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/3fcff83a-f32d-49a3-aea9-559180b1d747/iPhone12,8_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone12,3",
+          "name": "iPhone 11 Pro",
+          "devices": [
+            "iPhone12,3",
+            "iPhone12,5"
+          ],
+          "filename": "iPhone12,3,iPhone12,5_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/ec50683b-998e-4e91-9326-d902cfd5f7f9/iPhone12,3,iPhone12,5_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2-24B119-iPhone12,1",
+          "name": "iPhone 11",
+          "devices": [
+            "iPhone12,1"
+          ],
+          "filename": "iPhone12,1_27.2_24B119_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/22a2de9b-5ef9-44b7-9ace-62f861167fd8/iPhone12,1_27.2_24B119_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
     {
       "id": "ios-beta-27.2-rc-24B115",
       "version": "27.2",
@@ -107396,5 +107765,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-10-27T02:18:35+09:00"
+  "generated_at_tokyo": "2026-10-27T06:43:12+09:00"
 }
