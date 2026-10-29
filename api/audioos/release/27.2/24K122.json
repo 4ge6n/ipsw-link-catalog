@@ -10,11 +10,11 @@
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-10-29T04:00:34Z"
+      "checked_at": "2026-10-29T10:51:02Z"
     },
     {
       "name": "ipsw.me",
-      "checked_at": "2026-10-29T04:00:34Z"
+      "checked_at": "2026-10-29T10:51:02Z"
     }
   ],
   "firmwares": [
@@ -27,7 +27,7 @@
       "filename": "AudioAccessory11,1_27.2_24K122_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-10-29T04:00:34Z",
+        "checked_at": "2026-10-29T10:51:02Z",
         "unsigned_since": null
       },
       "sha1": "7d8b7606d4f121e3ff6bf975e413dc4d026689ad"
@@ -41,12 +41,12 @@
       "filename": "AudioAccessory5,1_27.2_24K122_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-10-29T04:00:34Z",
+        "checked_at": "2026-10-29T10:51:02Z",
         "unsigned_since": null
       },
       "sha1": "2aa5d5d1f074d4093a943415e65f617612e8909f"
     }
   ],
   "first_seen_at": "2026-10-26T21:43:12Z",
-  "last_seen_at": "2026-10-29T04:00:34Z"
+  "last_seen_at": "2026-10-29T10:51:02Z"
 }
