@@ -4,7 +4,7 @@
   "os_key": "audioos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-10-29T10:51:02Z",
+  "generated_at": "2026-11-01T18:50:35Z",
   "release_count": 53,
   "firmware_count": 55,
   "releases": [
@@ -20,7 +20,7 @@
       "firmwares": [
         {
           "id": "audioos-release-27.2-24K122-AudioAccessory11,1",
-          "name": "HomePod mini 2",
+          "name": "HomePod mini (2nd generation)",
           "devices": [
             "AudioAccessory11,1"
           ],
@@ -1250,5 +1250,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-10-29T19:51:02+09:00"
+  "generated_at_tokyo": "2026-11-02T03:50:35+09:00"
 }
