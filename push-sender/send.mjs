@@ -37,7 +37,8 @@ const parsed = (name) => {
 // A beta is usually heard of twice: first from Apple's update service, before
 // it has any links, then hours later when its links reach the catalog. Each
 // build is announced once, whichever comes first.
-const keyOf = (build) => `${build.os}:${String(build.build).toUpperCase()}`;
+// 24B6115 is how a beta audience is given what everyone else knows as 24B115.
+const keyOf = (build) => `${build.os}:${String(build.build).toUpperCase().replace(/^(\d+[A-Z])6(\d{3})$/, "$1$2")}`;
 const announced = test ? [] : await (async () => {
   try { return (await (await internal("/internal/announced")).json()).announced ?? []; } catch { return []; }
 })();
