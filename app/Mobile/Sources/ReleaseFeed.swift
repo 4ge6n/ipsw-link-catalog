@@ -296,7 +296,15 @@ struct Forecast: Identifiable {
 
     static func combine(_ kind: Kind, title: String, signals: [Signal], note: String?,
                         after: ReleaseFeed.Entry) -> Forecast? {
-        let usable = signals.filter { $0.weight > 0 }
+        // A reason pointing at a day already gone, with nothing having come,
+        // now points at the soonest day still possible: it was wrong about
+        // the day but not about the build being close.
+        let soonest = publishable(Clocks.apple.date(byAdding: .day, value: 1, to: .now) ?? .now)
+        let usable = signals.filter { $0.weight > 0 }.map { signal in
+            signal.date < Clocks.apple.startOfDay(for: .now)
+                ? Signal(reason: signal.reason, date: soonest, weight: signal.weight)
+                : signal
+        }
         guard !usable.isEmpty, let middle = quantile(usable, 0.5),
               let low = quantile(usable, 0.25), let high = quantile(usable, 0.75) else { return nil }
         return Forecast(kind: kind, title: title, expected: publishable(middle),
@@ -450,10 +458,42 @@ extension ReleaseFeed {
                 }
             }
             var releaseSignals: [Signal] = []
+            // The further a version has got, the less its first beta says and
+            // the more where it is now does: an RC is a week from release
+            // whatever the beta 1 date was.
+            let atRC = step.rank > 0
             if let span = Forecast.median(durations.map(\.1)) {
                 releaseSignals.append(Signal(reason: String(format: String(localized: "%1$@ took %2$lld days from beta 1 to release"),
                                                             durations.map(\.0).joined(separator: ", "), span),
-                                             date: Forecast.adding(span, to: firstAt), weight: 3))
+                                             date: Forecast.adding(span, to: firstAt), weight: atRC ? 1 : 3))
+            }
+            // From this same stage to release, in the same slot past years.
+            var fromHere: [(String, Int)] = []
+            for major in earlier(than: slot.major) {
+                let name = "\(major).\(slot.minor)"
+                guard let past = byVersion[name], let pastRelease = shippedAt[name],
+                      let same = past.last(where: { stageOf($0).rank == step.rank && stageOf($0).number == step.number }),
+                      let at = atDate(same) else { continue }
+                fromHere.append((name, Forecast.days(from: at, to: pastRelease)))
+            }
+            if let span = Forecast.median(fromHere.map(\.1)) {
+                releaseSignals.append(Signal(reason: String(format: String(localized: "%1$@: %2$@ to release took %3$lld days"),
+                                                            fromHere.map(\.0).joined(separator: ", "),
+                                                            last.release.prerelease ?? "", span),
+                                             date: Forecast.adding(span, to: lastAt), weight: atRC ? 5 : 2))
+            }
+            // Once there is an RC: how long recent versions of every slot
+            // took from their last RC to release.
+            if atRC {
+                let recent = tracks.suffix(16).compactMap { other -> Int? in
+                    guard other.version != track.version, let shipped = shippedAt[other.version],
+                          let rc = other.builds.last(where: { stageOf($0).rank > 0 }), let at = atDate(rc) else { return nil }
+                    return Forecast.days(from: at, to: shipped)
+                }.filter { (0...30).contains($0) }
+                if let span = Forecast.median(recent) {
+                    releaseSignals.append(Signal(reason: String(format: String(localized: "Recent versions: last RC to release in %lld days"), span),
+                                                 date: Forecast.adding(span, to: lastAt), weight: recent.count >= 4 ? 4 : 2))
+                }
             }
             for (name, date) in releaseSeasonal {
                 releaseSignals.append(Signal(reason: String(format: String(localized: "%@ released at this time of year"), name),
@@ -495,8 +535,9 @@ extension ReleaseFeed {
             }
             // A version whose release is due sooner bounds the next release.
             if let soonest = outlook.versionReleases.min(by: { $0.expected < $1.expected }) {
+                // A version already at its RC all but names the day.
                 signals.append(Signal(reason: String(format: String(localized: "%@ is due"), soonest.title),
-                                      date: soonest.expected, weight: 1))
+                                      date: soonest.expected, weight: soonest.after.release.stage.rank > 0 ? 4 : 1))
             }
             outlook.release = Forecast.combine(.release, title: String(localized: "Next release"),
                                                signals: signals, note: nil, after: last)
@@ -562,23 +603,4 @@ enum DeviceNames {
     }()
 
     static func name(_ identifier: String) -> String { table[identifier] ?? identifier }
-}
-
-/// Devices starred to keep at hand on the first tab.
-@MainActor
-@Observable
-final class Favorites {
-    static let shared = Favorites()
-    private(set) var identifiers: [String] = UserDefaults.standard.stringArray(forKey: "favoriteDevices") ?? []
-
-    func contains(_ identifier: String) -> Bool { identifiers.contains(identifier) }
-
-    func toggle(_ identifier: String) {
-        if let index = identifiers.firstIndex(of: identifier) {
-            identifiers.remove(at: index)
-        } else {
-            identifiers.append(identifier)
-        }
-        UserDefaults.standard.set(identifiers, forKey: "favoriteDevices")
-    }
 }

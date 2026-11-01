@@ -178,9 +178,14 @@ final class Notifications: NSObject {
         #if DEBUG
         return true
         #else
-        // A build signed for development carries its profile inside the bundle;
-        // one from the App Store does not.
-        return Bundle.main.url(forResource: "embedded", withExtension: "mobileprovision") != nil
+        // TestFlight builds carry a profile too, so its presence says nothing.
+        // What the profile grants does: only a development one names the
+        // sandbox. None at all is the App Store, which is production.
+        guard let url = Bundle.main.url(forResource: "embedded", withExtension: "mobileprovision"),
+              let data = try? Data(contentsOf: url) else { return false }
+        let text = String(decoding: data, as: UTF8.self)
+        guard let key = text.range(of: "<key>aps-environment</key>") else { return false }
+        return text[key.upperBound...].prefix(80).contains("development")
         #endif
     }
 }
