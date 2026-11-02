@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-02T20:25:35Z"
+      "checked_at": "2026-11-02T20:30:35Z"
     }
   ],
   "firmwares": [
@@ -106,6 +106,19 @@
       }
     },
     {
+      "name": "iPad (A16) Wi-Fi",
+      "devices": [
+        "iPad15,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallSeed/d2347225-4905-4231-83a2-507b77e5557a/iPad15,7_27.2_24B5089g_Restore.ipsw",
+      "filename": "iPad15,7_27.2_24B5089g_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-21T17:55:18Z",
+        "unsigned_since": null
+      }
+    },
+    {
       "name": "iPad Air 11-inch (M3) Wi-Fi",
       "devices": [
         "iPad15,3",
@@ -182,9 +195,10 @@
       }
     },
     {
-      "name": "iPad Air 5 (WiFi)",
+      "name": "iPad Air (5th generation) Wi-Fi",
       "devices": [
-        "iPad13,16"
+        "iPad13,16",
+        "iPad13,17"
       ],
       "url": "https://updates.cdn-apple.com/2026FallSeed/8fcf3375-8737-4cf6-beb4-99e36a8b551b/iPad_Spring_2022_27.2_24B5089g_Restore.ipsw",
       "filename": "iPad_Spring_2022_27.2_24B5089g_Restore.ipsw",
@@ -201,8 +215,8 @@
         "iPad13,11",
         "iPad13,4",
         "iPad13,5",
+        "iPad13,6",
         "iPad13,7",
-        "iPad13,8",
         "iPad13,9"
       ],
       "url": "https://updates.cdn-apple.com/2026FallSeed/ad3d3f06-933b-4c63-8e24-60f6bb406cf2/iPad_Pro_Spring_2021_27.2_24B5089g_Restore.ipsw",
@@ -240,21 +254,8 @@
         "checked_at": "2026-09-21T17:55:18Z",
         "unsigned_since": null
       }
-    },
-    {
-      "name": "iPad (A16) Wi-Fi",
-      "devices": [
-        "iPad15,7"
-      ],
-      "url": "https://updates.cdn-apple.com/2026FallSeed/d2347225-4905-4231-83a2-507b77e5557a/iPad15,7_27.2_24B5089g_Restore.ipsw",
-      "filename": "iPad15,7_27.2_24B5089g_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-21T17:55:18Z",
-        "unsigned_since": null
-      }
     }
   ],
   "first_seen_at": "2026-09-21T17:55:18Z",
-  "last_seen_at": "2026-11-02T20:25:35Z"
+  "last_seen_at": "2026-11-02T20:30:35Z"
 }
