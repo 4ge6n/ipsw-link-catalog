@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipsw.me",
-      "checked_at": "2026-11-02T21:10:50Z"
+      "checked_at": "2026-11-03T02:30:14Z"
     }
   ],
   "firmwares": [
@@ -22,12 +22,12 @@
       "url": "https://updates.cdn-apple.com/2026SFallFCS/a595a3b2-2c42-470a-9417-a705aaafa05c/AudioAccessory5,1_27.0_24J361_Restore.ipsw",
       "filename": "AudioAccessory5,1_27.0_24J361_Restore.ipsw",
       "signing": {
-        "status": "signed",
-        "checked_at": "2026-11-02T21:10:50Z",
-        "unsigned_since": null
+        "status": "unsigned",
+        "checked_at": "2026-11-03T02:30:14Z",
+        "unsigned_since": "2026-11-03T02:30:14Z"
       }
     }
   ],
   "first_seen_at": "2026-09-14T17:26:02Z",
-  "last_seen_at": "2026-11-02T21:10:50Z"
+  "last_seen_at": "2026-11-03T02:30:14Z"
 }

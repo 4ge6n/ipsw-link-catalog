@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipsw.me",
-      "checked_at": "2026-11-02T21:10:50Z"
+      "checked_at": "2026-11-03T02:30:14Z"
     }
   ],
   "firmwares": [
@@ -22,12 +22,12 @@
       "url": "https://updates.cdn-apple.com/2026FallFCS/3f41a447-d8a6-48ae-83ae-056a64f57fd4/iPhone19,4_27.1_24A94425_Restore.ipsw",
       "filename": "iPhone19,4_27.1_24A94425_Restore.ipsw",
       "signing": {
-        "status": "signed",
-        "checked_at": "2026-11-02T21:10:50Z",
-        "unsigned_since": null
+        "status": "unsigned",
+        "checked_at": "2026-11-03T02:30:14Z",
+        "unsigned_since": "2026-11-03T02:30:14Z"
       }
     }
   ],
   "first_seen_at": "2026-10-22T23:53:06Z",
-  "last_seen_at": "2026-11-02T21:10:50Z"
+  "last_seen_at": "2026-11-03T02:30:14Z"
 }

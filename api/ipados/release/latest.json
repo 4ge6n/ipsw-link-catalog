@@ -4,9 +4,9 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-02T21:10:50Z",
-  "release_count": 10,
-  "firmware_count": 39,
+  "generated_at": "2026-11-03T02:30:14Z",
+  "release_count": 8,
+  "firmware_count": 29,
   "releases": [
     {
       "id": "ipados-release-27.2-24B119",
@@ -450,136 +450,6 @@
       ]
     },
     {
-      "id": "ipados-release-9.3.6-13G37",
-      "version": "9.3.6",
-      "version_label": "9.3.6",
-      "build": "13G37",
-      "released_at": "2019-07-22T17:13:11Z",
-      "data": "9.3.6/13G37.json",
-      "firmwares": [
-        {
-          "id": "ipados-release-9.3.6-13G37-iPad2,3",
-          "name": "iPad 2 (CDMA)",
-          "devices": [
-            "iPad2,3"
-          ],
-          "filename": "iPad2,3_9.3.6_13G37_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2019/ios/041-80042-20190722-68F07B91-8EA1-4A3B-A930-35314A006ECB/iPad2,3_9.3.6_13G37_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        },
-        {
-          "id": "ipados-release-9.3.6-13G37-iPad2,6",
-          "name": "iPad mini (GSM)",
-          "devices": [
-            "iPad2,6"
-          ],
-          "filename": "iPad2,6_9.3.6_13G37_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2019/ios/041-80040-20190722-B1E89CC8-5209-40C3-AEE9-63C29D38BDEB/iPad2,6_9.3.6_13G37_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        },
-        {
-          "id": "ipados-release-9.3.6-13G37-iPad2,7",
-          "name": "iPad mini (Global)",
-          "devices": [
-            "iPad2,7"
-          ],
-          "filename": "iPad2,7_9.3.6_13G37_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2019/ios/041-80041-20190722-673B8756-0A63-4BB6-9855-ACE2381695AF/iPad2,7_9.3.6_13G37_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        },
-        {
-          "id": "ipados-release-9.3.6-13G37-iPad3,2",
-          "name": "iPad 3 (CDMA)",
-          "devices": [
-            "iPad3,2"
-          ],
-          "filename": "iPad3,2_9.3.6_13G37_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2019/ios/041-80039-20190722-E632D5D2-2F3C-498F-B83F-7067D9D90B33/iPad3,2_9.3.6_13G37_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        },
-        {
-          "id": "ipados-release-9.3.6-13G37-iPad3,3",
-          "name": "iPad 3 (GSM)",
-          "devices": [
-            "iPad3,3"
-          ],
-          "filename": "iPad3,3_9.3.6_13G37_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2019/ios/041-80044-20190722-6C65AD27-69D8-499C-BC15-DE7AC74DE2BD/iPad3,3_9.3.6_13G37_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        }
-      ]
-    },
-    {
-      "id": "ipados-release-9.3.5-13G36",
-      "version": "9.3.5",
-      "version_label": "9.3.5",
-      "build": "13G36",
-      "released_at": "2016-08-25T16:58:25Z",
-      "data": "9.3.5/13G36.json",
-      "firmwares": [
-        {
-          "id": "ipados-release-9.3.5-13G36-iPad2,1",
-          "name": "iPad 2 (WiFi)",
-          "devices": [
-            "iPad2,1"
-          ],
-          "filename": "iPad2,1_9.3.5_13G36_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-73136-20160825-6A2B0F0A-6711-11E6-BE6C-193834D2D062/iPad2,1_9.3.5_13G36_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        },
-        {
-          "id": "ipados-release-9.3.5-13G36-iPad2,2",
-          "name": "iPad 2 (GSM)",
-          "devices": [
-            "iPad2,2"
-          ],
-          "filename": "iPad2,2_9.3.5_13G36_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-74153-20160825-1250B23E-6717-11E6-AB83-973F34D2D062/iPad2,2_9.3.5_13G36_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        },
-        {
-          "id": "ipados-release-9.3.5-13G36-iPad2,4",
-          "name": "iPad 2 (Mid 2012)",
-          "devices": [
-            "iPad2,4"
-          ],
-          "filename": "iPad2,4_9.3.5_13G36_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-73989-20160825-088A95A0-6715-11E6-A551-343E34D2D062/iPad2,4_9.3.5_13G36_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        },
-        {
-          "id": "ipados-release-9.3.5-13G36-iPad2,5",
-          "name": "iPad mini (WiFi)",
-          "devices": [
-            "iPad2,5"
-          ],
-          "filename": "iPad2,5_9.3.5_13G36_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-74004-20160825-995D69FE-6715-11E6-A974-933E34D2D062/iPad2,5_9.3.5_13G36_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        },
-        {
-          "id": "ipados-release-9.3.5-13G36-iPad3,1",
-          "name": "iPad 3 (WiFi)",
-          "devices": [
-            "iPad3,1"
-          ],
-          "filename": "iPad3,1_9.3.5_13G36_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-73961-20160825-88328FDE-6714-11E6-97F2-B63D34D2D062/iPad3,1_9.3.5_13G36_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        }
-      ]
-    },
-    {
       "id": "ipados-release-5.1.1-9B206",
       "version": "5.1.1",
       "version_label": "5.1.1",
@@ -601,5 +471,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-03T06:10:50+09:00"
+  "generated_at_tokyo": "2026-11-03T11:30:14+09:00"
 }

@@ -4,7 +4,7 @@
   "os_key": "audioos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-02T21:10:50Z",
+  "generated_at": "2026-11-03T02:30:14Z",
   "release_count": 53,
   "firmware_count": 55,
   "releases": [
@@ -48,7 +48,7 @@
       "version_label": "27.0",
       "build": "24J361",
       "released_at": "2026-09-14T17:00:00Z",
-      "signed_firmware_count": 1,
+      "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "27.0/24J361.json",
       "firmwares": [
@@ -61,7 +61,7 @@
           "filename": "AudioAccessory5,1_27.0_24J361_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026SFallFCS/a595a3b2-2c42-470a-9417-a705aaafa05c/AudioAccessory5,1_27.0_24J361_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -1250,5 +1250,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-03T06:10:50+09:00"
+  "generated_at_tokyo": "2026-11-03T11:30:14+09:00"
 }
