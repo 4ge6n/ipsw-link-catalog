@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-03T13:20:36Z"
+      "checked_at": "2026-11-03T14:55:36Z"
     }
   ],
   "firmwares": [
@@ -38,6 +38,8 @@
         "Mac15,14",
         "Mac15,3",
         "Mac15,4",
+        "Mac15,5",
+        "Mac15,6",
         "Mac15,7",
         "Mac15,8",
         "Mac15,9",
@@ -81,5 +83,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T10:48:41Z",
-  "last_seen_at": "2026-11-03T13:20:36Z"
+  "last_seen_at": "2026-11-03T14:55:36Z"
 }
