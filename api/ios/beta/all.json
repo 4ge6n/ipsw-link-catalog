@@ -4,9 +4,9 @@
   "os_key": "ios",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-11-03T18:30:37Z",
+  "generated_at": "2026-11-03T18:50:48Z",
   "release_count": 550,
-  "firmware_count": 8730,
+  "firmware_count": 8742,
   "releases": [
     {
       "id": "ios-beta-27.3-beta-24C5037I",
@@ -15,9 +15,143 @@
       "build": "24C5037I",
       "released_at": "2026-11-03T18:00:00Z",
       "signed_firmware_count": 0,
-      "total_firmware_count": 19,
+      "total_firmware_count": 31,
       "data": "27.3-beta/24C5037I.json",
       "firmwares": [
+        {
+          "id": "ios-beta-27.3-beta-24C5037I-iPhone19,4",
+          "name": "iPhone Duo",
+          "devices": [
+            "iPhone19,4"
+          ],
+          "filename": "iPhone19,4_27.3_24C5037i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/e76d5432-98d2-445f-a394-650f3ce28994/iPhone19,4_27.3_24C5037i_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.3-beta-24C5037I-iPhone19,2",
+          "name": "iPhone 18 Pro",
+          "devices": [
+            "iPhone19,2",
+            "iPhone19,3",
+            "iPhone19,7"
+          ],
+          "filename": "iPhone19,2,iPhone19,3,iPhone19,7_27.3_24C5037i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/60d98ab7-7a85-4707-a8db-95c2877e8684/iPhone19,2,iPhone19,3,iPhone19,7_27.3_24C5037i_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.3-beta-24C5037I-iPhone18,5",
+          "name": "iPhone 17e",
+          "devices": [
+            "iPhone18,5"
+          ],
+          "filename": "iPhone18,5_27.3_24C5037i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/6596ed83-ec51-478b-b2d2-6b374096f4c5/iPhone18,5_27.3_24C5037i_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.3-beta-24C5037I-iPhone18,4",
+          "name": "iPhone Air",
+          "devices": [
+            "iPhone18,4"
+          ],
+          "filename": "iPhone18,4_27.3_24C5037i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/43b30477-287f-45f4-9b5b-d46f931841c5/iPhone18,4_27.3_24C5037i_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.3-beta-24C5037I-iPhone18,3",
+          "name": "iPhone 17",
+          "devices": [
+            "iPhone18,3"
+          ],
+          "filename": "iPhone18,3_27.3_24C5037i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/51b08222-7126-4f05-a19b-ecbe9e67bde7/iPhone18,3_27.3_24C5037i_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.3-beta-24C5037I-iPhone18,2",
+          "name": "iPhone 17 Pro Max",
+          "devices": [
+            "iPhone18,2"
+          ],
+          "filename": "iPhone18,2_27.3_24C5037i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/7b4dad3a-c3aa-4e0f-9e1b-911d7b53867f/iPhone18,2_27.3_24C5037i_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.3-beta-24C5037I-iPhone18,1",
+          "name": "iPhone 17 Pro",
+          "devices": [
+            "iPhone18,1"
+          ],
+          "filename": "iPhone18,1_27.3_24C5037i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/3f2e8489-c23e-47a4-b3c8-11169fde3ee6/iPhone18,1_27.3_24C5037i_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.3-beta-24C5037I-iPhone17,5",
+          "name": "iPhone 16e",
+          "devices": [
+            "iPhone17,5"
+          ],
+          "filename": "iPhone17,5_27.3_24C5037i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/5760d0b4-6c20-444d-a7c3-63e4fcff54eb/iPhone17,5_27.3_24C5037i_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.3-beta-24C5037I-iPhone17,4",
+          "name": "iPhone 16 Plus",
+          "devices": [
+            "iPhone17,4"
+          ],
+          "filename": "iPhone17,4_27.3_24C5037i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/760bf3b8-00f9-4355-918f-d5e2ce0c76bc/iPhone17,4_27.3_24C5037i_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.3-beta-24C5037I-iPhone17,3",
+          "name": "iPhone 16",
+          "devices": [
+            "iPhone17,3"
+          ],
+          "filename": "iPhone17,3_27.3_24C5037i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/a623c478-9a07-4b19-b6c4-11a33243a419/iPhone17,3_27.3_24C5037i_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.3-beta-24C5037I-iPhone17,2",
+          "name": "iPhone 16 Pro Max",
+          "devices": [
+            "iPhone17,2"
+          ],
+          "filename": "iPhone17,2_27.3_24C5037i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/9bbe41cb-27ee-4507-a06d-902b82fc5e31/iPhone17,2_27.3_24C5037i_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.3-beta-24C5037I-iPhone17,1",
+          "name": "iPhone 16 Pro",
+          "devices": [
+            "iPhone17,1"
+          ],
+          "filename": "iPhone17,1_27.3_24C5037i_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallSeed/c71f9f2a-bd37-4488-890c-8e3ed8f24fba/iPhone17,1_27.3_24C5037i_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
         {
           "id": "ios-beta-27.3-beta-24C5037I-iPhone16,2",
           "name": "iPhone 15 Pro Max",
@@ -107988,5 +108122,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-04T03:30:37+09:00"
+  "generated_at_tokyo": "2026-11-04T03:50:48+09:00"
 }
