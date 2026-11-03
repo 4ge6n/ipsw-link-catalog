@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-03T02:30:14Z"
+      "checked_at": "2026-11-03T13:20:36Z"
     }
   ],
   "firmwares": [
@@ -125,19 +125,6 @@
       ],
       "url": "https://updates.cdn-apple.com/2026FallFCS/d79065c6-1467-4207-b204-4c8f9d080aa1/iPhone17,5_27.0_24A437_Restore.ipsw",
       "filename": "iPhone17,5_27.0_24A437_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-14T17:20:28Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPhone 16 Plus",
-      "devices": [
-        "iPhone17,4"
-      ],
-      "url": "https://updates.cdn-apple.com/2026FallFCS/601712cb-7aa9-4914-b421-91d45da959e6/iPhone17,4_27.0_24A437_Restore.ipsw",
-      "filename": "iPhone17,4_27.0_24A437_Restore.ipsw",
       "signing": {
         "status": "unknown",
         "checked_at": "2026-09-14T17:20:28Z",
@@ -431,8 +418,21 @@
         "checked_at": "2026-09-14T17:20:28Z",
         "unsigned_since": null
       }
+    },
+    {
+      "name": "iPhone 16 Plus",
+      "devices": [
+        "iPhone17,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/601712cb-7aa9-4914-b421-91d45da959e6/iPhone17,4_27.0_24A437_Restore.ipsw",
+      "filename": "iPhone17,4_27.0_24A437_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-14T17:20:28Z",
+        "unsigned_since": null
+      }
     }
   ],
   "first_seen_at": "2026-09-14T17:20:28Z",
-  "last_seen_at": "2026-11-03T02:30:14Z"
+  "last_seen_at": "2026-11-03T13:20:36Z"
 }
