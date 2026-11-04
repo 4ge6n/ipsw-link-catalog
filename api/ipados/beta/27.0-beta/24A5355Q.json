@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-03T23:10:35Z"
+      "checked_at": "2026-11-04T00:40:34Z"
     }
   ],
   "firmwares": [
@@ -35,7 +35,8 @@
       "devices": [
         "iPad17,1",
         "iPad17,2",
-        "iPad17,3"
+        "iPad17,3",
+        "iPad17,4"
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/fullrestores/122-99608/2AD0F723-D5F7-494B-928B-0BD22EEB032E/iPad17,1,iPad17,2,iPad17,3,iPad17,4_27.0_24A5355q_Restore.ipsw",
       "filename": "iPad17,1,iPad17,2,iPad17,3,iPad17,4_27.0_24A5355q_Restore.ipsw",
@@ -257,5 +258,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T10:48:41Z",
-  "last_seen_at": "2026-11-03T23:10:35Z"
+  "last_seen_at": "2026-11-04T00:40:34Z"
 }
