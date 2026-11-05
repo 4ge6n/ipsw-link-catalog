@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-05T20:15:35Z",
+  "generated_at": "2026-11-05T20:50:36Z",
   "release_count": 273,
   "firmware_count": 2215,
   "releases": [
@@ -20,7 +20,7 @@
       "firmwares": [
         {
           "id": "ipados-release-27.2-24B8120-iPad19,1",
-          "name": "iPad mini (A20 Pro)",
+          "name": "iPad mini (A20 Pro, Cellular)",
           "devices": [
             "iPad19,1",
             "iPad19,2"
@@ -32034,5 +32034,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-06T05:15:35+09:00"
+  "generated_at_tokyo": "2026-11-06T05:50:36+09:00"
 }
