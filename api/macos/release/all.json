@@ -4,10 +4,60 @@
   "os_key": "macos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-05T19:30:34Z",
+  "generated_at": "2026-11-05T19:42:05Z",
   "release_count": 94,
   "firmware_count": 94,
   "releases": [
+    {
+      "id": "macos-release-27.2-26B7124",
+      "version": "27.2",
+      "version_label": "27.2",
+      "build": "26B7124",
+      "released_at": "2026-11-05T19:14:53Z",
+      "signed_firmware_count": 1,
+      "total_firmware_count": 1,
+      "data": "27.2/26B7124.json",
+      "firmwares": [
+        {
+          "id": "macos-release-27.2-26B7124-Mac18,1",
+          "name": "MacBook Pro (14-inch, M6)",
+          "devices": [
+            "Mac18,1",
+            "Mac18,2"
+          ],
+          "filename": "UniversalMac_27.2_26B7124_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/04f50f4e-1485-4efb-bd81-f3d743fdff4a/UniversalMac_27.2_26B7124_Restore.ipsw",
+          "sha1": "b10b25896174e29c76c5c28de6a818999b31d9fa",
+          "signed": true
+        }
+      ]
+    },
+    {
+      "id": "macos-release-27.2-26B8125",
+      "version": "27.2",
+      "version_label": "27.2",
+      "build": "26B8125",
+      "released_at": "2026-11-05T19:14:34Z",
+      "signed_firmware_count": 1,
+      "total_firmware_count": 1,
+      "data": "27.2/26B8125.json",
+      "firmwares": [
+        {
+          "id": "macos-release-27.2-26B8125-Mac17,10",
+          "name": "MacBook Pro (16-inch PROLED XDR Display)",
+          "devices": [
+            "Mac17,10",
+            "Mac17,11",
+            "Mac17,12",
+            "Mac17,13"
+          ],
+          "filename": "UniversalMac_27.2_26B8125_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/b83bb963-ebd8-4608-8b5d-fdc70cb24927/UniversalMac_27.2_26B8125_Restore.ipsw",
+          "sha1": "30b48ba7b54114c8eec0bef084344c4fce908aa6",
+          "signed": true
+        }
+      ]
+    },
     {
       "id": "macos-release-27.2-26B123",
       "version": "27.2",
@@ -83,56 +133,6 @@
           "filename": "UniversalMac_27.2_26B123_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/c9671975-52db-4fb5-9af2-00217169ba8d/UniversalMac_27.2_26B123_Restore.ipsw",
           "sha1": "617360e5619dbb424ed3774b98732bb3cfeacc0b",
-          "signed": true
-        }
-      ]
-    },
-    {
-      "id": "macos-release-27.2-26B8125",
-      "version": "27.2",
-      "version_label": "27.2",
-      "build": "26B8125",
-      "released_at": null,
-      "signed_firmware_count": 1,
-      "total_firmware_count": 1,
-      "data": "27.2/26B8125.json",
-      "firmwares": [
-        {
-          "id": "macos-release-27.2-26B8125-Mac17,10",
-          "name": "Mac17,10",
-          "devices": [
-            "Mac17,10",
-            "Mac17,11",
-            "Mac17,12",
-            "Mac17,13"
-          ],
-          "filename": "UniversalMac_27.2_26B8125_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/b83bb963-ebd8-4608-8b5d-fdc70cb24927/UniversalMac_27.2_26B8125_Restore.ipsw",
-          "sha1": "30b48ba7b54114c8eec0bef084344c4fce908aa6",
-          "signed": true
-        }
-      ]
-    },
-    {
-      "id": "macos-release-27.2-26B7124",
-      "version": "27.2",
-      "version_label": "27.2",
-      "build": "26B7124",
-      "released_at": null,
-      "signed_firmware_count": 1,
-      "total_firmware_count": 1,
-      "data": "27.2/26B7124.json",
-      "firmwares": [
-        {
-          "id": "macos-release-27.2-26B7124-Mac18,1",
-          "name": "Mac18,1",
-          "devices": [
-            "Mac18,1",
-            "Mac18,2"
-          ],
-          "filename": "UniversalMac_27.2_26B7124_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/04f50f4e-1485-4efb-bd81-f3d743fdff4a/UniversalMac_27.2_26B7124_Restore.ipsw",
-          "sha1": "b10b25896174e29c76c5c28de6a818999b31d9fa",
           "signed": true
         }
       ]
@@ -4258,5 +4258,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-06T04:30:34+09:00"
+  "generated_at_tokyo": "2026-11-06T04:42:05+09:00"
 }

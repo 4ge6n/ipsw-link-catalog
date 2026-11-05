@@ -4,18 +4,22 @@
   "version": "27.2",
   "version_label": "27.2",
   "build": "24B8120",
-  "released_at": null,
+  "released_at": "2026-11-05T19:24:18Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-11-05T19:30:34Z"
+      "checked_at": "2026-11-05T19:42:05Z"
+    },
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-11-05T19:42:05Z"
     }
   ],
   "firmwares": [
     {
-      "name": "iPad19,2",
+      "name": "iPad mini (A20 Pro)",
       "devices": [
         "iPad19,1",
         "iPad19,2"
@@ -24,12 +28,12 @@
       "filename": "iPad19,1,iPad19,2_27.2_24B8120_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-05T19:30:34Z",
+        "checked_at": "2026-11-05T19:42:05Z",
         "unsigned_since": null
       },
       "sha1": "a7121fd8a6821c2f402bd2e441e7b1e68c96de31"
     }
   ],
   "first_seen_at": "2026-11-05T19:30:34Z",
-  "last_seen_at": "2026-11-05T19:30:34Z"
+  "last_seen_at": "2026-11-05T19:42:05Z"
 }

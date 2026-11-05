@@ -4,10 +4,32 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-05T19:30:34Z",
+  "generated_at": "2026-11-05T19:42:05Z",
   "release_count": 9,
   "firmware_count": 30,
   "releases": [
+    {
+      "id": "ipados-release-27.2-24B8120",
+      "version": "27.2",
+      "version_label": "27.2",
+      "build": "24B8120",
+      "released_at": "2026-11-05T19:24:18Z",
+      "data": "27.2/24B8120.json",
+      "firmwares": [
+        {
+          "id": "ipados-release-27.2-24B8120-iPad19,1",
+          "name": "iPad mini (A20 Pro)",
+          "devices": [
+            "iPad19,1",
+            "iPad19,2"
+          ],
+          "filename": "iPad19,1,iPad19,2_27.2_24B8120_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/d70a938c-e796-4f36-bf9a-cb235fedffba/iPad19,1,iPad19,2_27.2_24B8120_Restore.ipsw",
+          "sha1": "a7121fd8a6821c2f402bd2e441e7b1e68c96de31",
+          "signed": true
+        }
+      ]
+    },
     {
       "id": "ipados-release-27.2-24B119",
       "version": "27.2",
@@ -224,28 +246,6 @@
           "filename": "iPad_Pro_A12X_A12Z_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/16e7a18b-2da0-4cc2-93cb-ef47c401b796/iPad_Pro_A12X_A12Z_27.2_24B119_Restore.ipsw",
           "sha1": "966a136cf08db12eb0634627f4539fee52b34846",
-          "signed": true
-        }
-      ]
-    },
-    {
-      "id": "ipados-release-27.2-24B8120",
-      "version": "27.2",
-      "version_label": "27.2",
-      "build": "24B8120",
-      "released_at": null,
-      "data": "27.2/24B8120.json",
-      "firmwares": [
-        {
-          "id": "ipados-release-27.2-24B8120-iPad19,1",
-          "name": "iPad19,2",
-          "devices": [
-            "iPad19,1",
-            "iPad19,2"
-          ],
-          "filename": "iPad19,1,iPad19,2_27.2_24B8120_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/d70a938c-e796-4f36-bf9a-cb235fedffba/iPad19,1,iPad19,2_27.2_24B8120_Restore.ipsw",
-          "sha1": "a7121fd8a6821c2f402bd2e441e7b1e68c96de31",
           "signed": true
         }
       ]
@@ -493,5 +493,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-06T04:30:34+09:00"
+  "generated_at_tokyo": "2026-11-06T04:42:05+09:00"
 }

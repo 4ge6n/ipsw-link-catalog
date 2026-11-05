@@ -4,18 +4,22 @@
   "version": "27.2",
   "version_label": "27.2",
   "build": "26B8125",
-  "released_at": null,
+  "released_at": "2026-11-05T19:14:34Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-11-05T19:30:34Z"
+      "checked_at": "2026-11-05T19:42:05Z"
+    },
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-11-05T19:42:05Z"
     }
   ],
   "firmwares": [
     {
-      "name": "Mac17,10",
+      "name": "MacBook Pro (16-inch PROLED XDR Display)",
       "devices": [
         "Mac17,10",
         "Mac17,11",
@@ -26,12 +30,12 @@
       "filename": "UniversalMac_27.2_26B8125_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-05T19:30:34Z",
+        "checked_at": "2026-11-05T19:42:05Z",
         "unsigned_since": null
       },
       "sha1": "30b48ba7b54114c8eec0bef084344c4fce908aa6"
     }
   ],
   "first_seen_at": "2026-11-05T19:25:36Z",
-  "last_seen_at": "2026-11-05T19:30:34Z"
+  "last_seen_at": "2026-11-05T19:42:05Z"
 }

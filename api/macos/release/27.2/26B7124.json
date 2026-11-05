@@ -4,18 +4,22 @@
   "version": "27.2",
   "version_label": "27.2",
   "build": "26B7124",
-  "released_at": null,
+  "released_at": "2026-11-05T19:14:53Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-11-05T19:30:34Z"
+      "checked_at": "2026-11-05T19:42:05Z"
+    },
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-11-05T19:42:05Z"
     }
   ],
   "firmwares": [
     {
-      "name": "Mac18,1",
+      "name": "MacBook Pro (14-inch, M6)",
       "devices": [
         "Mac18,1",
         "Mac18,2"
@@ -24,12 +28,12 @@
       "filename": "UniversalMac_27.2_26B7124_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-05T19:30:34Z",
+        "checked_at": "2026-11-05T19:42:05Z",
         "unsigned_since": null
       },
       "sha1": "b10b25896174e29c76c5c28de6a818999b31d9fa"
     }
   ],
   "first_seen_at": "2026-11-05T19:25:36Z",
-  "last_seen_at": "2026-11-05T19:30:34Z"
+  "last_seen_at": "2026-11-05T19:42:05Z"
 }
