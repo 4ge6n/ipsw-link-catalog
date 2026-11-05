@@ -10,12 +10,12 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-04T18:35:36Z"
+      "checked_at": "2026-11-05T14:35:42Z"
     }
   ],
   "firmwares": [
     {
-      "name": "Mac Studio (M1 Max)",
+      "name": "Mac Studio (M1 Max) IPSW",
       "devices": [
         "Mac13,1",
         "Mac13,2",
@@ -87,5 +87,5 @@
     }
   ],
   "first_seen_at": "2026-09-16T20:15:52Z",
-  "last_seen_at": "2026-11-04T18:35:36Z"
+  "last_seen_at": "2026-11-05T14:35:42Z"
 }

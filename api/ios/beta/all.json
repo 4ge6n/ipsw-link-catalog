@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-11-04T18:35:36Z",
+  "generated_at": "2026-11-05T14:35:42Z",
   "release_count": 550,
   "firmware_count": 8742,
   "releases": [
@@ -31,7 +31,7 @@
         },
         {
           "id": "ios-beta-27.3-beta-24C5037I-iPhone19,2",
-          "name": "iPhone 18 Pro",
+          "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
             "iPhone19,3",
@@ -308,7 +308,7 @@
         },
         {
           "id": "ios-beta-27.3-beta-24C5037I-iPhone13,2",
-          "name": "iPhone 12",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -342,7 +342,7 @@
         },
         {
           "id": "ios-beta-27.3-beta-24C5037I-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -366,17 +366,17 @@
       ]
     },
     {
-      "id": "ios-beta-27.2-24B91020",
+      "id": "ios-beta-27.2-beta-24B91020",
       "version": "27.2",
-      "version_label": "27.2",
+      "version_label": "27.2-beta",
       "build": "24B91020",
       "released_at": "2026-10-26T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.2/24B91020.json",
+      "data": "27.2-beta/24B91020.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.2-24B91020-iPhone19,4",
+          "id": "ios-beta-27.2-beta-24B91020-iPhone19,4",
           "name": "iPhone Duo",
           "devices": [
             "iPhone19,4"
@@ -389,18 +389,18 @@
       ]
     },
     {
-      "id": "ios-beta-27.2-24B119",
+      "id": "ios-beta-27.2-beta-24B119",
       "version": "27.2",
-      "version_label": "27.2",
+      "version_label": "27.2-beta",
       "build": "24B119",
       "released_at": "2026-10-26T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 30,
-      "data": "27.2/24B119.json",
+      "data": "27.2-beta/24B119.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.2-24B119-iPhone19,2",
-          "name": "iPhone 18 Pro",
+          "id": "ios-beta-27.2-beta-24B119-iPhone19,2",
+          "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
             "iPhone19,3",
@@ -412,7 +412,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone18,5",
+          "id": "ios-beta-27.2-beta-24B119-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -423,7 +423,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone18,4",
+          "id": "ios-beta-27.2-beta-24B119-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -434,7 +434,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone18,3",
+          "id": "ios-beta-27.2-beta-24B119-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -445,7 +445,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone18,2",
+          "id": "ios-beta-27.2-beta-24B119-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -456,7 +456,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone18,1",
+          "id": "ios-beta-27.2-beta-24B119-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -467,7 +467,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone17,5",
+          "id": "ios-beta-27.2-beta-24B119-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -478,7 +478,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone17,4",
+          "id": "ios-beta-27.2-beta-24B119-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -489,7 +489,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone17,3",
+          "id": "ios-beta-27.2-beta-24B119-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -500,7 +500,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone17,2",
+          "id": "ios-beta-27.2-beta-24B119-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -511,7 +511,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone17,1",
+          "id": "ios-beta-27.2-beta-24B119-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -522,7 +522,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone16,2",
+          "id": "ios-beta-27.2-beta-24B119-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -533,7 +533,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone16,1",
+          "id": "ios-beta-27.2-beta-24B119-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -544,7 +544,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone15,5",
+          "id": "ios-beta-27.2-beta-24B119-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -555,7 +555,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone15,4",
+          "id": "ios-beta-27.2-beta-24B119-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -566,7 +566,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone15,3",
+          "id": "ios-beta-27.2-beta-24B119-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -577,7 +577,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone15,2",
+          "id": "ios-beta-27.2-beta-24B119-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -588,7 +588,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone14,8",
+          "id": "ios-beta-27.2-beta-24B119-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -599,7 +599,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone14,7",
+          "id": "ios-beta-27.2-beta-24B119-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -610,7 +610,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone14,6",
+          "id": "ios-beta-27.2-beta-24B119-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -621,7 +621,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone14,5",
+          "id": "ios-beta-27.2-beta-24B119-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -632,7 +632,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone14,4",
+          "id": "ios-beta-27.2-beta-24B119-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -643,7 +643,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone14,3",
+          "id": "ios-beta-27.2-beta-24B119-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -654,7 +654,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone14,2",
+          "id": "ios-beta-27.2-beta-24B119-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -665,7 +665,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone13,4",
+          "id": "ios-beta-27.2-beta-24B119-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -676,8 +676,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.2-beta-24B119-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -688,7 +688,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone13,1",
+          "id": "ios-beta-27.2-beta-24B119-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -699,7 +699,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone12,8",
+          "id": "ios-beta-27.2-beta-24B119-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -710,8 +710,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.2-beta-24B119-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -722,7 +722,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-24B119-iPhone12,1",
+          "id": "ios-beta-27.2-beta-24B119-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -735,18 +735,18 @@
       ]
     },
     {
-      "id": "ios-beta-27.2-rc-24B115",
+      "id": "ios-beta-27.2-beta-24B115",
       "version": "27.2",
-      "version_label": "27.2-rc",
+      "version_label": "27.2-beta",
       "build": "24B115",
       "released_at": "2026-10-19T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 30,
-      "data": "27.2-rc/24B115.json",
+      "data": "27.2-beta/24B115.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone19,2",
-          "name": "iPhone 18 Pro",
+          "id": "ios-beta-27.2-beta-24B115-iPhone19,2",
+          "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
             "iPhone19,3",
@@ -758,7 +758,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone18,5",
+          "id": "ios-beta-27.2-beta-24B115-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -769,7 +769,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone18,4",
+          "id": "ios-beta-27.2-beta-24B115-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -780,7 +780,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone18,3",
+          "id": "ios-beta-27.2-beta-24B115-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -791,7 +791,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone18,2",
+          "id": "ios-beta-27.2-beta-24B115-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -802,7 +802,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone18,1",
+          "id": "ios-beta-27.2-beta-24B115-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -813,7 +813,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone17,5",
+          "id": "ios-beta-27.2-beta-24B115-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -824,7 +824,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone17,4",
+          "id": "ios-beta-27.2-beta-24B115-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -835,7 +835,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone17,3",
+          "id": "ios-beta-27.2-beta-24B115-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -846,7 +846,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone17,2",
+          "id": "ios-beta-27.2-beta-24B115-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -857,7 +857,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone17,1",
+          "id": "ios-beta-27.2-beta-24B115-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -868,7 +868,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone16,2",
+          "id": "ios-beta-27.2-beta-24B115-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -879,7 +879,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone16,1",
+          "id": "ios-beta-27.2-beta-24B115-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -890,7 +890,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone15,5",
+          "id": "ios-beta-27.2-beta-24B115-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -901,7 +901,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone15,4",
+          "id": "ios-beta-27.2-beta-24B115-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -912,7 +912,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone15,3",
+          "id": "ios-beta-27.2-beta-24B115-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -923,7 +923,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone15,2",
+          "id": "ios-beta-27.2-beta-24B115-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -934,7 +934,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone14,8",
+          "id": "ios-beta-27.2-beta-24B115-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -945,7 +945,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone14,7",
+          "id": "ios-beta-27.2-beta-24B115-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -956,7 +956,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone14,6",
+          "id": "ios-beta-27.2-beta-24B115-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -967,7 +967,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone14,5",
+          "id": "ios-beta-27.2-beta-24B115-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -978,7 +978,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone14,4",
+          "id": "ios-beta-27.2-beta-24B115-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -989,7 +989,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone14,3",
+          "id": "ios-beta-27.2-beta-24B115-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -1000,7 +1000,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone14,2",
+          "id": "ios-beta-27.2-beta-24B115-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -1011,7 +1011,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone13,4",
+          "id": "ios-beta-27.2-beta-24B115-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -1022,8 +1022,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.2-beta-24B115-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -1034,7 +1034,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone13,1",
+          "id": "ios-beta-27.2-beta-24B115-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -1045,7 +1045,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone12,8",
+          "id": "ios-beta-27.2-beta-24B115-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -1056,8 +1056,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.2-beta-24B115-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -1068,7 +1068,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-rc-24B115-iPhone12,1",
+          "id": "ios-beta-27.2-beta-24B115-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -1081,18 +1081,18 @@
       ]
     },
     {
-      "id": "ios-beta-27.2-beta-4-24B5110A",
+      "id": "ios-beta-27.2-beta-24B5110A",
       "version": "27.2",
-      "version_label": "27.2-beta-4",
+      "version_label": "27.2-beta",
       "build": "24B5110A",
       "released_at": "2026-10-13T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 30,
-      "data": "27.2-beta-4/24B5110A.json",
+      "data": "27.2-beta/24B5110A.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone19,2",
-          "name": "iPhone 18 Pro",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone19,2",
+          "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
             "iPhone19,3",
@@ -1104,7 +1104,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone18,5",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -1115,7 +1115,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone18,4",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -1126,7 +1126,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone18,3",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -1137,7 +1137,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone18,2",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -1148,7 +1148,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone18,1",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -1159,7 +1159,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone17,5",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -1170,7 +1170,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone17,4",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -1181,7 +1181,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone17,3",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -1192,7 +1192,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone17,2",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -1203,7 +1203,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone17,1",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -1214,7 +1214,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone16,2",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -1225,7 +1225,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone16,1",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -1236,7 +1236,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone15,5",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -1247,7 +1247,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone15,4",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -1258,7 +1258,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone15,3",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -1269,7 +1269,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone15,2",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -1280,7 +1280,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone14,8",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -1291,7 +1291,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone14,7",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -1302,7 +1302,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone14,6",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -1313,7 +1313,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone14,5",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -1324,7 +1324,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone14,4",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -1335,7 +1335,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone14,3",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -1346,7 +1346,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone14,2",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -1357,7 +1357,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone13,4",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -1368,8 +1368,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -1380,7 +1380,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone13,1",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -1391,7 +1391,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone12,8",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -1402,8 +1402,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -1414,7 +1414,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-4-24B5110A-iPhone12,1",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -1427,18 +1427,18 @@
       ]
     },
     {
-      "id": "ios-beta-27.2-beta-3-24B5099F",
+      "id": "ios-beta-27.2-beta-24B5099F",
       "version": "27.2",
-      "version_label": "27.2-beta-3",
+      "version_label": "27.2-beta",
       "build": "24B5099F",
       "released_at": "2026-10-05T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 30,
-      "data": "27.2-beta-3/24B5099F.json",
+      "data": "27.2-beta/24B5099F.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone19,2",
-          "name": "iPhone 18 Pro",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone19,2",
+          "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
             "iPhone19,3",
@@ -1450,7 +1450,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone18,5",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -1461,7 +1461,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone18,4",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -1472,7 +1472,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone18,3",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -1483,7 +1483,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone18,2",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -1494,7 +1494,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone18,1",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -1505,7 +1505,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone17,5",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -1516,7 +1516,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone17,4",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -1527,7 +1527,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone17,3",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -1538,7 +1538,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone17,2",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -1549,7 +1549,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone17,1",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -1560,7 +1560,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone16,2",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -1571,7 +1571,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone16,1",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -1582,7 +1582,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone15,5",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -1593,7 +1593,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone15,4",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -1604,7 +1604,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone15,3",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -1615,7 +1615,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone15,2",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -1626,7 +1626,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone14,8",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -1637,7 +1637,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone14,7",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -1648,7 +1648,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone14,6",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -1659,7 +1659,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone14,5",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -1670,7 +1670,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone14,4",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -1681,7 +1681,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone14,3",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -1692,7 +1692,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone14,2",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -1703,7 +1703,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone13,4",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -1714,8 +1714,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -1726,7 +1726,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone13,1",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -1737,7 +1737,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone12,8",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -1748,8 +1748,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -1760,7 +1760,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-3-24B5099F-iPhone12,1",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -1773,18 +1773,18 @@
       ]
     },
     {
-      "id": "ios-beta-27.2-beta-2-24B5089G",
+      "id": "ios-beta-27.2-beta-24B5089G",
       "version": "27.2",
-      "version_label": "27.2-beta-2",
+      "version_label": "27.2-beta",
       "build": "24B5089G",
       "released_at": "2026-09-21T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 30,
-      "data": "27.2-beta-2/24B5089G.json",
+      "data": "27.2-beta/24B5089G.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone19,2",
-          "name": "iPhone 18 Pro",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone19,2",
+          "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
             "iPhone19,3",
@@ -1796,7 +1796,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone18,5",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -1807,7 +1807,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone18,4",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -1818,7 +1818,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone18,3",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -1829,7 +1829,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone18,2",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -1840,7 +1840,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone18,1",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -1851,7 +1851,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone17,5",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -1862,7 +1862,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone17,4",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -1873,7 +1873,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone17,3",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -1884,7 +1884,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone17,2",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -1895,7 +1895,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone17,1",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -1906,7 +1906,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone16,2",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -1917,7 +1917,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone16,1",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -1928,7 +1928,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone15,5",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -1939,7 +1939,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone15,4",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -1950,7 +1950,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone15,3",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -1961,7 +1961,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone15,2",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -1972,7 +1972,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone14,8",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -1983,7 +1983,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone14,7",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -1994,7 +1994,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone14,6",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -2005,7 +2005,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone14,5",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -2016,7 +2016,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone14,4",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -2027,7 +2027,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone14,3",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -2038,7 +2038,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone14,2",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -2049,7 +2049,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone13,4",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -2060,8 +2060,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -2072,7 +2072,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone13,1",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -2083,7 +2083,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone12,8",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -2094,8 +2094,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -2106,7 +2106,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-2-24B5089G-iPhone12,1",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -2130,7 +2130,7 @@
       "firmwares": [
         {
           "id": "ios-beta-27.2-beta-24B5084K-iPhone19,2",
-          "name": "iPhone 18 Pro",
+          "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
             "iPhone19,3",
@@ -2407,7 +2407,7 @@
         },
         {
           "id": "ios-beta-27.2-beta-24B5084K-iPhone13,2",
-          "name": "iPhone 12",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -2441,7 +2441,7 @@
         },
         {
           "id": "ios-beta-27.2-beta-24B5084K-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -2465,17 +2465,17 @@
       ]
     },
     {
-      "id": "ios-beta-27.1-24A94425",
+      "id": "ios-beta-27.1-beta-24A94425",
       "version": "27.1",
-      "version_label": "27.1",
+      "version_label": "27.1-beta",
       "build": "24A94425",
       "released_at": "2026-10-22T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.1/24A94425.json",
+      "data": "27.1-beta/24A94425.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.1-24A94425-iPhone19,4",
+          "id": "ios-beta-27.1-beta-24A94425-iPhone19,4",
           "name": "iPhone Duo",
           "devices": [
             "iPhone19,4"
@@ -2488,17 +2488,17 @@
       ]
     },
     {
-      "id": "ios-beta-27.0.1-24A446",
+      "id": "ios-beta-27.0.1-beta-24A446",
       "version": "27.0.1",
-      "version_label": "27.0.1",
+      "version_label": "27.0.1-beta",
       "build": "24A446",
       "released_at": "2026-09-28T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 32,
-      "data": "27.0.1/24A446.json",
+      "data": "27.0.1-beta/24A446.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone19,7",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone19,7",
           "name": "iPhone 18 Pro Max (Global)",
           "devices": [
             "iPhone19,7"
@@ -2509,7 +2509,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone19,3",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone19,3",
           "name": "iPhone 18 Pro Max (U.S.)",
           "devices": [
             "iPhone19,3"
@@ -2520,7 +2520,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone19,2",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone19,2",
           "name": "iPhone 18 Pro",
           "devices": [
             "iPhone19,2"
@@ -2531,7 +2531,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone18,5",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -2542,7 +2542,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone18,4",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -2553,7 +2553,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone18,3",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -2564,7 +2564,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone18,2",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -2575,7 +2575,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone18,1",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -2586,7 +2586,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone17,5",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -2597,7 +2597,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone17,4",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -2608,7 +2608,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone17,3",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -2619,7 +2619,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone17,2",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -2630,7 +2630,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone17,1",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -2641,7 +2641,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone16,2",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -2652,7 +2652,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone16,1",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -2663,7 +2663,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone15,5",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -2674,7 +2674,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone15,4",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -2685,7 +2685,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone15,3",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -2696,7 +2696,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone15,2",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -2707,7 +2707,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone14,8",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -2718,7 +2718,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone14,7",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -2729,7 +2729,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone14,6",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -2740,7 +2740,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone14,5",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -2751,7 +2751,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone14,4",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -2762,7 +2762,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone14,3",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -2773,7 +2773,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone14,2",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -2784,7 +2784,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone13,4",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -2795,8 +2795,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -2807,7 +2807,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone13,1",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -2818,7 +2818,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone12,8",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -2829,8 +2829,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -2841,7 +2841,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-24A446-iPhone12,1",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -2854,17 +2854,17 @@
       ]
     },
     {
-      "id": "ios-beta-27.0-24A437",
+      "id": "ios-beta-27.0-beta-24A437",
       "version": "27.0",
-      "version_label": "27.0",
+      "version_label": "27.0-beta",
       "build": "24A437",
       "released_at": "2026-09-14T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 32,
-      "data": "27.0/24A437.json",
+      "data": "27.0-beta/24A437.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.0-24A437-iPhone19,7",
+          "id": "ios-beta-27.0-beta-24A437-iPhone19,7",
           "name": "iPhone 18 Pro Max (Global)",
           "devices": [
             "iPhone19,7"
@@ -2875,7 +2875,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone19,3",
+          "id": "ios-beta-27.0-beta-24A437-iPhone19,3",
           "name": "iPhone 18 Pro Max (U.S.)",
           "devices": [
             "iPhone19,3"
@@ -2886,7 +2886,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone19,2",
+          "id": "ios-beta-27.0-beta-24A437-iPhone19,2",
           "name": "iPhone 18 Pro",
           "devices": [
             "iPhone19,2"
@@ -2897,7 +2897,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone18,5",
+          "id": "ios-beta-27.0-beta-24A437-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -2908,7 +2908,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone18,4",
+          "id": "ios-beta-27.0-beta-24A437-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -2919,7 +2919,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone18,3",
+          "id": "ios-beta-27.0-beta-24A437-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -2930,7 +2930,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone18,2",
+          "id": "ios-beta-27.0-beta-24A437-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -2941,7 +2941,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone18,1",
+          "id": "ios-beta-27.0-beta-24A437-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -2952,7 +2952,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone17,5",
+          "id": "ios-beta-27.0-beta-24A437-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -2963,7 +2963,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone17,4",
+          "id": "ios-beta-27.0-beta-24A437-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -2974,7 +2974,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone17,3",
+          "id": "ios-beta-27.0-beta-24A437-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -2985,7 +2985,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone17,2",
+          "id": "ios-beta-27.0-beta-24A437-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -2996,7 +2996,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone17,1",
+          "id": "ios-beta-27.0-beta-24A437-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -3007,7 +3007,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone16,2",
+          "id": "ios-beta-27.0-beta-24A437-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -3018,7 +3018,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone16,1",
+          "id": "ios-beta-27.0-beta-24A437-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -3029,7 +3029,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone15,5",
+          "id": "ios-beta-27.0-beta-24A437-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -3040,7 +3040,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone15,4",
+          "id": "ios-beta-27.0-beta-24A437-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -3051,7 +3051,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone15,3",
+          "id": "ios-beta-27.0-beta-24A437-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -3062,7 +3062,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone15,2",
+          "id": "ios-beta-27.0-beta-24A437-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -3073,7 +3073,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone14,8",
+          "id": "ios-beta-27.0-beta-24A437-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -3084,7 +3084,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone14,7",
+          "id": "ios-beta-27.0-beta-24A437-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -3095,7 +3095,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone14,6",
+          "id": "ios-beta-27.0-beta-24A437-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -3106,7 +3106,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone14,5",
+          "id": "ios-beta-27.0-beta-24A437-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -3117,7 +3117,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone14,4",
+          "id": "ios-beta-27.0-beta-24A437-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -3128,7 +3128,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone14,3",
+          "id": "ios-beta-27.0-beta-24A437-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -3139,7 +3139,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone14,2",
+          "id": "ios-beta-27.0-beta-24A437-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -3150,7 +3150,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone13,4",
+          "id": "ios-beta-27.0-beta-24A437-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -3161,8 +3161,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.0-beta-24A437-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -3173,7 +3173,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone13,1",
+          "id": "ios-beta-27.0-beta-24A437-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -3184,7 +3184,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone12,8",
+          "id": "ios-beta-27.0-beta-24A437-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -3195,8 +3195,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.0-beta-24A437-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -3207,7 +3207,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-24A437-iPhone12,1",
+          "id": "ios-beta-27.0-beta-24A437-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -3220,17 +3220,17 @@
       ]
     },
     {
-      "id": "ios-beta-27.0-rc-24A435",
+      "id": "ios-beta-27.0-beta-24A435",
       "version": "27.0",
-      "version_label": "27.0-rc",
+      "version_label": "27.0-beta",
       "build": "24A435",
       "released_at": "2026-09-09T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 29,
-      "data": "27.0-rc/24A435.json",
+      "data": "27.0-beta/24A435.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone18,5",
+          "id": "ios-beta-27.0-beta-24A435-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -3241,7 +3241,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone18,4",
+          "id": "ios-beta-27.0-beta-24A435-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -3252,7 +3252,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone18,3",
+          "id": "ios-beta-27.0-beta-24A435-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -3263,7 +3263,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone18,2",
+          "id": "ios-beta-27.0-beta-24A435-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -3274,7 +3274,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone18,1",
+          "id": "ios-beta-27.0-beta-24A435-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -3285,7 +3285,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone17,5",
+          "id": "ios-beta-27.0-beta-24A435-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -3296,7 +3296,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone17,4",
+          "id": "ios-beta-27.0-beta-24A435-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -3307,7 +3307,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone17,3",
+          "id": "ios-beta-27.0-beta-24A435-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -3318,7 +3318,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone17,2",
+          "id": "ios-beta-27.0-beta-24A435-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -3329,7 +3329,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone17,1",
+          "id": "ios-beta-27.0-beta-24A435-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -3340,7 +3340,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone16,2",
+          "id": "ios-beta-27.0-beta-24A435-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -3351,7 +3351,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone16,1",
+          "id": "ios-beta-27.0-beta-24A435-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -3362,7 +3362,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone15,5",
+          "id": "ios-beta-27.0-beta-24A435-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -3373,7 +3373,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone15,4",
+          "id": "ios-beta-27.0-beta-24A435-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -3384,7 +3384,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone15,3",
+          "id": "ios-beta-27.0-beta-24A435-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -3395,7 +3395,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone15,2",
+          "id": "ios-beta-27.0-beta-24A435-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -3406,7 +3406,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone14,8",
+          "id": "ios-beta-27.0-beta-24A435-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -3417,7 +3417,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone14,7",
+          "id": "ios-beta-27.0-beta-24A435-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -3428,7 +3428,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone14,6",
+          "id": "ios-beta-27.0-beta-24A435-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -3439,7 +3439,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone14,5",
+          "id": "ios-beta-27.0-beta-24A435-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -3450,7 +3450,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone14,4",
+          "id": "ios-beta-27.0-beta-24A435-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -3461,7 +3461,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone14,3",
+          "id": "ios-beta-27.0-beta-24A435-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -3472,7 +3472,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone14,2",
+          "id": "ios-beta-27.0-beta-24A435-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -3483,7 +3483,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone13,4",
+          "id": "ios-beta-27.0-beta-24A435-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -3494,8 +3494,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.0-beta-24A435-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -3506,7 +3506,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone13,1",
+          "id": "ios-beta-27.0-beta-24A435-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -3517,7 +3517,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone12,8",
+          "id": "ios-beta-27.0-beta-24A435-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -3528,8 +3528,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.0-beta-24A435-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -3540,7 +3540,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-rc-24A435-iPhone12,1",
+          "id": "ios-beta-27.0-beta-24A435-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -3553,17 +3553,17 @@
       ]
     },
     {
-      "id": "ios-beta-27.0-beta-8-24A5430A",
+      "id": "ios-beta-27.0-beta-24A5430A",
       "version": "27.0",
-      "version_label": "27.0-beta-8",
+      "version_label": "27.0-beta",
       "build": "24A5430A",
       "released_at": "2026-08-31T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 29,
-      "data": "27.0-beta-8/24A5430A.json",
+      "data": "27.0-beta/24A5430A.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone18,5",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -3574,7 +3574,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone18,4",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -3585,7 +3585,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone18,3",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -3596,7 +3596,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone18,2",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -3607,7 +3607,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone18,1",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -3618,7 +3618,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone17,5",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -3629,7 +3629,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone17,4",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -3640,7 +3640,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone17,3",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -3651,7 +3651,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone17,2",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -3662,7 +3662,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone17,1",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -3673,7 +3673,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone16,2",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -3684,7 +3684,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone16,1",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -3695,7 +3695,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone15,5",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -3706,7 +3706,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone15,4",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -3717,7 +3717,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone15,3",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -3728,7 +3728,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone15,2",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -3739,7 +3739,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone14,8",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -3750,7 +3750,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone14,7",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -3761,7 +3761,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone14,6",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -3772,7 +3772,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone14,5",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -3783,7 +3783,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone14,4",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -3794,7 +3794,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone14,3",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -3805,7 +3805,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone14,2",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -3816,7 +3816,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone13,4",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -3827,8 +3827,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -3839,7 +3839,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone13,1",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -3850,7 +3850,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone12,8",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -3861,8 +3861,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -3873,7 +3873,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-8-24A5430A-iPhone12,1",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -3886,17 +3886,17 @@
       ]
     },
     {
-      "id": "ios-beta-27.0-beta-7-24A5424A",
+      "id": "ios-beta-27.0-beta-24A5424A",
       "version": "27.0",
-      "version_label": "27.0-beta-7",
+      "version_label": "27.0-beta",
       "build": "24A5424A",
       "released_at": "2026-08-24T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 29,
-      "data": "27.0-beta-7/24A5424A.json",
+      "data": "27.0-beta/24A5424A.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone18,5",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -3907,7 +3907,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone18,4",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -3918,7 +3918,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone18,3",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -3929,7 +3929,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone18,2",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -3940,7 +3940,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone18,1",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -3951,7 +3951,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone17,5",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -3962,7 +3962,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone17,4",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -3973,7 +3973,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone17,3",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -3984,7 +3984,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone17,2",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -3995,7 +3995,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone17,1",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -4006,7 +4006,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone16,2",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -4017,7 +4017,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone16,1",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -4028,7 +4028,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone15,5",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -4039,7 +4039,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone15,4",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -4050,7 +4050,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone15,3",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -4061,7 +4061,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone15,2",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -4072,7 +4072,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone14,8",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -4083,7 +4083,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone14,7",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -4094,7 +4094,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone14,6",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -4105,7 +4105,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone14,5",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -4116,7 +4116,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone14,4",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -4127,7 +4127,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone14,3",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -4138,7 +4138,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone14,2",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -4149,7 +4149,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone13,4",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -4160,8 +4160,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -4172,7 +4172,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone13,1",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -4183,7 +4183,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone12,8",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -4194,8 +4194,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -4206,7 +4206,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-7-24A5424A-iPhone12,1",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -4219,17 +4219,17 @@
       ]
     },
     {
-      "id": "ios-beta-27.0-beta-6-24A5418B",
+      "id": "ios-beta-27.0-beta-24A5418B",
       "version": "27.0",
-      "version_label": "27.0-beta-6",
+      "version_label": "27.0-beta",
       "build": "24A5418B",
       "released_at": "2026-08-17T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 29,
-      "data": "27.0-beta-6/24A5418B.json",
+      "data": "27.0-beta/24A5418B.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone18,5",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -4240,7 +4240,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone18,4",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -4251,7 +4251,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone18,3",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -4262,7 +4262,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone18,2",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -4273,7 +4273,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone18,1",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -4284,7 +4284,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone17,5",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -4295,7 +4295,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone17,4",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -4306,7 +4306,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone17,3",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -4317,7 +4317,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone17,2",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -4328,7 +4328,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone17,1",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -4339,7 +4339,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone16,2",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -4350,7 +4350,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone16,1",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -4361,7 +4361,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone15,5",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -4372,7 +4372,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone15,4",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -4383,7 +4383,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone15,3",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -4394,7 +4394,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone15,2",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -4405,7 +4405,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone14,8",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -4416,7 +4416,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone14,7",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -4427,7 +4427,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone14,6",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -4438,7 +4438,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone14,5",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -4449,7 +4449,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone14,4",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -4460,7 +4460,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone14,3",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -4471,7 +4471,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone14,2",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -4482,7 +4482,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone13,4",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -4493,8 +4493,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -4505,7 +4505,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone13,1",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -4516,7 +4516,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone12,8",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -4527,8 +4527,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -4539,7 +4539,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-6-24A5418B-iPhone12,1",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -4552,17 +4552,17 @@
       ]
     },
     {
-      "id": "ios-beta-27.0-beta-5-24A5408D",
+      "id": "ios-beta-27.0-beta-24A5408D",
       "version": "27.0",
-      "version_label": "27.0-beta-5",
+      "version_label": "27.0-beta",
       "build": "24A5408D",
       "released_at": "2026-08-10T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 29,
-      "data": "27.0-beta-5/24A5408D.json",
+      "data": "27.0-beta/24A5408D.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone18,5",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -4573,7 +4573,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone18,4",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -4584,7 +4584,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone18,3",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -4595,7 +4595,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone18,2",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -4606,7 +4606,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone18,1",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -4617,7 +4617,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone17,5",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -4628,7 +4628,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone17,4",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -4639,7 +4639,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone17,3",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -4650,7 +4650,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone17,2",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -4661,7 +4661,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone17,1",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -4672,7 +4672,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone16,2",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -4683,7 +4683,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone16,1",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -4694,7 +4694,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone15,5",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -4705,7 +4705,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone15,4",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -4716,7 +4716,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone15,3",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -4727,7 +4727,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone15,2",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -4738,7 +4738,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone14,8",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -4749,7 +4749,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone14,7",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -4760,7 +4760,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone14,6",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -4771,7 +4771,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone14,5",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -4782,7 +4782,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone14,4",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -4793,7 +4793,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone14,3",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -4804,7 +4804,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone14,2",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -4815,7 +4815,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone13,4",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -4826,8 +4826,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -4838,7 +4838,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone13,1",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -4849,7 +4849,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone12,8",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -4860,8 +4860,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -4872,7 +4872,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-5-24A5408D-iPhone12,1",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -4885,17 +4885,17 @@
       ]
     },
     {
-      "id": "ios-beta-27.0-beta-4-24A5390F",
+      "id": "ios-beta-27.0-beta-24A5390F",
       "version": "27.0",
-      "version_label": "27.0-beta-4",
+      "version_label": "27.0-beta",
       "build": "24A5390F",
       "released_at": "2026-07-20T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 29,
-      "data": "27.0-beta-4/24A5390F.json",
+      "data": "27.0-beta/24A5390F.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone18,5",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -4906,7 +4906,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone18,4",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -4917,7 +4917,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone18,3",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -4928,7 +4928,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone18,2",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -4939,7 +4939,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone18,1",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -4950,7 +4950,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone17,5",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -4961,7 +4961,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone17,4",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -4972,7 +4972,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone17,3",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -4983,7 +4983,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone17,2",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -4994,7 +4994,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone17,1",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -5005,7 +5005,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone16,2",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -5016,7 +5016,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone16,1",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -5027,7 +5027,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone15,5",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -5038,7 +5038,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone15,4",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -5049,7 +5049,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone15,3",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -5060,7 +5060,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone15,2",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -5071,7 +5071,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone14,8",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -5082,7 +5082,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone14,7",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -5093,7 +5093,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone14,6",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -5104,7 +5104,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone14,5",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -5115,7 +5115,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone14,4",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -5126,7 +5126,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone14,3",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -5137,7 +5137,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone14,2",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -5148,7 +5148,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone13,4",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -5159,8 +5159,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -5171,7 +5171,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone13,1",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -5182,7 +5182,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone12,8",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -5193,8 +5193,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -5205,7 +5205,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-4-24A5390F-iPhone12,1",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -5218,17 +5218,17 @@
       ]
     },
     {
-      "id": "ios-beta-27.0-beta-3-24A5380H",
+      "id": "ios-beta-27.0-beta-24A5380H",
       "version": "27.0",
-      "version_label": "27.0-beta-3",
+      "version_label": "27.0-beta",
       "build": "24A5380H",
       "released_at": "2026-07-06T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 29,
-      "data": "27.0-beta-3/24A5380H.json",
+      "data": "27.0-beta/24A5380H.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone18,5",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -5239,7 +5239,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone18,4",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -5250,7 +5250,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone18,3",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -5261,7 +5261,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone18,2",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -5272,7 +5272,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone18,1",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -5283,7 +5283,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone17,5",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -5294,7 +5294,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone17,4",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -5305,7 +5305,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone17,3",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -5316,7 +5316,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone17,2",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -5327,7 +5327,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone17,1",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -5338,7 +5338,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone16,2",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -5349,7 +5349,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone16,1",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -5360,7 +5360,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone15,5",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -5371,7 +5371,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone15,4",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -5382,7 +5382,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone15,3",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -5393,7 +5393,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone15,2",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -5404,7 +5404,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone14,8",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -5415,7 +5415,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone14,7",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -5426,7 +5426,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone14,6",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -5437,7 +5437,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone14,5",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -5448,7 +5448,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone14,4",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -5459,7 +5459,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone14,3",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -5470,7 +5470,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone14,2",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -5481,7 +5481,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone13,4",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -5492,8 +5492,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -5504,7 +5504,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone13,1",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -5515,7 +5515,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone12,8",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -5526,8 +5526,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -5538,7 +5538,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-3-24A5380H-iPhone12,1",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -5551,17 +5551,17 @@
       ]
     },
     {
-      "id": "ios-beta-27.0-beta-2-24A5370H",
+      "id": "ios-beta-27.0-beta-24A5370H",
       "version": "27.0",
-      "version_label": "27.0-beta-2",
+      "version_label": "27.0-beta",
       "build": "24A5370H",
       "released_at": "2026-06-22T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 29,
-      "data": "27.0-beta-2/24A5370H.json",
+      "data": "27.0-beta/24A5370H.json",
       "firmwares": [
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone18,5",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone18,5",
           "name": "iPhone 17e",
           "devices": [
             "iPhone18,5"
@@ -5572,7 +5572,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone18,4",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone18,4",
           "name": "iPhone Air",
           "devices": [
             "iPhone18,4"
@@ -5583,7 +5583,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone18,3",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone18,3",
           "name": "iPhone 17",
           "devices": [
             "iPhone18,3"
@@ -5594,7 +5594,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone18,2",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone18,2",
           "name": "iPhone 17 Pro Max",
           "devices": [
             "iPhone18,2"
@@ -5605,7 +5605,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone18,1",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone18,1",
           "name": "iPhone 17 Pro",
           "devices": [
             "iPhone18,1"
@@ -5616,7 +5616,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone17,5",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone17,5",
           "name": "iPhone 16e",
           "devices": [
             "iPhone17,5"
@@ -5627,7 +5627,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone17,4",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone17,4",
           "name": "iPhone 16 Plus",
           "devices": [
             "iPhone17,4"
@@ -5638,7 +5638,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone17,3",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone17,3",
           "name": "iPhone 16",
           "devices": [
             "iPhone17,3"
@@ -5649,7 +5649,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone17,2",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone17,2",
           "name": "iPhone 16 Pro Max",
           "devices": [
             "iPhone17,2"
@@ -5660,7 +5660,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone17,1",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone17,1",
           "name": "iPhone 16 Pro",
           "devices": [
             "iPhone17,1"
@@ -5671,7 +5671,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone16,2",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone16,2",
           "name": "iPhone 15 Pro Max",
           "devices": [
             "iPhone16,2"
@@ -5682,7 +5682,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone16,1",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone16,1",
           "name": "iPhone 15 Pro",
           "devices": [
             "iPhone16,1"
@@ -5693,7 +5693,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone15,5",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone15,5",
           "name": "iPhone 15 Plus",
           "devices": [
             "iPhone15,5"
@@ -5704,7 +5704,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone15,4",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone15,4",
           "name": "iPhone 15",
           "devices": [
             "iPhone15,4"
@@ -5715,7 +5715,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone15,3",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone15,3",
           "name": "iPhone 14 Pro Max",
           "devices": [
             "iPhone15,3"
@@ -5726,7 +5726,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone15,2",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone15,2",
           "name": "iPhone 14 Pro",
           "devices": [
             "iPhone15,2"
@@ -5737,7 +5737,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone14,8",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone14,8",
           "name": "iPhone 14 Plus",
           "devices": [
             "iPhone14,8"
@@ -5748,7 +5748,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone14,7",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone14,7",
           "name": "iPhone 14",
           "devices": [
             "iPhone14,7"
@@ -5759,7 +5759,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone14,6",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone14,6",
           "name": "iPhone SE (3rd generation)",
           "devices": [
             "iPhone14,6"
@@ -5770,7 +5770,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone14,5",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone14,5",
           "name": "iPhone 13",
           "devices": [
             "iPhone14,5"
@@ -5781,7 +5781,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone14,4",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone14,4",
           "name": "iPhone 13 mini",
           "devices": [
             "iPhone14,4"
@@ -5792,7 +5792,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone14,3",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone14,3",
           "name": "iPhone 13 Pro Max",
           "devices": [
             "iPhone14,3"
@@ -5803,7 +5803,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone14,2",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone14,2",
           "name": "iPhone 13 Pro",
           "devices": [
             "iPhone14,2"
@@ -5814,7 +5814,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone13,4",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone13,4",
           "name": "iPhone 12 Pro Max",
           "devices": [
             "iPhone13,4"
@@ -5825,8 +5825,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone13,2",
-          "name": "iPhone 12",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -5837,7 +5837,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone13,1",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone13,1",
           "name": "iPhone 12 mini",
           "devices": [
             "iPhone13,1"
@@ -5848,7 +5848,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone12,8",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone12,8",
           "name": "iPhone SE (2nd generation)",
           "devices": [
             "iPhone12,8"
@@ -5859,8 +5859,8 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone12,3",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -5871,7 +5871,7 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-2-24A5370H-iPhone12,1",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone12,1",
           "name": "iPhone 11",
           "devices": [
             "iPhone12,1"
@@ -6159,7 +6159,7 @@
         },
         {
           "id": "ios-beta-27.0-beta-24A5355Q-iPhone13,2",
-          "name": "iPhone 12",
+          "name": "iPhone 12 IPSW",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -6193,7 +6193,7 @@
         },
         {
           "id": "ios-beta-27.0-beta-24A5355Q-iPhone12,3",
-          "name": "iPhone 11 Pro",
+          "name": "iPhone 11 Pro IPSW",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -108122,5 +108122,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-05T03:35:36+09:00"
+  "generated_at_tokyo": "2026-11-05T23:35:42+09:00"
 }

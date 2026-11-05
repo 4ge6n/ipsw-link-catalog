@@ -4,7 +4,7 @@
   "os_key": "macos",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-11-04T18:35:36Z",
+  "generated_at": "2026-11-05T14:35:42Z",
   "release_count": 281,
   "firmware_count": 281,
   "releases": [
@@ -20,7 +20,7 @@
       "firmwares": [
         {
           "id": "macos-beta-27.3-beta-26C5035R-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -96,18 +96,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.2-26B123",
+      "id": "macos-beta-27.2-beta-26B123",
       "version": "27.2",
-      "version_label": "27.2",
+      "version_label": "27.2-beta",
       "build": "26B123",
       "released_at": "2026-10-26T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.2/26B123.json",
+      "data": "27.2-beta/26B123.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.2-26B123-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.2-beta-26B123-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -177,18 +177,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.2-rc-26B118",
+      "id": "macos-beta-27.2-beta-26B118",
       "version": "27.2",
-      "version_label": "27.2-rc",
+      "version_label": "27.2-beta",
       "build": "26B118",
       "released_at": "2026-10-19T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.2-rc/26B118.json",
+      "data": "27.2-beta/26B118.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.2-rc-26B118-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.2-beta-26B118-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -258,18 +258,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.2-beta-4-26B5112A",
+      "id": "macos-beta-27.2-beta-26B5112A",
       "version": "27.2",
-      "version_label": "27.2-beta-4",
+      "version_label": "27.2-beta",
       "build": "26B5112A",
       "released_at": "2026-10-13T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.2-beta-4/26B5112A.json",
+      "data": "27.2-beta/26B5112A.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.2-beta-4-26B5112A-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.2-beta-26B5112A-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -339,18 +339,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.2-beta-3-26B5101F",
+      "id": "macos-beta-27.2-beta-26B5101F",
       "version": "27.2",
-      "version_label": "27.2-beta-3",
+      "version_label": "27.2-beta",
       "build": "26B5101F",
       "released_at": "2026-10-10T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.2-beta-3/26B5101F.json",
+      "data": "27.2-beta/26B5101F.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.2-beta-3-26B5101F-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.2-beta-26B5101F-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -420,18 +420,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.2-beta-2-26B5091G",
+      "id": "macos-beta-27.2-beta-26B5091G",
       "version": "27.2",
-      "version_label": "27.2-beta-2",
+      "version_label": "27.2-beta",
       "build": "26B5091G",
       "released_at": "2026-09-21T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.2-beta-2/26B5091G.json",
+      "data": "27.2-beta/26B5091G.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.2-beta-2-26B5091G-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.2-beta-26B5091G-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -512,7 +512,7 @@
       "firmwares": [
         {
           "id": "macos-beta-27.2-beta-26B5086K-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -582,18 +582,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.0.1-26A434",
+      "id": "macos-beta-27.0.1-beta-26A434",
       "version": "27.0.1",
-      "version_label": "27.0.1",
+      "version_label": "27.0.1-beta",
       "build": "26A434",
       "released_at": "2026-09-28T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.0.1/26A434.json",
+      "data": "27.0.1-beta/26A434.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.0.1-26A434-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.0.1-beta-26A434-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -663,18 +663,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.0-rc-26A428",
+      "id": "macos-beta-27.0-beta-26A428",
       "version": "27.0",
-      "version_label": "27.0-rc",
+      "version_label": "27.0-beta",
       "build": "26A428",
       "released_at": "2026-09-09T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.0-rc/26A428.json",
+      "data": "27.0-beta/26A428.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.0-rc-26A428-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.0-beta-26A428-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -740,18 +740,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.0-beta-8-26A5425A",
+      "id": "macos-beta-27.0-beta-26A5425A",
       "version": "27.0",
-      "version_label": "27.0-beta-8",
+      "version_label": "27.0-beta",
       "build": "26A5425A",
       "released_at": "2026-08-31T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.0-beta-8/26A5425A.json",
+      "data": "27.0-beta/26A5425A.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.0-beta-8-26A5425A-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.0-beta-26A5425A-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -817,18 +817,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.0-beta-7-26A5421A",
+      "id": "macos-beta-27.0-beta-26A5421A",
       "version": "27.0",
-      "version_label": "27.0-beta-7",
+      "version_label": "27.0-beta",
       "build": "26A5421A",
       "released_at": "2026-08-24T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.0-beta-7/26A5421A.json",
+      "data": "27.0-beta/26A5421A.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.0-beta-7-26A5421A-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.0-beta-26A5421A-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -894,18 +894,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.0-beta-6-26A5416B",
+      "id": "macos-beta-27.0-beta-26A5416B",
       "version": "27.0",
-      "version_label": "27.0-beta-6",
+      "version_label": "27.0-beta",
       "build": "26A5416B",
       "released_at": "2026-08-17T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.0-beta-6/26A5416B.json",
+      "data": "27.0-beta/26A5416B.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.0-beta-6-26A5416B-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.0-beta-26A5416B-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -971,18 +971,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.0-beta-5-26A5406E",
+      "id": "macos-beta-27.0-beta-26A5406E",
       "version": "27.0",
-      "version_label": "27.0-beta-5",
+      "version_label": "27.0-beta",
       "build": "26A5406E",
       "released_at": "2026-08-10T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.0-beta-5/26A5406E.json",
+      "data": "27.0-beta/26A5406E.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.0-beta-5-26A5406E-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.0-beta-26A5406E-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -1048,18 +1048,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.0-beta-4-26A5388G",
+      "id": "macos-beta-27.0-beta-26A5388G",
       "version": "27.0",
-      "version_label": "27.0-beta-4",
+      "version_label": "27.0-beta",
       "build": "26A5388G",
       "released_at": "2026-07-20T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.0-beta-4/26A5388G.json",
+      "data": "27.0-beta/26A5388G.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.0-beta-4-26A5388G-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.0-beta-26A5388G-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -1124,18 +1124,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.0-beta-3-26A5378N",
+      "id": "macos-beta-27.0-beta-26A5378N",
       "version": "27.0",
-      "version_label": "27.0-beta-3",
+      "version_label": "27.0-beta",
       "build": "26A5378N",
       "released_at": "2026-07-13T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.0-beta-3/26A5378N.json",
+      "data": "27.0-beta/26A5378N.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.0-beta-3-26A5378N-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.0-beta-26A5378N-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -1200,18 +1200,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.0-beta-3-26A5378J",
+      "id": "macos-beta-27.0-beta-26A5378J",
       "version": "27.0",
-      "version_label": "27.0-beta-3",
+      "version_label": "27.0-beta",
       "build": "26A5378J",
       "released_at": "2026-07-06T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.0-beta-3/26A5378J.json",
+      "data": "27.0-beta/26A5378J.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.0-beta-3-26A5378J-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.0-beta-26A5378J-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -1276,18 +1276,18 @@
       ]
     },
     {
-      "id": "macos-beta-27.0-beta-2-26A5368G",
+      "id": "macos-beta-27.0-beta-26A5368G",
       "version": "27.0",
-      "version_label": "27.0-beta-2",
+      "version_label": "27.0-beta",
       "build": "26A5368G",
       "released_at": "2026-06-22T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
-      "data": "27.0-beta-2/26A5368G.json",
+      "data": "27.0-beta/26A5368G.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.0-beta-2-26A5368G-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "id": "macos-beta-27.0-beta-26A5368G-Mac13,1",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -1363,7 +1363,7 @@
       "firmwares": [
         {
           "id": "macos-beta-27.0-beta-26A5353Q-Mac13,1",
-          "name": "Mac Studio (M1 Max)",
+          "name": "Mac Studio (M1 Max) IPSW",
           "devices": [
             "Mac13,1",
             "Mac13,2",
@@ -14376,5 +14376,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-05T03:35:36+09:00"
+  "generated_at_tokyo": "2026-11-05T23:35:42+09:00"
 }

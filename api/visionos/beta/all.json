@@ -4,7 +4,7 @@
   "os_key": "visionos",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-11-04T18:35:36Z",
+  "generated_at": "2026-11-05T14:35:42Z",
   "release_count": 134,
   "firmware_count": 182,
   "releases": [
@@ -43,17 +43,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.2-24N120",
+      "id": "visionos-beta-27.2-beta-24N120",
       "version": "27.2",
-      "version_label": "27.2",
+      "version_label": "27.2-beta",
       "build": "24N120",
       "released_at": "2026-10-26T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.2/24N120.json",
+      "data": "27.2-beta/24N120.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.2-24N120-RealityDevice17,1",
+          "id": "visionos-beta-27.2-beta-24N120-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -64,7 +64,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.2-24N120-RealityDevice14,1",
+          "id": "visionos-beta-27.2-beta-24N120-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -77,17 +77,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.2-rc-24N118",
+      "id": "visionos-beta-27.2-beta-24N118",
       "version": "27.2",
-      "version_label": "27.2-rc",
+      "version_label": "27.2-beta",
       "build": "24N118",
       "released_at": "2026-10-19T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.2-rc/24N118.json",
+      "data": "27.2-beta/24N118.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.2-rc-24N118-RealityDevice17,1",
+          "id": "visionos-beta-27.2-beta-24N118-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -98,7 +98,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.2-rc-24N118-RealityDevice14,1",
+          "id": "visionos-beta-27.2-beta-24N118-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -111,17 +111,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.2-beta-4-24N5114A",
+      "id": "visionos-beta-27.2-beta-24N5114A",
       "version": "27.2",
-      "version_label": "27.2-beta-4",
+      "version_label": "27.2-beta",
       "build": "24N5114A",
       "released_at": "2026-10-13T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.2-beta-4/24N5114A.json",
+      "data": "27.2-beta/24N5114A.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.2-beta-4-24N5114A-RealityDevice17,1",
+          "id": "visionos-beta-27.2-beta-24N5114A-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -132,7 +132,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.2-beta-4-24N5114A-RealityDevice14,1",
+          "id": "visionos-beta-27.2-beta-24N5114A-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -145,17 +145,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.2-beta-3-24N5103F",
+      "id": "visionos-beta-27.2-beta-24N5103F",
       "version": "27.2",
-      "version_label": "27.2-beta-3",
+      "version_label": "27.2-beta",
       "build": "24N5103F",
       "released_at": "2026-10-05T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.2-beta-3/24N5103F.json",
+      "data": "27.2-beta/24N5103F.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.2-beta-3-24N5103F-RealityDevice17,1",
+          "id": "visionos-beta-27.2-beta-24N5103F-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -166,7 +166,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.2-beta-3-24N5103F-RealityDevice14,1",
+          "id": "visionos-beta-27.2-beta-24N5103F-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -179,17 +179,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.2-beta-2-24N5093F",
+      "id": "visionos-beta-27.2-beta-24N5093F",
       "version": "27.2",
-      "version_label": "27.2-beta-2",
+      "version_label": "27.2-beta",
       "build": "24N5093F",
       "released_at": "2026-09-21T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.2-beta-2/24N5093F.json",
+      "data": "27.2-beta/24N5093F.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.2-beta-2-24N5093F-RealityDevice17,1",
+          "id": "visionos-beta-27.2-beta-24N5093F-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -200,7 +200,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.2-beta-2-24N5093F-RealityDevice14,1",
+          "id": "visionos-beta-27.2-beta-24N5093F-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -247,17 +247,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.0.1-24M372",
+      "id": "visionos-beta-27.0.1-beta-24M372",
       "version": "27.0.1",
-      "version_label": "27.0.1",
+      "version_label": "27.0.1-beta",
       "build": "24M372",
       "released_at": "2026-09-28T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.0.1/24M372.json",
+      "data": "27.0.1-beta/24M372.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.0.1-24M372-RealityDevice17,1",
+          "id": "visionos-beta-27.0.1-beta-24M372-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -268,7 +268,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.0.1-24M372-RealityDevice14,1",
+          "id": "visionos-beta-27.0.1-beta-24M372-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -281,17 +281,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.0-rc-24M362",
+      "id": "visionos-beta-27.0-beta-24M362",
       "version": "27.0",
-      "version_label": "27.0-rc",
+      "version_label": "27.0-beta",
       "build": "24M362",
       "released_at": "2026-09-09T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.0-rc/24M362.json",
+      "data": "27.0-beta/24M362.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.0-rc-24M362-RealityDevice17,1",
+          "id": "visionos-beta-27.0-beta-24M362-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -302,7 +302,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.0-rc-24M362-RealityDevice14,1",
+          "id": "visionos-beta-27.0-beta-24M362-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -315,17 +315,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.0-beta-8-24M5361A",
+      "id": "visionos-beta-27.0-beta-24M5361A",
       "version": "27.0",
-      "version_label": "27.0-beta-8",
+      "version_label": "27.0-beta",
       "build": "24M5361A",
       "released_at": "2026-08-31T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.0-beta-8/24M5361A.json",
+      "data": "27.0-beta/24M5361A.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.0-beta-8-24M5361A-RealityDevice17,1",
+          "id": "visionos-beta-27.0-beta-24M5361A-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -336,7 +336,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.0-beta-8-24M5361A-RealityDevice14,1",
+          "id": "visionos-beta-27.0-beta-24M5361A-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -349,17 +349,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.0-beta-7-24M5359A",
+      "id": "visionos-beta-27.0-beta-24M5359A",
       "version": "27.0",
-      "version_label": "27.0-beta-7",
+      "version_label": "27.0-beta",
       "build": "24M5359A",
       "released_at": "2026-08-24T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.0-beta-7/24M5359A.json",
+      "data": "27.0-beta/24M5359A.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.0-beta-7-24M5359A-RealityDevice17,1",
+          "id": "visionos-beta-27.0-beta-24M5359A-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -370,7 +370,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.0-beta-7-24M5359A-RealityDevice14,1",
+          "id": "visionos-beta-27.0-beta-24M5359A-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -383,17 +383,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.0-beta-6-24M5355A",
+      "id": "visionos-beta-27.0-beta-24M5355A",
       "version": "27.0",
-      "version_label": "27.0-beta-6",
+      "version_label": "27.0-beta",
       "build": "24M5355A",
       "released_at": "2026-08-17T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.0-beta-6/24M5355A.json",
+      "data": "27.0-beta/24M5355A.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.0-beta-6-24M5355A-RealityDevice17,1",
+          "id": "visionos-beta-27.0-beta-24M5355A-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -404,7 +404,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.0-beta-6-24M5355A-RealityDevice14,1",
+          "id": "visionos-beta-27.0-beta-24M5355A-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -417,17 +417,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.0-beta-5-24M5348B",
+      "id": "visionos-beta-27.0-beta-24M5348B",
       "version": "27.0",
-      "version_label": "27.0-beta-5",
+      "version_label": "27.0-beta",
       "build": "24M5348B",
       "released_at": "2026-08-10T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.0-beta-5/24M5348B.json",
+      "data": "27.0-beta/24M5348B.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.0-beta-5-24M5348B-RealityDevice17,1",
+          "id": "visionos-beta-27.0-beta-24M5348B-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -438,7 +438,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.0-beta-5-24M5348B-RealityDevice14,1",
+          "id": "visionos-beta-27.0-beta-24M5348B-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -451,17 +451,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.0-beta-4-24M5326G",
+      "id": "visionos-beta-27.0-beta-24M5326G",
       "version": "27.0",
-      "version_label": "27.0-beta-4",
+      "version_label": "27.0-beta",
       "build": "24M5326G",
       "released_at": "2026-07-20T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.0-beta-4/24M5326G.json",
+      "data": "27.0-beta/24M5326G.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.0-beta-4-24M5326G-RealityDevice17,1",
+          "id": "visionos-beta-27.0-beta-24M5326G-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -472,7 +472,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.0-beta-4-24M5326G-RealityDevice14,1",
+          "id": "visionos-beta-27.0-beta-24M5326G-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -485,17 +485,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.0-beta-3-24M5316K",
+      "id": "visionos-beta-27.0-beta-24M5316K",
       "version": "27.0",
-      "version_label": "27.0-beta-3",
+      "version_label": "27.0-beta",
       "build": "24M5316K",
       "released_at": "2026-07-06T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.0-beta-3/24M5316K.json",
+      "data": "27.0-beta/24M5316K.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.0-beta-3-24M5316K-RealityDevice17,1",
+          "id": "visionos-beta-27.0-beta-24M5316K-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -506,7 +506,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.0-beta-3-24M5316K-RealityDevice14,1",
+          "id": "visionos-beta-27.0-beta-24M5316K-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -519,17 +519,17 @@
       ]
     },
     {
-      "id": "visionos-beta-27.0-beta-2-24M5306I",
+      "id": "visionos-beta-27.0-beta-24M5306I",
       "version": "27.0",
-      "version_label": "27.0-beta-2",
+      "version_label": "27.0-beta",
       "build": "24M5306I",
       "released_at": "2026-06-22T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 2,
-      "data": "27.0-beta-2/24M5306I.json",
+      "data": "27.0-beta/24M5306I.json",
       "firmwares": [
         {
-          "id": "visionos-beta-27.0-beta-2-24M5306I-RealityDevice17,1",
+          "id": "visionos-beta-27.0-beta-24M5306I-RealityDevice17,1",
           "name": "Apple Vision Pro (M5)",
           "devices": [
             "RealityDevice17,1"
@@ -540,7 +540,7 @@
           "signed": null
         },
         {
-          "id": "visionos-beta-27.0-beta-2-24M5306I-RealityDevice14,1",
+          "id": "visionos-beta-27.0-beta-24M5306I-RealityDevice14,1",
           "name": "Apple Vision Pro",
           "devices": [
             "RealityDevice14,1"
@@ -3619,5 +3619,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-05T03:35:36+09:00"
+  "generated_at_tokyo": "2026-11-05T23:35:42+09:00"
 }

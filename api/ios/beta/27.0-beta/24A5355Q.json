@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-04T18:35:36Z"
+      "checked_at": "2026-11-05T14:35:42Z"
     }
   ],
   "firmwares": [
@@ -327,7 +327,7 @@
       }
     },
     {
-      "name": "iPhone 12",
+      "name": "iPhone 12 IPSW",
       "devices": [
         "iPhone13,2",
         "iPhone13,3"
@@ -367,7 +367,7 @@
       }
     },
     {
-      "name": "iPhone 11 Pro",
+      "name": "iPhone 11 Pro IPSW",
       "devices": [
         "iPhone12,3",
         "iPhone12,5"
@@ -395,5 +395,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T10:48:41Z",
-  "last_seen_at": "2026-11-04T18:35:36Z"
+  "last_seen_at": "2026-11-05T14:35:42Z"
 }
