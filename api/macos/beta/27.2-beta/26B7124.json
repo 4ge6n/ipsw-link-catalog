@@ -1,0 +1,38 @@
+{
+  "os_key": "macos",
+  "channel": "beta",
+  "version": "27.2",
+  "version_label": "27.2-beta",
+  "build": "26B7124",
+  "released_at": "2026-11-05T18:00:00Z",
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-11-06T05:55:37Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "MacBook Pro (16-inch PROLED XDR, M5 Max) IPSW",
+      "devices": [
+        "Mac17,10",
+        "Mac17,11",
+        "Mac17,12",
+        "Mac17,13",
+        "Mac18,1",
+        "Mac18,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/04f50f4e-1485-4efb-bd81-f3d743fdff4a/UniversalMac_27.2_26B7124_Restore.ipsw",
+      "filename": "UniversalMac_27.2_26B7124_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-11-06T05:55:37Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-11-06T05:55:37Z",
+  "last_seen_at": "2026-11-06T05:55:37Z"
+}

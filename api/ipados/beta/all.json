@@ -4,9 +4,9 @@
   "os_key": "ipados",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-11-05T20:50:36Z",
-  "release_count": 439,
-  "firmware_count": 5005,
+  "generated_at": "2026-11-06T05:55:37Z",
+  "release_count": 440,
+  "firmware_count": 5006,
   "releases": [
     {
       "id": "ipados-beta-27.3-beta-24C5037I",
@@ -237,6 +237,30 @@
           ],
           "filename": "iPad_10.2_2021_27.3_24C5037i_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallSeed/c6f39328-a034-4e5e-a2d2-850b0aca9250/iPad_10.2_2021_27.3_24C5037i_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
+      "id": "ipados-beta-27.2-beta-24B8120",
+      "version": "27.2",
+      "version_label": "27.2-beta",
+      "build": "24B8120",
+      "released_at": "2026-11-05T18:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "27.2-beta/24B8120.json",
+      "firmwares": [
+        {
+          "id": "ipados-beta-27.2-beta-24B8120-iPad19,1",
+          "name": "iPad mini (A20 Pro) Wi-Fi IPSW",
+          "devices": [
+            "iPad19,1",
+            "iPad19,2"
+          ],
+          "filename": "iPad19,1,iPad19,2_27.2_24B8120_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/d70a938c-e796-4f36-bf9a-cb235fedffba/iPad19,1,iPad19,2_27.2_24B8120_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -73594,5 +73618,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-06T05:50:36+09:00"
+  "generated_at_tokyo": "2026-11-06T14:55:37+09:00"
 }
