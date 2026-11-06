@@ -5,8 +5,8 @@ Stable JSON indexes of Apple restore-image URLs. IPSW files are never stored in 
 <!-- AUTO-GENERATED:START -->
 ## Catalog status
 
-Last successful update (UTC): `2026-11-06T05:55:37Z`
-Last successful update (Asia/Tokyo): `2026-11-06T14:55:37+09:00`
+Last successful update (UTC): `2026-11-06T07:03:22Z`
+Last successful update (Asia/Tokyo): `2026-11-06T16:03:22+09:00`
 
 ### Endpoints
 
@@ -38,7 +38,7 @@ Last successful update (Asia/Tokyo): `2026-11-06T14:55:37+09:00`
 #### macOS
 
 - `release`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/release/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/release/all.json) (3 IPSW records)
-- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/beta/all.json) (282 IPSW records; no beta latest endpoint)
+- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/macos/beta/all.json) (283 IPSW records; no beta latest endpoint)
 
 ### Refresh
 

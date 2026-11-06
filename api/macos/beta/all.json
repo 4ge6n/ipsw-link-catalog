@@ -4,9 +4,9 @@
   "os_key": "macos",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-11-06T05:55:37Z",
-  "release_count": 282,
-  "firmware_count": 282,
+  "generated_at": "2026-11-06T07:03:22Z",
+  "release_count": 283,
+  "firmware_count": 283,
   "releases": [
     {
       "id": "macos-beta-27.3-beta-26C5035R",
@@ -96,6 +96,32 @@
       ]
     },
     {
+      "id": "macos-beta-27.2-beta-26B8125",
+      "version": "27.2",
+      "version_label": "27.2-beta",
+      "build": "26B8125",
+      "released_at": "2026-11-05T18:00:00Z",
+      "signed_firmware_count": 0,
+      "total_firmware_count": 1,
+      "data": "27.2-beta/26B8125.json",
+      "firmwares": [
+        {
+          "id": "macos-beta-27.2-beta-26B8125-Mac17,10",
+          "name": "MacBook Pro (16-inch PROLED XDR, M5 Max) IPSW",
+          "devices": [
+            "Mac17,10",
+            "Mac17,11",
+            "Mac17,12",
+            "Mac17,13"
+          ],
+          "filename": "UniversalMac_27.2_26B8125_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/b83bb963-ebd8-4608-8b5d-fdc70cb24927/UniversalMac_27.2_26B8125_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        }
+      ]
+    },
+    {
       "id": "macos-beta-27.2-beta-26B7124",
       "version": "27.2",
       "version_label": "27.2-beta",
@@ -106,13 +132,9 @@
       "data": "27.2-beta/26B7124.json",
       "firmwares": [
         {
-          "id": "macos-beta-27.2-beta-26B7124-Mac17,10",
-          "name": "MacBook Pro (16-inch PROLED XDR, M5 Max) IPSW",
+          "id": "macos-beta-27.2-beta-26B7124-Mac18,1",
+          "name": "MacBook Pro 14-inch (M6) IPSW",
           "devices": [
-            "Mac17,10",
-            "Mac17,11",
-            "Mac17,12",
-            "Mac17,13",
             "Mac18,1",
             "Mac18,2"
           ],
@@ -14404,5 +14426,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-06T14:55:37+09:00"
+  "generated_at_tokyo": "2026-11-06T16:03:22+09:00"
 }
