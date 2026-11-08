@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-11-07T13:32:53Z",
+  "generated_at": "2026-11-08T13:40:33Z",
   "release_count": 440,
   "firmware_count": 5006,
   "releases": [
@@ -247,7 +247,7 @@
       "version": "27.2",
       "version_label": "27.2-beta",
       "build": "24B8120",
-      "released_at": "2026-11-05T18:00:00Z",
+      "released_at": "2026-10-26T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "27.2-beta/24B8120.json",
@@ -73618,5 +73618,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-07T22:32:53+09:00"
+  "generated_at_tokyo": "2026-11-08T22:40:33+09:00"
 }

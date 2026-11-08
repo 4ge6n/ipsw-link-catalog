@@ -4,7 +4,7 @@
   "os_key": "macos",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-11-07T13:32:53Z",
+  "generated_at": "2026-11-08T13:40:33Z",
   "release_count": 283,
   "firmware_count": 283,
   "releases": [
@@ -393,7 +393,7 @@
       "version": "27.2",
       "version_label": "27.2-beta",
       "build": "26B5101F",
-      "released_at": "2026-10-10T17:00:00Z",
+      "released_at": "2026-10-05T17:00:00Z",
       "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "27.2-beta/26B5101F.json",
@@ -764,6 +764,9 @@
             "Mac16,7",
             "Mac16,8",
             "Mac16,9",
+            "Mac17,14",
+            "Mac17,15",
+            "Mac17,16",
             "Mac17,2",
             "Mac17,3",
             "Mac17,4",
@@ -772,6 +775,7 @@
             "Mac17,7",
             "Mac17,8",
             "Mac17,9",
+            "Mac18,5",
             "MacBookAir10,1",
             "MacBookPro17,1",
             "MacBookPro18,1",
@@ -1149,6 +1153,7 @@
             "Mac16,7",
             "Mac16,8",
             "Mac16,9",
+            "Mac17,2",
             "Mac17,3",
             "Mac17,4",
             "Mac17,5",
@@ -1225,6 +1230,7 @@
             "Mac16,7",
             "Mac16,8",
             "Mac16,9",
+            "Mac17,2",
             "Mac17,3",
             "Mac17,4",
             "Mac17,5",
@@ -1301,6 +1307,7 @@
             "Mac16,7",
             "Mac16,8",
             "Mac16,9",
+            "Mac17,2",
             "Mac17,3",
             "Mac17,4",
             "Mac17,5",
@@ -1377,6 +1384,7 @@
             "Mac16,7",
             "Mac16,8",
             "Mac16,9",
+            "Mac17,2",
             "Mac17,3",
             "Mac17,4",
             "Mac17,5",
@@ -1453,6 +1461,7 @@
             "Mac16,7",
             "Mac16,8",
             "Mac16,9",
+            "Mac17,2",
             "Mac17,3",
             "Mac17,4",
             "Mac17,5",
@@ -14426,5 +14435,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-07T22:32:53+09:00"
+  "generated_at_tokyo": "2026-11-08T22:40:33+09:00"
 }
