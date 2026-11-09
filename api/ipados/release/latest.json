@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-09T18:50:36Z",
+  "generated_at": "2026-11-09T19:00:39Z",
   "release_count": 11,
   "firmware_count": 40,
   "releases": [
@@ -82,7 +82,7 @@
         },
         {
           "id": "ipados-release-27.2.1-24B156-iPad13,16",
-          "name": "iPad13,16",
+          "name": "iPad Air 5 (WiFi)",
           "devices": [
             "iPad13,16",
             "iPad13,17"
@@ -255,7 +255,7 @@
       "version": "26.7.3",
       "version_label": "26.7.3",
       "build": "23H131",
-      "released_at": "2026-11-09T18:27:53Z",
+      "released_at": "2026-11-09T18:28:01Z",
       "data": "26.7.3/23H131.json",
       "firmwares": [
         {
@@ -274,7 +274,7 @@
         },
         {
           "id": "ipados-release-26.7.3-23H131-iPad11,6",
-          "name": "iPad11,6",
+          "name": "iPad 8 (WiFi)",
           "devices": [
             "iPad11,6",
             "iPad11,7"
@@ -623,5 +623,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T03:50:36+09:00"
+  "generated_at_tokyo": "2026-11-10T04:00:39+09:00"
 }
