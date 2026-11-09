@@ -4,13 +4,17 @@
   "version": "27.2.1",
   "version_label": "27.2.1",
   "build": "24B91034",
-  "released_at": null,
+  "released_at": "2026-11-09T18:27:51Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-11-09T18:35:35Z"
+      "checked_at": "2026-11-09T18:40:34Z"
+    },
+    {
+      "name": "ipsw.me",
+      "checked_at": "2026-11-09T18:40:34Z"
     }
   ],
   "firmwares": [
@@ -23,12 +27,12 @@
       "filename": "iPhone19,4_27.2.1_24B91034_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T18:35:35Z",
+        "checked_at": "2026-11-09T18:40:34Z",
         "unsigned_since": null
       },
       "sha1": "92363475465b48ae8e587914347daf12838c690f"
     }
   ],
   "first_seen_at": "2026-11-09T18:30:37Z",
-  "last_seen_at": "2026-11-09T18:35:35Z"
+  "last_seen_at": "2026-11-09T18:40:34Z"
 }

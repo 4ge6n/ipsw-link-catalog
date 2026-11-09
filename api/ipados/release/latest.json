@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-09T18:35:35Z",
+  "generated_at": "2026-11-09T18:40:34Z",
   "release_count": 11,
   "firmware_count": 40,
   "releases": [
@@ -52,7 +52,7 @@
         },
         {
           "id": "ipados-release-27.2.1-24B156-iPad13,1",
-          "name": "iPad13,1",
+          "name": "iPad Air 4 (WiFi)",
           "devices": [
             "iPad13,1",
             "iPad13,2"
@@ -64,7 +64,7 @@
         },
         {
           "id": "ipados-release-27.2.1-24B156-iPad13,10",
-          "name": "iPad13,4",
+          "name": "iPad Pro (11-inch, WiFi) (3rd generation)",
           "devices": [
             "iPad13,10",
             "iPad13,11",
@@ -94,7 +94,7 @@
         },
         {
           "id": "ipados-release-27.2.1-24B156-iPad13,18",
-          "name": "iPad13,18",
+          "name": "iPad (WiFi, 10th generation)",
           "devices": [
             "iPad13,18",
             "iPad13,19"
@@ -106,7 +106,7 @@
         },
         {
           "id": "ipados-release-27.2.1-24B156-iPad14,1",
-          "name": "iPad14,1",
+          "name": "iPad mini 6 (WiFi)",
           "devices": [
             "iPad14,1",
             "iPad14,2"
@@ -132,7 +132,7 @@
         },
         {
           "id": "ipados-release-27.2.1-24B156-iPad14,3",
-          "name": "iPad14,3",
+          "name": "iPad Pro (11-inch, WiFi) (4th generation)",
           "devices": [
             "iPad14,3",
             "iPad14,4",
@@ -182,7 +182,7 @@
         },
         {
           "id": "ipados-release-27.2.1-24B156-iPad16,1",
-          "name": "iPad16,1",
+          "name": "iPad mini (A17 Pro, WiFi)",
           "devices": [
             "iPad16,1",
             "iPad16,2"
@@ -236,7 +236,7 @@
         },
         {
           "id": "ipados-release-27.2.1-24B156-iPad8,10",
-          "name": "iPad8,9",
+          "name": "iPad Pro 4 (11-inch, WiFi)",
           "devices": [
             "iPad8,10",
             "iPad8,11",
@@ -255,12 +255,12 @@
       "version": "26.7.3",
       "version_label": "26.7.3",
       "build": "23H131",
-      "released_at": null,
+      "released_at": "2026-11-09T18:27:53Z",
       "data": "26.7.3/23H131.json",
       "firmwares": [
         {
           "id": "ipados-release-26.7.3-23H131-iPad11,1",
-          "name": "iPad11,1",
+          "name": "iPad mini 5 (WiFi)",
           "devices": [
             "iPad11,1",
             "iPad11,2",
@@ -309,12 +309,12 @@
       "version": "18.7.12",
       "version_label": "18.7.12",
       "build": "22H390",
-      "released_at": null,
+      "released_at": "2026-11-09T18:27:56Z",
       "data": "18.7.12/22H390.json",
       "firmwares": [
         {
           "id": "ipados-release-18.7.12-22H390-iPad7,11",
-          "name": "iPad7,11",
+          "name": "iPad 7 (WiFi)",
           "devices": [
             "iPad7,11",
             "iPad7,12"
@@ -623,5 +623,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T03:35:35+09:00"
+  "generated_at_tokyo": "2026-11-10T03:40:34+09:00"
 }
