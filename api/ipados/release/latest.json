@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-09T18:40:34Z",
+  "generated_at": "2026-11-09T18:50:36Z",
   "release_count": 11,
   "firmware_count": 40,
   "releases": [
@@ -208,7 +208,7 @@
         },
         {
           "id": "ipados-release-27.2.1-24B156-iPad16,3",
-          "name": "iPad16,3",
+          "name": "iPad Pro (M4, 11-inch, WiFi)",
           "devices": [
             "iPad16,3",
             "iPad16,4",
@@ -623,5 +623,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T03:40:34+09:00"
+  "generated_at_tokyo": "2026-11-10T03:50:36+09:00"
 }
