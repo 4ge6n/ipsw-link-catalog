@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-09T19:15:40Z",
+  "generated_at": "2026-11-09T19:20:35Z",
   "release_count": 12,
   "firmware_count": 56,
   "releases": [
@@ -360,7 +360,7 @@
         },
         {
           "id": "ios-release-27.2.1-24B156-iPhone19,2",
-          "name": "iPhone19,2",
+          "name": "iPhone 18 Pro",
           "devices": [
             "iPhone19,2",
             "iPhone19,3",
@@ -757,5 +757,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T04:15:40+09:00"
+  "generated_at_tokyo": "2026-11-10T04:20:35+09:00"
 }

@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-09T19:15:40Z"
+      "checked_at": "2026-11-09T19:20:35Z"
     }
   ],
   "firmwares": [
@@ -277,9 +277,8 @@
       }
     },
     {
-      "name": "iPhone 13 mini IPSW",
+      "name": "iPhone 13",
       "devices": [
-        "iPhone14,4",
         "iPhone14,5"
       ],
       "url": "https://updates.cdn-apple.com/2026FallFCS/05302ab2-05a1-411b-a6d7-e70f3e7580b4/iPhone14,5_27.2.1_24B156_Restore.ipsw",
@@ -287,6 +286,19 @@
       "signing": {
         "status": "unknown",
         "checked_at": "2026-11-09T19:15:40Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 13 mini",
+      "devices": [
+        "iPhone14,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/e96b8dce-6bb4-48f0-b756-fb8cf31366e1/iPhone14,4_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPhone14,4_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-11-09T19:20:35Z",
         "unsigned_since": null
       }
     },
@@ -398,5 +410,5 @@
     }
   ],
   "first_seen_at": "2026-11-09T19:15:40Z",
-  "last_seen_at": "2026-11-09T19:15:40Z"
+  "last_seen_at": "2026-11-09T19:20:35Z"
 }

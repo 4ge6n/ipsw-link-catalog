@@ -4,9 +4,9 @@
   "os_key": "ios",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-11-09T19:15:40Z",
+  "generated_at": "2026-11-09T19:20:35Z",
   "release_count": 552,
-  "firmware_count": 8772,
+  "firmware_count": 8773,
   "releases": [
     {
       "id": "ios-beta-27.3-beta-24C5037I",
@@ -395,7 +395,7 @@
       "build": "24B156",
       "released_at": "2026-11-09T18:00:00Z",
       "signed_firmware_count": 0,
-      "total_firmware_count": 29,
+      "total_firmware_count": 30,
       "data": "27.2.1-beta/24B156.json",
       "firmwares": [
         {
@@ -621,14 +621,24 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2.1-beta-24B156-iPhone14,4",
-          "name": "iPhone 13 mini IPSW",
+          "id": "ios-beta-27.2.1-beta-24B156-iPhone14,5",
+          "name": "iPhone 13",
           "devices": [
-            "iPhone14,4",
             "iPhone14,5"
           ],
           "filename": "iPhone14,5_27.2.1_24B156_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/05302ab2-05a1-411b-a6d7-e70f3e7580b4/iPhone14,5_27.2.1_24B156_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.2.1-beta-24B156-iPhone14,4",
+          "name": "iPhone 13 mini",
+          "devices": [
+            "iPhone14,4"
+          ],
+          "filename": "iPhone14,4_27.2.1_24B156_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/e96b8dce-6bb4-48f0-b756-fb8cf31366e1/iPhone14,4_27.2.1_24B156_Restore.ipsw",
           "sha1": null,
           "signed": null
         },
@@ -108481,5 +108491,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T04:15:40+09:00"
+  "generated_at_tokyo": "2026-11-10T04:20:35+09:00"
 }

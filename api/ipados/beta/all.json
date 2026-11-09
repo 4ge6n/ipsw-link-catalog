@@ -4,9 +4,9 @@
   "os_key": "ipados",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-11-09T19:15:40Z",
+  "generated_at": "2026-11-09T19:20:35Z",
   "release_count": 442,
-  "firmware_count": 5022,
+  "firmware_count": 5023,
   "releases": [
     {
       "id": "ipados-beta-27.3-beta-24C5037I",
@@ -273,7 +273,7 @@
       "build": "24B156",
       "released_at": "2026-11-09T18:00:00Z",
       "signed_firmware_count": 0,
-      "total_firmware_count": 15,
+      "total_firmware_count": 16,
       "data": "27.2.1-beta/24B156.json",
       "firmwares": [
         {
@@ -345,11 +345,21 @@
           "signed": null
         },
         {
-          "id": "ipados-beta-27.2.1-beta-24B156-iPad15,7",
-          "name": "iPad (A16) Wi-Fi IPSW",
+          "id": "ipados-beta-27.2.1-beta-24B156-iPad15,8",
+          "name": "iPad (A16) Wi-Fi + Cellular",
           "devices": [
-            "iPad15,7",
             "iPad15,8"
+          ],
+          "filename": "iPad15,8_27.2.1_24B156_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/226875e5-59bd-49ac-bd87-55a52a78808d/iPad15,8_27.2.1_24B156_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ipados-beta-27.2.1-beta-24B156-iPad15,7",
+          "name": "iPad (A16) Wi-Fi",
+          "devices": [
+            "iPad15,7"
           ],
           "filename": "iPad15,7_27.2.1_24B156_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/49305b30-c9f6-4d83-a1b9-724588b89304/iPad15,7_27.2.1_24B156_Restore.ipsw",
@@ -73854,5 +73864,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T04:15:40+09:00"
+  "generated_at_tokyo": "2026-11-10T04:20:35+09:00"
 }
