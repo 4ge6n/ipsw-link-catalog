@@ -1,0 +1,278 @@
+{
+  "os_key": "ipados",
+  "channel": "release",
+  "version": "27.2.1",
+  "version_label": "27.2.1",
+  "build": "24B156",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "apple",
+      "checked_at": "2026-11-09T18:30:37Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPad16,10",
+      "devices": [
+        "iPad16,10",
+        "iPad16,11",
+        "iPad16,8",
+        "iPad16,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/be2762fb-656c-4830-b470-bd7babbaeecd/iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "0bc393aad5d381042208fe5b30d3e5ce705eb405"
+    },
+    {
+      "name": "iPad17,2",
+      "devices": [
+        "iPad17,1",
+        "iPad17,2",
+        "iPad17,3",
+        "iPad17,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/02c18e38-cadb-4d4e-a754-96c00d73e8eb/iPad17,1,iPad17,2,iPad17,3,iPad17,4_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad17,1,iPad17,2,iPad17,3,iPad17,4_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "916e635bd1d9024e9ffc92fb43e5667314fde53b"
+    },
+    {
+      "name": "iPad15,5",
+      "devices": [
+        "iPad15,3",
+        "iPad15,4",
+        "iPad15,5",
+        "iPad15,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/73418b55-432c-4183-a4e2-0b29873c88f8/iPad15,3,iPad15,4,iPad15,5,iPad15,6_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad15,3,iPad15,4,iPad15,5,iPad15,6_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "18517a38bbc7a42332013e700dbe98f724fa0439"
+    },
+    {
+      "name": "iPad (A16) Wi-Fi + Cellular",
+      "devices": [
+        "iPad15,8"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/226875e5-59bd-49ac-bd87-55a52a78808d/iPad15,8_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad15,8_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "fbe1aa4282e2631c3509b8b4f3a35f794c217119"
+    },
+    {
+      "name": "iPad (A16) Wi-Fi",
+      "devices": [
+        "iPad15,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/49305b30-c9f6-4d83-a1b9-724588b89304/iPad15,7_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad15,7_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "60207ef5a61fad0546e6b28594aca9c48f017a46"
+    },
+    {
+      "name": "iPad16,3",
+      "devices": [
+        "iPad16,3",
+        "iPad16,4",
+        "iPad16,5",
+        "iPad16,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/5b69d25c-7aa6-4d1a-8348-573b5d045d66/iPad_Pro_M4_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad_Pro_M4_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "8d7d4a3915dd256bb13d4080f0c1d3a0306dc512"
+    },
+    {
+      "name": "iPad16,1",
+      "devices": [
+        "iPad16,1",
+        "iPad16,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/e363693d-d615-4fe6-a005-e509682fcb57/iPad16,1,iPad16,2_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad16,1,iPad16,2_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "7d637ae93769ef20a8cf0f8f317a0d2e13396695"
+    },
+    {
+      "name": "iPad14,8",
+      "devices": [
+        "iPad14,10",
+        "iPad14,11",
+        "iPad14,8",
+        "iPad14,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/243d247a-b84e-42c0-9ea2-1be3a52e438d/iPad_Air_M2_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad_Air_M2_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "f50628b8a8db33c5b01a5ebc5c6755ed80d1474e"
+    },
+    {
+      "name": "iPad14,3",
+      "devices": [
+        "iPad14,3",
+        "iPad14,4",
+        "iPad14,5",
+        "iPad14,6"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/72d70d37-4e01-4da9-bacd-f29031117c27/iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "19528db7885c2221f42b910b71b3195a51b1f577"
+    },
+    {
+      "name": "iPad14,1",
+      "devices": [
+        "iPad14,1",
+        "iPad14,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/3817acb0-03ca-45b0-9e74-e37622c5d7a6/iPad_Fall_2021_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad_Fall_2021_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "47745014297b7c024e7f4c7a5a99935a28b31367"
+    },
+    {
+      "name": "iPad13,18",
+      "devices": [
+        "iPad13,18",
+        "iPad13,19"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/efed5c38-0179-41c1-9900-153dd9dad898/iPad_Fall_2022_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad_Fall_2022_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "187180d7705fb98ff4321ffc03fb62f5c4ca621e"
+    },
+    {
+      "name": "iPad13,16",
+      "devices": [
+        "iPad13,16",
+        "iPad13,17"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/9eb31055-25a2-4ca6-803b-5303a87e5034/iPad_Spring_2022_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad_Spring_2022_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "cfb97734f02a9cb21efea9775b2de72bc912a8eb"
+    },
+    {
+      "name": "iPad13,4",
+      "devices": [
+        "iPad13,10",
+        "iPad13,11",
+        "iPad13,4",
+        "iPad13,5",
+        "iPad13,6",
+        "iPad13,7",
+        "iPad13,8",
+        "iPad13,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/3f4c8ab7-3a0d-46ab-8bfb-f57bdf668637/iPad_Pro_Spring_2021_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad_Pro_Spring_2021_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "6369da05e57199393790dae978a06a7910fb4254"
+    },
+    {
+      "name": "iPad13,1",
+      "devices": [
+        "iPad13,1",
+        "iPad13,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/f9ba86fa-790b-49bf-8196-bef01ddfbc0a/iPad_Fall_2020_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad_Fall_2020_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "08d8d002d0317895c7890a563c47611544e887e8"
+    },
+    {
+      "name": "iPad (WiFi, 9th generation)",
+      "devices": [
+        "iPad12,1",
+        "iPad12,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/6eeacb3e-d8d3-4618-a407-33baab59d8a0/iPad_10.2_2021_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad_10.2_2021_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "2f18d7c438657f3b37a2997cf5f5ba72951e195e"
+    },
+    {
+      "name": "iPad8,9",
+      "devices": [
+        "iPad8,10",
+        "iPad8,11",
+        "iPad8,12",
+        "iPad8,9"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/63682954-9587-4adb-80e3-99f12cd21256/iPad_Pro_A12X_A12Z_27.2.1_24B156_Restore.ipsw",
+      "filename": "iPad_Pro_A12X_A12Z_27.2.1_24B156_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "bd882d87e1be07e1cd19c19a30a403c0cd58ada3"
+    }
+  ],
+  "first_seen_at": "2026-11-09T18:30:37Z",
+  "last_seen_at": "2026-11-09T18:30:37Z"
+}

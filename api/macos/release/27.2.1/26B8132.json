@@ -1,0 +1,37 @@
+{
+  "os_key": "macos",
+  "channel": "release",
+  "version": "27.2.1",
+  "version_label": "27.2.1",
+  "build": "26B8132",
+  "released_at": null,
+  "prerelease": false,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "apple",
+      "checked_at": "2026-11-09T18:30:37Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "Mac17,10",
+      "devices": [
+        "Mac17,10",
+        "Mac17,11",
+        "Mac17,12",
+        "Mac17,13"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/ca5a1489-416d-4d75-a33a-0214da765fd7/UniversalMac_27.2.1_26B8132_Restore.ipsw",
+      "filename": "UniversalMac_27.2.1_26B8132_Restore.ipsw",
+      "signing": {
+        "status": "signed",
+        "checked_at": "2026-11-09T18:30:37Z",
+        "unsigned_since": null
+      },
+      "sha1": "fbd55ffa2531fa3dccb7b7666fd8baa2fd1d1d50"
+    }
+  ],
+  "first_seen_at": "2026-11-09T18:30:37Z",
+  "last_seen_at": "2026-11-09T18:30:37Z"
+}

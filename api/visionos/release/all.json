@@ -4,10 +4,44 @@
   "os_key": "visionos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-08T13:40:33Z",
-  "release_count": 33,
-  "firmware_count": 44,
+  "generated_at": "2026-11-09T18:30:37Z",
+  "release_count": 34,
+  "firmware_count": 46,
   "releases": [
+    {
+      "id": "visionos-release-27.2.1-24N124",
+      "version": "27.2.1",
+      "version_label": "27.2.1",
+      "build": "24N124",
+      "released_at": null,
+      "signed_firmware_count": 2,
+      "total_firmware_count": 2,
+      "data": "27.2.1/24N124.json",
+      "firmwares": [
+        {
+          "id": "visionos-release-27.2.1-24N124-RealityDevice17,1",
+          "name": "Apple Vision Pro (M5)",
+          "devices": [
+            "RealityDevice17,1"
+          ],
+          "filename": "Apple_Vision_Pro_M5_27.2.1_24N124_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/d47294e4-2899-4d64-b3c3-b84f4c364deb/Apple_Vision_Pro_M5_27.2.1_24N124_Restore.ipsw",
+          "sha1": "22280d31b7a2baa62dfbce5090e98cfddcfd959b",
+          "signed": true
+        },
+        {
+          "id": "visionos-release-27.2.1-24N124-RealityDevice14,1",
+          "name": "Apple Vision Pro",
+          "devices": [
+            "RealityDevice14,1"
+          ],
+          "filename": "Apple_Vision_Pro_27.2.1_24N124_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/6dde6100-c105-462d-81cc-99bdbd84de8b/Apple_Vision_Pro_27.2.1_24N124_Restore.ipsw",
+          "sha1": "cce56274580a764d88c4e214100d040160250f69",
+          "signed": true
+        }
+      ]
+    },
     {
       "id": "visionos-release-27.2-24N120",
       "version": "27.2",
@@ -26,7 +60,7 @@
           ],
           "filename": "Apple_Vision_Pro_M5_27.2_24N120_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/b786b286-b7f3-415b-9c33-db7d29eaaaac/Apple_Vision_Pro_M5_27.2_24N120_Restore.ipsw",
-          "sha1": "30aef987290f747767509235ec99baf820952319",
+          "sha1": null,
           "signed": true
         },
         {
@@ -37,7 +71,7 @@
           ],
           "filename": "Apple_Vision_Pro_27.2_24N120_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/47477bd7-2863-41db-97fa-7a371356228f/Apple_Vision_Pro_27.2_24N120_Restore.ipsw",
-          "sha1": "13fcd80eed98c2403e090d878e4eefe66200dee1",
+          "sha1": null,
           "signed": true
         }
       ]
@@ -889,5 +923,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-08T22:40:33+09:00"
+  "generated_at_tokyo": "2026-11-10T03:30:37+09:00"
 }

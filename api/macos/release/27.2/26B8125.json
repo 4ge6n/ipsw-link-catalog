@@ -9,17 +9,13 @@
   "release_candidate": false,
   "sources": [
     {
-      "name": "apple",
-      "checked_at": "2026-11-08T13:40:33Z"
-    },
-    {
       "name": "ipsw.me",
-      "checked_at": "2026-11-08T13:40:33Z"
+      "checked_at": "2026-11-09T18:30:37Z"
     }
   ],
   "firmwares": [
     {
-      "name": "MacBook Pro (16-inch PROLED XDR, M5 Max)",
+      "name": "MacBook Pro (14-inch PROLED XDR, M5 Max)",
       "devices": [
         "Mac17,10",
         "Mac17,11",
@@ -30,12 +26,11 @@
       "filename": "UniversalMac_27.2_26B8125_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-08T13:40:33Z",
+        "checked_at": "2026-11-09T18:30:37Z",
         "unsigned_since": null
-      },
-      "sha1": "30b48ba7b54114c8eec0bef084344c4fce908aa6"
+      }
     }
   ],
   "first_seen_at": "2026-11-05T19:25:36Z",
-  "last_seen_at": "2026-11-08T13:40:33Z"
+  "last_seen_at": "2026-11-09T18:30:37Z"
 }

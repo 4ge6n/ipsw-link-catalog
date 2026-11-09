@@ -9,17 +9,13 @@
   "release_candidate": false,
   "sources": [
     {
-      "name": "apple",
-      "checked_at": "2026-11-08T13:40:33Z"
-    },
-    {
       "name": "ipsw.me",
-      "checked_at": "2026-11-08T13:40:33Z"
+      "checked_at": "2026-11-09T18:30:37Z"
     }
   ],
   "firmwares": [
     {
-      "name": "iPad mini (A20 Pro, Cellular)",
+      "name": "iPad mini (A20 Pro, WiFi)",
       "devices": [
         "iPad19,1",
         "iPad19,2"
@@ -28,12 +24,11 @@
       "filename": "iPad19,1,iPad19,2_27.2_24B8120_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-08T13:40:33Z",
+        "checked_at": "2026-11-09T18:30:37Z",
         "unsigned_since": null
-      },
-      "sha1": "a7121fd8a6821c2f402bd2e441e7b1e68c96de31"
+      }
     }
   ],
   "first_seen_at": "2026-11-05T19:30:34Z",
-  "last_seen_at": "2026-11-08T13:40:33Z"
+  "last_seen_at": "2026-11-09T18:30:37Z"
 }

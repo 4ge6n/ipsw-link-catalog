@@ -9,12 +9,8 @@
   "release_candidate": false,
   "sources": [
     {
-      "name": "apple",
-      "checked_at": "2026-11-08T13:40:33Z"
-    },
-    {
       "name": "ipsw.me",
-      "checked_at": "2026-11-08T13:40:33Z"
+      "checked_at": "2026-11-09T18:30:37Z"
     }
   ],
   "firmwares": [
@@ -27,13 +23,12 @@
       "filename": "iPhone11,8_18.7.11_22H384_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-08T13:40:33Z",
+        "checked_at": "2026-11-09T18:30:37Z",
         "unsigned_since": null
-      },
-      "sha1": "0167231d1aeda1a22eb922da9d7ed77b027cbdff"
+      }
     },
     {
-      "name": "iPhone XS",
+      "name": "iPhone XS Max",
       "devices": [
         "iPhone11,2",
         "iPhone11,4",
@@ -43,12 +38,11 @@
       "filename": "iPhone11,2,iPhone11,4,iPhone11,6_18.7.11_22H384_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-08T13:40:33Z",
+        "checked_at": "2026-11-09T18:30:37Z",
         "unsigned_since": null
-      },
-      "sha1": "e1c439ab288a576995d91aefadffafd04a22af0e"
+      }
     }
   ],
   "first_seen_at": "2026-10-26T21:43:12Z",
-  "last_seen_at": "2026-11-08T13:40:33Z"
+  "last_seen_at": "2026-11-09T18:30:37Z"
 }
