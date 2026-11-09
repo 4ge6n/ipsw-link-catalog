@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-09T18:30:37Z",
+  "generated_at": "2026-11-09T18:35:35Z",
   "release_count": 13,
   "firmware_count": 57,
   "releases": [
@@ -84,7 +84,7 @@
         },
         {
           "id": "ios-release-27.2.1-24B156-iPhone13,2",
-          "name": "iPhone13,2",
+          "name": "iPhone 12",
           "devices": [
             "iPhone13,2",
             "iPhone13,3"
@@ -777,5 +777,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T03:30:37+09:00"
+  "generated_at_tokyo": "2026-11-10T03:35:35+09:00"
 }
