@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-09T19:00:39Z",
+  "generated_at": "2026-11-09T19:10:35Z",
   "release_count": 324,
   "firmware_count": 3098,
   "releases": [
@@ -354,7 +354,7 @@
         },
         {
           "id": "ios-release-27.2.1-24B156-iPhone12,3",
-          "name": "iPhone12,3",
+          "name": "iPhone 11 Pro",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -6557,6 +6557,7 @@
           "name": "iPhone XS",
           "devices": [
             "iPhone11,2",
+            "iPhone11,4",
             "iPhone11,6"
           ],
           "filename": "iPhone11,2,iPhone11,4,iPhone11,6_18.7.12_22H390_Restore.ipsw",
@@ -39108,5 +39109,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T04:00:39+09:00"
+  "generated_at_tokyo": "2026-11-10T04:10:35+09:00"
 }

@@ -4,9 +4,9 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-09T19:00:39Z",
-  "release_count": 13,
-  "firmware_count": 57,
+  "generated_at": "2026-11-09T19:10:35Z",
+  "release_count": 12,
+  "firmware_count": 56,
   "releases": [
     {
       "id": "ios-release-27.2.1-24B91034",
@@ -50,7 +50,7 @@
         },
         {
           "id": "ios-release-27.2.1-24B156-iPhone12,3",
-          "name": "iPhone12,3",
+          "name": "iPhone 11 Pro",
           "devices": [
             "iPhone12,3",
             "iPhone12,5"
@@ -386,6 +386,7 @@
           "name": "iPhone XS",
           "devices": [
             "iPhone11,2",
+            "iPhone11,4",
             "iPhone11,6"
           ],
           "filename": "iPhone11,2,iPhone11,4,iPhone11,6_18.7.12_22H390_Restore.ipsw",
@@ -402,27 +403,6 @@
           "filename": "iPhone11,8_18.7.12_22H390_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026WinterFCS/7b3a838f-2dfe-483b-836e-1664594ec9a2/iPhone11,8_18.7.12_22H390_Restore.ipsw",
           "sha1": "7e4d8aee289734d1b26ef18a67bee149a2cc4dad",
-          "signed": true
-        }
-      ]
-    },
-    {
-      "id": "ios-release-18.7.11-22H384",
-      "version": "18.7.11",
-      "version_label": "18.7.11",
-      "build": "22H384",
-      "released_at": "2026-10-26T17:00:00Z",
-      "data": "18.7.11/22H384.json",
-      "firmwares": [
-        {
-          "id": "ios-release-18.7.11-22H384-iPhone11,4",
-          "name": "iPhone XS Max",
-          "devices": [
-            "iPhone11,4"
-          ],
-          "filename": "iPhone11,2,iPhone11,4,iPhone11,6_18.7.11_22H384_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026WinterFCS/81ee8c78-5e14-4c22-ba1b-27c9270911b6/iPhone11,2,iPhone11,4,iPhone11,6_18.7.11_22H384_Restore.ipsw",
-          "sha1": null,
           "signed": true
         }
       ]
@@ -777,5 +757,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T04:00:39+09:00"
+  "generated_at_tokyo": "2026-11-10T04:10:35+09:00"
 }
