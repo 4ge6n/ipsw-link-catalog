@@ -4,7 +4,7 @@
   "os_key": "macos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-09T19:10:35Z",
+  "generated_at": "2026-11-09T19:15:40Z",
   "release_count": 97,
   "firmware_count": 97,
   "releases": [
@@ -88,18 +88,42 @@
       ]
     },
     {
+      "id": "macos-release-27.2.1-26B7131",
+      "version": "27.2.1",
+      "version_label": "27.2.1",
+      "build": "26B7131",
+      "released_at": "2026-11-09T18:23:09Z",
+      "signed_firmware_count": 1,
+      "total_firmware_count": 1,
+      "data": "27.2.1/26B7131.json",
+      "firmwares": [
+        {
+          "id": "macos-release-27.2.1-26B7131-Mac18,1",
+          "name": "MacBook Pro (14-inch, M6)",
+          "devices": [
+            "Mac18,1",
+            "Mac18,2"
+          ],
+          "filename": "UniversalMac_27.2.1_26B7131_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/d3822605-65a8-438c-bc83-82f1ec77e9ca/UniversalMac_27.2.1_26B7131_Restore.ipsw",
+          "sha1": "9f70a928d8f5bd17bcf5a2e238174e5565fc5b36",
+          "signed": true
+        }
+      ]
+    },
+    {
       "id": "macos-release-27.2.1-26B8132",
       "version": "27.2.1",
       "version_label": "27.2.1",
       "build": "26B8132",
-      "released_at": null,
+      "released_at": "2026-11-09T18:23:08Z",
       "signed_firmware_count": 1,
       "total_firmware_count": 1,
       "data": "27.2.1/26B8132.json",
       "firmwares": [
         {
           "id": "macos-release-27.2.1-26B8132-Mac17,10",
-          "name": "Mac17,10",
+          "name": "MacBook Pro (16-inch PROLED XDR, M5 Max)",
           "devices": [
             "Mac17,10",
             "Mac17,11",
@@ -109,30 +133,6 @@
           "filename": "UniversalMac_27.2.1_26B8132_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/ca5a1489-416d-4d75-a33a-0214da765fd7/UniversalMac_27.2.1_26B8132_Restore.ipsw",
           "sha1": "fbd55ffa2531fa3dccb7b7666fd8baa2fd1d1d50",
-          "signed": true
-        }
-      ]
-    },
-    {
-      "id": "macos-release-27.2.1-26B7131",
-      "version": "27.2.1",
-      "version_label": "27.2.1",
-      "build": "26B7131",
-      "released_at": null,
-      "signed_firmware_count": 1,
-      "total_firmware_count": 1,
-      "data": "27.2.1/26B7131.json",
-      "firmwares": [
-        {
-          "id": "macos-release-27.2.1-26B7131-Mac18,1",
-          "name": "Mac18,1",
-          "devices": [
-            "Mac18,1",
-            "Mac18,2"
-          ],
-          "filename": "UniversalMac_27.2.1_26B7131_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/d3822605-65a8-438c-bc83-82f1ec77e9ca/UniversalMac_27.2.1_26B7131_Restore.ipsw",
-          "sha1": "9f70a928d8f5bd17bcf5a2e238174e5565fc5b36",
           "signed": true
         }
       ]
@@ -4387,5 +4387,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T04:10:35+09:00"
+  "generated_at_tokyo": "2026-11-10T04:15:40+09:00"
 }

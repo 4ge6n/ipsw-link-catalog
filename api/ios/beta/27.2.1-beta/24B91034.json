@@ -1,0 +1,33 @@
+{
+  "os_key": "ios",
+  "channel": "beta",
+  "version": "27.2.1",
+  "version_label": "27.2.1-beta",
+  "build": "24B91034",
+  "released_at": "2026-11-09T18:00:00Z",
+  "prerelease": true,
+  "release_candidate": false,
+  "sources": [
+    {
+      "name": "ipswbeta.dev",
+      "checked_at": "2026-11-09T19:15:40Z"
+    }
+  ],
+  "firmwares": [
+    {
+      "name": "iPhone Duo",
+      "devices": [
+        "iPhone19,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/a553d457-a2b6-4b9d-86f9-2f9d67631fd6/iPhone19,4_27.2.1_24B91034_Restore.ipsw",
+      "filename": "iPhone19,4_27.2.1_24B91034_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-11-09T19:15:40Z",
+        "unsigned_since": null
+      }
+    }
+  ],
+  "first_seen_at": "2026-11-09T19:15:40Z",
+  "last_seen_at": "2026-11-09T19:15:40Z"
+}

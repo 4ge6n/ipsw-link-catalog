@@ -4,10 +4,32 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-09T19:10:35Z",
+  "generated_at": "2026-11-09T19:15:40Z",
   "release_count": 11,
   "firmware_count": 40,
   "releases": [
+    {
+      "id": "ipados-release-27.2.1-24B8156",
+      "version": "27.2.1",
+      "version_label": "27.2.1",
+      "build": "24B8156",
+      "released_at": "2026-11-09T18:27:54Z",
+      "data": "27.2.1/24B8156.json",
+      "firmwares": [
+        {
+          "id": "ipados-release-27.2.1-24B8156-iPad19,1",
+          "name": "iPad mini (A20 Pro, Cellular)",
+          "devices": [
+            "iPad19,1",
+            "iPad19,2"
+          ],
+          "filename": "iPad19,1,iPad19,2_27.2.1_24B8156_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/8da0c0d3-af9e-4eed-807e-c5f9edcc6a67/iPad19,1,iPad19,2_27.2.1_24B8156_Restore.ipsw",
+          "sha1": "af123fa0c79c920ee3bc2efb2d93716ee7e5c6ff",
+          "signed": true
+        }
+      ]
+    },
     {
       "id": "ipados-release-27.2.1-24B156",
       "version": "27.2.1",
@@ -124,7 +146,7 @@
         },
         {
           "id": "ipados-release-27.2.1-24B156-iPad15,3",
-          "name": "iPad15,5",
+          "name": "iPad Air 13-inch (M3, WiFi)",
           "devices": [
             "iPad15,3",
             "iPad15,4",
@@ -224,28 +246,6 @@
           "filename": "iPad_Pro_A12X_A12Z_27.2.1_24B156_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/63682954-9587-4adb-80e3-99f12cd21256/iPad_Pro_A12X_A12Z_27.2.1_24B156_Restore.ipsw",
           "sha1": "bd882d87e1be07e1cd19c19a30a403c0cd58ada3",
-          "signed": true
-        }
-      ]
-    },
-    {
-      "id": "ipados-release-27.2.1-24B8156",
-      "version": "27.2.1",
-      "version_label": "27.2.1",
-      "build": "24B8156",
-      "released_at": null,
-      "data": "27.2.1/24B8156.json",
-      "firmwares": [
-        {
-          "id": "ipados-release-27.2.1-24B8156-iPad19,1",
-          "name": "iPad19,2",
-          "devices": [
-            "iPad19,1",
-            "iPad19,2"
-          ],
-          "filename": "iPad19,1,iPad19,2_27.2.1_24B8156_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/8da0c0d3-af9e-4eed-807e-c5f9edcc6a67/iPad19,1,iPad19,2_27.2.1_24B8156_Restore.ipsw",
-          "sha1": "af123fa0c79c920ee3bc2efb2d93716ee7e5c6ff",
           "signed": true
         }
       ]
@@ -623,5 +623,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T04:10:35+09:00"
+  "generated_at_tokyo": "2026-11-10T04:15:40+09:00"
 }
