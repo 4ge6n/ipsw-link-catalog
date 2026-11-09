@@ -10,11 +10,11 @@
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-11-09T19:20:35Z"
+      "checked_at": "2026-11-09T19:30:35Z"
     },
     {
       "name": "ipsw.me",
-      "checked_at": "2026-11-09T19:20:35Z"
+      "checked_at": "2026-11-09T19:30:35Z"
     }
   ],
   "firmwares": [
@@ -27,7 +27,7 @@
       "filename": "Apple_Vision_Pro_M5_27.2.1_24N124_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:20:35Z",
+        "checked_at": "2026-11-09T19:30:35Z",
         "unsigned_since": null
       },
       "sha1": "22280d31b7a2baa62dfbce5090e98cfddcfd959b"
@@ -41,12 +41,12 @@
       "filename": "Apple_Vision_Pro_27.2.1_24N124_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:20:35Z",
+        "checked_at": "2026-11-09T19:30:35Z",
         "unsigned_since": null
       },
       "sha1": "cce56274580a764d88c4e214100d040160250f69"
     }
   ],
   "first_seen_at": "2026-11-09T18:30:37Z",
-  "last_seen_at": "2026-11-09T19:20:35Z"
+  "last_seen_at": "2026-11-09T19:30:35Z"
 }

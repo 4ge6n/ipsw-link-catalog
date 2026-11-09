@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-09T19:20:35Z",
+  "generated_at": "2026-11-09T19:30:35Z",
   "release_count": 277,
   "firmware_count": 2236,
   "releases": [
@@ -20,7 +20,7 @@
       "firmwares": [
         {
           "id": "ipados-release-27.2.1-24B156-iPad16,10",
-          "name": "iPad16,10",
+          "name": "iPad Air 13-inch (M4, WiFi)",
           "devices": [
             "iPad16,10",
             "iPad16,11",
@@ -982,7 +982,7 @@
         },
         {
           "id": "ipados-release-26.7.3-23H131-iPad8,1",
-          "name": "iPad8,1",
+          "name": "iPad Pro 3 (11-inch, WiFi)",
           "devices": [
             "iPad8,1",
             "iPad8,2",
@@ -32360,5 +32360,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T04:20:35+09:00"
+  "generated_at_tokyo": "2026-11-10T04:30:35+09:00"
 }
