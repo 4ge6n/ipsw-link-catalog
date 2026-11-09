@@ -5,8 +5,8 @@ Stable JSON indexes of Apple restore-image URLs. IPSW files are never stored in 
 <!-- AUTO-GENERATED:START -->
 ## Catalog status
 
-Last successful update (UTC): `2026-11-09T19:30:35Z`
-Last successful update (Asia/Tokyo): `2026-11-10T04:30:35+09:00`
+Last successful update (UTC): `2026-11-09T19:50:38Z`
+Last successful update (Asia/Tokyo): `2026-11-10T04:50:38+09:00`
 
 ### Endpoints
 
@@ -28,7 +28,7 @@ Last successful update (Asia/Tokyo): `2026-11-10T04:30:35+09:00`
 #### visionOS
 
 - `release`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/visionos/release/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/visionos/release/all.json) (2 IPSW records)
-- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/visionos/beta/all.json) (182 IPSW records; no beta latest endpoint)
+- `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/visionos/beta/all.json) (184 IPSW records; no beta latest endpoint)
 
 #### audioOS
 
