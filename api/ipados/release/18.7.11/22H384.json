@@ -4,13 +4,13 @@
   "version": "18.7.11",
   "version_label": "18.7.11",
   "build": "22H384",
-  "released_at": "2026-10-26T17:00:00Z",
+  "released_at": "2026-10-26T18:32:43Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "ipsw.me",
-      "checked_at": "2026-11-09T19:50:38Z"
+      "checked_at": "2026-11-10T00:15:35Z"
     }
   ],
   "firmwares": [
@@ -24,11 +24,11 @@
       "filename": "iPad_10.2_18.7.11_22H384_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-10-26T21:43:12Z",
-  "last_seen_at": "2026-11-09T19:50:38Z"
+  "last_seen_at": "2026-11-10T00:15:35Z"
 }

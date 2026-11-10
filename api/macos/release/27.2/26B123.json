@@ -4,13 +4,13 @@
   "version": "27.2",
   "version_label": "27.2",
   "build": "26B123",
-  "released_at": "2026-10-26T17:00:00Z",
+  "released_at": "2026-10-26T18:14:24Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "ipsw.me",
-      "checked_at": "2026-11-09T19:50:38Z"
+      "checked_at": "2026-11-10T00:15:35Z"
     }
   ],
   "firmwares": [
@@ -79,11 +79,11 @@
       "filename": "UniversalMac_27.2_26B123_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-10-26T21:43:12Z",
-  "last_seen_at": "2026-11-09T19:50:38Z"
+  "last_seen_at": "2026-11-10T00:15:35Z"
 }

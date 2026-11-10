@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-09T19:50:38Z",
+  "generated_at": "2026-11-10T00:15:35Z",
   "release_count": 12,
   "firmware_count": 56,
   "releases": [
@@ -13,7 +13,7 @@
       "version": "27.2.1",
       "version_label": "27.2.1",
       "build": "24B91034",
-      "released_at": "2026-11-09T18:27:51Z",
+      "released_at": "2026-11-09T18:00:00Z",
       "data": "27.2.1/24B91034.json",
       "firmwares": [
         {
@@ -34,7 +34,7 @@
       "version": "27.2.1",
       "version_label": "27.2.1",
       "build": "24B156",
-      "released_at": "2026-11-09T18:27:13Z",
+      "released_at": "2026-11-09T18:00:00Z",
       "data": "27.2.1/24B156.json",
       "firmwares": [
         {
@@ -378,7 +378,7 @@
       "version": "18.7.12",
       "version_label": "18.7.12",
       "build": "22H390",
-      "released_at": "2026-11-09T18:27:59Z",
+      "released_at": "2026-11-09T18:00:00Z",
       "data": "18.7.12/22H390.json",
       "firmwares": [
         {
@@ -757,5 +757,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T04:50:38+09:00"
+  "generated_at_tokyo": "2026-11-10T09:15:35+09:00"
 }

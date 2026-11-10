@@ -4,17 +4,17 @@
   "version": "27.2.1",
   "version_label": "27.2.1",
   "build": "24B156",
-  "released_at": "2026-11-09T18:27:47Z",
+  "released_at": "2026-11-09T18:00:00Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "apple",
-      "checked_at": "2026-11-09T19:50:38Z"
+      "checked_at": "2026-11-10T00:15:35Z"
     },
     {
       "name": "ipsw.me",
-      "checked_at": "2026-11-09T19:50:38Z"
+      "checked_at": "2026-11-10T00:15:35Z"
     }
   ],
   "firmwares": [
@@ -30,7 +30,7 @@
       "filename": "iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "0bc393aad5d381042208fe5b30d3e5ce705eb405"
@@ -47,7 +47,7 @@
       "filename": "iPad17,1,iPad17,2,iPad17,3,iPad17,4_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "916e635bd1d9024e9ffc92fb43e5667314fde53b"
@@ -64,7 +64,7 @@
       "filename": "iPad15,3,iPad15,4,iPad15,5,iPad15,6_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "18517a38bbc7a42332013e700dbe98f724fa0439"
@@ -78,7 +78,7 @@
       "filename": "iPad15,8_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "fbe1aa4282e2631c3509b8b4f3a35f794c217119"
@@ -92,7 +92,7 @@
       "filename": "iPad15,7_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "60207ef5a61fad0546e6b28594aca9c48f017a46"
@@ -109,7 +109,7 @@
       "filename": "iPad_Pro_M4_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "8d7d4a3915dd256bb13d4080f0c1d3a0306dc512"
@@ -124,7 +124,7 @@
       "filename": "iPad16,1,iPad16,2_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "7d637ae93769ef20a8cf0f8f317a0d2e13396695"
@@ -141,7 +141,7 @@
       "filename": "iPad_Air_M2_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "f50628b8a8db33c5b01a5ebc5c6755ed80d1474e"
@@ -158,7 +158,7 @@
       "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "19528db7885c2221f42b910b71b3195a51b1f577"
@@ -173,7 +173,7 @@
       "filename": "iPad_Fall_2021_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "47745014297b7c024e7f4c7a5a99935a28b31367"
@@ -188,7 +188,7 @@
       "filename": "iPad_Fall_2022_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "187180d7705fb98ff4321ffc03fb62f5c4ca621e"
@@ -203,7 +203,7 @@
       "filename": "iPad_Spring_2022_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "cfb97734f02a9cb21efea9775b2de72bc912a8eb"
@@ -224,7 +224,7 @@
       "filename": "iPad_Pro_Spring_2021_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "6369da05e57199393790dae978a06a7910fb4254"
@@ -239,7 +239,7 @@
       "filename": "iPad_Fall_2020_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "08d8d002d0317895c7890a563c47611544e887e8"
@@ -254,7 +254,7 @@
       "filename": "iPad_10.2_2021_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "2f18d7c438657f3b37a2997cf5f5ba72951e195e"
@@ -271,12 +271,12 @@
       "filename": "iPad_Pro_A12X_A12Z_27.2.1_24B156_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-09T19:50:38Z",
+        "checked_at": "2026-11-10T00:15:35Z",
         "unsigned_since": null
       },
       "sha1": "bd882d87e1be07e1cd19c19a30a403c0cd58ada3"
     }
   ],
   "first_seen_at": "2026-11-09T18:30:37Z",
-  "last_seen_at": "2026-11-09T19:50:38Z"
+  "last_seen_at": "2026-11-10T00:15:35Z"
 }

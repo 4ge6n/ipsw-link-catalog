@@ -4,7 +4,7 @@
   "os_key": "visionos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-09T19:50:38Z",
+  "generated_at": "2026-11-10T00:15:35Z",
   "release_count": 1,
   "firmware_count": 2,
   "releases": [
@@ -13,7 +13,7 @@
       "version": "27.2.1",
       "version_label": "27.2.1",
       "build": "24N124",
-      "released_at": "2026-11-09T18:30:10Z",
+      "released_at": "2026-11-09T18:00:00Z",
       "data": "27.2.1/24N124.json",
       "firmwares": [
         {
@@ -41,5 +41,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T04:50:38+09:00"
+  "generated_at_tokyo": "2026-11-10T09:15:35+09:00"
 }

@@ -4,16 +4,40 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-09T19:50:38Z",
+  "generated_at": "2026-11-10T00:15:35Z",
   "release_count": 277,
   "firmware_count": 2236,
   "releases": [
+    {
+      "id": "ipados-release-27.2.1-24B8156",
+      "version": "27.2.1",
+      "version_label": "27.2.1",
+      "build": "24B8156",
+      "released_at": "2026-11-09T18:27:07Z",
+      "signed_firmware_count": 1,
+      "total_firmware_count": 1,
+      "data": "27.2.1/24B8156.json",
+      "firmwares": [
+        {
+          "id": "ipados-release-27.2.1-24B8156-iPad19,1",
+          "name": "iPad mini (A20 Pro, Cellular)",
+          "devices": [
+            "iPad19,1",
+            "iPad19,2"
+          ],
+          "filename": "iPad19,1,iPad19,2_27.2.1_24B8156_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/8da0c0d3-af9e-4eed-807e-c5f9edcc6a67/iPad19,1,iPad19,2_27.2.1_24B8156_Restore.ipsw",
+          "sha1": "af123fa0c79c920ee3bc2efb2d93716ee7e5c6ff",
+          "signed": true
+        }
+      ]
+    },
     {
       "id": "ipados-release-27.2.1-24B156",
       "version": "27.2.1",
       "version_label": "27.2.1",
       "build": "24B156",
-      "released_at": "2026-11-09T18:27:47Z",
+      "released_at": "2026-11-09T18:00:00Z",
       "signed_firmware_count": 16,
       "total_firmware_count": 16,
       "data": "27.2.1/24B156.json",
@@ -231,30 +255,6 @@
       ]
     },
     {
-      "id": "ipados-release-27.2.1-24B8156",
-      "version": "27.2.1",
-      "version_label": "27.2.1",
-      "build": "24B8156",
-      "released_at": "2026-11-09T18:27:07Z",
-      "signed_firmware_count": 1,
-      "total_firmware_count": 1,
-      "data": "27.2.1/24B8156.json",
-      "firmwares": [
-        {
-          "id": "ipados-release-27.2.1-24B8156-iPad19,1",
-          "name": "iPad mini (A20 Pro, Cellular)",
-          "devices": [
-            "iPad19,1",
-            "iPad19,2"
-          ],
-          "filename": "iPad19,1,iPad19,2_27.2.1_24B8156_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/8da0c0d3-af9e-4eed-807e-c5f9edcc6a67/iPad19,1,iPad19,2_27.2.1_24B8156_Restore.ipsw",
-          "sha1": "af123fa0c79c920ee3bc2efb2d93716ee7e5c6ff",
-          "signed": true
-        }
-      ]
-    },
-    {
       "id": "ipados-release-27.2-24B8120",
       "version": "27.2",
       "version_label": "27.2",
@@ -283,7 +283,7 @@
       "version": "27.2",
       "version_label": "27.2",
       "build": "24B119",
-      "released_at": "2026-10-26T17:00:00Z",
+      "released_at": "2026-10-26T18:33:20Z",
       "signed_firmware_count": 16,
       "total_firmware_count": 16,
       "data": "27.2/24B119.json",
@@ -949,7 +949,7 @@
       "version": "26.7.3",
       "version_label": "26.7.3",
       "build": "23H131",
-      "released_at": "2026-11-09T18:28:01Z",
+      "released_at": "2026-11-09T18:00:00Z",
       "signed_firmware_count": 3,
       "total_firmware_count": 3,
       "data": "26.7.3/23H131.json",
@@ -1005,7 +1005,7 @@
       "version": "26.7.2",
       "version_label": "26.7.2",
       "build": "23H128",
-      "released_at": "2026-10-26T17:00:00Z",
+      "released_at": "2026-10-26T18:33:25Z",
       "signed_firmware_count": 3,
       "total_firmware_count": 3,
       "data": "26.7.2/23H128.json",
@@ -4961,7 +4961,7 @@
       "version": "18.7.12",
       "version_label": "18.7.12",
       "build": "22H390",
-      "released_at": "2026-11-09T18:27:56Z",
+      "released_at": "2026-11-09T18:00:00Z",
       "signed_firmware_count": 1,
       "total_firmware_count": 1,
       "data": "18.7.12/22H390.json",
@@ -4985,7 +4985,7 @@
       "version": "18.7.11",
       "version_label": "18.7.11",
       "build": "22H384",
-      "released_at": "2026-10-26T17:00:00Z",
+      "released_at": "2026-10-26T18:32:43Z",
       "signed_firmware_count": 1,
       "total_firmware_count": 1,
       "data": "18.7.11/22H384.json",
@@ -32360,5 +32360,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T04:50:38+09:00"
+  "generated_at_tokyo": "2026-11-10T09:15:35+09:00"
 }
