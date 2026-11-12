@@ -4,7 +4,7 @@
   "os_key": "macos",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-11-10T00:15:35Z",
+  "generated_at": "2026-11-12T20:00:35Z",
   "release_count": 286,
   "firmware_count": 286,
   "releases": [
@@ -62,7 +62,6 @@
             "Mac16,9",
             "Mac17,10",
             "Mac17,11",
-            "Mac17,12",
             "Mac17,13",
             "Mac17,14",
             "Mac17,15",
@@ -111,7 +110,6 @@
           "devices": [
             "Mac17,10",
             "Mac17,11",
-            "Mac17,12",
             "Mac17,13"
           ],
           "filename": "UniversalMac_27.2.1_26B8132_Restore.ipsw",
@@ -242,7 +240,6 @@
           "devices": [
             "Mac17,10",
             "Mac17,11",
-            "Mac17,12",
             "Mac17,13"
           ],
           "filename": "UniversalMac_27.2_26B8125_Restore.ipsw",
@@ -14566,5 +14563,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-10T09:15:35+09:00"
+  "generated_at_tokyo": "2026-11-13T05:00:35+09:00"
 }

@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-10T00:15:35Z"
+      "checked_at": "2026-11-12T20:00:35Z"
     }
   ],
   "firmwares": [
@@ -19,7 +19,6 @@
       "devices": [
         "Mac17,10",
         "Mac17,11",
-        "Mac17,12",
         "Mac17,13"
       ],
       "url": "https://updates.cdn-apple.com/2026FallFCS/b83bb963-ebd8-4608-8b5d-fdc70cb24927/UniversalMac_27.2_26B8125_Restore.ipsw",
@@ -32,5 +31,5 @@
     }
   ],
   "first_seen_at": "2026-11-06T07:03:22Z",
-  "last_seen_at": "2026-11-10T00:15:35Z"
+  "last_seen_at": "2026-11-12T20:00:35Z"
 }
