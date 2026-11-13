@@ -4,13 +4,13 @@
   "version": "27.2",
   "version_label": "27.2",
   "build": "24K122",
-  "released_at": "2026-10-26T17:00:00Z",
+  "released_at": "2026-10-26T18:33:07Z",
   "prerelease": false,
   "release_candidate": false,
   "sources": [
     {
       "name": "ipsw.me",
-      "checked_at": "2026-11-13T19:50:35Z"
+      "checked_at": "2026-11-13T20:00:35Z"
     }
   ],
   "firmwares": [
@@ -23,7 +23,7 @@
       "filename": "AudioAccessory11,1_27.2_24K122_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-13T19:50:35Z",
+        "checked_at": "2026-11-13T20:00:35Z",
         "unsigned_since": null
       }
     },
@@ -36,11 +36,11 @@
       "filename": "AudioAccessory5,1_27.2_24K122_Restore.ipsw",
       "signing": {
         "status": "signed",
-        "checked_at": "2026-11-13T19:50:35Z",
+        "checked_at": "2026-11-13T20:00:35Z",
         "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-10-26T21:43:12Z",
-  "last_seen_at": "2026-11-13T19:50:35Z"
+  "last_seen_at": "2026-11-13T20:00:35Z"
 }

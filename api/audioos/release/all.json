@@ -4,7 +4,7 @@
   "os_key": "audioos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-13T19:50:35Z",
+  "generated_at": "2026-11-13T20:00:35Z",
   "release_count": 54,
   "firmware_count": 57,
   "releases": [
@@ -13,7 +13,7 @@
       "version": "27.2.1",
       "version_label": "27.2.1",
       "build": "24K157",
-      "released_at": "2026-11-13T19:43:05Z",
+      "released_at": "2026-11-13T18:00:00Z",
       "signed_firmware_count": 2,
       "total_firmware_count": 2,
       "data": "27.2.1/24K157.json",
@@ -47,7 +47,7 @@
       "version": "27.2",
       "version_label": "27.2",
       "build": "24K122",
-      "released_at": "2026-10-26T17:00:00Z",
+      "released_at": "2026-10-26T18:33:07Z",
       "signed_firmware_count": 2,
       "total_firmware_count": 2,
       "data": "27.2/24K122.json",
@@ -1284,5 +1284,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-14T04:50:35+09:00"
+  "generated_at_tokyo": "2026-11-14T05:00:35+09:00"
 }
