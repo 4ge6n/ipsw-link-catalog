@@ -4,38 +4,38 @@
   "os_key": "audioos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-12T20:10:36Z",
+  "generated_at": "2026-11-13T19:50:35Z",
   "release_count": 2,
   "firmware_count": 3,
   "releases": [
     {
-      "id": "audioos-release-27.2-24K122",
-      "version": "27.2",
-      "version_label": "27.2",
-      "build": "24K122",
-      "released_at": "2026-10-26T17:00:00Z",
-      "data": "27.2/24K122.json",
+      "id": "audioos-release-27.2.1-24K157",
+      "version": "27.2.1",
+      "version_label": "27.2.1",
+      "build": "24K157",
+      "released_at": "2026-11-13T19:43:05Z",
+      "data": "27.2.1/24K157.json",
       "firmwares": [
         {
-          "id": "audioos-release-27.2-24K122-AudioAccessory11,1",
+          "id": "audioos-release-27.2.1-24K157-AudioAccessory11,1",
           "name": "HomePod mini (2nd generation)",
           "devices": [
             "AudioAccessory11,1"
           ],
-          "filename": "AudioAccessory11,1_27.2_24K122_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/05f045dd-35a4-4b00-8bdc-de83b90d9ff8/AudioAccessory11,1_27.2_24K122_Restore.ipsw",
-          "sha1": "7d8b7606d4f121e3ff6bf975e413dc4d026689ad",
+          "filename": "AudioAccessory11,1_27.2.1_24K157_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/8074eaa3-74fc-4d64-bdda-00e527a80b85/AudioAccessory11,1_27.2.1_24K157_Restore.ipsw",
+          "sha1": "d538726ad1497900e999049fd4357de5b43eb73b",
           "signed": true
         },
         {
-          "id": "audioos-release-27.2-24K122-AudioAccessory5,1",
+          "id": "audioos-release-27.2.1-24K157-AudioAccessory5,1",
           "name": "HomePod mini",
           "devices": [
             "AudioAccessory5,1"
           ],
-          "filename": "AudioAccessory5,1_27.2_24K122_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/4ee5d3c9-158b-4ad9-95b4-6cfa9ac0f0d4/AudioAccessory5,1_27.2_24K122_Restore.ipsw",
-          "sha1": "2aa5d5d1f074d4093a943415e65f617612e8909f",
+          "filename": "AudioAccessory5,1_27.2.1_24K157_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/f952d664-d8fd-46e3-894e-64dbdc4c01f3/AudioAccessory5,1_27.2.1_24K157_Restore.ipsw",
+          "sha1": "b1a92edb6318cdab1cc67fce066ab540c3c38496",
           "signed": true
         }
       ]
@@ -62,5 +62,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-13T05:10:36+09:00"
+  "generated_at_tokyo": "2026-11-14T04:50:35+09:00"
 }
