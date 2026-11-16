@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-16T19:25:40Z"
+      "checked_at": "2026-11-16T19:30:34Z"
     }
   ],
   "firmwares": [
@@ -303,19 +303,6 @@
       }
     },
     {
-      "name": "iPhone 13 mini",
-      "devices": [
-        "iPhone14,4"
-      ],
-      "url": "https://updates.cdn-apple.com/2026FallSeed/245ab617-fdf9-41e8-9129-851c64f27dac/iPhone14,4_27.3_24C5037i_Restore.ipsw",
-      "filename": "iPhone14,4_27.3_24C5037i_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-11-03T18:30:37Z",
-        "unsigned_since": null
-      }
-    },
-    {
       "name": "iPhone 13 Pro Max",
       "devices": [
         "iPhone14,3"
@@ -395,10 +382,9 @@
       }
     },
     {
-      "name": "iPhone 11 Pro IPSW",
+      "name": "iPhone 11 Pro",
       "devices": [
-        "iPhone12,3",
-        "iPhone12,5"
+        "iPhone12,3"
       ],
       "url": "https://updates.cdn-apple.com/2026FallSeed/a17fa234-3e63-4d47-b2c4-53549c447fb4/iPhone12,3,iPhone12,5_27.3_24C5037i_Restore.ipsw",
       "filename": "iPhone12,3,iPhone12,5_27.3_24C5037i_Restore.ipsw",
@@ -420,8 +406,21 @@
         "checked_at": "2026-11-03T18:30:37Z",
         "unsigned_since": null
       }
+    },
+    {
+      "name": "iPhone 13 mini",
+      "devices": [
+        "iPhone14,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallSeed/245ab617-fdf9-41e8-9129-851c64f27dac/iPhone14,4_27.3_24C5037i_Restore.ipsw",
+      "filename": "iPhone14,4_27.3_24C5037i_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-11-03T18:30:37Z",
+        "unsigned_since": null
+      }
     }
   ],
   "first_seen_at": "2026-11-03T18:30:37Z",
-  "last_seen_at": "2026-11-16T19:25:40Z"
+  "last_seen_at": "2026-11-16T19:30:34Z"
 }
