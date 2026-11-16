@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-11-16T20:20:36Z",
+  "generated_at": "2026-11-16T21:55:35Z",
   "release_count": 553,
   "firmware_count": 8804,
   "releases": [
@@ -34,7 +34,6 @@
           "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
-            "iPhone19,3",
             "iPhone19,7"
           ],
           "filename": "iPhone19,2,iPhone19,3,iPhone19,7_27.3_24C5049d_Restore.ipsw",
@@ -391,7 +390,6 @@
           "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
-            "iPhone19,3",
             "iPhone19,7"
           ],
           "filename": "iPhone19,2,iPhone19,3,iPhone19,7_27.3_24C5037i_Restore.ipsw",
@@ -760,7 +758,6 @@
           "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
-            "iPhone19,3",
             "iPhone19,7"
           ],
           "filename": "iPhone19,2,iPhone19,3,iPhone19,7_27.2.1_24B156_Restore.ipsw",
@@ -1129,7 +1126,6 @@
           "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
-            "iPhone19,3",
             "iPhone19,7"
           ],
           "filename": "iPhone19,2,iPhone19,3,iPhone19,7_27.2_24B119_Restore.ipsw",
@@ -1475,7 +1471,6 @@
           "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
-            "iPhone19,3",
             "iPhone19,7"
           ],
           "filename": "iPhone19,2,iPhone19,3,iPhone19,7_27.2_24B115_Restore.ipsw",
@@ -1821,7 +1816,6 @@
           "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
-            "iPhone19,3",
             "iPhone19,7"
           ],
           "filename": "iPhone19,2,iPhone19,3,iPhone19,7_27.2_24B5110a_Restore.ipsw",
@@ -2167,7 +2161,6 @@
           "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
-            "iPhone19,3",
             "iPhone19,7"
           ],
           "filename": "iPhone19,2,iPhone19,3,iPhone19,7_27.2_24B5099f_Restore.ipsw",
@@ -2513,7 +2506,6 @@
           "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
-            "iPhone19,3",
             "iPhone19,7"
           ],
           "filename": "iPhone19,2,iPhone19,3,iPhone19,7_27.2_24B5089g_Restore.ipsw",
@@ -2859,7 +2851,6 @@
           "name": "iPhone 18 Pro IPSW",
           "devices": [
             "iPhone19,2",
-            "iPhone19,3",
             "iPhone19,7"
           ],
           "filename": "iPhone19,2,iPhone19,3,iPhone19,7_27.2_24B5084k_Restore.ipsw",
@@ -3235,17 +3226,6 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-beta-24A446-iPhone19,3",
-          "name": "iPhone 18 Pro Max (U.S.)",
-          "devices": [
-            "iPhone19,3"
-          ],
-          "filename": "iPhone19,3_27.0.1_24A446_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/71a69d15-1ec8-44c8-9e70-a1beb567b8a8/iPhone19,3_27.0.1_24A446_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
           "id": "ios-beta-27.0.1-beta-24A446-iPhone19,2",
           "name": "iPhone 18 Pro",
           "devices": [
@@ -3576,6 +3556,17 @@
           "url": "https://updates.cdn-apple.com/2026FallFCS/0ff99efa-0099-463a-85d0-8d0c83b3a7a1/iPhone12,1_27.0.1_24A446_Restore.ipsw",
           "sha1": null,
           "signed": null
+        },
+        {
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone19,3",
+          "name": "iPhone 18 Pro Max (U.S.)",
+          "devices": [
+            "iPhone19,3"
+          ],
+          "filename": "iPhone19,3_27.0.1_24A446_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/71a69d15-1ec8-44c8-9e70-a1beb567b8a8/iPhone19,3_27.0.1_24A446_Restore.ipsw",
+          "sha1": null,
+          "signed": null
         }
       ]
     },
@@ -3597,17 +3588,6 @@
           ],
           "filename": "iPhone19,7_27.0_24A437_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/e99ae395-544d-46ee-9dbd-402c7760755e/iPhone19,7_27.0_24A437_Restore.ipsw",
-          "sha1": null,
-          "signed": null
-        },
-        {
-          "id": "ios-beta-27.0-beta-24A437-iPhone19,3",
-          "name": "iPhone 18 Pro Max (U.S.)",
-          "devices": [
-            "iPhone19,3"
-          ],
-          "filename": "iPhone19,3_27.0_24A437_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026FallFCS/5e8a15d7-273e-4a74-9d4c-c4737574f722/iPhone19,3_27.0_24A437_Restore.ipsw",
           "sha1": null,
           "signed": null
         },
@@ -3940,6 +3920,17 @@
           ],
           "filename": "iPhone12,1_27.0_24A437_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/d47bac10-cddf-4f79-a014-411e2fea1fdb/iPhone12,1_27.0_24A437_Restore.ipsw",
+          "sha1": null,
+          "signed": null
+        },
+        {
+          "id": "ios-beta-27.0-beta-24A437-iPhone19,3",
+          "name": "iPhone 18 Pro Max (U.S.)",
+          "devices": [
+            "iPhone19,3"
+          ],
+          "filename": "iPhone19,3_27.0_24A437_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026FallFCS/5e8a15d7-273e-4a74-9d4c-c4737574f722/iPhone19,3_27.0_24A437_Restore.ipsw",
           "sha1": null,
           "signed": null
         }
@@ -108848,5 +108839,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-17T05:20:36+09:00"
+  "generated_at_tokyo": "2026-11-17T06:55:35+09:00"
 }
