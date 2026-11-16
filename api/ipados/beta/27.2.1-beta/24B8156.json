@@ -10,15 +10,14 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-16T19:45:35Z"
+      "checked_at": "2026-11-16T20:20:36Z"
     }
   ],
   "firmwares": [
     {
-      "name": "iPad mini (A20 Pro) Wi-Fi IPSW",
+      "name": "iPad mini (A20 Pro, WiFi)",
       "devices": [
-        "iPad19,1",
-        "iPad19,2"
+        "iPad19,1"
       ],
       "url": "https://updates.cdn-apple.com/2026FallFCS/8da0c0d3-af9e-4eed-807e-c5f9edcc6a67/iPad19,1,iPad19,2_27.2.1_24B8156_Restore.ipsw",
       "filename": "iPad19,1,iPad19,2_27.2.1_24B8156_Restore.ipsw",
@@ -30,5 +29,5 @@
     }
   ],
   "first_seen_at": "2026-11-09T19:10:35Z",
-  "last_seen_at": "2026-11-16T19:45:35Z"
+  "last_seen_at": "2026-11-16T20:20:36Z"
 }
