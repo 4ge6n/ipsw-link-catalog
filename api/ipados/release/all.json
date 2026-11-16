@@ -4,7 +4,7 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-16T23:05:34Z",
+  "generated_at": "2026-11-16T23:20:34Z",
   "release_count": 277,
   "firmware_count": 2236,
   "releases": [
@@ -260,7 +260,7 @@
       "version_label": "27.2",
       "build": "24B8120",
       "released_at": "2026-11-05T19:24:18Z",
-      "signed_firmware_count": 1,
+      "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "27.2/24B8120.json",
       "firmwares": [
@@ -274,7 +274,7 @@
           "filename": "iPad19,1,iPad19,2_27.2_24B8120_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/d70a938c-e796-4f36-bf9a-cb235fedffba/iPad19,1,iPad19,2_27.2_24B8120_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -284,7 +284,7 @@
       "version_label": "27.2",
       "build": "24B119",
       "released_at": "2026-10-26T18:33:20Z",
-      "signed_firmware_count": 16,
+      "signed_firmware_count": 0,
       "total_firmware_count": 16,
       "data": "27.2/24B119.json",
       "firmwares": [
@@ -300,7 +300,7 @@
           "filename": "iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/28cc3331-3e15-4cd5-aca4-209552b44503/iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad17,1",
@@ -314,7 +314,7 @@
           "filename": "iPad17,1,iPad17,2,iPad17,3,iPad17,4_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/b79b2e3c-6409-4d03-a01c-01b2a07cbabb/iPad17,1,iPad17,2,iPad17,3,iPad17,4_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad15,7",
@@ -325,7 +325,7 @@
           "filename": "iPad15,7_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/14528a7a-accd-49ef-9931-44bb85432620/iPad15,7_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad15,8",
@@ -336,7 +336,7 @@
           "filename": "iPad15,8_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/9d05d84a-50ed-46d2-bfaa-2347523753af/iPad15,8_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad15,3",
@@ -350,7 +350,7 @@
           "filename": "iPad15,3,iPad15,4,iPad15,5,iPad15,6_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/e9922d41-a093-496f-86f4-b73e161b1c2b/iPad15,3,iPad15,4,iPad15,5,iPad15,6_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad16,1",
@@ -362,7 +362,7 @@
           "filename": "iPad16,1,iPad16,2_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/5312c473-c055-431a-a4cb-0d64aebe0413/iPad16,1,iPad16,2_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad14,10",
@@ -376,7 +376,7 @@
           "filename": "iPad_Air_M2_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/96d1dbc2-53ae-462f-b21d-9447fa94fab8/iPad_Air_M2_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad16,3",
@@ -390,7 +390,7 @@
           "filename": "iPad_Pro_M4_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/b6694d59-2d1a-41ab-99bd-5acfb5e4ba8c/iPad_Pro_M4_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad14,3",
@@ -404,7 +404,7 @@
           "filename": "iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/cf482001-e9d3-4fe3-b9fd-fa7101a9659b/iPad14,3,iPad14,4,iPad14,5,iPad14,6_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad13,18",
@@ -416,7 +416,7 @@
           "filename": "iPad_Fall_2022_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/a1b2e991-1473-40b3-a651-2b91ea179d94/iPad_Fall_2022_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad13,16",
@@ -428,7 +428,7 @@
           "filename": "iPad_Spring_2022_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/cd9ea34b-1243-4e28-9341-6adeb9c79e8f/iPad_Spring_2022_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad14,1",
@@ -440,7 +440,7 @@
           "filename": "iPad_Fall_2021_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/e15bb4ab-bbba-4e3f-a400-0036b9f75bf8/iPad_Fall_2021_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad12,1",
@@ -452,7 +452,7 @@
           "filename": "iPad_10.2_2021_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/4ed6b0d9-7721-4690-b843-664305638776/iPad_10.2_2021_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad13,10",
@@ -470,7 +470,7 @@
           "filename": "iPad_Pro_Spring_2021_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/9d88d626-ff74-4f39-a19f-217115bd016e/iPad_Pro_Spring_2021_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad13,1",
@@ -482,7 +482,7 @@
           "filename": "iPad_Fall_2020_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/9738ea88-b9d2-42a5-9a18-f678357537ce/iPad_Fall_2020_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-27.2-24B119-iPad8,10",
@@ -496,7 +496,7 @@
           "filename": "iPad_Pro_A12X_A12Z_27.2_24B119_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/16e7a18b-2da0-4cc2-93cb-ef47c401b796/iPad_Pro_A12X_A12Z_27.2_24B119_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -1006,7 +1006,7 @@
       "version_label": "26.7.2",
       "build": "23H128",
       "released_at": "2026-10-26T18:33:25Z",
-      "signed_firmware_count": 3,
+      "signed_firmware_count": 0,
       "total_firmware_count": 3,
       "data": "26.7.2/23H128.json",
       "firmwares": [
@@ -1020,7 +1020,7 @@
           "filename": "iPad_10.2_2020_26.7.2_23H128_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/3d123248-6c99-43f3-b763-532414de9768/iPad_10.2_2020_26.7.2_23H128_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.7.2-23H128-iPad11,1",
@@ -1034,7 +1034,7 @@
           "filename": "iPad_Spring_2019_26.7.2_23H128_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/688d3935-dc4f-47cf-bb64-88f679489250/iPad_Spring_2019_26.7.2_23H128_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ipados-release-26.7.2-23H128-iPad8,1",
@@ -1052,7 +1052,7 @@
           "filename": "iPad_Pro_A12X_26.7.2_23H128_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026FallFCS/4d023f15-cc68-4a18-8901-152f979c4f2e/iPad_Pro_A12X_26.7.2_23H128_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -4986,7 +4986,7 @@
       "version_label": "18.7.11",
       "build": "22H384",
       "released_at": "2026-10-26T18:32:43Z",
-      "signed_firmware_count": 1,
+      "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "18.7.11/22H384.json",
       "firmwares": [
@@ -5000,7 +5000,7 @@
           "filename": "iPad_10.2_18.7.11_22H384_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026WinterFCS/cae87706-e21d-4989-a880-3210b045ef28/iPad_10.2_18.7.11_22H384_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -32360,5 +32360,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-17T08:05:34+09:00"
+  "generated_at_tokyo": "2026-11-17T08:20:34+09:00"
 }

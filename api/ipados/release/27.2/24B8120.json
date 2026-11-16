@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipsw.me",
-      "checked_at": "2026-11-16T23:05:34Z"
+      "checked_at": "2026-11-16T23:20:34Z"
     }
   ],
   "firmwares": [
@@ -23,12 +23,12 @@
       "url": "https://updates.cdn-apple.com/2026FallFCS/d70a938c-e796-4f36-bf9a-cb235fedffba/iPad19,1,iPad19,2_27.2_24B8120_Restore.ipsw",
       "filename": "iPad19,1,iPad19,2_27.2_24B8120_Restore.ipsw",
       "signing": {
-        "status": "signed",
-        "checked_at": "2026-11-16T23:05:34Z",
-        "unsigned_since": null
+        "status": "unsigned",
+        "checked_at": "2026-11-16T23:20:34Z",
+        "unsigned_since": "2026-11-16T23:20:34Z"
       }
     }
   ],
   "first_seen_at": "2026-11-05T19:30:34Z",
-  "last_seen_at": "2026-11-16T23:05:34Z"
+  "last_seen_at": "2026-11-16T23:20:34Z"
 }

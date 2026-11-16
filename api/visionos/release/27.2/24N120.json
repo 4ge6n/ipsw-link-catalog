@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipsw.me",
-      "checked_at": "2026-11-16T23:05:34Z"
+      "checked_at": "2026-11-16T23:20:34Z"
     }
   ],
   "firmwares": [
@@ -22,9 +22,9 @@
       "url": "https://updates.cdn-apple.com/2026FallFCS/b786b286-b7f3-415b-9c33-db7d29eaaaac/Apple_Vision_Pro_M5_27.2_24N120_Restore.ipsw",
       "filename": "Apple_Vision_Pro_M5_27.2_24N120_Restore.ipsw",
       "signing": {
-        "status": "signed",
-        "checked_at": "2026-11-16T23:05:34Z",
-        "unsigned_since": null
+        "status": "unsigned",
+        "checked_at": "2026-11-16T23:20:34Z",
+        "unsigned_since": "2026-11-16T23:20:34Z"
       }
     },
     {
@@ -35,12 +35,12 @@
       "url": "https://updates.cdn-apple.com/2026FallFCS/47477bd7-2863-41db-97fa-7a371356228f/Apple_Vision_Pro_27.2_24N120_Restore.ipsw",
       "filename": "Apple_Vision_Pro_27.2_24N120_Restore.ipsw",
       "signing": {
-        "status": "signed",
-        "checked_at": "2026-11-16T23:05:34Z",
-        "unsigned_since": null
+        "status": "unsigned",
+        "checked_at": "2026-11-16T23:20:34Z",
+        "unsigned_since": "2026-11-16T23:20:34Z"
       }
     }
   ],
   "first_seen_at": "2026-10-26T21:43:12Z",
-  "last_seen_at": "2026-11-16T23:05:34Z"
+  "last_seen_at": "2026-11-16T23:20:34Z"
 }
