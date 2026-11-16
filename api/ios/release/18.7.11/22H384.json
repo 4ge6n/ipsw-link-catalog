@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipsw.me",
-      "checked_at": "2026-11-16T23:20:34Z"
+      "checked_at": "2026-11-16T23:55:46Z"
     }
   ],
   "firmwares": [
@@ -22,9 +22,9 @@
       "url": "https://updates.cdn-apple.com/2026WinterFCS/226d78bb-5511-4c5e-acb2-afd14875b940/iPhone11,8_18.7.11_22H384_Restore.ipsw",
       "filename": "iPhone11,8_18.7.11_22H384_Restore.ipsw",
       "signing": {
-        "status": "signed",
-        "checked_at": "2026-11-16T23:20:34Z",
-        "unsigned_since": null
+        "status": "unsigned",
+        "checked_at": "2026-11-16T23:55:46Z",
+        "unsigned_since": "2026-11-16T23:55:46Z"
       }
     },
     {
@@ -37,12 +37,12 @@
       "url": "https://updates.cdn-apple.com/2026WinterFCS/81ee8c78-5e14-4c22-ba1b-27c9270911b6/iPhone11,2,iPhone11,4,iPhone11,6_18.7.11_22H384_Restore.ipsw",
       "filename": "iPhone11,2,iPhone11,4,iPhone11,6_18.7.11_22H384_Restore.ipsw",
       "signing": {
-        "status": "signed",
-        "checked_at": "2026-11-16T23:20:34Z",
-        "unsigned_since": null
+        "status": "unsigned",
+        "checked_at": "2026-11-16T23:55:46Z",
+        "unsigned_since": "2026-11-16T23:55:46Z"
       }
     }
   ],
   "first_seen_at": "2026-10-26T21:43:12Z",
-  "last_seen_at": "2026-11-16T23:20:34Z"
+  "last_seen_at": "2026-11-16T23:55:46Z"
 }

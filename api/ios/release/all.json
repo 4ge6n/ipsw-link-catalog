@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-16T23:20:34Z",
+  "generated_at": "2026-11-16T23:55:46Z",
   "release_count": 324,
   "firmware_count": 3098,
   "releases": [
@@ -6573,7 +6573,7 @@
       "version_label": "18.7.11",
       "build": "22H384",
       "released_at": "2026-10-26T18:33:19Z",
-      "signed_firmware_count": 2,
+      "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "18.7.11/22H384.json",
       "firmwares": [
@@ -6586,7 +6586,7 @@
           "filename": "iPhone11,8_18.7.11_22H384_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026WinterFCS/226d78bb-5511-4c5e-acb2-afd14875b940/iPhone11,8_18.7.11_22H384_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ios-release-18.7.11-22H384-iPhone11,2",
@@ -6599,7 +6599,7 @@
           "filename": "iPhone11,2,iPhone11,4,iPhone11,6_18.7.11_22H384_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2026WinterFCS/81ee8c78-5e14-4c22-ba1b-27c9270911b6/iPhone11,2,iPhone11,4,iPhone11,6_18.7.11_22H384_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -39109,5 +39109,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-17T08:20:34+09:00"
+  "generated_at_tokyo": "2026-11-17T08:55:46+09:00"
 }
