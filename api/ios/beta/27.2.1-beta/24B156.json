@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-16T21:55:35Z"
+      "checked_at": "2026-11-16T23:05:34Z"
     }
   ],
   "firmwares": [
@@ -18,6 +18,7 @@
       "name": "iPhone 18 Pro IPSW",
       "devices": [
         "iPhone19,2",
+        "iPhone19,3",
         "iPhone19,7"
       ],
       "url": "https://updates.cdn-apple.com/2026FallFCS/72981b11-802f-4be1-8345-01eecd9908fe/iPhone19,2,iPhone19,3,iPhone19,7_27.2.1_24B156_Restore.ipsw",
@@ -409,5 +410,5 @@
     }
   ],
   "first_seen_at": "2026-11-09T19:15:40Z",
-  "last_seen_at": "2026-11-16T21:55:35Z"
+  "last_seen_at": "2026-11-16T23:05:34Z"
 }

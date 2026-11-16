@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-16T21:55:35Z"
+      "checked_at": "2026-11-16T23:05:34Z"
     }
   ],
   "firmwares": [
@@ -165,19 +165,6 @@
       }
     },
     {
-      "name": "iPad mini 6 (Cellular)",
-      "devices": [
-        "iPad14,2"
-      ],
-      "url": "https://updates.cdn-apple.com/2026FallSeed/a0894e44-e89f-422f-a6ff-c31cdd4e85b0/iPad_Fall_2021_27.3_24C5049d_Restore.ipsw",
-      "filename": "iPad_Fall_2021_27.3_24C5049d_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-11-16T19:25:40Z",
-        "unsigned_since": null
-      }
-    },
-    {
       "name": "iPad Air 13-inch (M2) Wi-Fi IPSW",
       "devices": [
         "iPad14,10",
@@ -187,6 +174,20 @@
       ],
       "url": "https://updates.cdn-apple.com/2026FallSeed/bd01da49-0c4b-4710-bad3-eef17f6cd4de/iPad_Air_M2_27.3_24C5049d_Restore.ipsw",
       "filename": "iPad_Air_M2_27.3_24C5049d_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-11-16T19:25:40Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad mini (6th generation) Wi-Fi IPSW",
+      "devices": [
+        "iPad14,1",
+        "iPad14,2"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallSeed/a0894e44-e89f-422f-a6ff-c31cdd4e85b0/iPad_Fall_2021_27.3_24C5049d_Restore.ipsw",
+      "filename": "iPad_Fall_2021_27.3_24C5049d_Restore.ipsw",
       "signing": {
         "status": "unknown",
         "checked_at": "2026-11-16T19:25:40Z",
@@ -271,5 +272,5 @@
     }
   ],
   "first_seen_at": "2026-11-16T19:25:40Z",
-  "last_seen_at": "2026-11-16T21:55:35Z"
+  "last_seen_at": "2026-11-16T23:05:34Z"
 }
