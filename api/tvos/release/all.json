@@ -4,7 +4,7 @@
   "os_key": "tvos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-17T00:15:31Z",
+  "generated_at": "2026-11-17T02:30:40Z",
   "release_count": 145,
   "firmware_count": 190,
   "releases": [
@@ -2608,7 +2608,7 @@
       "version_label": "8.4.2",
       "build": "12H606",
       "released_at": "2016-12-12T17:55:20Z",
-      "signed_firmware_count": 2,
+      "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "8.4.2/12H606.json",
       "firmwares": [
@@ -2621,7 +2621,7 @@
           "filename": "AppleTV3,2_8.4.2_12H606_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-84121-20161212-123095D6-B59A-11E6-A84D-CE194F99B54B/AppleTV3,2_8.4.2_12H606_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "tvos-release-8.4.2-12H606-AppleTV3,1",
@@ -2632,7 +2632,7 @@
           "filename": "AppleTV3,1_8.4.2_12H606_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/tvOS7.2.1/031-84128-20161212-12309AA4-B59A-11E6-AD42-AA1AE37229E1/AppleTV3,1_8.4.2_12H606_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -3839,5 +3839,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-17T09:15:31+09:00"
+  "generated_at_tokyo": "2026-11-17T11:30:40+09:00"
 }
