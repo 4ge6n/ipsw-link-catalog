@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-16T23:55:46Z",
+  "generated_at": "2026-11-17T00:15:31Z",
   "release_count": 324,
   "firmware_count": 3098,
   "releases": [
@@ -33025,7 +33025,7 @@
       "version_label": "9.3.6",
       "build": "13G37",
       "released_at": "2019-07-22T17:04:57Z",
-      "signed_firmware_count": 1,
+      "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "9.3.6/13G37.json",
       "firmwares": [
@@ -33038,7 +33038,7 @@
           "filename": "iPhone4,1_9.3.6_13G37_Restore.ipsw",
           "url": "https://updates.cdn-apple.com/2019/ios/041-80043-20190722-6C65AD27-69D8-499C-BC15-DE7AC74DE2BD/iPhone4,1_9.3.6_13G37_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -33048,7 +33048,7 @@
       "version_label": "9.3.5",
       "build": "13G36",
       "released_at": "2016-08-25T16:58:17Z",
-      "signed_firmware_count": 2,
+      "signed_firmware_count": 0,
       "total_firmware_count": 7,
       "data": "9.3.5/13G36.json",
       "firmwares": [
@@ -33116,7 +33116,7 @@
           "filename": "iPod5,1_9.3.5_13G36_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-73183-20160825-6A2D8488-6711-11E6-9C7E-1B3834D2D062/iPod5,1_9.3.5_13G36_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         },
         {
           "id": "ios-release-9.3.5-13G36-iPhone4,1",
@@ -33127,7 +33127,7 @@
           "filename": "iPhone4,1_9.3.5_13G36_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-73068-20160825-6A2B99DE-6711-11E6-BB8F-133834D2D062/iPhone4,1_9.3.5_13G36_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -39109,5 +39109,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-17T08:55:46+09:00"
+  "generated_at_tokyo": "2026-11-17T09:15:31+09:00"
 }

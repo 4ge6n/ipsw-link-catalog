@@ -5,19 +5,19 @@ Stable JSON indexes of Apple restore-image URLs. IPSW files are never stored in 
 <!-- AUTO-GENERATED:START -->
 ## Catalog status
 
-Last successful update (UTC): `2026-11-16T23:55:46Z`
-Last successful update (Asia/Tokyo): `2026-11-17T08:55:46+09:00`
+Last successful update (UTC): `2026-11-17T00:15:31Z`
+Last successful update (Asia/Tokyo): `2026-11-17T09:15:31+09:00`
 
 ### Endpoints
 
 #### iOS
 
-- `release`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ios/release/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ios/release/all.json) (56 IPSW records)
+- `release`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ios/release/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ios/release/all.json) (54 IPSW records)
 - `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ios/beta/all.json) (8804 IPSW records; no beta latest endpoint)
 
 #### iPadOS
 
-- `release`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ipados/release/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ipados/release/all.json) (40 IPSW records)
+- `release`: [latest.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ipados/release/latest.json) · [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ipados/release/all.json) (30 IPSW records)
 - `beta`: [all.json](https://raw.githubusercontent.com/4ge6n/ipsw-link-catalog/main/api/ipados/beta/all.json) (5040 IPSW records; no beta latest endpoint)
 
 #### tvOS

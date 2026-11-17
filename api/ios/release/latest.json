@@ -4,9 +4,9 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-16T23:55:46Z",
-  "release_count": 12,
-  "firmware_count": 56,
+  "generated_at": "2026-11-17T00:15:31Z",
+  "release_count": 10,
+  "firmware_count": 54,
   "releases": [
     {
       "id": "ios-release-27.2.1-24B91034",
@@ -587,48 +587,6 @@
       ]
     },
     {
-      "id": "ios-release-9.3.6-13G37",
-      "version": "9.3.6",
-      "version_label": "9.3.6",
-      "build": "13G37",
-      "released_at": "2019-07-22T17:04:57Z",
-      "data": "9.3.6/13G37.json",
-      "firmwares": [
-        {
-          "id": "ios-release-9.3.6-13G37-iPhone4,1",
-          "name": "iPhone 4s",
-          "devices": [
-            "iPhone4,1"
-          ],
-          "filename": "iPhone4,1_9.3.6_13G37_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2019/ios/041-80043-20190722-6C65AD27-69D8-499C-BC15-DE7AC74DE2BD/iPhone4,1_9.3.6_13G37_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        }
-      ]
-    },
-    {
-      "id": "ios-release-9.3.5-13G36",
-      "version": "9.3.5",
-      "version_label": "9.3.5",
-      "build": "13G36",
-      "released_at": "2016-08-25T16:58:17Z",
-      "data": "9.3.5/13G36.json",
-      "firmwares": [
-        {
-          "id": "ios-release-9.3.5-13G36-iPod5,1",
-          "name": "iPod touch 5",
-          "devices": [
-            "iPod5,1"
-          ],
-          "filename": "iPod5,1_9.3.5_13G36_Restore.ipsw",
-          "url": "https://secure-appldnld.apple.com/iOS9.3.5/031-73183-20160825-6A2D8488-6711-11E6-9C7E-1B3834D2D062/iPod5,1_9.3.5_13G36_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        }
-      ]
-    },
-    {
       "id": "ios-release-7.1.2-11D257",
       "version": "7.1.2",
       "version_label": "7.1.2",
@@ -757,5 +715,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-17T08:55:46+09:00"
+  "generated_at_tokyo": "2026-11-17T09:15:31+09:00"
 }
