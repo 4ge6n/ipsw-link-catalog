@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipsw.me",
-      "checked_at": "2026-11-17T17:55:54Z"
+      "checked_at": "2026-11-17T18:10:44Z"
     }
   ],
   "firmwares": [
@@ -23,12 +23,12 @@
       "url": "https://updates.cdn-apple.com/2019/ios/091-25014-20190722-0C1B95A6-992C-11E9-A2EE-E1C9A77C2E40/iPad_32bit_10.3.4_14G61_Restore.ipsw",
       "filename": "iPad_32bit_10.3.4_14G61_Restore.ipsw",
       "signing": {
-        "status": "unsigned",
-        "checked_at": "2026-11-17T17:55:54Z",
-        "unsigned_since": "2026-11-17T17:55:54Z"
+        "status": "signed",
+        "checked_at": "2026-11-17T18:10:44Z",
+        "unsigned_since": null
       }
     }
   ],
   "first_seen_at": "2026-09-11T19:15:16Z",
-  "last_seen_at": "2026-11-17T17:55:54Z"
+  "last_seen_at": "2026-11-17T18:10:44Z"
 }
