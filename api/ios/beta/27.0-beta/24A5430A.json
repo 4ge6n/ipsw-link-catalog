@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-17T19:55:51Z"
+      "checked_at": "2026-11-17T20:15:35Z"
     }
   ],
   "firmwares": [
@@ -73,32 +73,6 @@
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/fb5792f6-b796-4cbd-9488-382ce83880ca/iPhone18,1_27.0_24A5430a_Restore.ipsw",
       "filename": "iPhone18,1_27.0_24A5430a_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPhone 16e",
-      "devices": [
-        "iPhone17,5"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/ab87bc08-cd9f-4d3e-82a2-53418c4beb3e/iPhone17,5_27.0_24A5430a_Restore.ipsw",
-      "filename": "iPhone17,5_27.0_24A5430a_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPhone 16 Plus",
-      "devices": [
-        "iPhone17,4"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/a91929d6-11dd-494d-95ae-ed285247b8b2/iPhone17,4_27.0_24A5430a_Restore.ipsw",
-      "filename": "iPhone17,4_27.0_24A5430a_Restore.ipsw",
       "signing": {
         "status": "unknown",
         "checked_at": "2026-09-12T10:48:41Z",
@@ -236,38 +210,12 @@
       }
     },
     {
-      "name": "iPhone 14",
-      "devices": [
-        "iPhone14,7"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/33063f4d-992b-4e5e-901c-24c60485497d/iPhone14,7_27.0_24A5430a_Restore.ipsw",
-      "filename": "iPhone14,7_27.0_24A5430a_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
       "name": "iPhone SE (3rd generation)",
       "devices": [
         "iPhone14,6"
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/c5949964-aac6-42ed-a0fd-b2765fe44330/iPhone14,6_27.0_24A5430a_Restore.ipsw",
       "filename": "iPhone14,6_27.0_24A5430a_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPhone 13",
-      "devices": [
-        "iPhone14,5"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/0acb8842-cbfa-442e-b93f-3379852172dc/iPhone14,5_27.0_24A5430a_Restore.ipsw",
-      "filename": "iPhone14,5_27.0_24A5430a_Restore.ipsw",
       "signing": {
         "status": "unknown",
         "checked_at": "2026-09-12T10:48:41Z",
@@ -327,13 +275,78 @@
       }
     },
     {
-      "name": "iPhone 12 IPSW",
+      "name": "iPhone 12 Pro",
       "devices": [
-        "iPhone13,2",
         "iPhone13,3"
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/6c3f9255-43e7-490f-bff6-42a3628c1595/iPhone13,2,iPhone13,3_27.0_24A5430a_Restore.ipsw",
       "filename": "iPhone13,2,iPhone13,3_27.0_24A5430a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 11 Pro IPSW",
+      "devices": [
+        "iPhone12,3",
+        "iPhone12,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/4d828e5f-70a9-467f-bd8d-c714df9d4c57/iPhone12,3,iPhone12,5_27.0_24A5430a_Restore.ipsw",
+      "filename": "iPhone12,3,iPhone12,5_27.0_24A5430a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 16e",
+      "devices": [
+        "iPhone17,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/ab87bc08-cd9f-4d3e-82a2-53418c4beb3e/iPhone17,5_27.0_24A5430a_Restore.ipsw",
+      "filename": "iPhone17,5_27.0_24A5430a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 16 Plus",
+      "devices": [
+        "iPhone17,4"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/a91929d6-11dd-494d-95ae-ed285247b8b2/iPhone17,4_27.0_24A5430a_Restore.ipsw",
+      "filename": "iPhone17,4_27.0_24A5430a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 14",
+      "devices": [
+        "iPhone14,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/33063f4d-992b-4e5e-901c-24c60485497d/iPhone14,7_27.0_24A5430a_Restore.ipsw",
+      "filename": "iPhone14,7_27.0_24A5430a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 13",
+      "devices": [
+        "iPhone14,5"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/0acb8842-cbfa-442e-b93f-3379852172dc/iPhone14,5_27.0_24A5430a_Restore.ipsw",
+      "filename": "iPhone14,5_27.0_24A5430a_Restore.ipsw",
       "signing": {
         "status": "unknown",
         "checked_at": "2026-09-12T10:48:41Z",
@@ -367,20 +380,6 @@
       }
     },
     {
-      "name": "iPhone 11 Pro IPSW",
-      "devices": [
-        "iPhone12,3",
-        "iPhone12,5"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/4d828e5f-70a9-467f-bd8d-c714df9d4c57/iPhone12,3,iPhone12,5_27.0_24A5430a_Restore.ipsw",
-      "filename": "iPhone12,3,iPhone12,5_27.0_24A5430a_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
       "name": "iPhone 11",
       "devices": [
         "iPhone12,1"
@@ -395,5 +394,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T10:48:41Z",
-  "last_seen_at": "2026-11-17T19:55:51Z"
+  "last_seen_at": "2026-11-17T20:15:35Z"
 }
