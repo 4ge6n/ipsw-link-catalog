@@ -4,9 +4,9 @@
   "os_key": "ipados",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-17T18:10:44Z",
-  "release_count": 10,
-  "firmware_count": 31,
+  "generated_at": "2026-11-17T18:36:15Z",
+  "release_count": 9,
+  "firmware_count": 30,
   "releases": [
     {
       "id": "ipados-release-27.2.1-24B8156",
@@ -472,28 +472,6 @@
       ]
     },
     {
-      "id": "ipados-release-10.3.4-14G61",
-      "version": "10.3.4",
-      "version_label": "10.3.4",
-      "build": "14G61",
-      "released_at": "2019-07-22T17:06:23Z",
-      "data": "10.3.4/14G61.json",
-      "firmwares": [
-        {
-          "id": "ipados-release-10.3.4-14G61-iPad3,5",
-          "name": "iPad 4 (GSM)",
-          "devices": [
-            "iPad3,5",
-            "iPad3,6"
-          ],
-          "filename": "iPad_32bit_10.3.4_14G61_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2019/ios/091-25014-20190722-0C1B95A6-992C-11E9-A2EE-E1C9A77C2E40/iPad_32bit_10.3.4_14G61_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        }
-      ]
-    },
-    {
       "id": "ipados-release-5.1.1-9B206",
       "version": "5.1.1",
       "version_label": "5.1.1",
@@ -515,5 +493,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-18T03:10:44+09:00"
+  "generated_at_tokyo": "2026-11-18T03:36:15+09:00"
 }
