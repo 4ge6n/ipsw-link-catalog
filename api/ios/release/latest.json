@@ -4,9 +4,9 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-17T19:50:34Z",
-  "release_count": 11,
-  "firmware_count": 55,
+  "generated_at": "2026-11-17T19:55:51Z",
+  "release_count": 10,
+  "firmware_count": 54,
   "releases": [
     {
       "id": "ios-release-27.2.1-24B91034",
@@ -587,27 +587,6 @@
       ]
     },
     {
-      "id": "ios-release-9.3.6-13G37",
-      "version": "9.3.6",
-      "version_label": "9.3.6",
-      "build": "13G37",
-      "released_at": "2019-07-22T17:04:57Z",
-      "data": "9.3.6/13G37.json",
-      "firmwares": [
-        {
-          "id": "ios-release-9.3.6-13G37-iPhone4,1",
-          "name": "iPhone 4s",
-          "devices": [
-            "iPhone4,1"
-          ],
-          "filename": "iPhone4,1_9.3.6_13G37_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2019/ios/041-80043-20190722-6C65AD27-69D8-499C-BC15-DE7AC74DE2BD/iPhone4,1_9.3.6_13G37_Restore.ipsw",
-          "sha1": null,
-          "signed": true
-        }
-      ]
-    },
-    {
       "id": "ios-release-7.1.2-11D257",
       "version": "7.1.2",
       "version_label": "7.1.2",
@@ -736,5 +715,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-18T04:50:34+09:00"
+  "generated_at_tokyo": "2026-11-18T04:55:51+09:00"
 }
