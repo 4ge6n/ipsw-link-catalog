@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-17T18:36:15Z"
+      "checked_at": "2026-11-17T18:40:53Z"
     }
   ],
   "firmwares": [
@@ -67,8 +67,7 @@
       "devices": [
         "iPad16,10",
         "iPad16,11",
-        "iPad16,8",
-        "iPad16,9"
+        "iPad16,8"
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/347face1-c2bf-47a6-8178-d8450316d35a/iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.0_24A5418b_Restore.ipsw",
       "filename": "iPad16,10,iPad16,11,iPad16,8,iPad16,9_27.0_24A5418b_Restore.ipsw",
@@ -258,5 +257,5 @@
     }
   ],
   "first_seen_at": "2026-09-12T10:48:41Z",
-  "last_seen_at": "2026-11-17T18:36:15Z"
+  "last_seen_at": "2026-11-17T18:40:53Z"
 }

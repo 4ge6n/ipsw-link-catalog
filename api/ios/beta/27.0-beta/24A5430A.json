@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-17T18:36:15Z"
+      "checked_at": "2026-11-17T18:40:53Z"
     }
   ],
   "firmwares": [
@@ -106,38 +106,12 @@
       }
     },
     {
-      "name": "iPhone 16",
-      "devices": [
-        "iPhone17,3"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/2d03d580-843b-4b2a-b09d-976b31c10744/iPhone17,3_27.0_24A5430a_Restore.ipsw",
-      "filename": "iPhone17,3_27.0_24A5430a_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
       "name": "iPhone 16 Pro Max",
       "devices": [
         "iPhone17,2"
       ],
       "url": "https://updates.cdn-apple.com/2026SpringSeed/9c5822e8-7acf-4a1e-ad2d-4816ba5bd9ad/iPhone17,2_27.0_24A5430a_Restore.ipsw",
       "filename": "iPhone17,2_27.0_24A5430a_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-09-12T10:48:41Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPhone 16 Pro",
-      "devices": [
-        "iPhone17,1"
-      ],
-      "url": "https://updates.cdn-apple.com/2026SpringSeed/fa680817-4ac9-4192-bf35-8d2553219734/iPhone17,1_27.0_24A5430a_Restore.ipsw",
-      "filename": "iPhone17,1_27.0_24A5430a_Restore.ipsw",
       "signing": {
         "status": "unknown",
         "checked_at": "2026-09-12T10:48:41Z",
@@ -392,8 +366,34 @@
         "checked_at": "2026-09-12T10:48:41Z",
         "unsigned_since": null
       }
+    },
+    {
+      "name": "iPhone 16",
+      "devices": [
+        "iPhone17,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/2d03d580-843b-4b2a-b09d-976b31c10744/iPhone17,3_27.0_24A5430a_Restore.ipsw",
+      "filename": "iPhone17,3_27.0_24A5430a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 16 Pro",
+      "devices": [
+        "iPhone17,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2026SpringSeed/fa680817-4ac9-4192-bf35-8d2553219734/iPhone17,1_27.0_24A5430a_Restore.ipsw",
+      "filename": "iPhone17,1_27.0_24A5430a_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-09-12T10:48:41Z",
+        "unsigned_since": null
+      }
     }
   ],
   "first_seen_at": "2026-09-12T10:48:41Z",
-  "last_seen_at": "2026-11-17T18:36:15Z"
+  "last_seen_at": "2026-11-17T18:40:53Z"
 }

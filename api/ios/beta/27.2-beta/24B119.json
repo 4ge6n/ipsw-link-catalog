@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-17T18:36:15Z"
+      "checked_at": "2026-11-17T18:40:53Z"
     }
   ],
   "firmwares": [
@@ -121,38 +121,12 @@
       }
     },
     {
-      "name": "iPhone 16",
-      "devices": [
-        "iPhone17,3"
-      ],
-      "url": "https://updates.cdn-apple.com/2026FallFCS/c6c0afa0-c002-45b9-ad4c-d2db3bfa30ac/iPhone17,3_27.2_24B119_Restore.ipsw",
-      "filename": "iPhone17,3_27.2_24B119_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-10-26T21:43:12Z",
-        "unsigned_since": null
-      }
-    },
-    {
       "name": "iPhone 16 Pro Max",
       "devices": [
         "iPhone17,2"
       ],
       "url": "https://updates.cdn-apple.com/2026FallFCS/3a256522-d649-403a-8ec5-b6fbcb940cbe/iPhone17,2_27.2_24B119_Restore.ipsw",
       "filename": "iPhone17,2_27.2_24B119_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-10-26T21:43:12Z",
-        "unsigned_since": null
-      }
-    },
-    {
-      "name": "iPhone 16 Pro",
-      "devices": [
-        "iPhone17,1"
-      ],
-      "url": "https://updates.cdn-apple.com/2026FallFCS/ba681148-cc53-467c-bff5-dbcb03cb03bc/iPhone17,1_27.2_24B119_Restore.ipsw",
-      "filename": "iPhone17,1_27.2_24B119_Restore.ipsw",
       "signing": {
         "status": "unknown",
         "checked_at": "2026-10-26T21:43:12Z",
@@ -407,8 +381,34 @@
         "checked_at": "2026-10-26T21:43:12Z",
         "unsigned_since": null
       }
+    },
+    {
+      "name": "iPhone 16",
+      "devices": [
+        "iPhone17,3"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/c6c0afa0-c002-45b9-ad4c-d2db3bfa30ac/iPhone17,3_27.2_24B119_Restore.ipsw",
+      "filename": "iPhone17,3_27.2_24B119_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-10-26T21:43:12Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPhone 16 Pro",
+      "devices": [
+        "iPhone17,1"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/ba681148-cc53-467c-bff5-dbcb03cb03bc/iPhone17,1_27.2_24B119_Restore.ipsw",
+      "filename": "iPhone17,1_27.2_24B119_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-10-26T21:43:12Z",
+        "unsigned_since": null
+      }
     }
   ],
   "first_seen_at": "2026-10-26T21:43:12Z",
-  "last_seen_at": "2026-11-17T18:36:15Z"
+  "last_seen_at": "2026-11-17T18:40:53Z"
 }
