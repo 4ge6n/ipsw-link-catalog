@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "beta",
   "definition": "current latest beta or release candidate IPSWs",
-  "generated_at": "2026-11-17T18:56:14Z",
+  "generated_at": "2026-11-17T19:05:38Z",
   "release_count": 553,
   "firmware_count": 8804,
   "releases": [
@@ -307,9 +307,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.3-beta-24C5049D-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.3-beta-24C5049D-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.3_24C5049d_Restore.ipsw",
@@ -663,9 +664,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.3-beta-24C5037I-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.3-beta-24C5037I-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.3_24C5037i_Restore.ipsw",
@@ -1031,9 +1033,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2.1-beta-24B156-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.2.1-beta-24B156-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.2.1_24B156_Restore.ipsw",
@@ -1399,9 +1402,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-24B119-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.2-beta-24B119-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.2_24B119_Restore.ipsw",
@@ -1744,9 +1748,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-24B115-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.2-beta-24B115-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.2_24B115_Restore.ipsw",
@@ -2089,9 +2094,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-24B5110A-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.2-beta-24B5110A-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.2_24B5110a_Restore.ipsw",
@@ -2434,9 +2440,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-24B5099F-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.2-beta-24B5099F-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.2_24B5099f_Restore.ipsw",
@@ -2779,9 +2786,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-24B5089G-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.2-beta-24B5089G-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.2_24B5089g_Restore.ipsw",
@@ -3124,9 +3132,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.2-beta-24B5084K-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.2-beta-24B5084K-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.2_24B5084k_Restore.ipsw",
@@ -3512,9 +3521,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0.1-beta-24A446-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.0.1-beta-24A446-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.0.1_24A446_Restore.ipsw",
@@ -3877,9 +3887,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-24A437-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.0-beta-24A437-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.0_24A437_Restore.ipsw",
@@ -4209,9 +4220,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-24A435-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.0-beta-24A435-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.0_24A435_Restore.ipsw",
@@ -4541,9 +4553,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-24A5430A-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.0-beta-24A5430A-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.0_24A5430a_Restore.ipsw",
@@ -4873,9 +4886,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-24A5424A-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.0-beta-24A5424A-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.0_24A5424a_Restore.ipsw",
@@ -5205,9 +5219,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-24A5418B-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.0-beta-24A5418B-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.0_24A5418b_Restore.ipsw",
@@ -5537,9 +5552,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-24A5408D-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.0-beta-24A5408D-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.0_24A5408d_Restore.ipsw",
@@ -5869,9 +5885,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-24A5390F-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.0-beta-24A5390F-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.0_24A5390f_Restore.ipsw",
@@ -6201,9 +6218,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-24A5380H-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.0-beta-24A5380H-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.0_24A5380h_Restore.ipsw",
@@ -6533,9 +6551,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-24A5370H-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.0-beta-24A5370H-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.0_24A5370h_Restore.ipsw",
@@ -6865,9 +6884,10 @@
           "signed": null
         },
         {
-          "id": "ios-beta-27.0-beta-24A5355Q-iPhone13,3",
-          "name": "iPhone 12 Pro",
+          "id": "ios-beta-27.0-beta-24A5355Q-iPhone13,2",
+          "name": "iPhone 12 IPSW",
           "devices": [
+            "iPhone13,2",
             "iPhone13,3"
           ],
           "filename": "iPhone13,2,iPhone13,3_27.0_24A5355q_Restore.ipsw",
@@ -108828,5 +108848,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-18T03:56:14+09:00"
+  "generated_at_tokyo": "2026-11-18T04:05:38+09:00"
 }

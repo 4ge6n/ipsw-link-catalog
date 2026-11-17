@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-17T18:56:14Z"
+      "checked_at": "2026-11-17T19:05:38Z"
     }
   ],
   "firmwares": [
@@ -355,8 +355,9 @@
       }
     },
     {
-      "name": "iPhone 12 Pro",
+      "name": "iPhone 12 IPSW",
       "devices": [
+        "iPhone13,2",
         "iPhone13,3"
       ],
       "url": "https://updates.cdn-apple.com/2026FallSeed/195ec822-ae50-4f10-a796-ac5068cbdcf7/iPhone13,2,iPhone13,3_27.3_24C5037i_Restore.ipsw",
@@ -422,5 +423,5 @@
     }
   ],
   "first_seen_at": "2026-11-03T18:30:37Z",
-  "last_seen_at": "2026-11-17T18:56:14Z"
+  "last_seen_at": "2026-11-17T19:05:38Z"
 }
