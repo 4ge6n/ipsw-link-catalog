@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-18T20:10:37Z"
+      "checked_at": "2026-11-18T20:20:37Z"
     }
   ],
   "firmwares": [
@@ -61,6 +61,7 @@
         "Mac17,13",
         "Mac17,14",
         "Mac17,15",
+        "Mac17,16",
         "Mac17,2",
         "Mac17,3",
         "Mac17,4",
@@ -76,6 +77,7 @@
         "MacBookPro17,1",
         "MacBookPro18,1",
         "MacBookPro18,2",
+        "MacBookPro18,3",
         "MacBookPro18,4",
         "Macmini9,1",
         "iMac21,1",
@@ -91,5 +93,5 @@
     }
   ],
   "first_seen_at": "2026-11-16T19:25:40Z",
-  "last_seen_at": "2026-11-18T20:10:37Z"
+  "last_seen_at": "2026-11-18T20:20:37Z"
 }
