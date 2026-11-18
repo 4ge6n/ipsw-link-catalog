@@ -4,7 +4,7 @@
   "os_key": "audioos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-17T20:25:37Z",
+  "generated_at": "2026-11-18T19:20:53Z",
   "release_count": 54,
   "firmware_count": 57,
   "releases": [
@@ -105,10 +105,21 @@
       "version_label": "26.6",
       "build": "23L773",
       "released_at": "2026-07-27T17:00:00Z",
-      "signed_firmware_count": 1,
+      "signed_firmware_count": 0,
       "total_firmware_count": 2,
       "data": "26.6/23L773.json",
       "firmwares": [
+        {
+          "id": "audioos-release-26.6-23L773-AudioAccessory6,1",
+          "name": "HomePod (2nd generation)",
+          "devices": [
+            "AudioAccessory6,1"
+          ],
+          "filename": "AudioAccessory6,1_26.6_23L773_Restore.ipsw",
+          "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-67230/6F3201AA-E34C-478C-B4B5-5B86B54DA1E0/AudioAccessory6,1_26.6_23L773_Restore.ipsw",
+          "sha1": null,
+          "signed": false
+        },
         {
           "id": "audioos-release-26.6-23L773-AudioAccessory5,1",
           "name": "HomePod mini",
@@ -119,17 +130,6 @@
           "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-67259/44F8A245-A169-4917-872D-E57B32140013/AudioAccessory5,1_26.6_23L773_Restore.ipsw",
           "sha1": null,
           "signed": false
-        },
-        {
-          "id": "audioos-release-26.6-23L773-AudioAccessory6,1",
-          "name": "HomePod (2nd generation)",
-          "devices": [
-            "AudioAccessory6,1"
-          ],
-          "filename": "AudioAccessory6,1_26.6_23L773_Restore.ipsw",
-          "url": "https://updates.cdn-apple.com/2026SummerFCS/fullrestores/140-67230/6F3201AA-E34C-478C-B4B5-5B86B54DA1E0/AudioAccessory6,1_26.6_23L773_Restore.ipsw",
-          "sha1": "7ef0f800d6b02729666da32194f79f463d901b62",
-          "signed": true
         }
       ]
     },
@@ -1284,5 +1284,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-18T05:25:37+09:00"
+  "generated_at_tokyo": "2026-11-19T04:20:53+09:00"
 }
