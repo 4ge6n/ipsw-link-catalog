@@ -4,7 +4,7 @@
   "os_key": "tvos",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-19T21:40:34Z",
+  "generated_at": "2026-11-19T21:50:37Z",
   "release_count": 145,
   "firmware_count": 190,
   "releases": [
@@ -2880,7 +2880,7 @@
       "version_label": "7.1.2",
       "build": "11D258",
       "released_at": "2014-09-17T17:59:02Z",
-      "signed_firmware_count": 1,
+      "signed_firmware_count": 0,
       "total_firmware_count": 1,
       "data": "7.1.2/11D258.json",
       "firmwares": [
@@ -2893,7 +2893,7 @@
           "filename": "AppleTV2,1_6.2.1_11D258_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS8/031-07202.20140917.tF6Fs/AppleTV2,1_6.2.1_11D258_Restore.ipsw",
           "sha1": null,
-          "signed": true
+          "signed": false
         }
       ]
     },
@@ -3839,5 +3839,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-20T06:40:34+09:00"
+  "generated_at_tokyo": "2026-11-20T06:50:37+09:00"
 }
