@@ -10,7 +10,7 @@
   "sources": [
     {
       "name": "ipswbeta.dev",
-      "checked_at": "2026-11-19T18:12:11Z"
+      "checked_at": "2026-11-19T21:40:34Z"
     }
   ],
   "firmwares": [
@@ -99,6 +99,19 @@
       ],
       "url": "https://updates.cdn-apple.com/2026FallFCS/9d05d84a-50ed-46d2-bfaa-2347523753af/iPad15,8_27.2_24B119_Restore.ipsw",
       "filename": "iPad15,8_27.2_24B119_Restore.ipsw",
+      "signing": {
+        "status": "unknown",
+        "checked_at": "2026-10-26T21:43:12Z",
+        "unsigned_since": null
+      }
+    },
+    {
+      "name": "iPad (A16) Wi-Fi",
+      "devices": [
+        "iPad15,7"
+      ],
+      "url": "https://updates.cdn-apple.com/2026FallFCS/14528a7a-accd-49ef-9931-44bb85432620/iPad15,7_27.2_24B119_Restore.ipsw",
+      "filename": "iPad15,7_27.2_24B119_Restore.ipsw",
       "signing": {
         "status": "unknown",
         "checked_at": "2026-10-26T21:43:12Z",
@@ -242,21 +255,8 @@
         "checked_at": "2026-10-26T21:43:12Z",
         "unsigned_since": null
       }
-    },
-    {
-      "name": "iPad (A16) Wi-Fi",
-      "devices": [
-        "iPad15,7"
-      ],
-      "url": "https://updates.cdn-apple.com/2026FallFCS/14528a7a-accd-49ef-9931-44bb85432620/iPad15,7_27.2_24B119_Restore.ipsw",
-      "filename": "iPad15,7_27.2_24B119_Restore.ipsw",
-      "signing": {
-        "status": "unknown",
-        "checked_at": "2026-10-26T21:43:12Z",
-        "unsigned_since": null
-      }
     }
   ],
   "first_seen_at": "2026-10-26T21:43:12Z",
-  "last_seen_at": "2026-11-19T18:12:11Z"
+  "last_seen_at": "2026-11-19T21:40:34Z"
 }
