@@ -4,7 +4,7 @@
   "os_key": "ios",
   "channel": "release",
   "definition": "all currently signed release IPSWs",
-  "generated_at": "2026-11-20T07:50:15Z",
+  "generated_at": "2026-11-20T10:25:36Z",
   "release_count": 324,
   "firmware_count": 3098,
   "releases": [
@@ -35197,7 +35197,7 @@
       "version_label": "7.1.2",
       "build": "11D257",
       "released_at": "2014-06-30T18:29:09Z",
-      "signed_firmware_count": 0,
+      "signed_firmware_count": 3,
       "total_firmware_count": 11,
       "data": "7.1.2/11D257.json",
       "firmwares": [
@@ -35276,7 +35276,7 @@
           "filename": "iPhone3,2_7.1.2_11D257_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS7.1/031-4785.20140627.zZ42j/iPhone3,2_7.1.2_11D257_Restore.ipsw",
           "sha1": null,
-          "signed": false
+          "signed": true
         },
         {
           "id": "ios-release-7.1.2-11D257-iPod5,1",
@@ -35309,7 +35309,7 @@
           "filename": "iPhone3,3_7.1.2_11D257_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS7.1/031-4768.20140627.DXmmp/iPhone3,3_7.1.2_11D257_Restore.ipsw",
           "sha1": null,
-          "signed": false
+          "signed": true
         },
         {
           "id": "ios-release-7.1.2-11D257-iPhone3,1",
@@ -35320,7 +35320,7 @@
           "filename": "iPhone3,1_7.1.2_11D257_Restore.ipsw",
           "url": "https://secure-appldnld.apple.com/iOS7.1/031-4812.20140627.cq6y8/iPhone3,1_7.1.2_11D257_Restore.ipsw",
           "sha1": null,
-          "signed": false
+          "signed": true
         }
       ]
     },
@@ -39109,5 +39109,5 @@
       ]
     }
   ],
-  "generated_at_tokyo": "2026-11-20T16:50:15+09:00"
+  "generated_at_tokyo": "2026-11-20T19:25:36+09:00"
 }
